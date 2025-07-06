@@ -14,30 +14,28 @@ import configparser
 import os.path
 import gc
 from async_lru import alru_cache
+import json
 
 
 
 # Enable garbage collection
 gc.enable()
 
-# Read configuration from configuration.txt instead of using config.ini
-config_file_path = 'configuration.txt'
+# Read configuration from config.json instead of using config.ini
+config_file_path = 'config.json'
 if os.path.isfile(config_file_path):
     with open(config_file_path, 'r') as file:
-        config_lines = file.readlines()
-        config_data = {}
-        for line in config_lines:
-            line = line.strip()
-            if '=' in line:
-                key, value = line.split('=', 1)
-                config_data[key] = value
-        
-        username = config_data.get('username', '')
-        password = config_data.get('password', '')
-        disk = config_data.get('disk', 'C')
-        max_connections = int(config_data.get('max_connections', '50'))
+        try:
+            config_data = json.load(file)
+            username = config_data.get('username', '')
+            password = config_data.get('password', '')
+            disk = config_data.get('disk', 'C')
+            max_connections = int(config_data.get('max_connections', 50))
+        except json.JSONDecodeError:
+            print("Error reading config.json. Using default configuration method.")
+            config_data = {}
 else:
-    # Fallback to old method if configuration.txt doesn't exist
+    # Fallback to old method if config.json doesn't exist
     data_dir = user_config_dir(appname='metruyencv-downloader',appauthor='nguyentd010')
     os.makedirs(data_dir, exist_ok=True)
     if not os.path.isfile(data_dir + '\config.ini'):
