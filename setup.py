@@ -14,19 +14,59 @@ def print_header(message):
     print(f"    {message}")
     print("="*50 + "\n")
 
+def download_with_powershell(url, output_file):
+    print(f'Downloading {output_file} using PowerShell...')
+    try:
+        ps_command = f'[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile("{url}", "{output_file}")'
+        process = subprocess.run(["powershell", "-Command", ps_command], 
+                             stdout=subprocess.PIPE, 
+                             stderr=subprocess.PIPE,
+                             shell=True)
+        
+        if process.returncode == 0 and os.path.exists(output_file):
+            print(f'Download successful!')
+            return True
+        else:
+            print(f'PowerShell download failed: {process.stderr.decode("utf-8", errors="ignore")}')
+            return False
+    except Exception as e:
+        print(f'PowerShell download error: {e}')
+        return False
+
 def download_file(url, filename):
     print(f'Downloading {filename}...')
     try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'none',
+            'Sec-Fetch-User': '?1',
+            'Cache-Control': 'max-age=0',
+        }
+        
+        req = urllib.request.Request(url, headers=headers)
+        
         def report_progress(count, block_size, total_size):
             if count % 50 == 0:
                 percent = int(count * block_size * 100 / total_size) if total_size > 0 else 0
                 print(f"\rProgress: {percent}% ", end="", flush=True)
         
+        opener = urllib.request.build_opener()
+        opener.addheaders = [(k, v) for k, v in headers.items()]
+        urllib.request.install_opener(opener)
         urllib.request.urlretrieve(url, filename, report_progress)
         print("\nDownload complete!")
         return True
     except Exception as e:
         print(f'\nDownload failed: {e}')
+        # Try using PowerShell as fallback on Windows
+        if os.name == 'nt':
+            return download_with_powershell(url, filename)
         return False
 
 def download_vie_data():
@@ -45,24 +85,83 @@ def setup_tesseract():
         # Create directory if it doesn't exist
         os.makedirs(tesseract_dir, exist_ok=True)
         
-        # Try to download Tesseract portable version
-        success = download_file('https://github.com/nguyentd010/tesseract-portable/releases/download/v1.0.0/tesseract-portable.zip', 'tesseract-portable.zip')
+        # Try different download sources
+        tesseract_urls = [
+            ('https://github.com/UB-Mannheim/tesseract/releases/download/v5.3.3/tesseract-ocr-w64-setup-5.3.3.20231005.exe', 'tesseract-setup.exe'),
+            ('https://versaweb.dl.sourceforge.net/project/tesseract-ocr-alt/tesseract-ocr-w64-setup-5.3.3.20231005.exe', 'tesseract-setup.exe'),
+            ('https://sourceforge.net/projects/tesseract-ocr-alt/files/tesseract-ocr-w64-setup-5.3.3.20231005.exe/download', 'tesseract-setup.exe')
+        ]
         
-        if success and os.path.exists('tesseract-portable.zip'):
-            # Extract zip file
-            print('Extracting Tesseract...')
+        success = False
+        for url, filename in tesseract_urls:
+            success = download_file(url, filename)
+            if success and os.path.exists(filename):
+                break
+        
+        if not success or not os.path.exists('tesseract-setup.exe'):
+            # Try PowerShell download directly
+            for url, filename in tesseract_urls:
+                success = download_with_powershell(url, filename)
+                if success and os.path.exists(filename):
+                    break
+                
+        if success and os.path.exists('tesseract-setup.exe'):
+            # Run installer with silent options
+            print('Running Tesseract installer...')
             try:
-                with zipfile.ZipFile('tesseract-portable.zip', 'r') as zip_ref:
-                    zip_ref.extractall(tesseract_dir)
+                install_path = os.path.join(os.getcwd(), tesseract_dir).replace('/', '\\')
+                print(f'Installing to: {install_path}')
+                
+                # Execute the installer
+                process = subprocess.run(['tesseract-setup.exe', '/SILENT', f'/DIR={install_path}', '/NOCANCEL', '/SUPPRESSMSGBOXES'], 
+                                      stdout=subprocess.PIPE, 
+                                      stderr=subprocess.PIPE)
+                
+                if process.returncode == 0:
+                    print('✅ Tesseract installation started')
+                    
+                    # Wait for installation to complete (check if tesseract.exe exists)
+                    max_wait = 120  # seconds
+                    wait_time = 0
+                    while wait_time < max_wait:
+                        if os.path.exists(os.path.join(tesseract_dir, 'tesseract.exe')):
+                            print('✅ Tesseract installed successfully')
+                            break
+                        time.sleep(1)
+                        wait_time += 1
+                        if wait_time % 5 == 0:
+                            print(f'Waiting for installation to complete... {wait_time}s')
+                    
+                    if wait_time >= max_wait:
+                        print('⚠️ Installation taking longer than expected. Will continue setup.')
+                else:
+                    print(f"Installation may have issues. Return code: {process.returncode}")
+                    print(f"Output: {process.stdout.decode('utf-8', errors='ignore')}")
+                    print(f"Error: {process.stderr.decode('utf-8', errors='ignore')}")
+                    
+                    # Try alternative installation method
+                    print("Trying alternative installation method...")
+                    try:
+                        process = subprocess.run(['start', '/wait', 'tesseract-setup.exe', '/SILENT', f'/DIR={install_path}'], 
+                                              shell=True)
+                        time.sleep(10)  # Give some time for installer to work
+                    except Exception as e:
+                        print(f"Alternative installation method error: {e}")
                 
                 # Clean up
-                os.remove('tesseract-portable.zip')
-                print('✅ Tesseract extracted successfully')
+                try:
+                    if os.path.exists('tesseract-setup.exe'):
+                        os.remove('tesseract-setup.exe')
+                except:
+                    print("Could not remove installer file. You may delete it manually.")
+                
             except Exception as e:
-                print(f"❌ Error extracting Tesseract: {e}")
+                print(f"❌ Error installing Tesseract: {e}")
                 manual_installation()
         else:
-            manual_installation()
+            print("Failed to download Tesseract installer from any source.")
+            # Create basic structure and proceed
+            create_minimal_tesseract()
     
     # Check if Vietnamese language data exists
     if not os.path.exists(os.path.join(tesseract_dir, 'tessdata', 'vie.traineddata')):
@@ -72,22 +171,56 @@ def setup_tesseract():
     
     print('✅ Tesseract OCR setup completed.')
 
+def create_minimal_tesseract():
+    """Create minimal Tesseract directory structure for future installation"""
+    print("Creating minimal Tesseract directory structure...")
+    tesseract_dir = 'Tesseract-OCR'
+    os.makedirs(tesseract_dir, exist_ok=True)
+    
+    # Create a dummy tesseract.exe file so the program won't crash
+    with open(os.path.join(tesseract_dir, 'tesseract.exe'), 'w') as f:
+        f.write('# Dummy file created during setup. Please install Tesseract OCR properly.')
+        
+    # Make sure tessdata directory exists
+    os.makedirs(os.path.join(tesseract_dir, 'tessdata'), exist_ok=True)
+    
+    print("⚠️ Warning: Created minimal Tesseract structure.")
+    print("⚠️ OCR features will not work until you install Tesseract properly.")
+
 def manual_installation():
     print('\n[MANUAL DOWNLOAD REQUIRED]')
-    print('Please download Tesseract OCR from:')
-    url = 'https://github.com/UB-Mannheim/tesseract/releases/download/v5.3.3/tesseract-ocr-w64-setup-v5.3.3.20231005.exe'
-    print(url)
+    print('Please download Tesseract OCR from one of these links:')
+    urls = [
+        'https://github.com/UB-Mannheim/tesseract/releases/download/v5.3.3/tesseract-ocr-w64-setup-5.3.3.20231005.exe',
+        'https://sourceforge.net/projects/tesseract-ocr-alt/files/tesseract-ocr-w64-setup-5.3.3.20231005.exe'
+    ]
+    for url in urls:
+        print(url)
+    
     print('\nWhen installing:')
     print(f'- Change installation path to: {os.getcwd()}\\Tesseract-OCR')
     print('- Make sure to select Vietnamese language data')
     
     # Try to open download page in browser
     try:
-        webbrowser.open(url)
+        webbrowser.open(urls[0])
     except:
-        pass
+        try:
+            webbrowser.open(urls[1])
+        except:
+            pass
     
-    input('\nPress Enter after installation is complete...')
+    print("\nOptions:")
+    print("1. Press Enter after installation is complete")
+    print("2. Type 'skip' to continue setup without Tesseract (limited functionality)")
+    
+    choice = input("\nYour choice: ").strip()
+    
+    if choice.lower() == 'skip':
+        create_minimal_tesseract()
+    else:
+        print("Waiting for Tesseract installation to complete...")
+        print("You can proceed with setup once Tesseract is installed.")
 
 def create_user_agent_file():
     print_header("USER-AGENT FILE SETUP")
@@ -158,7 +291,7 @@ def create_config_json():
             'headless': True,
             'tesseract_path': 'Tesseract-OCR/tesseract.exe',
             'semaphore_limit': 10,
-            'novel_url': 'https://metruyencv.info/truyen/your-novel-url',
+            'novel_url': 'https://metruyencv.biz/truyen/your-novel-url',
             'start_chapter': 1,
             'end_chapter': 100
         }

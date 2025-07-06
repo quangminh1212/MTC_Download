@@ -10,7 +10,7 @@
     "headless": true,
     "tesseract_path": "Tesseract-OCR/tesseract.exe",
     "semaphore_limit": 10,
-    "novel_url": "https://metruyencv.info/truyen/your-novel-url",
+    "novel_url": "https://metruyencv.biz/truyen/your-novel-url",
     "start_chapter": 1,
     "end_chapter": 100
 } 

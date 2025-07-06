@@ -32,8 +32,8 @@ if os.path.isfile(config_file_path):
             disk = config_data.get('disk', 'C')
             max_connections = int(config_data.get('max_connections', 50))
             novel_folder = config_data.get('novel_folder', 'novel')
-            font_family = config_data.get('font_family', 'Arial')
-            font_size = config_data.get('font_size', '25px')
+            font_family = config_data.get('font_family', 'Times New Roman')
+            font_size = config_data.get('font_size', '50px')
             line_height = config_data.get('line_height', '150%')
             headless = config_data.get('headless', True)
             tesseract_path = config_data.get('tesseract_path', 'Tesseract-OCR/tesseract.exe')
@@ -41,20 +41,22 @@ if os.path.isfile(config_file_path):
             config_novel_url = config_data.get('novel_url', '')
             config_start_chapter = int(config_data.get('start_chapter', 1))
             config_end_chapter = int(config_data.get('end_chapter', 100))
+            save = None  # Initialize save variable to avoid NameError later
         except json.JSONDecodeError:
             print("Error reading config.json. Using default configuration method.")
             config_data = {}
+            save = None
 else:
     # Fallback to old method if config.json doesn't exist
     data_dir = user_config_dir(appname='metruyencv-downloader',appauthor='nguyentd010')
     os.makedirs(data_dir, exist_ok=True)
-    if not os.path.isfile(data_dir + '\\config.ini'):
+    if not os.path.isfile(data_dir + '/config.ini'):
         config = configparser.ConfigParser()
-        with open(data_dir + '\\config.ini', 'w') as configfile:
+        with open(data_dir + '/config.ini', 'w') as configfile:
             config.write(configfile)
 
 
-    if os.stat(data_dir+"\\config.ini").st_size == 0:
+    if os.stat(data_dir+"/config.ini").st_size == 0:
         username = str(input('Email tài khoản metruyencv?:'))
         password = str(input('Password?:'))
         disk = str(input('Ổ đĩa lưu truyện(C/D):')).capitalize()
@@ -70,7 +72,7 @@ else:
         semaphore_limit = 10
     else:
         config = configparser.ConfigParser()
-        config.read(data_dir + '\\config.ini')
+        config.read(data_dir + '/config.ini')
         username = str(config.get('data', 'login'))
         password = str(config.get('data', 'password'))
         disk = str(config.get('data', 'disk'))
@@ -90,7 +92,7 @@ timeout = httpx.Timeout(None)
 client = httpx.AsyncClient(limits=limits, timeout=timeout)
 
 # Base URL for the novel
-BASE_URL = 'https://metruyencv.info/truyen/'
+BASE_URL = 'https://metruyencv.biz/truyen/'
 
 user_agent = UserAgent().random
 
@@ -100,12 +102,12 @@ pytesseract.pytesseract.tesseract_cmd = fr'{file_location}\{tesseract_path}'
 
 header = {'user-agent': user_agent}
 
-if save == 'Y':
+if 'save' in locals() and save == 'Y':
     config = configparser.ConfigParser()
     config['data'] = {'login': username, 'password': password, 'disk' : disk, 'max-connection' : max_connections}
 
     # Write the configuration to a file
-    with open(data_dir + '\\config.ini', 'w') as configfile:
+    with open(data_dir + '/config.ini', 'w') as configfile:
         config.write(configfile)
 
 
@@ -319,9 +321,14 @@ async def main():
         # If novel_url is in config.json, use it; otherwise prompt the user
         if config_novel_url and config_novel_url != "https://metruyencv.info/truyen/your-novel-url":
             novel_url = config_novel_url
-            print(f'Sử dụng URL từ config.json: {novel_url}')
+            print(f"Using URL from config: {novel_url}")
         else:
             novel_url = input('Nhập link metruyencv mà bạn muốn tải: ')
+            
+        # Convert URL to .biz domain if needed
+        if 'metruyencv.com' in novel_url or 'metruyencv.info' in novel_url:
+            novel_url = novel_url.replace('metruyencv.com', 'metruyencv.biz').replace('metruyencv.info', 'metruyencv.biz')
+            print(f"Converted URL to: {novel_url}")
             
         if '/' == novel_url[-1]:
             novel_url = novel_url[:-1]
