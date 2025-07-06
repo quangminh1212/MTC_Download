@@ -2,7 +2,7 @@ import httpx
 from bs4 import BeautifulSoup
 from ebooklib import epub
 import asyncio
-from user_agent import get
+from fake_useragent import UserAgent
 from tqdm.asyncio import tqdm
 import backoff
 from playwright.async_api import async_playwright
@@ -48,13 +48,13 @@ else:
     # Fallback to old method if config.json doesn't exist
     data_dir = user_config_dir(appname='metruyencv-downloader',appauthor='nguyentd010')
     os.makedirs(data_dir, exist_ok=True)
-    if not os.path.isfile(data_dir + '\config.ini'):
+    if not os.path.isfile(data_dir + '\\config.ini'):
         config = configparser.ConfigParser()
-        with open(data_dir + '\config.ini', 'w') as configfile:
+        with open(data_dir + '\\config.ini', 'w') as configfile:
             config.write(configfile)
 
 
-    if os.stat(data_dir+"\config.ini").st_size == 0:
+    if os.stat(data_dir+"\\config.ini").st_size == 0:
         username = str(input('Email tài khoản metruyencv?:'))
         password = str(input('Password?:'))
         disk = str(input('Ổ đĩa lưu truyện(C/D):')).capitalize()
@@ -70,7 +70,7 @@ else:
         semaphore_limit = 10
     else:
         config = configparser.ConfigParser()
-        config.read(data_dir + '\config.ini')
+        config.read(data_dir + '\\config.ini')
         username = str(config.get('data', 'login'))
         password = str(config.get('data', 'password'))
         disk = str(config.get('data', 'disk'))
@@ -92,7 +92,7 @@ client = httpx.AsyncClient(limits=limits, timeout=timeout)
 # Base URL for the novel
 BASE_URL = 'https://metruyencv.info/truyen/'
 
-user_agent = get()
+user_agent = UserAgent().random
 
 file_location = os.getcwd()
 
@@ -105,7 +105,7 @@ if save == 'Y':
     config['data'] = {'login': username, 'password': password, 'disk' : disk, 'max-connection' : max_connections}
 
     # Write the configuration to a file
-    with open(data_dir + '\config.ini', 'w') as configfile:
+    with open(data_dir + '\\config.ini', 'w') as configfile:
         config.write(configfile)
 
 

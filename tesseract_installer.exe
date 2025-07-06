@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+<meta charset="utf-8">
+<!--
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2017 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at https://typo3.org/
+-->
+
+
+
+<title>Digitale Bibliothek: 404</title>
+<meta name="generator" content="TYPO3 CMS">
+
+
+<link rel="stylesheet" type="text/css" href="/typo3temp/Assets/464cb9f3a6.css?1507896433" media="all">
+
+
+
+<script src="/uploads/tx_t3jquery/jquery-1.10.x-1.10.x.js?1432045259" type="text/javascript"></script>
+
+<script src="/typo3temp/Assets/dd82474708.js?1507896433" type="text/javascript"></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/ub/css/yaml_ubma/my_layout.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/ub/Resources/Css/kitodo.css?Stand=20181122_1404" media="all">
+    <link rel="stylesheet" type="text/css" href="/ub/css/octicons/octicons.css">
+    <link rel="stylesheet" type="text/css" href="/ub/css/ma-icon-01/ma-icons.css?Stand=20150727_1404">
+    <link rel="stylesheet" type="text/css" href="/ub/css/ma-icon-selbst-01/ma-icons-self.css">
+    <link rel="stylesheet" type="text/css" href="/ub/css/ui-lightness/jquery-ui-1.10.4.min.css">
+
+    <!--<script type="text/javascript" src="/uploads/tx_t3jquery/jquery-1.8.x-1.8.x.js?1405605640"></script>-->
+    <script type="text/javascript" src="/ub/script/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/ub/script/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="/ub/script/ma_kitodo.js?Stand=20220607_1545"></script>
+    <script type="text/javascript" src="/ub/script/ma_kitodo_seitennavigation.js?Stand=20181122_1404"></script>
+    <script type="text/javascript" src="/ub/script/ma_kitodo_cookie.js?Stand=20181122_1404"></script>
+<script type="text/javascript" src="/typo3conf/ext/dlf/plugins/search/tx_dlf_search_suggest.js"></script>
+
+</head>
+<body id="kitodo-404">
+
+<!-- main_suche.tpl -->
+<div id="container">
+    <div id="topnav">
+        <a href="/">Startseite</a> | <a href="#" onclick="self.print()">Drucken</a> | <a href="/404.html" id="sprachlink_a" title="Switch language to english"><span id="sprachlink" class="sprachlink_de">English</a></a>
+    </div>
+    <div id="header">
+              <span id="unilogo"><a href="https://www.uni-mannheim.de/"><img src="/ub/images/layout/header/UNI/UNI_MA_Logo_DE_Schwarz_angepasst_212_95.png" alt="Universität Mannheim" title="Website Universität Mannheim"></a></span>
+      <span id="trailer"><a href="https://www.bib.uni-mannheim.de/"><img src="/ub/images/layout/header/UB/UB_d_w_90x52.png" alt="Universitätsbibliothek Mannheim" title="Website Universitätsbibliothek Mannheim"></a></span>
+    </div>
+    <div id="cleaner"></div>
+    <div id="klickhintergrund">
+        <div id="klickpfad"><span id="klick_last"><a href="/">Digitale Bibliothek</a></span>:</div>
+    </div>
+    <div id="hintergrund">
+        <div id="content">
+	<!--  CONTENT ELEMENT, uid:178/text [begin] -->
+            <div id="c178" class="csc-default">
+            <!--  Header: [begin] -->
+                <div class="csc-header csc-header-n1"><h1 class="csc-firstHeader">Digitale Bibliothek</h1></div>
+            <!--  Header: [end] -->
+
+            <!--  Text: [begin] -->
+                <h2>Seite nicht gefunden</h2>
+                <p class="bodytext"></p>
+            <!--  Text: [end] -->
+            </div>
+	<!--  CONTENT ELEMENT, uid:178/text [end] -->
+
+	<!--  CONTENT ELEMENT, uid:180/text [begin] -->
+            <div id="c180" class="csc-default">
+                <h2>Page not found</h2>
+		<!--  Text: [begin] -->
+                <p class="bodytext">&nbsp;</p>
+        <!--  CONTENT ELEMENT, uid:184/list [begin] -->
+            </div>
+
+<!-- END: Content of extension 'dlf', plugin 'tx_dlf_collection' -->
+
+
+		<!--  Plugin inserted: [end] -->
+		</div>
+	<!--  CONTENT ELEMENT, uid:184/list [end] -->
+		</div>
+    </div>
+    <div id="footer">      <div id="footernav">
+        <a href="https://www.uni-mannheim.de/impressum/" target="_blank">Impressum</a>
+        <a href="https://www.uni-mannheim.de/datenschutzerklaerung/datenschutzinformationen-der-universitaetsbibliothek/" target="_blank">Datenschutzerklärung</a>
+      </div>
+      <span id="copyright">© 2019 UB Mannheim</span>
+      <!-- Piwik -->
+      <script type="text/javascript">
+        var _paq = _paq || [];
+        // tracker methods like "setCustomDimension" should be called before "trackPageView"
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+          var u="//ub-monitor.bib.uni-mannheim.de/piwik/";
+          _paq.push(['setTrackerUrl', u+'piwik.php']);
+          _paq.push(['setSiteId', '11']);
+          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+          g.type='text/javascript'; g.async=true; g.defer=true;
+          g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+      </script>
+      <!-- End Piwik Code --></div>
+</div> <!-- container -->
+<!-- eof: main_suche.tpl -->
+
+
+
+
+</body>
+</html>
+<!-- Parsetime: 344ms -->
