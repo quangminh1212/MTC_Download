@@ -1,0 +1,14 @@
+# Cấu hình tài khoản
+email=your_email@example.com
+password=your_password
+
+# Cài đặt lưu trữ và hiệu suất
+disk=D
+max_connections=50
+
+# URL truyện (lưu ý phải dùng dạng metruyencv.info)
+novel_url=https://metruyencv.info/truyen/your-novel-url
+
+# Chọn chương cần tải
+start_chapter=1
+end_chapter=100 

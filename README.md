@@ -31,14 +31,33 @@ Công cụ tải truyện chữ từ metruyencv.info và chuyển đổi sang đ
 
 ## Cách sử dụng
 
-1. Sử dụng file `run-app.bat` để chạy chương trình trong Command Prompt (đề xuất)
+1. Sử dụng file `run-app.bat` để chạy chương trình. Bạn sẽ có 2 tùy chọn:
 
-2. Hoặc mở Command Prompt (không phải PowerShell) và chạy lệnh:
-   ```
-   python main.py
-   ```
+   a. **Chạy bình thường**: Nhập thông tin trực tiếp khi chương trình chạy
    
-3. Lần đầu tiên chạy, bạn cần nhập:
+   b. **Chạy từ file cấu hình**: Sử dụng thông tin đã được cấu hình sẵn trong file `config.txt`
+
+2. **Cấu hình file config.txt**:
+   
+   Bạn có thể chỉnh sửa file `config.txt` để thiết lập sẵn các thông tin:
+   ```
+   # Cấu hình tài khoản
+   email=your_email@example.com
+   password=your_password
+
+   # Cài đặt lưu trữ và hiệu suất
+   disk=D
+   max_connections=50
+
+   # URL truyện (lưu ý phải dùng dạng metruyencv.info)
+   novel_url=https://metruyencv.info/truyen/your-novel-url
+
+   # Chọn chương cần tải
+   start_chapter=1
+   end_chapter=100
+   ```
+
+3. Nếu là lần đầu tiên chạy và không sử dụng file cấu hình, bạn sẽ cần nhập:
    - Email/tên người dùng cho metruyencv
    - Mật khẩu
    - Ổ đĩa để lưu truyện (C hoặc D)
