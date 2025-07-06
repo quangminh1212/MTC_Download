@@ -2,7 +2,7 @@ import httpx
 from bs4 import BeautifulSoup
 from ebooklib import epub
 import asyncio
-from fake_useragent import UserAgent
+from user_agent import get
 from tqdm.asyncio import tqdm
 import backoff
 from playwright.async_api import async_playwright
@@ -14,100 +14,58 @@ import configparser
 import os.path
 import gc
 from async_lru import alru_cache
-import json
 
 
 
 # Enable garbage collection
 gc.enable()
+data_dir = user_config_dir(appname='metruyencv-downloader',appauthor='nguyentd010')
+os.makedirs(data_dir, exist_ok=True)
+if not os.path.isfile(data_dir + '\config.ini'):
+    config = configparser.ConfigParser()
+    with open(data_dir + '\config.ini', 'w') as configfile:
+        config.write(configfile)
 
-# Read configuration from config.json instead of using config.ini
-config_file_path = 'config.json'
-if os.path.isfile(config_file_path):
-    with open(config_file_path, 'r') as file:
-        try:
-            config_data = json.load(file)
-            username = config_data.get('username', '')
-            password = config_data.get('password', '')
-            disk = config_data.get('disk', 'C')
-            max_connections = int(config_data.get('max_connections', 50))
-            novel_folder = config_data.get('novel_folder', 'novel')
-            font_family = config_data.get('font_family', 'Times New Roman')
-            font_size = config_data.get('font_size', '50px')
-            line_height = config_data.get('line_height', '150%')
-            headless = config_data.get('headless', True)
-            tesseract_path = config_data.get('tesseract_path', 'Tesseract-OCR/tesseract.exe')
-            semaphore_limit = int(config_data.get('semaphore_limit', 10))
-            config_novel_url = config_data.get('novel_url', '')
-            config_start_chapter = int(config_data.get('start_chapter', 1))
-            config_end_chapter = int(config_data.get('end_chapter', 100))
-            save = None  # Initialize save variable to avoid NameError later
-        except json.JSONDecodeError:
-            print("Error reading config.json. Using default configuration method.")
-            config_data = {}
-            save = None
+
+if os.stat(data_dir+"\config.ini").st_size == 0:
+    username = str(input('Email tài khoản metruyencv?:'))
+    password = str(input('Password?:'))
+    disk = str(input('Ổ đĩa lưu truyện(C/D):')).capitalize()
+    max_connections = int(input('''Max Connections (10 -> 1000) 
+    Note: Càng cao thì rủi ro lỗi cũng tăng, chỉ số tối ưu nhất là 50 : '''))
+    save = str(input('Lưu config?(Y/N):')).capitalize()
+
 else:
-    # Fallback to old method if config.json doesn't exist
-    data_dir = user_config_dir(appname='metruyencv-downloader',appauthor='nguyentd010')
-    os.makedirs(data_dir, exist_ok=True)
-    if not os.path.isfile(data_dir + '/config.ini'):
-        config = configparser.ConfigParser()
-        with open(data_dir + '/config.ini', 'w') as configfile:
-            config.write(configfile)
+    config = configparser.ConfigParser()
+    config.read(data_dir + '\config.ini')
+    username = str(config.get('data', 'login'))
+    password = str(config.get('data', 'password'))
+    disk = str(config.get('data', 'disk'))
+    max_connections = int(config.get('data', 'max-connection'))
+    save = None
 
 
-    if os.stat(data_dir+"/config.ini").st_size == 0:
-        username = str(input('Email tài khoản metruyencv?:'))
-        password = str(input('Password?:'))
-        disk = str(input('Ổ đĩa lưu truyện(C/D):')).capitalize()
-        max_connections = int(input('''Max Connections (10 -> 1000) 
-        Note: Càng cao thì rủi ro lỗi cũng tăng, chỉ số tối ưu nhất là 50 : '''))
-        save = str(input('Lưu config?(Y/N):')).capitalize()
-        novel_folder = 'novel'
-        font_family = 'Arial'
-        font_size = '25px'
-        line_height = '150%'
-        headless = True
-        tesseract_path = 'Tesseract-OCR/tesseract.exe'
-        semaphore_limit = 10
-    else:
-        config = configparser.ConfigParser()
-        config.read(data_dir + '/config.ini')
-        username = str(config.get('data', 'login'))
-        password = str(config.get('data', 'password'))
-        disk = str(config.get('data', 'disk'))
-        max_connections = int(config.get('data', 'max-connection'))
-        save = None
-        novel_folder = 'novel'
-        font_family = 'Arial'
-        font_size = '25px'
-        line_height = '150%'
-        headless = True
-        tesseract_path = 'Tesseract-OCR/tesseract.exe'
-        semaphore_limit = 10
-
-missing_chapter = []
 limits = httpx.Limits(max_keepalive_connections=100, max_connections=max_connections)
 timeout = httpx.Timeout(None)
 client = httpx.AsyncClient(limits=limits, timeout=timeout)
 
 # Base URL for the novel
-BASE_URL = 'https://metruyencv.biz/truyen/'
+BASE_URL = 'https://metruyencv.info/truyen/'
 
-user_agent = UserAgent().random
+user_agent = get()
 
 file_location = os.getcwd()
 
-pytesseract.pytesseract.tesseract_cmd = fr'{file_location}\{tesseract_path}'
+pytesseract.pytesseract.tesseract_cmd = fr'{file_location}\Tesseract-OCR\tesseract.exe'
 
 header = {'user-agent': user_agent}
 
-if 'save' in locals() and save == 'Y':
+if save == 'Y':
     config = configparser.ConfigParser()
     config['data'] = {'login': username, 'password': password, 'disk' : disk, 'max-connection' : max_connections}
 
     # Write the configuration to a file
-    with open(data_dir + '/config.ini', 'w') as configfile:
+    with open(data_dir + '\config.ini', 'w') as configfile:
         config.write(configfile)
 
 
@@ -151,9 +109,9 @@ async def handle_route(route):
 async def download_missing_chapter(links):
     results = []
     link = links[0][1]
-    asyncio_semaphore = asyncio.Semaphore(semaphore_limit)
+    asyncio_semaphore = asyncio.Semaphore(10)
     async with async_playwright() as p:
-        browser = await p.firefox.launch(headless=headless)
+        browser = await p.firefox.launch(headless=True)
         context = await browser.new_context()
         page = await context.new_page()
         await page.goto(link)
@@ -173,15 +131,15 @@ async def download_missing_chapter(links):
         await asyncio.sleep(0.2)
         await page.locator(
             'xpath=/html/body/div[1]/main/div[3]/div[2]/div/div[2]/div/div/div[2]/div[3]/select').select_option(
-            value=font_family)
+            value='Arial')
         await asyncio.sleep(0.2)
         await page.locator(
             'xpath=/html/body/div[1]/main/div[3]/div[2]/div/div[2]/div/div/div[2]/div[4]/select').select_option(
-            value=font_size)
+            value='25px')
         await asyncio.sleep(0.2)
         await page.locator(
             'xpath=/html/body/div[1]/main/div[3]/div[2]/div/div[2]/div/div/div[2]/div[5]/select').select_option(
-            value=line_height)
+            value='150%')
         await asyncio.sleep(0.2)
         await page.close()
         tasks = [asyncio.create_task(download_chapter(asyncio_semaphore, context, title, link, num)) for title,link,num in links]
@@ -317,30 +275,11 @@ async def main():
     while True:
         global missing_chapter
         missing_chapter = []
-        
-        # If novel_url is in config.json, use it; otherwise prompt the user
-        if config_novel_url and config_novel_url != "https://metruyencv.info/truyen/your-novel-url":
-            novel_url = config_novel_url
-            print(f"Using URL from config: {novel_url}")
-        else:
-            novel_url = input('Nhập link metruyencv mà bạn muốn tải: ')
-            
-        # Convert URL to .biz domain if needed
-        if 'metruyencv.com' in novel_url or 'metruyencv.info' in novel_url:
-            novel_url = novel_url.replace('metruyencv.com', 'metruyencv.biz').replace('metruyencv.info', 'metruyencv.biz')
-            print(f"Converted URL to: {novel_url}")
-            
+        novel_url = input('Nhập link metruyencv mà bạn muốn tải: ')
         if '/' == novel_url[-1]:
             novel_url = novel_url[:-1]
-            
-        # If start_chapter and end_chapter are in config.json, use them; otherwise prompt the user
-        if 'config_start_chapter' in locals() and 'config_end_chapter' in locals():
-            start_chapter = config_start_chapter
-            end_chapter = config_end_chapter
-            print(f'Sử dụng thông tin từ config.json - Chapter bắt đầu: {start_chapter}, Chapter kết thúc: {end_chapter}')
-        else:
-            start_chapter = int(input('Chapter bắt đầu: '))
-            end_chapter = int(input('Chapter kết thúc: '))
+        start_chapter = int(input('Chapter bắt đầu: '))
+        end_chapter = int(input('Chapter kết thúc: '))
 
         try:
             response = await client.get(novel_url, headers=header)
@@ -367,7 +306,7 @@ async def main():
             continue
 
         filename = novel_url.replace(BASE_URL, '').replace('-', '')
-        path = f"{disk}:/{novel_folder}/{title.replace(':', ',').replace('?', '')}"
+        path = f"{disk}:/novel/{title.replace(':', ',').replace('?', '')}"
         os.makedirs(path, exist_ok=True)
 
         chapters = await fetch_chapters(start_chapter, end_chapter, novel_url)
@@ -376,7 +315,7 @@ async def main():
         if valid_chapters:
             create_epub(title, author, status, attribute, image, valid_chapters, path, filename)
             print(
-                f'Tải thành công {len(valid_chapters)}/{end_chapter - start_chapter + 1} chapter. File của bạn nằm tại "{disk}:/{novel_folder}"')
+                f'Tải thành công {len(valid_chapters)}/{end_chapter - start_chapter + 1} chapter. File của bạn nằm tại "D:/novel"')
         else:
             print("Lỗi. Tải không thành công")
 
