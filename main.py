@@ -20,30 +20,48 @@ from async_lru import alru_cache
 # Enable garbage collection
 gc.enable()
 
-data_dir = user_config_dir(appname='metruyencv-downloader',appauthor='nguyentd010')
-os.makedirs(data_dir, exist_ok=True)
-if not os.path.isfile(data_dir + '\config.ini'):
-    config = configparser.ConfigParser()
-    with open(data_dir + '\config.ini', 'w') as configfile:
-        config.write(configfile)
-
-missing_chapter = []
-if os.stat(data_dir+"\config.ini").st_size == 0:
-    username = str(input('Email tài khoản metruyencv?:'))
-    password = str(input('Password?:'))
-    disk = str(input('Ổ đĩa lưu truyện(C/D):')).capitalize()
-    max_connections = int(input('''Max Connections (10 -> 1000) 
-    Note: Càng cao thì rủi ro lỗi cũng tăng, chỉ số tối ưu nhất là 50 : '''))
-    save = str(input('Lưu config?(Y/N):')).capitalize()
-
+# Read configuration from configuration.txt instead of using config.ini
+config_file_path = 'configuration.txt'
+if os.path.isfile(config_file_path):
+    with open(config_file_path, 'r') as file:
+        config_lines = file.readlines()
+        config_data = {}
+        for line in config_lines:
+            line = line.strip()
+            if '=' in line:
+                key, value = line.split('=', 1)
+                config_data[key] = value
+        
+        username = config_data.get('username', '')
+        password = config_data.get('password', '')
+        disk = config_data.get('disk', 'C')
+        max_connections = int(config_data.get('max_connections', '50'))
 else:
-    config = configparser.ConfigParser()
-    config.read(data_dir + '\config.ini')
-    username = str(config.get('data', 'login'))
-    password = str(config.get('data', 'password'))
-    disk = str(config.get('data', 'disk'))
-    max_connections = int(config.get('data', 'max-connection'))
-    save = None
+    # Fallback to old method if configuration.txt doesn't exist
+    data_dir = user_config_dir(appname='metruyencv-downloader',appauthor='nguyentd010')
+    os.makedirs(data_dir, exist_ok=True)
+    if not os.path.isfile(data_dir + '\config.ini'):
+        config = configparser.ConfigParser()
+        with open(data_dir + '\config.ini', 'w') as configfile:
+            config.write(configfile)
+
+    missing_chapter = []
+    if os.stat(data_dir+"\config.ini").st_size == 0:
+        username = str(input('Email tài khoản metruyencv?:'))
+        password = str(input('Password?:'))
+        disk = str(input('Ổ đĩa lưu truyện(C/D):')).capitalize()
+        max_connections = int(input('''Max Connections (10 -> 1000) 
+        Note: Càng cao thì rủi ro lỗi cũng tăng, chỉ số tối ưu nhất là 50 : '''))
+        save = str(input('Lưu config?(Y/N):')).capitalize()
+
+    else:
+        config = configparser.ConfigParser()
+        config.read(data_dir + '\config.ini')
+        username = str(config.get('data', 'login'))
+        password = str(config.get('data', 'password'))
+        disk = str(config.get('data', 'disk'))
+        max_connections = int(config.get('data', 'max-connection'))
+        save = None
 
 
 limits = httpx.Limits(max_keepalive_connections=100, max_connections=max_connections)
