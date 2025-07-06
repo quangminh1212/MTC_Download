@@ -56,7 +56,7 @@ user_agent = get()
 
 file_location = os.getcwd()
 
-pytesseract.pytesseract.tesseract_cmd = fr'{file_location}\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 header = {'user-agent': user_agent}
 
