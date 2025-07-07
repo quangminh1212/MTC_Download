@@ -65,55 +65,66 @@ def download_chapter(url, output_file=None, delay=1):
         title_text = chapter_title.text.strip() if chapter_title else "Unknown Chapter"
         story_name = story_title.text.strip() if story_title else "Unknown Story"
         
-        # Tìm phần tử chứa nội dung chính - thử nhiều selector khác nhau
+        # Cải thiện cách trích xuất nội dung chương
+        # Truy cập trực tiếp vào phần tử có id="article" hoặc class="article" - nơi chứa nội dung chính
         story_content = None
-        selectors = [
-            "div#chapter-content.break-words", 
-            "div.break-words#chapter-content",
-            "div#chapter-content", 
-            "div.chapter-content",
-            "div.break-words",
-            "article.chapter-c", 
-            "div.chapter-c",
-            "div.content-chapter", 
-            "div.chapter-detail",
-            "div.chapter-detail-content",
-            "div.chapter",
-            "div.content"
-        ]
         
-        for selector in selectors:
-            elements = soup.select(selector)
-            for element in elements:
-                if element and element.text.strip() and len(element.text.strip()) > 200:
-                    story_content = element
-                    logger.info(f"Đã tìm thấy nội dung chương với selector: {selector}")
-                    break
-            if story_content:
-                break
+        # Thử tìm theo ID trước (cách hiệu quả nhất)
+        story_content = soup.find(id="article") or soup.find("article")
         
-        # Nếu vẫn không tìm được nội dung qua selector, thử tìm bằng cách khác
+        # Nếu không tìm thấy, thử các selectors mới dựa trên cấu trúc trang của metruyencv.com
         if not story_content:
-            # Tìm thẻ div lớn sau tiêu đề chương
-            if chapter_title:
-                next_element = chapter_title.find_next("div")
-                if next_element and len(next_element.text.strip()) > 200:  # Nếu có đủ nội dung
-                    story_content = next_element
+            selectors = [
+                "div.chapter-content", 
+                "div.chapter-c", 
+                "div#chr-content", 
+                "div.chr-c", 
+                "div#chapter-content", 
+                "div.break-words",
+                "div.content",
+                "article.chapter", 
+                "div.text-justify", 
+                "div.nh-read__content"
+            ]
             
-            # Tìm các thẻ div có nhiều nội dung text
-            if not story_content:
-                divs = soup.find_all("div")
-                longest_div = None
-                max_length = 200  # Ngưỡng tối thiểu
+            for selector in selectors:
+                elements = soup.select(selector)
+                for element in elements:
+                    if element and element.text.strip() and len(element.text.strip()) > 200:
+                        story_content = element
+                        logger.info(f"Đã tìm thấy nội dung chương với selector: {selector}")
+                        break
+                if story_content:
+                    break
+        
+        # Nếu vẫn không tìm được, thử tìm thẻ div lớn chứa nhiều đoạn văn bản
+        if not story_content:
+            # Tìm các phần tử <p> có độ dài lớn
+            paragraphs = soup.find_all('p')
+            if paragraphs:
+                # Tìm phần tử cha chung của các đoạn văn
+                potential_parents = {}
+                for p in paragraphs:
+                    if len(p.text.strip()) > 50:  # Chỉ tính các đoạn có nội dung đủ dài
+                        parent = p.parent
+                        if parent not in potential_parents:
+                            potential_parents[parent] = 0
+                        potential_parents[parent] += 1
                 
-                for div in divs:
-                    text = div.get_text(strip=True)
-                    if len(text) > max_length and "Copyright" not in text and "facebook" not in text.lower():
-                        max_length = len(text)
-                        longest_div = div
-                
-                if longest_div:
-                    story_content = longest_div
+                # Chọn phần tử cha có nhiều đoạn văn nhất
+                if potential_parents:
+                    max_parent = max(potential_parents.items(), key=lambda x: x[1])[0]
+                    story_content = max_parent
+        
+        # Phương pháp cuối cùng: tìm phần tử lớn nhất sau tiêu đề
+        if not story_content and chapter_title:
+            # Tìm phần tử lớn đầu tiên sau tiêu đề chương
+            current = chapter_title.next_sibling
+            while current and (not hasattr(current, 'name') or current.name not in ['div', 'article']):
+                current = current.next_sibling
+            
+            if current and len(current.text.strip()) > 200:
+                story_content = current
         
         if not story_content:
             logger.error(f"Không tìm thấy nội dung chương trong trang!")
@@ -123,10 +134,21 @@ def download_chapter(url, output_file=None, delay=1):
         content = story_content
         
         # Loại bỏ các phần tử không mong muốn trước khi lấy nội dung
-        for unwanted in content.select('script, style, iframe, canvas, .hidden-content, [id^="middle-content-"], #middle-content-one, #middle-content-two, #middle-content-three'):
-            if unwanted:
+        unwanted_selectors = [
+            'script', 'style', 'iframe', 'canvas', '.hidden-content', 
+            '[id^="middle-content-"]', '#middle-content-one', '#middle-content-two', 
+            '#middle-content-three', '.chapter-nav', '.chapter-header', '.chapter-footer',
+            '.ads', '.advertisement', '.quangcao', 'button', '.nav', '.pagination',
+            '.notify', '.note', '.alert', '.copyright', '.fb-like', '.fb-comment',
+            '.button', '.btn', '.social', '.rating', '.comment', '.share',
+            'h1', 'h2', 'h3', 'h4', 'h5', 'header', 'footer', 'aside',
+            '.menu', '.sidebar', 'nav', '.panel', '.info'
+        ]
+        
+        for selector in unwanted_selectors:
+            for element in content.select(selector):
                 try:
-                    unwanted.extract()
+                    element.extract()
                 except:
                     pass
         
@@ -153,6 +175,18 @@ def download_chapter(url, output_file=None, delay=1):
         text = re.sub(r'-----.*?-----', '', text, flags=re.DOTALL)
         text = re.sub(r'Chấm điểm cao nghe nói.*?Không quảng cáo!', '', text, flags=re.DOTALL)
         text = re.sub(r'truyencv\.com|metruyencv\.com', '', text, flags=re.IGNORECASE)
+        
+        # Loại bỏ các mục điều hướng như "Câu hình", "Đánh dấu", "Close panel" v.v.
+        text = re.sub(r'Câu hình(?:Mục lục|Đánh dấu|Close panel|Xuống chương|hiện tại|Không có chương nào)', '', text)
+        text = re.sub(r'Mục lục', '', text)
+        text = re.sub(r'Đánh dấu', '', text)
+        text = re.sub(r'Close panel', '', text)
+        text = re.sub(r'Xuống chương hiện tại', '', text)
+        text = re.sub(r'Không có chương nào', '', text)
+        text = re.sub(r'Cài đặt đọc truyện', '', text)
+        text = re.sub(r'Màu nền(?:\[ngày\])?', '', text)
+        text = re.sub(r'Màu chữ(?:\[ngày\])?', '', text)
+        text = re.sub(r'\[ngày\].*?#[0-9a-fA-F]+', '', text)
         
         # Xóa khoảng trắng thừa
         text = re.sub(r' {2,}', ' ', text)
