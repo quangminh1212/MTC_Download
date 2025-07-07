@@ -57,6 +57,8 @@ class MTCWebApp:
             url = request.form.get('url')
             mode = request.form.get('mode', 'single')
             num_chapters = int(request.form.get('num_chapters', 1))
+            start_chapter = int(request.form.get('start_chapter', 1))
+            end_chapter = int(request.form.get('end_chapter', 1))
             delay = float(request.form.get('delay', 2))
             combine = request.form.get('combine') == 'true'
             
@@ -99,6 +101,47 @@ class MTCWebApp:
                             self.tasks[task_id]['status'] = 'completed'
                             self.tasks[task_id]['progress'] = 100
                             self.tasks[task_id]['message'] = f'Tải thành công {successful}/{num_chapters} chương.'
+                            
+                            # Cập nhật danh sách file
+                            for file in os.listdir(task_folder):
+                                if file.endswith('.txt'):
+                                    if file == 'combined_story.txt' and combine:
+                                        self.tasks[task_id]['combined_file'] = file
+                                    else:
+                                        self.tasks[task_id]['files'].append(file)
+                        else:
+                            self.tasks[task_id]['status'] = 'failed'
+                            self.tasks[task_id]['message'] = 'Tải thất bại!'
+                    
+                    elif mode == 'range':
+                        # Tải từ chương đến chương
+                        if end_chapter < start_chapter:
+                            self.tasks[task_id]['status'] = 'failed'
+                            self.tasks[task_id]['message'] = 'Lỗi: Chương kết thúc phải lớn hơn hoặc bằng chương bắt đầu!'
+                            return
+                            
+                        # Lấy URL gốc của truyện
+                        import re
+                        match = re.search(r'(https://metruyencv.com/truyen/[^/]+)/chuong-\d+', url)
+                        if match:
+                            base_url = match.group(1)
+                        else:
+                            # Nếu URL là trang truyện
+                            base_url = url.rstrip('/')
+                            
+                        # Tạo URL cho chương bắt đầu
+                        start_url = f"{base_url}/chuong-{start_chapter}"
+                        
+                        # Tính tổng số chương cần tải
+                        total_chapters = end_chapter - start_chapter + 1
+                        
+                        # Tải các chương
+                        successful = download_multiple_chapters(start_url, total_chapters, task_folder, delay, combine)
+                        
+                        if successful > 0:
+                            self.tasks[task_id]['status'] = 'completed'
+                            self.tasks[task_id]['progress'] = 100
+                            self.tasks[task_id]['message'] = f'Tải thành công {successful}/{total_chapters} chương từ chương {start_chapter} đến {end_chapter}.'
                             
                             # Cập nhật danh sách file
                             for file in os.listdir(task_folder):
@@ -249,7 +292,7 @@ class MTCWebApp:
 
 def create_app(host='localhost', port=3000, debug=True):
     """
-    Tạo và trả về ứng dụng web
+    Tạo và cấu hình ứng dụng web
     
     Args:
         host: Host để chạy ứng dụng
@@ -257,10 +300,9 @@ def create_app(host='localhost', port=3000, debug=True):
         debug: Chế độ debug
     
     Returns:
-        Đối tượng Flask app
+        Đối tượng MTCWebApp
     """
-    app = MTCWebApp(host, port, debug)
-    return app.app
+    return MTCWebApp(host, port, debug)
 
 def run_app(host='localhost', port=3000, debug=True):
     """
@@ -271,7 +313,7 @@ def run_app(host='localhost', port=3000, debug=True):
         port: Cổng để chạy ứng dụng
         debug: Chế độ debug
     """
-    app = MTCWebApp(host, port, debug)
+    app = create_app(host, port, debug)
     app.run()
 
 if __name__ == '__main__':
