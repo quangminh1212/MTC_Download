@@ -1,3 +1,1 @@
-"""
-Tests for the mtc_downloader package
-""" 
+"""Tests for the MTC Downloader package.""" 
