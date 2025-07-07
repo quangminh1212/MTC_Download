@@ -7,6 +7,7 @@ from tkinter import filedialog, messagebox, ttk
 import threading
 from extract_story import extract_story_content
 from extract_story_batch import extract_all_html_files
+from download_story import download_chapter, download_multiple_chapters, download_all_chapters
 
 class StoryExtractorApp:
     def __init__(self, root):
@@ -40,10 +41,15 @@ class StoryExtractorApp:
         tab_control.add(tab2, text='Trích xuất nhiều file')
         self.setup_tab2(tab2)
         
-        # Tab 3: Xem file đã trích xuất
+        # Tab 3: Tải từ web
         tab3 = ttk.Frame(tab_control)
-        tab_control.add(tab3, text='Xem file đã trích xuất')
+        tab_control.add(tab3, text='Tải từ MetruyenCV')
         self.setup_tab3(tab3)
+        
+        # Tab 4: Xem file đã trích xuất
+        tab4 = ttk.Frame(tab_control)
+        tab_control.add(tab4, text='Xem file đã trích xuất')
+        self.setup_tab4(tab4)
         
         tab_control.pack(expand=1, fill="both")
         
@@ -159,6 +165,95 @@ class StoryExtractorApp:
         frame.pack(fill=tk.BOTH, expand=True)
         
         # Mô tả
+        desc_label = ttk.Label(frame, text="Tải truyện trực tiếp từ metruyencv.com và lưu thành file text", wraplength=600)
+        desc_label.pack(pady=(0, 10), anchor="w")
+        
+        # Khung nhập URL
+        url_frame = ttk.LabelFrame(frame, text="URL của truyện/chương", padding="10")
+        url_frame.pack(fill=tk.X, pady=5)
+        
+        self.url_var = tk.StringVar()
+        url_entry = ttk.Entry(url_frame, textvariable=self.url_var, width=50)
+        url_entry.pack(fill=tk.X)
+        
+        # Ví dụ URL
+        example_label = ttk.Label(url_frame, text="Ví dụ: https://metruyencv.com/truyen/ten-truyen hoặc https://metruyencv.com/truyen/ten-truyen/chuong-XX", font=('Helvetica', 8), wraplength=600)
+        example_label.pack(anchor="w", pady=(5, 0))
+        
+        # Khung nhập thư mục đích
+        output_frame = ttk.LabelFrame(frame, text="Thư mục đích (để trống để tạo thư mục theo tên truyện)", padding="10")
+        output_frame.pack(fill=tk.X, pady=5)
+        
+        self.output_dir_var = tk.StringVar()
+        output_entry = ttk.Entry(output_frame, textvariable=self.output_dir_var, width=50)
+        output_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 5))
+        
+        output_button = ttk.Button(output_frame, text="Chọn thư mục", command=self.browse_output_dir)
+        output_button.pack(side=tk.RIGHT)
+        
+        # Khung tùy chọn
+        options_frame = ttk.LabelFrame(frame, text="Tùy chọn", padding="10")
+        options_frame.pack(fill=tk.X, pady=5)
+        
+        # Số lượng chương
+        num_frame = ttk.Frame(options_frame)
+        num_frame.pack(fill=tk.X, pady=2)
+        
+        self.download_mode = tk.StringVar(value="single")
+        
+        single_radio = ttk.Radiobutton(num_frame, text="Tải một chương", variable=self.download_mode, value="single")
+        single_radio.pack(side=tk.LEFT, padx=(0, 10))
+        
+        multi_radio = ttk.Radiobutton(num_frame, text="Tải nhiều chương:", variable=self.download_mode, value="multi")
+        multi_radio.pack(side=tk.LEFT, padx=(0, 10))
+        
+        self.num_chapters_var = tk.StringVar(value="5")
+        num_entry = ttk.Entry(num_frame, textvariable=self.num_chapters_var, width=5)
+        num_entry.pack(side=tk.LEFT)
+        
+        all_radio = ttk.Radiobutton(num_frame, text="Tải tất cả chương", variable=self.download_mode, value="all")
+        all_radio.pack(side=tk.LEFT, padx=(10, 0))
+        
+        # Độ trễ
+        delay_frame = ttk.Frame(options_frame)
+        delay_frame.pack(fill=tk.X, pady=2)
+        
+        delay_label = ttk.Label(delay_frame, text="Độ trễ giữa các request (giây):")
+        delay_label.pack(side=tk.LEFT, padx=(0, 10))
+        
+        self.delay_var = tk.StringVar(value="2")
+        delay_entry = ttk.Entry(delay_frame, textvariable=self.delay_var, width=5)
+        delay_entry.pack(side=tk.LEFT)
+        
+        # Kết hợp file
+        combine_frame = ttk.Frame(options_frame)
+        combine_frame.pack(fill=tk.X, pady=2)
+        
+        self.web_combine_var = tk.BooleanVar(value=True)
+        combine_check = ttk.Checkbutton(combine_frame, text="Kết hợp tất cả chương thành một file", variable=self.web_combine_var)
+        combine_check.pack(anchor="w")
+        
+        # Nút tải
+        download_button = ttk.Button(frame, text="Tải truyện", command=self.download_from_web)
+        download_button.pack(pady=10)
+        
+        # Kết quả
+        result_frame = ttk.LabelFrame(frame, text="Kết quả", padding="10")
+        result_frame.pack(fill=tk.BOTH, expand=True, pady=5)
+        
+        self.result_text3 = tk.Text(result_frame, wrap=tk.WORD, height=10)
+        self.result_text3.pack(fill=tk.BOTH, expand=True, side=tk.LEFT)
+        
+        scrollbar3 = ttk.Scrollbar(result_frame, orient="vertical", command=self.result_text3.yview)
+        scrollbar3.pack(side=tk.RIGHT, fill=tk.Y)
+        self.result_text3.config(yscrollcommand=scrollbar3.set)
+    
+    def setup_tab4(self, parent):
+        # Frame chứa các thành phần
+        frame = ttk.Frame(parent, padding="10")
+        frame.pack(fill=tk.BOTH, expand=True)
+        
+        # Mô tả
         desc_label = ttk.Label(frame, text="Xem các file text đã trích xuất", wraplength=600)
         desc_label.pack(pady=(0, 10), anchor="w")
         
@@ -239,6 +334,11 @@ class StoryExtractorApp:
         if dir_path:
             self.target_dir_var.set(dir_path)
     
+    def browse_output_dir(self):
+        dir_path = filedialog.askdirectory(title="Chọn thư mục lưu file kết quả")
+        if dir_path:
+            self.output_dir_var.set(dir_path)
+    
     def browse_view_dir(self):
         dir_path = filedialog.askdirectory(title="Chọn thư mục chứa file text")
         if dir_path:
@@ -306,6 +406,74 @@ class StoryExtractorApp:
                 self.status_var.set("Đã hoàn thành")
             except Exception as e:
                 self.result_text2.insert(tk.END, f"Lỗi: {str(e)}\n")
+                self.status_var.set("Có lỗi xảy ra")
+        
+        threading.Thread(target=process).start()
+    
+    def download_from_web(self):
+        url = self.url_var.get()
+        output_dir = self.output_dir_var.get() or None
+        mode = self.download_mode.get()
+        
+        try:
+            delay = float(self.delay_var.get())
+        except ValueError:
+            delay = 2.0
+            
+        combine = self.web_combine_var.get()
+        
+        if not url:
+            messagebox.showerror("Lỗi", "Vui lòng nhập URL!")
+            return
+        
+        if not url.startswith("https://metruyencv.com/truyen/"):
+            messagebox.showerror("Lỗi", "URL không hợp lệ! URL phải có dạng https://metruyencv.com/truyen/...")
+            return
+            
+        self.status_var.set("Đang tải...")
+        self.root.update_idletasks()
+        
+        # Sử dụng thread để tránh giao diện bị đóng băng
+        def process():
+            try:
+                self.result_text3.delete(1.0, tk.END)
+                
+                if mode == "single":
+                    # Tải một chương
+                    self.result_text3.insert(tk.END, f"Đang tải một chương từ: {url}\n")
+                    result = download_chapter(url, None if not output_dir else os.path.join(output_dir, "chapter.txt"), delay)
+                    
+                    if result:
+                        self.result_text3.insert(tk.END, f"Đã tải thành công và lưu vào: {result}\n")
+                    else:
+                        self.result_text3.insert(tk.END, "Tải thất bại!\n")
+                        
+                elif mode == "multi":
+                    # Tải nhiều chương
+                    try:
+                        num_chapters = int(self.num_chapters_var.get())
+                    except ValueError:
+                        num_chapters = 5
+                        
+                    self.result_text3.insert(tk.END, f"Đang tải {num_chapters} chương từ: {url}\n")
+                    successful = download_multiple_chapters(url, num_chapters, output_dir, delay, combine)
+                    
+                    self.result_text3.insert(tk.END, f"Đã tải thành công {successful}/{num_chapters} chương.\n")
+                    
+                else:  # mode == "all"
+                    # Tải tất cả chương
+                    self.result_text3.insert(tk.END, f"Đang tải tất cả các chương từ: {url}\n")
+                    successful = download_all_chapters(url, output_dir, delay, combine)
+                    
+                    self.result_text3.insert(tk.END, f"Đã tải thành công {successful} chương.\n")
+                
+                if output_dir:
+                    self.result_text3.insert(tk.END, f"Các file đã được lưu vào thư mục: {output_dir}\n")
+                
+                self.status_var.set("Đã hoàn thành")
+                
+            except Exception as e:
+                self.result_text3.insert(tk.END, f"Lỗi: {str(e)}\n")
                 self.status_var.set("Có lỗi xảy ra")
         
         threading.Thread(target=process).start()
