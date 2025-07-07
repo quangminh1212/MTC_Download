@@ -6,6 +6,9 @@ echo MTC DOWNLOADER - PHIEN BAN TICH HOP
 echo =================================== 
 echo. 
 
+REM Chuyển trực tiếp đến phần chạy từ config mà không hiển thị menu
+goto :run_from_config
+
 :main_menu
 cls
 echo ===================================

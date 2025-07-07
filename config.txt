@@ -1,13 +1,13 @@
 # Cấu hình tài khoản
-email=your_email@example.com
-password=your_password
+email=0947556012abc@gmail.com
+password=0438765718
 
 # Cài đặt lưu trữ và hiệu suất
-disk=D
+disk=C
 max_connections=50
 
 # URL truyện (lưu ý phải dùng dạng metruyencv.info)
-novel_url=https://metruyencv.info/truyen/your-novel-url
+novel_url=https://metruyencv.com/truyen/dai-duong-chi-toi-nguu-vuong-gia
 
 # Chọn chương cần tải
 start_chapter=1
