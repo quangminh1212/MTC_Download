@@ -89,8 +89,11 @@ def extract_story_content(html_file, output_file=None):
         
         # Tìm phần tử chứa nội dung chính - thử nhiều selector khác nhau
         content_selectors = [
+            "div#chapter-content.break-words", 
+            "div.break-words#chapter-content",
             "div#chapter-content", 
             "div.chapter-content",
+            "div.break-words",
             "article.chapter-c", 
             "div.chapter-c",
             "div.content-chapter", 
@@ -98,16 +101,18 @@ def extract_story_content(html_file, output_file=None):
             "div.chapter-detail-content",
             "div.chapter",
             "div.content",
-            "article.content",
-            "div.break-words"
+            "article.content"
         ]
         
         story_content = None
         for selector in content_selectors:
-            content = soup.select_one(selector)
-            if content and content.text.strip():
-                story_content = content
-                logger.info(f"Đã tìm thấy nội dung với selector: {selector}")
+            elements = soup.select(selector)
+            for element in elements:
+                if element and element.text.strip() and len(element.text.strip()) > 200:
+                    story_content = element
+                    logger.info(f"Đã tìm thấy nội dung với selector: {selector}")
+                    break
+            if story_content:
                 break
         
         # Nếu vẫn không tìm thấy, thử các phương pháp khác
@@ -137,12 +142,19 @@ def extract_story_content(html_file, output_file=None):
             logger.error(f"Không tìm thấy nội dung truyện!")
             return None
         
+        # Clone để không làm thay đổi cấu trúc gốc
+        content = story_content
+        
         # Loại bỏ các phần tử không cần thiết
-        for element in story_content.select("script, style, iframe, canvas, .ads, .comment, .hidden"):
-            element.decompose()
+        for unwanted in content.select("script, style, iframe, canvas, .ads, .comment, .hidden, [id^='middle-content-'], #middle-content-one, #middle-content-two, #middle-content-three"):
+            if unwanted:
+                try:
+                    unwanted.decompose()
+                except:
+                    pass
         
         # Lấy HTML nội dung để giữ định dạng
-        content_html = str(story_content)
+        content_html = str(content)
         
         # Chuyển đổi HTML thành văn bản có định dạng, giữ lại các đoạn văn
         # Thay thế các thẻ phổ biến bằng ký tự xuống dòng để giữ định dạng
@@ -152,6 +164,7 @@ def extract_story_content(html_file, output_file=None):
         text = re.sub(r'</p>', '', text)
         text = re.sub(r'<div.*?>', '\n', text)   # Thay thế <div> bằng xuống dòng
         text = re.sub(r'</div>', '', text)
+        text = re.sub(r'<canvas[^>]*>.*?</canvas>', '', text, flags=re.DOTALL)  # Xóa thẻ canvas
         
         # Loại bỏ các thẻ HTML còn lại
         text = re.sub(r'<.*?>', '', text)
