@@ -39,16 +39,46 @@ def extract_story_content(html_file, output_file=None):
         soup = BeautifulSoup(html_content, 'html.parser')
         
         # Tìm thông tin tiêu đề, lần lượt thử các selector phổ biến
-        title_element = soup.select_one("h2.text-center.text-gray-600")
-        if not title_element:
-            title_element = soup.select_one("h1")  # Thử tìm h1 đầu tiên
-        if not title_element:
-            title_element = soup.select_one("title")  # Thử tìm trong title
+        title_selectors = [
+            "h2.text-center.text-gray-600",  # Selector cũ
+            "h1.font-semibold",              # Tiêu đề truyện
+            "h2",                           # Tiêu đề chương
+            "h1",                           # Thử tìm h1 đầu tiên
+            "title",                        # Thử tìm trong title
+            ".story-title",                 # Class tiêu đề truyện
+            ".chapter-title"                # Class tiêu đề chương
+        ]
+        
+        title_element = None
+        for selector in title_selectors:
+            title_element = soup.select_one(selector)
+            if title_element and title_element.text.strip():
+                break
         
         # Tìm tiêu đề chương (h2) nếu có
-        chapter_title_element = soup.select_one("h2")
+        chapter_title_selectors = [
+            "h2.text-center", 
+            "h2.chapter-title", 
+            "h2"
+        ]
         
-        story_title = title_element.text.strip() if title_element else "Unknown Title"
+        chapter_title_element = None
+        for selector in chapter_title_selectors:
+            chapter_title_element = soup.select_one(selector)
+            if chapter_title_element and chapter_title_element.text.strip():
+                break
+        
+        # Tìm tiêu đề truyện nếu chưa có
+        if not title_element:
+            # Tìm trong các meta tags
+            meta_title = soup.select_one("meta[property='og:title']")
+            if meta_title:
+                story_title = meta_title.get("content", "Unknown Title")
+            else:
+                story_title = "Unknown Title"
+        else:
+            story_title = title_element.text.strip()
+        
         chapter_title = chapter_title_element.text.strip() if chapter_title_element else ""
         
         # Kết hợp tiêu đề truyện và tiêu đề chương
@@ -57,23 +87,69 @@ def extract_story_content(html_file, output_file=None):
         else:
             title = story_title
         
-        # Tìm phần tử chứa nội dung chính
-        story_content = soup.select_one("div#chapter-content")
+        # Tìm phần tử chứa nội dung chính - thử nhiều selector khác nhau
+        content_selectors = [
+            "div#chapter-content", 
+            "div.chapter-content",
+            "article.chapter-c", 
+            "div.chapter-c",
+            "div.content-chapter", 
+            "div.chapter-detail",
+            "div.chapter-detail-content",
+            "div.chapter",
+            "div.content",
+            "article.content"
+        ]
+        
+        story_content = None
+        for selector in content_selectors:
+            content = soup.select_one(selector)
+            if content and content.text.strip():
+                story_content = content
+                logger.info(f"Đã tìm thấy nội dung với selector: {selector}")
+                break
+        
+        # Nếu vẫn không tìm thấy, thử các phương pháp khác
         if not story_content:
-            story_content = soup.select_one("div.chapter-content")  # Thử với class
+            # Tìm thẻ div lớn sau tiêu đề chương
+            if chapter_title_element:
+                next_element = chapter_title_element.find_next("div")
+                if next_element and len(next_element.text.strip()) > 200:  # Nếu có đủ nội dung
+                    story_content = next_element
+            
+            # Tìm các thẻ div có nhiều nội dung text
+            if not story_content:
+                divs = soup.find_all("div")
+                longest_div = None
+                max_length = 200  # Ngưỡng tối thiểu
+                
+                for div in divs:
+                    text = div.get_text(strip=True)
+                    if len(text) > max_length and "Copyright" not in text and "facebook" not in text.lower():
+                        max_length = len(text)
+                        longest_div = div
+                
+                if longest_div:
+                    story_content = longest_div
         
         if not story_content:
-            logger.error("Không tìm thấy nội dung truyện!")
+            logger.error(f"Không tìm thấy nội dung truyện!")
             return None
+        
+        # Loại bỏ các phần tử không cần thiết
+        for element in story_content.select("script, style, iframe, .ads, .comment, .hidden"):
+            element.decompose()
         
         # Lấy văn bản từ nội dung
         text = story_content.get_text(separator="\n\n", strip=True)
         
-        # Xóa các nội dung quảng cáo
+        # Xóa các nội dung quảng cáo và đoạn text không liên quan
         text = re.sub(r'-----.*?-----', '', text, flags=re.DOTALL)
+        text = re.sub(r'Chương này có.*?VIP.*?$', '', text, flags=re.MULTILINE)
+        text = re.sub(r'truyencv\.com|metruyencv\.com', '', text, flags=re.IGNORECASE)
         
         # Tạo nội dung đầy đủ với tiêu đề
-        full_content = f"{title}\n\n{text}"
+        full_content = f"{title}\n\n{'='*50}\n\n{text}"
         
         # Ghi nội dung vào file
         with open(output_file, 'w', encoding='utf-8') as f:
