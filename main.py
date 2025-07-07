@@ -53,10 +53,11 @@ else:
 
 limits = httpx.Limits(max_keepalive_connections=100, max_connections=max_connections)
 timeout = httpx.Timeout(None)
-client = httpx.AsyncClient(limits=limits, timeout=timeout)
+# Cấu hình httpx client để follow redirects
+client = httpx.AsyncClient(limits=limits, timeout=timeout, follow_redirects=True)
 
-# Base URL for the novel
-BASE_URL = 'https://metruyencv.info/truyen/'
+# Base URL for the novel - đổi thành .com vì đây là domain chính thức hiện nay
+BASE_URL = 'https://metruyencv.com/truyen/'
 
 user_agent = get()
 
@@ -312,9 +313,9 @@ async def main():
     if '/' == novel_url[-1]:
         novel_url = novel_url[:-1]
     
-    # Thay thế .com bằng .info nếu cần
-    if 'metruyencv.com' in novel_url:
-        novel_url = novel_url.replace('metruyencv.com', 'metruyencv.info')
+    # Thay thế .info bằng .com vì trang web chính thức hiện nay là .com
+    if 'metruyencv.info' in novel_url:
+        novel_url = novel_url.replace('metruyencv.info', 'metruyencv.com')
         print(f"Đã chuyển URL sang: {novel_url}")
     
     # In ra các giá trị đọc được

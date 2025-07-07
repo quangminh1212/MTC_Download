@@ -87,15 +87,15 @@ for /f "tokens=1,2 delims==" %%a in ('type config.txt ^| findstr /v "#" ^| finds
     set "%%a=%%b"
 )
 
-REM Kiểm tra và điều chỉnh URL từ metruyencv.com sang metruyencv.info
-echo %novel_url% | findstr /C:"metruyencv.com" > nul
+REM Kiểm tra và điều chỉnh URL từ metruyencv.info sang metruyencv.com
+echo %novel_url% | findstr /C:"metruyencv.info" > nul
 if not errorlevel 1 (
-    echo [CANH BAO] Phat hien URL metruyencv.com. Dang chuyen sang metruyencv.info...
-    set "novel_url=!novel_url:metruyencv.com=metruyencv.info!"
+    echo [CANH BAO] Phat hien URL metruyencv.info. Dang chuyen sang metruyencv.com...
+    set "novel_url=!novel_url:metruyencv.info=metruyencv.com!"
     echo URL moi: %novel_url%
     
     REM Cập nhật URL trong file config.txt
-    powershell -Command "(Get-Content config.txt) -replace 'metruyencv\.com', 'metruyencv.info' | Set-Content config.txt"
+    powershell -Command "(Get-Content config.txt) -replace 'metruyencv\.info', 'metruyencv.com' | Set-Content config.txt"
     echo Da cap nhat URL trong file config.txt.
     echo.
 )
