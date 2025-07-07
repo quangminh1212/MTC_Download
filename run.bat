@@ -120,22 +120,27 @@ echo.
 echo Dang chay chuong trinh...
 echo.
 
-REM Tạo file tạm để tự động điền các thông tin
-echo %email%> input.txt
-echo %password%>> input.txt
-echo %disk%>> input.txt
-echo %max_connections%>> input.txt
-echo Y>> input.txt
-echo %novel_url%>> input.txt
-echo %start_chapter%>> input.txt
-echo %end_chapter%>> input.txt
-echo n>> input.txt
+REM DEBUG: Hiển thị giá trị biến trước khi thiết lập
+echo DEBUG - Truoc khi thiet lap:
+echo Novel URL: %novel_url%
+echo Start Chapter: %start_chapter%
+echo End Chapter: %end_chapter%
+echo.
 
-REM Chạy chương trình với input từ file tạm
-python main.py < input.txt
+REM Thiết lập biến môi trường thay vì sử dụng input.txt
+set "NOVEL_URL=%novel_url%"
+set "START_CHAPTER=%start_chapter%"
+set "END_CHAPTER=%end_chapter%"
 
-REM Xóa file tạm sau khi chạy xong
-del input.txt
+REM DEBUG: Hiển thị giá trị biến sau khi thiết lập
+echo DEBUG - Sau khi thiet lap:
+echo Novel URL (env): %NOVEL_URL%
+echo Start Chapter (env): %START_CHAPTER%
+echo End Chapter (env): %END_CHAPTER%
+echo.
+
+REM Truyền biến vào qua tham số dòng lệnh thay vì biến môi trường
+python main.py "%novel_url%" "%start_chapter%" "%end_chapter%"
 
 echo.
 echo Chuong trinh da ket thuc. Vui long kiem tra file EPUB trong thu muc %disk%:/novel/

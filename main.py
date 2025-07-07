@@ -14,6 +14,7 @@ import configparser
 import os.path
 import gc
 from async_lru import alru_cache
+import sys
 
 
 
@@ -261,55 +262,106 @@ def create_epub(title, author, status, attribute, image, chapters, path, filenam
     book.spine = [f'chapter{i}' for i in chapter_num]
     epub.write_epub(f'{path}/{filename}.epub', book)
 
+def read_config_file(file_path):
+    """Đọc file cấu hình với các mã hóa khác nhau để tránh lỗi"""
+    encodings = ['utf-8-sig', 'utf-8', 'latin-1', 'cp1252']
+    
+    for encoding in encodings:
+        try:
+            with open(file_path, 'r', encoding=encoding) as f:
+                return f.read()
+        except UnicodeDecodeError:
+            continue
+    
+    # Nếu tất cả các mã hóa đều thất bại, đọc dưới dạng nhị phân và bỏ qua BOM
+    with open(file_path, 'rb') as f:
+        content = f.read()
+        # Bỏ qua BOM nếu có
+        if content.startswith(b'\xef\xbb\xbf'):
+            content = content[3:]
+        # Bỏ qua BOM UTF-16
+        elif content.startswith(b'\xff\xfe') or content.startswith(b'\xfe\xff'):
+            content = content[2:]
+        return content.decode('utf-8', errors='ignore')
 
 async def main():
-    while True:
+    # Lấy thông tin từ tham số dòng lệnh
+    try:
+        if len(sys.argv) > 3:
+            # Nếu có đủ thông tin từ tham số dòng lệnh, sử dụng chúng
+            novel_url = sys.argv[1]
+            start_chapter = int(sys.argv[2])
+            end_chapter = int(sys.argv[3])
+            print(f"Sử dụng cấu hình từ tham số dòng lệnh:")
+            print(f"URL: {novel_url}")
+            print(f"Chương bắt đầu: {start_chapter}")
+            print(f"Chương kết thúc: {end_chapter}")
+        else:
+            # Nếu không có đủ tham số dòng lệnh, yêu cầu người dùng nhập
+            print("Không đủ tham số dòng lệnh.")
+            novel_url = input('Nhập link metruyencv mà bạn muốn tải: ')
+            start_chapter = int(input('Chapter bắt đầu: '))
+            end_chapter = int(input('Chapter kết thúc: '))
+    except Exception as e:
+        print(f"Lỗi khi đọc tham số: {e}")
         novel_url = input('Nhập link metruyencv mà bạn muốn tải: ')
-        if '/' == novel_url[-1]:
-            novel_url = novel_url[:-1]
         start_chapter = int(input('Chapter bắt đầu: '))
         end_chapter = int(input('Chapter kết thúc: '))
+    
+    # Đảm bảo URL kết thúc đúng
+    if '/' == novel_url[-1]:
+        novel_url = novel_url[:-1]
+    
+    # Thay thế .com bằng .info nếu cần
+    if 'metruyencv.com' in novel_url:
+        novel_url = novel_url.replace('metruyencv.com', 'metruyencv.info')
+        print(f"Đã chuyển URL sang: {novel_url}")
+    
+    # In ra các giá trị đọc được
+    print(f"URL: {novel_url}")
+    print(f"Chương bắt đầu: {start_chapter}")
+    print(f"Chương kết thúc: {end_chapter}")
 
-        try:
-            response = await client.get(novel_url, headers=header)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.content, 'lxml')
-            title = str(soup.find('h1', class_='mb-2').text)
-            author = str(soup.find('a', class_='text-gray-500').text).strip()
-            status = str(
-                soup.find('a', class_='inline-flex border border-primary rounded px-2 py-1 text-primary').select_one(
-                    'span').text).strip()
-            attribute = str(soup.find('a',
-                                      class_='inline-flex border border-rose-700 dark:border-red-400 rounded px-2 py-1 text-rose-700 dark:text-red-400').text)
-            image_url = soup.find('img', class_='w-44 h-60 shadow-lg rounded mx-auto')['src']
-        except (httpx.HTTPError, TypeError, KeyError) as e:
-            print(f"Error fetching novel information: {e}")
-            continue
+    try:
+        response = await client.get(novel_url, headers=header)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'lxml')
+        title = str(soup.find('h1', class_='mb-2').text)
+        author = str(soup.find('a', class_='text-gray-500').text).strip()
+        status = str(
+            soup.find('a', class_='inline-flex border border-primary rounded px-2 py-1 text-primary').select_one(
+                'span').text).strip()
+        attribute = str(soup.find('a',
+                                  class_='inline-flex border border-rose-700 dark:border-red-400 rounded px-2 py-1 text-rose-700 dark:text-red-400').text)
+        image_url = soup.find('img', class_='w-44 h-60 shadow-lg rounded mx-auto')['src']
+    except (httpx.HTTPError, TypeError, KeyError) as e:
+        print(f"Error fetching novel information: {e}")
+        return
 
-        try:
-            image_data = await client.get(image_url, headers=header)
-            image_data.raise_for_status()
-            image = image_data.content
-        except httpx.HTTPError as e:
-            print(f"Error downloading image: {e}")
-            continue
+    try:
+        image_data = await client.get(image_url, headers=header)
+        image_data.raise_for_status()
+        image = image_data.content
+    except httpx.HTTPError as e:
+        print(f"Error downloading image: {e}")
+        return
 
-        filename = novel_url.replace(BASE_URL, '').replace('-', '')
-        path = f"{disk}:/novel/{title.replace(':', ',').replace('?', '')}"
-        os.makedirs(path, exist_ok=True)
+    filename = novel_url.replace(BASE_URL, '').replace('-', '')
+    path = f"{disk}:/novel/{title.replace(':', ',').replace('?', '')}"
+    os.makedirs(path, exist_ok=True)
 
-        chapters = await fetch_chapters(start_chapter, end_chapter, novel_url)
-        valid_chapters = [chapter for chapter in chapters if chapter is not None]
+    chapters = await fetch_chapters(start_chapter, end_chapter, novel_url)
+    valid_chapters = [chapter for chapter in chapters if chapter is not None]
 
-        if valid_chapters:
-            create_epub(title, author, status, attribute, image, valid_chapters, path, filename)
-            print(
-                f'Tải thành công {len(valid_chapters)}/{end_chapter - start_chapter + 1} chapter. File của bạn nằm tại "D:/novel"')
-        else:
-            print("Lỗi. Tải không thành công")
+    if valid_chapters:
+        create_epub(title, author, status, attribute, image, valid_chapters, path, filename)
+        print(
+            f'Tải thành công {len(valid_chapters)}/{end_chapter - start_chapter + 1} chapter. File của bạn nằm tại "{disk}:/novel"')
+    else:
+        print("Lỗi. Tải không thành công")
 
-        if input("Tải tiếp? (y/n): ").lower() != 'y':
-            break
+    if input("Tải tiếp? (y/n): ").lower() != 'y':
+        return
 
 
 if __name__ == '__main__':
