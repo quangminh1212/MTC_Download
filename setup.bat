@@ -44,4 +44,4 @@ echo - run.bat gui    : Start the GUI application
 echo - run.bat cli    : Start the command-line application
 
 echo.
-pause
+pause 
