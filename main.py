@@ -22,13 +22,17 @@ gc.enable()
 
 data_dir = user_config_dir(appname='metruyencv-downloader',appauthor='nguyentd010')
 os.makedirs(data_dir, exist_ok=True)
-if not os.path.isfile(data_dir + '\config.ini'):
+
+# Sửa các đường dẫn để tránh lỗi invalid escape sequence
+config_file = os.path.join(data_dir, 'config.ini')
+
+if not os.path.isfile(config_file):
     config = configparser.ConfigParser()
-    with open(data_dir + '\config.ini', 'w') as configfile:
+    with open(config_file, 'w') as configfile:
         config.write(configfile)
 
 missing_chapter = []
-if os.stat(data_dir+"\config.ini").st_size == 0:
+if os.stat(config_file).st_size == 0:
     username = str(input('Email tài khoản metruyencv?:'))
     password = str(input('Password?:'))
     disk = str(input('Ổ đĩa lưu truyện(C/D):')).capitalize()
@@ -38,7 +42,7 @@ if os.stat(data_dir+"\config.ini").st_size == 0:
 
 else:
     config = configparser.ConfigParser()
-    config.read(data_dir + '\config.ini')
+    config.read(config_file)
     username = str(config.get('data', 'login'))
     password = str(config.get('data', 'password'))
     disk = str(config.get('data', 'disk'))
@@ -67,7 +71,7 @@ if save == 'Y':
     config['data'] = {'login': username, 'password': password, 'disk' : disk, 'max-connection' : max_connections}
 
     # Write the configuration to a file
-    with open(data_dir + '\config.ini', 'w') as configfile:
+    with open(config_file, 'w') as configfile:
         config.write(configfile)
 
 def ocr(image: bytes) -> str:

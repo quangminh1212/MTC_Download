@@ -1,10 +1,11 @@
-@echo off 
-chcp 65001 >nul 
- 
-echo =================================== 
-echo MTC DOWNLOADER - PHIEN BAN TICH HOP 
-echo =================================== 
-echo. 
+@echo off
+chcp 65001 >nul
+SETLOCAL ENABLEDELAYEDEXPANSION
+
+echo ===================================
+echo MTC DOWNLOADER - PHIEN BAN TICH HOP
+echo ===================================
+echo.
 
 REM Chuyển trực tiếp đến phần chạy từ config mà không hiển thị menu
 goto :run_from_config
@@ -84,6 +85,19 @@ echo.
 REM Đọc các giá trị từ file config.txt
 for /f "tokens=1,2 delims==" %%a in ('type config.txt ^| findstr /v "#" ^| findstr /r "."') do (
     set "%%a=%%b"
+)
+
+REM Kiểm tra và điều chỉnh URL từ metruyencv.com sang metruyencv.info
+echo %novel_url% | findstr /C:"metruyencv.com" > nul
+if not errorlevel 1 (
+    echo [CANH BAO] Phat hien URL metruyencv.com. Dang chuyen sang metruyencv.info...
+    set "novel_url=!novel_url:metruyencv.com=metruyencv.info!"
+    echo URL moi: %novel_url%
+    
+    REM Cập nhật URL trong file config.txt
+    powershell -Command "(Get-Content config.txt) -replace 'metruyencv\.com', 'metruyencv.info' | Set-Content config.txt"
+    echo Da cap nhat URL trong file config.txt.
+    echo.
 )
 
 echo Thong tin cau hinh:
