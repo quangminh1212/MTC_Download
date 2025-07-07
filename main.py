@@ -31,6 +31,7 @@ logger = setup_logger('mtc_downloader')
 # Global variables to track state
 is_shutting_down = False
 playwright_browsers = []
+http_session_authenticated = False
 
 # Check if running on Windows and Python 3.12+ to apply workarounds
 is_windows = platform.system() == 'Windows'
@@ -207,29 +208,45 @@ if save == 'Y':
 # Use synchronous playwright browser launching to work around asyncio.create_subprocess_exec issues
 def launch_browser_sync(browser_type, headless=True):
     """Launch browser synchronously using subprocess instead of asyncio"""
-    logger.info(f"Launching browser in synchronous mode: {browser_type}")
+    # Skip on Windows with Python 3.12+
     if is_windows and is_python_312_plus:
-        try:
-            # Find the playwright executable
-            import playwright
-            playwright_path = os.path.dirname(playwright.__file__)
-            driver_executable = os.path.join(playwright_path, "..", "..", "..", "bin", "playwright.cmd")
-            if not os.path.exists(driver_executable):
-                driver_executable = shutil.which("playwright") or "playwright"
-                
-            # Launch the browser driver using subprocess
-            logger.debug(f"Using playwright executable: {driver_executable}")
-            subprocess.run([driver_executable, "install", browser_type], 
-                           check=False, capture_output=True)
+        logger.info(f"Skipping browser installation on Windows with Python 3.12+, will use HTTP method instead")
+        return False
+        
+    logger.info(f"Launching browser in synchronous mode: {browser_type}")
+    try:
+        # Find the playwright executable
+        import playwright
+        playwright_path = os.path.dirname(playwright.__file__)
+        driver_executable = os.path.join(playwright_path, "..", "..", "..", "bin", "playwright.cmd")
+        if not os.path.exists(driver_executable):
+            driver_executable = shutil.which("playwright") or "playwright"
             
-            return True
-        except Exception as e:
-            logger.error(f"Error launching browser synchronously: {e}")
-            return False
-    return None
+        # Launch the browser driver using subprocess
+        logger.debug(f"Using playwright executable: {driver_executable}")
+        subprocess.run([driver_executable, "install", browser_type], 
+                       check=False, capture_output=True)
+        
+        return True
+    except Exception as e:
+        logger.error(f"Error launching browser synchronously: {e}")
+        return False
 
-# Launch browsers synchronously on Windows Python 3.12+
+# Launch browsers synchronously if needed (but skip on Windows Python 3.12+)
 if is_windows and is_python_312_plus:
+    logger.info("Skipping Playwright browser installation on Windows with Python 3.12+")
+    logger.warning("""
+    =====================================================================
+    THÔNG BÁO QUAN TRỌNG: Bạn đang sử dụng Windows với Python 3.12+
+    
+    Phiên bản Python này không hỗ trợ đầy đủ với Playwright trên Windows.
+    Phần mềm sẽ tự động sử dụng phương pháp HTTP để tải nội dung thay thế.
+    
+    LƯU Ý: Bạn cần đăng nhập vào tài khoản MeTruyenCV của mình
+    để có thể xem nội dung các chương truyện.
+    =====================================================================
+    """)
+else:
     logger.info("Pre-installing Firefox browser for Playwright")
     launch_browser_sync("firefox")
 
@@ -285,48 +302,35 @@ async def close_all_browsers():
 async def download_missing_chapter(links):
     logger.info(f"Downloading {len(links)} missing chapters")
     results = []
-    setting = True
     
     if is_shutting_down:
         logger.warning("Application is shutting down, skipping download of missing chapters")
         return results
+    
+    # For Windows with Python 3.12+, use HTTP method directly
+    if is_windows and is_python_312_plus:
+        logger.info("Using HTTP method for downloading missing chapters on Windows with Python 3.12+")
+        for title, link, num in links:
+            if is_shutting_down:
+                logger.warning(f"Shutdown requested, stopping at chapter {num}")
+                break
+                
+            try:
+                logger.info(f"Downloading missing chapter {num}: {title}")
+                chapter_result = await get_chapter_http_method(link, num)
+                if chapter_result:
+                    results.append(chapter_result)
+            except Exception as e:
+                logger.error(f"Error downloading missing chapter {num}: {e}")
+                
+        return results
         
+    # For other platforms, use Playwright
     try:
-        # Use a fallback approach for browser launching on Windows Python 3.12+
-        if is_windows and is_python_312_plus:
-            import subprocess
-            import tempfile
-            import json
-            from playwright._impl._api_types import Error
-            
-            logger.info("Using fallback approach for browser launching on Windows Python 3.12+")
-            
-            # Use an existing Firefox installation if available
-            # This avoids the need for asyncio.create_subprocess_exec
-            firefox_paths = [
-                os.path.expandvars("%ProgramFiles%\\Mozilla Firefox\\firefox.exe"),
-                os.path.expandvars("%ProgramFiles(x86)%\\Mozilla Firefox\\firefox.exe")
-            ]
-            
-            firefox_path = None
-            for path in firefox_paths:
-                if os.path.exists(path):
-                    firefox_path = path
-                    break
-                    
-            if firefox_path:
-                logger.info(f"Found Firefox installation at {firefox_path}")
-            else:
-                logger.warning("No Firefox installation found. Will attempt to use Playwright's bundled browsers.")
-    
-    except Exception as e:
-        logger.error(f"Error setting up browser environment: {e}")
-    
-    try:
+        setting = True
         async with async_playwright() as p:
             try:
                 logger.debug("Launching Firefox browser")
-                # Add executable_path if we found a Firefox installation
                 browser_args = []
                 browser = await p.firefox.launch(headless=True, args=browser_args)
                 # Track browser for cleanup
@@ -398,28 +402,54 @@ async def download_missing_chapter(links):
                                 logger.warning(f"Nội dung chương {num} quá ngắn, có thể không tải được đầy đủ")
                                 continue
                             
-                            results.append((title, chapter_content_str, num))
-                            logger.info(f'Đã tải xong chap {num}, độ dài: {len(chapter_content_str)} ký tự')
+                            chapter_title = soup.find('h2', class_='text-center text-gray-600 dark:text-gray-400 text-balance')
+                            if not chapter_title:
+                                chapter_title = soup.find('h2', class_='text-balance')
+                                
+                            if not chapter_title:
+                                logger.warning(f"Không tìm thấy tiêu đề cho chương {num}")
+                                continue
+                                
+                            chapter_title_str = str(chapter_title)
+                            logger.info(f"Đã tải xong chương {num}, độ dài: {len(chapter_content_str)} ký tự")
+                            results.append((chapter_title_str, chapter_content_str, num))
                         else:
-                            logger.error(f"Không thể tìm thấy nội dung chương {num}")
+                            logger.warning(f"Không tìm thấy nội dung cho chương {num}")
                     except Exception as e:
                         logger.error(f"Lỗi khi tải chương {num}: {e}")
                 
-                # Remove from tracked browsers before closing
-                if browser in playwright_browsers:
-                    playwright_browsers.remove(browser)
-                    
-                await browser.close()
-                logger.info(f"Successfully downloaded {len(results)}/{len(links)} missing chapters")
             except PlaywrightError as pe:
                 logger.error(f"Playwright error: {pe}")
-                return results
-            except Exception as e:
-                logger.error(f"Error in browser session: {e}")
-                return results
+                # Fall back to HTTP method
+                logger.info("Falling back to HTTP method for missing chapters")
+                for title, link, num in links:
+                    if is_shutting_down:
+                        break
+                    try:
+                        chapter_result = await get_chapter_http_method(link, num)
+                        if chapter_result:
+                            results.append(chapter_result)
+                    except Exception as e:
+                        logger.error(f"Error downloading missing chapter {num} with fallback method: {e}")
+            finally:
+                # Close browser if it was opened
+                if browser in playwright_browsers:
+                    playwright_browsers.remove(browser)
+                    await browser.close()
     except Exception as e:
-        logger.error(f"Failed to initialize Playwright: {e}")
-        
+        logger.error(f"Failed to initialize Playwright for downloading missing chapters: {e}")
+        # Fall back to HTTP method
+        logger.info("Falling back to HTTP method for missing chapters due to error")
+        for title, link, num in links:
+            if is_shutting_down:
+                break
+            try:
+                chapter_result = await get_chapter_http_method(link, num)
+                if chapter_result:
+                    results.append(chapter_result)
+            except Exception as e:
+                logger.error(f"Error downloading missing chapter {num} with fallback method: {e}")
+                
     return results
 
 def sort_chapters(list_of_chapters):
@@ -447,6 +477,11 @@ async def get_chapter_with_retry(chapter_number, novel_url):
         
     url = f'{novel_url}/chuong-{chapter_number}'
     i = 0
+    
+    # On Windows with Python 3.12+, directly use the HTTP client instead of Playwright
+    if is_windows and is_python_312_plus:
+        return await get_chapter_http_method(url, chapter_number)
+    
     try:
         logger.info(f"Attempting to download chapter {chapter_number}")
         # Sử dụng Playwright để tải nội dung chương
@@ -528,34 +563,13 @@ async def get_chapter_with_retry(chapter_number, novel_url):
                         await browser.close()
                 except PlaywrightError as pe:
                     logger.error(f"Playwright error while loading chapter {chapter_number}: {pe}")
-                    raise Exception(f"Playwright error: {pe}")
+                    # Fall back to HTTP method if Playwright fails
+                    logger.info(f"Falling back to HTTP method for chapter {chapter_number}")
+                    return await get_chapter_http_method(url, chapter_number)
         except Exception as e:
             if "NotImplementedError" in str(e):
-                logger.error(f"NotImplementedError while loading chapter {chapter_number}, this is likely due to Windows Python 3.12 asyncio limitations")
-                # Try a fallback approach using httpx directly
-                try:
-                    logger.info(f"Attempting fallback HTTP method for chapter {chapter_number}")
-                    response = await client.get(url, headers=header)
-                    if response.status_code == 404:
-                        logger.error(f"Chapter {chapter_number} not found (404)")
-                        return None
-                    
-                    soup = BeautifulSoup(response.content, 'lxml')
-                    chapter_title = soup.find('h2', class_='text-center text-gray-600 dark:text-gray-400 text-balance')
-                    if not chapter_title:
-                        chapter_title = soup.find('h2', class_='text-balance')
-                    
-                    chapter_content = soup.find('div', id='chapter-content')
-                    
-                    if chapter_title and chapter_content and len(str(chapter_content)) > 100:
-                        return str(chapter_title), str(chapter_content), chapter_number
-                    else:
-                        logger.error(f"Failed to extract content using fallback method for chapter {chapter_number}")
-                        missing_chapter.append((str(chapter_title) if chapter_title else "Unknown", url, chapter_number))
-                        return None
-                except Exception as http_err:
-                    logger.error(f"Fallback method also failed for chapter {chapter_number}: {http_err}")
-                    raise
+                logger.error(f"NotImplementedError while loading chapter {chapter_number}, falling back to HTTP method")
+                return await get_chapter_http_method(url, chapter_number)
             else:
                 raise
                 
@@ -567,6 +581,90 @@ async def get_chapter_with_retry(chapter_number, novel_url):
             logger.error(f"Lỗi khi tải chapter {chapter_number}: {e}. Đang thử lại...")
             await asyncio.sleep(5)
             raise
+
+async def get_chapter_http_method(url, chapter_number):
+    """Fallback method using httpx to download chapter content without using Playwright"""
+    global http_session_authenticated
+    i = 0
+    
+    # Check if we need to authenticate
+    if not http_session_authenticated:
+        try:
+            logger.info("Attempting to authenticate with MeTruyenCV")
+            auth_response = await client.post(
+                'https://metruyencv.com/api/auth/login',
+                json={'login': username, 'password': password},
+                headers={
+                    **header,
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                }
+            )
+            
+            if auth_response.status_code == 200:
+                logger.info("Authentication successful!")
+                http_session_authenticated = True
+            else:
+                logger.warning(f"Authentication failed with status {auth_response.status_code}")
+                logger.info("Proceeding without authentication - content may be limited")
+        except Exception as e:
+            logger.error(f"Error during authentication: {e}")
+            logger.info("Proceeding without authentication - content may be limited")
+    
+    while i < 5:  # Try up to 5 times
+        try:
+            logger.info(f"Downloading chapter {chapter_number} using HTTP method (attempt {i+1})")
+            response = await client.get(url, headers=header)
+            if response.status_code == 404:
+                logger.error(f"Chapter {chapter_number} not found (404)")
+                return None
+            
+            soup = BeautifulSoup(response.content, 'lxml')
+            chapter_title = soup.find('h2', class_='text-center text-gray-600 dark:text-gray-400 text-balance')
+            if not chapter_title:
+                chapter_title = soup.find('h2', class_='text-balance')
+            
+            chapter_content = soup.find('div', id='chapter-content')
+            
+            if not chapter_title or not chapter_content:
+                logger.warning(f"Couldn't find title or content for chapter {chapter_number} (attempt {i+1})")
+                i += 1
+                await asyncio.sleep(2)
+                continue
+                
+            chapter_title_str = str(chapter_title)
+            chapter_content_str = str(chapter_content)
+            content_text = chapter_content.get_text().strip()
+            
+            # Check if content is too short or empty
+            if len(chapter_content_str) < 100 or len(content_text) < 10:
+                logger.warning(f"Content for chapter {chapter_number} is too short or empty (attempt {i+1})")
+                
+                # If this keeps happening and we're authenticated, it might be a website limitation
+                if i == 3 and http_session_authenticated:
+                    logger.warning("""
+                    Không thể tải được nội dung đầy đủ của chương. Trang web có thể yêu cầu trình duyệt đầy đủ.
+                    Trên Windows với Python 3.12, bạn có thể cần sử dụng phiên bản Python thấp hơn (3.11) 
+                    hoặc sử dụng tính năng tải xuống thông qua trình duyệt web riêng biệt.
+                    """)
+                
+                i += 1
+                await asyncio.sleep(3)
+                continue
+            
+            logger.info(f"Successfully downloaded chapter {chapter_number} using HTTP method, length: {len(content_text)} characters")
+            return chapter_title_str, chapter_content_str, chapter_number
+            
+        except Exception as e:
+            logger.error(f"Error downloading chapter {chapter_number} using HTTP method: {e}")
+            i += 1
+            await asyncio.sleep(5)
+    
+    # If all attempts fail
+    logger.error(f"Failed to download chapter {chapter_number} after multiple attempts")
+    missing_chapter.append(("Unknown", url, chapter_number))
+    return None
 
 # Cache the results of the 'get' function for better performance
 @alru_cache(maxsize=1024)
