@@ -76,7 +76,8 @@ def download_chapter(url, output_file=None, delay=1):
             "div.chapter-detail",
             "div.chapter-detail-content",
             "div.chapter",
-            "div.content"
+            "div.content",
+            "div.break-words"
         ]
         
         for selector in selectors:
@@ -112,11 +113,36 @@ def download_chapter(url, output_file=None, delay=1):
             logger.error(f"Không tìm thấy nội dung chương trong trang!")
             return None
         
-        # Lấy văn bản từ nội dung
-        text = story_content.get_text(separator="\n\n", strip=True)
+        # Loại bỏ các phần tử không mong muốn trước khi lấy nội dung
+        for unwanted in story_content.select('script, style, iframe, canvas, .hidden-content'):
+            unwanted.extract()
+        
+        # Lấy HTML nội dung để giữ định dạng
+        content_html = str(story_content)
+        
+        # Chuyển đổi HTML thành văn bản có định dạng, giữ lại các đoạn văn
+        # Thay thế các thẻ phổ biến bằng ký tự xuống dòng để giữ định dạng
+        text = content_html
+        text = re.sub(r'<br\s*/?>', '\n', text)  # Thay thế <br> bằng xuống dòng
+        text = re.sub(r'<p.*?>', '\n\n', text)   # Thay thế <p> bằng 2 dòng trống
+        text = re.sub(r'</p>', '', text)
+        text = re.sub(r'<div.*?>', '\n', text)   # Thay thế <div> bằng xuống dòng
+        text = re.sub(r'</div>', '', text)
+        
+        # Loại bỏ các thẻ HTML còn lại
+        text = re.sub(r'<.*?>', '', text)
+        
+        # Xóa các dòng trống liên tiếp
+        text = re.sub(r'\n{3,}', '\n\n', text)
         
         # Xóa các nội dung quảng cáo
         text = re.sub(r'-----.*?-----', '', text, flags=re.DOTALL)
+        text = re.sub(r'Chấm điểm cao nghe nói.*?Không quảng cáo!', '', text, flags=re.DOTALL)
+        text = re.sub(r'truyencv\.com|metruyencv\.com', '', text, flags=re.IGNORECASE)
+        
+        # Xóa khoảng trắng thừa
+        text = re.sub(r' {2,}', ' ', text)
+        text = text.strip()
         
         # Tạo nội dung đầy đủ với tiêu đề
         full_content = f"{story_name}\n\n{title_text}\n\n{'='*50}\n\n{text}"

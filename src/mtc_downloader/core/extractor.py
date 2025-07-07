@@ -98,7 +98,8 @@ def extract_story_content(html_file, output_file=None):
             "div.chapter-detail-content",
             "div.chapter",
             "div.content",
-            "article.content"
+            "article.content",
+            "div.break-words"
         ]
         
         story_content = None
@@ -137,16 +138,35 @@ def extract_story_content(html_file, output_file=None):
             return None
         
         # Loại bỏ các phần tử không cần thiết
-        for element in story_content.select("script, style, iframe, .ads, .comment, .hidden"):
+        for element in story_content.select("script, style, iframe, canvas, .ads, .comment, .hidden"):
             element.decompose()
         
-        # Lấy văn bản từ nội dung
-        text = story_content.get_text(separator="\n\n", strip=True)
+        # Lấy HTML nội dung để giữ định dạng
+        content_html = str(story_content)
+        
+        # Chuyển đổi HTML thành văn bản có định dạng, giữ lại các đoạn văn
+        # Thay thế các thẻ phổ biến bằng ký tự xuống dòng để giữ định dạng
+        text = content_html
+        text = re.sub(r'<br\s*/?>', '\n', text)  # Thay thế <br> bằng xuống dòng
+        text = re.sub(r'<p.*?>', '\n\n', text)   # Thay thế <p> bằng 2 dòng trống
+        text = re.sub(r'</p>', '', text)
+        text = re.sub(r'<div.*?>', '\n', text)   # Thay thế <div> bằng xuống dòng
+        text = re.sub(r'</div>', '', text)
+        
+        # Loại bỏ các thẻ HTML còn lại
+        text = re.sub(r'<.*?>', '', text)
+        
+        # Xóa các dòng trống liên tiếp
+        text = re.sub(r'\n{3,}', '\n\n', text)
         
         # Xóa các nội dung quảng cáo và đoạn text không liên quan
         text = re.sub(r'-----.*?-----', '', text, flags=re.DOTALL)
-        text = re.sub(r'Chương này có.*?VIP.*?$', '', text, flags=re.MULTILINE)
+        text = re.sub(r'Chấm điểm cao nghe nói.*?Không quảng cáo!', '', text, flags=re.DOTALL)
         text = re.sub(r'truyencv\.com|metruyencv\.com', '', text, flags=re.IGNORECASE)
+        
+        # Xóa khoảng trắng thừa
+        text = re.sub(r' {2,}', ' ', text)
+        text = text.strip()
         
         # Tạo nội dung đầy đủ với tiêu đề
         full_content = f"{title}\n\n{'='*50}\n\n{text}"
