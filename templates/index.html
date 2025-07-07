@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Cụ Trích Xuất Truyện</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-top: 0;
+            border-radius: 0 0 0.25rem 0.25rem;
+        }
+        .result-area {
+            min-height: 200px;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 0.25rem;
+        }
+        .progress {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .file-list {
+            margin-top: 10px;
+        }
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            border: 1px solid #dee2e6;
+            margin-bottom: 5px;
+            border-radius: 0.25rem;
+        }
+        .file-actions {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Công Cụ Trích Xuất Truyện</h1>
+        
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="download-tab" data-bs-toggle="tab" data-bs-target="#download" type="button" role="tab" aria-controls="download" aria-selected="true">Tải từ MetruyenCV</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="extract-tab" data-bs-toggle="tab" data-bs-target="#extract" type="button" role="tab" aria-controls="extract" aria-selected="false">Trích xuất từ file HTML</button>
+            </li>
+        </ul>
+        
+        <div class="tab-content" id="myTabContent">
+            <!-- Tab tải từ MetruyenCV -->
+            <div class="tab-pane fade show active" id="download" role="tabpanel" aria-labelledby="download-tab">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="downloadForm">
+                            <div class="mb-3">
+                                <label for="url" class="form-label">URL của truyện/chương</label>
+                                <input type="text" class="form-control" id="url" name="url" placeholder="https://metruyencv.com/truyen/ten-truyen/chuong-XX" required>
+                                <div class="form-text">Ví dụ: https://metruyencv.com/truyen/ten-truyen hoặc https://metruyencv.com/truyen/ten-truyen/chuong-XX</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Chế độ tải</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="mode" id="modeSingle" value="single" checked>
+                                    <label class="form-check-label" for="modeSingle">Tải một chương</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="mode" id="modeMulti" value="multi">
+                                    <label class="form-check-label" for="modeMulti">Tải nhiều chương</label>
+                                    <div class="input-group input-group-sm ms-3" style="width: 200px;">
+                                        <span class="input-group-text">Số chương:</span>
+                                        <input type="number" class="form-control" id="numChapters" name="num_chapters" value="5" min="1">
+                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="mode" id="modeAll" value="all">
+                                    <label class="form-check-label" for="modeAll">Tải tất cả chương</label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="delay" class="form-label">Độ trễ giữa các request (giây)</label>
+                                <input type="number" class="form-control" id="delay" name="delay" value="2" min="1" step="0.5">
+                                <div class="form-text">Nên đặt từ 2 giây trở lên để tránh bị chặn</div>
+                            </div>
+                            
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="combine" name="combine" checked>
+                                <label class="form-check-label" for="combine">Kết hợp tất cả chương thành một file</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Tải truyện</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div id="downloadResult" class="result-area d-none">
+                    <h4>Kết quả</h4>
+                    <div class="progress">
+                        <div id="downloadProgress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                    </div>
+                    <div id="downloadMessage" class="mt-2"></div>
+                    <div id="downloadFiles" class="file-list"></div>
+                </div>
+            </div>
+            
+            <!-- Tab trích xuất từ file HTML -->
+            <div class="tab-pane fade" id="extract" role="tabpanel" aria-labelledby="extract-tab">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="extractForm" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="htmlFile" class="form-label">Chọn file HTML</label>
+                                <input class="form-control" type="file" id="htmlFile" name="html_file" accept=".html, .htm" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Trích xuất nội dung</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div id="extractResult" class="result-area d-none">
+                    <h4>Kết quả</h4>
+                    <div class="progress">
+                        <div id="extractProgress" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                    </div>
+                    <div id="extractMessage" class="mt-2"></div>
+                    <div id="extractFiles" class="file-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Xử lý form tải từ MetruyenCV
+        document.getElementById('downloadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const url = document.getElementById('url').value;
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            const numChapters = document.getElementById('numChapters').value;
+            const delay = document.getElementById('delay').value;
+            const combine = document.getElementById('combine').checked;
+            
+            // Hiển thị khu vực kết quả
+            const resultArea = document.getElementById('downloadResult');
+            resultArea.classList.remove('d-none');
+            
+            // Cập nhật trạng thái
+            document.getElementById('downloadProgress').style.width = '0%';
+            document.getElementById('downloadProgress').textContent = '0%';
+            document.getElementById('downloadMessage').textContent = 'Đang khởi tạo...';
+            document.getElementById('downloadFiles').innerHTML = '';
+            
+            // Gửi request
+            const formData = new FormData();
+            formData.append('url', url);
+            formData.append('mode', mode);
+            formData.append('num_chapters', numChapters);
+            formData.append('delay', delay);
+            formData.append('combine', combine.toString());
+            
+            fetch('/download', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const taskId = data.task_id;
+                checkTaskStatus(taskId, 'download');
+            })
+            .catch(error => {
+                document.getElementById('downloadMessage').textContent = 'Lỗi: ' + error.message;
+            });
+        });
+        
+        // Xử lý form trích xuất từ file HTML
+        document.getElementById('extractForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const fileInput = document.getElementById('htmlFile');
+            
+            if (fileInput.files.length === 0) {
+                alert('Vui lòng chọn file HTML!');
+                return;
+            }
+            
+            // Hiển thị khu vực kết quả
+            const resultArea = document.getElementById('extractResult');
+            resultArea.classList.remove('d-none');
+            
+            // Cập nhật trạng thái
+            document.getElementById('extractProgress').style.width = '0%';
+            document.getElementById('extractProgress').textContent = '0%';
+            document.getElementById('extractMessage').textContent = 'Đang tải file lên...';
+            document.getElementById('extractFiles').innerHTML = '';
+            
+            // Gửi request
+            const formData = new FormData(form);
+            
+            fetch('/extract', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById('extractMessage').textContent = 'Lỗi: ' + data.error;
+                    return;
+                }
+                
+                const taskId = data.task_id;
+                checkTaskStatus(taskId, 'extract');
+            })
+            .catch(error => {
+                document.getElementById('extractMessage').textContent = 'Lỗi: ' + error.message;
+            });
+        });
+        
+        // Kiểm tra trạng thái tác vụ
+        function checkTaskStatus(taskId, type) {
+            fetch('/task_status/' + taskId)
+                .then(response => response.json())
+                .then(data => {
+                    // Cập nhật UI
+                    const progressBar = document.getElementById(type + 'Progress');
+                    const messageDiv = document.getElementById(type + 'Message');
+                    const filesDiv = document.getElementById(type + 'Files');
+                    
+                    progressBar.style.width = data.progress + '%';
+                    progressBar.textContent = data.progress + '%';
+                    messageDiv.textContent = data.message;
+                    
+                    // Nếu hoàn thành, hiển thị danh sách file
+                    if (data.status === 'completed') {
+                        filesDiv.innerHTML = '';
+                        
+                        // Hiển thị file kết hợp nếu có
+                        if (data.combined_file) {
+                            const fileDiv = document.createElement('div');
+                            fileDiv.className = 'file-item';
+                            fileDiv.innerHTML = `
+                                <div>
+                                    <strong>${data.combined_file}</strong> (File kết hợp)
+                                </div>
+                                <div class="file-actions">
+                                    <a href="/view_file/${taskId}/${data.combined_file}" target="_blank" class="btn btn-sm btn-info">Xem</a>
+                                    <a href="/download_file/${taskId}/${data.combined_file}" class="btn btn-sm btn-success">Tải về</a>
+                                </div>
+                            `;
+                            filesDiv.appendChild(fileDiv);
+                        }
+                        
+                        // Hiển thị các file riêng lẻ
+                        data.files.forEach(file => {
+                            const fileDiv = document.createElement('div');
+                            fileDiv.className = 'file-item';
+                            fileDiv.innerHTML = `
+                                <div>${file}</div>
+                                <div class="file-actions">
+                                    <a href="/view_file/${taskId}/${file}" target="_blank" class="btn btn-sm btn-info">Xem</a>
+                                    <a href="/download_file/${taskId}/${file}" class="btn btn-sm btn-success">Tải về</a>
+                                </div>
+                            `;
+                            filesDiv.appendChild(fileDiv);
+                        });
+                    } else if (data.status === 'running') {
+                        // Nếu đang chạy, tiếp tục kiểm tra
+                        setTimeout(() => checkTaskStatus(taskId, type), 1000);
+                    }
+                })
+                .catch(error => {
+                    console.error('Lỗi khi kiểm tra trạng thái:', error);
+                });
+        }
+    </script>
+</body>
+</html> 
