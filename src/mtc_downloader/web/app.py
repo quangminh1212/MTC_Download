@@ -13,8 +13,8 @@ import uuid
 import logging
 from flask import Flask, render_template, request, redirect, url_for, jsonify, send_file
 
-from mtc_downloader.core.downloader import download_chapter, download_multiple_chapters, download_all_chapters
-from mtc_downloader.core.extractor import extract_story_content, extract_all_html_files
+from ..core.downloader import download_chapter, download_multiple_chapters, download_all_chapters
+from ..core.extractor import extract_story_content, extract_all_html_files
 
 # Thiết lập logging
 logger = logging.getLogger(__name__)

@@ -2,7 +2,7 @@
 
 import os
 import unittest
-from src.mtc_downloader.core.extractor import extract_chapter
+from mtc_downloader.core.extractor import extract_story_content
 
 
 class TestExtractor(unittest.TestCase):
@@ -17,17 +17,19 @@ class TestExtractor(unittest.TestCase):
             os.path.dirname(__file__), "output"
         )
         os.makedirs(self.output_dir, exist_ok=True)
+        self.output_file = os.path.join(self.output_dir, "sample.txt")
 
     def tearDown(self):
         """Clean up after tests."""
         for file in os.listdir(self.output_dir):
-            file_path = os.path.join(self.output_dir, file)
-            if os.path.isfile(file_path):
-                os.unlink(file_path)
+            if file != ".gitkeep":  # Không xóa file .gitkeep
+                file_path = os.path.join(self.output_dir, file)
+                if os.path.isfile(file_path):
+                    os.unlink(file_path)
 
     def test_extract_chapter(self):
         """Test extracting a single chapter from HTML file."""
-        output_file = extract_chapter(self.sample_html_path, self.output_dir)
+        output_file = extract_story_content(self.sample_html_path, self.output_file)
         
         self.assertTrue(os.path.exists(output_file))
         

@@ -38,12 +38,29 @@ def extract_story_content(html_file, output_file=None):
         # Phân tích HTML bằng BeautifulSoup
         soup = BeautifulSoup(html_content, 'html.parser')
         
-        # Tìm thông tin tiêu đề
+        # Tìm thông tin tiêu đề, lần lượt thử các selector phổ biến
         title_element = soup.select_one("h2.text-center.text-gray-600")
-        title = title_element.text.strip() if title_element else "Unknown Title"
+        if not title_element:
+            title_element = soup.select_one("h1")  # Thử tìm h1 đầu tiên
+        if not title_element:
+            title_element = soup.select_one("title")  # Thử tìm trong title
+        
+        # Tìm tiêu đề chương (h2) nếu có
+        chapter_title_element = soup.select_one("h2")
+        
+        story_title = title_element.text.strip() if title_element else "Unknown Title"
+        chapter_title = chapter_title_element.text.strip() if chapter_title_element else ""
+        
+        # Kết hợp tiêu đề truyện và tiêu đề chương
+        if story_title and chapter_title and story_title != chapter_title:
+            title = f"{story_title}\n{chapter_title}"
+        else:
+            title = story_title
         
         # Tìm phần tử chứa nội dung chính
         story_content = soup.select_one("div#chapter-content")
+        if not story_content:
+            story_content = soup.select_one("div.chapter-content")  # Thử với class
         
         if not story_content:
             logger.error("Không tìm thấy nội dung truyện!")

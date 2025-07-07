@@ -112,9 +112,9 @@ def gui_cmd():
     setup_logging(args.verbose)
     
     try:
-        from mtc_downloader.gui.app import run_app as run_gui_app
+        from mtc_downloader.gui import run_gui
         print("Đang khởi động ứng dụng giao diện đồ họa...")
-        run_gui_app()
+        run_gui()
     except ImportError:
         print("Không thể khởi động ứng dụng giao diện đồ họa. Có thể tkinter chưa được cài đặt.")
         sys.exit(1)

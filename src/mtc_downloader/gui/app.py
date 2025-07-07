@@ -2,7 +2,7 @@ import os
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 from ..core.downloader import download_chapter, download_multiple_chapters
-from ..core.extractor import extract_chapter, extract_batch
+from ..core.extractor import extract_story_content, extract_all_html_files
 
 
 class MtcDownloaderApp:
@@ -159,6 +159,7 @@ class MtcDownloaderApp:
         output_dir = self.output_dir.get().strip()
         combine = self.combine_var.get()
         download_type = self.download_type.get()
+        delay = 2  # Mặc định delay 2 giây
         
         self.status_text.delete(1.0, tk.END)
         self.progress["value"] = 0
@@ -173,7 +174,7 @@ class MtcDownloaderApp:
             elif download_type == "multiple":
                 num = int(self.num_chapters.get())
                 self._log_message(f"Đang tải {num} chương từ {url}...", self.status_text)
-                download_multiple_chapters(url, num, output_dir, combine)
+                download_multiple_chapters(url, num, output_dir, delay, combine)
                 self.progress["value"] = 100
                 self._log_message("Tải thành công!", self.status_text)
                 
@@ -203,13 +204,13 @@ class MtcDownloaderApp:
         try:
             if os.path.isfile(input_path):
                 self._log_message(f"Đang trích xuất từ {input_path}...", self.extract_status_text)
-                extract_chapter(input_path, output_dir)
+                extract_story_content(input_path, output_dir)
                 self.extract_progress["value"] = 100
                 self._log_message("Trích xuất thành công!", self.extract_status_text)
                 
             elif os.path.isdir(input_path):
                 self._log_message(f"Đang trích xuất từ thư mục {input_path}...", self.extract_status_text)
-                extract_batch(input_path, output_dir, combine)
+                extract_all_html_files(input_path, output_dir, combine)
                 self.extract_progress["value"] = 100
                 self._log_message("Trích xuất thành công!", self.extract_status_text)
                 
