@@ -59,7 +59,9 @@ class MTCWebApp:
             num_chapters = int(request.form.get('num_chapters', 1))
             start_chapter = int(request.form.get('start_chapter', 1))
             end_chapter = int(request.form.get('end_chapter', 1))
-            delay = float(request.form.get('delay', 2))
+            # Chuyển đổi từ milliseconds sang seconds
+            delay_ms = float(request.form.get('delay', 100))
+            delay = delay_ms / 1000.0  # Chuyển từ ms sang giây
             combine = request.form.get('combine') == 'true'
             
             # Tạo thư mục riêng cho mỗi tác vụ tải
