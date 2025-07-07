@@ -65,8 +65,48 @@ def download_chapter(url, output_file=None, delay=1):
         title_text = chapter_title.text.strip() if chapter_title else "Unknown Chapter"
         story_name = story_title.text.strip() if story_title else "Unknown Story"
         
-        # Tìm phần tử chứa nội dung chính
-        story_content = soup.select_one("div#chapter-content") or soup.select_one("div.chapter-content")
+        # Tìm phần tử chứa nội dung chính - thử nhiều selector khác nhau
+        story_content = None
+        selectors = [
+            "div#chapter-content", 
+            "div.chapter-content",
+            "article.chapter-c", 
+            "div.chapter-c",
+            "div.content-chapter", 
+            "div.chapter-detail",
+            "div.chapter-detail-content",
+            "div.chapter",
+            "div.content"
+        ]
+        
+        for selector in selectors:
+            story_content = soup.select_one(selector)
+            if story_content and story_content.text.strip():
+                logger.info(f"Đã tìm thấy nội dung chương với selector: {selector}")
+                break
+        
+        # Nếu vẫn không tìm được nội dung qua selector, thử tìm bằng cách khác
+        if not story_content:
+            # Tìm thẻ div lớn sau tiêu đề chương
+            if chapter_title:
+                next_element = chapter_title.find_next("div")
+                if next_element and len(next_element.text.strip()) > 200:  # Nếu có đủ nội dung
+                    story_content = next_element
+            
+            # Tìm các thẻ div có nhiều nội dung text
+            if not story_content:
+                divs = soup.find_all("div")
+                longest_div = None
+                max_length = 200  # Ngưỡng tối thiểu
+                
+                for div in divs:
+                    text = div.get_text(strip=True)
+                    if len(text) > max_length and "Copyright" not in text and "facebook" not in text.lower():
+                        max_length = len(text)
+                        longest_div = div
+                
+                if longest_div:
+                    story_content = longest_div
         
         if not story_content:
             logger.error(f"Không tìm thấy nội dung chương trong trang!")
@@ -204,14 +244,20 @@ def download_all_chapters(url, output_dir=None, delay=1, combine=False):
     try:
         # Tải trang truyện để lấy thông tin về số chương
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
+            "Referer": "https://metruyencv.com/"
         }
         logger.info(f"Đang tải thông tin truyện từ: {story_url}")
         response = requests.get(story_url, headers=headers)
         
         if response.status_code != 200:
             logger.error(f"Lỗi khi tải trang truyện: {response.status_code}")
-            return 0
+            # Thử tải với URL chương 1
+            first_chapter_url = f"{story_url}chuong-1"
+            logger.info(f"Đang thử tải với URL chương đầu tiên: {first_chapter_url}")
+            return download_multiple_chapters(first_chapter_url, 10, output_dir, delay, combine)
         
         soup = BeautifulSoup(response.content, 'html.parser')
         
@@ -230,76 +276,80 @@ def download_all_chapters(url, output_dir=None, delay=1, combine=False):
         latest_chapter_elem = None
         num_chapters = 0
         
-        # Thử các selector khác nhau để tìm thông tin chương mới nhất
-        selectors = [
-            "span.latest-chapter",  # Selector cũ
-            ".text-base.font-semibold",  # Thử một selector mới
-            "p:contains('Chương ')",  # Tìm thẻ p có chứa từ "Chương"
-            ".chapter-nav a",  # Thử tìm trong menu điều hướng chương
-            "a[href*='chuong-']",  # Tìm các link chương
-            "a:contains('Chương ')"  # Tìm các link có chứa từ "Chương"
-        ]
-        
-        for selector in selectors:
-            elements = soup.select(selector)
-            if elements:
-                for element in elements:
-                    text = element.text.strip()
-                    # Tìm số chương từ text
-                    match = re.search(r'[Cc]hương (\d+)', text)
+        # Thử tải trang mục lục trước để có thông tin đầy đủ về các chương
+        toc_url = f"{story_url}muc-luc"
+        logger.info(f"Đang tải trang mục lục từ: {toc_url}")
+        try:
+            toc_response = requests.get(toc_url, headers=headers)
+            if toc_response.status_code == 200:
+                toc_soup = BeautifulSoup(toc_response.content, 'html.parser')
+                chapter_links = toc_soup.select("a[href*='/chuong-']")
+                for link in chapter_links:
+                    href = link.get('href', '')
+                    match = re.search(r'/chuong-(\d+)', href)
                     if match:
                         current_chapter = int(match.group(1))
                         num_chapters = max(num_chapters, current_chapter)
-                        latest_chapter_elem = element
-                        break
-                
-                # Nếu đã tìm thấy thông tin chương, thoát khỏi vòng lặp
+                        
                 if num_chapters > 0:
-                    break
-                    
-        # Nếu vẫn không tìm thấy, thử tìm từ các URL chương trong trang
-        if num_chapters == 0:
-            chapter_links = soup.select("a[href*='/chuong-']")
-            for link in chapter_links:
-                href = link.get('href', '')
-                match = re.search(r'/chuong-(\d+)', href)
-                if match:
-                    current_chapter = int(match.group(1))
-                    num_chapters = max(num_chapters, current_chapter)
+                    logger.info(f"Đã tìm thấy {num_chapters} chương từ trang mục lục")
+        except Exception as e:
+            logger.warning(f"Không thể tải trang mục lục: {str(e)}")
         
-        # Nếu vẫn không tìm thấy, thử tìm từ các phần tử có chứa số chương
+        # Nếu không tìm thấy từ mục lục, thử các phương pháp khác
         if num_chapters == 0:
-            all_elements = soup.select("*")
-            for element in all_elements:
-                if element.name in ['span', 'p', 'a', 'div']:
-                    text = element.text.strip()
-                    match = re.search(r'[Cc]hương (\d+)', text)
-                    if match:
-                        current_chapter = int(match.group(1))
-                        num_chapters = max(num_chapters, current_chapter)
-        
-        # Nếu tất cả các cách trên đều thất bại, thử tải trang mục lục
-        if num_chapters == 0:
-            toc_url = f"{story_url}muc-luc"
-            logger.info(f"Không tìm thấy thông tin chương từ trang chính, đang thử tải mục lục từ: {toc_url}")
-            try:
-                toc_response = requests.get(toc_url, headers=headers)
-                if toc_response.status_code == 200:
-                    toc_soup = BeautifulSoup(toc_response.content, 'html.parser')
-                    chapter_links = toc_soup.select("a[href*='/chuong-']")
-                    for link in chapter_links:
-                        href = link.get('href', '')
-                        match = re.search(r'/chuong-(\d+)', href)
+            # Thử các selector khác nhau để tìm thông tin chương mới nhất
+            selectors = [
+                "span.latest-chapter",  # Selector cũ
+                ".text-base.font-semibold",  # Thử một selector mới
+                "p:contains('Chương ')",  # Tìm thẻ p có chứa từ "Chương"
+                ".chapter-nav a",  # Thử tìm trong menu điều hướng chương
+                "a[href*='chuong-']",  # Tìm các link chương
+                "a:contains('Chương ')"  # Tìm các link có chứa từ "Chương"
+            ]
+            
+            for selector in selectors:
+                elements = soup.select(selector)
+                if elements:
+                    for element in elements:
+                        text = element.text.strip()
+                        # Tìm số chương từ text
+                        match = re.search(r'[Cc]hương (\d+)', text)
                         if match:
                             current_chapter = int(match.group(1))
                             num_chapters = max(num_chapters, current_chapter)
-            except Exception as e:
-                logger.exception(f"Lỗi khi tải trang mục lục: {str(e)}")
+                            latest_chapter_elem = element
+                            break
+                    
+                    # Nếu đã tìm thấy thông tin chương, thoát khỏi vòng lặp
+                    if num_chapters > 0:
+                        break
+                        
+            # Nếu vẫn không tìm thấy, thử tìm từ các URL chương trong trang
+            if num_chapters == 0:
+                chapter_links = soup.select("a[href*='/chuong-']")
+                for link in chapter_links:
+                    href = link.get('href', '')
+                    match = re.search(r'/chuong-(\d+)', href)
+                    if match:
+                        current_chapter = int(match.group(1))
+                        num_chapters = max(num_chapters, current_chapter)
+            
+            # Nếu vẫn không tìm thấy, thử tìm từ các phần tử có chứa số chương
+            if num_chapters == 0:
+                all_elements = soup.select("*")
+                for element in all_elements:
+                    if element.name in ['span', 'p', 'a', 'div']:
+                        text = element.text.strip()
+                        match = re.search(r'[Cc]hương (\d+)', text)
+                        if match:
+                            current_chapter = int(match.group(1))
+                            num_chapters = max(num_chapters, current_chapter)
         
-        # Nếu vẫn không tìm được số chương, thử dùng hardcode số chương cụ thể
+        # Nếu tất cả các cách trên đều thất bại, cho phép người dùng tải một số chương cụ thể
         if num_chapters == 0:
-            logger.error("Không thể xác định số chương từ trang. Sử dụng số chương mặc định (10).")
-            num_chapters = 10
+            logger.warning("Không thể xác định số chương từ trang. Thử tải 5 chương đầu tiên.")
+            num_chapters = 5  # Tải 5 chương đầu thay vì báo lỗi
         else:
             logger.info(f"Tổng số chương: {num_chapters}")
         
@@ -311,4 +361,12 @@ def download_all_chapters(url, output_dir=None, delay=1, combine=False):
         
     except Exception as e:
         logger.exception(f"Lỗi khi tải thông tin truyện: {str(e)}")
-        return 0 
+        
+        # Nếu có lỗi, vẫn thử tải một số chương đầu tiên
+        try:
+            first_chapter_url = f"{story_url}chuong-1"
+            logger.info("Đang thử tải 5 chương đầu tiên...")
+            return download_multiple_chapters(first_chapter_url, 5, output_dir, delay, combine)
+        except Exception as inner_e:
+            logger.exception(f"Không thể tải các chương đầu tiên: {str(inner_e)}")
+            return 0 
