@@ -7,6 +7,17 @@ echo MTC DOWNLOADER - PHIEN BAN TICH HOP
 echo ===================================
 echo.
 
+REM Tạo thư mục logs nếu nó không tồn tại
+echo Dang kiem tra thu muc logs...
+if not exist "logs" (
+    echo Dang tao thu muc logs...
+    mkdir logs
+    echo Da tao thanh cong thu muc logs!
+) else (
+    echo Thu muc logs da ton tai!
+)
+echo.
+
 REM Chuyển trực tiếp đến phần chạy từ config mà không hiển thị menu
 goto :run_from_config
 
@@ -56,10 +67,13 @@ echo DANG KHOI DONG UNG DUNG...
 echo =================================== 
 echo.
 
+echo Chi tiet quy trinh tai se duoc ghi vao thu muc logs
+echo.
 python main.py
 
 echo.
 echo Da hoan thanh chay ung dung.
+echo Chi tiet quy trinh co the duoc xem trong thu muc logs
 pause
 goto :main_menu
 
@@ -118,6 +132,7 @@ if /i not "%choice%"=="Y" (
 
 echo.
 echo Dang chay chuong trinh...
+echo Chi tiet quy trinh tai se duoc ghi vao thu muc logs
 echo.
 
 REM DEBUG: Hiển thị giá trị biến trước khi thiết lập
@@ -131,12 +146,15 @@ REM Thiết lập biến môi trường thay vì sử dụng input.txt
 set "NOVEL_URL=%novel_url%"
 set "START_CHAPTER=%start_chapter%"
 set "END_CHAPTER=%end_chapter%"
+REM Đánh dấu là chạy tự động để không hiện prompt
+set "AUTOMATED_RUN=1"
 
 REM DEBUG: Hiển thị giá trị biến sau khi thiết lập
 echo DEBUG - Sau khi thiet lap:
 echo Novel URL (env): %NOVEL_URL%
 echo Start Chapter (env): %START_CHAPTER%
 echo End Chapter (env): %END_CHAPTER%
+echo Automated Run: %AUTOMATED_RUN%
 echo.
 
 REM Truyền biến vào qua tham số dòng lệnh thay vì biến môi trường
@@ -144,6 +162,7 @@ python main.py "%novel_url%" "%start_chapter%" "%end_chapter%"
 
 echo.
 echo Chuong trinh da ket thuc. Vui long kiem tra file EPUB trong thu muc %disk%:/novel/
+echo Chi tiet qua trinh tai co the xem trong thu muc logs
 echo.
 pause
 goto :main_menu
@@ -199,6 +218,20 @@ echo [OK] Da phat hien Python.
 echo.
 
 echo ===================================
+echo TAO THU MUC LOGS
+echo ===================================
+echo.
+
+if not exist "logs" (
+    echo Dang tao thu muc logs...
+    mkdir logs
+    echo [OK] Da tao thu muc logs thanh cong.
+) else (
+    echo [OK] Thu muc logs da ton tai.
+)
+echo.
+
+echo ===================================
 echo CAI DAT CAC GOI PYTHON CAN THIET
 echo ===================================
 echo.
@@ -218,98 +251,46 @@ echo.
 echo Dang cai dat trinh duyet Firefox cho Playwright...
 python -m playwright install firefox
 
-echo [OK] Da cai dat trinh duyet Firefox cho Playwright thanh cong.
+echo [OK] Da cai dat thanh cong trinh duyet cho Playwright.
 echo.
 
 echo ===================================
-echo CAP NHAT TESSERACT OCR
+echo SUA CHU HE THONG MAC DINH
 echo ===================================
 echo.
 
-echo Da phat hien Tesseract OCR tai: C:\Program Files\Tesseract-OCR
-echo Dang cap nhat duong dan trong ma nguon...
-
-echo Dang cap nhat duong dan Tesseract OCR trong main.py...
-powershell -Command "(Get-Content main.py) -replace 'pytesseract.pytesseract.tesseract_cmd = fr''{file_location}\\Tesseract-OCR\\tesseract.exe''', 'pytesseract.pytesseract.tesseract_cmd = r''C:\\Program Files\\Tesseract-OCR\\tesseract.exe''' | Set-Content main.py"
-
-echo Dang cap nhat duong dan Tesseract OCR trong fast.py...
-powershell -Command "(Get-Content fast.py) -replace 'pytesseract.pytesseract.tesseract_cmd = fr''{file_location}\\Tesseract-OCR\\tesseract.exe''', 'pytesseract.pytesseract.tesseract_cmd = r''C:\\Program Files\\Tesseract-OCR\\tesseract.exe''' | Set-Content fast.py"
-
-echo [OK] Da cap nhat duong dan Tesseract OCR thanh cong.
-echo.
-
-echo ===================================
-echo KIEM TRA GOI NGON NGU TIENG VIET
-echo ===================================
-echo.
-
-if exist "C:\Program Files\Tesseract-OCR\tessdata\vie.traineddata" (
-    echo [OK] Da tim thay goi ngon ngu tieng Viet cho Tesseract OCR.
+echo Dang kiem tra font chu trong thu muc Windows...
+if not exist "C:\Windows\Fonts\times.ttf" (
+    echo [CANH BAO] Khong tim thay font Times New Roman trong he thong.
+    echo Vui long cai dat font nay de co trai nghiem tot nhat.
 ) else (
-    echo [CANH BAO] Khong tim thay goi ngon ngu tieng Viet cho Tesseract OCR.
-    echo Ban co muon tai va cai dat goi ngon ngu tieng Viet? (Y/N)
-    set /p choice="Lua chon cua ban: "
-    if /i "%choice%"=="Y" (
-        echo Dang tai goi ngon ngu tieng Viet...
-        powershell -Command "$ProgressPreference = 'SilentlyContinue'; Invoke-WebRequest -Uri 'https://github.com/tesseract-ocr/tessdata/raw/main/vie.traineddata' -OutFile 'vie.traineddata'"
-        
-        if %errorlevel% neq 0 (
-            echo [LOI] Khong the tai goi ngon ngu tieng Viet.
-            echo Vui long tai thu cong tai: https://github.com/tesseract-ocr/tessdata/raw/main/vie.traineddata
-            echo Va sao chep vao thu muc: C:\Program Files\Tesseract-OCR\tessdata\
-        ) else (
-            echo Dang cai dat goi ngon ngu tieng Viet...
-            echo Thao tac nay co the yeu cau quyen Admin.
-            
-            REM Thu copy file khong can quyen Admin truoc
-            copy /Y "vie.traineddata" "C:\Program Files\Tesseract-OCR\tessdata\" >nul 2>&1
-            
-            if %errorlevel% neq 0 (
-                echo Can quyen Admin de cai dat goi ngon ngu.
-                echo Vui long chay lai setup.bat voi quyen Admin hoac sao chep thu cong file vie.traineddata
-                echo vao thu muc C:\Program Files\Tesseract-OCR\tessdata\
-            ) else (
-                echo [OK] Da cai dat goi ngon ngu tieng Viet thanh cong.
-                del "vie.traineddata" >nul 2>&1
-            )
-        )
-    ) else (
-        echo Ban da bo qua cai dat goi ngon ngu tieng Viet.
-        echo Ban can cai dat goi nay de OCR tieng Viet hoat dong chinh xac.
-    )
+    echo [OK] Da tim thay font Times New Roman trong he thong.
 )
-
 echo.
 
 echo ===================================
-echo XOA CANH BAO LAYWRIGHT
+echo KIEM TRA TESSERACT OCR
 echo ===================================
 echo.
 
-echo Ban co muon xoa canh bao "invalid distribution ~laywright"? (Y/N)
-set /p laywright_choice="Lua chon cua ban: "
-if /i "%laywright_choice%"=="Y" (
-    rmdir /s /q "C:\Users\%USERNAME%\AppData\Roaming\Python\Python312\site-packages\~laywright" 2>nul
-    echo Da thu xoa phan phoi ~laywright khong hop le.
+if not exist "C:\Program Files\Tesseract-OCR\tesseract.exe" (
+    echo [CANH BAO] Khong tim thay Tesseract OCR trong he thong.
+    echo De su dung chuc nang OCR, ban can cai dat Tesseract OCR tu:
+    echo https://github.com/UB-Mannheim/tesseract/wiki
+    echo.
+    echo Thiet lap se tiep tuc ma khong co chuc nang OCR.
+) else (
+    echo [OK] Da tim thay Tesseract OCR trong he thong.
 )
-
 echo.
+
 echo ===================================
-echo XOA CAC FILE DU THUA
+echo THIET LAP HOAN TAT
 echo ===================================
 echo.
-
-echo Ban co muon xoa cac file .bat du thua? (Y/N)
-echo (run-app.bat, setup.bat, run-from-config.bat)
-set /p cleanup_choice="Lua chon cua ban: "
-if /i "%cleanup_choice%"=="Y" (
-    if exist run-app.bat del run-app.bat
-    if exist setup.bat del setup.bat
-    if exist run-from-config.bat del run-from-config.bat
-    echo Da xoa cac file .bat du thua.
-)
-
+echo Moi truong da duoc thiet lap thanh cong.
+echo Bay gio ban co the chay ung dung bang cach chon tuy chon 3 trong menu chinh.
 echo.
-echo Thiet lap hoan tat! Quay lai menu chinh...
-timeout /t 3 >nul
+echo BAM PHIM BAT KY DE TRO VE MENU CHINH...
+pause >nul
 goto :main_menu

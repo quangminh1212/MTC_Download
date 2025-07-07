@@ -86,3 +86,39 @@ Công cụ tải truyện chữ từ metruyencv.info và chuyển đổi sang đ
 - Chương trình yêu cầu tài khoản metruyencv để tải các chương VIP
 - Đảm bảo bạn có kết nối internet ổn định khi sử dụng
 - Việc tải truyện có thể mất nhiều thời gian tùy thuộc vào số lượng chương và tốc độ mạng
+
+## Tính năng mới: Ghi nhật ký chi tiết
+
+Phiên bản mới nhất đã thêm tính năng ghi nhật ký chi tiết để giúp theo dõi quá trình tải truyện và gỡ lỗi khi có sự cố xảy ra.
+
+### Thông tin về hệ thống ghi log:
+
+- Tất cả các log được lưu trong thư mục `logs` 
+- Tên file log theo định dạng: `mtc_downloader_YYYYMMDD_HHMMSS.log`
+- Log sẽ ghi chi tiết về tất cả các bước của quy trình tải, bao gồm:
+  - Thông tin kết nối và cấu hình
+  - Quá trình tải và xử lý từng chương 
+  - Thời gian xử lý mỗi bước
+  - Các lỗi và cảnh báo nếu có
+  - Thống kê về kết quả tải
+
+### Cách xem log:
+
+1. Sau khi tải truyện hoàn tất, bạn có thể xem file log trong thư mục `logs`
+2. Mở file log bằng bất kỳ trình soạn thảo văn bản nào (như Notepad)
+3. File log được sắp xếp theo thứ tự thời gian, từ đầu quá trình tải đến kết thúc
+
+### Lợi ích của hệ thống log:
+
+- Giúp hiểu rõ hơn về quá trình tải truyện
+- Dễ dàng phát hiện và gỡ lỗi khi có sự cố 
+- Theo dõi hiệu suất và thời gian xử lý
+- Hữu ích khi cần hỗ trợ kỹ thuật
+
+### Các mức độ log:
+
+- **INFO**: Thông tin thông thường về tiến trình
+- **DEBUG**: Thông tin chi tiết, hữu ích khi gỡ lỗi
+- **WARNING**: Cảnh báo về các vấn đề không nghiêm trọng
+- **ERROR**: Lỗi đã xảy ra nhưng ứng dụng vẫn có thể tiếp tục
+- **CRITICAL**: Lỗi nghiêm trọng khiến ứng dụng không thể tiếp tục
