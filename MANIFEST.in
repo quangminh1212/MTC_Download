@@ -1,0 +1,4 @@
+include LICENSE
+include README.md
+recursive-include src/mtc_downloader/web/templates *
+recursive-include src/mtc_downloader/web/static * 

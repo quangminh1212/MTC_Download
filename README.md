@@ -1,93 +1,112 @@
-# Công Cụ Trích Xuất Nội Dung Truyện từ HTML
+# MTC Downloader
 
-Đây là bộ công cụ giúp trích xuất nội dung truyện từ các file HTML đã lưu hoặc trực tiếp từ trang MetruyenCV và chuyển đổi thành file văn bản thuần túy để đọc dễ dàng hơn.
+MTC Downloader là công cụ tải và trích xuất nội dung truyện từ trang MetruyenCV, giúp người dùng lưu truyện để đọc offline một cách dễ dàng.
 
-## Yêu cầu hệ thống
+## Tính năng
+
+- Tải một chương truyện từ URL
+- Tải nhiều chương liên tiếp
+- Tải tất cả các chương của một truyện
+- Trích xuất nội dung từ file HTML đã lưu
+- Kết hợp nhiều chương thành một file duy nhất
+- Giao diện dòng lệnh (CLI)
+- Giao diện web (HTTP)
+- Giao diện đồ họa (GUI)
+
+## Cài đặt
+
+### Yêu cầu
 
 - Python 3.6 trở lên
-- Thư viện BeautifulSoup4 (`pip install beautifulsoup4`)
-- Thư viện Requests (`pip install requests`)
-- Tkinter (thường đã được cài đặt sẵn với Python)
+- pip (trình quản lý gói Python)
 
-## Các script có sẵn
-
-1. **extract_story.py**: Script đơn giản để trích xuất nội dung từ một file HTML.
-2. **extract_story_batch.py**: Script nâng cao, hỗ trợ xử lý nhiều file HTML cùng lúc và kết hợp tất cả vào một file lớn.
-3. **download_story.py**: Script để tải truyện trực tiếp từ trang web MetruyenCV.
-4. **main.py**: Ứng dụng giao diện đồ họa tích hợp tất cả các tính năng trên.
-
-## Cách sử dụng
-
-### Sử dụng giao diện đồ họa (Đề xuất)
-
-Cách dễ dàng nhất là chạy ứng dụng giao diện đồ họa:
+### Cài đặt từ source
 
 ```bash
-python main.py
+git clone https://github.com/example/mtc_downloader.git
+cd mtc_downloader
+pip install -e .
 ```
 
-Ứng dụng có 4 tab với các chức năng khác nhau:
+## Sử dụng
 
-1. **Tab "Trích xuất một file"**: Trích xuất nội dung từ một file HTML đã lưu trên máy.
-2. **Tab "Trích xuất nhiều file"**: Trích xuất nội dung từ nhiều file HTML trong một thư mục.
-3. **Tab "Tải từ MetruyenCV"**: Tải truyện trực tiếp từ trang web MetruyenCV và lưu thành file text.
-4. **Tab "Xem file đã trích xuất"**: Xem nội dung các file text đã được trích xuất.
+### Giao diện dòng lệnh (CLI)
 
-### Tải truyện từ trang web MetruyenCV
-
-Bạn có thể tải truyện trực tiếp từ trang web MetruyenCV sử dụng script `download_story.py`:
+#### Tải truyện
 
 ```bash
 # Tải một chương
-python download_story.py https://metruyencv.com/truyen/ten-truyen/chuong-XX
+mtc-download https://metruyencv.com/truyen/ten-truyen/chuong-XX
 
 # Tải nhiều chương liên tiếp
-python download_story.py https://metruyencv.com/truyen/ten-truyen/chuong-XX --num 5
+mtc-download https://metruyencv.com/truyen/ten-truyen/chuong-XX --num 5
 
-# Tải tất cả chương của một truyện
-python download_story.py https://metruyencv.com/truyen/ten-truyen --all
+# Tải tất cả các chương
+mtc-download https://metruyencv.com/truyen/ten-truyen --all
 
-# Kết hợp tất cả các chương thành một file
-python download_story.py https://metruyencv.com/truyen/ten-truyen --all --combine
+# Kết hợp tất cả chương thành một file
+mtc-download https://metruyencv.com/truyen/ten-truyen --all --combine
 
 # Chỉ định thư mục đầu ra
-python download_story.py https://metruyencv.com/truyen/ten-truyen --all --output /path/to/folder
+mtc-download https://metruyencv.com/truyen/ten-truyen --all --output /path/to/folder
 ```
 
-### Trích xuất từ một file HTML duy nhất
+#### Trích xuất từ file HTML
 
 ```bash
-python extract_story.py
+# Trích xuất từ một file HTML
+mtc-extract --input file.html
+
+# Trích xuất tất cả file HTML trong thư mục
+mtc-extract --input folder_with_html
+
+# Kết hợp tất cả file thành một file duy nhất
+mtc-extract --input folder_with_html --combine
 ```
 
-Script này sẽ tự động trích xuất nội dung từ file "Trinh Quan Hiền Vương - Chương 141.html" và lưu thành "Trinh Quan Hiền Vương - Chương 141.txt" trong cùng thư mục.
-
-### Trích xuất nhiều file HTML (nâng cao)
+### Giao diện web
 
 ```bash
-# Trích xuất tất cả file HTML trong một thư mục
-python extract_story_batch.py -i "thư/mục/chứa/html"
+# Khởi động ứng dụng web
+mtc-web
 
-# Trích xuất và lưu vào thư mục khác
-python extract_story_batch.py -i "thư/mục/chứa/html" -o "thư/mục/đầu/ra"
-
-# Trích xuất và kết hợp thành một file duy nhất
-python extract_story_batch.py -i "thư/mục/chứa/html" -c
+# Chỉ định host và port
+mtc-web --host 0.0.0.0 --port 8080
 ```
 
-## Lưu ý khi sử dụng
+Sau khi khởi động, bạn có thể truy cập ứng dụng web tại http://localhost:3000 (hoặc port đã chỉ định).
 
-1. Khi tải truyện từ web, công cụ sẽ tự động thêm độ trễ giữa các request để tránh bị chặn.
-2. Nếu tải quá nhiều chương cùng lúc, có thể gặp lỗi do trang web chặn request. Nên tăng độ trễ hoặc tải ít chương hơn.
-3. Trích xuất từ file HTML đã lưu sẽ nhanh hơn và ổn định hơn so với tải trực tiếp từ web.
+### Giao diện đồ họa
 
-## Các tùy chọn của extract_story_batch.py
+```bash
+# Khởi động ứng dụng giao diện đồ họa
+mtc-gui
+```
 
-- `-i, --input`: Đường dẫn đến file HTML hoặc thư mục chứa các file HTML
-- `-o, --output`: Đường dẫn file text đầu ra hoặc thư mục chứa các file text đầu ra
-- `-c, --combine`: Kết hợp tất cả các file thành một file duy nhất
+## Cấu trúc dự án
 
-## Lưu ý
+```
+mtc_downloader/
+├── docs/                  # Tài liệu
+├── src/                   # Mã nguồn
+│   └── mtc_downloader/    # Package chính
+│       ├── core/          # Module cốt lõi
+│       │   ├── downloader.py  # Tải truyện từ web
+│       │   └── extractor.py   # Trích xuất từ HTML
+│       ├── web/           # Ứng dụng web
+│       │   └── app.py     # Ứng dụng Flask
+│       ├── gui/           # Giao diện đồ họa
+│       │   └── app.py     # Ứng dụng Tkinter
+│       └── cli.py         # Giao diện dòng lệnh
+├── tests/                 # Kiểm thử
+├── setup.py               # Cấu hình cài đặt
+└── README.md              # Tài liệu
+```
 
-- Script sẽ tự động loại bỏ các nội dung quảng cáo trong truyện.
-- Nếu không tìm thấy nội dung truyện trong file HTML, script sẽ thông báo lỗi. 
+## Đóng góp
+
+Các đóng góp luôn được chào đón! Vui lòng tạo issue hoặc pull request trên GitHub.
+
+## Giấy phép
+
+Dự án này được phân phối dưới giấy phép MIT. Xem file `LICENSE` để biết thêm chi tiết. 
