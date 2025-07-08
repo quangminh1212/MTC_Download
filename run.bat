@@ -33,9 +33,31 @@ echo ========================================
 echo Console Mode - MeTruyenCV Downloader
 echo ========================================
 echo.
+
+REM Check if virtual environment exists
+if not exist "venv" (
+    echo Virtual environment khong ton tai!
+    echo Chay setup.bat de cai dat day du
+    pause
+    goto :eof
+)
+
+REM Activate virtual environment
+echo Kich hoat virtual environment...
+call venv\Scripts\activate.bat
+if errorlevel 1 (
+    echo Khong the kich hoat virtual environment!
+    pause
+    goto :eof
+)
+
 echo Running MeTruyenCV Downloader...
 echo.
 python main_config.py
+
+REM Deactivate virtual environment
+deactivate 2>nul
+
 pause
 goto :eof
 
