@@ -1627,3 +1627,255 @@ def decode_chapterdata_content(encoded_content):
     except Exception as e:
         logger.error(f"Lỗi khi giải mã chapterData: {str(e)}")
         return None
+
+def download_multiple_chapters(url, num_chapters, output_dir=None, delay=2, combine=False):
+    """
+    Tải nhiều chương truyện liên tiếp từ một URL bắt đầu
+    
+    Args:
+        url: URL của chương bắt đầu tải
+        num_chapters: Số lượng chương cần tải
+        output_dir: Thư mục đầu ra để lưu các file
+        delay: Thời gian chờ giữa các request (giây)
+        combine: Nếu True, kết hợp tất cả các chương vào một file
+    
+    Returns:
+        Số lượng chương tải thành công
+    """
+    if not url:
+        logger.error("URL không được để trống")
+        return 0
+    
+    # Tìm số chương từ URL
+    chapter_match = re.search(r'/chuong-(\d+)', url)
+    if not chapter_match:
+        logger.error(f"Không thể xác định số chương từ URL: {url}")
+        return 0
+    
+    start_chapter = int(chapter_match.group(1))
+    logger.info(f"Bắt đầu tải từ chương {start_chapter}")
+    
+    # Tạo thư mục đầu ra nếu chưa có
+    if output_dir is None:
+        output_dir = "downloads"
+    
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    
+    # Lưu thông tin URL gốc và truyện
+    base_url_match = re.match(r'(.*)/chuong-\d+', url)
+    if not base_url_match:
+        logger.error(f"URL không hợp lệ: {url}")
+        return 0
+    
+    base_url = base_url_match.group(1)
+    logger.info(f"URL cơ sở: {base_url}")
+    
+    successful_downloads = 0
+    output_files = []
+    
+    for i in range(num_chapters):
+        chapter_number = start_chapter + i
+        chapter_url = f"{base_url}/chuong-{chapter_number}"
+        
+        logger.info(f"Đang tải chương {chapter_number} từ URL: {chapter_url}")
+        
+        # Tạo tên file cho chương
+        chapter_file = os.path.join(output_dir, f"chuong-{chapter_number}.txt")
+        
+        # Tải chương
+        result = download_chapter(chapter_url, chapter_file, delay)
+        
+        if result:
+            successful_downloads += 1
+            output_files.append(result)
+            logger.info(f"Tải chương {chapter_number} thành công!")
+        else:
+            logger.error(f"Tải chương {chapter_number} thất bại!")
+    
+    # Nếu yêu cầu kết hợp và có ít nhất 1 chương đã tải thành công
+    if combine and successful_downloads > 0:
+        combined_file = os.path.join(output_dir, "combined_story.txt")
+        logger.info(f"Đang kết hợp {successful_downloads} chương vào file: {combined_file}")
+        
+        try:
+            with open(combined_file, 'w', encoding='utf-8-sig') as outfile:
+                # Sắp xếp file theo số chương
+                sorted_files = sorted(output_files, key=lambda x: int(re.search(r'chuong-(\d+)', x).group(1)))
+                
+                for filename in sorted_files:
+                    logger.info(f"Đang thêm nội dung từ file: {filename}")
+                    
+                    with open(filename, 'r', encoding='utf-8-sig') as infile:
+                        outfile.write(infile.read())
+                        outfile.write("\n\n" + "="*50 + "\n\n")
+            
+            logger.info(f"Đã kết hợp tất cả chương vào file: {combined_file}")
+        except Exception as e:
+            logger.error(f"Lỗi khi kết hợp các chương: {str(e)}")
+    
+    return successful_downloads
+
+def download_all_chapters(url, output_dir=None, delay=2, combine=False):
+    """
+    Tải tất cả các chương của một truyện
+    
+    Args:
+        url: URL của truyện hoặc một chương của truyện
+        output_dir: Thư mục đầu ra để lưu các file
+        delay: Thời gian chờ giữa các request (giây)
+        combine: Nếu True, kết hợp tất cả các chương vào một file
+    
+    Returns:
+        Số lượng chương tải thành công
+    """
+    if not url:
+        logger.error("URL không được để trống")
+        return 0
+    
+    # Kiểm tra xem URL là trang truyện hay chương
+    is_chapter_url = '/chuong-' in url
+    
+    # Trích xuất URL truyện
+    if is_chapter_url:
+        # Nếu là URL của một chương, cần trích xuất URL gốc của truyện
+        story_url_match = re.match(r'(.*)/chuong-\d+', url)
+        if not story_url_match:
+            logger.error(f"Không thể xác định URL truyện từ: {url}")
+            return 0
+        
+        story_url = story_url_match.group(1)
+    else:
+        # Nếu là URL của truyện, sử dụng trực tiếp
+        story_url = url.rstrip('/')
+    
+    logger.info(f"URL truyện: {story_url}")
+    
+    # Tạo thư mục đầu ra nếu chưa có
+    if output_dir is None:
+        output_dir = "downloads"
+    
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    
+    # Lấy thông tin danh sách chương từ trang truyện
+    try:
+        logger.info(f"Đang tải thông tin truyện từ URL: {story_url}")
+        
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7"
+        }
+        
+        response = requests.get(story_url, headers=headers)
+        response.encoding = 'utf-8'
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        # Tìm tất cả các liên kết đến chương
+        chapter_links = []
+        
+        # Tìm thẻ ul.list-chapter có chứa danh sách chương
+        chapter_list = soup.select_one("ul.list-chapter")
+        
+        if chapter_list:
+            # Tìm tất cả thẻ li > a trong list-chapter
+            for item in chapter_list.select("li > a"):
+                href = item.get('href')
+                if href and '/chuong-' in href:
+                    # Kiểm tra URL chương là tương đối hoặc tuyệt đối
+                    if href.startswith('http'):
+                        chapter_url = href
+                    else:
+                        # Nếu là URL tương đối, thêm domain vào
+                        domain = re.match(r'(https?://[^/]+)', story_url).group(1)
+                        chapter_url = domain + href
+                    
+                    chapter_links.append(chapter_url)
+        
+        if not chapter_links:
+            # Thử tìm danh sách chương với những selector khác
+            # Các trang truyện khác nhau có thể có cấu trúc HTML khác nhau
+            alternative_selectors = [
+                "div.chapters a",
+                "div.chapter-list a",
+                "div.list-chapter a",
+                "ul#chapterList a",
+                "table.table-chapters a"
+            ]
+            
+            for selector in alternative_selectors:
+                chapter_elements = soup.select(selector)
+                if chapter_elements:
+                    for item in chapter_elements:
+                        href = item.get('href')
+                        if href and '/chuong-' in href:
+                            # Kiểm tra URL chương là tương đối hoặc tuyệt đối
+                            if href.startswith('http'):
+                                chapter_url = href
+                            else:
+                                # Nếu là URL tương đối, thêm domain vào
+                                domain = re.match(r'(https?://[^/]+)', story_url).group(1)
+                                chapter_url = domain + href
+                            
+                            chapter_links.append(chapter_url)
+                    if chapter_links:
+                        break
+        
+        if not chapter_links:
+            logger.error(f"Không tìm thấy danh sách chương từ URL: {story_url}")
+            return 0
+        
+        # Sắp xếp danh sách chương theo số chương tăng dần
+        chapter_links.sort(key=lambda x: int(re.search(r'/chuong-(\d+)', x).group(1)))
+        
+        logger.info(f"Tìm thấy {len(chapter_links)} chương từ truyện")
+        
+        # Tải từng chương một
+        successful_downloads = 0
+        output_files = []
+        
+        for idx, chapter_url in enumerate(chapter_links):
+            chapter_number = idx + 1
+            
+            logger.info(f"Đang tải chương {chapter_number}/{len(chapter_links)}: {chapter_url}")
+            
+            # Tạo tên file cho chương
+            chapter_file = os.path.join(output_dir, f"chuong-{chapter_number}.txt")
+            
+            # Tải chương
+            result = download_chapter(chapter_url, chapter_file, delay)
+            
+            if result:
+                successful_downloads += 1
+                output_files.append(result)
+                logger.info(f"Tải chương {chapter_number} thành công!")
+            else:
+                logger.error(f"Tải chương {chapter_number} thất bại!")
+        
+        # Nếu yêu cầu kết hợp và có ít nhất 1 chương đã tải thành công
+        if combine and successful_downloads > 0:
+            combined_file = os.path.join(output_dir, "combined_story.txt")
+            logger.info(f"Đang kết hợp {successful_downloads} chương vào file: {combined_file}")
+            
+            try:
+                with open(combined_file, 'w', encoding='utf-8-sig') as outfile:
+                    # Sắp xếp file theo số chương
+                    sorted_files = sorted(output_files, key=lambda x: int(re.search(r'chuong-(\d+)', x).group(1)))
+                    
+                    for filename in sorted_files:
+                        logger.info(f"Đang thêm nội dung từ file: {filename}")
+                        
+                        with open(filename, 'r', encoding='utf-8-sig') as infile:
+                            outfile.write(infile.read())
+                            outfile.write("\n\n" + "="*50 + "\n\n")
+                
+                logger.info(f"Đã kết hợp tất cả chương vào file: {combined_file}")
+            except Exception as e:
+                logger.error(f"Lỗi khi kết hợp các chương: {str(e)}")
+        
+        return successful_downloads
+    
+    except Exception as e:
+        logger.exception(f"Lỗi khi tải danh sách chương: {str(e)}")
+        return 0
