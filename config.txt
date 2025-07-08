@@ -1,0 +1,29 @@
+# MeTruyenCV Downloader Configuration
+# Cấu hình cho MeTruyenCV Downloader
+# Chỉnh sửa file này để thay đổi cài đặt mặc định
+
+[LOGIN]
+email = demo@example.com
+password = demo123
+
+[DOWNLOAD]
+drive = C
+folder = novel
+max_connections = 50
+
+[SETTINGS]
+auto_save = true
+headless = true
+chapter_timeout = 30
+retry_attempts = 3
+
+[ADVANCED]
+user_agent = 
+request_delay = 1
+use_ocr = true
+
+
+# Ghi chú:
+# - Để trống các giá trị sẽ sử dụng mặc định
+# - Thay đổi file này và khởi động lại chương trình
+# - File này sẽ được tạo lại nếu bị xóa

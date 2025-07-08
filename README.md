@@ -1,50 +1,74 @@
-# MeTruyenCV Downloader
+# 📚 MeTruyenCV Downloader
 
-Tải truyện chữ từ metruyencv.info dưới dạng file EPUB
+Công cụ tải truyện từ MeTruyenCV với quản lý cấu hình thông minh.
 
-**⚠️ LƯU Ý QUAN TRỌNG**: Tool hỗ trợ URL từ `metruyencv.com`. Nếu bạn có URL `.info`, tool sẽ tự động chuyển đổi sang `.com`.
+## 🚀 Cách sử dụng
 
-## 🚀 Cài đặt nhanh
+### **Chạy chương trình:**
+```bash
+run.bat
+```
 
-### Cách 1: Tự động (Khuyến nghị)
-1. Chạy `setup.bat` - Script sẽ tự động:
-   - Cài đặt tất cả Python packages
-   - Cài đặt Playwright browsers
-   - Tải và cài đặt Tesseract-OCR
-   - Kiểm tra và xác minh cài đặt
-2. Chạy `run.bat` để khởi động ứng dụng
+Script sẽ tự động:
+- ✅ Tạo file `config.txt` nếu chưa có
+- ✅ Hỏi thông tin đăng nhập lần đầu
+- ✅ Lưu cài đặt để không cần nhập lại
+- ✅ Tự động xử lý redirect (.com → .biz)
+- ✅ Tải chapters và tạo file EPUB
 
-### Cách 2: Thủ công
-1. Cài đặt Python 3.8+ từ https://python.org
-2. Cài đặt dependencies:
-   ```bash
-   pip install -r requirements.txt
-   python -m playwright install firefox
-   ```
-3. Tải và cài đặt Tesseract-OCR từ: https://github.com/UB-Mannheim/tesseract/wiki
-4. Copy thư mục `Tesseract-OCR` vào thư mục dự án
+## ⚙️ Cấu hình
 
-## 📋 Dependencies
-- httpx, beautifulsoup4, ebooklib, tqdm, backoff
-- playwright, pytesseract, Pillow, appdirs, async-lru, lxml
+Chỉnh sửa file `config.txt` để thay đổi cài đặt:
 
-## 🎯 Cách sử dụng
+```ini
+[LOGIN]
+email=your_email@example.com
+password=your_password
 
-### Chạy ứng dụng
-- **Phiên bản cơ bản**: `python main.py`
-- **Phiên bản nhanh**: `python fast.py`
-- **Hoặc sử dụng**: `run.bat`
+[DOWNLOAD]
+drive=C
+folder=novel
+max_connections=50
 
-## 📁 Cấu trúc dự án
-- `main.py` - Phiên bản cơ bản, ổn định
-- `fast.py` - Phiên bản tối ưu tốc độ
-- `user-agent/` - Module tạo user agent ngẫu nhiên
-- `requirements.txt` - Danh sách dependencies
-- `setup.bat` - Script cài đặt tự động (tích hợp đầy đủ)
-- `run.bat` - Script chạy ứng dụng
-- `HUONG_DAN.md` - Hướng dẫn chi tiết
+[SETTINGS]
+auto_save=true
+headless=true
+chapter_timeout=30
+retry_attempts=3
 
-## 🔧 Khắc phục sự cố
-- Nếu Playwright lỗi: `python -m playwright install firefox`
-- Nếu Tesseract lỗi: Chạy lại `setup.bat` hoặc tải thủ công từ GitHub
-- Xem file `HUONG_DAN.md` để biết hướng dẫn chi tiết
+[ADVANCED]
+user_agent=
+request_delay=1
+use_ocr=true
+```
+
+## 📁 Files
+
+```
+MTC_Download/
+├── run.bat              # Script chính
+├── main_config.py       # Script chính với config management
+├── config.txt           # File cấu hình (tự động tạo)
+├── config_manager.py    # Class quản lý cấu hình
+├── setup.bat            # Script cài đặt dependencies
+└── README.md            # File này
+```
+
+## 🎯 Tính năng
+
+- ✅ **Khắc phục redirect** từ .com sang .biz
+- ✅ **Quản lý cấu hình** qua file config.txt
+- ✅ **Selenium stable** thay vì Playwright
+- ✅ **User-friendly** với progress bars và emoji
+- ✅ **UTF-8 support** cho tiếng Việt
+
+## 🐛 Troubleshooting
+
+- **Lỗi driver**: Đảm bảo Firefox hoặc Chrome đã cài đặt
+- **Lỗi encoding**: Script tự động xử lý UTF-8
+- **Lỗi redirect**: Script tự động xử lý .com → .biz
+- **Lỗi timeout**: Tăng `chapter_timeout` trong config.txt
+
+---
+
+**🎉 Chỉ cần chạy `run.bat` và enjoy!**
