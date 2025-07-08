@@ -1,1 +1,0 @@
- const listMenuTabs = [ { key: 'chapters', name: 'DS Chương', current: true, }, { key: 'reading', name: 'Đang Đọc', current: false, }, { key: 'bookmarks', name: 'Đánh Dấu', current: false, } ];
