@@ -15,43 +15,54 @@
 
 ## 🚀 Cài đặt nhanh
 
-### Phương pháp 1: Chạy trực tiếp
+### Phương pháp 1: Sử dụng script Windows (Khuyến nghị)
 
-1. **Tải về project:**
+1. **Tải về project và giải nén**
+
+2. **Chạy ứng dụng thực:**
 ```bash
-# Nếu có git
-git clone <repository-url>
-cd MTC_Download
-
-# Hoặc tải file ZIP và giải nén
+# Double-click file này
+start_app.bat
 ```
 
-2. **Cài đặt Python dependencies:**
+3. **Hoặc chạy demo:**
+```bash
+# Double-click file này để test
+start_demo.bat
+```
+
+### Phương pháp 2: Chạy thủ công
+
+1. **Cài đặt Python dependencies:**
 ```bash
 pip install -r requirements.txt
 ```
 
-3. **Chạy ứng dụng chính:**
+2. **Chạy ứng dụng thực (tải từ MeTruyenCV.com):**
 ```bash
 python app.py
+# Truy cập: http://localhost:5000
 ```
 
-4. **Mở trình duyệt và truy cập:**
-```
-http://localhost:5000
-```
-
-### Phương pháp 2: Chạy Demo (không cần internet)
-
-1. **Chạy demo với dữ liệu mẫu:**
+3. **Hoặc chạy demo (dữ liệu mẫu):**
 ```bash
 python demo_offline.py
+# Truy cập: http://localhost:5001
 ```
 
-2. **Truy cập demo:**
-```
-http://localhost:5001
-```
+## 🎯 Phiên bản nào nên dùng?
+
+### 🚀 Ứng dụng thực (`app.py` - Port 5000)
+- **Tải trực tiếp** từ MeTruyenCV.com
+- **Cần kết nối internet**
+- **Tải truyện thật** về máy
+- **Khuyến nghị sử dụng**
+
+### 🎮 Demo (`demo_offline.py` - Port 5001)
+- **Chỉ để test giao diện**
+- **Không cần internet**
+- **Dữ liệu mẫu** (2 truyện)
+- **Chỉ để demo**
 
 ## 📖 Hướng dẫn sử dụng chi tiết
 

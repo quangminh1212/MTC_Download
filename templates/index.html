@@ -209,19 +209,34 @@
         <div class="header">
             <h1>📚 MeTruyenCV Downloader</h1>
             <p>Tải truyện hàng loạt từ MeTruyenCV.com và chuyển đổi thành file TXT</p>
+            <div style="background: rgba(255,255,255,0.2); padding: 10px; border-radius: 5px; margin-top: 15px;">
+                <strong>🚀 PHIÊN BẢN THỰC</strong> - Tải trực tiếp từ MeTruyenCV.com
+            </div>
         </div>
         
         <div class="form-container">
             <div class="instructions">
                 <h3>📋 Hướng dẫn sử dụng:</h3>
                 <ul>
-                    <li>Nhập URL của truyện từ MeTruyenCV.com</li>
-                    <li>Chọn phạm vi chương muốn tải (để trống để tải tất cả)</li>
-                    <li>Nhấn "Bắt đầu tải" và chờ quá trình hoàn thành</li>
-                    <li>File ZIP chứa các chương sẽ được tạo tự động</li>
+                    <li><strong>Bước 1:</strong> Truy cập MeTruyenCV.com và tìm truyện muốn tải</li>
+                    <li><strong>Bước 2:</strong> Copy URL của trang truyện (không phải URL chương)</li>
+                    <li><strong>Bước 3:</strong> Dán URL vào ô bên dưới</li>
+                    <li><strong>Bước 4:</strong> Chọn phạm vi chương (để trống để tải tất cả)</li>
+                    <li><strong>Bước 5:</strong> Nhấn "Bắt đầu tải" và chờ hoàn thành</li>
                 </ul>
                 <div class="example">
-                    <strong>Ví dụ URL:</strong> https://metruyencv.com/truyen/no-le-bong-toi
+                    <strong>Ví dụ URL đúng:</strong><br>
+                    ✅ https://metruyencv.com/truyen/no-le-bong-toi<br>
+                    ✅ https://metruyencv.com/truyen/cuu-vuc-kiem-de<br>
+                    ❌ https://metruyencv.com/truyen/no-le-bong-toi/chuong-1
+                </div>
+                <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #ffc107;">
+                    <strong>⚠️ Lưu ý:</strong>
+                    <ul style="margin: 10px 0 0 20px;">
+                        <li>Một số chương có thể bị khóa hoặc yêu cầu đăng nhập</li>
+                        <li>Quá trình tải có thể mất vài phút tùy theo số chương</li>
+                        <li>Chỉ sử dụng cho mục đích cá nhân và học tập</li>
+                    </ul>
                 </div>
             </div>
             
@@ -338,10 +353,25 @@
         
         function updateProgress(progress) {
             const percentage = progress.total > 0 ? Math.round((progress.current / progress.total) * 100) : 0;
-            
+
             document.getElementById('progressFill').style.width = percentage + '%';
             document.getElementById('progressText').textContent = percentage + '%';
             document.getElementById('progressMessage').textContent = progress.message || 'Đang xử lý...';
+
+            // Hiển thị thông tin về chương thất bại nếu có
+            if (progress.failed_chapters && progress.failed_chapters.length > 0) {
+                const failedInfo = document.createElement('div');
+                failedInfo.style.cssText = 'margin-top: 10px; padding: 10px; background: #fff3cd; border-radius: 5px; font-size: 0.9em;';
+                failedInfo.innerHTML = `<strong>⚠️ Các chương không tải được:</strong> ${progress.failed_chapters.join(', ')}`;
+
+                const progressContainer = document.getElementById('progressContainer');
+                const existingFailedInfo = progressContainer.querySelector('.failed-info');
+                if (existingFailedInfo) {
+                    existingFailedInfo.remove();
+                }
+                failedInfo.className = 'failed-info';
+                progressContainer.appendChild(failedInfo);
+            }
         }
         
         function showDownloadLink(downloadUrl) {

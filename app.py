@@ -46,135 +46,194 @@ class NovelDownloader:
             return None
     
     def get_chapter_list(self, novel_url):
-        """Lấy danh sách chương"""
+        """Lấy danh sách chương từ MeTruyenCV"""
         try:
-            # Thử các pattern URL khác nhau cho danh sách chương
             base_url = novel_url.rstrip('/')
-            possible_urls = [
-                f"{base_url}/muc-luc",
-                f"{base_url}/danh-sach-chuong",
-                base_url
-            ]
-            
             chapters = []
-            
-            for url in possible_urls:
-                try:
-                    response = self.session.get(url)
-                    if response.status_code == 200:
-                        soup = BeautifulSoup(response.content, 'html.parser')
-                        
-                        # Tìm các link chương
-                        chapter_links = soup.find_all('a', href=re.compile(r'/chuong-\d+'))
-                        
-                        if chapter_links:
-                            for link in chapter_links:
-                                chapter_url = urljoin(url, link.get('href'))
-                                chapter_title = link.get_text().strip()
-                                
-                                # Lấy số chương
-                                chapter_match = re.search(r'chuong-(\d+)', chapter_url)
-                                chapter_num = int(chapter_match.group(1)) if chapter_match else len(chapters) + 1
-                                
-                                chapters.append({
-                                    'number': chapter_num,
-                                    'title': chapter_title,
-                                    'url': chapter_url
-                                })
-                            break
-                except:
-                    continue
-            
-            # Nếu không tìm thấy danh sách chương, thử tạo URL dựa trên pattern
+
+            print(f"Đang lấy danh sách chương từ: {base_url}")
+
+            # Thử tải trang chính của truyện
+            response = self.session.get(base_url, timeout=30)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, 'html.parser')
+
+            # Tìm thông tin về số chương mới nhất
+            latest_chapter = 1
+
+            # Tìm trong các thẻ có thể chứa thông tin chương
+            for element in soup.find_all(['span', 'div', 'a']):
+                text = element.get_text()
+                # Tìm pattern "Chương X" hoặc "Chapter X"
+                chapter_match = re.search(r'(?:chương|chapter)\s*(\d+)', text.lower())
+                if chapter_match:
+                    chapter_num = int(chapter_match.group(1))
+                    if chapter_num > latest_chapter:
+                        latest_chapter = chapter_num
+
+            # Nếu không tìm thấy, thử tìm số trong URL hoặc text
+            if latest_chapter == 1:
+                for element in soup.find_all(['a', 'span']):
+                    href = element.get('href', '')
+                    text = element.get_text()
+
+                    # Tìm trong href
+                    if '/chuong-' in href:
+                        chapter_match = re.search(r'/chuong-(\d+)', href)
+                        if chapter_match:
+                            chapter_num = int(chapter_match.group(1))
+                            if chapter_num > latest_chapter:
+                                latest_chapter = chapter_num
+
+                    # Tìm số lớn trong text (có thể là số chương)
+                    numbers = re.findall(r'\b(\d+)\b', text)
+                    for num_str in numbers:
+                        num = int(num_str)
+                        if 1 <= num <= 10000 and num > latest_chapter:  # Giới hạn hợp lý
+                            latest_chapter = num
+
+            print(f"Phát hiện có khoảng {latest_chapter} chương")
+
+            # Tạo danh sách chương dựa trên số chương phát hiện được
+            # Giới hạn tối đa 2000 chương để tránh spam
+            max_chapters = min(latest_chapter, 2000)
+
+            for i in range(1, max_chapters + 1):
+                chapter_url = f"{base_url}/chuong-{i}"
+                chapters.append({
+                    'number': i,
+                    'title': f"Chương {i}",
+                    'url': chapter_url
+                })
+
+            # Nếu không phát hiện được chương nào, tạo 100 chương mặc định
             if not chapters:
-                # Thử tạo URL cho 50 chương đầu
-                for i in range(1, 51):
+                print("Không phát hiện được số chương, tạo 100 chương mặc định")
+                for i in range(1, 101):
                     chapter_url = f"{base_url}/chuong-{i}"
                     chapters.append({
                         'number': i,
                         'title': f"Chương {i}",
                         'url': chapter_url
                     })
-            
-            # Sắp xếp theo số chương
-            chapters.sort(key=lambda x: x['number'])
+
+            print(f"Đã tạo danh sách {len(chapters)} chương")
             return chapters
-            
+
         except Exception as e:
             print(f"Error getting chapter list: {e}")
-            return []
+            # Fallback: tạo 50 chương mặc định
+            base_url = novel_url.rstrip('/')
+            chapters = []
+            for i in range(1, 51):
+                chapter_url = f"{base_url}/chuong-{i}"
+                chapters.append({
+                    'number': i,
+                    'title': f"Chương {i}",
+                    'url': chapter_url
+                })
+            return chapters
     
     def download_chapter(self, chapter_url):
         """Tải nội dung một chương"""
         try:
-            response = self.session.get(chapter_url)
+            # Thêm delay ngẫu nhiên để tránh bị block
+            import random
+            time.sleep(random.uniform(1, 3))
+
+            response = self.session.get(chapter_url, timeout=30)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
 
-            # Lấy tiêu đề chương
+            # Lấy tiêu đề chương từ h2 trong trang
             chapter_title = ""
-            title_selectors = [
-                'h2',
-                '.chapter-title',
-                'h1'
-            ]
-
-            for selector in title_selectors:
-                title_element = soup.select_one(selector)
-                if title_element:
-                    chapter_title = title_element.get_text().strip()
-                    break
+            title_element = soup.find('h2')
+            if title_element:
+                chapter_title = title_element.get_text().strip()
 
             # Tìm nội dung chương - MeTruyenCV sử dụng id="chapter-content"
             content = ""
             content_element = soup.find('div', id='chapter-content')
 
             if content_element:
-                # Loại bỏ các thẻ script, style, canvas
-                for tag in content_element.find_all(['script', 'style', 'canvas']):
-                    tag.decompose()
+                # Loại bỏ các thẻ không cần thiết
+                for tag in content_element.find_all(['script', 'style', 'canvas', 'div']):
+                    # Giữ lại div có class chứa nội dung, loại bỏ div khác
+                    if tag.name == 'div':
+                        div_class = tag.get('class', [])
+                        div_id = tag.get('id', '')
+                        # Loại bỏ div quảng cáo và không cần thiết
+                        if any(keyword in str(div_class) + str(div_id) for keyword in
+                               ['ad', 'advertisement', 'banner', 'popup', 'modal', 'config', 'menu']):
+                            tag.decompose()
+                    else:
+                        tag.decompose()
 
                 # Lấy text và làm sạch
-                content = content_element.get_text(separator='\n').strip()
+                raw_content = content_element.get_text(separator='\n')
 
-                # Làm sạch nội dung
-                lines = content.split('\n')
+                # Làm sạch nội dung chi tiết
+                lines = raw_content.split('\n')
                 cleaned_lines = []
+
+                skip_patterns = [
+                    'Converter', '-----', 'Cấu hình', 'Mục lục', 'Đánh dấu',
+                    'Cài đặt đọc truyện', 'Close', 'Màu nền', 'Màu chữ',
+                    'Font chữ', 'Cỡ chữ', 'Chiều cao dòng', 'Canh chữ',
+                    'Chương bị khóa', 'Bạn có thể mở khóa', 'KNBs',
+                    'Chương trước', 'Chương sau', 'Chấm điểm', 'Tặng quà',
+                    'Báo cáo', 'Đề cử', 'MTC là nền tảng', 'Điều khoản',
+                    'Chính sách', 'Về bản quyền', 'Hướng dẫn sử dụng',
+                    'Đăng truyện', 'Kho truyện', 'Xếp hạng', 'Thời gian thực',
+                    'Đánh giá mới', '#F8FAFC', '#f4f4f4', 'Avenir Next',
+                    'Bookerly', 'Segoe UI', 'Literata', 'Baskerville',
+                    'Arial', 'Courier New', 'Tahoma', 'Palatino Linotype',
+                    'Georgia', 'Verdana', 'Times New Roman', 'Source Sans Pro',
+                    'Canh trái', 'Canh đều', 'Canh giữa', 'Canh phải',
+                    'Mặc định', 'Nhập số', 'Đổi', 'sang', 'ở đây'
+                ]
 
                 for line in lines:
                     line = line.strip()
-                    if line and not line.startswith('Converter') and not line.startswith('-----'):
-                        cleaned_lines.append(line)
+                    if line and len(line) > 3:  # Bỏ dòng quá ngắn
+                        # Kiểm tra xem dòng có chứa pattern cần bỏ không
+                        should_skip = False
+                        for pattern in skip_patterns:
+                            if pattern.lower() in line.lower():
+                                should_skip = True
+                                break
 
+                        # Bỏ dòng chỉ chứa số hoặc ký tự đặc biệt
+                        if line.isdigit() or all(c in '#%' for c in line):
+                            should_skip = True
+
+                        if not should_skip:
+                            cleaned_lines.append(line)
+
+                # Ghép lại với khoảng trắng phù hợp
                 content = '\n\n'.join(cleaned_lines)
 
-            # Nếu không tìm thấy với id, thử các selector khác
-            if not content:
-                content_selectors = [
-                    '.chapter-content',
-                    '.content',
-                    '.story-content',
-                    '.reading-content'
-                ]
+                # Làm sạch thêm: loại bỏ nhiều dòng trống liên tiếp
+                import re
+                content = re.sub(r'\n{3,}', '\n\n', content)
 
-                for selector in content_selectors:
-                    content_element = soup.select_one(selector)
-                    if content_element:
-                        content = content_element.get_text(separator='\n').strip()
-                        break
+            # Nếu không tìm thấy nội dung hoặc nội dung quá ngắn, thử cách khác
+            if not content or len(content) < 100:
+                # Thử tìm trong các thẻ p
+                paragraphs = soup.find_all('p')
+                if paragraphs:
+                    content_parts = []
+                    for p in paragraphs:
+                        text = p.get_text().strip()
+                        if len(text) > 20:  # Chỉ lấy đoạn văn có độ dài hợp lý
+                            content_parts.append(text)
 
-            # Nếu vẫn không có, thử tìm div chứa nhiều paragraph
-            if not content:
-                divs = soup.find_all('div')
-                for div in divs:
-                    paragraphs = div.find_all('p')
-                    if len(paragraphs) > 3:  # Có nhiều đoạn văn
-                        content = div.get_text(separator='\n').strip()
-                        break
+                    if content_parts:
+                        content = '\n\n'.join(content_parts)
 
             return {
                 'title': chapter_title,
-                'content': content
+                'content': content.strip()
             }
 
         except Exception as e:
@@ -238,13 +297,34 @@ class NovelDownloader:
             
             # Tải từng chương
             downloaded_chapters = []
+            failed_chapters = []
+
             for i, chapter in enumerate(chapters):
                 if progress_id:
                     self.progress[progress_id]['current'] = i + 1
-                    self.progress[progress_id]['message'] = f'Đang tải {chapter["title"]}...'
+                    self.progress[progress_id]['message'] = f'Đang tải {chapter["title"]} ({i+1}/{len(chapters)})...'
 
-                chapter_data = self.download_chapter(chapter['url'])
-                if chapter_data and chapter_data['content']:
+                print(f"Đang tải chương {chapter['number']}: {chapter['url']}")
+
+                # Thử tải chương với retry
+                max_retries = 3
+                chapter_data = None
+
+                for retry in range(max_retries):
+                    try:
+                        chapter_data = self.download_chapter(chapter['url'])
+                        if chapter_data and chapter_data['content'] and len(chapter_data['content']) > 50:
+                            break
+                        else:
+                            print(f"Chương {chapter['number']} - Lần thử {retry + 1}: Nội dung quá ngắn hoặc rỗng")
+                            if retry < max_retries - 1:
+                                time.sleep(2)
+                    except Exception as e:
+                        print(f"Chương {chapter['number']} - Lần thử {retry + 1}: Lỗi {e}")
+                        if retry < max_retries - 1:
+                            time.sleep(2)
+
+                if chapter_data and chapter_data['content'] and len(chapter_data['content']) > 50:
                     # Sử dụng tiêu đề từ nội dung nếu có, nếu không dùng tiêu đề từ danh sách
                     chapter_title = chapter_data['title'] if chapter_data['title'] else chapter['title']
 
@@ -262,11 +342,14 @@ class NovelDownloader:
                         'title': chapter_title,
                         'file': filepath
                     })
+
+                    print(f"✅ Đã tải thành công chương {chapter['number']} ({len(chapter_data['content'])} ký tự)")
                 else:
-                    print(f"Không thể tải chương {chapter['number']}: {chapter['title']}")
+                    failed_chapters.append(chapter['number'])
+                    print(f"❌ Không thể tải chương {chapter['number']}: {chapter['title']}")
 
                 # Delay để tránh spam
-                time.sleep(2)  # Tăng delay lên 2 giây
+                time.sleep(2)
             
             # Tạo file zip
             if progress_id:
@@ -281,8 +364,12 @@ class NovelDownloader:
             
             if progress_id:
                 self.progress[progress_id]['status'] = 'completed'
-                self.progress[progress_id]['message'] = f'Hoàn thành! Đã tải {len(downloaded_chapters)} chương'
+                success_msg = f'Hoàn thành! Đã tải {len(downloaded_chapters)} chương'
+                if failed_chapters:
+                    success_msg += f' (Thất bại: {len(failed_chapters)} chương)'
+                self.progress[progress_id]['message'] = success_msg
                 self.progress[progress_id]['download_url'] = f'/download/{zip_filename}'
+                self.progress[progress_id]['failed_chapters'] = failed_chapters
             
             return {
                 'novel_info': novel_info,
