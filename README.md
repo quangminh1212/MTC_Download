@@ -2,7 +2,7 @@
 
 Tải truyện chữ từ metruyencv.info dưới dạng file EPUB
 
-**⚠️ LƯU Ý QUAN TRỌNG**: Tool chỉ hỗ trợ URL từ `metruyencv.info`, không phải `metruyencv.com`. Hãy đổi URL từ `.com` sang `.info` trước khi sử dụng.
+**⚠️ LƯU Ý QUAN TRỌNG**: Tool hỗ trợ URL từ `metruyencv.com`. Nếu bạn có URL `.info`, tool sẽ tự động chuyển đổi sang `.com`.
 
 ## 🚀 Cài đặt nhanh
 

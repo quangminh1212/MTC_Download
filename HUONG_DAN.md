@@ -1,9 +1,9 @@
 # Hướng dẫn sử dụng MeTruyenCV Downloader
 
 ## Mô tả
-Tool này giúp tải truyện chữ từ metruyencv.info dưới dạng file EPUB.
+Tool này giúp tải truyện chữ từ metruyencv.com dưới dạng file EPUB.
 
-**LƯU Ý QUAN TRỌNG**: Tool chỉ hỗ trợ URL từ `metruyencv.info`, không phải `metruyencv.com`. Hãy đổi URL từ `.com` sang `.info` trước khi sử dụng.
+**LƯU Ý QUAN TRỌNG**: Tool hỗ trợ URL từ `metruyencv.com`. Nếu bạn có URL `.info`, tool sẽ tự động chuyển đổi sang `.com`.
 
 ## Cài đặt
 
@@ -42,7 +42,7 @@ Khi chạy lần đầu, bạn sẽ được yêu cầu nhập:
 - Có lưu cấu hình không (Y/N)
 
 ## Sử dụng
-1. Nhập URL truyện từ metruyencv.info
+1. Nhập URL truyện từ metruyencv.com
 2. Nhập chapter bắt đầu
 3. Nhập chapter kết thúc
 4. Chờ tool tải và tạo file EPUB
@@ -70,10 +70,10 @@ playwright install firefox
 ### Lỗi kết nối
 - Kiểm tra kết nối internet
 - Thử giảm số kết nối tối đa
-- Đảm bảo URL là metruyencv.info (không phải .com)
+- Đảm bảo URL là metruyencv.com (tool sẽ tự động chuyển đổi từ .info)
 
 ## Tính năng
-- Tải truyện từ metruyencv.info
+- Tải truyện từ metruyencv.com
 - Hỗ trợ OCR cho các chapter có hình ảnh
 - Tạo file EPUB với metadata đầy đủ
 - Hỗ trợ tải song song để tăng tốc độ

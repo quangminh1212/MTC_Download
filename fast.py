@@ -53,7 +53,7 @@ timeout = httpx.Timeout(None)
 client = httpx.AsyncClient(limits=limits, timeout=timeout)
 
 # Base URL for the novel
-BASE_URL = 'https://metruyencv.info/truyen/'
+BASE_URL = 'https://metruyencv.com/truyen/'
 
 user_agent = get()
 
@@ -280,15 +280,15 @@ async def main():
         missing_chapter = []
         novel_url = input('Nhập link metruyencv mà bạn muốn tải: ')
 
-        # Auto-convert from .com to .info
-        if 'metruyencv.com' in novel_url:
-            novel_url = novel_url.replace('metruyencv.com', 'metruyencv.info')
+        # Auto-convert from .info to .com (since .info redirects to .com)
+        if 'metruyencv.info' in novel_url:
+            novel_url = novel_url.replace('metruyencv.info', 'metruyencv.com')
             print(f"Đã chuyển đổi URL sang: {novel_url}")
 
         # Validate URL
-        if 'metruyencv.info' not in novel_url:
-            print("❌ Lỗi: URL phải từ metruyencv.info")
-            print("Ví dụ: https://metruyencv.info/truyen/ten-truyen")
+        if 'metruyencv.com' not in novel_url:
+            print("❌ Lỗi: URL phải từ metruyencv.com")
+            print("Ví dụ: https://metruyencv.com/truyen/ten-truyen")
             continue
 
         if '/' == novel_url[-1]:
