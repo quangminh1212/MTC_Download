@@ -33,20 +33,27 @@ class ConfigManager:
             'email': '',
             'password': ''
         }
-        
+
         self.config['DOWNLOAD'] = {
             'drive': 'C',
             'folder': 'novel',
             'max_connections': '50'
         }
-        
+
+        self.config['LAST_NOVEL'] = {
+            'url': '',
+            'start_chapter': '1',
+            'end_chapter': '1'
+        }
+
         self.config['SETTINGS'] = {
             'auto_save': 'true',
             'headless': 'true',
             'chapter_timeout': '30',
-            'retry_attempts': '3'
+            'retry_attempts': '3',
+            'remember_last_novel': 'true'
         }
-        
+
         self.config['ADVANCED'] = {
             'user_agent': '',
             'request_delay': '1',
@@ -163,9 +170,66 @@ class ConfigManager:
             'headless': self.get('SETTINGS', 'headless', True),
             'chapter_timeout': self.get('SETTINGS', 'chapter_timeout', 30),
             'retry_attempts': self.get('SETTINGS', 'retry_attempts', 3),
+            'remember_last_novel': self.get('SETTINGS', 'remember_last_novel', True),
             'user_agent': self.get('ADVANCED', 'user_agent', ''),
             'request_delay': self.get('ADVANCED', 'request_delay', 1),
             'use_ocr': self.get('ADVANCED', 'use_ocr', True)
+        }
+
+    def get_last_novel_info(self) -> Dict[str, Any]:
+        """Get last novel information"""
+        if not self.get('SETTINGS', 'remember_last_novel', True):
+            return {'url': '', 'start_chapter': 1, 'end_chapter': 1}
+
+        return {
+            'url': self.get('LAST_NOVEL', 'url', ''),
+            'start_chapter': self.get('LAST_NOVEL', 'start_chapter', 1),
+            'end_chapter': self.get('LAST_NOVEL', 'end_chapter', 1)
+        }
+
+    def save_last_novel_info(self, url: str, start_chapter: int, end_chapter: int):
+        """Save last novel information"""
+        if self.get('SETTINGS', 'remember_last_novel', True):
+            self.set('LAST_NOVEL', 'url', url)
+            self.set('LAST_NOVEL', 'start_chapter', start_chapter)
+            self.set('LAST_NOVEL', 'end_chapter', end_chapter)
+
+            if self.get('SETTINGS', 'auto_save', True):
+                self.save_config()
+
+    def get_novel_input_with_defaults(self) -> Dict[str, Any]:
+        """Get novel input with smart defaults from last novel"""
+        last_novel = self.get_last_novel_info()
+
+        # Get URL with default
+        if last_novel['url']:
+            url_prompt = f"📖 Nhập link metruyencv [{last_novel['url']}]: "
+            novel_url = input(url_prompt).strip()
+            if not novel_url:
+                novel_url = last_novel['url']
+        else:
+            novel_url = input('📖 Nhập link metruyencv mà bạn muốn tải: ').strip()
+
+        # Get start chapter with default
+        if last_novel['start_chapter'] > 1:
+            start_prompt = f"📄 Chapter bắt đầu [{last_novel['start_chapter']}]: "
+            start_input = input(start_prompt).strip()
+            start_chapter = int(start_input) if start_input else last_novel['start_chapter']
+        else:
+            start_chapter = int(input('📄 Chapter bắt đầu: '))
+
+        # Get end chapter with smart default (start + previous range)
+        previous_range = last_novel['end_chapter'] - last_novel['start_chapter']
+        suggested_end = start_chapter + max(previous_range, 2)  # At least 3 chapters
+
+        end_prompt = f"📄 Chapter kết thúc [{suggested_end}]: "
+        end_input = input(end_prompt).strip()
+        end_chapter = int(end_input) if end_input else suggested_end
+
+        return {
+            'url': novel_url,
+            'start_chapter': start_chapter,
+            'end_chapter': end_chapter
         }
     
     def display_config(self):
@@ -183,13 +247,22 @@ class ConfigManager:
         print(f"  Drive: {self.get('DOWNLOAD', 'drive', 'C')}")
         print(f"  Folder: {self.get('DOWNLOAD', 'folder', 'novel')}")
         print(f"  Max connections: {self.get('DOWNLOAD', 'max_connections', 50)}")
-        
+
+        print("\n📚 LAST NOVEL:")
+        last_url = self.get('LAST_NOVEL', 'url', '')
+        if last_url:
+            print(f"  URL: {last_url}")
+            print(f"  Chapters: {self.get('LAST_NOVEL', 'start_chapter', 1)} - {self.get('LAST_NOVEL', 'end_chapter', 1)}")
+        else:
+            print("  No previous novel")
+
         print("\n⚙️  SETTINGS:")
         print(f"  Auto save: {self.get('SETTINGS', 'auto_save', True)}")
         print(f"  Headless: {self.get('SETTINGS', 'headless', True)}")
         print(f"  Chapter timeout: {self.get('SETTINGS', 'chapter_timeout', 30)}s")
         print(f"  Retry attempts: {self.get('SETTINGS', 'retry_attempts', 3)}")
-        
+        print(f"  Remember last novel: {self.get('SETTINGS', 'remember_last_novel', True)}")
+
         print("\n🔧 ADVANCED:")
         print(f"  Request delay: {self.get('ADVANCED', 'request_delay', 1)}s")
         print(f"  Use OCR: {self.get('ADVANCED', 'use_ocr', True)}")

@@ -431,7 +431,12 @@ async def main():
         missing_chapter = []  # Reset missing chapters for each run
 
         print("\n" + "="*60)
-        novel_url = input('📖 Nhập link metruyencv mà bạn muốn tải: ')
+
+        # Get novel input with smart defaults
+        novel_input = config.get_novel_input_with_defaults()
+        novel_url = novel_input['url']
+        start_chapter = novel_input['start_chapter']
+        end_chapter = novel_input['end_chapter']
 
         # Normalize URL to handle redirects
         novel_url = normalize_url(novel_url)
@@ -442,9 +447,6 @@ async def main():
             print("❌ Lỗi: URL phải từ metruyencv")
             print("📝 Ví dụ: https://metruyencv.biz/truyen/ten-truyen")
             continue
-
-        start_chapter = int(input('📄 Chapter bắt đầu: '))
-        end_chapter = int(input('📄 Chapter kết thúc: '))
 
         # Get novel information
         novel_info = await get_novel_info_with_redirect(novel_url)
@@ -485,6 +487,10 @@ async def main():
                        novel_info['attribute'], image, valid_chapters, path, filename)
             print(f'✅ Tải thành công {len(valid_chapters)}/{end_chapter - start_chapter + 1} chapter.')
             print(f'📁 File của bạn nằm tại: "{path}"')
+
+            # Save last novel info for next time
+            config.save_last_novel_info(novel_url, start_chapter, end_chapter)
+            print("💾 Đã lưu thông tin novel để sử dụng lần sau")
         else:
             print("❌ Lỗi. Tải không thành công")
 

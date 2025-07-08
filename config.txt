@@ -3,8 +3,8 @@
 # Chỉnh sửa file này để thay đổi cài đặt mặc định
 
 [LOGIN]
-email = demo@example.com
-password = demo123
+email = wuangming12@gmail.com
+password = fjc7dB3p
 
 [DOWNLOAD]
 drive = C

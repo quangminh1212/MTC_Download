@@ -13,6 +13,7 @@ Script sẽ tự động:
 - ✅ Tạo file `config.txt` nếu chưa có
 - ✅ Hỏi thông tin đăng nhập lần đầu
 - ✅ Lưu cài đặt để không cần nhập lại
+- ✅ **Nhớ novel cuối cùng** - Gợi ý URL và chapter range
 - ✅ Tự động xử lý redirect (.com → .biz)
 - ✅ Tải chapters và tạo file EPUB
 
@@ -30,11 +31,17 @@ drive=C
 folder=novel
 max_connections=50
 
+[LAST_NOVEL]
+url=https://metruyencv.biz/truyen/example
+start_chapter=1
+end_chapter=10
+
 [SETTINGS]
 auto_save=true
 headless=true
 chapter_timeout=30
 retry_attempts=3
+remember_last_novel=true
 
 [ADVANCED]
 user_agent=
@@ -58,6 +65,7 @@ MTC_Download/
 
 - ✅ **Khắc phục redirect** từ .com sang .biz
 - ✅ **Quản lý cấu hình** qua file config.txt
+- ✅ **Smart defaults** - Nhớ novel và chapter range cuối cùng
 - ✅ **Selenium stable** thay vì Playwright
 - ✅ **User-friendly** với progress bars và emoji
 - ✅ **UTF-8 support** cho tiếng Việt
