@@ -5,10 +5,8 @@ import os
 import re
 import time
 import zipfile
-from urllib.parse import urljoin, urlparse
 import threading
 from queue import Queue
-import json
 
 app = Flask(__name__)
 
@@ -145,91 +143,128 @@ class NovelDownloader:
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
 
+            # Debug: In ra status code
+            print(f"Response status: {response.status_code}")
+
             # Lấy tiêu đề chương từ h2 trong trang
             chapter_title = ""
             title_element = soup.find('h2')
             if title_element:
                 chapter_title = title_element.get_text().strip()
+                print(f"Found title: {chapter_title}")
 
-            # Tìm nội dung chương - MeTruyenCV sử dụng id="chapter-content"
+            # Tìm nội dung chương - thử nhiều cách
             content = ""
-            content_element = soup.find('div', id='chapter-content')
 
-            if content_element:
+            # Cách 1: Tìm theo thẻ main (MeTruyenCV sử dụng main)
+            main_element = soup.find('main')
+            if main_element:
+                print("Found main element")
                 # Loại bỏ các thẻ không cần thiết
-                for tag in content_element.find_all(['script', 'style', 'canvas', 'div']):
-                    # Giữ lại div có class chứa nội dung, loại bỏ div khác
-                    if tag.name == 'div':
-                        div_class = tag.get('class', [])
-                        div_id = tag.get('id', '')
-                        # Loại bỏ div quảng cáo và không cần thiết
-                        if any(keyword in str(div_class) + str(div_id) for keyword in
-                               ['ad', 'advertisement', 'banner', 'popup', 'modal', 'config', 'menu']):
-                            tag.decompose()
-                    else:
+                for tag in main_element.find_all(['script', 'style', 'nav', 'header', 'footer']):
+                    tag.decompose()
+
+                content = main_element.get_text(separator='\n').strip()
+                print(f"Main content length: {len(content)}")
+
+            # Cách 2: Tìm theo id="chapter-content"
+            if not content:
+                content_element = soup.find('div', id='chapter-content')
+                if content_element:
+                    print("Found chapter-content div")
+                    for tag in content_element.find_all(['script', 'style']):
                         tag.decompose()
 
-                # Lấy text và làm sạch
-                raw_content = content_element.get_text(separator='\n')
+                    content = content_element.get_text(separator='\n').strip()
+                    print(f"Chapter-content length: {len(content)}")
 
-                # Làm sạch nội dung chi tiết
-                lines = raw_content.split('\n')
+            # Cách 3: Tìm div có class chứa "content"
+            if not content:
+                print("Trying to find content by class...")
+                content_divs = soup.find_all('div', class_=lambda x: x and 'content' in str(x).lower())
+                for div in content_divs:
+                    text = div.get_text().strip()
+                    if len(text) > 100:
+                        content = text
+                        print(f"Found content in div with class: {div.get('class')}")
+                        break
+
+            # Cách 4: Tìm tất cả thẻ p và ghép lại
+            if not content:
+                print("Trying to find content in p tags...")
+                paragraphs = soup.find_all('p')
+                content_parts = []
+                for p in paragraphs:
+                    text = p.get_text().strip()
+                    if len(text) > 10:
+                        content_parts.append(text)
+
+                if content_parts:
+                    content = '\n\n'.join(content_parts)
+                    print(f"Found {len(content_parts)} paragraphs")
+
+            # Kiểm tra xem chương có bị khóa không
+            if content and ('Chương Bị Khóa' in content or 'mở khóa' in content):
+                print("Chapter is locked - requires payment")
+                return {
+                    'title': chapter_title,
+                    'content': '[CHƯƠNG BỊ KHÓA - CẦN THANH TOÁN]'
+                }
+
+            # Làm sạch nội dung
+            if content:
+                lines = content.split('\n')
                 cleaned_lines = []
 
-                skip_patterns = [
-                    'Converter', '-----', 'Cấu hình', 'Mục lục', 'Đánh dấu',
-                    'Cài đặt đọc truyện', 'Close', 'Màu nền', 'Màu chữ',
-                    'Font chữ', 'Cỡ chữ', 'Chiều cao dòng', 'Canh chữ',
-                    'Chương bị khóa', 'Bạn có thể mở khóa', 'KNBs',
-                    'Chương trước', 'Chương sau', 'Chấm điểm', 'Tặng quà',
-                    'Báo cáo', 'Đề cử', 'MTC là nền tảng', 'Điều khoản',
-                    'Chính sách', 'Về bản quyền', 'Hướng dẫn sử dụng',
-                    'Đăng truyện', 'Kho truyện', 'Xếp hạng', 'Thời gian thực',
-                    'Đánh giá mới', '#F8FAFC', '#f4f4f4', 'Avenir Next',
-                    'Bookerly', 'Segoe UI', 'Literata', 'Baskerville',
-                    'Arial', 'Courier New', 'Tahoma', 'Palatino Linotype',
-                    'Georgia', 'Verdana', 'Times New Roman', 'Source Sans Pro',
-                    'Canh trái', 'Canh đều', 'Canh giữa', 'Canh phải',
-                    'Mặc định', 'Nhập số', 'Đổi', 'sang', 'ở đây'
+                # Danh sách từ khóa cần loại bỏ
+                skip_keywords = [
+                    'javascript', 'function', 'var ', 'document.', 'window.',
+                    'cấu hình', 'mục lục', 'đánh dấu', 'cài đặt', 'màu nền', 'màu chữ',
+                    'font chữ', 'cỡ chữ', 'chiều cao dòng', 'canh chữ', 'chương trước',
+                    'chương sau', 'chấm điểm', 'tặng quà', 'báo cáo', 'đề cử',
+                    'đăng nhập', 'đăng ký', 'tài khoản', 'thông báo', 'bình luận',
+                    'chia sẻ', 'theo dõi', 'yêu thích', 'bookmark', 'close', '#',
+                    'avenir', 'bookerly', 'segoe', 'literata', 'baskerville',
+                    'arial', 'courier', 'tahoma', 'palatino', 'georgia', 'verdana',
+                    'times new roman', 'source sans', 'canh trái', 'canh đều',
+                    'canh giữa', 'canh phải', 'mặc định'
                 ]
 
                 for line in lines:
                     line = line.strip()
-                    if line and len(line) > 3:  # Bỏ dòng quá ngắn
-                        # Kiểm tra xem dòng có chứa pattern cần bỏ không
-                        should_skip = False
-                        for pattern in skip_patterns:
-                            if pattern.lower() in line.lower():
-                                should_skip = True
+                    if line and len(line) > 10:  # Tăng độ dài tối thiểu
+                        # Kiểm tra xem dòng có chứa từ khóa spam không
+                        is_spam = False
+                        for keyword in skip_keywords:
+                            if keyword.lower() in line.lower():
+                                is_spam = True
                                 break
 
-                        # Bỏ dòng chỉ chứa số hoặc ký tự đặc biệt
-                        if line.isdigit() or all(c in '#%' for c in line):
-                            should_skip = True
+                        # Bỏ dòng chỉ chứa số, ký tự đặc biệt, hoặc mã màu
+                        if (line.isdigit() or
+                            line.startswith('#') or
+                            len(line.replace(' ', '')) < 5 or
+                            all(c in '#abcdef0123456789ABCDEF' for c in line.replace(' ', ''))):
+                            is_spam = True
 
-                        if not should_skip:
+                        if not is_spam:
                             cleaned_lines.append(line)
 
-                # Ghép lại với khoảng trắng phù hợp
+                # Ghép lại và làm sạch
                 content = '\n\n'.join(cleaned_lines)
 
-                # Làm sạch thêm: loại bỏ nhiều dòng trống liên tiếp
+                # Loại bỏ nhiều dòng trống liên tiếp
                 import re
                 content = re.sub(r'\n{3,}', '\n\n', content)
 
-            # Nếu không tìm thấy nội dung hoặc nội dung quá ngắn, thử cách khác
-            if not content or len(content) < 100:
-                # Thử tìm trong các thẻ p
-                paragraphs = soup.find_all('p')
-                if paragraphs:
-                    content_parts = []
-                    for p in paragraphs:
-                        text = p.get_text().strip()
-                        if len(text) > 20:  # Chỉ lấy đoạn văn có độ dài hợp lý
-                            content_parts.append(text)
+                # Loại bỏ phần đầu và cuối nếu là menu/navigation
+                content_lines = content.split('\n\n')
+                if len(content_lines) > 3:
+                    # Bỏ 2 đoạn đầu và 1 đoạn cuối (thường là menu)
+                    content_lines = content_lines[2:-1]
+                    content = '\n\n'.join(content_lines)
 
-                    if content_parts:
-                        content = '\n\n'.join(content_parts)
+            print(f"Final content length: {len(content)}")
 
             return {
                 'title': chapter_title,
@@ -313,18 +348,23 @@ class NovelDownloader:
                 for retry in range(max_retries):
                     try:
                         chapter_data = self.download_chapter(chapter['url'])
-                        if chapter_data and chapter_data['content'] and len(chapter_data['content']) > 50:
-                            break
-                        else:
-                            print(f"Chương {chapter['number']} - Lần thử {retry + 1}: Nội dung quá ngắn hoặc rỗng")
-                            if retry < max_retries - 1:
-                                time.sleep(2)
+                        if chapter_data and chapter_data['content']:
+                            # Kiểm tra xem có phải chương bị khóa không
+                            if '[CHƯƠNG BỊ KHÓA' in chapter_data['content']:
+                                print(f"Chương {chapter['number']} bị khóa - cần thanh toán")
+                                break
+                            elif len(chapter_data['content']) > 30:  # Giảm yêu cầu độ dài
+                                break
+
+                        print(f"Chương {chapter['number']} - Lần thử {retry + 1}: Nội dung quá ngắn hoặc rỗng")
+                        if retry < max_retries - 1:
+                            time.sleep(2)
                     except Exception as e:
                         print(f"Chương {chapter['number']} - Lần thử {retry + 1}: Lỗi {e}")
                         if retry < max_retries - 1:
                             time.sleep(2)
 
-                if chapter_data and chapter_data['content'] and len(chapter_data['content']) > 50:
+                if chapter_data and chapter_data['content'] and len(chapter_data['content']) > 10:
                     # Sử dụng tiêu đề từ nội dung nếu có, nếu không dùng tiêu đề từ danh sách
                     chapter_title = chapter_data['title'] if chapter_data['title'] else chapter['title']
 

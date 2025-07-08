@@ -14,22 +14,13 @@
 
 ## 🚀 Khởi chạy nhanh
 
-### Cách 1: File batch đơn giản (Khuyến nghị)
+### Cách 1: Sử dụng file batch (Khuyến nghị)
 ```bash
 # Double-click file này
 start.bat
 ```
 
-### Cách 2: File batch đầy đủ
-```bash
-# Double-click file này (tiếng Việt)
-run.bat
-
-# Hoặc file này (tiếng Anh)
-run_en.bat
-```
-
-### Cách 3: Chạy thủ công
+### Cách 2: Chạy thủ công
 ```bash
 # Cài đặt thư viện
 pip install -r requirements.txt
@@ -37,7 +28,7 @@ pip install -r requirements.txt
 # Chạy ứng dụng
 python app.py
 
-# Truy cập: http://localhost:5000
+# Mở trình duyệt: http://localhost:5000
 ```
 
 ## 📖 Hướng dẫn sử dụng
@@ -66,6 +57,12 @@ TenTruyen.zip
 
 ## ⚠️ Lưu ý quan trọng
 
+### 💰 Về tình trạng trả phí:
+- **Hầu hết truyện trên MeTruyenCV hiện tại đều trả phí**
+- **Chỉ có thể tải được các chương miễn phí** (rất ít)
+- **Chương bị khóa sẽ hiển thị "[CHƯƠNG BỊ KHÓA - CẦN THANH TOÁN]"**
+
+### 📖 Về sử dụng:
 - ✅ **Chỉ sử dụng cho mục đích cá nhân và học tập**
 - ✅ **Tôn trọng bản quyền** của tác giả và nhà xuất bản
 - ❌ **Không sử dụng cho mục đích thương mại**
@@ -76,9 +73,8 @@ TenTruyen.zip
 ### Lỗi encoding khi chạy .bat file:
 **Triệu chứng:** Thấy lỗi như `'được' is not recognized as an internal or external command`
 **Giải pháp:**
-1. Sử dụng `start.bat` (đơn giản nhất)
-2. Hoặc sử dụng `run_en.bat` (tiếng Anh)
-3. Hoặc chạy từ Command Prompt thay vì PowerShell
+1. Sử dụng `start.bat` (đã tối ưu)
+2. Hoặc chạy từ Command Prompt thay vì PowerShell
 
 ### Lỗi "Python chưa cài đặt":
 1. Tải Python từ https://python.org/downloads/

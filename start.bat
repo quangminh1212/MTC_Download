@@ -9,10 +9,7 @@ pip install -r requirements.txt >nul 2>&1
 if not exist "downloads" mkdir downloads
 
 echo Starting application...
-echo Open: http://localhost:5000
-
-timeout /t 2 /nobreak >nul
-start http://localhost:5000
+echo Open manually: http://localhost:5000
 
 python app.py
 
