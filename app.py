@@ -151,14 +151,16 @@ def not_found_error(error):
     app.logger.warning(f'404 error: {request.url}')
     return render_template('error.html',
                          error_code=404,
-                         error_message='Trang không tồn tại'), 404
+                         error_message='Trang không tồn tại',
+                         current_time=datetime.now().strftime('%Y-%m-%d %H:%M:%S')), 404
 
 @app.errorhandler(500)
 def internal_error(error):
     app.logger.error(f'500 error: {str(error)}')
     return render_template('error.html',
                          error_code=500,
-                         error_message='Lỗi server nội bộ'), 500
+                         error_message='Lỗi server nội bộ',
+                         current_time=datetime.now().strftime('%Y-%m-%d %H:%M:%S')), 500
 
 @app.errorhandler(Exception)
 def handle_exception(e):
@@ -166,7 +168,8 @@ def handle_exception(e):
     app.logger.error(traceback.format_exc())
     return render_template('error.html',
                          error_code=500,
-                         error_message='Đã xảy ra lỗi không mong muốn'), 500
+                         error_message='Đã xảy ra lỗi không mong muốn',
+                         current_time=datetime.now().strftime('%Y-%m-%d %H:%M:%S')), 500
 
 # Routes
 @app.route('/')

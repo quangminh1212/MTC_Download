@@ -62,7 +62,7 @@
                 <summary class="btn btn-outline-secondary btn-sm">Chi tiết lỗi</summary>
                 <div class="mt-3 p-3 bg-light rounded">
                     <small class="text-muted">
-                        <strong>Thời gian:</strong> {{ moment().format('YYYY-MM-DD HH:mm:ss') }}<br>
+                        <strong>Thời gian:</strong> {{ current_time }}<br>
                         <strong>URL:</strong> {{ request.url }}<br>
                         <strong>User Agent:</strong> {{ request.headers.get('User-Agent', 'Unknown') }}<br>
                         <strong>IP:</strong> {{ request.remote_addr }}
