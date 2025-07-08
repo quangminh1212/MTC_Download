@@ -1,11 +1,9 @@
 @echo off
-chcp 65001 >nul 2>&1
 title MeTruyenCV Downloader
 
 echo.
 echo ========================================
 echo        MeTruyenCV Downloader
-echo    Chon che do chay ung dung
 echo ========================================
 echo.
 
@@ -15,12 +13,12 @@ if "%1"=="2" goto web_mode
 
 echo Chon che do chay:
 echo.
-echo [1] Console Mode (Che do dong lenh)
-echo [2] Web Interface (Giao dien web)
+echo [1] Console Mode
+echo [2] Web Interface  
 echo [3] Thoat
 echo.
 
-set /p choice="Nhap lua chon cua ban (1-3): "
+set /p choice="Nhap lua chon (1-3): "
 
 if "%choice%"=="1" goto console_mode
 if "%choice%"=="2" goto web_mode
@@ -35,7 +33,7 @@ echo ========================================
 echo Console Mode - MeTruyenCV Downloader
 echo ========================================
 echo.
-echo Running MeTruyenCV Downloader with Config Management...
+echo Running MeTruyenCV Downloader...
 echo.
 python main_config.py
 pause
@@ -77,50 +75,28 @@ if errorlevel 1 (
     goto :eof
 )
 
-REM Install main dependencies if needed
-if not exist "venv\Lib\site-packages\selenium" (
-    echo Cai dat dependencies chinh...
+REM Install dependencies if needed
+if not exist "venv\Lib\site-packages\flask" (
+    echo Cai dat dependencies...
     pip install -r requirements.txt
+    pip install -r requirements_web.txt
     if errorlevel 1 (
-        echo Loi cai dat dependencies chinh!
+        echo Loi cai dat dependencies!
         pause
         goto :eof
     )
 )
 
-REM Install web dependencies
-echo Cai dat web dependencies...
-pip install -r requirements_web.txt
-if errorlevel 1 (
-    echo Loi cai dat web dependencies!
-    echo Thu chay: pip install Flask Flask-SocketIO eventlet
-    pause
-    goto :eof
-)
-
-REM Run system check
-echo Kiem tra he thong...
-python check_system.py
-if errorlevel 1 (
-    echo He thong chua san sang!
-    echo Chay setup.bat de cai dat day du
-    pause
-    goto :eof
-)
-
 REM Check if config exists
 if not exist "config.txt" (
     echo Tao file cau hinh mac dinh...
-    python -c "from config_manager import ConfigManager; ConfigManager().create_default_config()"
+    python -c "from config_manager import ConfigManager; ConfigManager().create_default_config()" 2>nul
 )
 
 REM Start web server
 echo.
 echo Khoi dong web server...
 echo Truy cap: http://localhost:5000
-echo Cau hinh: http://localhost:5000/config
-echo Download: http://localhost:5000/download
-echo Logs: http://localhost:5000/logs
 echo.
 echo Nhan Ctrl+C de dung server
 echo ===============================================
@@ -132,7 +108,7 @@ python app.py
 REM Cleanup on exit
 echo.
 echo Dang don dep...
-deactivate
+deactivate 2>nul
 
 echo.
 echo Web server da dung
