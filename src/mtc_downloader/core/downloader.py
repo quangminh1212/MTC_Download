@@ -30,33 +30,77 @@ def download_chapter(url, output_file=None, delay=1):
     Returns:
         Đường dẫn file output hoặc None nếu thất bại
     """
-    # Kiểm tra URL
-    valid_domains = ["metruyencv.com", "metruyencv.info"]
+    # Kiểm tra URL và xử lý các định dạng URL khác nhau
+    valid_domains = ["metruyencv.com", "metruyencv.info", "metruyencv.net", "metruyencv.vn"]
     valid_url = False
-    for domain in valid_domains:
-        if url.startswith(f"https://{domain}/truyen/"):
-            valid_url = True
+    domain_used = None
+    
+    # Hỗ trợ nhiều định dạng URL khác nhau
+    url_patterns = [
+        r"https?://(?:www\.)?({})/.*/chuong-\d+",  # Định dạng mới
+        r"https?://(?:www\.)?({})/.+?/.+?/chuong-\d+",  # Định dạng cũ
+        r"https?://(?:www\.)?({})/.+?/.+?/\d+",  # Định dạng thay thế (không có prefix chương)
+        r"https?://(?:www\.)?({})/.+?/\d+"  # Định dạng rất ngắn gọn
+    ]
+    
+    for pattern in url_patterns:
+        for domain in valid_domains:
+            current_pattern = pattern.format(domain)
+            if re.match(current_pattern, url):
+                valid_url = True
+                domain_used = domain
+                logger.info(f"URL hợp lệ với domain: {domain}, pattern: {current_pattern}")
+                break
+        if valid_url:
             break
     
     if not valid_url:
         logger.error(f"URL không hợp lệ: {url}")
-        logger.error("URL phải có dạng: https://metruyencv.com/truyen/ten-truyen/chuong-XX hoặc https://metruyencv.info/truyen/ten-truyen/chuong-XX")
+        logger.error("URL phải có định dạng hợp lệ, ví dụ: https://metruyencv.com/truyen/ten-truyen/chuong-XX")
         return None
     
     try:
         # Tải nội dung trang
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
             "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
-            "Referer": "https://metruyencv.com/"
+            "Referer": f"https://{domain_used}/",
+            "Cache-Control": "max-age=0",
+            "Connection": "keep-alive",
+            "Upgrade-Insecure-Requests": "1",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "same-origin",
+            "Sec-Fetch-User": "?1",
+            "Sec-Ch-Ua": '"Chromium";v="110", "Not A(Brand";v="24", "Google Chrome";v="110"',
+            "Sec-Ch-Ua-Mobile": "?0",
+            "Sec-Ch-Ua-Platform": '"Windows"'
         }
         logger.info(f"Đang tải chương từ URL: {url}")
-        response = requests.get(url, headers=headers)
+        
+        # Thêm cookie để mô phỏng người dùng thực
+        cookies = {
+            "cf_clearance": "random_string_here",  # Để bypass Cloudflare nếu có
+            "mtcv_uuid": "random_uuid_here",  # Các cookie thường được sử dụng bởi trang web
+        }
+        
+        response = requests.get(url, headers=headers, cookies=cookies)
+        
+        # In thêm thông tin về response để debug
+        logger.info(f"Response status code: {response.status_code}")
+        logger.info(f"Response headers: {response.headers}")
         
         # Kiểm tra response
         if response.status_code != 200:
             logger.error(f"Lỗi khi tải trang: {response.status_code}")
+            
+            # Lưu nội dung response để phân tích lỗi
+            error_file = "error_response.html"
+            with open(error_file, 'w', encoding='utf-8') as f:
+                f.write(response.text)
+            logger.info(f"Đã lưu response lỗi vào file: {error_file}")
+            
             return None
         
         # Ghi response HTML để debug
@@ -72,12 +116,104 @@ def download_chapter(url, output_file=None, delay=1):
         soup = BeautifulSoup(response.text, 'html.parser')
         logger.info(f"Đã parse HTML thành soup")
         
+        # Lưu URL vào soup để extract_advanced_content có thể sử dụng
+        soup.url = url
+        
         # Trích xuất nội dung chương theo nhiều phương pháp
         story_content = extract_chapter_content(soup)
         
+        # Nếu không tìm thấy nội dung, thử các phương pháp bổ sung
+        if not story_content:
+            logger.warning("Không tìm thấy nội dung chương với các phương pháp thông thường, thử phương pháp nâng cao...")
+            
+            # Thử gọi API lấy nội dung
+            try:
+                # Xây dựng API URL từ URL chương
+                chapter_match = re.search(r'/truyen/([^/]+)/chuong-(\d+)', url)
+                if chapter_match:
+                    story_slug = chapter_match.group(1)
+                    chapter_number = chapter_match.group(2)
+                    
+                    # Thử các endpoint API có thể có
+                    api_endpoints = [
+                        f"https://{domain_used}/api/chapters/{story_slug}/{chapter_number}",
+                        f"https://{domain_used}/api/v2/chapters/{story_slug}/{chapter_number}",
+                        f"https://{domain_used}/api/stories/{story_slug}/chapters/{chapter_number}",
+                        f"https://{domain_used}/api/novels/{story_slug}/chapters/{chapter_number}"
+                    ]
+                    
+                    api_headers = headers.copy()
+                    api_headers["Accept"] = "application/json"
+                    
+                    for api_url in api_endpoints:
+                        try:
+                            logger.info(f"Thử gọi API: {api_url}")
+                            api_response = requests.get(api_url, headers=api_headers, cookies=cookies)
+                            
+                            # Lưu response API để debug
+                            with open(f"api_response_{api_endpoints.index(api_url)}.json", 'w', encoding='utf-8') as f:
+                                f.write(api_response.text)
+                            
+                            if api_response.status_code == 200:
+                                try:
+                                    api_data = api_response.json()
+                                    
+                                    # Tìm trường content trong JSON response
+                                    if isinstance(api_data, dict):
+                                        content_html = None
+                                        
+                                        if "content" in api_data:
+                                            content_html = api_data["content"]
+                                        elif "data" in api_data and isinstance(api_data["data"], dict) and "content" in api_data["data"]:
+                                            content_html = api_data["data"]["content"]
+                                            
+                                        if content_html:
+                                            logger.info("Tìm thấy nội dung trong API response")
+                                            
+                                            # Giải mã nội dung nếu cần
+                                            decoded_content = try_decode_content(content_html)
+                                            
+                                            if decoded_content:
+                                                logger.info("Giải mã nội dung từ API thành công")
+                                                story_content = BeautifulSoup(decoded_content, 'html.parser')
+                                                break
+                                except:
+                                    pass
+                        except:
+                            continue
+            except Exception as e:
+                logger.warning(f"Lỗi khi thử gọi API: {str(e)}")
+        
+        # Nếu vẫn không tìm thấy nội dung, thử đọc từ debug HTML
         if not story_content:
             logger.error(f"Không tìm thấy nội dung chương trong trang!")
-            return None
+            
+            # Phân tích trang debug để tìm kiếm pettern mã hóa mới
+            try:
+                with open(debug_html_file, 'r', encoding='utf-8') as f:
+                    debug_html = f.read()
+                    
+                # Tìm các pattern mã hóa mới
+                for prefix in ['comtext', 'mtcontent', 'prp']:
+                    pattern = f'{prefix}([^"\'\\s]+)'
+                    matches = re.findall(pattern, debug_html)
+                    
+                    if matches:
+                        for match in matches:
+                            encoded = f"{prefix}{match}"
+                            logger.info(f"Tìm thấy nội dung mã hóa với prefix '{prefix}' trong HTML")
+                            
+                            # Giải mã và trả về nếu thành công
+                            decoded = try_decode_content(encoded)
+                            if decoded:
+                                logger.info(f"Giải mã thành công nội dung với prefix '{prefix}'")
+                                story_content = BeautifulSoup(decoded, 'html.parser')
+                                break
+            except Exception as e:
+                logger.error(f"Lỗi khi phân tích debug HTML: {str(e)}")
+            
+            if not story_content:
+                return None
         
         logger.info(f"Đã tìm thấy nội dung chương - chiều dài: {len(str(story_content))}")    
         
@@ -230,6 +366,12 @@ def extract_chapter_content(soup):
     """
     story_content = None
     
+    # 0. Thử phương pháp nâng cao trước (mới thêm)
+    story_content = extract_advanced_content(soup)
+    if story_content:
+        logger.info("Đã tìm thấy nội dung với phương pháp nâng cao")
+        return story_content
+    
     # 1. Tìm thẻ id hoặc class thường chứa nội dung chương
     content_selectors = [
         "div#chapter-content",
@@ -246,7 +388,16 @@ def extract_chapter_content(soup):
         "div.reading-content",
         "div.text-content",
         "div.reader-content",
-        "div.content-chap"
+        "div.content-chap",
+        "div.chapter__content",  # Thêm các selector mới
+        "div.chapter-detail",
+        "div.chapter-detail-content",
+        "div#chapter", 
+        "div#chapterContent",
+        "div.chapterContent",
+        "div.chapter-body",
+        "div.chapter-text",
+        "div#content-container"
     ]
     
     # Thử các selector phổ biến trước
@@ -427,6 +578,209 @@ def extract_js_content(soup):
     
     return None
 
+def extract_advanced_content(soup):
+    """
+    Trích xuất nội dung sử dụng phương pháp nâng cao cho các phiên bản mới của metruyencv
+    
+    Args:
+        soup: BeautifulSoup object của trang
+    
+    Returns:
+        BeautifulSoup object của nội dung hoặc None nếu không tìm thấy
+    """
+    logger.info("Đang thử phương pháp trích xuất nội dung nâng cao...")
+    
+    # 1. Tìm kiếm script sử dụng kỹ thuật obfuscation mới
+    scripts = soup.find_all('script')
+    
+    # Tìm kiếm trong script có chứa chapterContent hoặc __NUXT__
+    for script in scripts:
+        if not script.string:
+            continue
+            
+        script_content = str(script.string)
+        
+        # Lưu script để phân tích
+        with open("advanced_script_analysis.js", "w", encoding="utf-8") as f:
+            f.write(script_content[:20000])
+        
+        # Phương pháp 1: Tìm dữ liệu trong __NUXT__
+        if "__NUXT__" in script_content:
+            logger.info("Tìm thấy __NUXT__ data trong script")
+            
+            # Tìm nội dung chương trong __NUXT__ data
+            nuxt_pattern = r'__NUXT__\s*=\s*\(function\([^)]*\)\s*\{(.*?)return\s*\{(.*?)\}\s*\}\([^)]*\)\)'
+            nuxt_match = re.search(nuxt_pattern, script_content, re.DOTALL)
+            
+            if nuxt_match:
+                nuxt_data = nuxt_match.group(0)
+                
+                # Tìm state.chapter.content hoặc chapter.content
+                content_patterns = [
+                    r'state:\s*\{.*?chapter:\s*\{.*?content:\s*[\'"`]([^\'"`]+)[\'"`]',
+                    r'chapter:\s*\{.*?content:\s*[\'"`]([^\'"`]+)[\'"`]'
+                ]
+                
+                for pattern in content_patterns:
+                    content_match = re.search(pattern, nuxt_data, re.DOTALL)
+                    if content_match:
+                        encoded_content = content_match.group(1)
+                        logger.info("Tìm thấy nội dung chương trong __NUXT__ data")
+                        
+                        # Giải mã nội dung
+                        decoded_content = try_decode_content(encoded_content)
+                        if decoded_content:
+                            logger.info("Giải mã nội dung trong __NUXT__ data thành công")
+                            return BeautifulSoup(decoded_content, 'html.parser')
+        
+        # Phương pháp 2: Tìm JSON data object
+        json_data_pattern = r'({[^{]*?"chapterData"[^{]*?:[^{]*?{.*?}[^}]*?})'
+        json_match = re.search(json_data_pattern, script_content, re.DOTALL)
+        
+        if json_match:
+            try:
+                json_str = json_match.group(1)
+                # Làm sạch chuỗi JSON
+                json_str = re.sub(r'([{,])\s*([a-zA-Z0-9_]+)\s*:', r'\1"\2":', json_str)
+                json_str = re.sub(r"'([^']*)'", r'"\1"', json_str)
+                
+                # Thử parse JSON
+                import json
+                try:
+                    data = json.loads(json_str)
+                    if "chapterData" in data and "content" in data["chapterData"]:
+                        encoded_content = data["chapterData"]["content"]
+                        logger.info("Tìm thấy nội dung trong JSON data object")
+                        
+                        # Giải mã nội dung
+                        decoded_content = try_decode_content(encoded_content)
+                        if decoded_content:
+                            logger.info("Giải mã nội dung từ JSON data object thành công")
+                            return BeautifulSoup(decoded_content, 'html.parser')
+                except json.JSONDecodeError:
+                    pass
+            except Exception as e:
+                logger.debug(f"Lỗi khi xử lý JSON data: {str(e)}")
+        
+        # Phương pháp 3: Trích xuất từ biến JavaScript lồng nhau
+        nested_patterns = [
+            r'window\.__INITIAL_STATE__\s*=\s*({.*?});',
+            r'const\s+initialState\s*=\s*({.*?});',
+            r'var\s+initialState\s*=\s*({.*?});'
+        ]
+        
+        for pattern in nested_patterns:
+            state_match = re.search(pattern, script_content, re.DOTALL)
+            if state_match:
+                state_data = state_match.group(1)
+                # Tìm nội dung chương trong state
+                content_match = re.search(r'content:\s*[\'"`]([^\'"`]+)[\'"`]', state_data, re.DOTALL)
+                if content_match:
+                    encoded_content = content_match.group(1)
+                    logger.info("Tìm thấy nội dung chương trong initial state")
+                    
+                    # Giải mã nội dung
+                    decoded_content = try_decode_content(encoded_content)
+                    if decoded_content:
+                        logger.info("Giải mã nội dung từ initial state thành công")
+                        return BeautifulSoup(decoded_content, 'html.parser')
+    
+    # 2. Tìm kiếm các phần tử script với type=application/json
+    json_scripts = soup.find_all("script", attrs={"type": "application/json"})
+    for script in json_scripts:
+        try:
+            if script.string:
+                import json
+                data = json.loads(script.string)
+                # Tìm kiếm thuộc tính có thể chứa nội dung
+                if isinstance(data, dict):
+                    for key, value in data.items():
+                        if isinstance(value, dict) and "content" in value:
+                            encoded_content = value["content"]
+                            if isinstance(encoded_content, str) and len(encoded_content) > 100:
+                                logger.info(f"Tìm thấy nội dung trong script JSON, khóa: {key}")
+                                
+                                # Giải mã nội dung
+                                decoded_content = try_decode_content(encoded_content)
+                                if decoded_content:
+                                    logger.info("Giải mã nội dung từ script JSON thành công")
+                                    return BeautifulSoup(decoded_content, 'html.parser')
+        except Exception as e:
+            logger.debug(f"Lỗi khi phân tích script JSON: {str(e)}")
+    
+    # 3. Tìm kiếm các phần tử div bị ẩn có chứa nội dung
+    hidden_divs = soup.find_all("div", attrs={"style": lambda value: value and "display:none" in value})
+    hidden_divs.extend(soup.find_all("div", attrs={"class": lambda value: value and "hidden" in value}))
+    
+    for div in hidden_divs:
+        if div and len(div.text) > 500:  # Nội dung chương thường dài
+            logger.info("Tìm thấy nội dung trong div ẩn")
+            return div
+    
+    # 4. Tìm trong các thuộc tính data-* của các phần tử
+    for elem in soup.find_all(attrs={"data-content": True}):
+        encoded_content = elem["data-content"]
+        if len(encoded_content) > 100:  # Có vẻ đủ dài để là nội dung chương
+            logger.info("Tìm thấy nội dung trong thuộc tính data-content")
+            
+            # Giải mã nội dung
+            decoded_content = try_decode_content(encoded_content)
+            if decoded_content:
+                logger.info("Giải mã nội dung từ thuộc tính data-content thành công")
+                return BeautifulSoup(decoded_content, 'html.parser')
+    
+    # 5. Tìm kiếm trong các API endpoint từ code JavaScript
+    api_patterns = [
+        r'(https?://[^"\']+?/api/[^"\']+?/chapters?/[^"\']+?)',
+        r'(https?://[^"\']+?/api/[^"\']+?/content[^"\']*?)'
+    ]
+    
+    api_urls = []
+    for pattern in api_patterns:
+        for script in scripts:
+            if script.string:
+                matches = re.findall(pattern, script.string)
+                api_urls.extend(matches)
+    
+    if api_urls:
+        logger.info(f"Tìm thấy {len(api_urls)} API endpoint tiềm năng, đang thử gọi...")
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+            "Accept": "application/json",
+            "Referer": soup.url if hasattr(soup, 'url') else "https://metruyencv.com/",
+            "X-Requested-With": "XMLHttpRequest"
+        }
+        
+        for api_url in api_urls[:3]:  # Chỉ thử 3 URL đầu tiên
+            try:
+                logger.info(f"Đang gọi API: {api_url}")
+                response = requests.get(api_url, headers=headers)
+                if response.status_code == 200:
+                    try:
+                        api_data = response.json()
+                        # Tìm trường content trong JSON response
+                        if isinstance(api_data, dict):
+                            if "content" in api_data:
+                                encoded_content = api_data["content"]
+                            elif "data" in api_data and isinstance(api_data["data"], dict) and "content" in api_data["data"]:
+                                encoded_content = api_data["data"]["content"]
+                            else:
+                                continue
+                                
+                            logger.info("Tìm thấy nội dung trong API response")
+                            # Giải mã nội dung
+                            decoded_content = try_decode_content(encoded_content)
+                            if decoded_content:
+                                logger.info("Giải mã nội dung từ API thành công")
+                                return BeautifulSoup(decoded_content, 'html.parser')
+                    except:
+                        pass
+            except:
+                continue
+    
+    logger.info("Phương pháp trích xuất nâng cao không tìm thấy nội dung")
+    return None
+
 def decode_prp_content(encoded_content):
     """
     Giải mã nội dung với prefix 'prp' từ metruyencv.com
@@ -516,6 +870,132 @@ def try_decode_content(encoded_content):
         decoded = decode_prp_content(encoded_content)
         if decoded:
             return decoded
+    
+    # Phương pháp mới: Giải mã với prefix "comtext"
+    if isinstance(encoded_content, str) and encoded_content.startswith('comtext'):
+        logger.info("Phát hiện mã hóa với prefix 'comtext', đang thử giải mã...")
+        try:
+            # Bỏ prefix 'comtext'
+            encoded_part = encoded_content[7:]
+            
+            # Xử lý encoding mới
+            # Thường sau prefix có một mảng base64 được phân tách bởi dấu phẩy
+            parts = encoded_part.split(',')
+            
+            decoded_parts = []
+            for part in parts:
+                if part:  # Bỏ qua các phần trống
+                    try:
+                        # Thêm padding nếu cần
+                        padding_needed = len(part) % 4
+                        if padding_needed:
+                            part += '=' * (4 - padding_needed)
+                            
+                        # Giải mã base64
+                        decoded_bytes = base64.b64decode(part)
+                        decoded_text = decoded_bytes.decode('utf-8')
+                        decoded_parts.append(decoded_text)
+                    except:
+                        # Nếu phần này không phải base64, giữ nguyên
+                        decoded_parts.append(part)
+            
+            result = ''.join(decoded_parts)
+            
+            # Ghi kết quả để debug
+            with open("debug_comtext_decoded.txt", "w", encoding="utf-8") as f:
+                f.write(result)
+            
+            if '<' in result and '>' in result:
+                logger.info("Đã giải mã thành công nội dung 'comtext'!")
+                return result
+        except Exception as e:
+            logger.error(f"Lỗi khi giải mã nội dung 'comtext': {str(e)}")
+    
+    # Phương pháp mới: Giải mã với prefix "mtcontent"
+    if isinstance(encoded_content, str) and encoded_content.startswith('mtcontent'):
+        logger.info("Phát hiện mã hóa với prefix 'mtcontent', đang thử giải mã...")
+        try:
+            # Bỏ prefix 'mtcontent'
+            encoded_part = encoded_content[9:]
+            
+            # Phương pháp giải mã cho mtcontent
+            # Thường sử dụng một thuật toán thay thế kí tự đặc biệt
+            # Cần kiểm tra dữ liệu thực tế để xác định thuật toán chính xác
+            
+            # Thử một số thuật toán giải mã tiềm năng
+            # 1. Giải mã base64 trực tiếp
+            try:
+                # Thêm padding nếu cần
+                padding_needed = len(encoded_part) % 4
+                if padding_needed:
+                    encoded_part += '=' * (4 - padding_needed)
+                    
+                decoded = base64.b64decode(encoded_part).decode('utf-8')
+                if '<' in decoded and '>' in decoded:
+                    logger.info("Đã giải mã mtcontent bằng base64 tiêu chuẩn!")
+                    return decoded
+            except:
+                pass
+            
+            # 2. Giải mã với bảng chuyển đổi đặc biệt
+            # Đây là một bảng chuyển đổi giả định - cần điều chỉnh theo cách mã hóa thực tế
+            mtc_translation_table = str.maketrans({
+                'a': 'k', 'b': 'l', 'c': 'm', 'd': 'n', 'e': 'o',
+                'f': 'p', 'g': 'q', 'h': 'r', 'i': 's', 'j': 't',
+                'k': 'u', 'l': 'v', 'm': 'w', 'n': 'x', 'o': 'y',
+                'p': 'z', 'q': 'a', 'r': 'b', 's': 'c', 't': 'd',
+                'u': 'e', 'v': 'f', 'w': 'g', 'x': 'h', 'y': 'i',
+                'z': 'j', 'A': 'K', 'B': 'L', 'C': 'M', 'D': 'N',
+                'E': 'O', 'F': 'P', 'G': 'Q', 'H': 'R', 'I': 'S',
+                'J': 'T', 'K': 'U', 'L': 'V', 'M': 'W', 'N': 'X',
+                'O': 'Y', 'P': 'Z', 'Q': 'A', 'R': 'B', 'S': 'C',
+                'T': 'D', 'U': 'E', 'V': 'F', 'W': 'G', 'X': 'H',
+                'Y': 'I', 'Z': 'J'
+            })
+            
+            translated = encoded_part.translate(mtc_translation_table)
+            
+            try:
+                # Thêm padding nếu cần
+                padding_needed = len(translated) % 4
+                if padding_needed:
+                    translated += '=' * (4 - padding_needed)
+                    
+                decoded = base64.b64decode(translated).decode('utf-8')
+                if '<' in decoded and '>' in decoded:
+                    logger.info("Đã giải mã mtcontent bằng bảng chuyển đổi và base64!")
+                    return decoded
+            except:
+                pass
+            
+            # 3. Giải mã với nhiều lớp mã hóa
+            # Đôi khi nội dung được mã hóa nhiều lớp base64 lồng nhau
+            try:
+                current_content = encoded_part
+                for _ in range(3):  # Thử giải mã tối đa 3 lớp
+                    try:
+                        # Thêm padding nếu cần
+                        padding_needed = len(current_content) % 4
+                        if padding_needed:
+                            current_content += '=' * (4 - padding_needed)
+                            
+                        decoded = base64.b64decode(current_content).decode('utf-8')
+                        current_content = decoded
+                        
+                        if '<' in decoded and '>' in decoded:
+                            logger.info(f"Đã giải mã mtcontent sau {_ + 1} lớp base64!")
+                            return decoded
+                    except:
+                        break
+            except:
+                pass
+            
+            # Ghi lại encoded_part để phân tích thêm
+            with open("mtcontent_encoded.txt", "w", encoding="utf-8") as f:
+                f.write(encoded_part)
+                
+        except Exception as e:
+            logger.error(f"Lỗi khi giải mã nội dung 'mtcontent': {str(e)}")
         
     # Cố gắng phân tích xem đây có phải là một JSON được mã hóa không
     try:
@@ -605,6 +1085,22 @@ def try_decode_content(encoded_content):
                 'O': 'Y', 'Q': 'Z', '0': '0', '1': '1', '2': '2',
                 '3': '3', '4': '4', '5': '5', '6': '6', '7': '7',
                 '8': '8', '9': '9', '+': '+', '/': '/'
+            },
+            # Bảng thay thế thứ tư (phiên bản mới nhất)
+            {
+                'q': 'a', 'w': 'b', 'e': 'c', 'r': 'd', 't': 'e',
+                'y': 'f', 'u': 'g', 'i': 'h', 'o': 'i', 'p': 'j',
+                'a': 'k', 's': 'l', 'd': 'm', 'f': 'n', 'g': 'o',
+                'h': 'p', 'j': 'q', 'k': 'r', 'l': 's', 'z': 't',
+                'x': 'u', 'c': 'v', 'v': 'w', 'b': 'x', 'n': 'y',
+                'm': 'z', 'Q': 'A', 'W': 'B', 'E': 'C', 'R': 'D',
+                'T': 'E', 'Y': 'F', 'U': 'G', 'I': 'H', 'O': 'I',
+                'P': 'J', 'A': 'K', 'S': 'L', 'D': 'M', 'F': 'N',
+                'G': 'O', 'H': 'P', 'J': 'Q', 'K': 'R', 'L': 'S',
+                'Z': 'T', 'X': 'U', 'C': 'V', 'V': 'W', 'B': 'X',
+                'N': 'Y', 'M': 'Z', '1': '0', '2': '1', '3': '2',
+                '4': '3', '5': '4', '6': '5', '7': '6', '8': '7',
+                '9': '8', '0': '9', '+': '+', '/': '/'
             }
         ]
         
@@ -651,6 +1147,42 @@ def try_decode_content(encoded_content):
     except Exception as e:
         logger.warning(f"Không thể giải mã với phương pháp thay thế: {str(e)}")
     
+    # Phương pháp mới: Giải mã content từ cấu trúc dữ liệu đặc biệt
+    # Đôi khi nội dung được giấu trong một cấu trúc mảng đặc biệt
+    if isinstance(encoded_content, str) and ":" in encoded_content and ";" in encoded_content:
+        try:
+            # Tách các phần được phân cách bởi dấu chấm phẩy
+            parts = encoded_content.split(';')
+            decoded_parts = []
+            
+            for part in parts:
+                if ':' in part:
+                    # Định dạng thường là "index:value"
+                    index_value = part.split(':')
+                    if len(index_value) == 2:
+                        try:
+                            value = index_value[1]
+                            # Giải mã value (thường là base64)
+                            try:
+                                # Thêm padding nếu cần
+                                padding_needed = len(value) % 4
+                                if padding_needed:
+                                    value += '=' * (4 - padding_needed)
+                                    
+                                decoded = base64.b64decode(value).decode('utf-8')
+                                decoded_parts.append(decoded)
+                            except:
+                                decoded_parts.append(value)
+                        except:
+                            pass
+            
+            combined = ''.join(decoded_parts)
+            if '<' in combined and '>' in combined:
+                logger.info("Đã giải mã nội dung từ cấu trúc dữ liệu đặc biệt")
+                return combined
+        except:
+            pass
+    
     # Tìm kiếm nội dung đặc biệt trong chuỗi mã hóa - đôi khi chapterContent ở dạng JSON
     try:
         import re
@@ -685,6 +1217,30 @@ def try_decode_content(encoded_content):
     if encoded_content.startswith('<') and '>' in encoded_content:
         logger.info("Nội dung đã là HTML thuần túy")
         return encoded_content
+    
+    # Phương pháp mới: Phân tích cấu trúc dữ liệu đặc biệt
+    try:
+        # Đôi khi nội dung được mã hóa dưới dạng mảng dữ liệu
+        if encoded_content.startswith('[') and encoded_content.endswith(']'):
+            try:
+                import json
+                data_array = json.loads(encoded_content)
+                if isinstance(data_array, list) and len(data_array) > 0:
+                    # Thử kết hợp các phần tử của mảng
+                    combined = ''
+                    for item in data_array:
+                        if isinstance(item, str):
+                            combined += item
+                        elif isinstance(item, dict) and 'content' in item:
+                            combined += str(item['content'])
+                    
+                    if '<' in combined and '>' in combined:
+                        logger.info("Đã giải mã nội dung từ mảng dữ liệu")
+                        return combined
+            except:
+                pass
+    except:
+        pass
     
     # Thử giải mã phương pháp mới của metruyencv - prp prefix
     if encoded_content.startswith('prp'):

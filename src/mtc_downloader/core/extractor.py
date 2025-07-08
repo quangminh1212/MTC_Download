@@ -37,6 +37,15 @@ def extract_story_content(html_file, output_file=None):
         with open(html_file, 'r', encoding='utf-8', errors='ignore') as f:
             html_content = f.read()
         
+        # Lưu một bản sao HTML để debug
+        debug_file = f"debug_{os.path.basename(html_file)}"
+        try:
+            with open(debug_file, 'w', encoding='utf-8') as f:
+                f.write(html_content)
+            logger.info(f"Đã lưu bản sao HTML để debug: {debug_file}")
+        except:
+            pass
+            
         # Phân tích HTML bằng BeautifulSoup
         soup = BeautifulSoup(html_content, 'html.parser')
         
@@ -128,7 +137,13 @@ def extract_story_content(html_file, output_file=None):
             "div.chapter",
             "div.content",
             "article.content",
-            "div#chapter-detail"
+            "div#chapter-detail",
+            "div.chapter__content",  # Thêm các selector mới
+            "div#chapterContent",
+            "div.chapterContent",
+            "div.chapter-body",
+            "div.chapter-text",
+            "div#content-container"
         ]
         
         story_content = None
@@ -149,6 +164,117 @@ def extract_story_content(html_file, output_file=None):
         if not story_content:
             # Kiểm tra mã hóa trong JavaScript
             story_content = extract_from_js(soup)
+            
+            # Nếu tìm thấy nội dung từ JS, ghi ra file để debug
+            if story_content:
+                try:
+                    with open("debug_js_content.html", "w", encoding="utf-8") as f:
+                        f.write(str(story_content))
+                    logger.info("Đã ghi nội dung từ JS vào debug_js_content.html")
+                except:
+                    pass
+        
+        # Nếu vẫn không tìm thấy, tìm các pattern mã hóa mới
+        if not story_content:
+            try:
+                # Tìm các pattern mã hóa mới trong HTML gốc
+                for prefix in ['comtext', 'mtcontent', 'prp']:
+                    pattern = f'{prefix}([^"\'\\s]+)'
+                    matches = re.findall(pattern, html_content)
+                    
+                    if matches:
+                        for match in matches:
+                            encoded = f"{prefix}{match}"
+                            logger.info(f"Tìm thấy nội dung mã hóa với prefix '{prefix}' trong HTML")
+                            
+                            # Giải mã và trả về nếu thành công
+                            decoded = try_decode_content(encoded)
+                            if decoded:
+                                logger.info(f"Giải mã thành công nội dung với prefix '{prefix}'")
+                                story_content = BeautifulSoup(decoded, 'html.parser')
+                                break
+            except Exception as e:
+                logger.warning(f"Lỗi khi tìm pattern mã hóa: {str(e)}")
+        
+        # Nếu vẫn không tìm thấy, thử tìm trong script với window.__NUXT__ hoặc __INITIAL_STATE__
+        if not story_content:
+            try:
+                scripts = soup.find_all('script')
+                for script in scripts:
+                    if not script.string:
+                        continue
+                    
+                    script_content = str(script.string)
+                    
+                    # Tìm trong __NUXT__ data
+                    if "__NUXT__" in script_content:
+                        logger.info("Tìm thấy __NUXT__ data trong script")
+                        
+                        # Ghi script để phân tích
+                        try:
+                            with open("debug_nuxt_script.js", "w", encoding="utf-8") as f:
+                                f.write(script_content)
+                        except:
+                            pass
+                        
+                        # Tìm nội dung chương trong __NUXT__ data
+                        nuxt_pattern = r'__NUXT__\s*=\s*\(function\([^)]*\)\s*\{(.*?)return\s*\{(.*?)\}\s*\}\([^)]*\)\)'
+                        nuxt_match = re.search(nuxt_pattern, script_content, re.DOTALL)
+                        
+                        if nuxt_match:
+                            nuxt_data = nuxt_match.group(0)
+                            
+                            # Tìm state.chapter.content hoặc chapter.content
+                            content_patterns = [
+                                r'state:\s*\{.*?chapter:\s*\{.*?content:\s*[\'"`]([^\'"`]+)[\'"`]',
+                                r'chapter:\s*\{.*?content:\s*[\'"`]([^\'"`]+)[\'"`]'
+                            ]
+                            
+                            for pattern in content_patterns:
+                                content_match = re.search(pattern, nuxt_data, re.DOTALL)
+                                if content_match:
+                                    encoded_content = content_match.group(1)
+                                    logger.info("Tìm thấy nội dung chương trong __NUXT__ data")
+                                    
+                                    # Giải mã nội dung
+                                    decoded_content = try_decode_content(encoded_content)
+                                    if decoded_content:
+                                        logger.info("Giải mã nội dung trong __NUXT__ data thành công")
+                                        story_content = BeautifulSoup(decoded_content, 'html.parser')
+                                        break
+                    
+                    # Tìm trong __INITIAL_STATE__
+                    elif "__INITIAL_STATE__" in script_content:
+                        logger.info("Tìm thấy __INITIAL_STATE__ trong script")
+                        
+                        # Ghi script để phân tích
+                        try:
+                            with open("debug_initial_state_script.js", "w", encoding="utf-8") as f:
+                                f.write(script_content)
+                        except:
+                            pass
+                            
+                        # Tìm nội dung trong __INITIAL_STATE__
+                        state_pattern = r'window\.__INITIAL_STATE__\s*=\s*(\{.*?\});'
+                        state_match = re.search(state_pattern, script_content, re.DOTALL)
+                        
+                        if state_match:
+                            state_data = state_match.group(1)
+                            # Tìm content trong state
+                            content_match = re.search(r'content:\s*[\'"`]([^\'"`]+)[\'"`]', state_data, re.DOTALL)
+                            if content_match:
+                                encoded_content = content_match.group(1)
+                                logger.info("Tìm thấy nội dung trong __INITIAL_STATE__")
+                                
+                                # Giải mã nội dung
+                                decoded_content = try_decode_content(encoded_content)
+                                if decoded_content:
+                                    logger.info("Giải mã nội dung từ __INITIAL_STATE__ thành công")
+                                    story_content = BeautifulSoup(decoded_content, 'html.parser')
+                                    break
+                                    
+            except Exception as e:
+                logger.warning(f"Lỗi khi tìm trong script: {str(e)}")
         
         # Nếu vẫn không tìm thấy, tìm div có nhiều nội dung nhất
         if not story_content:
