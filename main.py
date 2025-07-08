@@ -103,45 +103,268 @@ async def download_missing_chapter(links):
     async with async_playwright() as p:
         browser = await p.firefox.launch(headless=True)
         page = await browser.new_page()
-        await page.goto('https://metruyencv.com/',timeout=0)
-        await page.locator('xpath=/html/body/div[1]/header/div/div/div[3]/button').click()
-        await asyncio.sleep(1)
-        await page.locator('xpath=/html/body/div[1]/div[2]/div/div[2]/div/div/div/div/div[2]/div[1]/div/div[1]/button').click()
-        await asyncio.sleep(1)
-        await page.locator('xpath=/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[1]/div[2]/input').fill(username)
-        await asyncio.sleep(1)
-        await page.locator('xpath=/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/input').fill(password)
-        await asyncio.sleep(1)
-        await page.locator('xpath=/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[3]/div[1]/button').click()
-        await asyncio.sleep(1)
-        await page.locator('xpath=/html/body/div[1]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[2]/button').click()
-        await asyncio.sleep(1)
-        for title,link,num in links:
-            await page.goto(link,timeout=0)
-            await page.route("**/*", handle_route)
-            if setting:
-                await page.locator('xpath=/html/body/div[1]/main/div[3]/div[1]/button[1]').click()
-                await page.locator('xpath=/html/body/div[1]/main/div[3]/div[2]/div/div[2]/div/div/div[2]/div[3]/select').select_option(value ='Times New Roman')
-                await page.locator('xpath=/html/body/div[1]/main/div[3]/div[2]/div/div[2]/div/div/div[2]/div[4]/select').select_option(value='50px')
-                await page.reload()
-                setting = False
-            loadmore_element1 = await page.wait_for_selector('xpath=/html/body/div[1]/main/div[4]/div[1]', state='attached')
-            missing_html1 = await loadmore_element1.inner_html()
-            missing_html1 = str(missing_html1)
-            if missing_html1.count('<br><br>') <= 4:
-                loadmore_element2 = await page.wait_for_selector('xpath=/html/body/div[1]/main/div[4]/div[3]',state='attached')
-                missing_html2 = await loadmore_element2.inner_html()
-                missing_html2 = BeautifulSoup(str(missing_html2),'lxml')
-                if missing_html2.find('canvas') != None:
-                    images = await page.query_selector_all('canvas')
-                    for image in images:
-                        image_bytes = await image.screenshot()
-                        ocr_result = ocr(image_bytes)
-                        missing_html2.find('canvas').replace_with(ocr_result)
-                missing_html1 = missing_html1 + '<br/><br/>' + str(missing_html2)
+
+        try:
+            await page.goto('https://metruyencv.com/', timeout=30000)
+
+            # Try to find and click login button with multiple selectors
+            login_selectors = [
+                'button:has-text("Đăng nhập")',
+                'button:text("Đăng nhập")',
+                'xpath=/html/body/div[1]/header/div/div/div[3]/button',
+                'button[class*="login"]',
+                'a[href*="login"]',
+                'button'  # Fallback to any button and check text
+            ]
+
+            login_clicked = False
+            for selector in login_selectors:
+                try:
+                    if selector == 'button':  # Special handling for fallback
+                        buttons = await page.query_selector_all('button')
+                        for button in buttons:
+                            text = await button.inner_text()
+                            if 'đăng nhập' in text.lower().strip():
+                                await button.click()
+                                login_clicked = True
+                                print("Đã click vào nút đăng nhập")
+                                break
+                        if login_clicked:
+                            break
+                    else:
+                        await page.locator(selector).click(timeout=5000)
+                        login_clicked = True
+                        print("Đã click vào nút đăng nhập")
+                        break
+                except:
+                    continue
+
+            if not login_clicked:
+                print("Không thể tìm thấy nút đăng nhập, thử truy cập trực tiếp")
+                # Try direct login page access
+                await page.goto('https://metruyencv.com/login', timeout=30000)
+
+            await asyncio.sleep(2)
+
+            # Try to fill login form with multiple selectors
+            username_selectors = [
+                'xpath=/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[1]/div[2]/input',
+                'input[type="email"]',
+                'input[placeholder*="email"]',
+                'input[name*="email"]',
+                'input[id*="email"]'
+            ]
+
+            password_selectors = [
+                'xpath=/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/input',
+                'input[type="password"]',
+                'input[placeholder*="password"]',
+                'input[name*="password"]',
+                'input[id*="password"]'
+            ]
+
+            # Fill username
+            username_filled = False
+            for selector in username_selectors:
+                try:
+                    await page.locator(selector).fill(username, timeout=5000)
+                    username_filled = True
+                    print("Đã điền username")
+                    break
+                except:
+                    continue
+
+            if not username_filled:
+                print("Không thể điền username")
+                await browser.close()
+                return results
+
+            await asyncio.sleep(1)
+
+            # Fill password
+            password_filled = False
+            for selector in password_selectors:
+                try:
+                    await page.locator(selector).fill(password, timeout=5000)
+                    password_filled = True
+                    print("Đã điền password")
+                    break
+                except:
+                    continue
+
+            if not password_filled:
+                print("Không thể điền password")
+                await browser.close()
+                return results
+
+            await asyncio.sleep(1)
+
+            # Try to submit login form
+            submit_selectors = [
+                'xpath=/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[3]/div[1]/button',
+                'button[type="submit"]',
+                'button:has-text("Đăng nhập")',
+                'input[type="submit"]'
+            ]
+
+            submit_clicked = False
+            for selector in submit_selectors:
+                try:
+                    await page.locator(selector).click(timeout=5000)
+                    submit_clicked = True
+                    print("Đã submit form đăng nhập")
+                    break
+                except:
+                    continue
+
+            if not submit_clicked:
+                print("Không thể submit form đăng nhập")
+                await browser.close()
+                return results
+
+            await asyncio.sleep(3)
+
+            # Check if login was successful by looking for user menu or profile
+            try:
+                await page.wait_for_selector('button:has-text("Tài khoản"), a:has-text("Tài khoản"), [class*="user"], [class*="profile"]', timeout=10000)
+                print("Đăng nhập thành công")
+            except:
+                print("Có thể đăng nhập không thành công, tiếp tục thử...")
+
+        except Exception as e:
+            print(f"Lỗi trong quá trình đăng nhập: {e}")
+            print("Tiếp tục với việc tải chapter...")
+
+        for title, link, num in links:
+            try:
+                print(f"Đang tải chapter {num}...")
+                await page.goto(link, timeout=30000)
+                await page.route("**/*", handle_route)
+
+                # Configure reading settings if first time
+                if setting:
+                    try:
+                        # Try to find and click settings button
+                        settings_selectors = [
+                            'xpath=/html/body/div[1]/main/div[3]/div[1]/button[1]',
+                            'button:has-text("Cài đặt")',
+                            'button[class*="setting"]',
+                            '[class*="setting"] button'
+                        ]
+
+                        for selector in settings_selectors:
+                            try:
+                                await page.locator(selector).click(timeout=5000)
+                                print("Đã mở cài đặt đọc")
+                                break
+                            except:
+                                continue
+
+                        await asyncio.sleep(1)
+
+                        # Try to set font
+                        font_selectors = [
+                            'xpath=/html/body/div[1]/main/div[3]/div[2]/div/div[2]/div/div/div[2]/div[3]/select',
+                            'select[class*="font"]',
+                            'select option[value*="Times"]'
+                        ]
+
+                        for selector in font_selectors:
+                            try:
+                                await page.locator(selector).select_option(value='Times New Roman', timeout=5000)
+                                print("Đã chọn font Times New Roman")
+                                break
+                            except:
+                                continue
+
+                        # Try to set font size
+                        size_selectors = [
+                            'xpath=/html/body/div[1]/main/div[3]/div[2]/div/div[2]/div/div/div[2]/div[4]/select',
+                            'select[class*="size"]'
+                        ]
+
+                        for selector in size_selectors:
+                            try:
+                                await page.locator(selector).select_option(value='50px', timeout=5000)
+                                print("Đã chọn font size 50px")
+                                break
+                            except:
+                                continue
+
+                        await page.reload()
+                        setting = False
+
+                    except Exception as e:
+                        print(f"Không thể cài đặt font: {e}")
+                        setting = False
+
+                # Try to get chapter content with multiple selectors
+                content_selectors = [
+                    'xpath=/html/body/div[1]/main/div[4]/div[1]',
+                    '#chapter-content',
+                    '[class*="chapter-content"]',
+                    '[class*="content"]',
+                    'main [class*="text"]'
+                ]
+
+                missing_html1 = ""
+                for selector in content_selectors:
+                    try:
+                        loadmore_element1 = await page.wait_for_selector(selector, state='attached', timeout=10000)
+                        missing_html1 = await loadmore_element1.inner_html()
+                        missing_html1 = str(missing_html1)
+                        if len(missing_html1.strip()) > 50:  # Check if content is substantial
+                            print(f"Đã lấy được nội dung chapter {num}")
+                            break
+                    except:
+                        continue
+
+                if not missing_html1 or len(missing_html1.strip()) < 50:
+                    print(f"Không thể lấy nội dung chapter {num}")
+                    continue
+
+                # Check if content is too short, try to get additional content
+                if missing_html1.count('<br><br>') <= 4:
+                    try:
+                        additional_selectors = [
+                            'xpath=/html/body/div[1]/main/div[4]/div[3]',
+                            '[class*="chapter-content"] + div',
+                            '[class*="content"] + div'
+                        ]
+
+                        for selector in additional_selectors:
+                            try:
+                                loadmore_element2 = await page.wait_for_selector(selector, state='attached', timeout=5000)
+                                missing_html2 = await loadmore_element2.inner_html()
+                                missing_html2 = BeautifulSoup(str(missing_html2), 'lxml')
+
+                                # Handle canvas elements (OCR)
+                                if missing_html2.find('canvas') is not None:
+                                    images = await page.query_selector_all('canvas')
+                                    for image in images:
+                                        try:
+                                            image_bytes = await image.screenshot()
+                                            ocr_result = ocr(image_bytes)
+                                            missing_html2.find('canvas').replace_with(ocr_result)
+                                        except Exception as e:
+                                            print(f"Lỗi OCR: {e}")
+
+                                missing_html1 = missing_html1 + '<br/><br/>' + str(missing_html2)
+                                break
+                            except:
+                                continue
+                    except Exception as e:
+                        print(f"Không thể lấy nội dung bổ sung: {e}")
+
+                # Clean up HTML
                 missing_html1 = missing_html1.replace('<br/><br/>', '<br/>').replace('<br/>', '<br/><br/>').replace('\n', ' ')
-                results.append((title,missing_html1,num))
-            print(f'Đã tải xong chap {num}')
+                results.append((title, missing_html1, num))
+                print(f'Đã tải xong chapter {num}')
+
+            except Exception as e:
+                print(f"Lỗi khi tải chapter {num}: {e}")
+                continue
+
         await browser.close()
     return results
 
@@ -174,14 +397,27 @@ async def get_chapter_with_retry(chapter_number, novel_url):
             # Navigate to chapter page
             await page.goto(url, timeout=30000)
 
-            # Wait for content to load (wait for the chapter-content div to have content)
-            try:
-                await page.wait_for_function(
-                    "document.querySelector('#chapter-content') && document.querySelector('#chapter-content').innerText.length > 100",
-                    timeout=15000
-                )
-            except:
+            # Wait for content to load with multiple strategies
+            content_loaded = False
+            wait_strategies = [
+                "document.querySelector('#chapter-content') && document.querySelector('#chapter-content').innerText.length > 100",
+                "document.querySelector('[class*=\"chapter-content\"]') && document.querySelector('[class*=\"chapter-content\"]').innerText.length > 100",
+                "document.querySelector('[class*=\"content\"]') && document.querySelector('[class*=\"content\"]').innerText.length > 100",
+                "document.querySelector('main') && document.querySelector('main').innerText.length > 200"
+            ]
+
+            for strategy in wait_strategies:
+                try:
+                    await page.wait_for_function(strategy, timeout=10000)
+                    content_loaded = True
+                    break
+                except:
+                    continue
+
+            if not content_loaded:
                 print(f"Timeout waiting for chapter {chapter_number} content to load")
+                # Wait a bit more and try to get whatever content is available
+                await asyncio.sleep(3)
 
             # Get page content after JavaScript execution
             content = await page.content()
@@ -190,13 +426,40 @@ async def get_chapter_with_retry(chapter_number, novel_url):
             # Parse the rendered HTML
             soup = BeautifulSoup(content, 'lxml')
 
-            # Try to find chapter content
-            chapter_content = soup.find('div', id='chapter-content')
-            if not chapter_content:
-                chapter_content = soup.find('div', class_='break-words')
+            # Try to find chapter content with multiple selectors
+            chapter_content = None
+            content_selectors = [
+                ('div', {'id': 'chapter-content'}),
+                ('div', {'class': 'break-words'}),
+                ('div', {'class': lambda x: x and 'chapter-content' in x}),
+                ('div', {'class': lambda x: x and 'content' in x}),
+                ('main', {}),
+                ('article', {})
+            ]
 
-            # Try to find chapter title
-            chapter_title_elem = soup.find('h1') or soup.find('h2')
+            for tag, attrs in content_selectors:
+                chapter_content = soup.find(tag, attrs)
+                if chapter_content:
+                    text_content = chapter_content.get_text(strip=True)
+                    if len(text_content) > 100:  # Check if content is substantial
+                        break
+                    else:
+                        chapter_content = None
+
+            # Try to find chapter title with multiple selectors
+            title_selectors = ['h1', 'h2', 'h3', '[class*="title"]', '[class*="chapter"]']
+            chapter_title_elem = None
+
+            for selector in title_selectors:
+                if selector.startswith('['):
+                    # CSS selector
+                    chapter_title_elem = soup.select_one(selector)
+                else:
+                    # Tag selector
+                    chapter_title_elem = soup.find(selector)
+                if chapter_title_elem:
+                    break
+
             chapter_title = str(chapter_title_elem) if chapter_title_elem else f"Chương {chapter_number}"
 
             if chapter_content:
@@ -283,6 +546,9 @@ def create_epub(title, author, status, attribute, image, chapters, path, filenam
 
 async def main():
     while True:
+        global missing_chapter
+        missing_chapter = []  # Reset missing chapters for each run
+
         novel_url = input('Nhập link metruyencv mà bạn muốn tải: ')
 
         # Auto-convert from .info to .com (since .info redirects to .com)
@@ -341,6 +607,10 @@ async def main():
 
         if input("Tải tiếp? (y/n): ").lower() != 'y':
             break
+
+        # Clear cache and missing chapters for next run
+        missing_chapter.clear()
+        fetch_chapters.cache_clear()
 
 
 if __name__ == '__main__':
