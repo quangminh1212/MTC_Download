@@ -14,6 +14,7 @@ Script sẽ tự động:
 - ✅ Hỏi thông tin đăng nhập lần đầu
 - ✅ Lưu cài đặt để không cần nhập lại
 - ✅ **Nhớ novel cuối cùng** - Gợi ý URL và chapter range
+- ✅ **AUTO RUN MODE** - Tự động tiếp tục novel mà không cần input
 - ✅ Tự động xử lý redirect (.com → .biz)
 - ✅ Tải chapters và tạo file EPUB
 
@@ -42,6 +43,7 @@ headless=true
 chapter_timeout=30
 retry_attempts=3
 remember_last_novel=true
+auto_run=true
 
 [ADVANCED]
 user_agent=
@@ -66,6 +68,7 @@ MTC_Download/
 - ✅ **Khắc phục redirect** từ .com sang .biz
 - ✅ **Quản lý cấu hình** qua file config.txt
 - ✅ **Smart defaults** - Nhớ novel và chapter range cuối cùng
+- ✅ **AUTO RUN MODE** - Chạy hoàn toàn tự động không cần input
 - ✅ **Selenium stable** thay vì Playwright
 - ✅ **User-friendly** với progress bars và emoji
 - ✅ **UTF-8 support** cho tiếng Việt

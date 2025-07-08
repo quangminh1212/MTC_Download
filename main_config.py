@@ -432,11 +432,21 @@ async def main():
 
         print("\n" + "="*60)
 
-        # Get novel input with smart defaults
-        novel_input = config.get_novel_input_with_defaults()
-        novel_url = novel_input['url']
-        start_chapter = novel_input['start_chapter']
-        end_chapter = novel_input['end_chapter']
+        # Check if should auto run
+        auto_run_info = config.get_auto_run_info()
+        if auto_run_info:
+            print("🤖 AUTO RUN MODE - Chạy tự động theo config")
+            novel_url = auto_run_info['url']
+            start_chapter = auto_run_info['start_chapter']
+            end_chapter = auto_run_info['end_chapter']
+            print(f"📖 Novel: {novel_url}")
+            print(f"📄 Chapters: {start_chapter} - {end_chapter}")
+        else:
+            # Get novel input with smart defaults
+            novel_input = config.get_novel_input_with_defaults()
+            novel_url = novel_input['url']
+            start_chapter = novel_input['start_chapter']
+            end_chapter = novel_input['end_chapter']
 
         # Normalize URL to handle redirects
         novel_url = normalize_url(novel_url)
@@ -491,11 +501,25 @@ async def main():
             # Save last novel info for next time
             config.save_last_novel_info(novel_url, start_chapter, end_chapter)
             print("💾 Đã lưu thông tin novel để sử dụng lần sau")
+
+            # Auto-enable auto_run mode after successful download
+            if not config.should_auto_run():
+                config.enable_auto_run()
+                print("🤖 Đã tự động bật chế độ AUTO RUN - Lần sau sẽ tự động tiếp tục")
         else:
             print("❌ Lỗi. Tải không thành công")
 
-        if input("\n🔄 Tải tiếp? (y/n): ").lower() != 'y':
-            break
+        # Ask to continue or change mode
+        if config.should_auto_run():
+            continue_choice = input("\n🔄 Tiếp tục auto run? (y/n/manual): ").lower()
+            if continue_choice == 'n':
+                break
+            elif continue_choice == 'manual':
+                config.disable_auto_run()
+                print("🔄 Chuyển sang chế độ manual - Lần sau sẽ hỏi input")
+        else:
+            if input("\n🔄 Tải tiếp? (y/n): ").lower() != 'y':
+                break
 
         # Clear cache and missing chapters for next run
         missing_chapter.clear()

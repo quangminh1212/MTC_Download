@@ -51,7 +51,8 @@ class ConfigManager:
             'headless': 'true',
             'chapter_timeout': '30',
             'retry_attempts': '3',
-            'remember_last_novel': 'true'
+            'remember_last_novel': 'true',
+            'auto_run': 'false'
         }
 
         self.config['ADVANCED'] = {
@@ -171,6 +172,7 @@ class ConfigManager:
             'chapter_timeout': self.get('SETTINGS', 'chapter_timeout', 30),
             'retry_attempts': self.get('SETTINGS', 'retry_attempts', 3),
             'remember_last_novel': self.get('SETTINGS', 'remember_last_novel', True),
+            'auto_run': self.get('SETTINGS', 'auto_run', False),
             'user_agent': self.get('ADVANCED', 'user_agent', ''),
             'request_delay': self.get('ADVANCED', 'request_delay', 1),
             'use_ocr': self.get('ADVANCED', 'use_ocr', True)
@@ -231,6 +233,45 @@ class ConfigManager:
             'start_chapter': start_chapter,
             'end_chapter': end_chapter
         }
+
+    def should_auto_run(self) -> bool:
+        """Check if should run automatically without user input"""
+        return self.get('SETTINGS', 'auto_run', False)
+
+    def enable_auto_run(self):
+        """Enable auto run mode"""
+        self.set('SETTINGS', 'auto_run', True)
+        if self.get('SETTINGS', 'auto_save', True):
+            self.save_config()
+        print("✅ Đã bật chế độ auto run - Script sẽ tự động chạy theo config")
+
+    def disable_auto_run(self):
+        """Disable auto run mode"""
+        self.set('SETTINGS', 'auto_run', False)
+        if self.get('SETTINGS', 'auto_save', True):
+            self.save_config()
+        print("✅ Đã tắt chế độ auto run - Script sẽ hỏi input như bình thường")
+
+    def get_auto_run_info(self) -> Dict[str, Any]:
+        """Get auto run information from last novel"""
+        if not self.should_auto_run():
+            return None
+
+        last_novel = self.get_last_novel_info()
+        if not last_novel['url']:
+            print("⚠️  Auto run enabled nhưng không có novel nào trong lịch sử")
+            return None
+
+        # Calculate next chapter range
+        previous_range = last_novel['end_chapter'] - last_novel['start_chapter'] + 1
+        next_start = last_novel['end_chapter'] + 1
+        next_end = next_start + previous_range - 1
+
+        return {
+            'url': last_novel['url'],
+            'start_chapter': next_start,
+            'end_chapter': next_end
+        }
     
     def display_config(self):
         """Display current configuration"""
@@ -262,6 +303,7 @@ class ConfigManager:
         print(f"  Chapter timeout: {self.get('SETTINGS', 'chapter_timeout', 30)}s")
         print(f"  Retry attempts: {self.get('SETTINGS', 'retry_attempts', 3)}")
         print(f"  Remember last novel: {self.get('SETTINGS', 'remember_last_novel', True)}")
+        print(f"  Auto run: {self.get('SETTINGS', 'auto_run', False)}")
 
         print("\n🔧 ADVANCED:")
         print(f"  Request delay: {self.get('ADVANCED', 'request_delay', 1)}s")
