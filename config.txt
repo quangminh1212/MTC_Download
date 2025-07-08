@@ -23,9 +23,9 @@ request_delay = 1
 use_ocr = true
 
 [LAST_NOVEL]
-url = https://metruyencv.biz/truyen/test-novel
-start_chapter = 5
-end_chapter = 15
+url = https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong
+start_chapter = 1
+end_chapter = 3
 
 
 # Ghi chú:
