@@ -230,16 +230,7 @@
                     ✅ https://metruyencv.com/truyen/cuu-vuc-kiem-de<br>
                     ❌ https://metruyencv.com/truyen/no-le-bong-toi/chuong-1
                 </div>
-                <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #ffc107;">
-                    <strong>⚠️ Lưu ý quan trọng:</strong>
-                    <ul style="margin: 10px 0 0 20px;">
-                        <li><strong>Hầu hết truyện trên MeTruyenCV hiện tại đều trả phí</strong></li>
-                        <li>Chương bị khóa sẽ hiển thị "[CHƯƠNG BỊ KHÓA - CẦN THANH TOÁN]"</li>
-                        <li>Chỉ có thể tải được các chương miễn phí (rất ít)</li>
-                        <li>Quá trình tải có thể mất vài phút tùy theo số chương</li>
-                        <li>Chỉ sử dụng cho mục đích cá nhân và học tập</li>
-                    </ul>
-                </div>
+
             </div>
             
             <form id="downloadForm">
@@ -261,7 +252,14 @@
                                min="1" placeholder="Để trống để tải tất cả">
                     </div>
                 </div>
-                
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="skipLocked" name="skipLocked" checked>
+                        🔒 Bỏ qua chương bị khóa (không tải chương trả phí)
+                    </label>
+                </div>
+
                 <button type="submit" class="btn" id="downloadBtn">
                     🚀 Bắt đầu tải
                 </button>
@@ -278,6 +276,17 @@
                 
                 <div class="download-link" id="downloadLink">
                     <a href="#" id="downloadUrl">📥 Tải xuống file ZIP</a>
+                </div>
+
+                <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #ffc107;">
+                    <strong>⚠️ Lưu ý quan trọng:</strong>
+                    <ul style="margin: 10px 0 0 20px;">
+                        <li><strong>Hầu hết truyện trên MeTruyenCV hiện tại đều trả phí</strong></li>
+                        <li>Chương bị khóa sẽ hiển thị "[CHƯƠNG BỊ KHÓA - CẦN THANH TOÁN]"</li>
+                        <li>Chỉ có thể tải được các chương miễn phí (rất ít)</li>
+                        <li>Quá trình tải có thể mất vài phút tùy theo số chương</li>
+                        <li>Chỉ sử dụng cho mục đích cá nhân và học tập</li>
+                    </ul>
                 </div>
             </div>
         </div>

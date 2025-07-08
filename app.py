@@ -204,7 +204,10 @@ class NovelDownloader:
                     print(f"Found {len(content_parts)} paragraphs")
 
             # Kiểm tra xem chương có bị khóa không
-            if content and ('Chương Bị Khóa' in content or 'mở khóa' in content):
+            if content and ('- Chương Bị Khóa -' in content or
+                           'Bạn có thể mở khóa' in content or
+                           'mở khóa bằng' in content or
+                           'Chương Bị Khóa' in content):
                 print("Chapter is locked - requires payment")
                 return {
                     'title': chapter_title,
