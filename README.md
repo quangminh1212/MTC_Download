@@ -12,6 +12,11 @@ MTC Downloader là công cụ tải và trích xuất nội dung truyện từ t
 - Giao diện dòng lệnh (CLI)
 - Giao diện web (HTTP)
 - Giao diện đồ họa (GUI)
+- **Mới:** Hỗ trợ nhiều phương pháp giải mã nội dung nâng cao
+  - Giải mã AES với nhiều key và chế độ khác nhau
+  - Hỗ trợ định dạng mã hóa chapterData mới nhất
+  - Xử lý các prefix đặc biệt (comtext, mtcontent, prp)
+  - Giải mã nhiều lớp và cấu trúc dữ liệu phức tạp
 
 ## Cài đặt
 
@@ -19,6 +24,7 @@ MTC Downloader là công cụ tải và trích xuất nội dung truyện từ t
 
 - Python 3.6 trở lên
 - pip (trình quản lý gói Python)
+- **Mới:** pycryptodome (cho giải mã AES)
 
 ### Cài đặt từ source
 
@@ -99,9 +105,33 @@ mtc_downloader/
 │       │   └── app.py     # Ứng dụng Tkinter
 │       └── cli.py         # Giao diện dòng lệnh
 ├── tests/                 # Kiểm thử
+│   ├── test_downloader.py # Kiểm thử tải truyện
+│   └── test_enhanced_decryption.py # Kiểm thử giải mã nâng cao
 ├── setup.py               # Cấu hình cài đặt
 └── README.md              # Tài liệu
 ```
+
+## Giải mã nâng cao
+
+Phiên bản mới nhất của MTC Downloader bao gồm nhiều cải tiến về khả năng giải mã nội dung được bảo vệ:
+
+1. **Hỗ trợ nhiều định dạng mã hóa**
+   - Base64 với bảng chuyển đổi tùy chỉnh
+   - Mã hóa AES (CBC và ECB) với các khóa phổ biến
+   - Mã hóa XOR với nhiều khóa khác nhau
+   - Giải nén zlib sau khi giải mã
+
+2. **Xử lý các prefix đặc biệt**
+   - Định dạng "comtext" (base64 phân đoạn)
+   - Định dạng "mtcontent" (nhiều lớp mã hóa)
+   - Định dạng "prp" (base64 với dấu phân cách)
+   - Định dạng "chapterData" (mã hóa JavaScript)
+
+3. **Cấu trúc dữ liệu phức tạp**
+   - Trích xuất từ biến JavaScript
+   - Giải mã từ đối tượng JSON
+   - Phân tích cấu trúc dữ liệu đặc biệt
+   - Kết hợp các phần mã hóa riêng lẻ
 
 ## Đóng góp
 

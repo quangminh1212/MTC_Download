@@ -17,6 +17,7 @@ setup(
         "beautifulsoup4>=4.9.0",
         "requests>=2.23.0",
         "flask>=2.0.0",
+        "pycryptodome>=3.14.1",
     ],
     entry_points={
         "console_scripts": [
