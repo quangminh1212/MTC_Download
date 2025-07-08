@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block title %}Lỗi {{ error_code }} - MeTruyenCV Downloader{% endblock %}
+
+{% block content %}
+<div class="container-fluid d-flex align-items-center justify-content-center" style="min-height: 70vh;">
+    <div class="text-center">
+        <div class="error-icon mb-4">
+            {% if error_code == 404 %}
+                <i class="bi bi-exclamation-triangle-fill text-warning" style="font-size: 5rem;"></i>
+            {% else %}
+                <i class="bi bi-x-circle-fill text-danger" style="font-size: 5rem;"></i>
+            {% endif %}
+        </div>
+        
+        <h1 class="display-1 fw-bold text-primary">{{ error_code }}</h1>
+        
+        <div class="mb-4">
+            <h2 class="h4 mb-3">
+                {% if error_code == 404 %}
+                    Trang không tìm thấy
+                {% elif error_code == 500 %}
+                    Lỗi server
+                {% else %}
+                    Đã xảy ra lỗi
+                {% endif %}
+            </h2>
+            
+            <p class="text-muted mb-4">{{ error_message }}</p>
+            
+            {% if error_code == 404 %}
+                <p class="text-secondary">
+                    Trang bạn đang tìm kiếm có thể đã được di chuyển, xóa hoặc không tồn tại.
+                </p>
+            {% elif error_code == 500 %}
+                <p class="text-secondary">
+                    Server đang gặp sự cố. Vui lòng thử lại sau hoặc liên hệ quản trị viên.
+                </p>
+            {% endif %}
+        </div>
+        
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">
+                <i class="bi bi-house-fill me-2"></i>
+                Về trang chủ
+            </a>
+            
+            <button onclick="history.back()" class="btn btn-outline-secondary btn-lg">
+                <i class="bi bi-arrow-left me-2"></i>
+                Quay lại
+            </button>
+            
+            <button onclick="location.reload()" class="btn btn-outline-info btn-lg">
+                <i class="bi bi-arrow-clockwise me-2"></i>
+                Thử lại
+            </button>
+        </div>
+        
+        {% if error_code == 500 %}
+        <div class="mt-4">
+            <details class="text-start">
+                <summary class="btn btn-outline-secondary btn-sm">Chi tiết lỗi</summary>
+                <div class="mt-3 p-3 bg-light rounded">
+                    <small class="text-muted">
+                        <strong>Thời gian:</strong> {{ moment().format('YYYY-MM-DD HH:mm:ss') }}<br>
+                        <strong>URL:</strong> {{ request.url }}<br>
+                        <strong>User Agent:</strong> {{ request.headers.get('User-Agent', 'Unknown') }}<br>
+                        <strong>IP:</strong> {{ request.remote_addr }}
+                    </small>
+                </div>
+            </details>
+        </div>
+        {% endif %}
+        
+        <div class="mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="bi bi-question-circle me-2"></i>
+                                Cần hỗ trợ?
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4 text-center mb-3">
+                                    <a href="{{ url_for('download_page') }}" class="btn btn-outline-primary w-100">
+                                        <i class="bi bi-download me-2"></i>
+                                        Tải truyện
+                                    </a>
+                                </div>
+                                <div class="col-md-4 text-center mb-3">
+                                    <a href="{{ url_for('config_page') }}" class="btn btn-outline-secondary w-100">
+                                        <i class="bi bi-gear me-2"></i>
+                                        Cấu hình
+                                    </a>
+                                </div>
+                                <div class="col-md-4 text-center mb-3">
+                                    <a href="{{ url_for('logs_page') }}" class="btn btn-outline-info w-100">
+                                        <i class="bi bi-journal-text me-2"></i>
+                                        Xem logs
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.error-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.display-1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+details summary {
+    cursor: pointer;
+    user-select: none;
+}
+
+details summary:hover {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Auto-refresh for 500 errors after 30 seconds
+{% if error_code == 500 %}
+setTimeout(function() {
+    if (confirm('Tự động thử lại sau 30 giây. Bạn có muốn refresh trang không?')) {
+        location.reload();
+    }
+}, 30000);
+{% endif %}
+
+// Log error to console for debugging
+console.error('Error {{ error_code }}: {{ error_message }}');
+
+// Send error report (optional)
+function sendErrorReport() {
+    fetch('/api/error_report', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            error_code: {{ error_code }},
+            error_message: '{{ error_message }}',
+            url: window.location.href,
+            user_agent: navigator.userAgent,
+            timestamp: new Date().toISOString()
+        })
+    }).catch(err => console.log('Failed to send error report:', err));
+}
+
+// Optional: Send error report automatically for 500 errors
+{% if error_code == 500 %}
+sendErrorReport();
+{% endif %}
+</script>
+{% endblock %}

@@ -1,0 +1,379 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - MeTruyenCV Downloader{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h3 mb-0">
+        <i class="bi bi-house-fill me-2 text-primary"></i>
+        Dashboard
+    </h1>
+    <div class="d-flex gap-2">
+        <button class="btn btn-outline-primary" onclick="refreshStatus()">
+            <i class="bi bi-arrow-clockwise me-1"></i>
+            Refresh
+        </button>
+        <a href="{{ url_for('download_page') }}" class="btn btn-primary">
+            <i class="bi bi-download me-1"></i>
+            Tải truyện mới
+        </a>
+    </div>
+</div>
+
+<!-- Status Cards -->
+<div class="row mb-4">
+    <div class="col-md-3 mb-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-center mb-2">
+                    <i class="bi bi-activity text-primary fs-1 me-2"></i>
+                    <div>
+                        <h5 class="card-title mb-0">Trạng thái</h5>
+                        <span id="status-badge" class="status-badge status-ready">{{ status.status_message }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-center mb-2">
+                    <i class="bi bi-book text-success fs-1 me-2"></i>
+                    <div>
+                        <h5 class="card-title mb-0">Chapters</h5>
+                        <p class="card-text mb-0">
+                            <span id="current-chapter">{{ status.current_chapter }}</span> / 
+                            <span id="total-chapters">{{ status.total_chapters }}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-center mb-2">
+                    <i class="bi bi-percent text-warning fs-1 me-2"></i>
+                    <div>
+                        <h5 class="card-title mb-0">Tiến độ</h5>
+                        <p class="card-text mb-0">
+                            <span id="progress-percent">{{ status.progress }}</span>%
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-3 mb-3">
+        <div class="card text-center">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-center mb-2">
+                    <i class="bi bi-clock text-info fs-1 me-2"></i>
+                    <div>
+                        <h5 class="card-title mb-0">Thời gian</h5>
+                        <p class="card-text mb-0" id="elapsed-time">--:--</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Progress Bar -->
+<div class="card mb-4" id="progress-card" {% if not status.is_downloading %}style="display: none;"{% endif %}>
+    <div class="card-header">
+        <h5 class="mb-0">
+            <i class="bi bi-download me-2"></i>
+            Tiến độ tải
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+                <span id="progress-text">Đang tải...</span>
+                <span id="progress-percentage">{{ status.progress }}%</span>
+            </div>
+            <div class="progress">
+                <div id="progress-bar" class="progress-bar" role="progressbar" 
+                     style="width: {{ status.progress }}%" 
+                     aria-valuenow="{{ status.progress }}" 
+                     aria-valuemin="0" 
+                     aria-valuemax="100">
+                </div>
+            </div>
+        </div>
+        
+        {% if status.current_novel %}
+        <div class="mb-2">
+            <strong>Truyện hiện tại:</strong> 
+            <a href="{{ status.current_novel }}" target="_blank" class="text-decoration-none">
+                {{ status.current_novel.split('/')[-1].replace('-', ' ').title() }}
+            </a>
+        </div>
+        {% endif %}
+        
+        <div class="d-flex gap-2">
+            <button class="btn btn-danger btn-sm" onclick="stopDownload()" 
+                    {% if not status.is_downloading %}disabled{% endif %}>
+                <i class="bi bi-stop-fill me-1"></i>
+                Dừng
+            </button>
+            <button class="btn btn-outline-secondary btn-sm" onclick="toggleLogs()">
+                <i class="bi bi-journal-text me-1"></i>
+                Xem logs
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Recent Logs -->
+<div class="card" id="logs-card" style="display: none;">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">
+            <i class="bi bi-journal-text me-2"></i>
+            Logs gần đây
+        </h5>
+        <div>
+            <button class="btn btn-outline-secondary btn-sm" onclick="clearLogs()">
+                <i class="bi bi-trash me-1"></i>
+                Xóa
+            </button>
+            <a href="{{ url_for('logs_page') }}" class="btn btn-primary btn-sm">
+                <i class="bi bi-eye me-1"></i>
+                Xem tất cả
+            </a>
+        </div>
+    </div>
+    <div class="card-body p-0">
+        <div class="log-container p-3" id="recent-logs" style="max-height: 300px;">
+            {% for log in status.logs[-10:] %}
+            <div class="log-entry">
+                <span class="log-timestamp">{{ log.timestamp }}</span>
+                <span class="log-{{ log.level }}">{{ log.message }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Configuration Summary -->
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-gear me-2"></i>
+                    Cấu hình hiện tại
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <small class="text-muted">Headless Mode:</small><br>
+                        <span class="badge bg-{{ 'success' if config.headless else 'warning' }}">
+                            {{ 'Bật' if config.headless else 'Tắt' }}
+                        </span>
+                    </div>
+                    <div class="col-6">
+                        <small class="text-muted">Auto Run:</small><br>
+                        <span class="badge bg-{{ 'success' if config.auto_run else 'secondary' }}">
+                            {{ 'Bật' if config.auto_run else 'Tắt' }}
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-6">
+                        <small class="text-muted">Timeout:</small><br>
+                        <span>{{ config.chapter_timeout }}s</span>
+                    </div>
+                    <div class="col-6">
+                        <small class="text-muted">Retry:</small><br>
+                        <span>{{ config.retry_attempts }} lần</span>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <a href="{{ url_for('config_page') }}" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-pencil me-1"></i>
+                        Chỉnh sửa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="bi bi-info-circle me-2"></i>
+                    Hướng dẫn sử dụng
+                </h5>
+            </div>
+            <div class="card-body">
+                <ol class="mb-0">
+                    <li>Vào trang <strong>Cấu hình</strong> để thiết lập thông tin đăng nhập</li>
+                    <li>Vào trang <strong>Download</strong> để nhập URL truyện</li>
+                    <li>Chọn chapter range và bắt đầu tải</li>
+                    <li>Theo dõi tiến độ tại trang này</li>
+                    <li>File EPUB sẽ được lưu vào thư mục đã cấu hình</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+let startTime = null;
+let timerInterval = null;
+
+// Update status from server
+function refreshStatus() {
+    fetch('/api/status')
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                updateUI(result.data);
+            } else {
+                console.error('Error refreshing status:', result.message);
+                showToast('Lỗi tải trạng thái: ' + result.message, 'danger');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showToast('Lỗi kết nối server', 'danger');
+        });
+}
+
+// Update UI with status data
+function updateUI(status) {
+    // Update status badge
+    const statusBadge = document.getElementById('status-badge');
+    statusBadge.textContent = status.status_message;
+    statusBadge.className = 'status-badge ' + getStatusClass(status);
+    
+    // Update counters
+    document.getElementById('current-chapter').textContent = status.current_chapter;
+    document.getElementById('total-chapters').textContent = status.total_chapters;
+    document.getElementById('progress-percent').textContent = status.progress;
+    
+    // Update progress bar
+    const progressBar = document.getElementById('progress-bar');
+    const progressPercentage = document.getElementById('progress-percentage');
+    if (progressBar && progressPercentage) {
+        progressBar.style.width = status.progress + '%';
+        progressBar.setAttribute('aria-valuenow', status.progress);
+        progressPercentage.textContent = status.progress + '%';
+    }
+    
+    // Show/hide progress card
+    const progressCard = document.getElementById('progress-card');
+    if (status.is_downloading) {
+        progressCard.style.display = 'block';
+        if (!timerInterval && status.start_time) {
+            startTimer(new Date(status.start_time));
+        }
+    } else {
+        progressCard.style.display = 'none';
+        if (timerInterval) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+        }
+    }
+}
+
+function getStatusClass(status) {
+    if (status.is_downloading) return 'status-downloading';
+    if (status.status_message.includes('Hoàn thành')) return 'status-completed';
+    if (status.status_message.includes('Lỗi')) return 'status-error';
+    return 'status-ready';
+}
+
+function startTimer(startTime) {
+    timerInterval = setInterval(() => {
+        const elapsed = Math.floor((new Date() - startTime) / 1000);
+        document.getElementById('elapsed-time').textContent = formatTime(elapsed);
+    }, 1000);
+}
+
+function stopDownload() {
+    if (confirm('Bạn có chắc muốn dừng download?')) {
+        fetch('/api/stop_download', { method: 'POST' })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showToast(data.message, 'warning');
+                } else {
+                    showToast(data.message, 'danger');
+                }
+            });
+    }
+}
+
+function toggleLogs() {
+    const logsCard = document.getElementById('logs-card');
+    logsCard.style.display = logsCard.style.display === 'none' ? 'block' : 'none';
+}
+
+function clearLogs() {
+    document.getElementById('recent-logs').innerHTML = '';
+}
+
+// Socket event handlers
+socket.on('status_update', updateUI);
+socket.on('progress_update', function(data) {
+    document.getElementById('progress-text').textContent = data.message;
+    updateUI({
+        current_chapter: data.current_chapter,
+        total_chapters: data.total_chapters,
+        progress: data.progress,
+        is_downloading: true
+    });
+});
+
+socket.on('new_log', function(log) {
+    const logsContainer = document.getElementById('recent-logs');
+    const logEntry = document.createElement('div');
+    logEntry.className = 'log-entry';
+    logEntry.innerHTML = `
+        <span class="log-timestamp">${log.timestamp}</span>
+        <span class="log-${log.level}">${log.message}</span>
+    `;
+    logsContainer.appendChild(logEntry);
+    logsContainer.scrollTop = logsContainer.scrollHeight;
+    
+    // Keep only last 50 entries
+    while (logsContainer.children.length > 50) {
+        logsContainer.removeChild(logsContainer.firstChild);
+    }
+});
+
+socket.on('download_started', function(data) {
+    showToast('Bắt đầu download!', 'success');
+    startTimer(new Date());
+});
+
+socket.on('download_completed', function(data) {
+    showToast(data.success ? 'Download hoàn thành!' : 'Download lỗi!', 
+              data.success ? 'success' : 'danger');
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+});
+
+socket.on('download_error', function(data) {
+    showToast('Lỗi: ' + data.error, 'danger');
+});
+
+// Auto refresh every 30 seconds
+setInterval(refreshStatus, 30000);
+</script>
+{% endblock %}

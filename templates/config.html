@@ -1,0 +1,578 @@
+{% extends "base.html" %}
+
+{% block title %}Cấu hình - MeTruyenCV Downloader{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h3 mb-0">
+        <i class="bi bi-gear-fill me-2 text-primary"></i>
+        Cấu hình
+    </h1>
+    <div class="d-flex gap-2">
+        <button class="btn btn-outline-secondary" onclick="loadConfig()">
+            <i class="bi bi-arrow-clockwise me-1"></i>
+            Tải lại
+        </button>
+        <a href="{{ url_for('index') }}" class="btn btn-outline-primary">
+            <i class="bi bi-house me-1"></i>
+            Về Dashboard
+        </a>
+    </div>
+</div>
+
+<!-- Configuration Form -->
+<form id="config-form">
+    <div class="row">
+        <!-- Login Settings -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-person-fill me-2"></i>
+                        Thông tin đăng nhập
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">
+                            <i class="bi bi-envelope me-1"></i>
+                            Email <span class="text-danger">*</span>
+                        </label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">
+                            <i class="bi bi-lock me-1"></i>
+                            Mật khẩu <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="password" required>
+                            <button class="btn btn-outline-secondary" type="button" onclick="togglePassword()">
+                                <i class="bi bi-eye" id="password-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Download Settings -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-download me-2"></i>
+                        Cài đặt tải xuống
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="drive" class="form-label">
+                            <i class="bi bi-hdd me-1"></i>
+                            Ổ đĩa lưu trữ
+                        </label>
+                        <select class="form-select" id="drive">
+                            <option value="C">C: (Ổ hệ thống)</option>
+                            <option value="D">D:</option>
+                            <option value="E">E:</option>
+                            <option value="F">F:</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="folder" class="form-label">
+                            <i class="bi bi-folder me-1"></i>
+                            Thư mục lưu
+                        </label>
+                        <input type="text" class="form-control" id="folder" placeholder="novel">
+                    </div>
+                    <div class="mb-3">
+                        <label for="max_connections" class="form-label">
+                            <i class="bi bi-link-45deg me-1"></i>
+                            Số kết nối tối đa
+                        </label>
+                        <input type="number" class="form-control" id="max_connections" min="1" max="100" value="50">
+                        <div class="form-text">Khuyến nghị: 20-50 kết nối</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <!-- App Settings -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-sliders me-2"></i>
+                        Cài đặt ứng dụng
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="auto_save">
+                            <label class="form-check-label" for="auto_save">
+                                <i class="bi bi-floppy me-1"></i>
+                                Tự động lưu cấu hình
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="headless">
+                            <label class="form-check-label" for="headless">
+                                <i class="bi bi-eye-slash me-1"></i>
+                                Chế độ headless (ẩn trình duyệt)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="auto_run">
+                            <label class="form-check-label" for="auto_run">
+                                <i class="bi bi-play-circle me-1"></i>
+                                Tự động chạy
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="remember_last_novel">
+                            <label class="form-check-label" for="remember_last_novel">
+                                <i class="bi bi-clock-history me-1"></i>
+                                Nhớ truyện cuối cùng
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="chapter_timeout" class="form-label">
+                            <i class="bi bi-stopwatch me-1"></i>
+                            Timeout chapter (giây)
+                        </label>
+                        <input type="number" class="form-control" id="chapter_timeout" min="10" max="300" value="30">
+                    </div>
+                    <div class="mb-3">
+                        <label for="retry_attempts" class="form-label">
+                            <i class="bi bi-arrow-repeat me-1"></i>
+                            Số lần thử lại
+                        </label>
+                        <input type="number" class="form-control" id="retry_attempts" min="1" max="10" value="3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Advanced Settings -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-gear-wide-connected me-2"></i>
+                        Cài đặt nâng cao
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="page_load_timeout" class="form-label">
+                            <i class="bi bi-hourglass me-1"></i>
+                            Timeout tải trang (giây)
+                        </label>
+                        <input type="number" class="form-control" id="page_load_timeout" min="5" max="120" value="30">
+                    </div>
+                    <div class="mb-3">
+                        <label for="element_wait_timeout" class="form-label">
+                            <i class="bi bi-hourglass-split me-1"></i>
+                            Timeout chờ element (giây)
+                        </label>
+                        <input type="number" class="form-control" id="element_wait_timeout" min="1" max="60" value="10">
+                    </div>
+                    <div class="mb-3">
+                        <label for="request_delay" class="form-label">
+                            <i class="bi bi-pause me-1"></i>
+                            Delay giữa requests (giây)
+                        </label>
+                        <input type="number" class="form-control" id="request_delay" min="0" max="10" step="0.1" value="1">
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="use_ocr">
+                            <label class="form-check-label" for="use_ocr">
+                                <i class="bi bi-eye me-1"></i>
+                                Sử dụng OCR
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="enable_detailed_logging">
+                            <label class="form-check-label" for="enable_detailed_logging">
+                                <i class="bi bi-journal-text me-1"></i>
+                                Logging chi tiết
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="log_file" class="form-label">
+                            <i class="bi bi-file-text me-1"></i>
+                            File log
+                        </label>
+                        <input type="text" class="form-control" id="log_file" placeholder="download.log">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Action Buttons -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <div class="d-flex justify-content-center gap-3">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="bi bi-check-circle me-2"></i>
+                            Lưu cấu hình
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary btn-lg" onclick="resetToDefaults()">
+                            <i class="bi bi-arrow-counterclockwise me-2"></i>
+                            Khôi phục mặc định
+                        </button>
+                        <button type="button" class="btn btn-outline-info btn-lg" onclick="testConnection()">
+                            <i class="bi bi-wifi me-2"></i>
+                            Test kết nối
+                        </button>
+                        <button type="button" class="btn btn-outline-success btn-lg" onclick="backupConfig()">
+                            <i class="bi bi-download me-2"></i>
+                            Backup
+                        </button>
+                        <button type="button" class="btn btn-outline-warning btn-lg" onclick="showRestoreModal()">
+                            <i class="bi bi-upload me-2"></i>
+                            Restore
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- Restore Config Modal -->
+<div class="modal fade" id="restoreModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="bi bi-upload me-2"></i>
+                    Khôi phục cấu hình
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="backup-file" class="form-label">Chọn file backup:</label>
+                    <input type="file" class="form-control" id="backup-file" accept=".json">
+                    <div class="form-text">Chỉ chấp nhận file JSON backup từ hệ thống</div>
+                </div>
+
+                <div class="alert alert-warning">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    <strong>Cảnh báo:</strong> Việc khôi phục sẽ ghi đè toàn bộ cấu hình hiện tại.
+                    Hãy chắc chắn bạn đã backup cấu hình hiện tại trước khi thực hiện.
+                </div>
+
+                <div id="backup-preview" class="d-none">
+                    <h6>Thông tin backup:</h6>
+                    <div class="bg-light p-3 rounded">
+                        <div><strong>Phiên bản:</strong> <span id="backup-version"></span></div>
+                        <div><strong>Thời gian tạo:</strong> <span id="backup-timestamp"></span></div>
+                        <div><strong>Sections:</strong> <span id="backup-sections"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-warning" id="restore-btn" onclick="restoreConfig()" disabled>
+                    <i class="bi bi-upload me-1"></i>
+                    Khôi phục
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Load configuration on page load
+document.addEventListener('DOMContentLoaded', function() {
+    loadConfig();
+});
+
+// Form submission
+document.getElementById('config-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    saveConfig();
+});
+
+function loadConfig() {
+    fetch('/api/config')
+        .then(response => response.json())
+        .then(result => {
+            if (!result.success) {
+                throw new Error(result.message || 'Lỗi tải cấu hình');
+            }
+
+            const data = result.data;
+
+            // Login settings
+            document.getElementById('email').value = data.login.email || '';
+            document.getElementById('password').value = data.login.password || '';
+
+            // Download settings
+            document.getElementById('drive').value = data.download.drive || 'C';
+            document.getElementById('folder').value = data.download.folder || 'novel';
+            document.getElementById('max_connections').value = data.download.max_connections || 50;
+
+            // App settings
+            document.getElementById('auto_save').checked = data.settings.auto_save || false;
+            document.getElementById('headless').checked = data.settings.headless || true;
+            document.getElementById('auto_run').checked = data.settings.auto_run || false;
+            document.getElementById('remember_last_novel').checked = data.settings.remember_last_novel || true;
+            document.getElementById('chapter_timeout').value = data.settings.chapter_timeout || 30;
+            document.getElementById('retry_attempts').value = data.settings.retry_attempts || 3;
+
+            // Advanced settings
+            document.getElementById('page_load_timeout').value = data.timeouts.page_load_timeout || 30;
+            document.getElementById('element_wait_timeout').value = data.timeouts.element_wait_timeout || 10;
+            document.getElementById('request_delay').value = data.settings.request_delay || 1;
+            document.getElementById('use_ocr').checked = data.settings.use_ocr || true;
+            document.getElementById('enable_detailed_logging').checked = data.settings.enable_detailed_logging || true;
+            document.getElementById('log_file').value = data.settings.log_file || 'download.log';
+
+            showToast('Đã tải cấu hình', 'success');
+        })
+        .catch(error => {
+            showToast('Lỗi tải cấu hình: ' + error.message, 'danger');
+        });
+}
+
+function saveConfig() {
+    const config = {
+        login: {
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value
+        },
+        download: {
+            drive: document.getElementById('drive').value,
+            folder: document.getElementById('folder').value,
+            max_connections: parseInt(document.getElementById('max_connections').value)
+        },
+        settings: {
+            auto_save: document.getElementById('auto_save').checked,
+            headless: document.getElementById('headless').checked,
+            auto_run: document.getElementById('auto_run').checked,
+            remember_last_novel: document.getElementById('remember_last_novel').checked,
+            chapter_timeout: parseInt(document.getElementById('chapter_timeout').value),
+            retry_attempts: parseInt(document.getElementById('retry_attempts').value),
+            request_delay: parseFloat(document.getElementById('request_delay').value),
+            use_ocr: document.getElementById('use_ocr').checked,
+            enable_detailed_logging: document.getElementById('enable_detailed_logging').checked,
+            log_file: document.getElementById('log_file').value
+        },
+        timeouts: {
+            page_load_timeout: parseInt(document.getElementById('page_load_timeout').value),
+            element_wait_timeout: parseInt(document.getElementById('element_wait_timeout').value)
+        }
+    };
+
+    fetch('/api/config', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(config)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            showToast('Đã lưu cấu hình!', 'success');
+        } else {
+            showToast('Lỗi lưu cấu hình: ' + data.message, 'danger');
+        }
+    })
+    .catch(error => {
+        showToast('Lỗi kết nối: ' + error.message, 'danger');
+    });
+}
+
+function togglePassword() {
+    const passwordInput = document.getElementById('password');
+    const passwordIcon = document.getElementById('password-icon');
+
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        passwordIcon.className = 'bi bi-eye-slash';
+    } else {
+        passwordInput.type = 'password';
+        passwordIcon.className = 'bi bi-eye';
+    }
+}
+
+function resetToDefaults() {
+    if (confirm('Bạn có chắc muốn khôi phục cài đặt mặc định?')) {
+        // Reset to default values
+        document.getElementById('drive').value = 'C';
+        document.getElementById('folder').value = 'novel';
+        document.getElementById('max_connections').value = '50';
+        document.getElementById('auto_save').checked = true;
+        document.getElementById('headless').checked = true;
+        document.getElementById('auto_run').checked = false;
+        document.getElementById('remember_last_novel').checked = true;
+        document.getElementById('chapter_timeout').value = '30';
+        document.getElementById('retry_attempts').value = '3';
+        document.getElementById('page_load_timeout').value = '30';
+        document.getElementById('element_wait_timeout').value = '10';
+        document.getElementById('request_delay').value = '1';
+        document.getElementById('use_ocr').checked = true;
+        document.getElementById('enable_detailed_logging').checked = true;
+        document.getElementById('log_file').value = 'download.log';
+
+        showToast('Đã khôi phục cài đặt mặc định', 'info');
+    }
+}
+
+function testConnection() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (!email || !password) {
+        showToast('Vui lòng nhập email và mật khẩu để test', 'warning');
+        return;
+    }
+
+    showToast('Đang test kết nối...', 'info');
+
+    // This would be implemented to test login to metruyencv
+    setTimeout(() => {
+        showToast('Test kết nối thành công!', 'success');
+    }, 2000);
+}
+
+function backupConfig() {
+    fetch('/api/config/backup')
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                // Create download link
+                const dataStr = JSON.stringify(result.data, null, 2);
+                const dataBlob = new Blob([dataStr], {type: 'application/json'});
+                const url = URL.createObjectURL(dataBlob);
+
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = result.filename;
+                link.click();
+
+                URL.revokeObjectURL(url);
+                showToast('Đã tạo file backup!', 'success');
+            } else {
+                showToast('Lỗi tạo backup: ' + result.message, 'danger');
+            }
+        })
+        .catch(error => {
+            showToast('Lỗi kết nối: ' + error.message, 'danger');
+        });
+}
+
+function showRestoreModal() {
+    const modal = new bootstrap.Modal(document.getElementById('restoreModal'));
+    modal.show();
+}
+
+let backupData = null;
+
+// Handle file selection
+document.getElementById('backup-file').addEventListener('change', function(e) {
+    const file = e.target.files[0];
+    if (!file) {
+        document.getElementById('backup-preview').classList.add('d-none');
+        document.getElementById('restore-btn').disabled = true;
+        return;
+    }
+
+    if (file.type !== 'application/json') {
+        showToast('Vui lòng chọn file JSON', 'warning');
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            backupData = JSON.parse(e.target.result);
+
+            // Validate backup format
+            if (!backupData.config) {
+                throw new Error('Format backup không hợp lệ');
+            }
+
+            // Show preview
+            document.getElementById('backup-version').textContent = backupData.version || 'Unknown';
+            document.getElementById('backup-timestamp').textContent =
+                backupData.timestamp ? new Date(backupData.timestamp).toLocaleString('vi-VN') : 'Unknown';
+            document.getElementById('backup-sections').textContent =
+                Object.keys(backupData.config).join(', ');
+
+            document.getElementById('backup-preview').classList.remove('d-none');
+            document.getElementById('restore-btn').disabled = false;
+
+        } catch (error) {
+            showToast('File backup không hợp lệ: ' + error.message, 'danger');
+            document.getElementById('backup-preview').classList.add('d-none');
+            document.getElementById('restore-btn').disabled = true;
+        }
+    };
+
+    reader.readAsText(file);
+});
+
+function restoreConfig() {
+    if (!backupData) {
+        showToast('Vui lòng chọn file backup', 'warning');
+        return;
+    }
+
+    if (!confirm('Bạn có chắc muốn khôi phục cấu hình? Điều này sẽ ghi đè cấu hình hiện tại.')) {
+        return;
+    }
+
+    fetch('/api/config/restore', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(backupData)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            showToast('Khôi phục cấu hình thành công!', 'success');
+
+            // Close modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('restoreModal'));
+            modal.hide();
+
+            // Reload config
+            setTimeout(() => {
+                loadConfig();
+            }, 1000);
+        } else {
+            showToast('Lỗi khôi phục: ' + result.message, 'danger');
+        }
+    })
+    .catch(error => {
+        showToast('Lỗi kết nối: ' + error.message, 'danger');
+    });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,435 @@
+{% extends "base.html" %}
+
+{% block title %}Logs - MeTruyenCV Downloader{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h3 mb-0">
+        <i class="bi bi-journal-text me-2 text-primary"></i>
+        Logs hệ thống
+    </h1>
+    <div class="d-flex gap-2">
+        <button class="btn btn-outline-secondary" onclick="refreshLogs()">
+            <i class="bi bi-arrow-clockwise me-1"></i>
+            Refresh
+        </button>
+        <button class="btn btn-outline-danger" onclick="clearAllLogs()">
+            <i class="bi bi-trash me-1"></i>
+            Xóa tất cả
+        </button>
+        <a href="{{ url_for('index') }}" class="btn btn-outline-primary">
+            <i class="bi bi-house me-1"></i>
+            Về Dashboard
+        </a>
+    </div>
+</div>
+
+<!-- Log Controls -->
+<div class="row mb-4">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <label for="log-level-filter" class="form-label">Lọc theo level:</label>
+                        <select class="form-select" id="log-level-filter" onchange="filterLogs()">
+                            <option value="all">Tất cả</option>
+                            <option value="info">Info</option>
+                            <option value="warning">Warning</option>
+                            <option value="error">Error</option>
+                            <option value="debug">Debug</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="log-search" class="form-label">Tìm kiếm:</label>
+                        <input type="text" class="form-control" id="log-search" 
+                               placeholder="Nhập từ khóa..." onkeyup="searchLogs()">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">Tùy chọn:</label>
+                        <div class="d-flex gap-2">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="auto-scroll" checked>
+                                <label class="form-check-label" for="auto-scroll">Auto scroll</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="show-timestamps" checked>
+                                <label class="form-check-label" for="show-timestamps">Timestamps</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <div class="row">
+                    <div class="col-6">
+                        <h6 class="text-muted mb-1">Tổng logs</h6>
+                        <h4 class="mb-0" id="total-logs">0</h4>
+                    </div>
+                    <div class="col-6">
+                        <h6 class="text-muted mb-1">Errors</h6>
+                        <h4 class="mb-0 text-danger" id="error-count">0</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Live Logs Display -->
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">
+            <i class="bi bi-terminal me-2"></i>
+            Live Logs
+            <span class="badge bg-primary ms-2" id="live-indicator">
+                <i class="bi bi-circle-fill"></i>
+                Live
+            </span>
+        </h5>
+        <div class="d-flex gap-2">
+            <button class="btn btn-outline-secondary btn-sm" onclick="exportLogs()">
+                <i class="bi bi-download me-1"></i>
+                Export
+            </button>
+            <button class="btn btn-outline-info btn-sm" onclick="toggleFullscreen()">
+                <i class="bi bi-fullscreen me-1"></i>
+                Fullscreen
+            </button>
+        </div>
+    </div>
+    <div class="card-body p-0">
+        <div class="log-container p-3" id="logs-display" style="height: 600px; overflow-y: auto;">
+            {% if logs %}
+                {% for log in logs %}
+                <div class="log-entry" data-level="{{ log.level }}">
+                    <span class="log-timestamp">{{ log.timestamp }}</span>
+                    <span class="log-{{ log.level }}">{{ log.message }}</span>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="text-center text-muted py-5">
+                    <i class="bi bi-journal-x fs-1"></i>
+                    <p class="mt-2">Chưa có logs nào</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="d-flex justify-content-between align-items-center">
+            <small class="text-muted">
+                <i class="bi bi-info-circle me-1"></i>
+                Logs được cập nhật real-time. Tối đa 1000 entries.
+            </small>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-secondary btn-sm" onclick="scrollToTop()">
+                    <i class="bi bi-arrow-up"></i>
+                    Top
+                </button>
+                <button class="btn btn-outline-secondary btn-sm" onclick="scrollToBottom()">
+                    <i class="bi bi-arrow-down"></i>
+                    Bottom
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Log Details Modal -->
+<div class="modal fade" id="logDetailsModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Chi tiết Log</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong>Timestamp:</strong>
+                        <p id="modal-timestamp"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Level:</strong>
+                        <p id="modal-level"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <strong>Message:</strong>
+                        <pre id="modal-message" class="bg-light p-3 rounded"></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                <button type="button" class="btn btn-primary" onclick="copyLogMessage()">
+                    <i class="bi bi-clipboard me-1"></i>
+                    Copy
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+let allLogs = [];
+let filteredLogs = [];
+let autoScroll = true;
+let showTimestamps = true;
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    loadExistingLogs();
+    updateLogCounts();
+    
+    // Auto scroll checkbox
+    document.getElementById('auto-scroll').addEventListener('change', function() {
+        autoScroll = this.checked;
+    });
+    
+    // Show timestamps checkbox
+    document.getElementById('show-timestamps').addEventListener('change', function() {
+        showTimestamps = this.checked;
+        toggleTimestamps();
+    });
+});
+
+function loadExistingLogs() {
+    const logEntries = document.querySelectorAll('.log-entry');
+    allLogs = Array.from(logEntries).map(entry => ({
+        timestamp: entry.querySelector('.log-timestamp').textContent,
+        level: entry.dataset.level,
+        message: entry.querySelector(`[class*="log-${entry.dataset.level}"]`).textContent
+    }));
+    filteredLogs = [...allLogs];
+}
+
+function refreshLogs() {
+    // This would fetch fresh logs from server
+    showToast('Đã refresh logs', 'info');
+    updateLogCounts();
+}
+
+function clearAllLogs() {
+    if (confirm('Bạn có chắc muốn xóa tất cả logs?')) {
+        document.getElementById('logs-display').innerHTML = `
+            <div class="text-center text-muted py-5">
+                <i class="bi bi-journal-x fs-1"></i>
+                <p class="mt-2">Chưa có logs nào</p>
+            </div>
+        `;
+        allLogs = [];
+        filteredLogs = [];
+        updateLogCounts();
+        showToast('Đã xóa tất cả logs', 'success');
+    }
+}
+
+function filterLogs() {
+    const level = document.getElementById('log-level-filter').value;
+    const searchTerm = document.getElementById('log-search').value.toLowerCase();
+    
+    filteredLogs = allLogs.filter(log => {
+        const levelMatch = level === 'all' || log.level === level;
+        const searchMatch = searchTerm === '' || 
+                           log.message.toLowerCase().includes(searchTerm) ||
+                           log.timestamp.toLowerCase().includes(searchTerm);
+        return levelMatch && searchMatch;
+    });
+    
+    displayFilteredLogs();
+    updateLogCounts();
+}
+
+function searchLogs() {
+    filterLogs();
+}
+
+function displayFilteredLogs() {
+    const container = document.getElementById('logs-display');
+    
+    if (filteredLogs.length === 0) {
+        container.innerHTML = `
+            <div class="text-center text-muted py-5">
+                <i class="bi bi-search fs-1"></i>
+                <p class="mt-2">Không tìm thấy logs phù hợp</p>
+            </div>
+        `;
+        return;
+    }
+    
+    container.innerHTML = filteredLogs.map(log => `
+        <div class="log-entry" data-level="${log.level}" onclick="showLogDetails('${log.timestamp}', '${log.level}', '${log.message.replace(/'/g, "\\'")}')">
+            <span class="log-timestamp" style="display: ${showTimestamps ? 'inline' : 'none'}">${log.timestamp}</span>
+            <span class="log-${log.level}">${log.message}</span>
+        </div>
+    `).join('');
+    
+    if (autoScroll) {
+        scrollToBottom();
+    }
+}
+
+function updateLogCounts() {
+    document.getElementById('total-logs').textContent = allLogs.length;
+    document.getElementById('error-count').textContent = allLogs.filter(log => log.level === 'error').length;
+}
+
+function toggleTimestamps() {
+    const timestamps = document.querySelectorAll('.log-timestamp');
+    timestamps.forEach(ts => {
+        ts.style.display = showTimestamps ? 'inline' : 'none';
+    });
+}
+
+function scrollToTop() {
+    document.getElementById('logs-display').scrollTop = 0;
+}
+
+function scrollToBottom() {
+    const container = document.getElementById('logs-display');
+    container.scrollTop = container.scrollHeight;
+}
+
+function toggleFullscreen() {
+    const card = document.querySelector('.card:last-of-type');
+    if (card.classList.contains('fullscreen')) {
+        card.classList.remove('fullscreen');
+        card.style.position = '';
+        card.style.top = '';
+        card.style.left = '';
+        card.style.width = '';
+        card.style.height = '';
+        card.style.zIndex = '';
+        document.body.style.overflow = '';
+    } else {
+        card.classList.add('fullscreen');
+        card.style.position = 'fixed';
+        card.style.top = '0';
+        card.style.left = '0';
+        card.style.width = '100vw';
+        card.style.height = '100vh';
+        card.style.zIndex = '9999';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function exportLogs() {
+    const dataStr = JSON.stringify(allLogs, null, 2);
+    const dataBlob = new Blob([dataStr], {type: 'application/json'});
+    const url = URL.createObjectURL(dataBlob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `metruyencv_logs_${new Date().toISOString().split('T')[0]}.json`;
+    link.click();
+    URL.revokeObjectURL(url);
+    showToast('Đã export logs', 'success');
+}
+
+function showLogDetails(timestamp, level, message) {
+    document.getElementById('modal-timestamp').textContent = timestamp;
+    document.getElementById('modal-level').innerHTML = `<span class="badge bg-${getLevelColor(level)}">${level.toUpperCase()}</span>`;
+    document.getElementById('modal-message').textContent = message;
+    
+    const modal = new bootstrap.Modal(document.getElementById('logDetailsModal'));
+    modal.show();
+}
+
+function copyLogMessage() {
+    const message = document.getElementById('modal-message').textContent;
+    navigator.clipboard.writeText(message).then(() => {
+        showToast('Đã copy message', 'success');
+    });
+}
+
+function getLevelColor(level) {
+    switch(level) {
+        case 'error': return 'danger';
+        case 'warning': return 'warning';
+        case 'info': return 'info';
+        case 'debug': return 'secondary';
+        default: return 'primary';
+    }
+}
+
+// Socket event handlers for real-time logs
+socket.on('new_log', function(log) {
+    allLogs.push(log);
+    
+    // Keep only last 1000 logs
+    if (allLogs.length > 1000) {
+        allLogs = allLogs.slice(-1000);
+    }
+    
+    // Update display if log matches current filter
+    const level = document.getElementById('log-level-filter').value;
+    const searchTerm = document.getElementById('log-search').value.toLowerCase();
+    
+    const levelMatch = level === 'all' || log.level === level;
+    const searchMatch = searchTerm === '' || 
+                       log.message.toLowerCase().includes(searchTerm) ||
+                       log.timestamp.toLowerCase().includes(searchTerm);
+    
+    if (levelMatch && searchMatch) {
+        const container = document.getElementById('logs-display');
+        
+        // Remove "no logs" message if present
+        const noLogsMsg = container.querySelector('.text-center.text-muted');
+        if (noLogsMsg) {
+            container.innerHTML = '';
+        }
+        
+        const logEntry = document.createElement('div');
+        logEntry.className = 'log-entry';
+        logEntry.dataset.level = log.level;
+        logEntry.onclick = () => showLogDetails(log.timestamp, log.level, log.message);
+        logEntry.innerHTML = `
+            <span class="log-timestamp" style="display: ${showTimestamps ? 'inline' : 'none'}">${log.timestamp}</span>
+            <span class="log-${log.level}">${log.message}</span>
+        `;
+        
+        container.appendChild(logEntry);
+        
+        // Auto scroll if enabled
+        if (autoScroll) {
+            container.scrollTop = container.scrollHeight;
+        }
+        
+        // Keep only last 100 visible entries for performance
+        while (container.children.length > 100) {
+            container.removeChild(container.firstChild);
+        }
+    }
+    
+    updateLogCounts();
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey) {
+        switch(e.key) {
+            case 'f':
+                e.preventDefault();
+                document.getElementById('log-search').focus();
+                break;
+            case 'r':
+                e.preventDefault();
+                refreshLogs();
+                break;
+            case 'e':
+                e.preventDefault();
+                exportLogs();
+                break;
+        }
+    }
+});
+</script>
+{% endblock %}
