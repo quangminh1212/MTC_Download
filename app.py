@@ -187,8 +187,8 @@ def config_page():
 @app.route('/download')
 def download_page():
     """Trang download"""
-    last_novel = config_manager.get_last_novel()
-    return render_template('download.html', 
+    last_novel = config_manager.get_last_novel_info()
+    return render_template('download.html',
                          last_novel=last_novel,
                          status=download_status)
 
