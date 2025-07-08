@@ -98,66 +98,85 @@ def delete_dupe(list):
     return list1
 
 def get_selenium_driver():
-    """Create and configure Selenium driver"""
-    options = Options()
-    if app_settings['headless']:
-        options.add_argument('--headless')
+    """Create and configure Selenium driver with robust error handling"""
 
-    # Enhanced options for better content loading
-    options.add_argument(f'--user-agent={user_agent}')
-    options.add_argument('--disable-blink-features=AutomationControlled')
-    options.add_argument('--disable-web-security')
-    options.add_argument('--disable-features=VizDisplayCompositor')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
-
-    # Firefox doesn't support add_experimental_option, use prefs instead
-    options.set_preference("dom.webdriver.enabled", False)
-    options.set_preference('useAutomationExtension', False)
-
-    # Set page load strategy
-    options.page_load_strategy = 'normal'
-
+    # Try Firefox first
     try:
-        driver = webdriver.Firefox(options=options)
-        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+        options = Options()
+        if app_settings['headless']:
+            options.add_argument('--headless')
 
-        # Set timeouts
-        driver.implicitly_wait(10)
-        driver.set_page_load_timeout(30)
+        # Basic options only to avoid compatibility issues
+        options.add_argument(f'--user-agent={user_agent}')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+
+        # Firefox preferences
+        options.set_preference("dom.webdriver.enabled", False)
+        options.set_preference('useAutomationExtension', False)
+        options.set_preference("general.useragent.override", user_agent)
+
+        # Set page load strategy to eager for faster loading
+        options.page_load_strategy = 'eager'
+
+        driver = webdriver.Firefox(options=options)
+
+        # Set conservative timeouts
+        driver.implicitly_wait(5)
+        driver.set_page_load_timeout(20)
 
         print("🦊 Sử dụng Firefox driver")
         return driver
-    except Exception as e:
-        print(f"❌ Lỗi tạo Firefox driver: {e}")
-        print("🔄 Thử Chrome driver...")
+
+    except Exception as firefox_error:
+        print(f"❌ Firefox không khả dụng: {str(firefox_error)[:100]}")
+
+        # Try Chrome as fallback
         try:
+            print("🔄 Thử Chrome driver...")
             chrome_options = webdriver.ChromeOptions()
+
             if app_settings['headless']:
                 chrome_options.add_argument('--headless')
 
-            # Enhanced Chrome options
+            # Basic Chrome options
             chrome_options.add_argument(f'--user-agent={user_agent}')
-            chrome_options.add_argument('--disable-blink-features=AutomationControlled')
-            chrome_options.add_argument('--disable-web-security')
-            chrome_options.add_argument('--disable-features=VizDisplayCompositor')
             chrome_options.add_argument('--no-sandbox')
             chrome_options.add_argument('--disable-dev-shm-usage')
+            chrome_options.add_argument('--disable-gpu')
+            chrome_options.add_argument('--disable-web-security')
             chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
             chrome_options.add_experimental_option('useAutomationExtension', False)
 
             driver = webdriver.Chrome(options=chrome_options)
-            driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
 
-            # Set timeouts
-            driver.implicitly_wait(10)
-            driver.set_page_load_timeout(30)
+            # Set conservative timeouts
+            driver.implicitly_wait(5)
+            driver.set_page_load_timeout(20)
 
             print("🌐 Sử dụng Chrome driver")
             return driver
-        except Exception as e2:
-            print(f"❌ Lỗi tạo Chrome driver: {e2}")
-            raise Exception("Không thể tạo webdriver nào")
+
+        except Exception as chrome_error:
+            print(f"❌ Chrome cũng không khả dụng: {str(chrome_error)[:100]}")
+
+            # Last resort: try basic Firefox without options
+            try:
+                print("🔄 Thử Firefox cơ bản...")
+                basic_options = Options()
+                if app_settings['headless']:
+                    basic_options.add_argument('--headless')
+
+                driver = webdriver.Firefox(options=basic_options)
+                driver.implicitly_wait(5)
+                driver.set_page_load_timeout(15)
+
+                print("🦊 Sử dụng Firefox cơ bản")
+                return driver
+
+            except Exception as basic_error:
+                print(f"❌ Tất cả driver đều thất bại: {str(basic_error)[:100]}")
+                raise Exception("Không thể tạo bất kỳ webdriver nào. Vui lòng kiểm tra Firefox/Chrome đã cài đặt chưa.")
 
 def normalize_url(url):
     """Normalize URL to handle redirects between different domains"""
@@ -240,7 +259,7 @@ def sort_chapters(list_of_chapters):
     return list_of_chapters
 
 async def get_chapter_with_selenium(chapter_number, novel_url):
-    """Get chapter content using Selenium-first approach"""
+    """Get chapter content using Selenium with httpx fallback"""
     base_url = novel_url.replace('/truyen/', '/truyen/').rstrip('/')
     url = f'{base_url}/chuong-{chapter_number}'
 
@@ -248,13 +267,62 @@ async def get_chapter_with_selenium(chapter_number, novel_url):
     if app_settings['request_delay'] > 0:
         await asyncio.sleep(app_settings['request_delay'])
 
-    print(f"🔍 Tải chapter {chapter_number} bằng Selenium...")
+    print(f"🔍 Tải chapter {chapter_number}...")
 
-    # Use Selenium directly for better reliability
-    return await get_chapter_with_selenium_browser(chapter_number, novel_url)
+    # Try Selenium first
+    try:
+        result = await get_chapter_with_selenium_browser(chapter_number, novel_url)
+        if result:
+            return result
+    except Exception as selenium_error:
+        print(f"⚠️  Selenium thất bại: {str(selenium_error)[:100]}")
+
+    # Fallback to httpx if Selenium fails
+    print(f"🔄 Fallback: Thử httpx cho chapter {chapter_number}...")
+    try:
+        response = await client.get(url, headers=header)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.content, 'lxml')
+
+        # Try to find chapter content
+        chapter_content = None
+        content_selectors = [
+            ('div', {'id': 'chapter-content'}),
+            ('div', {'class': 'break-words'}),
+            ('main', {}),
+            ('article', {})
+        ]
+
+        for tag, attrs in content_selectors:
+            chapter_content = soup.find(tag, attrs)
+            if chapter_content:
+                text_content = chapter_content.get_text(strip=True)
+                if len(text_content) > 50:
+                    break
+                else:
+                    chapter_content = None
+
+        if chapter_content:
+            # Get title
+            title_elem = soup.find('h1') or soup.find('h2')
+            chapter_title = str(title_elem) if title_elem else f"<h2>Chương {chapter_number}</h2>"
+
+            html = str(chapter_content)
+            print(f"✅ Httpx thành công cho chapter {chapter_number}")
+            return chapter_title, html, chapter_number
+        else:
+            print(f"❌ Httpx không tìm thấy content cho chapter {chapter_number}")
+
+    except Exception as httpx_error:
+        print(f"❌ Httpx cũng thất bại: {str(httpx_error)[:100]}")
+
+    # Both methods failed
+    print(f"💥 Tất cả methods thất bại cho chapter {chapter_number}")
+    missing_chapter.append((f"Chương {chapter_number}", url, chapter_number))
+    return None
 
 async def get_chapter_with_selenium_browser(chapter_number, novel_url):
-    """Get chapter content using Selenium browser"""
+    """Get chapter content using Selenium browser with robust error handling"""
     base_url = novel_url.replace('/truyen/', '/truyen/').rstrip('/')
     url = f'{base_url}/chuong-{chapter_number}'
 
@@ -262,27 +330,28 @@ async def get_chapter_with_selenium_browser(chapter_number, novel_url):
     try:
         driver = get_selenium_driver()
         print(f"🌐 Đang truy cập: {url}")
-        driver.get(url)
 
-        # Wait for page to load
-        await asyncio.sleep(3)
+        # Set page load timeout
+        driver.set_page_load_timeout(30)
 
-        # Wait for content to load
-        wait = WebDriverWait(driver, app_settings['chapter_timeout'])
+        try:
+            driver.get(url)
+        except Exception as e:
+            print(f"⚠️  Lỗi load page: {e}")
+            # Try to continue anyway
+
+        # Wait for page to load with shorter sleep
+        await asyncio.sleep(2)
 
         print(f"🔍 Đang tìm nội dung chapter {chapter_number}...")
 
-        # Try multiple selectors for content with more detailed logging
+        # Simplified selectors that are more likely to work
         content_selectors = [
             (By.ID, 'chapter-content'),
             (By.CLASS_NAME, 'break-words'),
-            (By.CSS_SELECTOR, '[class*="chapter-content"]'),
-            (By.CSS_SELECTOR, '[class*="content"]'),
-            (By.CSS_SELECTOR, 'div[class*="text"]'),
             (By.TAG_NAME, 'main'),
             (By.TAG_NAME, 'article'),
-            (By.CSS_SELECTOR, '.content'),
-            (By.CSS_SELECTOR, '.chapter'),
+            (By.CSS_SELECTOR, 'div.content'),
             (By.CSS_SELECTOR, 'div p')
         ]
 
@@ -290,108 +359,137 @@ async def get_chapter_with_selenium_browser(chapter_number, novel_url):
         for i, (by, selector) in enumerate(content_selectors):
             try:
                 print(f"  🔎 Thử selector {i+1}: {selector}")
-                element = wait.until(EC.presence_of_element_located((by, selector)))
+
+                # Use shorter timeout for each selector
+                element = WebDriverWait(driver, 5).until(
+                    EC.presence_of_element_located((by, selector))
+                )
+
                 if element:
                     text_content = element.text.strip()
                     print(f"  📝 Tìm thấy element, độ dài text: {len(text_content)}")
-                    if len(text_content) > 50:  # Giảm threshold
+
+                    if len(text_content) > 50:
                         chapter_content = element
                         print(f"  ✅ Chọn selector {i+1} - Nội dung đủ dài")
                         break
+                    elif len(text_content) > 10:
+                        # Keep as backup if no better content found
+                        if not chapter_content:
+                            chapter_content = element
+                            print(f"  📝 Backup selector {i+1} - Nội dung ngắn")
+
             except TimeoutException:
                 print(f"  ⏰ Timeout với selector {i+1}")
                 continue
             except Exception as e:
-                print(f"  ❌ Lỗi với selector {i+1}: {e}")
+                print(f"  ❌ Lỗi với selector {i+1}: {str(e)[:100]}")
                 continue
 
         if not chapter_content:
             print(f"❌ Không tìm thấy nội dung cho chapter {chapter_number}")
-            # Try to get page source for debugging
-            page_source = driver.page_source
-            print(f"📄 Page title: {driver.title}")
-            print(f"📄 Page URL: {driver.current_url}")
-            if "404" in page_source or "not found" in page_source.lower():
-                print(f"❌ Chapter {chapter_number} không tồn tại (404)")
+            try:
+                print(f"📄 Page title: {driver.title}")
+                print(f"📄 Page URL: {driver.current_url}")
+
+                # Check if page loaded at all
+                page_source = driver.page_source
+                if len(page_source) < 1000:
+                    print(f"⚠️  Page source quá ngắn: {len(page_source)} chars")
+                elif "404" in page_source or "not found" in page_source.lower():
+                    print(f"❌ Chapter {chapter_number} không tồn tại (404)")
+                else:
+                    print(f"📄 Page source length: {len(page_source)} chars")
+
+            except Exception as debug_e:
+                print(f"⚠️  Không thể debug page: {debug_e}")
+
             missing_chapter.append((f"Chương {chapter_number}", url, chapter_number))
             return None
 
         print(f"📖 Đang lấy title và content cho chapter {chapter_number}...")
 
-        # Get title with multiple strategies
-        title_selectors = [
-            (By.TAG_NAME, 'h1'),
-            (By.TAG_NAME, 'h2'),
-            (By.TAG_NAME, 'h3'),
-            (By.CSS_SELECTOR, '[class*="title"]'),
-            (By.CSS_SELECTOR, '[class*="chapter"]')
-        ]
-
+        # Get title with simpler approach
         chapter_title = f"Chương {chapter_number}"
-        for by, selector in title_selectors:
+        try:
+            title_elem = driver.find_element(By.TAG_NAME, 'h1')
+            if title_elem and title_elem.text.strip():
+                chapter_title = f"<h2>{title_elem.text.strip()}</h2>"
+                print(f"📝 Tìm thấy title: {title_elem.text.strip()}")
+        except:
             try:
-                title_elem = driver.find_element(by, selector)
+                title_elem = driver.find_element(By.TAG_NAME, 'h2')
                 if title_elem and title_elem.text.strip():
                     chapter_title = f"<h2>{title_elem.text.strip()}</h2>"
-                    print(f"📝 Tìm thấy title: {title_elem.text.strip()}")
-                    break
-            except NoSuchElementException:
-                continue
+                    print(f"📝 Tìm thấy title h2: {title_elem.text.strip()}")
+            except:
+                print(f"📝 Sử dụng title mặc định: {chapter_title}")
 
-        # Get content HTML
-        html = chapter_content.get_attribute('outerHTML')
-        print(f"📄 Độ dài HTML: {len(html)} ký tự")
+        # Get content HTML with error handling
+        try:
+            html = chapter_content.get_attribute('outerHTML')
+            print(f"📄 Độ dài HTML: {len(html)} ký tự")
+        except Exception as e:
+            print(f"⚠️  Lỗi lấy HTML: {e}")
+            # Fallback to innerHTML
+            try:
+                html = chapter_content.get_attribute('innerHTML')
+                html = f'<div>{html}</div>'
+                print(f"📄 Fallback innerHTML: {len(html)} ký tự")
+            except Exception as e2:
+                print(f"❌ Không thể lấy content: {e2}")
+                return None
 
-        # Clean up HTML - remove scripts, ads, etc.
-        soup = BeautifulSoup(html, 'lxml')
+        # Simple HTML cleanup
+        try:
+            soup = BeautifulSoup(html, 'lxml')
 
-        # Remove unwanted elements
-        for unwanted in soup.find_all(['script', 'style', 'iframe', 'ins', 'noscript']):
-            unwanted.decompose()
+            # Remove only the most problematic elements
+            for unwanted in soup.find_all(['script', 'style', 'noscript']):
+                unwanted.decompose()
 
-        # Remove ads and navigation
-        for ad_class in ['ad', 'advertisement', 'banner', 'nav', 'navigation', 'menu']:
-            for element in soup.find_all(class_=lambda x: x and ad_class in x.lower()):
-                element.decompose()
+            html = str(soup)
+        except Exception as e:
+            print(f"⚠️  Lỗi cleanup HTML: {e}")
+            # Continue with original HTML
 
-        html = str(soup)
-
-        # Handle canvas elements (OCR)
-        if app_settings['use_ocr']:
-            canvas_elements = driver.find_elements(By.TAG_NAME, 'canvas')
-            if canvas_elements:
-                print(f"🖼️  Tìm thấy {len(canvas_elements)} canvas elements, đang OCR...")
-                for i, canvas in enumerate(canvas_elements):
-                    try:
-                        # Get canvas as image
-                        canvas_base64 = driver.execute_script(
-                            "return arguments[0].toDataURL('image/png').substring(21);", canvas)
-                        canvas_png = base64.b64decode(canvas_base64)
-
-                        # OCR the image
-                        ocr_text = ocr(canvas_png)
-                        if ocr_text.strip():
-                            # Replace canvas with OCR text in HTML
-                            canvas_html = canvas.get_attribute('outerHTML')
-                            html = html.replace(canvas_html, f'<p>{ocr_text}</p>')
-                            print(f"  ✅ OCR canvas {i+1}: {len(ocr_text)} ký tự")
-                    except Exception as e:
-                        print(f"  ⚠️  Lỗi OCR canvas {i+1}: {e}")
+        # Skip OCR for now to avoid complications
+        # OCR can be added back later if needed
 
         # Final content check
-        final_soup = BeautifulSoup(html, 'lxml')
-        final_text = final_soup.get_text(strip=True)
-        print(f"✅ Chapter {chapter_number} hoàn thành - {len(final_text)} ký tự text")
+        try:
+            final_soup = BeautifulSoup(html, 'lxml')
+            final_text = final_soup.get_text(strip=True)
+            print(f"✅ Chapter {chapter_number} hoàn thành - {len(final_text)} ký tự text")
+
+            if len(final_text) < 10:
+                print(f"⚠️  Nội dung quá ngắn, có thể không đúng")
+
+        except Exception as e:
+            print(f"⚠️  Lỗi kiểm tra final content: {e}")
 
         return chapter_title, html, chapter_number
 
+    except asyncio.CancelledError:
+        print(f"⚠️  Task bị cancel cho chapter {chapter_number}")
+        return None
     except Exception as e:
-        print(f"❌ Error fetching chapter {chapter_number} with Selenium: {e}")
+        print(f"❌ Lỗi tổng quát chapter {chapter_number}: {str(e)[:200]}")
         missing_chapter.append((f"Chương {chapter_number}", url, chapter_number))
         return None
     finally:
+        # Safe driver cleanup
         if driver:
-            driver.quit()
+            try:
+                driver.quit()
+                print(f"🔧 Đã đóng driver cho chapter {chapter_number}")
+            except Exception as cleanup_e:
+                print(f"⚠️  Lỗi đóng driver: {cleanup_e}")
+                # Force kill if needed
+                try:
+                    driver.service.stop()
+                except:
+                    pass
 
 @alru_cache(maxsize=1024)
 async def fetch_chapters(start_chapter, end_chapter, novel_url):
