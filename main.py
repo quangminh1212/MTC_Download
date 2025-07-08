@@ -2,9 +2,6 @@ import httpx
 from bs4 import BeautifulSoup
 from ebooklib import epub
 import asyncio
-import sys
-import os
-sys.path.append(os.path.dirname(__file__))
 from user_agent import get
 from tqdm.asyncio import tqdm
 import backoff
