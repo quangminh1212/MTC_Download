@@ -55,10 +55,21 @@ class ConfigManager:
             'auto_run': 'false'
         }
 
+        self.config['TIMEOUTS'] = {
+            'page_load_timeout': '30',
+            'element_wait_timeout': '10',
+            'image_download_timeout': '60',
+            'overall_chapter_timeout': '300',
+            'retry_delay_base': '1',
+            'max_retry_delay': '30'
+        }
+
         self.config['ADVANCED'] = {
             'user_agent': '',
             'request_delay': '1',
-            'use_ocr': 'true'
+            'use_ocr': 'true',
+            'enable_detailed_logging': 'true',
+            'log_file': 'download.log'
         }
         
         self.save_config()
@@ -175,7 +186,20 @@ class ConfigManager:
             'auto_run': self.get('SETTINGS', 'auto_run', False),
             'user_agent': self.get('ADVANCED', 'user_agent', ''),
             'request_delay': self.get('ADVANCED', 'request_delay', 1),
-            'use_ocr': self.get('ADVANCED', 'use_ocr', True)
+            'use_ocr': self.get('ADVANCED', 'use_ocr', True),
+            'enable_detailed_logging': self.get('ADVANCED', 'enable_detailed_logging', True),
+            'log_file': self.get('ADVANCED', 'log_file', 'download.log')
+        }
+
+    def get_timeout_settings(self) -> Dict[str, Any]:
+        """Get timeout settings"""
+        return {
+            'page_load_timeout': self.get('TIMEOUTS', 'page_load_timeout', 30),
+            'element_wait_timeout': self.get('TIMEOUTS', 'element_wait_timeout', 10),
+            'image_download_timeout': self.get('TIMEOUTS', 'image_download_timeout', 60),
+            'overall_chapter_timeout': self.get('TIMEOUTS', 'overall_chapter_timeout', 300),
+            'retry_delay_base': self.get('TIMEOUTS', 'retry_delay_base', 1),
+            'max_retry_delay': self.get('TIMEOUTS', 'max_retry_delay', 30)
         }
 
     def get_last_novel_info(self) -> Dict[str, Any]:
@@ -305,10 +329,20 @@ class ConfigManager:
         print(f"  Remember last novel: {self.get('SETTINGS', 'remember_last_novel', True)}")
         print(f"  Auto run: {self.get('SETTINGS', 'auto_run', False)}")
 
+        print("\n⏱️  TIMEOUTS:")
+        print(f"  Page load: {self.get('TIMEOUTS', 'page_load_timeout', 30)}s")
+        print(f"  Element wait: {self.get('TIMEOUTS', 'element_wait_timeout', 10)}s")
+        print(f"  Image download: {self.get('TIMEOUTS', 'image_download_timeout', 60)}s")
+        print(f"  Overall chapter: {self.get('TIMEOUTS', 'overall_chapter_timeout', 300)}s")
+        print(f"  Retry delay base: {self.get('TIMEOUTS', 'retry_delay_base', 1)}s")
+        print(f"  Max retry delay: {self.get('TIMEOUTS', 'max_retry_delay', 30)}s")
+
         print("\n🔧 ADVANCED:")
         print(f"  Request delay: {self.get('ADVANCED', 'request_delay', 1)}s")
         print(f"  Use OCR: {self.get('ADVANCED', 'use_ocr', True)}")
-        
+        print(f"  Detailed logging: {self.get('ADVANCED', 'enable_detailed_logging', True)}")
+        print(f"  Log file: {self.get('ADVANCED', 'log_file', 'download.log')}")
+
         print("="*50)
 
 # Test function

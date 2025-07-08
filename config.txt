@@ -19,15 +19,25 @@ retry_attempts = 3
 remember_last_novel = true
 auto_run = true
 
+[TIMEOUTS]
+page_load_timeout = 30
+element_wait_timeout = 10
+image_download_timeout = 60
+overall_chapter_timeout = 300
+retry_delay_base = 1
+max_retry_delay = 30
+
 [ADVANCED]
-user_agent = 
+user_agent =
 request_delay = 1
 use_ocr = true
+enable_detailed_logging = true
+log_file = download.log
 
 [LAST_NOVEL]
 url = https://metruyencv.biz/truyen/tan-the-chi-sieu-thi-he-thong
-start_chapter = 7
-end_chapter = 9
+start_chapter = 10
+end_chapter = 12
 
 
 # Ghi chú:
