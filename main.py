@@ -159,41 +159,61 @@ def sort_chapters(list_of_chapters):
 
 # Retry decorator for handling transient errors, excluding 404 errors
 
-@backoff.on_exception(backoff.expo, httpx.HTTPError, max_tries=3, giveup=lambda e: e.response.status_code == 404)
 async def get_chapter_with_retry(chapter_number, novel_url):
+    """Get chapter content using Playwright for JavaScript-rendered content"""
     url = f'{novel_url}/chuong-{chapter_number}'
-    i = 0
+
     try:
-        while True:
-            resp = await client.get(url, headers=header)
-            resp.raise_for_status()
-            soup = BeautifulSoup(resp.content, 'lxml')
-            chapter_content = soup.find('div', class_='break-words')
-            chapter_title = str(soup.find('h2', class_='text-center text-gray-600 dark:text-gray-400 text-balance'))
-            html = str(chapter_content)
-            if html.count("<br/>") != 8:
-                break
-            else:
-                i += 1
-                if i == 10:
-                    missing_chapter.append((chapter_title,url,chapter_number))
-                    return None
+        async with async_playwright() as p:
+            browser = await p.firefox.launch(headless=True)
+            page = await browser.new_page()
 
-        if html is None or chapter_title is None:
-            print(f"""
-Lỗi: Không thể tìm thấy chapter {chapter_number}, đang bỏ qua...""")
+            # Set user agent
+            await page.set_extra_http_headers(header)
+
+            # Navigate to chapter page
+            await page.goto(url, timeout=30000)
+
+            # Wait for content to load (wait for the chapter-content div to have content)
+            try:
+                await page.wait_for_function(
+                    "document.querySelector('#chapter-content') && document.querySelector('#chapter-content').innerText.length > 100",
+                    timeout=15000
+                )
+            except:
+                print(f"Timeout waiting for chapter {chapter_number} content to load")
+
+            # Get page content after JavaScript execution
+            content = await page.content()
+            await browser.close()
+
+            # Parse the rendered HTML
+            soup = BeautifulSoup(content, 'lxml')
+
+            # Try to find chapter content
+            chapter_content = soup.find('div', id='chapter-content')
+            if not chapter_content:
+                chapter_content = soup.find('div', class_='break-words')
+
+            # Try to find chapter title
+            chapter_title_elem = soup.find('h1') or soup.find('h2')
+            chapter_title = str(chapter_title_elem) if chapter_title_elem else f"Chương {chapter_number}"
+
+            if chapter_content:
+                html = str(chapter_content)
+                # Check if content is substantial
+                text_content = chapter_content.get_text(strip=True)
+                if len(text_content) > 100:
+                    return chapter_title, html, chapter_number
+
+            print(f"Không thể tải nội dung chapter {chapter_number}")
+            missing_chapter.append((chapter_title, url, chapter_number))
             return None
 
-        return chapter_title, html, chapter_number
-    except httpx.HTTPError as e:
-        if e.response.status_code == 404:
-            print(f"""
-Lỗi: Không thể tìm thấy chapter {chapter_number} (404), đang bỏ qua...""")
-            return None
-        else:
-            print(f"HTTP error fetching chapter {chapter_number}: {e}. Đang thử lại...")
-            await asyncio.sleep(5)
-            raise
+    except Exception as e:
+        print(f"Error fetching chapter {chapter_number}: {e}")
+        missing_chapter.append((f"Chương {chapter_number}", url, chapter_number))
+        return None
 
 # Cache the results of the 'get' function for better performance
 @alru_cache(maxsize=1024)
