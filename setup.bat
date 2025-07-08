@@ -1,10 +1,11 @@
 @echo off
+chcp 65001 >nul
 title MeTruyenCV Downloader Setup
 
 echo.
 echo ========================================
 echo   MeTruyenCV Downloader Setup
-echo   Cai dat tu dong toan bo he thong
+echo   Auto install complete system
 echo ========================================
 echo.
 
@@ -140,28 +141,18 @@ if not exist "config.txt" (
     echo File config.txt da ton tai
 )
 
-REM Create desktop shortcuts
-echo Tao shortcuts...
+REM Create desktop shortcut
+echo Creating desktop shortcut...
 set CURRENT_DIR=%CD%
-set CONSOLE_SHORTCUT=%USERPROFILE%\Desktop\MeTruyenCV Console.lnk
 set WEB_SHORTCUT=%USERPROFILE%\Desktop\MeTruyenCV Web.lnk
 
-REM Console shortcut
-powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell; $Shortcut = $WshShell.CreateShortcut('%CONSOLE_SHORTCUT%'); $Shortcut.TargetPath = '%CURRENT_DIR%\run.bat'; $Shortcut.WorkingDirectory = '%CURRENT_DIR%'; $Shortcut.Arguments = '1'; $Shortcut.Description = 'MeTruyenCV Console Mode'; $Shortcut.Save()}" 2>nul
-
-REM Web shortcut  
-powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell; $Shortcut = $WshShell.CreateShortcut('%WEB_SHORTCUT%'); $Shortcut.TargetPath = '%CURRENT_DIR%\run.bat'; $Shortcut.WorkingDirectory = '%CURRENT_DIR%'; $Shortcut.Arguments = '2'; $Shortcut.Description = 'MeTruyenCV Web Interface'; $Shortcut.Save()}" 2>nul
-
-if exist "%CONSOLE_SHORTCUT%" (
-    echo Console shortcut da duoc tao tren Desktop
-) else (
-    echo Khong the tao console shortcut
-)
+REM Web shortcut
+powershell -Command "& {$WshShell = New-Object -comObject WScript.Shell; $Shortcut = $WshShell.CreateShortcut('%WEB_SHORTCUT%'); $Shortcut.TargetPath = '%CURRENT_DIR%\run.bat'; $Shortcut.WorkingDirectory = '%CURRENT_DIR%'; $Shortcut.Description = 'MeTruyenCV Web Interface'; $Shortcut.Save()}" 2>nul
 
 if exist "%WEB_SHORTCUT%" (
-    echo Web shortcut da duoc tao tren Desktop
+    echo Web shortcut created on Desktop
 ) else (
-    echo Khong the tao web shortcut
+    echo Cannot create web shortcut
 )
 
 echo.
@@ -180,38 +171,33 @@ deactivate
 
 echo.
 echo ========================================
-echo           CAI DAT HOAN TAT!
+echo           SETUP COMPLETED!
 echo ========================================
 echo.
-echo MeTruyenCV Downloader da duoc cai dat thanh cong!
+echo MeTruyenCV Downloader has been installed successfully!
 echo.
-echo Cach su dung:
-echo    1. Chay: run.bat
-echo    2. Chon Console Mode hoac Web Interface
-echo.
-echo Console Mode:
-echo    - Chay truc tiep trong command line
-echo    - Su dung file config.txt
+echo How to use:
+echo    1. Run: run.bat
+echo    2. Web Interface will start automatically
 echo.
 echo Web Interface:
-echo    - Mo browser: http://localhost:5000
-echo    - Cau hinh tai: http://localhost:5000/config
-echo    - Download tai: http://localhost:5000/download
-echo    - Xem logs tai: http://localhost:5000/logs
+echo    - Open browser: http://localhost:5000
+echo    - Configuration: http://localhost:5000/config
+echo    - Download: http://localhost:5000/download
+echo    - View logs: http://localhost:5000/logs
 echo.
-echo Shortcuts tren Desktop:
-echo    - MeTruyenCV Console.lnk (Console mode)
+echo Desktop shortcut:
 echo    - MeTruyenCV Web.lnk (Web interface)
 echo.
 
 REM Ask to run immediately
-set /p RUN_NOW="Ban co muon chay ung dung ngay bay gio? (y/n): "
+set /p RUN_NOW="Do you want to run the application now? (y/n): "
 if /i "%RUN_NOW%"=="y" (
     echo.
-    echo Dang khoi dong MeTruyenCV Downloader...
+    echo Starting MeTruyenCV Web Interface...
     call run.bat
 ) else (
     echo.
-    echo Setup hoan tat. Chay run.bat khi can su dung.
+    echo Setup completed. Run run.bat when you want to use it.
     pause
 )
