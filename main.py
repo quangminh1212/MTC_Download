@@ -3,6 +3,9 @@ from bs4 import BeautifulSoup
 from ebooklib import epub
 import asyncio
 from user_agent import get
+import warnings
+# Suppress ebooklib warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="ebooklib")
 from tqdm.asyncio import tqdm
 import backoff
 from playwright.async_api import async_playwright
@@ -261,6 +264,18 @@ def create_epub(title, author, status, attribute, image, chapters, path, filenam
 async def main():
     while True:
         novel_url = input('Nhập link metruyencv mà bạn muốn tải: ')
+
+        # Auto-convert from .com to .info
+        if 'metruyencv.com' in novel_url:
+            novel_url = novel_url.replace('metruyencv.com', 'metruyencv.info')
+            print(f"Đã chuyển đổi URL sang: {novel_url}")
+
+        # Validate URL
+        if 'metruyencv.info' not in novel_url:
+            print("❌ Lỗi: URL phải từ metruyencv.info")
+            print("Ví dụ: https://metruyencv.info/truyen/ten-truyen")
+            continue
+
         if '/' == novel_url[-1]:
             novel_url = novel_url[:-1]
         start_chapter = int(input('Chapter bắt đầu: '))
@@ -300,7 +315,7 @@ async def main():
         if valid_chapters:
             create_epub(title, author, status, attribute, image, valid_chapters, path, filename)
             print(
-                f'Tải thành công {len(valid_chapters)}/{end_chapter - start_chapter + 1} chapter. File của bạn nằm tại "D:/novel"')
+                f'Tải thành công {len(valid_chapters)}/{end_chapter - start_chapter + 1} chapter. File của bạn nằm tại "{path}"')
         else:
             print("Lỗi. Tải không thành công")
 
