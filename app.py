@@ -288,7 +288,7 @@ class NovelDownloader:
         filename = filename.strip()
         return filename[:100]  # Giới hạn độ dài
     
-    def download_novel(self, novel_url, start_chapter=1, end_chapter=None, progress_id=None):
+    def download_novel(self, novel_url, start_chapter=1, end_chapter=None, progress_id=None, skip_locked=True):
         """Tải toàn bộ truyện"""
         try:
             # Khởi tạo progress
@@ -347,6 +347,7 @@ class NovelDownloader:
                 # Thử tải chương với retry
                 max_retries = 3
                 chapter_data = None
+                skip_this_chapter = False
 
                 for retry in range(max_retries):
                     try:
@@ -355,7 +356,12 @@ class NovelDownloader:
                             # Kiểm tra xem có phải chương bị khóa không
                             if '[CHƯƠNG BỊ KHÓA' in chapter_data['content']:
                                 print(f"Chương {chapter['number']} bị khóa - cần thanh toán")
-                                break
+                                if skip_locked:
+                                    print(f"Bỏ qua chương {chapter['number']} (bị khóa)")
+                                    skip_this_chapter = True
+                                    break  # Thoát khỏi vòng lặp retry
+                                else:
+                                    break  # Vẫn tải chương bị khóa nếu không bỏ qua
                             elif len(chapter_data['content']) > 30:  # Giảm yêu cầu độ dài
                                 break
 
@@ -366,6 +372,10 @@ class NovelDownloader:
                         print(f"Chương {chapter['number']} - Lần thử {retry + 1}: Lỗi {e}")
                         if retry < max_retries - 1:
                             time.sleep(2)
+
+                # Nếu cần bỏ qua chương này, tiếp tục với chương tiếp theo
+                if skip_this_chapter:
+                    continue
 
                 if chapter_data and chapter_data['content'] and len(chapter_data['content']) > 10:
                     # Sử dụng tiêu đề từ nội dung nếu có, nếu không dùng tiêu đề từ danh sách
@@ -440,6 +450,7 @@ def api_download():
     novel_url = data.get('url')
     start_chapter = int(data.get('start_chapter', 1))
     end_chapter = int(data.get('end_chapter')) if data.get('end_chapter') else None
+    skip_locked = data.get('skip_locked', True)
     
     if not novel_url:
         return jsonify({'error': 'URL không hợp lệ'}), 400
@@ -450,7 +461,7 @@ def api_download():
     # Chạy download trong thread riêng
     thread = threading.Thread(
         target=downloader.download_novel,
-        args=(novel_url, start_chapter, end_chapter, progress_id)
+        args=(novel_url, start_chapter, end_chapter, progress_id, skip_locked)
     )
     thread.start()
     
