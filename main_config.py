@@ -110,8 +110,10 @@ def get_selenium_driver():
     options.add_argument('--disable-features=VizDisplayCompositor')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option('useAutomationExtension', False)
+
+    # Firefox doesn't support add_experimental_option, use prefs instead
+    options.set_preference("dom.webdriver.enabled", False)
+    options.set_preference('useAutomationExtension', False)
 
     # Set page load strategy
     options.page_load_strategy = 'normal'
