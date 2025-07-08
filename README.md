@@ -14,13 +14,22 @@
 
 ## 🚀 Khởi chạy nhanh
 
-### Cách dễ nhất (Windows):
+### Cách 1: File batch đơn giản (Khuyến nghị)
 ```bash
 # Double-click file này
-run.bat
+start.bat
 ```
 
-### Cách thủ công:
+### Cách 2: File batch đầy đủ
+```bash
+# Double-click file này (tiếng Việt)
+run.bat
+
+# Hoặc file này (tiếng Anh)
+run_en.bat
+```
+
+### Cách 3: Chạy thủ công
 ```bash
 # Cài đặt thư viện
 pip install -r requirements.txt
@@ -63,6 +72,13 @@ TenTruyen.zip
 - 💝 **Hỗ trợ tác giả** bằng cách đọc truyện trên trang chính thức
 
 ## 🔧 Xử lý sự cố
+
+### Lỗi encoding khi chạy .bat file:
+**Triệu chứng:** Thấy lỗi như `'được' is not recognized as an internal or external command`
+**Giải pháp:**
+1. Sử dụng `start.bat` (đơn giản nhất)
+2. Hoặc sử dụng `run_en.bat` (tiếng Anh)
+3. Hoặc chạy từ Command Prompt thay vì PowerShell
 
 ### Lỗi "Python chưa cài đặt":
 1. Tải Python từ https://python.org/downloads/

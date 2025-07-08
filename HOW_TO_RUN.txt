@@ -1,0 +1,46 @@
+MeTruyenCV Downloader - Huong dan chay nhanh
+===========================================
+
+CACH 1: Don gian nhat (Khuyen nghi)
+-----------------------------------
+Double-click: start.bat
+
+CACH 2: Day du tieng Viet
+-------------------------
+Double-click: run.bat
+
+CACH 3: Day du tieng Anh
+------------------------
+Double-click: run_en.bat
+
+CACH 4: Thu cong
+----------------
+1. Mo Command Prompt
+2. Chay: pip install -r requirements.txt
+3. Chay: python app.py
+4. Mo trinh duyet: http://localhost:5000
+
+XU LY LOI
+---------
+Neu gap loi encoding khi chay .bat:
+- Thu start.bat (don gian nhat)
+- Hoac run_en.bat (tieng Anh)
+- Hoac chay tu Command Prompt thay vi PowerShell
+
+Neu Python chua cai dat:
+- Tai tu: https://python.org/downloads/
+- Nho tick "Add Python to PATH"
+- Restart may tinh
+
+CACH SU DUNG
+------------
+1. Chay file .bat
+2. Mo http://localhost:5000
+3. Nhap URL truyen tu MeTruyenCV.com
+4. Chon pham vi chuong
+5. Nhan "Bat dau tai"
+6. Cho hoan thanh va tai file ZIP
+
+VI DU URL:
+https://metruyencv.com/truyen/no-le-bong-toi
+https://metruyencv.com/truyen/cuu-vuc-kiem-de
