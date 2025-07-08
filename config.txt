@@ -16,6 +16,8 @@ auto_save = true
 headless = true
 chapter_timeout = 30
 retry_attempts = 3
+remember_last_novel = true
+auto_run = true
 
 [ADVANCED]
 user_agent = 
