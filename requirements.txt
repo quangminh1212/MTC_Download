@@ -1,0 +1,11 @@
+httpx
+beautifulsoup4
+ebooklib
+tqdm
+backoff
+playwright
+pytesseract
+Pillow
+appdirs
+async-lru
+lxml
