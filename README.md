@@ -10,143 +10,71 @@
 - 🎯 **Chọn phạm vi chương** cần tải (từ chương X đến chương Y)
 - 📊 **Hiển thị tiến trình** tải real-time với thanh progress
 - 🌐 **Giao diện web thân thiện** dễ sử dụng
-- 🚀 **Chạy localhost** không cần internet sau khi cài đặt
 - 🔄 **Tự động làm sạch** nội dung (loại bỏ quảng cáo, link spam)
 
-## 🚀 Cài đặt nhanh
+## 🚀 Khởi chạy nhanh
 
-### Phương pháp 1: Sử dụng script Windows (Khuyến nghị)
-
-1. **Tải về project và giải nén**
-
-2. **Chạy ứng dụng thực:**
+### Cách dễ nhất (Windows):
 ```bash
 # Double-click file này
-start_app.bat
+run.bat
 ```
 
-3. **Hoặc chạy demo:**
+### Cách thủ công:
 ```bash
-# Double-click file này để test
-start_demo.bat
-```
-
-### Phương pháp 2: Chạy thủ công
-
-1. **Cài đặt Python dependencies:**
-```bash
+# Cài đặt thư viện
 pip install -r requirements.txt
-```
 
-2. **Chạy ứng dụng thực (tải từ MeTruyenCV.com):**
-```bash
+# Chạy ứng dụng
 python app.py
+
 # Truy cập: http://localhost:5000
 ```
 
-3. **Hoặc chạy demo (dữ liệu mẫu):**
-```bash
-python demo_offline.py
-# Truy cập: http://localhost:5001
-```
-
-## 🎯 Phiên bản nào nên dùng?
-
-### 🚀 Ứng dụng thực (`app.py` - Port 5000)
-- **Tải trực tiếp** từ MeTruyenCV.com
-- **Cần kết nối internet**
-- **Tải truyện thật** về máy
-- **Khuyến nghị sử dụng**
-
-### 🎮 Demo (`demo_offline.py` - Port 5001)
-- **Chỉ để test giao diện**
-- **Không cần internet**
-- **Dữ liệu mẫu** (2 truyện)
-- **Chỉ để demo**
-
-## 📖 Hướng dẫn sử dụng chi tiết
+## 📖 Hướng dẫn sử dụng
 
 ### Bước 1: Lấy URL truyện
-1. **Truy cập MeTruyenCV.com**
-2. **Tìm truyện muốn tải**
-3. **Copy URL từ thanh địa chỉ**
-   - Ví dụ: `https://metruyencv.com/truyen/no-le-bong-toi`
-   - Ví dụ: `https://metruyencv.com/truyen/cuu-vuc-kiem-de`
+1. Truy cập **MeTruyenCV.com** và tìm truyện muốn tải
+2. Copy URL của trang truyện (không phải trang chương)
+   - ✅ Đúng: `https://metruyencv.com/truyen/no-le-bong-toi`
+   - ❌ Sai: `https://metruyencv.com/truyen/no-le-bong-toi/chuong-1`
 
-### Bước 2: Cấu hình tải
-1. **Dán URL vào ô "URL Truyện"**
-2. **Chọn phạm vi chương:**
-   - **Chương bắt đầu:** Mặc định là 1
-   - **Chương kết thúc:** Để trống để tải tất cả chương
-   - **Ví dụ:** Từ chương 1 đến 50, từ chương 100 đến 200
+### Bước 2: Sử dụng ứng dụng
+1. Dán URL vào ô "URL Truyện"
+2. Chọn phạm vi chương (ví dụ: 1-50, 1-100)
+3. Nhấn "Bắt đầu tải"
+4. Chờ hoàn thành và tải file ZIP
 
-### Bước 3: Bắt đầu tải
-1. **Nhấn nút "Bắt đầu tải"**
-2. **Theo dõi tiến trình:**
-   - Thanh progress hiển thị % hoàn thành
-   - Thông báo trạng thái hiện tại
-   - Số chương đã tải / tổng số chương
-3. **Tải file ZIP khi hoàn thành**
+## 📁 Kết quả
 
-### Bước 4: Sử dụng file đã tải
-1. **Giải nén file ZIP**
-2. **Mở các file TXT bằng:**
-   - Notepad, Notepad++
-   - Microsoft Word
-   - Bất kỳ trình đọc text nào
-
-## Cấu trúc file đầu ra
-
+File ZIP sẽ chứa các file TXT theo định dạng:
 ```
-downloads/
-├── [Tên Truyện].zip
-└── [Tên Truyện]/
-    ├── Chuong_001_[Tên Chương].txt
-    ├── Chuong_002_[Tên Chương].txt
-    └── ...
+TenTruyen.zip
+├── Chuong_001_Tieu_de_chuong.txt
+├── Chuong_002_Tieu_de_chuong.txt
+└── ...
 ```
 
-## Lưu ý quan trọng
+## ⚠️ Lưu ý quan trọng
 
-⚠️ **Chỉ sử dụng cho mục đích cá nhân và học tập**
+- ✅ **Chỉ sử dụng cho mục đích cá nhân và học tập**
+- ✅ **Tôn trọng bản quyền** của tác giả và nhà xuất bản
+- ❌ **Không sử dụng cho mục đích thương mại**
+- 💝 **Hỗ trợ tác giả** bằng cách đọc truyện trên trang chính thức
 
-- Tôn trọng bản quyền của tác giả và nhà xuất bản
-- Không sử dụng cho mục đích thương mại
-- Hỗ trợ tác giả bằng cách đọc truyện trên trang chính thức
+## 🔧 Xử lý sự cố
 
-## Khắc phục sự cố
+### Lỗi "Python chưa cài đặt":
+1. Tải Python từ https://python.org/downloads/
+2. Tick "Add Python to PATH" khi cài đặt
+3. Restart máy tính
 
-### Lỗi không tải được chương:
-- Kiểm tra URL có đúng định dạng không
+### Lỗi "Không kết nối được":
+1. Kiểm tra kết nối internet
+2. Thử truy cập MeTruyenCV.com bằng trình duyệt
+3. Tắt tạm thời antivirus/firewall
+
+### Lỗi "Không tải được chương":
 - Một số chương có thể bị khóa hoặc yêu cầu đăng nhập
-- Thử giảm tốc độ tải bằng cách tăng delay
-
-### Lỗi kết nối:
-- Kiểm tra kết nối internet
-- Website có thể tạm thời không truy cập được
-- Thử lại sau một thời gian
-
-## Công nghệ sử dụng
-
-- **Backend:** Python Flask
-- **Web Scraping:** BeautifulSoup4, Requests
-- **Frontend:** HTML, CSS, JavaScript
-- **File Processing:** Python built-in libraries
-
-## Đóng góp
-
-Nếu bạn muốn đóng góp cho project:
-
-1. Fork repository
-2. Tạo branch mới cho feature
-3. Commit changes
-4. Push to branch
-5. Tạo Pull Request
-
-## License
-
-Project này chỉ dành cho mục đích học tập và sử dụng cá nhân.
-
-## Liên hệ
-
-Nếu có vấn đề hoặc góp ý, vui lòng tạo issue trên GitHub.
+- Kiểm tra URL có đúng định dạng không
+- Thử lại với truyện khác
