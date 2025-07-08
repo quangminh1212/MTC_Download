@@ -1,39 +1,40 @@
 @echo off
+chcp 65001 >nul
 echo ========================================
 echo MeTruyenCV Downloader - Setup Script
 echo ========================================
 echo.
 
-echo [1/4] Cài đặt Python packages...
+echo [1/4] Installing Python packages...
 pip install httpx beautifulsoup4 ebooklib tqdm backoff playwright pytesseract Pillow appdirs async-lru lxml flask
 
 echo.
-echo [2/4] Cài đặt Playwright browsers...
-playwright install firefox
+echo [2/4] Installing Playwright browsers...
+python -m playwright install firefox
 
 echo.
-echo [3/4] Kiểm tra Tesseract-OCR...
+echo [3/4] Checking Tesseract-OCR...
 if not exist "Tesseract-OCR\tesseract.exe" (
-    echo CẢNH BÁO: Tesseract-OCR chưa được cài đặt!
-    echo Vui lòng tải và cài đặt Tesseract-OCR từ:
+    echo WARNING: Tesseract-OCR not installed!
+    echo Please download and install Tesseract-OCR from:
     echo https://github.com/UB-Mannheim/tesseract/wiki
-    echo Sau đó copy thư mục Tesseract-OCR vào thư mục dự án này.
+    echo Then copy Tesseract-OCR folder to this project directory.
     echo.
 ) else (
-    echo Tesseract-OCR đã được tìm thấy!
+    echo Tesseract-OCR found!
 )
 
 echo.
-echo [4/4] Kiểm tra cài đặt...
-python -c "import httpx, bs4, ebooklib, tqdm, backoff, playwright, pytesseract, PIL, appdirs, async_lru; print('✓ Tất cả packages đã được cài đặt thành công!')"
+echo [4/4] Checking installation...
+python -c "import httpx, bs4, ebooklib, tqdm, backoff, playwright, pytesseract, PIL, appdirs, async_lru; print('All packages installed successfully!')"
 
 echo.
 echo ========================================
-echo Setup hoàn tất!
+echo Setup completed!
 echo ========================================
 echo.
-echo Để chạy ứng dụng:
-echo - Chạy main.py: python main.py (phiên bản console)
-echo - Chạy fast.py: python fast.py (phiên bản nhanh hơn)
+echo To run the application:
+echo - Run main.py: python main.py (basic version)
+echo - Run fast.py: python fast.py (faster version)
 echo.
 pause
