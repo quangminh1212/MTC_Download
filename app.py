@@ -14,7 +14,6 @@ from datetime import datetime, timedelta
 from functools import wraps
 from flask import Flask, render_template, request, jsonify, redirect, url_for, g
 from flask_socketio import SocketIO, emit
-import eventlet
 
 # Import existing modules
 from config_manager import ConfigManager
@@ -36,7 +35,7 @@ logging.basicConfig(
 app.logger.setLevel(logging.INFO)
 
 # Initialize SocketIO
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode='eventlet', logger=True, engineio_logger=True)
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode='gevent', logger=True, engineio_logger=True)
 
 # Simple in-memory cache
 class SimpleCache:

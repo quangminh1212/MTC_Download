@@ -99,13 +99,13 @@ if exist "requirements_web.txt" (
     pip install -r requirements_web.txt
     if errorlevel 1 (
         echo Loi cai dat web dependencies!
-        echo Thu cai dat thu cong: pip install Flask Flask-SocketIO eventlet
+        echo Thu cai dat thu cong: pip install Flask Flask-SocketIO gevent gevent-websocket
         pause
         exit /b 1
     )
 ) else (
     echo Khong tim thay requirements_web.txt, cai dat dependencies co ban...
-    pip install Flask==3.0.0 Flask-SocketIO==5.3.6 eventlet==0.33.3
+    pip install Flask==3.0.0 Flask-SocketIO==5.3.6 gevent==23.9.1 gevent-websocket==0.10.1
 )
 
 echo Web dependencies da duoc cai dat
