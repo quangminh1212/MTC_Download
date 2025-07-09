@@ -22,7 +22,8 @@ download_status = {
     'total_chapters': 0,
     'success_count': 0,
     'story_folder': '',
-    'message': ''
+    'message': '',
+    'stop_requested': False
 }
 
 @app.route('/')
@@ -61,7 +62,8 @@ def start_download():
         'total_chapters': 0,
         'success_count': 0,
         'story_folder': '',
-        'message': 'Đang khởi tạo...'
+        'message': 'Đang khởi tạo...',
+        'stop_requested': False
     })
     
     # Chạy download trong thread riêng
@@ -81,6 +83,18 @@ def get_status():
     """API trả về trạng thái hiện tại"""
     return jsonify(download_status)
 
+@app.route('/stop', methods=['POST'])
+def stop_download():
+    """Dừng quá trình tải truyện"""
+    global download_status
+
+    if download_status['is_downloading']:
+        download_status['stop_requested'] = True
+        download_status['message'] = 'Đang dừng tiến trình...'
+        return jsonify({'success': True, 'message': 'Đã yêu cầu dừng tiến trình'})
+    else:
+        return jsonify({'success': False, 'message': 'Không có tiến trình nào đang chạy'})
+
 def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"):
     """Worker function để tải truyện trong background"""
     global download_status
@@ -93,6 +107,7 @@ def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"
         if not story_folder:
             download_status.update({
                 'is_downloading': False,
+                'stop_requested': False,
                 'message': 'Lỗi: Không thể lấy thông tin truyện!'
             })
             return
@@ -106,6 +121,7 @@ def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"
         if not chapters:
             download_status.update({
                 'is_downloading': False,
+                'stop_requested': False,
                 'message': 'Lỗi: Không tìm thấy chương nào!'
             })
             return
@@ -122,27 +138,37 @@ def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"
         # Tải từng chương
         success = 0
         for i, chapter in enumerate(chapters_to_download, 1):
+            # Kiểm tra nếu có yêu cầu dừng
+            if download_status['stop_requested']:
+                download_status.update({
+                    'is_downloading': False,
+                    'message': f'Đã dừng! Đã tải {success}/{len(chapters_to_download)} chương vào thư mục: {story_folder}'
+                })
+                return
+
             download_status.update({
                 'current_chapter': chapter['title'],
                 'progress': i,
                 'message': f'Đang tải: {chapter["title"]}'
             })
-            
+
             if download_chapter(chapter['url'], chapter['title'], story_folder, browser_choice):
                 success += 1
-            
+
             download_status['success_count'] = success
             time.sleep(1)  # Nghỉ 1 giây
         
         # Hoàn thành
         download_status.update({
             'is_downloading': False,
+            'stop_requested': False,
             'message': f'Hoàn thành! Đã tải {success}/{len(chapters_to_download)} chương vào thư mục: {story_folder}'
         })
-        
+
     except Exception as e:
         download_status.update({
             'is_downloading': False,
+            'stop_requested': False,
             'message': f'Lỗi: {str(e)}'
         })
 

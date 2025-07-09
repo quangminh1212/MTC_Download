@@ -137,19 +137,39 @@
             text-decoration: none;
             display: inline-block;
             text-align: center;
-            margin-top: 20px;
+            margin: 10px 0;
         }
-        
+
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
         }
-        
+
         .btn.disabled {
             background: #ccc;
             cursor: not-allowed;
             transform: none;
             box-shadow: none;
+        }
+
+        .btn.stop {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+        }
+
+        .btn.stop:hover {
+            background: linear-gradient(135deg, #ff5252 0%, #d32f2f 100%);
+            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button-group .btn {
+            flex: 1;
+            margin: 0;
         }
         
         .spinner {
@@ -213,13 +233,39 @@
                 </div>
             </div>
         </div>
-        
-        <a href="/" id="back-btn" class="btn disabled">🏠 Về trang chủ</a>
+
+        <div class="button-group">
+            <button id="stop-btn" class="btn stop" onclick="stopDownload()" style="display: none;">⏹️ Dừng tải</button>
+            <a href="/" id="back-btn" class="btn disabled">🏠 Về trang chủ</a>
+        </div>
     </div>
 
     <script>
         let isCompleted = false;
-        
+
+        function stopDownload() {
+            if (confirm('Bạn có chắc chắn muốn dừng tiến trình tải?')) {
+                fetch('/stop', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('stop-btn').style.display = 'none';
+                    } else {
+                        alert(data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error stopping download:', error);
+                    alert('Lỗi khi dừng tiến trình');
+                });
+            }
+        }
+
         function updateStatus() {
             fetch('/status')
                 .then(response => response.json())
@@ -257,16 +303,25 @@
                         Math.round((data.success_count / data.total_chapters) * 100) : 0;
                     document.getElementById('success-rate').textContent = successRate + '%';
                     
-                    // Handle completion
+                    // Handle completion and stop button visibility
                     const spinner = document.getElementById('spinner');
                     const backBtn = document.getElementById('back-btn');
-                    
+                    const stopBtn = document.getElementById('stop-btn');
+
+                    // Show/hide stop button based on download status
+                    if (data.is_downloading && !data.stop_requested) {
+                        stopBtn.style.display = 'block';
+                    } else {
+                        stopBtn.style.display = 'none';
+                    }
+
                     if (!data.is_downloading && !isCompleted) {
                         isCompleted = true;
                         spinner.style.display = 'none';
                         backBtn.classList.remove('disabled');
-                        
-                        if (data.message.includes('Hoàn thành')) {
+                        stopBtn.style.display = 'none';
+
+                        if (data.message.includes('Hoàn thành') || data.message.includes('Đã dừng')) {
                             messageEl.classList.add('completed');
                         } else if (data.message.includes('Lỗi')) {
                             messageEl.classList.add('error');
