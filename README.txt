@@ -7,6 +7,8 @@ MeTruyenCV Downloader - Web Interface
 2. Chạy file run.bat
 3. Trình duyệt sẽ tự động mở tại http://localhost:3000
 4. Nhập thông tin truyện vào form:
+   - Bật đăng nhập nếu truyện yêu cầu tài khoản
+   - Nhập tên đăng nhập/email và mật khẩu (nếu cần)
    - URL truyện từ metruyencv.com
    - Chương bắt đầu (mặc định 1)
    - Chương kết thúc (để trống = tải hết)
@@ -32,6 +34,7 @@ MeTruyenCV Downloader - Web Interface
 ✨ TÍNH NĂNG KHÁC:
 - Giao diện web đơn giản, dễ sử dụng
 - Tìm kiếm truyện trực tiếp trên localhost
+- ĐĂNG NHẬP TỰ ĐỘNG: Hỗ trợ đăng nhập tài khoản MeTruyenCV
 - Theo dõi tiến trình tải real-time
 - Tự động tạo thư mục theo tên truyện
 - Mỗi chương được lưu thành file .txt riêng
@@ -44,7 +47,13 @@ MeTruyenCV Downloader - Web Interface
     "story_url": "https://metruyencv.com/truyen/ten-truyen",
     "start_chapter": 1,
     "end_chapter": 3,
-    "browser": "auto"
+    "browser": "auto",
+    "login": {
+        "enabled": false,
+        "username": "",
+        "password": "",
+        "note": "Đặt enabled = true để bật đăng nhập tự động"
+    }
 }
 
 🆕 CÁCH SỬ DỤNG MỚI:

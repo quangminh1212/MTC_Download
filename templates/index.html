@@ -138,6 +138,43 @@
             font-size: 12px;
             color: #0066cc;
         }
+
+        .login-section {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .login-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .login-fields {
+            display: none;
+        }
+
+        .login-fields.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -153,13 +190,39 @@
         </div>
         
         <form action="/download" method="POST">
+            <div class="login-section">
+                <h3>🔐 Cấu hình đăng nhập</h3>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="enable_login" name="enable_login" onchange="toggleLoginFields()">
+                    <label for="enable_login">Bật đăng nhập tự động</label>
+                </div>
+
+                <div class="login-fields" id="login_fields">
+                    <div class="form-group">
+                        <label for="username">👤 Tên đăng nhập/Email:</label>
+                        <input type="text" id="username" name="username"
+                               placeholder="Nhập tên đăng nhập hoặc email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">🔒 Mật khẩu:</label>
+                        <input type="password" id="password" name="password"
+                               placeholder="Nhập mật khẩu">
+                    </div>
+
+                    <div style="font-size: 12px; color: #666; margin-top: 10px;">
+                        💡 Thông tin đăng nhập sẽ được lưu vào config.json để sử dụng cho các lần tải tiếp theo
+                    </div>
+                </div>
+            </div>
+
             <div class="form-group">
                 <label for="story_url">🔗 URL Truyện:</label>
-                <input type="url" id="story_url" name="story_url" 
-                       placeholder="https://metruyencv.com/truyen/ten-truyen" 
+                <input type="url" id="story_url" name="story_url"
+                       placeholder="https://metruyencv.com/truyen/ten-truyen"
                        required>
             </div>
-            
+
             <div class="form-row">
                 <div class="form-group">
                     <label for="start_chapter">📖 Chương bắt đầu:</label>
@@ -174,8 +237,6 @@
                 </div>
             </div>
 
-
-            
             <button type="submit" class="btn">🚀 Bắt đầu tải truyện</button>
         </form>
         
@@ -185,14 +246,42 @@
                 <li>Nhập URL đầy đủ của truyện từ MeTruyenCV.com</li>
                 <li>Chọn chương bắt đầu (mặc định là chương 1)</li>
                 <li>Chương kết thúc để trống sẽ tải hết tất cả chương</li>
+                <li>Bật đăng nhập nếu truyện yêu cầu tài khoản</li>
                 <li>Hệ thống sẽ tự động chọn trình duyệt phù hợp</li>
                 <li>Truyện sẽ được lưu vào thư mục riêng theo tên truyện</li>
             </ul>
-            
+
             <div class="example">
                 Ví dụ URL: https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong
             </div>
         </div>
     </div>
+
+    <script>
+        function toggleLoginFields() {
+            const checkbox = document.getElementById('enable_login');
+            const loginFields = document.getElementById('login_fields');
+
+            if (checkbox.checked) {
+                loginFields.classList.add('active');
+            } else {
+                loginFields.classList.remove('active');
+            }
+        }
+
+        // Load saved login config on page load
+        window.addEventListener('load', function() {
+            fetch('/get-login-config')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.enabled) {
+                        document.getElementById('enable_login').checked = true;
+                        document.getElementById('username').value = data.username || '';
+                        toggleLoginFields();
+                    }
+                })
+                .catch(error => console.log('No saved login config'));
+        });
+    </script>
 </body>
 </html>

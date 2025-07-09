@@ -113,19 +113,67 @@ def search_stories():
     except Exception as e:
         return jsonify({'error': f'Lỗi hệ thống: {str(e)}'})
 
+@app.route('/get-login-config')
+def get_login_config():
+    """Lấy cấu hình đăng nhập hiện tại"""
+    try:
+        from downloader import load_config
+        config = load_config()
+        if config and 'login' in config:
+            login_config = config['login']
+            # Không trả về password vì lý do bảo mật
+            return jsonify({
+                'enabled': login_config.get('enabled', False),
+                'username': login_config.get('username', '')
+            })
+        return jsonify({'enabled': False, 'username': ''})
+    except:
+        return jsonify({'enabled': False, 'username': ''})
+
+def update_login_config(enabled, username, password):
+    """Cập nhật cấu hình đăng nhập vào config.json"""
+    try:
+        import json
+        from downloader import load_config
+
+        config = load_config()
+        if not config:
+            config = {}
+
+        config['login'] = {
+            'enabled': enabled,
+            'username': username,
+            'password': password,
+            'note': 'Đặt enabled = true để bật đăng nhập tự động'
+        }
+
+        with open('config.json', 'w', encoding='utf-8') as f:
+            json.dump(config, f, ensure_ascii=False, indent=4)
+
+        print(f"✓ Đã cập nhật cấu hình đăng nhập: {username}")
+        return True
+    except Exception as e:
+        print(f"❌ Lỗi khi cập nhật config: {e}")
+        return False
+
 @app.route('/download', methods=['POST'])
 def start_download():
     """Bắt đầu quá trình tải truyện"""
     global download_status
-    
+
     if download_status['is_downloading']:
         return jsonify({'error': 'Đang có quá trình tải khác đang chạy!'})
-    
+
     # Lấy dữ liệu từ form
     story_url = request.form.get('story_url', '').strip()
     start_chapter = int(request.form.get('start_chapter', 1))
     end_chapter = request.form.get('end_chapter', '')
     browser_choice = "auto"  # Luôn sử dụng auto
+
+    # Lấy thông tin đăng nhập
+    enable_login = request.form.get('enable_login') == 'on'
+    username = request.form.get('username', '').strip()
+    password = request.form.get('password', '').strip()
 
     if not story_url:
         return jsonify({'error': 'Vui lòng nhập URL truyện!'})
@@ -135,6 +183,10 @@ def start_download():
         end_chapter = int(end_chapter) if end_chapter else None
     except ValueError:
         end_chapter = None
+
+    # Cập nhật config với thông tin đăng nhập
+    if enable_login and username and password:
+        update_login_config(enable_login, username, password)
     
     # Reset trạng thái
     download_status.update({
@@ -183,13 +235,18 @@ def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"
     driver = None
 
     try:
+        # Đọc config để lấy thông tin đăng nhập
+        from downloader import load_config
+        config = load_config()
+        login_config = config.get('login', {}) if config else {}
+
         # Tạo WebDriver một lần duy nhất
         download_status['message'] = 'Đang khởi tạo trình duyệt...'
         driver = create_driver(browser_choice)
 
         # Lấy thông tin truyện
         download_status['message'] = 'Đang lấy thông tin truyện...'
-        story_folder = get_story_info(story_url, driver, browser_choice)
+        story_folder = get_story_info(story_url, driver, browser_choice, login_config)
 
         if not story_folder:
             download_status.update({
@@ -203,7 +260,7 @@ def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"
 
         # Lấy danh sách chương
         download_status['message'] = 'Đang lấy danh sách chương...'
-        chapters = get_chapters(story_url, driver, browser_choice)
+        chapters = get_chapters(story_url, driver, browser_choice, login_config)
 
         if not chapters:
             download_status.update({
@@ -239,7 +296,7 @@ def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"
                 'message': f'Đang tải: {chapter["title"]}'
             })
 
-            if download_chapter(chapter['url'], chapter['title'], story_folder, driver, browser_choice):
+            if download_chapter(chapter['url'], chapter['title'], story_folder, driver, browser_choice, login_config):
                 success += 1
 
             download_status['success_count'] = success
