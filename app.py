@@ -35,7 +35,7 @@ logging.basicConfig(
 app.logger.setLevel(logging.INFO)
 
 # Initialize SocketIO
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode='gevent', logger=True, engineio_logger=True)
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode='gevent', logger=False, engineio_logger=False)
 
 # Simple in-memory cache
 class SimpleCache:
@@ -117,8 +117,17 @@ download_status = {
 def serialize_status_for_json(status_dict):
     """Convert download_status to JSON-serializable format"""
     status_copy = status_dict.copy()
+
+    # Handle datetime serialization
     if status_copy.get('start_time') and hasattr(status_copy['start_time'], 'strftime'):
         status_copy['start_time'] = status_copy['start_time'].strftime('%Y-%m-%d %H:%M:%S')
+
+    # Ensure all string values are properly encoded
+    for key, value in status_copy.items():
+        if isinstance(value, str):
+            # Ensure proper Unicode handling
+            status_copy[key] = value.encode('utf-8').decode('utf-8')
+
     return status_copy
 
 # Performance middleware
@@ -546,7 +555,10 @@ def start_download_background(novel_url, start_chapter, end_chapter):
             'logs': []
         })
 
-        socketio.emit('download_started', serialize_status_for_json(download_status))
+        try:
+            socketio.emit('download_started', serialize_status_for_json(download_status))
+        except Exception as emit_error:
+            app.logger.error(f'Error emitting download_started: {str(emit_error)}')
         
         # Create downloader instance
         downloader = WebDownloader(config_manager, socketio)
@@ -561,10 +573,13 @@ def start_download_background(novel_url, start_chapter, end_chapter):
             'progress': 100 if success else download_status['progress']
         })
 
-        socketio.emit('download_completed', {
-            'success': success,
-            'status': serialize_status_for_json(download_status)
-        })
+        try:
+            socketio.emit('download_completed', {
+                'success': success,
+                'status': serialize_status_for_json(download_status)
+            })
+        except Exception as emit_error:
+            app.logger.error(f'Error emitting download_completed: {str(emit_error)}')
         
     except Exception as e:
         download_status.update({
@@ -572,26 +587,40 @@ def start_download_background(novel_url, start_chapter, end_chapter):
             'status_message': f'Lỗi: {str(e)}',
         })
 
-        socketio.emit('download_error', {
-            'error': str(e),
-            'status': serialize_status_for_json(download_status)
-        })
+        try:
+            socketio.emit('download_error', {
+                'error': str(e),
+                'status': serialize_status_for_json(download_status)
+            })
+        except Exception as emit_error:
+            app.logger.error(f'Error emitting download_error: {str(emit_error)}')
 
 def add_log(message, level='info'):
     """Thêm log message"""
-    log_entry = {
-        'timestamp': datetime.now().strftime('%H:%M:%S'),
-        'level': level,
-        'message': message
-    }
-    download_status['logs'].append(log_entry)
-    
-    # Keep only last 100 logs
-    if len(download_status['logs']) > 100:
-        download_status['logs'] = download_status['logs'][-100:]
-    
-    # Emit to clients
-    socketio.emit('new_log', log_entry)
+    try:
+        # Ensure message is properly encoded
+        if isinstance(message, str):
+            message = message.encode('utf-8').decode('utf-8')
+
+        log_entry = {
+            'timestamp': datetime.now().strftime('%H:%M:%S'),
+            'level': level,
+            'message': message
+        }
+        download_status['logs'].append(log_entry)
+
+        # Keep only last 100 logs
+        if len(download_status['logs']) > 100:
+            download_status['logs'] = download_status['logs'][-100:]
+
+        # Emit to clients
+        try:
+            socketio.emit('new_log', log_entry)
+        except Exception as emit_error:
+            app.logger.error(f'Error emitting new_log: {str(emit_error)}')
+
+    except Exception as e:
+        app.logger.error(f'Error in add_log: {str(e)}')
 
 if __name__ == '__main__':
     print("🌐 Khởi động MeTruyenCV Web Interface...")
