@@ -64,59 +64,55 @@ def get_chapters(story_url):
             print(f"Lỗi HTTP: {response.status_code}")
             return []
 
-        soup = BeautifulSoup(response.content, 'html.parser')
+        # Trang này sử dụng JavaScript để load chương động
+        # Thử tạo URL chương từ pattern
+        print("Trang web sử dụng JavaScript để load chương động")
+        print("Thử tạo danh sách chương từ pattern...")
 
-        # Debug: Lưu HTML để kiểm tra
-        with open('debug_page.html', 'w', encoding='utf-8') as f:
-            f.write(soup.prettify())
-        print("Đã lưu HTML vào debug_page.html để kiểm tra")
-
-        # Thử nhiều cách tìm link chương
-        print("Đang tìm link chương...")
-
-        # Cách 1: Tìm theo href chứa '/chuong-'
-        chapter_links = soup.find_all('a', href=lambda x: x and '/chuong-' in x)
-        print(f"Cách 1 - Tìm thấy {len(chapter_links)} link chứa '/chuong-'")
-
-        # Cách 2: Tìm theo href chứa 'chuong'
-        if not chapter_links:
-            chapter_links = soup.find_all('a', href=lambda x: x and 'chuong' in x.lower())
-            print(f"Cách 2 - Tìm thấy {len(chapter_links)} link chứa 'chuong'")
-
-        # Cách 3: Tìm tất cả link và filter
-        if not chapter_links:
-            all_links = soup.find_all('a', href=True)
-            chapter_links = [link for link in all_links if 'chuong' in link.get('href', '').lower()]
-            print(f"Cách 3 - Tìm thấy {len(chapter_links)} link từ tất cả {len(all_links)} link")
-
-        # Debug: In ra một vài link đầu tiên
-        if chapter_links:
-            print("Một vài link đầu tiên:")
-            for i, link in enumerate(chapter_links[:5]):
-                href = link.get('href', '')
-                text = link.text.strip()
-                print(f"  {i+1}. {text} -> {href}")
-        else:
-            print("Không tìm thấy link chương nào!")
-            # In ra một vài link bất kỳ để debug
-            all_links = soup.find_all('a', href=True)[:10]
-            print("Một vài link bất kỳ trên trang:")
-            for i, link in enumerate(all_links):
-                href = link.get('href', '')
-                text = link.text.strip()[:50]
-                print(f"  {i+1}. {text} -> {href}")
+        # Lấy slug từ URL
+        slug = story_url.split('/')[-1]  # tan-the-chi-sieu-thi-he-thong
 
         chapters = []
-        for link in chapter_links:
-            url = link.get('href')
-            title = link.text.strip()
 
-            if url and title:
-                if not url.startswith('http'):
-                    url = 'https://metruyencv.com' + url
-                chapters.append({"title": title, "url": url})
+        # Thử tạo URL cho 608 chương (số từ HTML)
+        for i in range(1, 609):  # 608 chương
+            chapter_url = f"https://metruyencv.com/truyen/{slug}/chuong-{i}"
+            chapter_title = f"Chương {i}"
+            chapters.append({"title": chapter_title, "url": chapter_url})
 
-        print(f"Tìm thấy {len(chapters)} chương hợp lệ")
+        print(f"Đã tạo {len(chapters)} chương từ pattern")
+
+        # Test chương đầu tiên để xem có hoạt động không
+        if chapters:
+            print("Đang test chương đầu tiên...")
+            test_response = requests.get(chapters[0]['url'], headers=headers, timeout=10)
+            print(f"Test chương 1 - Status: {test_response.status_code}")
+
+            if test_response.status_code == 200:
+                print("✓ Pattern URL hoạt động!")
+            else:
+                print("✗ Pattern URL không hoạt động")
+
+                # Fallback: Thử tìm link trong HTML
+                print("Fallback: Tìm link trong HTML...")
+                soup = BeautifulSoup(response.content, 'html.parser')
+
+                # Tìm link chương đầu tiên từ nút "Đọc Truyện"
+                read_button = soup.find('button', onclick=lambda x: x and 'chuong-1' in x)
+                if read_button:
+                    onclick = read_button.get('onclick', '')
+                    if 'location.href=' in onclick:
+                        first_chapter_url = onclick.split("'")[1]
+                        print(f"Tìm thấy chương đầu từ nút Đọc: {first_chapter_url}")
+
+                        # Tạo lại danh sách từ URL này
+                        base_url = first_chapter_url.rsplit('/chuong-', 1)[0]
+                        chapters = []
+                        for i in range(1, 609):
+                            chapter_url = f"{base_url}/chuong-{i}"
+                            chapter_title = f"Chương {i}"
+                            chapters.append({"title": chapter_title, "url": chapter_url})
+
         return chapters
 
     except Exception as e:
