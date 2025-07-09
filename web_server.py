@@ -9,6 +9,8 @@ import os
 import json
 import threading
 import time
+import requests
+from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, jsonify, redirect, url_for
 from downloader import get_story_info, get_chapters, download_chapter
 
@@ -31,6 +33,86 @@ def index():
     """Trang chủ với form nhập liệu"""
     return render_template('index.html')
 
+@app.route('/search-page')
+def search_page():
+    """Trang tìm kiếm truyện"""
+    return render_template('search.html')
+
+@app.route('/search', methods=['POST'])
+def search_stories():
+    """API tìm kiếm truyện trên MeTruyenCV"""
+    try:
+        data = request.get_json()
+        query = data.get('query', '').strip()
+
+        if not query:
+            return jsonify({'error': 'Vui lòng nhập từ khóa tìm kiếm'})
+
+        # Tìm kiếm trên MeTruyenCV
+        search_url = f"https://metruyencv.com/tim-kiem?q={query}"
+
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+
+        response = requests.get(search_url, headers=headers, timeout=10)
+        response.raise_for_status()
+
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        stories = []
+        # Tìm các item truyện trong kết quả tìm kiếm
+        story_items = soup.find_all('div', class_='story-item') or soup.find_all('div', class_='item')
+
+        if not story_items:
+            # Thử tìm với selector khác
+            story_items = soup.select('.story-list .item, .list-story .item, .search-results .item')
+
+        for item in story_items[:10]:  # Giới hạn 10 kết quả
+            try:
+                # Tìm tiêu đề và link
+                title_elem = item.find('a') or item.find('h3')
+                if not title_elem:
+                    continue
+
+                title = title_elem.get_text(strip=True)
+                url = title_elem.get('href', '')
+
+                if url and not url.startswith('http'):
+                    url = 'https://metruyencv.com' + url
+
+                # Tìm mô tả
+                desc_elem = item.find('p') or item.find('div', class_='desc')
+                description = desc_elem.get_text(strip=True) if desc_elem else ''
+
+                # Tìm thông tin cập nhật
+                updated_elem = item.find('span', class_='time') or item.find('time')
+                updated = updated_elem.get_text(strip=True) if updated_elem else ''
+
+                # Tìm lượt xem
+                views_elem = item.find('span', class_='view')
+                views = views_elem.get_text(strip=True) if views_elem else ''
+
+                if title and url:
+                    stories.append({
+                        'title': title,
+                        'url': url,
+                        'description': description[:200] + '...' if len(description) > 200 else description,
+                        'updated': updated,
+                        'views': views
+                    })
+
+            except Exception as e:
+                print(f"Lỗi khi parse story item: {e}")
+                continue
+
+        return jsonify({'stories': stories})
+
+    except requests.RequestException as e:
+        return jsonify({'error': f'Lỗi kết nối: {str(e)}'})
+    except Exception as e:
+        return jsonify({'error': f'Lỗi hệ thống: {str(e)}'})
+
 @app.route('/download', methods=['POST'])
 def start_download():
     """Bắt đầu quá trình tải truyện"""
@@ -43,7 +125,7 @@ def start_download():
     story_url = request.form.get('story_url', '').strip()
     start_chapter = int(request.form.get('start_chapter', 1))
     end_chapter = request.form.get('end_chapter', '')
-    browser_choice = request.form.get('browser', 'auto')
+    browser_choice = "auto"  # Luôn sử dụng auto
 
     if not story_url:
         return jsonify({'error': 'Vui lòng nhập URL truyện!'})

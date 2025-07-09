@@ -10,7 +10,7 @@ MeTruyenCV Downloader - Web Interface
    - URL truyện từ metruyencv.com
    - Chương bắt đầu (mặc định 1)
    - Chương kết thúc (để trống = tải hết)
-   - Chọn trình duyệt (mặc định tự động)
+   - HOẶC sử dụng tính năng "Tìm kiếm truyện trực tiếp"
 5. Nhấn "Bắt đầu tải truyện"
 6. Theo dõi tiến trình tải trên trang web
 
@@ -22,19 +22,21 @@ MeTruyenCV Downloader - Web Interface
 - test.py: Test trình duyệt
 - templates/: Giao diện HTML
 
-🌐 TÍNH NĂNG CHỌN TRÌNH DUYỆT:
-- Auto: Tự động chọn (Edge → Firefox → Chrome → Brave)
-- Edge: Microsoft Edge (mặc định Windows)
-- Firefox: Mozilla Firefox
-- Chrome: Google Chrome
-- Brave: Brave Browser
+🔍 TÍNH NĂNG TÌM KIẾM TRUYỆN:
+- Tìm kiếm trực tiếp trên localhost
+- Không cần biết URL chính xác
+- Hiển thị kết quả với mô tả và thông tin
+- Tải truyện ngay từ kết quả tìm kiếm
+- Tự động chọn trình duyệt phù hợp
 
 ✨ TÍNH NĂNG KHÁC:
 - Giao diện web đơn giản, dễ sử dụng
+- Tìm kiếm truyện trực tiếp trên localhost
 - Theo dõi tiến trình tải real-time
 - Tự động tạo thư mục theo tên truyện
 - Mỗi chương được lưu thành file .txt riêng
 - Sử dụng Selenium để xử lý JavaScript động
+- Tự động chọn trình duyệt phù hợp
 
 📝 CẤU HÌNH CONFIG.JSON:
 {
@@ -43,6 +45,13 @@ MeTruyenCV Downloader - Web Interface
     "end_chapter": 3,
     "browser": "auto"
 }
+
+🆕 CÁCH SỬ DỤNG MỚI:
+1. Chạy run.bat
+2. Mở http://localhost:3000
+3. Chọn "Tìm kiếm truyện trực tiếp"
+4. Nhập tên truyện cần tìm
+5. Chọn truyện từ kết quả và nhấn "Tải truyện này"
 
 🧪 TEST TRÌNH DUYỆT:
 Chạy: python test.py

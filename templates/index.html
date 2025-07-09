@@ -145,6 +145,11 @@
         <div class="header">
             <h1>📚 MeTruyenCV Downloader</h1>
             <p>Tải truyện từ MeTruyenCV.com một cách đơn giản</p>
+            <div style="margin-top: 15px;">
+                <a href="/search-page" style="color: #667eea; text-decoration: none; font-weight: bold;">
+                    🔍 Tìm kiếm truyện trực tiếp
+                </a>
+            </div>
         </div>
         
         <form action="/download" method="POST">
@@ -169,16 +174,7 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label for="browser">🌐 Trình duyệt:</label>
-                <select id="browser" name="browser">
-                    <option value="auto">🔄 Tự động chọn (Edge → Firefox → Chrome → Brave)</option>
-                    <option value="edge">🔷 Microsoft Edge</option>
-                    <option value="firefox">🦊 Mozilla Firefox</option>
-                    <option value="chrome">🟢 Google Chrome</option>
-                    <option value="brave">🦁 Brave Browser</option>
-                </select>
-            </div>
+
             
             <button type="submit" class="btn">🚀 Bắt đầu tải truyện</button>
         </form>
@@ -189,7 +185,7 @@
                 <li>Nhập URL đầy đủ của truyện từ MeTruyenCV.com</li>
                 <li>Chọn chương bắt đầu (mặc định là chương 1)</li>
                 <li>Chương kết thúc để trống sẽ tải hết tất cả chương</li>
-                <li>Chọn trình duyệt để tải (mặc định tự động chọn)</li>
+                <li>Hệ thống sẽ tự động chọn trình duyệt phù hợp</li>
                 <li>Truyện sẽ được lưu vào thư mục riêng theo tên truyện</li>
             </ul>
             
