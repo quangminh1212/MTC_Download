@@ -1,44 +1,34 @@
-HƯỚNG DẪN SỬ DỤNG MeTruyenCV Downloader
-==========================================
+MeTruyenCV Downloader - Web Interface
+=====================================
 
-CÁCH 1: SỬ DỤNG FILE BATCH (WINDOWS)
-------------------------------------
-Double-click vào file run.bat
+🚀 HƯỚNG DẪN SỬ DỤNG:
 
-CÁCH 2: SỬ DỤNG THỦ CÔNG
-------------------------
+1. Cài đặt Python 3.7+ trên máy tính
+2. Chạy file run.bat
+3. Trình duyệt sẽ tự động mở tại http://localhost:3000
+4. Nhập thông tin truyện vào form:
+   - URL truyện từ metruyencv.com
+   - Chương bắt đầu (mặc định 1)
+   - Chương kết thúc (để trống = tải hết)
+5. Nhấn "Bắt đầu tải truyện"
+6. Theo dõi tiến trình tải trên trang web
 
-BƯỚC 1: Cấu hình
-----------------
-Mở file config.json và chỉnh sửa:
-{
-    "story_url": "URL_TRUYEN_CUA_BAN",
-    "start_chapter": 1,
-    "end_chapter": 10
-}
+📁 CẤU TRÚC DỰ ÁN:
+- app.py: Web server chính
+- ultra_simple.py: Logic tải truyện
+- templates/: Giao diện HTML
+- run.bat: File khởi động
+- config.json: Cấu hình mẫu (không bắt buộc với web interface)
 
-Trong đó:
-- story_url: Link truyện cần tải
-- start_chapter: Chương bắt đầu (mặc định 1)
-- end_chapter: Chương kết thúc (null = tải hết)
+✨ TÍNH NĂNG:
+- Giao diện web đơn giản, dễ sử dụng
+- Theo dõi tiến trình tải real-time
+- Tự động tạo thư mục theo tên truyện
+- Mỗi chương được lưu thành file .txt riêng
 
-VÍ DỤ:
-- Tải hết: "end_chapter": null
-- Tải 10 chương đầu: "end_chapter": 10
-- Tải từ chương 5 đến 15: "start_chapter": 5, "end_chapter": 15
+⚠️ LƯU Ý:
+- Nội dung có thể vẫn bị mã hóa (đang nghiên cứu giải pháp)
+- Nhấn Ctrl+C trong terminal để dừng web server
 
-BƯỚC 2: Chạy
-------------
-python ultra_simple.py
-
-KẾT QUẢ:
---------
-- Truyện sẽ được tải vào thư mục có tên truyện
-- Mỗi chương là 1 file .txt riêng
-- Chương trình tải theo cấu hình trong config.json
-
-LƯU Ý:
--------
-- Không cần Chrome hay ChromeDriver
-- Chỉ cần Python với requests và beautifulsoup4
-- Nếu lỗi, thử chạy lại
+📖 VÍ DỤ URL:
+https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong

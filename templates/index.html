@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeTruyenCV Downloader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .note {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .note h4 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .note ul {
+            color: #666;
+            font-size: 13px;
+            margin-left: 20px;
+        }
+        
+        .note li {
+            margin-bottom: 4px;
+        }
+        
+        .example {
+            background: #e8f4fd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 MeTruyenCV Downloader</h1>
+            <p>Tải truyện từ MeTruyenCV.com một cách đơn giản</p>
+        </div>
+        
+        <form action="/download" method="POST">
+            <div class="form-group">
+                <label for="story_url">🔗 URL Truyện:</label>
+                <input type="url" id="story_url" name="story_url" 
+                       placeholder="https://metruyencv.com/truyen/ten-truyen" 
+                       required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="start_chapter">📖 Chương bắt đầu:</label>
+                    <input type="number" id="start_chapter" name="start_chapter" 
+                           value="1" min="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="end_chapter">📖 Chương kết thúc:</label>
+                    <input type="number" id="end_chapter" name="end_chapter" 
+                           placeholder="Để trống = tải hết" min="1">
+                </div>
+            </div>
+            
+            <button type="submit" class="btn">🚀 Bắt đầu tải truyện</button>
+        </form>
+        
+        <div class="note">
+            <h4>📝 Hướng dẫn sử dụng:</h4>
+            <ul>
+                <li>Nhập URL đầy đủ của truyện từ MeTruyenCV.com</li>
+                <li>Chọn chương bắt đầu (mặc định là chương 1)</li>
+                <li>Chương kết thúc để trống sẽ tải hết tất cả chương</li>
+                <li>Truyện sẽ được lưu vào thư mục riêng theo tên truyện</li>
+            </ul>
+            
+            <div class="example">
+                Ví dụ URL: https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong
+            </div>
+        </div>
+    </div>
+</body>
+</html>

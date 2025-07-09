@@ -244,23 +244,57 @@ def download_chapter(chapter_url, chapter_title, story_folder):
 
         for script in scripts:
             script_text = script.get_text()
-            if 'window.chapterData' in script_text and 'content:' in script_text:
+            if 'window.chapterData' in script_text:
 
                 # Extract content từ JavaScript
                 try:
-                    # Tìm phần content: "..."
-                    content_match = re.search(r'content:\s*"([^"]+)"', script_text)
-                    if content_match:
-                        encoded_content = content_match.group(1)
+                    # Tìm phần textlinks trong chapterData
+                    textlinks_match = re.search(r'textlinks:\s*\[(.*?)\]', script_text, re.DOTALL)
+                    if textlinks_match:
+                        textlinks_str = textlinks_match.group(1)
 
-                        # Decode nội dung với nhiều phương pháp
-                        content = decode_content(encoded_content)
-                        if content:
-                            print(f"✓ Decode thành công ({len(content)} ký tự)")
-                            break
-                        else:
-                            print(f"❌ Không thể decode nội dung")
-                            continue
+                        # Extract tất cả code content từ textlinks
+                        code_matches = re.findall(r'"code":"([^"]*)"', textlinks_str)
+
+                        if code_matches:
+                            # Ghép tất cả nội dung lại
+                            full_content = ""
+                            for code_content in code_matches:
+                                # Decode escape sequences
+                                decoded_code = code_content.replace('\\n', '\n').replace('\\/', '/').replace('\\"', '"')
+
+                                # Decode Unicode escape sequences
+                                try:
+                                    decoded_code = decoded_code.encode().decode('unicode_escape')
+                                except:
+                                    pass
+
+                                # Loại bỏ HTML tags
+                                clean_code = re.sub(r'<[^>]+>', '', decoded_code)
+
+                                # Loại bỏ dấu gạch ngang đầu
+                                clean_code = re.sub(r'^-+\s*', '', clean_code.strip())
+
+                                if clean_code.strip():
+                                    full_content += clean_code.strip() + "\n\n"
+
+                            if full_content.strip():
+                                content = full_content.strip()
+                                print(f"✓ Lấy được nội dung từ textlinks ({len(content)} ký tự)")
+                                break
+
+                    # Fallback: thử decode content cũ nếu không tìm thấy textlinks
+                    if not content:
+                        content_match = re.search(r'content:\s*"([^"]+)"', script_text)
+                        if content_match:
+                            encoded_content = content_match.group(1)
+                            content = decode_content(encoded_content)
+                            if content:
+                                print(f"✓ Decode content thành công ({len(content)} ký tự)")
+                                break
+                            else:
+                                print(f"❌ Không thể decode content")
+
                 except Exception as e:
                     print(f"Lỗi khi extract content: {e}")
                     continue
