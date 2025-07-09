@@ -6,8 +6,8 @@
   },
   "download": {
     "story_url": "https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong",
-    "start_chapter": 1,
-    "end_chapter": 5,
+    "start_chapter": 2,
+    "end_chapter": 2,
     "output_folder": "downloads",
     "note": "URL truyện cần tải và phạm vi chương (end_chapter = -1 để tải hết)"
   },

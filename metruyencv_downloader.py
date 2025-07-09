@@ -12,6 +12,7 @@ import base64
 import re
 import gzip
 import zlib
+import html
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from bs4 import BeautifulSoup
