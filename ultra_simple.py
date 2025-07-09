@@ -187,16 +187,34 @@ def get_chapters(story_url):
         # Test chương đầu tiên để xem có hoạt động không
         if chapters:
             print("Đang test chương đầu tiên...")
-            test_response = requests.get(chapters[0]['url'], headers=headers, timeout=10)
-            print(f"Test chương 1 - Status: {test_response.status_code}")
+            try:
+                test_response = requests.get(chapters[0]['url'], headers=headers, timeout=15)
+                print(f"Test chương 1 - Status: {test_response.status_code}")
+                print(f"Test URL: {chapters[0]['url']}")
 
-            if test_response.status_code == 200:
-                print("✓ Pattern URL hoạt động!")
-            else:
-                print("✗ Pattern URL không hoạt động")
+                if test_response.status_code == 200:
+                    # Kiểm tra thêm xem có chapterData không
+                    test_soup = BeautifulSoup(test_response.content, 'html.parser')
+                    test_scripts = test_soup.find_all('script')
+                    has_chapter_data = False
+                    for script in test_scripts:
+                        if script.string and 'chapterData' in script.string:
+                            has_chapter_data = True
+                            break
 
-                # Fallback: Thử tìm link trong HTML
-                print("Fallback: Tìm link trong HTML...")
+                    if has_chapter_data:
+                        print("✓ Pattern URL hoạt động và có chapterData!")
+                    else:
+                        print("⚠️  Pattern URL hoạt động nhưng không có chapterData")
+                else:
+                    print("✗ Pattern URL không hoạt động")
+
+                    # Fallback: Thử tìm link trong HTML
+                    print("Fallback: Tìm link trong HTML...")
+                    soup = BeautifulSoup(response.content, 'html.parser')
+            except Exception as e:
+                print(f"✗ Lỗi khi test chương đầu: {e}")
+                print("Fallback: Thử tìm link trong HTML...")
                 soup = BeautifulSoup(response.content, 'html.parser')
 
                 # Tìm link chương đầu tiên từ nút "Đọc Truyện"
@@ -265,8 +283,19 @@ def download_chapter(chapter_url, chapter_title, story_folder):
 
                                 # Decode Unicode escape sequences
                                 try:
-                                    decoded_code = decoded_code.encode().decode('unicode_escape')
-                                except:
+                                    import codecs
+
+                                    def decode_unicode_match(match):
+                                        try:
+                                            return codecs.decode(match.group(0), 'unicode_escape')
+                                        except:
+                                            return match.group(0)
+
+                                    # Tìm tất cả Unicode escape sequences và decode chúng
+                                    decoded_code = re.sub(r'\\u[0-9a-fA-F]{4}', decode_unicode_match, decoded_code)
+
+                                except Exception as e:
+                                    print(f"Lỗi decode Unicode: {e}")
                                     pass
 
                                 # Loại bỏ HTML tags
