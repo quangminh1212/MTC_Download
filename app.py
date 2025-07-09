@@ -42,10 +42,11 @@ def start_download():
     story_url = request.form.get('story_url', '').strip()
     start_chapter = int(request.form.get('start_chapter', 1))
     end_chapter = request.form.get('end_chapter', '')
-    
+    browser_choice = request.form.get('browser', 'auto')
+
     if not story_url:
         return jsonify({'error': 'Vui lòng nhập URL truyện!'})
-    
+
     # Chuyển đổi end_chapter
     try:
         end_chapter = int(end_chapter) if end_chapter else None
@@ -64,7 +65,7 @@ def start_download():
     })
     
     # Chạy download trong thread riêng
-    thread = threading.Thread(target=download_worker, args=(story_url, start_chapter, end_chapter))
+    thread = threading.Thread(target=download_worker, args=(story_url, start_chapter, end_chapter, browser_choice))
     thread.daemon = True
     thread.start()
     
@@ -80,14 +81,14 @@ def get_status():
     """API trả về trạng thái hiện tại"""
     return jsonify(download_status)
 
-def download_worker(story_url, start_chapter, end_chapter):
+def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"):
     """Worker function để tải truyện trong background"""
     global download_status
-    
+
     try:
         # Lấy thông tin truyện
         download_status['message'] = 'Đang lấy thông tin truyện...'
-        story_folder = get_story_info(story_url)
+        story_folder = get_story_info(story_url, browser_choice)
         
         if not story_folder:
             download_status.update({
@@ -100,7 +101,7 @@ def download_worker(story_url, start_chapter, end_chapter):
         
         # Lấy danh sách chương
         download_status['message'] = 'Đang lấy danh sách chương...'
-        chapters = get_chapters(story_url)
+        chapters = get_chapters(story_url, browser_choice)
         
         if not chapters:
             download_status.update({
@@ -127,7 +128,7 @@ def download_worker(story_url, start_chapter, end_chapter):
                 'message': f'Đang tải: {chapter["title"]}'
             })
             
-            if download_chapter(chapter['url'], chapter['title'], story_folder):
+            if download_chapter(chapter['url'], chapter['title'], story_folder, browser_choice):
                 success += 1
             
             download_status['success_count'] = success

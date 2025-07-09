@@ -27,58 +27,83 @@ from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
-def create_driver():
-    """Tạo WebDriver với trình duyệt mặc định của hệ thống, không headless"""
-    print("Đang khởi tạo trình duyệt mặc định...")
+def create_driver(browser_choice="auto"):
+    """Tạo WebDriver với trình duyệt được chọn, không headless"""
+    browser_choice = browser_choice.lower()
 
-    # Thử Edge trước (trình duyệt mặc định trên Windows)
-    try:
-        edge_options = EdgeOptions()
-        # Không sử dụng headless
-        edge_options.add_argument('--disable-blink-features=AutomationControlled')
-        edge_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        edge_options.add_experimental_option('useAutomationExtension', False)
-        edge_options.add_argument('--disable-web-security')
-        edge_options.add_argument('--allow-running-insecure-content')
+    if browser_choice == "edge":
+        print("Đang khởi tạo Microsoft Edge...")
+        return _create_edge_driver()
+    elif browser_choice == "firefox":
+        print("Đang khởi tạo Mozilla Firefox...")
+        return _create_firefox_driver()
+    elif browser_choice == "chrome":
+        print("Đang khởi tạo Google Chrome...")
+        return _create_chrome_driver()
+    else:
+        # Auto mode - thử theo thứ tự ưu tiên
+        print("Đang tự động chọn trình duyệt...")
 
-        driver = webdriver.Edge(options=edge_options)
-        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-        print("✓ Đã khởi tạo Edge browser (trình duyệt mặc định)")
-        return driver
-    except Exception as e:
-        print(f"Edge không khả dụng: {e}")
+        # Thử Edge trước (trình duyệt mặc định trên Windows)
+        try:
+            return _create_edge_driver()
+        except Exception as e:
+            print(f"Edge không khả dụng: {e}")
 
-    # Thử Firefox
-    try:
-        firefox_options = FirefoxOptions()
-        # Không sử dụng headless
-        firefox_options.set_preference("dom.webdriver.enabled", False)
-        firefox_options.set_preference('useAutomationExtension', False)
+        # Thử Firefox
+        try:
+            return _create_firefox_driver()
+        except Exception as e:
+            print(f"Firefox không khả dụng: {e}")
 
-        driver = webdriver.Firefox(options=firefox_options)
-        print("✓ Đã khởi tạo Firefox browser")
-        return driver
-    except Exception as e:
-        print(f"Firefox không khả dụng: {e}")
+        # Thử Chrome cuối cùng
+        try:
+            return _create_chrome_driver()
+        except Exception as e:
+            print(f"Chrome không khả dụng: {e}")
 
-    # Thử Chrome cuối cùng
-    try:
-        chrome_options = Options()
-        # Không sử dụng headless - để hiển thị trình duyệt
-        chrome_options.add_argument('--disable-blink-features=AutomationControlled')
-        chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        chrome_options.add_experimental_option('useAutomationExtension', False)
-        chrome_options.add_argument('--disable-web-security')
-        chrome_options.add_argument('--allow-running-insecure-content')
+        raise Exception("Không thể khởi tạo bất kỳ trình duyệt nào! Vui lòng cài đặt Edge, Firefox hoặc Chrome.")
 
-        driver = webdriver.Chrome(options=chrome_options)
-        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-        print("✓ Đã khởi tạo Chrome browser")
-        return driver
-    except Exception as e:
-        print(f"Chrome không khả dụng: {e}")
+def _create_edge_driver():
+    """Tạo Edge WebDriver"""
+    edge_options = EdgeOptions()
+    # Không sử dụng headless
+    edge_options.add_argument('--disable-blink-features=AutomationControlled')
+    edge_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    edge_options.add_experimental_option('useAutomationExtension', False)
+    edge_options.add_argument('--disable-web-security')
+    edge_options.add_argument('--allow-running-insecure-content')
 
-    raise Exception("Không thể khởi tạo bất kỳ trình duyệt nào! Vui lòng cài đặt Edge, Firefox hoặc Chrome.")
+    driver = webdriver.Edge(options=edge_options)
+    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    print("✓ Đã khởi tạo Microsoft Edge")
+    return driver
+
+def _create_firefox_driver():
+    """Tạo Firefox WebDriver"""
+    firefox_options = FirefoxOptions()
+    # Không sử dụng headless
+    firefox_options.set_preference("dom.webdriver.enabled", False)
+    firefox_options.set_preference('useAutomationExtension', False)
+
+    driver = webdriver.Firefox(options=firefox_options)
+    print("✓ Đã khởi tạo Mozilla Firefox")
+    return driver
+
+def _create_chrome_driver():
+    """Tạo Chrome WebDriver"""
+    chrome_options = Options()
+    # Không sử dụng headless - để hiển thị trình duyệt
+    chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+    chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    chrome_options.add_experimental_option('useAutomationExtension', False)
+    chrome_options.add_argument('--disable-web-security')
+    chrome_options.add_argument('--allow-running-insecure-content')
+
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    print("✓ Đã khởi tạo Google Chrome")
+    return driver
 
 def decode_content(encoded_content):
     """Thử decode nội dung bằng nhiều phương pháp"""
@@ -186,11 +211,11 @@ def load_config():
         print("Không tìm thấy config.json!")
         return None
 
-def get_story_info(story_url):
+def get_story_info(story_url, browser_choice="auto"):
     """Lấy thông tin truyện sử dụng Selenium"""
     driver = None
     try:
-        driver = create_driver()
+        driver = create_driver(browser_choice)
 
         print("Đang tải trang truyện...")
         driver.get(story_url)
@@ -224,11 +249,11 @@ def get_story_info(story_url):
         if driver:
             driver.quit()
 
-def get_chapters(story_url):
+def get_chapters(story_url, browser_choice="auto"):
     """Lấy danh sách chương sử dụng Selenium"""
     driver = None
     try:
-        driver = create_driver()
+        driver = create_driver(browser_choice)
 
         print("Đang tải trang truyện...")
         driver.get(story_url)
@@ -281,7 +306,7 @@ def get_chapters(story_url):
             # Test chương đầu tiên
             if chapters:
                 print("Đang test chương đầu tiên...")
-                test_driver = create_driver()
+                test_driver = create_driver(browser_choice)
                 try:
                     test_driver.get(chapters[0]['url'])
                     time.sleep(2)
@@ -327,11 +352,11 @@ def get_chapters(story_url):
         if driver:
             driver.quit()
 
-def download_chapter(chapter_url, chapter_title, story_folder):
+def download_chapter(chapter_url, chapter_title, story_folder, browser_choice="auto"):
     """Tải một chương sử dụng Selenium"""
     driver = None
     try:
-        driver = create_driver()
+        driver = create_driver(browser_choice)
 
         print(f"Đang tải: {chapter_title}")
         driver.get(chapter_url)
@@ -457,21 +482,23 @@ def main():
     story_url = config.get("story_url")
     start_chapter = config.get("start_chapter", 1)
     end_chapter = config.get("end_chapter")
-    
+    browser_choice = config.get("browser", "auto")
+
     if not story_url:
         print("Không tìm thấy story_url trong config.json!")
         return
-    
+
     print(f"URL: {story_url}")
     print(f"Chương: {start_chapter} đến {end_chapter if end_chapter else 'cuối'}")
-    
+    print(f"Trình duyệt: {browser_choice}")
+
     # Lấy thông tin truyện
-    story_folder = get_story_info(story_url)
+    story_folder = get_story_info(story_url, browser_choice)
     if not story_folder:
         return
     
     # Lấy danh sách chương
-    chapters = get_chapters(story_url)
+    chapters = get_chapters(story_url, browser_choice)
     if not chapters:
         print("Không tìm thấy chương nào!")
         return
@@ -489,7 +516,7 @@ def main():
     for i, chapter in enumerate(chapters_to_download, 1):
         print(f"[{i}/{len(chapters_to_download)}] Đang tải: {chapter['title']}")
         
-        if download_chapter(chapter['url'], chapter['title'], story_folder):
+        if download_chapter(chapter['url'], chapter['title'], story_folder, browser_choice):
             success += 1
         
         time.sleep(1)  # Nghỉ 1 giây

@@ -2,5 +2,12 @@
     "story_url": "https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong",
     "start_chapter": 1,
     "end_chapter": 3,
-    "note": "end_chapter = null nghĩa là tải hết tất cả chương"
+    "browser": "auto",
+    "note": "end_chapter = null nghĩa là tải hết tất cả chương",
+    "browser_options": {
+        "auto": "Tự động chọn trình duyệt (Edge → Firefox → Chrome)",
+        "edge": "Microsoft Edge",
+        "firefox": "Mozilla Firefox",
+        "chrome": "Google Chrome"
+    }
 }
