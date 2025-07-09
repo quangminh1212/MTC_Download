@@ -14,9 +14,9 @@ echo.
 
 echo [2/2] Khoi dong web server...
 echo.
-echo ✓ Web server se chay tai: http://localhost:3000
-echo ✓ Trinh duyet se tu dong mo trong vai giay...
-echo ✓ Nhan Ctrl+C de dung server
+echo - Web server se chay tai: http://localhost:3000
+echo - Trinh duyet se tu dong mo trong vai giay...
+echo - Nhan Ctrl+C de dung server
 echo.
 
 timeout /t 3 /nobreak >nul
