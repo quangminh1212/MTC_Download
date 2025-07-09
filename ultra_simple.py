@@ -127,51 +127,89 @@ def download_chapter(chapter_url, chapter_title, story_folder):
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         }
-        
+
         response = requests.get(chapter_url, headers=headers, timeout=10)
+
+        if response.status_code != 200:
+            print(f"✗ Lỗi HTTP {response.status_code}: {chapter_title}")
+            return False
+
         soup = BeautifulSoup(response.content, 'html.parser')
-        
-        # Tìm nội dung chương
+
+        # Debug: Lưu HTML chương đầu tiên để kiểm tra
+        if "Chương 1" in chapter_title:
+            with open('debug_chapter.html', 'w', encoding='utf-8') as f:
+                f.write(soup.prettify())
+            print("Đã lưu HTML chương vào debug_chapter.html")
+
+        # Tìm nội dung chương với nhiều selector
         content_selectors = [
             {'id': 'chapter-content'},
             {'class_': 'chapter-content'},
             {'class_': 'content'},
-            {'class_': 'story-content'}
+            {'class_': 'story-content'},
+            {'class_': 'chapter-body'},
+            {'class_': 'text-content'}
         ]
-        
+
         content_element = None
         for selector in content_selectors:
             content_element = soup.find('div', selector)
             if content_element:
+                print(f"Tìm thấy nội dung với selector: {selector}")
                 break
-        
+
         if not content_element:
-            print(f"Không tìm thấy nội dung: {chapter_title}")
+            print(f"Không tìm thấy nội dung với các selector thông thường: {chapter_title}")
+
+            # Thử tìm tất cả div có text dài
+            all_divs = soup.find_all('div')
+            for div in all_divs:
+                text = div.get_text(strip=True)
+                if len(text) > 500:  # Nội dung dài có thể là chương
+                    print(f"Tìm thấy div có nội dung dài ({len(text)} ký tự)")
+                    content_element = div
+                    break
+
+        if not content_element:
+            print(f"Vẫn không tìm thấy nội dung: {chapter_title}")
+
+            # Debug: In ra một vài div đầu tiên
+            all_divs = soup.find_all('div')[:5]
+            print("Một vài div đầu tiên:")
+            for i, div in enumerate(all_divs):
+                text = div.get_text(strip=True)[:100]
+                classes = div.get('class', [])
+                div_id = div.get('id', '')
+                print(f"  {i+1}. ID: {div_id}, Class: {classes}, Text: {text}...")
+
             return False
-        
+
         # Lấy text content
         content = content_element.get_text(separator='\n', strip=True)
-        
-        if not content:
-            print(f"Nội dung trống: {chapter_title}")
+
+        if not content or len(content) < 50:
+            print(f"Nội dung quá ngắn hoặc trống ({len(content)} ký tự): {chapter_title}")
             return False
-        
+
         # Tạo tên file an toàn
         safe_title = "".join(c for c in chapter_title if c.isalnum() or c in (' ', '-', '_')).strip()
         filename = f"{safe_title}.txt"
         filepath = os.path.join(story_folder, filename)
-        
+
         # Lưu file
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(f"{chapter_title}\n")
             f.write("=" * 50 + "\n\n")
             f.write(content)
-        
-        print(f"✓ Đã tải: {chapter_title}")
+
+        print(f"✓ Đã tải: {chapter_title} ({len(content)} ký tự)")
         return True
-        
+
     except Exception as e:
         print(f"✗ Lỗi khi tải {chapter_title}: {e}")
+        import traceback
+        traceback.print_exc()
         return False
 
 def main():
