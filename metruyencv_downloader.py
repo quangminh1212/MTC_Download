@@ -82,6 +82,11 @@ def _create_edge_driver():
     edge_options.add_experimental_option('useAutomationExtension', False)
     edge_options.add_argument('--disable-web-security')
     edge_options.add_argument('--allow-running-insecure-content')
+    # Thêm các option để tránh disconnect
+    edge_options.add_argument('--no-sandbox')
+    edge_options.add_argument('--disable-dev-shm-usage')
+    edge_options.add_argument('--disable-gpu')
+    edge_options.add_argument('--remote-debugging-port=9222')
 
     driver = webdriver.Edge(options=edge_options)
     driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
@@ -108,6 +113,11 @@ def _create_chrome_driver():
     chrome_options.add_experimental_option('useAutomationExtension', False)
     chrome_options.add_argument('--disable-web-security')
     chrome_options.add_argument('--allow-running-insecure-content')
+    # Thêm các option để tránh disconnect
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    chrome_options.add_argument('--disable-gpu')
+    chrome_options.add_argument('--remote-debugging-port=9222')
 
     driver = webdriver.Chrome(options=chrome_options)
     driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
@@ -244,6 +254,15 @@ def decode_content(encoded_content):
         print(f"Lỗi decode: {e}")
 
     return None
+
+def is_driver_alive(driver):
+    """Kiểm tra xem driver session còn hoạt động không"""
+    try:
+        # Test bằng cách lấy current_url
+        _ = driver.current_url
+        return True
+    except Exception:
+        return False
 
 def login_to_site(driver, username, password, max_retries=3):
     """Đăng nhập vào MeTruyenCV"""
@@ -722,6 +741,21 @@ def download_chapter(chapter_url, chapter_title, story_folder, driver=None, brow
             driver_created = True
 
         print(f"Đang tải: {chapter_title}")
+
+        # Kiểm tra session còn hoạt động không
+        try:
+            # Test session bằng cách lấy current_url
+            _ = driver.current_url
+        except Exception as e:
+            print(f"⚠️  Session bị ngắt kết nối: {e}")
+            if not driver_created:
+                # Nếu driver được truyền từ bên ngoài nhưng bị lỗi, tạo driver mới
+                print("🔄 Tạo driver mới để thay thế...")
+                driver = create_driver(browser_choice)
+                driver_created = True
+            else:
+                raise e
+
         driver.get(chapter_url)
 
         # Đợi trang load
@@ -919,8 +953,29 @@ def main():
         for i, chapter in enumerate(chapters_to_download, 1):
             print(f"[{i}/{len(chapters_to_download)}] Đang tải: {chapter['title']}")
 
-            if download_chapter(chapter['url'], chapter['title'], story_folder, driver, browser_choice, login_config):
-                success += 1
+            # Thử tải chương với retry logic
+            chapter_success = False
+            for retry in range(max_retries):
+                try:
+                    if download_chapter(chapter['url'], chapter['title'], story_folder, driver, browser_choice, login_config):
+                        chapter_success = True
+                        success += 1
+                        break
+                    else:
+                        print(f"⚠️  Thất bại lần {retry + 1}/{max_retries}")
+                except Exception as e:
+                    print(f"❌ Lỗi lần {retry + 1}/{max_retries}: {e}")
+                    if retry < max_retries - 1:
+                        print("🔄 Tạo driver mới và thử lại...")
+                        try:
+                            driver.quit()
+                        except:
+                            pass
+                        driver = create_driver(browser_choice)
+                        time.sleep(2)
+
+            if not chapter_success:
+                print(f"❌ Không thể tải {chapter['title']} sau {max_retries} lần thử")
 
             time.sleep(delay_between_chapters)  # Nghỉ theo cấu hình
     finally:
