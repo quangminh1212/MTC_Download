@@ -761,79 +761,116 @@ def download_chapter(chapter_url, chapter_title, story_folder, driver=None, brow
         # Đợi trang load
         time.sleep(3)
 
-        # Tìm nội dung từ JavaScript data
-        scripts = driver.find_elements(By.TAG_NAME, "script")
+        # Phương pháp 1: Tìm nội dung từ div#chapter-content (ưu tiên)
         content = None
+        try:
+            # Tìm div có id="chapter-content"
+            chapter_content_div = driver.find_element(By.XPATH, "//div[@id='chapter-content']")
+            if chapter_content_div:
+                # Lấy nội dung HTML
+                content_html = chapter_content_div.get_attribute('innerHTML')
 
-        for script in scripts:
-            try:
-                script_text = driver.execute_script("return arguments[0].innerHTML;", script)
-                if script_text and 'window.chapterData' in script_text:
-                    # Extract content từ JavaScript
-                    # Tìm phần textlinks trong chapterData
-                    textlinks_match = re.search(r'textlinks:\s*\[(.*?)\]', script_text, re.DOTALL)
-                    if textlinks_match:
-                        textlinks_str = textlinks_match.group(1)
+                if content_html:
+                    # Loại bỏ các thẻ canvas và script
+                    content_html = re.sub(r'<canvas[^>]*>.*?</canvas>', '', content_html, flags=re.DOTALL)
+                    content_html = re.sub(r'<script[^>]*>.*?</script>', '', content_html, flags=re.DOTALL)
+                    content_html = re.sub(r'<div[^>]*id="middle-content[^"]*"[^>]*></div>', '', content_html)
 
-                        # Extract tất cả code content từ textlinks
-                        code_matches = re.findall(r'"code":"([^"]*)"', textlinks_str)
+                    # Chuyển <br> thành xuống dòng
+                    content_html = re.sub(r'<br\s*/?>', '\n', content_html)
 
-                        if code_matches:
-                            # Ghép tất cả nội dung lại
-                            full_content = ""
-                            for code_content in code_matches:
-                                # Decode escape sequences
-                                decoded_code = code_content.replace('\\n', '\n').replace('\\/', '/').replace('\\"', '"')
+                    # Loại bỏ tất cả HTML tags còn lại
+                    content = re.sub(r'<[^>]+>', '', content_html)
 
-                                # Decode Unicode escape sequences
-                                try:
-                                    import codecs
+                    # Làm sạch nội dung
+                    content = html.unescape(content)  # Decode HTML entities
+                    content = re.sub(r'\n\s*\n', '\n\n', content)  # Loại bỏ dòng trống thừa
+                    content = content.strip()
 
-                                    def decode_unicode_match(match):
-                                        try:
-                                            return codecs.decode(match.group(0), 'unicode_escape')
-                                        except:
-                                            return match.group(0)
+                    if content and len(content) > 100:
+                        print(f"✓ Lấy được nội dung từ div#chapter-content ({len(content)} ký tự)")
+                    else:
+                        content = None
 
-                                    # Tìm tất cả Unicode escape sequences và decode chúng
-                                    decoded_code = re.sub(r'\\u[0-9a-fA-F]{4}', decode_unicode_match, decoded_code)
+        except NoSuchElementException:
+            print("Không tìm thấy div#chapter-content")
+        except Exception as e:
+            print(f"Lỗi khi lấy nội dung từ div#chapter-content: {e}")
 
-                                except Exception as e:
-                                    print(f"Lỗi decode Unicode: {e}")
-                                    pass
+        # Phương pháp 2: Fallback - Tìm nội dung từ JavaScript data
+        if not content:
+            print("Đang thử phương pháp fallback - tìm trong JavaScript...")
+            scripts = driver.find_elements(By.TAG_NAME, "script")
 
-                                # Loại bỏ HTML tags
-                                clean_code = re.sub(r'<[^>]+>', '', decoded_code)
+            for script in scripts:
+                try:
+                    script_text = driver.execute_script("return arguments[0].innerHTML;", script)
+                    if script_text and 'window.chapterData' in script_text:
+                        # Extract content từ JavaScript
+                        # Tìm phần textlinks trong chapterData
+                        textlinks_match = re.search(r'textlinks:\s*\[(.*?)\]', script_text, re.DOTALL)
+                        if textlinks_match:
+                            textlinks_str = textlinks_match.group(1)
 
-                                # Loại bỏ dấu gạch ngang đầu
-                                clean_code = re.sub(r'^-+\s*', '', clean_code.strip())
+                            # Extract tất cả code content từ textlinks
+                            code_matches = re.findall(r'"code":"([^"]*)"', textlinks_str)
 
-                                if clean_code.strip():
-                                    full_content += clean_code.strip() + "\n\n"
+                            if code_matches:
+                                # Ghép tất cả nội dung lại
+                                full_content = ""
+                                for code_content in code_matches:
+                                    # Decode escape sequences
+                                    decoded_code = code_content.replace('\\n', '\n').replace('\\/', '/').replace('\\"', '"')
 
-                            if full_content.strip():
-                                content = full_content.strip()
-                                print(f"✓ Lấy được nội dung từ textlinks ({len(content)} ký tự)")
-                                break
+                                    # Decode Unicode escape sequences
+                                    try:
+                                        import codecs
 
-                    # Fallback: thử decode content cũ nếu không tìm thấy textlinks
-                    if not content:
-                        content_match = re.search(r'content:\s*"([^"]+)"', script_text)
-                        if content_match:
-                            encoded_content = content_match.group(1)
-                            content = decode_content(encoded_content)
-                            if content:
-                                print(f"✓ Decode content thành công ({len(content)} ký tự)")
-                                break
-                            else:
-                                print(f"❌ Không thể decode content")
+                                        def decode_unicode_match(match):
+                                            try:
+                                                return codecs.decode(match.group(0), 'unicode_escape')
+                                            except:
+                                                return match.group(0)
 
-            except Exception as e:
-                print(f"Lỗi khi extract content: {e}")
-                continue
+                                        # Tìm tất cả Unicode escape sequences và decode chúng
+                                        decoded_code = re.sub(r'\\u[0-9a-fA-F]{4}', decode_unicode_match, decoded_code)
+
+                                    except Exception as e:
+                                        print(f"Lỗi decode Unicode: {e}")
+                                        pass
+
+                                    # Loại bỏ HTML tags
+                                    clean_code = re.sub(r'<[^>]+>', '', decoded_code)
+
+                                    # Loại bỏ dấu gạch ngang đầu
+                                    clean_code = re.sub(r'^-+\s*', '', clean_code.strip())
+
+                                    if clean_code.strip():
+                                        full_content += clean_code.strip() + "\n\n"
+
+                                if full_content.strip():
+                                    content = full_content.strip()
+                                    print(f"✓ Lấy được nội dung từ textlinks ({len(content)} ký tự)")
+                                    break
+
+                        # Fallback: thử decode content cũ nếu không tìm thấy textlinks
+                        if not content:
+                            content_match = re.search(r'content:\s*"([^"]+)"', script_text)
+                            if content_match:
+                                encoded_content = content_match.group(1)
+                                content = decode_content(encoded_content)
+                                if content:
+                                    print(f"✓ Decode content thành công ({len(content)} ký tự)")
+                                    break
+                                else:
+                                    print(f"❌ Không thể decode content")
+
+                except Exception as e:
+                    print(f"Lỗi khi extract content: {e}")
+                    continue
 
         if not content:
-            print(f"Không tìm thấy nội dung trong JavaScript: {chapter_title}")
+            print(f"Không tìm thấy nội dung từ cả hai phương pháp: {chapter_title}")
             return False
 
         if len(content) < 50:
