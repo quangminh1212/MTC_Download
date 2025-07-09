@@ -10,23 +10,40 @@ MeTruyenCV Downloader - Web Interface
    - URL truyện từ metruyencv.com
    - Chương bắt đầu (mặc định 1)
    - Chương kết thúc (để trống = tải hết)
+   - Chọn trình duyệt (mặc định tự động)
 5. Nhấn "Bắt đầu tải truyện"
 6. Theo dõi tiến trình tải trên trang web
 
 📁 CẤU TRÚC DỰ ÁN:
 - app.py: Web server chính
-- ultra_simple.py: Logic tải truyện
+- ultra_simple.py: Logic tải truyện với Selenium
 - templates/: Giao diện HTML
 - run.bat: File khởi động
-- config.json: Cấu hình mẫu (không bắt buộc với web interface)
+- config.json: Cấu hình truyện và trình duyệt
 
-✨ TÍNH NĂNG:
+🌐 TÍNH NĂNG CHỌN TRÌNH DUYỆT:
+- Auto: Tự động chọn (Edge → Firefox → Chrome)
+- Edge: Microsoft Edge (mặc định Windows)
+- Firefox: Mozilla Firefox
+- Chrome: Google Chrome
+
+✨ TÍNH NĂNG KHÁC:
 - Giao diện web đơn giản, dễ sử dụng
 - Theo dõi tiến trình tải real-time
 - Tự động tạo thư mục theo tên truyện
 - Mỗi chương được lưu thành file .txt riêng
+- Sử dụng Selenium để xử lý JavaScript động
+
+📝 CẤU HÌNH CONFIG.JSON:
+{
+    "story_url": "https://metruyencv.com/truyen/ten-truyen",
+    "start_chapter": 1,
+    "end_chapter": 3,
+    "browser": "auto"
+}
 
 ⚠️ LƯU Ý:
+- Trình duyệt sẽ hiển thị khi tải (không headless)
 - Nội dung có thể vẫn bị mã hóa (đang nghiên cứu giải pháp)
 - Nhấn Ctrl+C trong terminal để dừng web server
 
