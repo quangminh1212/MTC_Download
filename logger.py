@@ -97,8 +97,19 @@ class DownloadLogger:
     def _log_with_context(self, level: int, message: str, context: str = None):
         """Log message with optional context"""
         with self._lock:
-            extra = {'context': context} if context else {}
-            self.logger.log(level, message, extra=extra)
+            try:
+                extra = {'context': context} if context else {}
+                self.logger.log(level, message, extra=extra)
+            except (ValueError, OSError) as e:
+                # Handle buffer detached or other IO errors
+                try:
+                    # Try to print to console as fallback
+                    level_name = logging.getLevelName(level)
+                    context_str = f"[{context}] " if context else ""
+                    print(f"[{level_name}] {context_str}{message}")
+                except Exception:
+                    # If even print fails, ignore silently to prevent cascading errors
+                    pass
     
     def debug(self, message: str, context: str = None):
         """Log debug message"""

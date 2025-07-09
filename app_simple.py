@@ -83,11 +83,6 @@ def logs_page():
     """Trang logs"""
     return render_template('logs.html')
 
-@app.route('/performance')
-def performance_page():
-    """Trang performance"""
-    return render_template('performance.html')
-
 @app.route('/api/config', methods=['GET'])
 def api_config_get():
     """API để lấy cấu hình"""
@@ -168,27 +163,27 @@ def api_download_start():
         novel_url = data.get('novel_url', '').strip()
         start_chapter = int(data.get('start_chapter', 1))
         end_chapter = int(data.get('end_chapter', 1))
-
+        
         if not novel_url:
             return jsonify({'success': False, 'message': 'URL truyện không được để trống'}), 400
-
+        
         if start_chapter > end_chapter:
             return jsonify({'success': False, 'message': 'Chapter bắt đầu phải nhỏ hơn hoặc bằng chapter kết thúc'}), 400
-
+        
         if download_status['is_downloading']:
             return jsonify({'success': False, 'message': 'Đang có download khác đang chạy'}), 400
-
+        
         if end_chapter - start_chapter > 1000:
             return jsonify({'success': False, 'message': 'Không thể tải quá 1000 chapters cùng lúc'}), 400
-
+        
         app.logger.info(f'Starting download: {novel_url}, chapters {start_chapter}-{end_chapter}')
-
+        
         # Save last novel info
         config_manager.set('LAST_NOVEL', 'url', novel_url)
         config_manager.set('LAST_NOVEL', 'start_chapter', str(start_chapter))
         config_manager.set('LAST_NOVEL', 'end_chapter', str(end_chapter))
         config_manager.save_config()
-
+        
         # Update status
         download_status.update({
             'is_downloading': True,
@@ -200,70 +195,13 @@ def api_download_start():
             'start_time': datetime.now(),
             'logs': []
         })
-
+        
         return jsonify({'success': True, 'message': 'Bắt đầu download (chức năng sẽ được thêm sau)'})
-
+        
     except ValueError:
         return jsonify({'success': False, 'message': 'Chapter phải là số'}), 400
     except Exception as e:
         app.logger.error(f'Error in api_download_start: {str(e)}')
-        return jsonify({'success': False, 'message': f'Lỗi server: {str(e)}'}), 500
-
-@app.route('/api/performance', methods=['GET'])
-def api_performance():
-    """API để lấy thông tin performance"""
-    try:
-        import sys
-        import psutil
-        import flask
-
-        # Get system performance
-        cpu_usage = psutil.cpu_percent(interval=1)
-        memory = psutil.virtual_memory()
-        memory_usage = memory.percent
-
-        # Mock data for now - can be enhanced later
-        performance_data = {
-            'cpu_usage': round(cpu_usage, 1),
-            'memory_usage': round(memory_usage, 1),
-            'avg_response_time': 150,  # Mock data
-            'error_rate': 0.5,  # Mock data
-            'total_downloads': 0,
-            'successful_downloads': 0,
-            'failed_downloads': 0,
-            'avg_speed': 0.0,
-            'python_version': f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}",
-            'flask_version': flask.__version__,
-            'uptime': 'Just started',  # Mock data
-            'active_connections': 1,  # Mock data
-            'total_requests': 0,  # Mock data
-            'cache_size': 0  # Mock data
-        }
-
-        return jsonify({'success': True, 'performance': performance_data})
-
-    except ImportError:
-        # If psutil is not available, return mock data
-        performance_data = {
-            'cpu_usage': 0,
-            'memory_usage': 0,
-            'avg_response_time': 0,
-            'error_rate': 0,
-            'total_downloads': 0,
-            'successful_downloads': 0,
-            'failed_downloads': 0,
-            'avg_speed': 0.0,
-            'python_version': 'Unknown',
-            'flask_version': 'Unknown',
-            'uptime': 'Unknown',
-            'active_connections': 0,
-            'total_requests': 0,
-            'cache_size': 0
-        }
-        return jsonify({'success': True, 'performance': performance_data})
-
-    except Exception as e:
-        app.logger.error(f'Error in api_performance: {str(e)}')
         return jsonify({'success': False, 'message': f'Lỗi server: {str(e)}'}), 500
 
 def start_server():

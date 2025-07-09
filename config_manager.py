@@ -19,12 +19,21 @@ class ConfigManager:
         if os.path.exists(self.config_file):
             try:
                 self.config.read(self.config_file, encoding='utf-8')
-                print(f"✅ Đã tải cấu hình từ {self.config_file}")
+                try:
+                    print(f"✅ Đã tải cấu hình từ {self.config_file}")
+                except UnicodeEncodeError:
+                    print(f"[OK] Da tai cau hinh tu {self.config_file}")
             except Exception as e:
-                print(f"⚠️  Lỗi đọc config: {e}")
+                try:
+                    print(f"⚠️  Lỗi đọc config: {e}")
+                except UnicodeEncodeError:
+                    print(f"[WARNING] Loi doc config: {e}")
                 self.create_default_config()
         else:
-            print(f"📝 Tạo file cấu hình mặc định: {self.config_file}")
+            try:
+                print(f"📝 Tạo file cấu hình mặc định: {self.config_file}")
+            except UnicodeEncodeError:
+                print(f"[INFO] Tao file cau hinh mac dinh: {self.config_file}")
             self.create_default_config()
     
     def create_default_config(self):

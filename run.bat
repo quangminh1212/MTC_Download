@@ -57,7 +57,7 @@ if not exist "config.txt" (
 REM Start web server
 echo.
 echo Starting web server...
-echo Access at: http://localhost:5000
+echo The application will automatically find an available port
 echo.
 echo Press Ctrl+C to stop server
 echo ===============================================

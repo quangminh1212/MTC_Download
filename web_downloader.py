@@ -7,9 +7,7 @@ Wrapper class để integrate existing downloader với web interface
 import asyncio
 import time
 import os
-import sys
 from datetime import datetime
-from typing import Optional, Dict, Any
 
 # Import existing modules
 from config_manager import ConfigManager
@@ -49,21 +47,33 @@ class WebDownloader:
     def emit_log(self, message: str, level: str = 'info'):
         """Emit log message to web clients"""
         if self.socketio:
-            self.socketio.emit('new_log', {
-                'timestamp': datetime.now().strftime('%H:%M:%S'),
-                'level': level,
-                'message': message
-            })
-        
-        # Also log to console/file
-        if level == 'error':
-            self.logger.error(message)
-        elif level == 'warning':
-            self.logger.warning(message)
-        elif level == 'debug':
-            self.logger.debug(message)
-        else:
-            self.logger.info(message)
+            try:
+                self.socketio.emit('new_log', {
+                    'timestamp': datetime.now().strftime('%H:%M:%S'),
+                    'level': level,
+                    'message': message
+                })
+            except Exception:
+                # Ignore socketio errors to prevent cascading failures
+                pass
+
+        # Also log to console/file with error handling
+        try:
+            if level == 'error':
+                self.logger.error(message)
+            elif level == 'warning':
+                self.logger.warning(message)
+            elif level == 'debug':
+                self.logger.debug(message)
+            else:
+                self.logger.info(message)
+        except Exception:
+            # If logging fails, at least print to console
+            try:
+                print(f"[{level.upper()}] {message}")
+            except Exception:
+                # Last resort - ignore if even print fails
+                pass
     
     def download_novel(self, novel_url: str, start_chapter: int, end_chapter: int) -> bool:
         """Download novel với web progress updates"""
@@ -73,9 +83,6 @@ class WebDownloader:
             
             self.emit_log(f"🚀 Bắt đầu tải truyện: {novel_url}")
             self.emit_log(f"📖 Chapters: {start_chapter} - {end_chapter} ({self.total_chapters} chapters)")
-            
-            # Import main_config functions
-            import main_config
             
             # Run the actual download
             success = asyncio.run(self._run_download(novel_url, start_chapter, end_chapter))
@@ -99,15 +106,19 @@ class WebDownloader:
         try:
             # Import necessary functions from main_config
             from main_config import (
-                get_novel_info, fetch_chapters, create_epub_file,
-                missing_chapter, client
+                get_novel_info_with_redirect, create_epub,
+                client, normalize_url
             )
-            
+
             self.emit_log("🔍 Đang lấy thông tin truyện...")
             self.emit_progress(0, self.total_chapters, "Đang lấy thông tin truyện...")
-            
+
+            # Normalize URL first
+            novel_url = normalize_url(novel_url)
+            self.emit_log(f"🔗 Normalized URL: {novel_url}")
+
             # Get novel info
-            novel_info = await get_novel_info(novel_url)
+            novel_info = await get_novel_info_with_redirect(novel_url)
             if not novel_info:
                 self.emit_log("❌ Không thể lấy thông tin truyện", 'error')
                 return False
@@ -144,18 +155,44 @@ class WebDownloader:
             # Create EPUB
             self.emit_log("📖 Đang tạo file EPUB...")
             self.emit_progress(self.total_chapters, self.total_chapters, "Đang tạo EPUB...")
-            
-            epub_path = await create_epub_file(
-                valid_chapters, novel_info, path, filename
-            )
-            
-            if epub_path and os.path.exists(epub_path):
-                file_size = os.path.getsize(epub_path) / (1024 * 1024)  # MB
-                self.emit_log(f"✅ Đã tạo EPUB: {epub_path}")
-                self.emit_log(f"📊 Kích thước file: {file_size:.1f} MB")
-                return True
-            else:
-                self.emit_log("❌ Lỗi tạo file EPUB", 'error')
+
+            # Download cover image
+            image = b''
+            if novel_info.get('image_url'):
+                try:
+                    image_response = await client.get(novel_info['image_url'])
+                    image_response.raise_for_status()
+                    image = image_response.content
+                    self.emit_log(f"✅ Đã tải ảnh bìa ({len(image)} bytes)")
+                except Exception as e:
+                    self.emit_log(f"⚠️ Không thể tải ảnh bìa: {e}", 'warning')
+                    image = b''
+
+            # Create EPUB using the synchronous function
+            try:
+                create_epub(
+                    novel_info['title'],
+                    novel_info['author'],
+                    novel_info['status'],
+                    novel_info['attribute'],
+                    image,
+                    valid_chapters,
+                    path,
+                    filename
+                )
+
+                epub_path = f"{path}/{filename}.epub"
+                if os.path.exists(epub_path):
+                    file_size = os.path.getsize(epub_path) / (1024 * 1024)  # MB
+                    self.emit_log(f"✅ Đã tạo EPUB: {epub_path}")
+                    self.emit_log(f"📊 Kích thước file: {file_size:.1f} MB")
+                    return True
+                else:
+                    self.emit_log("❌ Lỗi tạo file EPUB", 'error')
+                    return False
+
+            except Exception as e:
+                self.emit_log(f"❌ Lỗi tạo EPUB: {str(e)}", 'error')
                 return False
                 
         except Exception as e:
