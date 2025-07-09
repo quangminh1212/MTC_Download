@@ -1,0 +1,32 @@
+HƯỚNG DẪN SỬ DỤNG MeTruyenCV Downloader
+==========================================
+
+BƯỚC 1: Cài đặt
+---------------
+Chạy lệnh:
+python install.py
+
+BƯỚC 2: Thay đổi URL truyện
+---------------------------
+Mở file simple_downloader.py
+Tìm dòng:
+story_url = "https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong"
+
+Thay thế bằng URL truyện bạn muốn tải
+
+BƯỚC 3: Chạy
+------------
+python simple_downloader.py
+
+KẾT QUẢ:
+--------
+- Truyện sẽ được tải vào thư mục có tên truyện
+- Mỗi chương là 1 file .txt riêng
+- Chương trình sẽ tự động tải tất cả chương
+
+LƯU Ý:
+-------
+- Cần có Google Chrome đã cài đặt
+- Cần kết nối internet
+- Chương trình chạy ẩn (headless mode)
+- Nếu lỗi, thử chạy lại
