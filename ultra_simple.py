@@ -55,28 +55,74 @@ def get_chapters(story_url):
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         }
-        
+
+        print("Đang tải trang truyện...")
         response = requests.get(story_url, headers=headers, timeout=10)
+        print(f"Status code: {response.status_code}")
+
+        if response.status_code != 200:
+            print(f"Lỗi HTTP: {response.status_code}")
+            return []
+
         soup = BeautifulSoup(response.content, 'html.parser')
-        
-        # Tìm tất cả link chương
+
+        # Debug: Lưu HTML để kiểm tra
+        with open('debug_page.html', 'w', encoding='utf-8') as f:
+            f.write(soup.prettify())
+        print("Đã lưu HTML vào debug_page.html để kiểm tra")
+
+        # Thử nhiều cách tìm link chương
+        print("Đang tìm link chương...")
+
+        # Cách 1: Tìm theo href chứa '/chuong-'
         chapter_links = soup.find_all('a', href=lambda x: x and '/chuong-' in x)
-        
+        print(f"Cách 1 - Tìm thấy {len(chapter_links)} link chứa '/chuong-'")
+
+        # Cách 2: Tìm theo href chứa 'chuong'
+        if not chapter_links:
+            chapter_links = soup.find_all('a', href=lambda x: x and 'chuong' in x.lower())
+            print(f"Cách 2 - Tìm thấy {len(chapter_links)} link chứa 'chuong'")
+
+        # Cách 3: Tìm tất cả link và filter
+        if not chapter_links:
+            all_links = soup.find_all('a', href=True)
+            chapter_links = [link for link in all_links if 'chuong' in link.get('href', '').lower()]
+            print(f"Cách 3 - Tìm thấy {len(chapter_links)} link từ tất cả {len(all_links)} link")
+
+        # Debug: In ra một vài link đầu tiên
+        if chapter_links:
+            print("Một vài link đầu tiên:")
+            for i, link in enumerate(chapter_links[:5]):
+                href = link.get('href', '')
+                text = link.text.strip()
+                print(f"  {i+1}. {text} -> {href}")
+        else:
+            print("Không tìm thấy link chương nào!")
+            # In ra một vài link bất kỳ để debug
+            all_links = soup.find_all('a', href=True)[:10]
+            print("Một vài link bất kỳ trên trang:")
+            for i, link in enumerate(all_links):
+                href = link.get('href', '')
+                text = link.text.strip()[:50]
+                print(f"  {i+1}. {text} -> {href}")
+
         chapters = []
         for link in chapter_links:
             url = link.get('href')
             title = link.text.strip()
-            
+
             if url and title:
                 if not url.startswith('http'):
                     url = 'https://metruyencv.com' + url
                 chapters.append({"title": title, "url": url})
-        
-        print(f"Tìm thấy {len(chapters)} chương")
+
+        print(f"Tìm thấy {len(chapters)} chương hợp lệ")
         return chapters
-        
+
     except Exception as e:
         print(f"Lỗi khi lấy danh sách chương: {e}")
+        import traceback
+        traceback.print_exc()
         return []
 
 def download_chapter(chapter_url, chapter_title, story_folder):
