@@ -3,19 +3,12 @@ HƯỚNG DẪN SỬ DỤNG MeTruyenCV Downloader
 
 CÁCH 1: SỬ DỤNG FILE BATCH (WINDOWS)
 ------------------------------------
-Double-click vào file run.bat và chọn:
-1 = Cài đặt lần đầu
-2 = Chạy downloader
-3 = Thoát
+Double-click vào file run.bat
 
 CÁCH 2: SỬ DỤNG THỦ CÔNG
 ------------------------
 
-BƯỚC 1: Cài đặt
----------------
-python install.py
-
-BƯỚC 2: Cấu hình
+BƯỚC 1: Cấu hình
 ----------------
 Mở file config.json và chỉnh sửa:
 {
@@ -34,9 +27,9 @@ VÍ DỤ:
 - Tải 10 chương đầu: "end_chapter": 10
 - Tải từ chương 5 đến 15: "start_chapter": 5, "end_chapter": 15
 
-BƯỚC 3: Chạy
+BƯỚC 2: Chạy
 ------------
-python simple_downloader.py
+python ultra_simple.py
 
 KẾT QUẢ:
 --------
@@ -46,7 +39,6 @@ KẾT QUẢ:
 
 LƯU Ý:
 -------
-- Cần có Google Chrome đã cài đặt
-- Cần kết nối internet
-- Chương trình chạy ẩn (headless mode)
+- Không cần Chrome hay ChromeDriver
+- Chỉ cần Python với requests và beautifulsoup4
 - Nếu lỗi, thử chạy lại
