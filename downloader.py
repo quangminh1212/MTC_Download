@@ -245,146 +245,263 @@ def decode_content(encoded_content):
 
     return None
 
-def login_to_site(driver, username, password):
+def login_to_site(driver, username, password, max_retries=3):
     """Đăng nhập vào MeTruyenCV"""
-    try:
-        print("Đang thực hiện đăng nhập...")
 
-        # Tìm nút đăng nhập
-        login_button = None
+    for attempt in range(max_retries):
         try:
-            # Thử tìm các selector khác nhau cho nút đăng nhập
-            login_selectors = [
-                "//a[contains(text(), 'Đăng nhập')]",
-                "//a[contains(text(), 'Login')]",
-                "//button[contains(text(), 'Đăng nhập')]",
-                "//button[contains(text(), 'Login')]",
-                "//a[@href*='login']",
-                "//a[@href*='dang-nhap']"
+            if attempt > 0:
+                print(f"Đang thử đăng nhập lần {attempt + 1}/{max_retries}...")
+            else:
+                print("Đang thực hiện đăng nhập...")
+
+            # Đợi trang load hoàn toàn
+            time.sleep(3)
+
+            # Thử tìm form đăng nhập trực tiếp trước
+            login_form_found = False
+
+            # Tìm form đăng nhập có sẵn trên trang
+            username_selectors = [
+                "//input[@name='username']",
+                "//input[@name='email']",
+                "//input[@type='email']",
+                "//input[@placeholder*='email']",
+                "//input[@placeholder*='tên']",
+                "//input[@id='username']",
+                "//input[@id='email']",
+                "//input[@class*='username']",
+                "//input[@class*='email']"
             ]
 
-            for selector in login_selectors:
+            username_field = None
+            for selector in username_selectors:
                 try:
-                    login_button = driver.find_element(By.XPATH, selector)
-                    if login_button.is_displayed():
+                    username_field = driver.find_element(By.XPATH, selector)
+                    if username_field.is_displayed() and username_field.is_enabled():
+                        login_form_found = True
+                        print("✓ Tìm thấy form đăng nhập trực tiếp")
                         break
                 except:
                     continue
 
-            if not login_button:
-                print("⚠️  Không tìm thấy nút đăng nhập, có thể đã đăng nhập rồi")
-                return True
+            # Nếu không tìm thấy form, tìm nút đăng nhập
+            if not login_form_found:
+                print("Đang tìm nút đăng nhập...")
+                login_button = None
+                try:
+                    # Thử tìm các selector khác nhau cho nút đăng nhập
+                    login_selectors = [
+                        "//a[contains(text(), 'Đăng nhập')]",
+                        "//a[contains(text(), 'Login')]",
+                        "//button[contains(text(), 'Đăng nhập')]",
+                        "//button[contains(text(), 'Login')]",
+                        "//a[@href*='login']",
+                        "//a[@href*='dang-nhap']",
+                        "//span[contains(text(), 'Đăng nhập')]",
+                        "//div[contains(text(), 'Đăng nhập')]",
+                        "//a[contains(@class, 'login')]",
+                        "//button[contains(@class, 'login')]"
+                    ]
 
-        except Exception as e:
-            print(f"⚠️  Không tìm thấy nút đăng nhập: {e}")
+                    for selector in login_selectors:
+                        try:
+                            elements = driver.find_elements(By.XPATH, selector)
+                            for element in elements:
+                                if element.is_displayed() and element.is_enabled():
+                                    login_button = element
+                                    print(f"✓ Tìm thấy nút đăng nhập: {selector}")
+                                    break
+                            if login_button:
+                                break
+                        except:
+                            continue
+
+                    if not login_button:
+                        print("⚠️  Không tìm thấy nút đăng nhập, có thể đã đăng nhập rồi")
+                        return True
+
+                except Exception as e:
+                    print(f"⚠️  Không tìm thấy nút đăng nhập: {e}")
+                    return True
+
+                # Click vào nút đăng nhập
+                try:
+                    driver.execute_script("arguments[0].click();", login_button)
+                    time.sleep(3)
+                    print("✓ Đã click nút đăng nhập")
+                except Exception as e:
+                    print(f"❌ Lỗi khi click nút đăng nhập: {e}")
+                    return False
+
+            # Tìm và điền username (tìm lại nếu chưa có)
+            if not username_field:
+                username_selectors = [
+                    "//input[@name='username']",
+                    "//input[@name='email']",
+                    "//input[@type='email']",
+                    "//input[@placeholder*='email']",
+                    "//input[@placeholder*='tên']",
+                    "//input[@id='username']",
+                    "//input[@id='email']",
+                    "//input[@class*='username']",
+                    "//input[@class*='email']"
+                ]
+
+                for selector in username_selectors:
+                    try:
+                        username_field = driver.find_element(By.XPATH, selector)
+                        if username_field.is_displayed() and username_field.is_enabled():
+                            break
+                    except:
+                        continue
+
+            if not username_field:
+                print("❌ Không tìm thấy trường username/email")
+                if attempt < max_retries - 1:
+                    continue
+                return False
+
+            try:
+                # Scroll đến element và đảm bảo nó visible
+                driver.execute_script("arguments[0].scrollIntoView(true);", username_field)
+                time.sleep(1)
+
+                # Clear và điền username
+                username_field.clear()
+                username_field.send_keys(username)
+                print("✓ Đã điền username")
+            except Exception as e:
+                print(f"❌ Lỗi khi điền username: {e}")
+                if attempt < max_retries - 1:
+                    continue
+                return False
+
+            # Tìm và điền password
+            password_field = None
+            password_selectors = [
+                "//input[@name='password']",
+                "//input[@type='password']",
+                "//input[@id='password']",
+                "//input[@class*='password']"
+            ]
+
+            for selector in password_selectors:
+                try:
+                    password_field = driver.find_element(By.XPATH, selector)
+                    if password_field.is_displayed() and password_field.is_enabled():
+                        break
+                except:
+                    continue
+
+            if not password_field:
+                print("❌ Không tìm thấy trường password")
+                if attempt < max_retries - 1:
+                    continue
+                return False
+
+            try:
+                # Scroll đến element và đảm bảo nó visible
+                driver.execute_script("arguments[0].scrollIntoView(true);", password_field)
+                time.sleep(1)
+
+                # Clear và điền password
+                password_field.clear()
+                password_field.send_keys(password)
+                print("✓ Đã điền password")
+            except Exception as e:
+                print(f"❌ Lỗi khi điền password: {e}")
+                if attempt < max_retries - 1:
+                    continue
+                return False
+
+            # Tìm và click nút submit
+            submit_button = None
+            submit_selectors = [
+                "//button[@type='submit']",
+                "//input[@type='submit']",
+                "//button[contains(text(), 'Đăng nhập')]",
+                "//button[contains(text(), 'Login')]",
+                "//input[@value='Đăng nhập']",
+                "//input[@value='Login']",
+                "//button[contains(@class, 'submit')]",
+                "//button[contains(@class, 'login')]",
+                "//a[contains(@class, 'submit')]"
+            ]
+
+            for selector in submit_selectors:
+                try:
+                    elements = driver.find_elements(By.XPATH, selector)
+                    for element in elements:
+                        if element.is_displayed() and element.is_enabled():
+                            submit_button = element
+                            break
+                    if submit_button:
+                        break
+                except:
+                    continue
+
+            if not submit_button:
+                print("❌ Không tìm thấy nút submit")
+                # Thử submit bằng Enter
+                try:
+                    password_field.send_keys("\n")
+                    time.sleep(3)
+                    print("✓ Đã thử submit bằng Enter")
+                except:
+                    if attempt < max_retries - 1:
+                        continue
+                    return False
+            else:
+                try:
+                    # Scroll đến nút submit
+                    driver.execute_script("arguments[0].scrollIntoView(true);", submit_button)
+                    time.sleep(1)
+
+                    # Click submit
+                    driver.execute_script("arguments[0].click();", submit_button)
+                    time.sleep(3)
+                    print("✓ Đã click nút submit")
+                except Exception as e:
+                    print(f"❌ Lỗi khi click submit: {e}")
+                    if attempt < max_retries - 1:
+                        continue
+                    return False
+
+            # Kiểm tra đăng nhập thành công
+            # Tìm các dấu hiệu đăng nhập thành công
+            success_indicators = [
+                "//a[contains(text(), 'Đăng xuất')]",
+                "//a[contains(text(), 'Logout')]",
+                "//a[contains(text(), 'Tài khoản')]",
+                "//a[contains(text(), 'Profile')]",
+                "//span[contains(@class, 'user')]",
+                "//div[contains(@class, 'user')]"
+            ]
+
+            for indicator in success_indicators:
+                try:
+                    element = driver.find_element(By.XPATH, indicator)
+                    if element.is_displayed():
+                        print("✓ Đăng nhập thành công!")
+                        return True
+                except:
+                    continue
+
+            print("⚠️  Không thể xác nhận đăng nhập thành công, tiếp tục...")
             return True
 
-        # Click vào nút đăng nhập
-        login_button.click()
-        time.sleep(2)
-
-        # Tìm và điền username
-        username_field = None
-        username_selectors = [
-            "//input[@name='username']",
-            "//input[@name='email']",
-            "//input[@type='email']",
-            "//input[@placeholder*='email']",
-            "//input[@placeholder*='tên']",
-            "//input[@id='username']",
-            "//input[@id='email']"
-        ]
-
-        for selector in username_selectors:
-            try:
-                username_field = driver.find_element(By.XPATH, selector)
-                if username_field.is_displayed():
-                    break
-            except:
+        except Exception as e:
+            print(f"❌ Lỗi khi đăng nhập (lần {attempt + 1}): {e}")
+            if attempt < max_retries - 1:
+                print("Đang thử lại...")
+                time.sleep(2)
                 continue
+            else:
+                print("❌ Đã thử tối đa số lần cho phép")
+                return False
 
-        if not username_field:
-            print("❌ Không tìm thấy trường username/email")
-            return False
-
-        username_field.clear()
-        username_field.send_keys(username)
-
-        # Tìm và điền password
-        password_field = None
-        password_selectors = [
-            "//input[@name='password']",
-            "//input[@type='password']",
-            "//input[@id='password']"
-        ]
-
-        for selector in password_selectors:
-            try:
-                password_field = driver.find_element(By.XPATH, selector)
-                if password_field.is_displayed():
-                    break
-            except:
-                continue
-
-        if not password_field:
-            print("❌ Không tìm thấy trường password")
-            return False
-
-        password_field.clear()
-        password_field.send_keys(password)
-
-        # Tìm và click nút submit
-        submit_button = None
-        submit_selectors = [
-            "//button[@type='submit']",
-            "//input[@type='submit']",
-            "//button[contains(text(), 'Đăng nhập')]",
-            "//button[contains(text(), 'Login')]",
-            "//input[@value='Đăng nhập']",
-            "//input[@value='Login']"
-        ]
-
-        for selector in submit_selectors:
-            try:
-                submit_button = driver.find_element(By.XPATH, selector)
-                if submit_button.is_displayed():
-                    break
-            except:
-                continue
-
-        if not submit_button:
-            print("❌ Không tìm thấy nút submit")
-            return False
-
-        submit_button.click()
-        time.sleep(3)
-
-        # Kiểm tra đăng nhập thành công
-        # Tìm các dấu hiệu đăng nhập thành công
-        success_indicators = [
-            "//a[contains(text(), 'Đăng xuất')]",
-            "//a[contains(text(), 'Logout')]",
-            "//a[contains(text(), 'Tài khoản')]",
-            "//a[contains(text(), 'Profile')]",
-            "//span[contains(@class, 'user')]",
-            "//div[contains(@class, 'user')]"
-        ]
-
-        for indicator in success_indicators:
-            try:
-                element = driver.find_element(By.XPATH, indicator)
-                if element.is_displayed():
-                    print("✓ Đăng nhập thành công!")
-                    return True
-            except:
-                continue
-
-        print("⚠️  Không thể xác nhận đăng nhập thành công, tiếp tục...")
-        return True
-
-    except Exception as e:
-        print(f"❌ Lỗi khi đăng nhập: {e}")
-        return False
+    return False
 
 def load_config():
     """Đọc cấu hình từ config.json"""
@@ -411,8 +528,9 @@ def get_story_info(story_url, driver=None, browser_choice="auto", login_config=N
         if login_config and login_config.get('enabled', False):
             username = login_config.get('username', '')
             password = login_config.get('password', '')
+            max_retries = login_config.get('max_retries', 3)
             if username and password:
-                login_to_site(driver, username, password)
+                login_to_site(driver, username, password, max_retries)
 
         # Đợi trang load
         WebDriverWait(driver, 10).until(
@@ -713,7 +831,8 @@ def main():
     login_config = {
         'enabled': True,
         'username': username,
-        'password': password
+        'password': password,
+        'max_retries': max_retries
     }
 
     # Tạo WebDriver một lần duy nhất
