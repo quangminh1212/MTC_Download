@@ -5,59 +5,26 @@ echo ================================================
 echo           MeTruyenCV Downloader
 echo ================================================
 echo.
-echo Chon chuc nang:
-echo 1. Cai dat lan dau
-echo 2. Chay downloader
-echo 3. Sua loi ChromeDriver
-echo 4. Tai ChromeDriver thu cong
-echo 5. Thoat
+echo Dang tu dong cai dat va chay...
 echo.
-set /p choice="Nhap lua chon (1-5): "
 
-if "%choice%"=="1" (
-    echo.
-    echo Dang cai dat...
-    python install.py
-    echo.
-    pause
-    goto start
-)
+echo [1/4] Kiem tra va cai dat dependencies...
+python install.py
+echo.
 
-if "%choice%"=="2" (
-    echo.
-    echo Dang chay downloader...
-    python simple_downloader.py
-    echo.
-    pause
-    goto start
-)
+echo [2/4] Sua loi ChromeDriver (neu co)...
+python fix_chrome.py
+echo.
 
-if "%choice%"=="3" (
-    echo.
-    echo Dang sua loi ChromeDriver...
-    python fix_chrome.py
-    echo.
-    pause
-    goto start
-)
+echo [3/4] Tai ChromeDriver thu cong...
+python manual_chrome_setup.py
+echo.
 
-if "%choice%"=="4" (
-    echo.
-    echo Dang tai ChromeDriver thu cong...
-    python manual_chrome_setup.py
-    echo.
-    pause
-    goto start
-)
+echo [4/4] Chay downloader...
+python simple_downloader.py
+echo.
 
-if "%choice%"=="5" (
-    echo Tam biet!
-    exit
-)
-
-echo Lua chon khong hop le!
+echo ================================================
+echo           HOAN THANH!
+echo ================================================
 pause
-
-:start
-cls
-goto start
