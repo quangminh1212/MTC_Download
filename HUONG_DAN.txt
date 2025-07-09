@@ -31,7 +31,7 @@ CHI TIẾT CẤU HÌNH:
 - start_chapter: Chương bắt đầu tải (mặc định: 1)
 - end_chapter: Chương kết thúc (-1 để tải hết, hoặc số chương cụ thể)
 - output_folder: Thư mục lưu truyện (mặc định: downloads)
-- delay_between_chapters: Thời gian nghỉ giữa các chương (mili giây)
+- delay_between_chapters: Thời gian nghỉ giữa các chương (giây)
 - max_retries: Số lần thử lại khi lỗi
 - headless: Chạy ẩn trình duyệt (true/false)
 - browser: Trình duyệt sử dụng (auto/chrome/firefox/edge)

@@ -12,10 +12,10 @@
     "note": "URL truyện cần tải và phạm vi chương (end_chapter = -1 để tải hết)"
   },
   "settings": {
-    "delay_between_chapters": 2000,
+    "delay_between_chapters": 2,
     "max_retries": 3,
     "headless": false,
     "browser": "chrome",
-    "note": "Cấu hình tải: delay (mili giây), số lần thử lại, headless mode, browser (auto/chrome/firefox/edge)"
+    "note": "Cấu hình tải: delay (giây), số lần thử lại, headless mode, browser (auto/chrome/firefox/edge)"
   }
 }
