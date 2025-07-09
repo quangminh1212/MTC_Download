@@ -9,6 +9,8 @@ import os
 import time
 import json
 import requests
+import base64
+import re
 from bs4 import BeautifulSoup
 
 def load_config():
@@ -136,60 +138,57 @@ def download_chapter(chapter_url, chapter_title, story_folder):
 
         soup = BeautifulSoup(response.content, 'html.parser')
 
-        # Debug: Lưu HTML chương đầu tiên để kiểm tra
-        if "Chương 1" in chapter_title:
-            with open('debug_chapter.html', 'w', encoding='utf-8') as f:
-                f.write(soup.prettify())
-            print("Đã lưu HTML chương vào debug_chapter.html")
+        # Tìm nội dung từ JavaScript data
+        print("Tìm nội dung từ JavaScript data...")
 
-        # Tìm nội dung chương với nhiều selector
-        content_selectors = [
-            {'id': 'chapter-content'},
-            {'class_': 'chapter-content'},
-            {'class_': 'content'},
-            {'class_': 'story-content'},
-            {'class_': 'chapter-body'},
-            {'class_': 'text-content'}
-        ]
+        # Tìm script chứa window.chapterData
+        scripts = soup.find_all('script')
+        content = None
 
-        content_element = None
-        for selector in content_selectors:
-            content_element = soup.find('div', selector)
-            if content_element:
-                print(f"Tìm thấy nội dung với selector: {selector}")
-                break
+        for script in scripts:
+            script_text = script.get_text()
+            if 'window.chapterData' in script_text and 'content:' in script_text:
+                print("Tìm thấy window.chapterData")
 
-        if not content_element:
-            print(f"Không tìm thấy nội dung với các selector thông thường: {chapter_title}")
+                # Extract content từ JavaScript
+                try:
+                    # Tìm phần content: "..."
+                    content_match = re.search(r'content:\s*"([^"]+)"', script_text)
+                    if content_match:
+                        encoded_content = content_match.group(1)
+                        print(f"Tìm thấy nội dung mã hóa ({len(encoded_content)} ký tự)")
 
-            # Thử tìm tất cả div có text dài
-            all_divs = soup.find_all('div')
-            for div in all_divs:
-                text = div.get_text(strip=True)
-                if len(text) > 500:  # Nội dung dài có thể là chương
-                    print(f"Tìm thấy div có nội dung dài ({len(text)} ký tự)")
-                    content_element = div
-                    break
+                        # Decode base64
+                        try:
+                            decoded_bytes = base64.b64decode(encoded_content)
+                            content = decoded_bytes.decode('utf-8')
+                            print(f"Decode thành công ({len(content)} ký tự)")
+                            break
+                        except Exception as decode_error:
+                            print(f"Lỗi decode base64: {decode_error}")
+                            # Thử decode với padding
+                            try:
+                                # Thêm padding nếu cần
+                                missing_padding = len(encoded_content) % 4
+                                if missing_padding:
+                                    encoded_content += '=' * (4 - missing_padding)
+                                decoded_bytes = base64.b64decode(encoded_content)
+                                content = decoded_bytes.decode('utf-8')
+                                print(f"Decode với padding thành công ({len(content)} ký tự)")
+                                break
+                            except Exception as e2:
+                                print(f"Vẫn lỗi decode: {e2}")
+                                continue
+                except Exception as e:
+                    print(f"Lỗi khi extract content: {e}")
+                    continue
 
-        if not content_element:
-            print(f"Vẫn không tìm thấy nội dung: {chapter_title}")
-
-            # Debug: In ra một vài div đầu tiên
-            all_divs = soup.find_all('div')[:5]
-            print("Một vài div đầu tiên:")
-            for i, div in enumerate(all_divs):
-                text = div.get_text(strip=True)[:100]
-                classes = div.get('class', [])
-                div_id = div.get('id', '')
-                print(f"  {i+1}. ID: {div_id}, Class: {classes}, Text: {text}...")
-
+        if not content:
+            print(f"Không tìm thấy nội dung trong JavaScript: {chapter_title}")
             return False
 
-        # Lấy text content
-        content = content_element.get_text(separator='\n', strip=True)
-
-        if not content or len(content) < 50:
-            print(f"Nội dung quá ngắn hoặc trống ({len(content)} ký tự): {chapter_title}")
+        if len(content) < 50:
+            print(f"Nội dung quá ngắn ({len(content)} ký tự): {chapter_title}")
             return False
 
         # Tạo tên file an toàn
