@@ -80,7 +80,57 @@ VÍ DỤ CẤU HÌNH:
 - Nếu không tải được chương: Kiểm tra URL truyện
 - Nếu nội dung bị mã hóa: Đây là hạn chế của trang web
 
-5. CẤU TRÚC FILE SAU KHI TẢI:
+5. HƯỚNG DẪN CẤU HÌNH CHI TIẾT:
+
+=== CẤU HÌNH DELAY (delay_between_chapters) ===
+Đơn vị: milliseconds (1000ms = 1 giây)
+
+- 500ms = 0.5 giây (nhanh, có thể bị chặn)
+- 1000ms = 1 giây (bình thường)
+- 2000ms = 2 giây (khuyến nghị)
+- 5000ms = 5 giây (an toàn, chậm hơn)
+
+=== CẤU HÌNH HEADLESS ===
+- 0 = Hiển thị trình duyệt (khuyến nghị để debug)
+- 1 = Ẩn trình duyệt (chạy nền, nhanh hơn)
+
+=== CẤU HÌNH BROWSER ===
+- "auto" = Tự động chọn (Edge → Firefox → Chrome → Brave)
+- "chrome" = Google Chrome
+- "firefox" = Mozilla Firefox
+- "edge" = Microsoft Edge
+- "brave" = Brave Browser
+
+=== VÍ DỤ CẤU HÌNH NÂNG CAO ===
+
+Cấu hình nhanh (có thể bị chặn):
+{
+  "settings": {
+    "delay_between_chapters": 500,
+    "headless": 1,
+    "browser": "chrome"
+  }
+}
+
+Cấu hình an toàn (khuyến nghị):
+{
+  "settings": {
+    "delay_between_chapters": 2000,
+    "headless": 0,
+    "browser": "auto"
+  }
+}
+
+Cấu hình rất an toàn (chậm):
+{
+  "settings": {
+    "delay_between_chapters": 5000,
+    "headless": 0,
+    "browser": "firefox"
+  }
+}
+
+6. CẤU TRÚC FILE SAU KHI TẢI:
 
 downloads/
 └── Ten_Truyen/
