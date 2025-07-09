@@ -255,11 +255,13 @@ def load_config():
         print("Không tìm thấy config.json!")
         return None
 
-def get_story_info(story_url, browser_choice="auto"):
+def get_story_info(story_url, driver=None, browser_choice="auto"):
     """Lấy thông tin truyện sử dụng Selenium"""
-    driver = None
+    driver_created = False
     try:
-        driver = create_driver(browser_choice)
+        if driver is None:
+            driver = create_driver(browser_choice)
+            driver_created = True
 
         print("Đang tải trang truyện...")
         driver.get(story_url)
@@ -290,14 +292,16 @@ def get_story_info(story_url, browser_choice="auto"):
         print(f"Lỗi khi lấy thông tin truyện: {e}")
         return None
     finally:
-        if driver:
+        if driver_created and driver:
             driver.quit()
 
-def get_chapters(story_url, browser_choice="auto"):
+def get_chapters(story_url, driver=None, browser_choice="auto"):
     """Lấy danh sách chương sử dụng Selenium"""
-    driver = None
+    driver_created = False
     try:
-        driver = create_driver(browser_choice)
+        if driver is None:
+            driver = create_driver(browser_choice)
+            driver_created = True
 
         print("Đang tải trang truyện...")
         driver.get(story_url)
@@ -347,20 +351,19 @@ def get_chapters(story_url, browser_choice="auto"):
 
                 print(f"Đã tạo {len(chapters)} chương từ pattern mặc định")
 
-            # Test chương đầu tiên
+            # Test chương đầu tiên sử dụng driver hiện tại
             if chapters:
                 print("Đang test chương đầu tiên...")
-                test_driver = create_driver(browser_choice)
                 try:
-                    test_driver.get(chapters[0]['url'])
+                    driver.get(chapters[0]['url'])
                     time.sleep(2)
 
                     # Kiểm tra xem có chapterData không
-                    scripts = test_driver.find_elements(By.TAG_NAME, "script")
+                    scripts = driver.find_elements(By.TAG_NAME, "script")
                     has_chapter_data = False
 
                     for script in scripts:
-                        script_content = test_driver.execute_script("return arguments[0].innerHTML;", script)
+                        script_content = driver.execute_script("return arguments[0].innerHTML;", script)
                         if script_content and 'chapterData' in script_content:
                             has_chapter_data = True
                             break
@@ -372,8 +375,6 @@ def get_chapters(story_url, browser_choice="auto"):
 
                 except Exception as e:
                     print(f"✗ Lỗi khi test chương đầu: {e}")
-                finally:
-                    test_driver.quit()
 
         except Exception as e:
             print(f"Lỗi khi tìm chương: {e}")
@@ -393,14 +394,16 @@ def get_chapters(story_url, browser_choice="auto"):
         traceback.print_exc()
         return []
     finally:
-        if driver:
+        if driver_created and driver:
             driver.quit()
 
-def download_chapter(chapter_url, chapter_title, story_folder, browser_choice="auto"):
+def download_chapter(chapter_url, chapter_title, story_folder, driver=None, browser_choice="auto"):
     """Tải một chương sử dụng Selenium"""
-    driver = None
+    driver_created = False
     try:
-        driver = create_driver(browser_choice)
+        if driver is None:
+            driver = create_driver(browser_choice)
+            driver_created = True
 
         print(f"Đang tải: {chapter_title}")
         driver.get(chapter_url)
@@ -511,7 +514,7 @@ def download_chapter(chapter_url, chapter_title, story_folder, browser_choice="a
         traceback.print_exc()
         return False
     finally:
-        if driver:
+        if driver_created and driver:
             driver.quit()
 
 def main():
@@ -536,34 +539,47 @@ def main():
     print(f"Chương: {start_chapter} đến {end_chapter if end_chapter else 'cuối'}")
     print(f"Trình duyệt: {browser_choice}")
 
-    # Lấy thông tin truyện
-    story_folder = get_story_info(story_url, browser_choice)
-    if not story_folder:
-        return
-    
-    # Lấy danh sách chương
-    chapters = get_chapters(story_url, browser_choice)
-    if not chapters:
-        print("Không tìm thấy chương nào!")
-        return
-    
-    # Xác định phạm vi tải
-    if end_chapter and end_chapter <= len(chapters):
-        chapters_to_download = chapters[start_chapter-1:end_chapter]
-    else:
-        chapters_to_download = chapters[start_chapter-1:]
-    
-    print(f"Sẽ tải {len(chapters_to_download)} chương")
-    
-    # Tải từng chương
-    success = 0
-    for i, chapter in enumerate(chapters_to_download, 1):
-        print(f"[{i}/{len(chapters_to_download)}] Đang tải: {chapter['title']}")
-        
-        if download_chapter(chapter['url'], chapter['title'], story_folder, browser_choice):
-            success += 1
-        
-        time.sleep(1)  # Nghỉ 1 giây
+    # Tạo WebDriver một lần duy nhất
+    driver = None
+    try:
+        driver = create_driver(browser_choice)
+
+        # Lấy thông tin truyện
+        story_folder = get_story_info(story_url, driver, browser_choice)
+        if not story_folder:
+            return
+
+        # Lấy danh sách chương
+        chapters = get_chapters(story_url, driver, browser_choice)
+        if not chapters:
+            print("Không tìm thấy chương nào!")
+            return
+
+        # Xác định phạm vi tải
+        if end_chapter and end_chapter <= len(chapters):
+            chapters_to_download = chapters[start_chapter-1:end_chapter]
+        else:
+            chapters_to_download = chapters[start_chapter-1:]
+
+        print(f"Sẽ tải {len(chapters_to_download)} chương")
+
+        # Tải từng chương
+        success = 0
+        for i, chapter in enumerate(chapters_to_download, 1):
+            print(f"[{i}/{len(chapters_to_download)}] Đang tải: {chapter['title']}")
+
+            if download_chapter(chapter['url'], chapter['title'], story_folder, driver, browser_choice):
+                success += 1
+
+            time.sleep(1)  # Nghỉ 1 giây
+    finally:
+        # Đóng WebDriver khi hoàn thành
+        if driver:
+            try:
+                driver.quit()
+                print("✓ Đã đóng trình duyệt")
+            except:
+                pass
     
     print(f"\nHoàn thành! Đã tải {success}/{len(chapters_to_download)} chương")
     print(f"Truyện được lưu trong thư mục: {story_folder}")

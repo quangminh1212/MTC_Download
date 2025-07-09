@@ -37,6 +37,7 @@ MeTruyenCV Downloader - Web Interface
 - Mỗi chương được lưu thành file .txt riêng
 - Sử dụng Selenium để xử lý JavaScript động
 - Tự động chọn trình duyệt phù hợp
+- SỬ DỤNG CÙNG MỘT TRÌNH DUYỆT: Không mở nhiều cửa sổ trình duyệt mới
 
 📝 CẤU HÌNH CONFIG.JSON:
 {

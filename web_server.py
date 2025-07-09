@@ -12,7 +12,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 from flask import Flask, render_template, request, jsonify, redirect, url_for
-from downloader import get_story_info, get_chapters, download_chapter
+from downloader import get_story_info, get_chapters, download_chapter, create_driver
 
 app = Flask(__name__)
 
@@ -180,12 +180,17 @@ def stop_download():
 def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"):
     """Worker function để tải truyện trong background"""
     global download_status
+    driver = None
 
     try:
+        # Tạo WebDriver một lần duy nhất
+        download_status['message'] = 'Đang khởi tạo trình duyệt...'
+        driver = create_driver(browser_choice)
+
         # Lấy thông tin truyện
         download_status['message'] = 'Đang lấy thông tin truyện...'
-        story_folder = get_story_info(story_url, browser_choice)
-        
+        story_folder = get_story_info(story_url, driver, browser_choice)
+
         if not story_folder:
             download_status.update({
                 'is_downloading': False,
@@ -193,13 +198,13 @@ def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"
                 'message': 'Lỗi: Không thể lấy thông tin truyện!'
             })
             return
-        
+
         download_status['story_folder'] = story_folder
-        
+
         # Lấy danh sách chương
         download_status['message'] = 'Đang lấy danh sách chương...'
-        chapters = get_chapters(story_url, browser_choice)
-        
+        chapters = get_chapters(story_url, driver, browser_choice)
+
         if not chapters:
             download_status.update({
                 'is_downloading': False,
@@ -234,12 +239,12 @@ def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"
                 'message': f'Đang tải: {chapter["title"]}'
             })
 
-            if download_chapter(chapter['url'], chapter['title'], story_folder, browser_choice):
+            if download_chapter(chapter['url'], chapter['title'], story_folder, driver, browser_choice):
                 success += 1
 
             download_status['success_count'] = success
             time.sleep(1)  # Nghỉ 1 giây
-        
+
         # Hoàn thành
         download_status.update({
             'is_downloading': False,
@@ -253,6 +258,14 @@ def download_worker(story_url, start_chapter, end_chapter, browser_choice="auto"
             'stop_requested': False,
             'message': f'Lỗi: {str(e)}'
         })
+    finally:
+        # Đóng WebDriver khi hoàn thành
+        if driver:
+            try:
+                driver.quit()
+                print("✓ Đã đóng trình duyệt")
+            except:
+                pass
 
 if __name__ == '__main__':
     print("=== MeTruyenCV Downloader Web Interface ===")
