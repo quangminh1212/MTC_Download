@@ -13,7 +13,88 @@ import base64
 import re
 import gzip
 import zlib
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import unpad
 from bs4 import BeautifulSoup
+
+def decode_content(encoded_content):
+    """Thử decode nội dung bằng nhiều phương pháp"""
+    try:
+        # Bước 1: Decode base64
+        decoded_bytes = base64.b64decode(encoded_content)
+
+        # Bước 2: Thử decompress với gzip
+        try:
+            content = gzip.decompress(decoded_bytes).decode('utf-8')
+            return content
+        except:
+            pass
+
+        # Bước 3: Thử decompress với zlib
+        try:
+            content = zlib.decompress(decoded_bytes).decode('utf-8')
+            return content
+        except:
+            pass
+
+        # Bước 4: Thử AES decrypt với các key phổ biến
+        try:
+            # Thử một số key phổ biến cho trang web này
+            possible_keys = [
+                b'metruyencv12345',  # 16 bytes
+                b'metruyencv123456789012345678901234',  # 32 bytes
+                b'1234567890123456',  # 16 bytes
+                b'abcdef1234567890',  # 16 bytes
+            ]
+
+            for key in possible_keys:
+                try:
+                    if len(key) == 16:
+                        cipher = AES.new(key, AES.MODE_ECB)
+                    elif len(key) == 32:
+                        cipher = AES.new(key[:32], AES.MODE_ECB)
+                    else:
+                        continue
+
+                    decrypted = cipher.decrypt(decoded_bytes)
+                    # Thử unpad
+                    try:
+                        unpadded = unpad(decrypted, AES.block_size)
+                        content = unpadded.decode('utf-8')
+                        if len(content) > 50 and 'Tiểu' in content:  # Kiểm tra có nội dung tiếng Việt
+                            return content
+                    except:
+                        # Thử không unpad
+                        content = decrypted.decode('utf-8', errors='ignore').strip('\x00')
+                        if len(content) > 50 and 'Tiểu' in content:
+                            return content
+                except:
+                    continue
+        except ImportError:
+            pass  # Không có pycryptodome
+        except:
+            pass
+
+        # Bước 5: Thử decode trực tiếp UTF-8
+        try:
+            content = decoded_bytes.decode('utf-8')
+            return content
+        except:
+            pass
+
+        # Bước 6: Thử decode latin-1 (fallback)
+        try:
+            content = decoded_bytes.decode('latin-1')
+            # Kiểm tra xem có phải nội dung thật không
+            if len(content) > 50:
+                return content
+        except:
+            pass
+
+    except Exception as e:
+        print(f"Lỗi decode: {e}")
+
+    return None
 
 def load_config():
     """Đọc cấu hình từ config.json"""
@@ -155,45 +236,13 @@ def download_chapter(chapter_url, chapter_title, story_folder):
                     if content_match:
                         encoded_content = content_match.group(1)
 
-                        # Decode nội dung (base64 + gzip/zlib)
-                        try:
-                            # Bước 1: Decode base64
-                            decoded_bytes = base64.b64decode(encoded_content)
-
-                            # Bước 2: Thử decompress với gzip
-                            try:
-                                content = gzip.decompress(decoded_bytes).decode('utf-8')
-                                print(f"✓ Decode base64 + gzip thành công ({len(content)} ký tự)")
-                                break
-                            except:
-                                pass
-
-                            # Bước 3: Thử decompress với zlib
-                            try:
-                                content = zlib.decompress(decoded_bytes).decode('utf-8')
-                                print(f"✓ Decode base64 + zlib thành công ({len(content)} ký tự)")
-                                break
-                            except:
-                                pass
-
-                            # Bước 4: Thử decode trực tiếp UTF-8
-                            try:
-                                content = decoded_bytes.decode('utf-8')
-                                print(f"✓ Decode base64 UTF-8 thành công ({len(content)} ký tự)")
-                                break
-                            except:
-                                pass
-
-                            # Bước 5: Thử decode latin-1 (fallback)
-                            try:
-                                content = decoded_bytes.decode('latin-1')
-                                print(f"⚠️  Decode base64 latin-1 ({len(content)} ký tự) - có thể vẫn bị mã hóa")
-                                break
-                            except:
-                                pass
-
-                        except Exception as e:
-                            print(f"❌ Lỗi decode base64: {e}")
+                        # Decode nội dung với nhiều phương pháp
+                        content = decode_content(encoded_content)
+                        if content:
+                            print(f"✓ Decode thành công ({len(content)} ký tự)")
+                            break
+                        else:
+                            print(f"❌ Không thể decode nội dung")
                             continue
                 except Exception as e:
                     print(f"Lỗi khi extract content: {e}")
