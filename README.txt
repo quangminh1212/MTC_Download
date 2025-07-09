@@ -19,9 +19,8 @@ MeTruyenCV Downloader - Web Interface
 📁 CẤU TRÚC DỰ ÁN:
 - web_server.py: Web server chính
 - downloader.py: Logic tải truyện với Selenium
-- config.json: Cấu hình truyện và trình duyệt
+- config.json: File cấu hình chính
 - run.bat: File khởi động
-- test.py: Test trình duyệt
 - templates/: Giao diện HTML
 
 🔍 TÍNH NĂNG TÌM KIẾM TRUYỆN:
@@ -44,16 +43,21 @@ MeTruyenCV Downloader - Web Interface
 
 📝 CẤU HÌNH CONFIG.JSON:
 {
+  "account": {
+    "username": "email@gmail.com",
+    "password": "matkhau123"
+  },
+  "download": {
     "story_url": "https://metruyencv.com/truyen/ten-truyen",
     "start_chapter": 1,
-    "end_chapter": 3,
-    "browser": "auto",
-    "login": {
-        "enabled": false,
-        "username": "",
-        "password": "",
-        "note": "Đặt enabled = true để bật đăng nhập tự động"
-    }
+    "end_chapter": 50,
+    "output_folder": "downloads"
+  },
+  "settings": {
+    "delay_between_chapters": 2,
+    "max_retries": 3,
+    "headless": false
+  }
 }
 
 🆕 CÁCH SỬ DỤNG MỚI:
@@ -63,8 +67,14 @@ MeTruyenCV Downloader - Web Interface
 4. Nhập tên truyện cần tìm
 5. Chọn truyện từ kết quả và nhấn "Tải truyện này"
 
-🧪 TEST TRÌNH DUYỆT:
-Chạy: python test.py
+🚀 CÁCH SỬ DỤNG NHANH VỚI CONFIG.JSON:
+1. Sửa thông tin trong config.json:
+   - username: email đăng nhập MeTruyenCV
+   - password: mật khẩu MeTruyenCV
+   - story_url: link truyện muốn tải
+   - start_chapter: chương bắt đầu
+   - end_chapter: chương kết thúc (-1 = tải hết)
+2. Chạy run.bat
 
 ⚠️ LƯU Ý:
 - Trình duyệt sẽ hiển thị khi tải (không headless)

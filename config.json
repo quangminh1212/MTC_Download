@@ -1,0 +1,17 @@
+{
+  "account": {
+    "username": "",
+    "password": ""
+  },
+  "download": {
+    "story_url": "",
+    "start_chapter": 1,
+    "end_chapter": -1,
+    "output_folder": "downloads"
+  },
+  "settings": {
+    "delay_between_chapters": 2,
+    "max_retries": 3,
+    "headless": false
+  }
+}

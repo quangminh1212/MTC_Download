@@ -668,33 +668,46 @@ def download_chapter(chapter_url, chapter_title, story_folder, driver=None, brow
 def main():
     """Hàm chính"""
     print("=== MeTruyenCV Downloader (Ultra Simple) ===")
-    
+
     # Đọc cấu hình
     config = load_config()
     if not config:
         return
-    
-    story_url = config.get("story_url")
-    start_chapter = config.get("start_chapter", 1)
-    end_chapter = config.get("end_chapter")
-    browser_choice = config.get("browser", "auto")
-    login_config = config.get("login", {})
 
+    # Lấy thông tin từ config
+    account_config = config.get("account", {})
+    download_config = config.get("download", {})
+    settings_config = config.get("settings", {})
+
+    story_url = download_config.get("story_url", "")
+    start_chapter = download_config.get("start_chapter", 1)
+    end_chapter = download_config.get("end_chapter", -1)
+
+    username = account_config.get("username", "")
+    password = account_config.get("password", "")
+
+    browser_choice = "auto"  # Luôn sử dụng auto
+
+    # Kiểm tra thông tin cần thiết
     if not story_url:
-        print("Không tìm thấy story_url trong config.json!")
+        print("❌ Vui lòng nhập story_url trong config.json!")
+        print("Ví dụ: https://metruyencv.com/truyen/ten-truyen")
+        return
+
+    if not username or not password:
+        print("❌ Vui lòng nhập username và password trong config.json!")
         return
 
     print(f"URL: {story_url}")
-    print(f"Chương: {start_chapter} đến {end_chapter if end_chapter else 'cuối'}")
-    print(f"Trình duyệt: {browser_choice}")
+    print(f"Chương: {start_chapter} đến {end_chapter if end_chapter > 0 else 'cuối'}")
+    print(f"Tài khoản: {username}")
 
-    # Hiển thị thông tin đăng nhập
-    if login_config.get('enabled', False):
-        username = login_config.get('username', '')
-        if username:
-            print(f"Đăng nhập: {username}")
-        else:
-            print("⚠️  Đăng nhập được bật nhưng chưa có username!")
+    # Tạo login_config cho các hàm khác
+    login_config = {
+        'enabled': True,
+        'username': username,
+        'password': password
+    }
 
     # Tạo WebDriver một lần duy nhất
     driver = None

@@ -1,0 +1,79 @@
+=== HƯỚNG DẪN SỬ DỤNG MeTruyenCV DOWNLOADER ===
+
+1. CẤU HÌNH FILE config.json:
+
+Mở file config.json và điền thông tin như sau:
+
+{
+  "account": {
+    "username": "ten_dang_nhap_cua_ban",
+    "password": "mat_khau_cua_ban"
+  },
+  "download": {
+    "story_url": "https://metruyencv.com/truyen/ten-truyen",
+    "start_chapter": 1,
+    "end_chapter": 50,
+    "output_folder": "downloads"
+  },
+  "settings": {
+    "delay_between_chapters": 2,
+    "max_retries": 3,
+    "headless": false
+  }
+}
+
+CHI TIẾT CẤU HÌNH:
+
+- username: Tên đăng nhập MeTruyenCV của bạn
+- password: Mật khẩu MeTruyenCV của bạn
+- story_url: Link truyện muốn tải (copy từ trình duyệt)
+- start_chapter: Chương bắt đầu tải (mặc định: 1)
+- end_chapter: Chương kết thúc (-1 để tải hết, hoặc số chương cụ thể)
+- output_folder: Thư mục lưu truyện (mặc định: downloads)
+
+VÍ DỤ CẤU HÌNH:
+
+{
+  "account": {
+    "username": "myemail@gmail.com",
+    "password": "mypassword123"
+  },
+  "download": {
+    "story_url": "https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong",
+    "start_chapter": 1,
+    "end_chapter": 100,
+    "output_folder": "downloads"
+  },
+  "settings": {
+    "delay_between_chapters": 2,
+    "max_retries": 3,
+    "headless": false
+  }
+}
+
+2. CHẠY CHƯƠNG TRÌNH:
+
+- Nhấp đúp vào file run.bat
+- Hoặc mở terminal và chạy: python downloader.py
+
+3. LƯU Ý:
+
+- Phải có tài khoản MeTruyenCV hợp lệ
+- Chương trình sẽ tự động đăng nhập trước khi tải
+- Truyện sẽ được lưu trong thư mục có tên truyện
+- Mỗi chương là một file .txt riêng biệt
+- Nếu end_chapter = -1, sẽ tải từ start_chapter đến hết
+
+4. XỬ LÝ LỖI:
+
+- Nếu không đăng nhập được: Kiểm tra username/password
+- Nếu không tải được chương: Kiểm tra URL truyện
+- Nếu nội dung bị mã hóa: Đây là hạn chế của trang web
+
+5. CẤU TRÚC FILE SAU KHI TẢI:
+
+Ten_Truyen/
+├── Chuong_1.txt
+├── Chuong_2.txt
+├── Chuong_3.txt
+└── ...
