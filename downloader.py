@@ -263,6 +263,8 @@ def login_to_site(driver, username, password, max_retries=3):
 
             # Tìm form đăng nhập có sẵn trên trang
             username_selectors = [
+                "//input[@data-x-model='form.email']",
+                "//input[@placeholder='email']",
                 "//input[@name='username']",
                 "//input[@name='email']",
                 "//input[@type='email']",
@@ -285,23 +287,67 @@ def login_to_site(driver, username, password, max_retries=3):
                 except:
                     continue
 
-            # Nếu không tìm thấy form, tìm nút đăng nhập
+            # Nếu không tìm thấy form, tìm nút menu trước
             if not login_form_found:
+                print("Đang tìm nút menu...")
+                menu_button = None
+                try:
+                    # Tìm nút menu (hamburger menu)
+                    menu_selectors = [
+                        "//button[@data-x-bind=\"OpenModal('menu')\"]",
+                        "//button[contains(@data-x-bind, 'menu')]",
+                        "//button[contains(@data-x-bind, 'Menu')]",
+                        "//button[contains(@class, 'menu')]",
+                        "//div[@class='flex space-x-2']//button",
+                        "//header//button[last()]"
+                    ]
+
+                    for selector in menu_selectors:
+                        try:
+                            elements = driver.find_elements(By.XPATH, selector)
+                            for element in elements:
+                                if element.is_displayed() and element.is_enabled():
+                                    menu_button = element
+                                    print(f"✓ Tìm thấy nút menu: {selector}")
+                                    break
+                            if menu_button:
+                                break
+                        except:
+                            continue
+
+                    if menu_button:
+                        # Click vào nút menu
+                        try:
+                            driver.execute_script("arguments[0].click();", menu_button)
+                            time.sleep(2)
+                            print("✓ Đã click nút menu")
+                        except Exception as e:
+                            print(f"❌ Lỗi khi click nút menu: {e}")
+                            return False
+
+                except Exception as e:
+                    print(f"⚠️  Không tìm thấy nút menu: {e}")
+
+                # Bây giờ tìm nút đăng nhập
                 print("Đang tìm nút đăng nhập...")
                 login_button = None
                 try:
                     # Thử tìm các selector khác nhau cho nút đăng nhập
                     login_selectors = [
-                        "//a[contains(text(), 'Đăng nhập')]",
-                        "//a[contains(text(), 'Login')]",
+                        "//button[@data-x-bind=\"OpenModal('login')\"]",
+                        "//button[contains(@data-x-bind, \"OpenModal('login')\")]",
                         "//button[contains(text(), 'Đăng nhập')]",
                         "//button[contains(text(), 'Login')]",
+                        "//a[contains(text(), 'Đăng nhập')]",
+                        "//a[contains(text(), 'Login')]",
                         "//a[@href*='login']",
                         "//a[@href*='dang-nhap']",
                         "//span[contains(text(), 'Đăng nhập')]",
                         "//div[contains(text(), 'Đăng nhập')]",
                         "//a[contains(@class, 'login')]",
-                        "//button[contains(@class, 'login')]"
+                        "//button[contains(@class, 'login')]",
+                        "//*[@data-x-bind=\"OpenModal('login')\"]",
+                        "//*[contains(@data-x-bind, 'login')]"
                     ]
 
                     for selector in login_selectors:
@@ -337,6 +383,8 @@ def login_to_site(driver, username, password, max_retries=3):
             # Tìm và điền username (tìm lại nếu chưa có)
             if not username_field:
                 username_selectors = [
+                    "//input[@data-x-model='form.email']",
+                    "//input[@placeholder='email']",
                     "//input[@name='username']",
                     "//input[@name='email']",
                     "//input[@type='email']",
@@ -380,6 +428,8 @@ def login_to_site(driver, username, password, max_retries=3):
             # Tìm và điền password
             password_field = None
             password_selectors = [
+                "//input[@data-x-model='form.password']",
+                "//input[@placeholder='password']",
                 "//input[@name='password']",
                 "//input[@type='password']",
                 "//input[@id='password']",
