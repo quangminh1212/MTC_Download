@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-MeTruyenCV Downloader - Phiên bản cực đơn giản
-Không cần ChromeDriver, sử dụng requests + BeautifulSoup
+MeTruyenCV Downloader - Phiên bản sử dụng Selenium
+Sử dụng Selenium với trình duyệt mặc định, không headless
 """
 
 import os
 import time
 import json
-import requests
 import base64
 import re
 import gzip
@@ -16,6 +15,68 @@ import zlib
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.service import Service as FirefoxService
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.webdriver.edge.service import Service as EdgeService
+from selenium.webdriver.edge.options import Options as EdgeOptions
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+
+def create_driver():
+    """Tạo WebDriver với trình duyệt mặc định, không headless"""
+    print("Đang khởi tạo trình duyệt...")
+
+    # Thử Chrome trước
+    try:
+        chrome_options = Options()
+        # Không sử dụng headless - để hiển thị trình duyệt
+        chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+        chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        chrome_options.add_experimental_option('useAutomationExtension', False)
+        chrome_options.add_argument('--disable-web-security')
+        chrome_options.add_argument('--allow-running-insecure-content')
+
+        driver = webdriver.Chrome(options=chrome_options)
+        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+        print("✓ Đã khởi tạo Chrome browser")
+        return driver
+    except Exception as e:
+        print(f"Chrome không khả dụng: {e}")
+
+    # Thử Firefox
+    try:
+        firefox_options = FirefoxOptions()
+        # Không sử dụng headless
+        firefox_options.set_preference("dom.webdriver.enabled", False)
+        firefox_options.set_preference('useAutomationExtension', False)
+
+        driver = webdriver.Firefox(options=firefox_options)
+        print("✓ Đã khởi tạo Firefox browser")
+        return driver
+    except Exception as e:
+        print(f"Firefox không khả dụng: {e}")
+
+    # Thử Edge
+    try:
+        edge_options = EdgeOptions()
+        # Không sử dụng headless
+        edge_options.add_argument('--disable-blink-features=AutomationControlled')
+        edge_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        edge_options.add_experimental_option('useAutomationExtension', False)
+
+        driver = webdriver.Edge(options=edge_options)
+        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+        print("✓ Đã khởi tạo Edge browser")
+        return driver
+    except Exception as e:
+        print(f"Edge không khả dụng: {e}")
+
+    raise Exception("Không thể khởi tạo bất kỳ trình duyệt nào! Vui lòng cài đặt Chrome, Firefox hoặc Edge.")
 
 def decode_content(encoded_content):
     """Thử decode nội dung bằng nhiều phương pháp"""
@@ -124,81 +185,112 @@ def load_config():
         return None
 
 def get_story_info(story_url):
-    """Lấy thông tin truyện"""
+    """Lấy thông tin truyện sử dụng Selenium"""
+    driver = None
     try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
-        
-        response = requests.get(story_url, headers=headers, timeout=10)
-        soup = BeautifulSoup(response.content, 'html.parser')
-        
+        driver = create_driver()
+
+        print("Đang tải trang truyện...")
+        driver.get(story_url)
+
+        # Đợi trang load
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.TAG_NAME, "h1"))
+        )
+
         # Lấy tên truyện
-        title_element = soup.find('h1')
-        story_title = title_element.text.strip() if title_element else "Unknown_Story"
-        
+        try:
+            title_element = driver.find_element(By.TAG_NAME, "h1")
+            story_title = title_element.text.strip()
+        except:
+            story_title = "Unknown_Story"
+
         # Tạo thư mục
         safe_title = "".join(c for c in story_title if c.isalnum() or c in (' ', '-', '_')).strip()
         story_folder = safe_title.replace(" ", "_")
         os.makedirs(story_folder, exist_ok=True)
-        
+
         print(f"Tên truyện: {story_title}")
         print(f"Thư mục: {story_folder}")
-        
+
         return story_folder
-        
+
     except Exception as e:
         print(f"Lỗi khi lấy thông tin truyện: {e}")
         return None
+    finally:
+        if driver:
+            driver.quit()
 
 def get_chapters(story_url):
-    """Lấy danh sách chương"""
+    """Lấy danh sách chương sử dụng Selenium"""
+    driver = None
     try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
+        driver = create_driver()
 
         print("Đang tải trang truyện...")
-        response = requests.get(story_url, headers=headers, timeout=10)
-        print(f"Status code: {response.status_code}")
+        driver.get(story_url)
 
-        if response.status_code != 200:
-            print(f"Lỗi HTTP: {response.status_code}")
-            return []
-
-        # Trang này sử dụng JavaScript để load chương động
-        # Thử tạo URL chương từ pattern
-        print("Trang web sử dụng JavaScript để load chương động")
-        print("Thử tạo danh sách chương từ pattern...")
+        # Đợi trang load
+        time.sleep(3)
 
         # Lấy slug từ URL
         slug = story_url.split('/')[-1]  # tan-the-chi-sieu-thi-he-thong
 
+        # Thử tìm nút "Đọc Truyện" hoặc link chương đầu tiên
         chapters = []
 
-        # Thử tạo URL cho 608 chương (số từ HTML)
-        for i in range(1, 609):  # 608 chương
-            chapter_url = f"https://metruyencv.com/truyen/{slug}/chuong-{i}"
-            chapter_title = f"Chương {i}"
-            chapters.append({"title": chapter_title, "url": chapter_url})
+        try:
+            # Tìm nút đọc truyện
+            read_buttons = driver.find_elements(By.XPATH, "//button[contains(@onclick, 'chuong-1')] | //a[contains(@href, 'chuong-1')]")
 
-        print(f"Đã tạo {len(chapters)} chương từ pattern")
+            if read_buttons:
+                # Lấy URL chương đầu tiên
+                button = read_buttons[0]
+                if button.tag_name == 'button':
+                    onclick = button.get_attribute('onclick')
+                    if 'location.href=' in onclick:
+                        first_chapter_url = onclick.split("'")[1]
+                        print(f"Tìm thấy chương đầu từ nút: {first_chapter_url}")
+                else:
+                    first_chapter_url = button.get_attribute('href')
+                    print(f"Tìm thấy chương đầu từ link: {first_chapter_url}")
 
-        # Test chương đầu tiên để xem có hoạt động không
-        if chapters:
-            print("Đang test chương đầu tiên...")
-            try:
-                test_response = requests.get(chapters[0]['url'], headers=headers, timeout=15)
-                print(f"Test chương 1 - Status: {test_response.status_code}")
-                print(f"Test URL: {chapters[0]['url']}")
+                # Tạo danh sách chương từ URL này
+                if 'chuong-1' in first_chapter_url:
+                    base_url = first_chapter_url.rsplit('/chuong-', 1)[0]
+                    for i in range(1, 609):  # Tạo 608 chương
+                        chapter_url = f"{base_url}/chuong-{i}"
+                        chapter_title = f"Chương {i}"
+                        chapters.append({"title": chapter_title, "url": chapter_url})
 
-                if test_response.status_code == 200:
-                    # Kiểm tra thêm xem có chapterData không
-                    test_soup = BeautifulSoup(test_response.content, 'html.parser')
-                    test_scripts = test_soup.find_all('script')
+                    print(f"Đã tạo {len(chapters)} chương từ pattern")
+
+            # Nếu không tìm thấy, thử pattern mặc định
+            if not chapters:
+                print("Không tìm thấy nút đọc, sử dụng pattern mặc định...")
+                for i in range(1, 609):
+                    chapter_url = f"https://metruyencv.com/truyen/{slug}/chuong-{i}"
+                    chapter_title = f"Chương {i}"
+                    chapters.append({"title": chapter_title, "url": chapter_url})
+
+                print(f"Đã tạo {len(chapters)} chương từ pattern mặc định")
+
+            # Test chương đầu tiên
+            if chapters:
+                print("Đang test chương đầu tiên...")
+                test_driver = create_driver()
+                try:
+                    test_driver.get(chapters[0]['url'])
+                    time.sleep(2)
+
+                    # Kiểm tra xem có chapterData không
+                    scripts = test_driver.find_elements(By.TAG_NAME, "script")
                     has_chapter_data = False
-                    for script in test_scripts:
-                        if script.string and 'chapterData' in script.string:
+
+                    for script in scripts:
+                        script_content = test_driver.execute_script("return arguments[0].innerHTML;", script)
+                        if script_content and 'chapterData' in script_content:
                             has_chapter_data = True
                             break
 
@@ -206,32 +298,21 @@ def get_chapters(story_url):
                         print("✓ Pattern URL hoạt động và có chapterData!")
                     else:
                         print("⚠️  Pattern URL hoạt động nhưng không có chapterData")
-                else:
-                    print("✗ Pattern URL không hoạt động")
 
-                    # Fallback: Thử tìm link trong HTML
-                    print("Fallback: Tìm link trong HTML...")
-                    soup = BeautifulSoup(response.content, 'html.parser')
-            except Exception as e:
-                print(f"✗ Lỗi khi test chương đầu: {e}")
-                print("Fallback: Thử tìm link trong HTML...")
-                soup = BeautifulSoup(response.content, 'html.parser')
+                except Exception as e:
+                    print(f"✗ Lỗi khi test chương đầu: {e}")
+                finally:
+                    test_driver.quit()
 
-                # Tìm link chương đầu tiên từ nút "Đọc Truyện"
-                read_button = soup.find('button', onclick=lambda x: x and 'chuong-1' in x)
-                if read_button:
-                    onclick = read_button.get('onclick', '')
-                    if 'location.href=' in onclick:
-                        first_chapter_url = onclick.split("'")[1]
-                        print(f"Tìm thấy chương đầu từ nút Đọc: {first_chapter_url}")
+        except Exception as e:
+            print(f"Lỗi khi tìm chương: {e}")
+            # Fallback: tạo pattern mặc định
+            for i in range(1, 609):
+                chapter_url = f"https://metruyencv.com/truyen/{slug}/chuong-{i}"
+                chapter_title = f"Chương {i}"
+                chapters.append({"title": chapter_title, "url": chapter_url})
 
-                        # Tạo lại danh sách từ URL này
-                        base_url = first_chapter_url.rsplit('/chuong-', 1)[0]
-                        chapters = []
-                        for i in range(1, 609):
-                            chapter_url = f"{base_url}/chuong-{i}"
-                            chapter_title = f"Chương {i}"
-                            chapters.append({"title": chapter_title, "url": chapter_url})
+            print(f"Đã tạo {len(chapters)} chương từ fallback pattern")
 
         return chapters
 
@@ -240,32 +321,31 @@ def get_chapters(story_url):
         import traceback
         traceback.print_exc()
         return []
+    finally:
+        if driver:
+            driver.quit()
 
 def download_chapter(chapter_url, chapter_title, story_folder):
-    """Tải một chương"""
+    """Tải một chương sử dụng Selenium"""
+    driver = None
     try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        }
+        driver = create_driver()
 
-        response = requests.get(chapter_url, headers=headers, timeout=10)
+        print(f"Đang tải: {chapter_title}")
+        driver.get(chapter_url)
 
-        if response.status_code != 200:
-            print(f"✗ Lỗi HTTP {response.status_code}: {chapter_title}")
-            return False
-
-        soup = BeautifulSoup(response.content, 'html.parser')
+        # Đợi trang load
+        time.sleep(3)
 
         # Tìm nội dung từ JavaScript data
-        scripts = soup.find_all('script')
+        scripts = driver.find_elements(By.TAG_NAME, "script")
         content = None
 
         for script in scripts:
-            script_text = script.get_text()
-            if 'window.chapterData' in script_text:
-
-                # Extract content từ JavaScript
-                try:
+            try:
+                script_text = driver.execute_script("return arguments[0].innerHTML;", script)
+                if script_text and 'window.chapterData' in script_text:
+                    # Extract content từ JavaScript
                     # Tìm phần textlinks trong chapterData
                     textlinks_match = re.search(r'textlinks:\s*\[(.*?)\]', script_text, re.DOTALL)
                     if textlinks_match:
@@ -324,9 +404,9 @@ def download_chapter(chapter_url, chapter_title, story_folder):
                             else:
                                 print(f"❌ Không thể decode content")
 
-                except Exception as e:
-                    print(f"Lỗi khi extract content: {e}")
-                    continue
+            except Exception as e:
+                print(f"Lỗi khi extract content: {e}")
+                continue
 
         if not content:
             print(f"Không tìm thấy nội dung trong JavaScript: {chapter_title}")
@@ -359,6 +439,9 @@ def download_chapter(chapter_url, chapter_title, story_folder):
         import traceback
         traceback.print_exc()
         return False
+    finally:
+        if driver:
+            driver.quit()
 
 def main():
     """Hàm chính"""
