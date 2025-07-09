@@ -17,9 +17,10 @@ MeTruyenCV Downloader - Web Interface
 📁 CẤU TRÚC DỰ ÁN:
 - web_server.py: Web server chính
 - downloader.py: Logic tải truyện với Selenium
-- templates/: Giao diện HTML
-- run.bat: File khởi động
 - config.json: Cấu hình truyện và trình duyệt
+- run.bat: File khởi động
+- test.py: Test trình duyệt
+- templates/: Giao diện HTML
 
 🌐 TÍNH NĂNG CHỌN TRÌNH DUYỆT:
 - Auto: Tự động chọn (Edge → Firefox → Chrome → Brave)
@@ -42,6 +43,9 @@ MeTruyenCV Downloader - Web Interface
     "end_chapter": 3,
     "browser": "auto"
 }
+
+🧪 TEST TRÌNH DUYỆT:
+Chạy: python test.py
 
 ⚠️ LƯU Ý:
 - Trình duyệt sẽ hiển thị khi tải (không headless)
