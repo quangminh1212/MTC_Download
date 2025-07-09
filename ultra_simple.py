@@ -11,6 +11,8 @@ import json
 import requests
 import base64
 import re
+import gzip
+import zlib
 from bs4 import BeautifulSoup
 
 def load_config():
@@ -139,16 +141,12 @@ def download_chapter(chapter_url, chapter_title, story_folder):
         soup = BeautifulSoup(response.content, 'html.parser')
 
         # Tìm nội dung từ JavaScript data
-        print("Tìm nội dung từ JavaScript data...")
-
-        # Tìm script chứa window.chapterData
         scripts = soup.find_all('script')
         content = None
 
         for script in scripts:
             script_text = script.get_text()
             if 'window.chapterData' in script_text and 'content:' in script_text:
-                print("Tìm thấy window.chapterData")
 
                 # Extract content từ JavaScript
                 try:
@@ -156,59 +154,46 @@ def download_chapter(chapter_url, chapter_title, story_folder):
                     content_match = re.search(r'content:\s*"([^"]+)"', script_text)
                     if content_match:
                         encoded_content = content_match.group(1)
-                        print(f"Tìm thấy nội dung mã hóa ({len(encoded_content)} ký tự)")
 
-                        # Thử nhiều cách decode
-                        print(f"Nội dung mã hóa: {encoded_content[:50]}...")
-
-                        # Cách 1: Base64 thông thường
+                        # Decode nội dung (base64 + gzip/zlib)
                         try:
+                            # Bước 1: Decode base64
                             decoded_bytes = base64.b64decode(encoded_content)
-                            content = decoded_bytes.decode('utf-8')
-                            print(f"Decode base64 thành công ({len(content)} ký tự)")
-                            break
-                        except Exception as e1:
-                            print(f"Lỗi decode base64: {e1}")
 
-                        # Cách 2: Base64 với padding
-                        try:
-                            missing_padding = len(encoded_content) % 4
-                            if missing_padding:
-                                encoded_content += '=' * (4 - missing_padding)
-                            decoded_bytes = base64.b64decode(encoded_content)
-                            content = decoded_bytes.decode('utf-8')
-                            print(f"Decode base64 với padding thành công ({len(content)} ký tự)")
-                            break
-                        except Exception as e2:
-                            print(f"Lỗi decode base64 với padding: {e2}")
+                            # Bước 2: Thử decompress với gzip
+                            try:
+                                content = gzip.decompress(decoded_bytes).decode('utf-8')
+                                print(f"✓ Decode base64 + gzip thành công ({len(content)} ký tự)")
+                                break
+                            except:
+                                pass
 
-                        # Cách 3: Thử decode với latin-1 trước
-                        try:
-                            decoded_bytes = base64.b64decode(encoded_content)
-                            content = decoded_bytes.decode('latin-1')
-                            print(f"Decode base64 latin-1 thành công ({len(content)} ký tự)")
-                            break
-                        except Exception as e3:
-                            print(f"Lỗi decode base64 latin-1: {e3}")
+                            # Bước 3: Thử decompress với zlib
+                            try:
+                                content = zlib.decompress(decoded_bytes).decode('utf-8')
+                                print(f"✓ Decode base64 + zlib thành công ({len(content)} ký tự)")
+                                break
+                            except:
+                                pass
 
-                        # Cách 4: Có thể nội dung đã được URL decode
-                        try:
-                            import urllib.parse
-                            url_decoded = urllib.parse.unquote(encoded_content)
-                            decoded_bytes = base64.b64decode(url_decoded)
-                            content = decoded_bytes.decode('utf-8')
-                            print(f"Decode URL + base64 thành công ({len(content)} ký tự)")
-                            break
-                        except Exception as e4:
-                            print(f"Lỗi decode URL + base64: {e4}")
+                            # Bước 4: Thử decode trực tiếp UTF-8
+                            try:
+                                content = decoded_bytes.decode('utf-8')
+                                print(f"✓ Decode base64 UTF-8 thành công ({len(content)} ký tự)")
+                                break
+                            except:
+                                pass
 
-                        # Cách 5: Có thể là plain text
-                        try:
-                            content = encoded_content
-                            print(f"Sử dụng plain text ({len(content)} ký tự)")
-                            break
-                        except Exception as e5:
-                            print(f"Lỗi plain text: {e5}")
+                            # Bước 5: Thử decode latin-1 (fallback)
+                            try:
+                                content = decoded_bytes.decode('latin-1')
+                                print(f"⚠️  Decode base64 latin-1 ({len(content)} ký tự) - có thể vẫn bị mã hóa")
+                                break
+                            except:
+                                pass
+
+                        except Exception as e:
+                            print(f"❌ Lỗi decode base64: {e}")
                             continue
                 except Exception as e:
                     print(f"Lỗi khi extract content: {e}")
