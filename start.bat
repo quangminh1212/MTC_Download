@@ -2,10 +2,10 @@
 chcp 65001 >nul
 cls
 echo ================================================
-echo        MeTruyenCV Downloader - Auto Mode
+echo        MeTruyenCV Downloader - Khoi dong
 echo ================================================
 echo.
-echo Dang tu dong cai dat va bat dau download...
+echo Dang khoi dong chuong trinh tai truyen...
 echo.
 
 echo [1/2] Cai dat dependencies...
@@ -22,3 +22,7 @@ echo.
 timeout /t 2 /nobreak >nul
 
 python metruyencv_downloader.py
+
+echo.
+echo Nhan phim bat ky de dong cua so...
+pause >nul

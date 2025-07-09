@@ -63,7 +63,7 @@ VÍ DỤ CẤU HÌNH:
   + Cài đặt các thư viện cần thiết
   + Đọc cấu hình từ config.json
   + Đăng nhập và bắt đầu tải truyện
-- Hoặc mở terminal và chạy: python downloader.py
+- Hoặc mở terminal và chạy: python metruyencv_downloader.py
 
 3. LƯU Ý:
 
@@ -81,8 +81,9 @@ VÍ DỤ CẤU HÌNH:
 
 5. CẤU TRÚC FILE SAU KHI TẢI:
 
-Ten_Truyen/
-├── Chuong_1.txt
-├── Chuong_2.txt
-├── Chuong_3.txt
-└── ...
+downloads/
+└── Ten_Truyen/
+    ├── Chương 1.txt
+    ├── Chương 2.txt
+    ├── Chương 3.txt
+    └── ...
