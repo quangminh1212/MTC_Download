@@ -47,7 +47,7 @@ def create_driver():
     except Exception as e:
         print(f"Firefox không khả dụng: {e}")
 
-    # Thử Chrome cuối cùng
+    # Thử Chrome
     try:
         chrome_options = Options()
         # Không sử dụng headless - để hiển thị trình duyệt
@@ -64,7 +64,42 @@ def create_driver():
     except Exception as e:
         print(f"Chrome không khả dụng: {e}")
 
-    raise Exception("Không thể khởi tạo bất kỳ trình duyệt nào! Vui lòng cài đặt Edge, Firefox hoặc Chrome.")
+    # Thử Brave cuối cùng
+    try:
+        import os
+
+        # Tìm đường dẫn Brave Browser
+        brave_paths = [
+            r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe",
+            r"C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe",
+            r"C:\Users\{}\AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe".format(os.getenv('USERNAME')),
+        ]
+
+        brave_path = None
+        for path in brave_paths:
+            if os.path.exists(path):
+                brave_path = path
+                break
+
+        if brave_path:
+            brave_options = Options()
+            brave_options.binary_location = brave_path
+            brave_options.add_argument('--disable-blink-features=AutomationControlled')
+            brave_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            brave_options.add_experimental_option('useAutomationExtension', False)
+            brave_options.add_argument('--disable-web-security')
+            brave_options.add_argument('--allow-running-insecure-content')
+
+            driver = webdriver.Chrome(options=brave_options)
+            driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+            print("✓ Đã khởi tạo Brave browser")
+            return driver
+        else:
+            print("Brave không tìm thấy")
+    except Exception as e:
+        print(f"Brave không khả dụng: {e}")
+
+    raise Exception("Không thể khởi tạo bất kỳ trình duyệt nào! Vui lòng cài đặt Edge, Firefox, Chrome hoặc Brave.")
 
 def test_metruyencv():
     """Test truy cập MeTruyenCV"""

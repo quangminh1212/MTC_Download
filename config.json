@@ -5,9 +5,10 @@
     "browser": "auto",
     "note": "end_chapter = null nghĩa là tải hết tất cả chương",
     "browser_options": {
-        "auto": "Tự động chọn trình duyệt (Edge → Firefox → Chrome)",
+        "auto": "Tự động chọn trình duyệt (Edge → Firefox → Chrome → Brave)",
         "edge": "Microsoft Edge",
         "firefox": "Mozilla Firefox",
-        "chrome": "Google Chrome"
+        "chrome": "Google Chrome",
+        "brave": "Brave Browser"
     }
 }

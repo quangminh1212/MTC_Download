@@ -9,7 +9,7 @@ from ultra_simple import create_driver
 
 def test_browser_choice():
     """Test các tùy chọn trình duyệt"""
-    browsers = ["auto", "edge", "firefox", "chrome"]
+    browsers = ["auto", "edge", "firefox", "chrome", "brave"]
     
     for browser in browsers:
         print(f"\n{'='*50}")

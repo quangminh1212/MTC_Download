@@ -40,6 +40,9 @@ def create_driver(browser_choice="auto"):
     elif browser_choice == "chrome":
         print("Đang khởi tạo Google Chrome...")
         return _create_chrome_driver()
+    elif browser_choice == "brave":
+        print("Đang khởi tạo Brave Browser...")
+        return _create_brave_driver()
     else:
         # Auto mode - thử theo thứ tự ưu tiên
         print("Đang tự động chọn trình duyệt...")
@@ -56,13 +59,19 @@ def create_driver(browser_choice="auto"):
         except Exception as e:
             print(f"Firefox không khả dụng: {e}")
 
-        # Thử Chrome cuối cùng
+        # Thử Chrome
         try:
             return _create_chrome_driver()
         except Exception as e:
             print(f"Chrome không khả dụng: {e}")
 
-        raise Exception("Không thể khởi tạo bất kỳ trình duyệt nào! Vui lòng cài đặt Edge, Firefox hoặc Chrome.")
+        # Thử Brave cuối cùng
+        try:
+            return _create_brave_driver()
+        except Exception as e:
+            print(f"Brave không khả dụng: {e}")
+
+        raise Exception("Không thể khởi tạo bất kỳ trình duyệt nào! Vui lòng cài đặt Edge, Firefox, Chrome hoặc Brave.")
 
 def _create_edge_driver():
     """Tạo Edge WebDriver"""
@@ -103,6 +112,41 @@ def _create_chrome_driver():
     driver = webdriver.Chrome(options=chrome_options)
     driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     print("✓ Đã khởi tạo Google Chrome")
+    return driver
+
+def _create_brave_driver():
+    """Tạo Brave WebDriver"""
+    import os
+
+    # Tìm đường dẫn Brave Browser
+    brave_paths = [
+        r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe",
+        r"C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe",
+        r"C:\Users\{}\AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe".format(os.getenv('USERNAME')),
+    ]
+
+    brave_path = None
+    for path in brave_paths:
+        if os.path.exists(path):
+            brave_path = path
+            break
+
+    if not brave_path:
+        raise Exception("Không tìm thấy Brave Browser. Vui lòng cài đặt Brave hoặc kiểm tra đường dẫn.")
+
+    # Sử dụng Chrome options với binary_location là Brave
+    brave_options = Options()
+    brave_options.binary_location = brave_path
+    # Không sử dụng headless - để hiển thị trình duyệt
+    brave_options.add_argument('--disable-blink-features=AutomationControlled')
+    brave_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+    brave_options.add_experimental_option('useAutomationExtension', False)
+    brave_options.add_argument('--disable-web-security')
+    brave_options.add_argument('--allow-running-insecure-content')
+
+    driver = webdriver.Chrome(options=brave_options)
+    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    print("✓ Đã khởi tạo Brave Browser")
     return driver
 
 def decode_content(encoded_content):

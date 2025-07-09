@@ -22,10 +22,11 @@ MeTruyenCV Downloader - Web Interface
 - config.json: Cấu hình truyện và trình duyệt
 
 🌐 TÍNH NĂNG CHỌN TRÌNH DUYỆT:
-- Auto: Tự động chọn (Edge → Firefox → Chrome)
+- Auto: Tự động chọn (Edge → Firefox → Chrome → Brave)
 - Edge: Microsoft Edge (mặc định Windows)
 - Firefox: Mozilla Firefox
 - Chrome: Google Chrome
+- Brave: Brave Browser
 
 ✨ TÍNH NĂNG KHÁC:
 - Giao diện web đơn giản, dễ sử dụng
