@@ -802,11 +802,21 @@ def download_chapter(chapter_url, chapter_title, story_folder, driver=None, brow
                                     print(f"Lỗi decode Unicode: {e}")
                                     pass
 
-                                # Loại bỏ HTML tags
+                                # Loại bỏ HTML tags và các ký tự HTML không mong muốn
                                 clean_code = re.sub(r'<[^>]+>', '', decoded_code)
+
+                                # Loại bỏ các ký tự HTML remnants cụ thể
+                                clean_code = re.sub(r'<a href=\\?[^>]*>', '', clean_code)  # <a href=\ tags
+                                clean_code = re.sub(r'</a>', '', clean_code)  # closing </a> tags
+                                clean_code = re.sub(r'</?[a-zA-Z][^>]*>', '', clean_code)  # any remaining HTML tags
+                                clean_code = re.sub(r'&[a-zA-Z]+;', '', clean_code)  # HTML entities like &nbsp;
+                                clean_code = re.sub(r'\\[rnt]', ' ', clean_code)  # escaped newlines/tabs
 
                                 # Loại bỏ dấu gạch ngang đầu
                                 clean_code = re.sub(r'^-+\s*', '', clean_code.strip())
+
+                                # Loại bỏ khoảng trắng thừa
+                                clean_code = re.sub(r'\s+', ' ', clean_code.strip())
 
                                 if clean_code.strip():
                                     full_content += clean_code.strip() + "\n\n"
@@ -890,7 +900,8 @@ def main():
 
     # Lấy cấu hình từ settings
     browser_choice = settings_config.get("browser", "auto")
-    delay_between_chapters = settings_config.get("delay_between_chapters", 2)
+    delay_between_chapters_ms = settings_config.get("delay_between_chapters", 2000)  # mili giây
+    delay_between_chapters = delay_between_chapters_ms / 1000.0  # chuyển sang giây cho time.sleep()
     max_retries = settings_config.get("max_retries", 3)
     output_folder = download_config.get("output_folder", "downloads")
 
@@ -909,7 +920,7 @@ def main():
     print(f"Tài khoản: {username}")
     print(f"Trình duyệt: {browser_choice}")
     print(f"Thư mục lưu: {output_folder}")
-    print(f"Delay giữa các chương: {delay_between_chapters}s")
+    print(f"Delay giữa các chương: {delay_between_chapters_ms}ms")
 
     # Tạo login_config cho các hàm khác
     login_config = {

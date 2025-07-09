@@ -42,11 +42,11 @@ MTC_Download/
     "note": "URL truyện và phạm vi chương (end_chapter = -1 để tải hết)"
   },
   "settings": {
-    "delay_between_chapters": 2,
+    "delay_between_chapters": 2000,
     "max_retries": 3,
     "headless": false,
     "browser": "auto",
-    "note": "Cấu hình: delay (giây), thử lại, headless, browser"
+    "note": "Cấu hình: delay (mili giây), thử lại, headless, browser"
   }
 }
 ```
