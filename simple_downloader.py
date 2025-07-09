@@ -16,14 +16,32 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 def setup_driver():
     """Thiết lập Chrome driver"""
-    options = Options()
-    options.add_argument("--headless")  # Chạy ẩn
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    
-    service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
-    return driver
+    try:
+        options = Options()
+        options.add_argument("--headless")  # Chạy ẩn
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--disable-extensions")
+        options.add_argument("--disable-logging")
+        options.add_argument("--log-level=3")
+
+        print("Đang tải ChromeDriver...")
+
+        # Tự động tải ChromeDriver phù hợp
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=options)
+
+        print("✓ ChromeDriver đã sẵn sàng")
+        return driver
+
+    except Exception as e:
+        print(f"Lỗi khi thiết lập ChromeDriver: {e}")
+        print("\nHướng dẫn khắc phục:")
+        print("1. Đảm bảo Google Chrome đã được cài đặt")
+        print("2. Cập nhật Google Chrome lên phiên bản mới nhất")
+        print("3. Chạy lại chương trình")
+        return None
 
 def get_story_title(driver):
     """Lấy tên truyện"""
@@ -131,7 +149,11 @@ def main():
     
     # Thiết lập driver
     driver = setup_driver()
-    
+
+    if not driver:
+        print("Không thể khởi tạo ChromeDriver!")
+        return
+
     try:
         # Truy cập trang truyện
         driver.get(story_url)
@@ -176,7 +198,8 @@ def main():
     except Exception as e:
         print(f"Lỗi: {e}")
     finally:
-        driver.quit()
+        if driver:
+            driver.quit()
 
 if __name__ == "__main__":
     main()
