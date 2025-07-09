@@ -686,7 +686,11 @@ def main():
     username = account_config.get("username", "")
     password = account_config.get("password", "")
 
-    browser_choice = "auto"  # Luôn sử dụng auto
+    # Lấy cấu hình từ settings
+    browser_choice = settings_config.get("browser", "auto")
+    delay_between_chapters = settings_config.get("delay_between_chapters", 2)
+    max_retries = settings_config.get("max_retries", 3)
+    output_folder = download_config.get("output_folder", "downloads")
 
     # Kiểm tra thông tin cần thiết
     if not story_url:
@@ -701,6 +705,9 @@ def main():
     print(f"URL: {story_url}")
     print(f"Chương: {start_chapter} đến {end_chapter if end_chapter > 0 else 'cuối'}")
     print(f"Tài khoản: {username}")
+    print(f"Trình duyệt: {browser_choice}")
+    print(f"Thư mục lưu: {output_folder}")
+    print(f"Delay giữa các chương: {delay_between_chapters}s")
 
     # Tạo login_config cho các hàm khác
     login_config = {
@@ -713,6 +720,11 @@ def main():
     driver = None
     try:
         driver = create_driver(browser_choice)
+
+        # Tạo thư mục output nếu chưa có
+        if output_folder and output_folder != "downloads":
+            os.makedirs(output_folder, exist_ok=True)
+            os.chdir(output_folder)
 
         # Lấy thông tin truyện
         story_folder = get_story_info(story_url, driver, browser_choice, login_config)
@@ -741,7 +753,7 @@ def main():
             if download_chapter(chapter['url'], chapter['title'], story_folder, driver, browser_choice, login_config):
                 success += 1
 
-            time.sleep(1)  # Nghỉ 1 giây
+            time.sleep(delay_between_chapters)  # Nghỉ theo cấu hình
     finally:
         # Đóng WebDriver khi hoàn thành
         if driver:

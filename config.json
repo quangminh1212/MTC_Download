@@ -1,17 +1,21 @@
 {
   "account": {
-    "username": "",
-    "password": ""
+    "username": "wuangming12@gmail.com",
+    "password": "fjc7dB3p",
+    "note": "Thông tin đăng nhập MeTruyenCV"
   },
   "download": {
-    "story_url": "",
+    "story_url": "https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong",
     "start_chapter": 1,
-    "end_chapter": -1,
-    "output_folder": "downloads"
+    "end_chapter": 10,
+    "output_folder": "downloads",
+    "note": "URL truyện cần tải và phạm vi chương (end_chapter = -1 để tải hết)"
   },
   "settings": {
     "delay_between_chapters": 2,
     "max_retries": 3,
-    "headless": false
+    "headless": false,
+    "browser": "auto",
+    "note": "Cấu hình tải: delay (giây), số lần thử lại, headless mode, browser (auto/chrome/firefox/edge)"
   }
 }

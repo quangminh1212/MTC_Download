@@ -2,24 +2,23 @@
 chcp 65001 >nul
 cls
 echo ================================================
-echo        MeTruyenCV Downloader - Web Interface
+echo        MeTruyenCV Downloader - Auto Mode
 echo ================================================
 echo.
-echo Dang tu dong cai dat va khoi dong web server...
+echo Dang tu dong cai dat va bat dau download...
 echo.
 
 echo [1/2] Cai dat dependencies...
-pip install flask requests beautifulsoup4 lxml pycryptodome selenium --quiet --disable-pip-version-check 2>nul
+pip install requests beautifulsoup4 lxml pycryptodome selenium --quiet --disable-pip-version-check 2>nul
 echo.
 
-echo [2/2] Khoi dong web server...
+echo [2/2] Doc config va bat dau download...
 echo.
-echo - Web server se chay tai: http://localhost:3000
-echo - Trinh duyet se tu dong mo trong vai giay...
-echo - Nhan Ctrl+C de dung server
+echo - Doc thong tin tu config.json
+echo - Tu dong dang nhap va download theo cau hinh
+echo - Nhan Ctrl+C de dung qua trinh
 echo.
 
-timeout /t 3 /nobreak >nul
-start http://localhost:3000
+timeout /t 2 /nobreak >nul
 
-python web_server.py
+python downloader.py

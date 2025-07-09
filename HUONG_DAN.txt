@@ -18,7 +18,8 @@ Mở file config.json và điền thông tin như sau:
   "settings": {
     "delay_between_chapters": 2,
     "max_retries": 3,
-    "headless": false
+    "headless": false,
+    "browser": "auto"
   }
 }
 
@@ -30,6 +31,10 @@ CHI TIẾT CẤU HÌNH:
 - start_chapter: Chương bắt đầu tải (mặc định: 1)
 - end_chapter: Chương kết thúc (-1 để tải hết, hoặc số chương cụ thể)
 - output_folder: Thư mục lưu truyện (mặc định: downloads)
+- delay_between_chapters: Thời gian nghỉ giữa các chương (giây)
+- max_retries: Số lần thử lại khi lỗi
+- headless: Chạy ẩn trình duyệt (true/false)
+- browser: Trình duyệt sử dụng (auto/chrome/firefox/edge)
 
 VÍ DỤ CẤU HÌNH:
 
@@ -54,6 +59,10 @@ VÍ DỤ CẤU HÌNH:
 2. CHẠY CHƯƠNG TRÌNH:
 
 - Nhấp đúp vào file run.bat
+- Chương trình sẽ tự động:
+  + Cài đặt các thư viện cần thiết
+  + Đọc cấu hình từ config.json
+  + Đăng nhập và bắt đầu tải truyện
 - Hoặc mở terminal và chạy: python downloader.py
 
 3. LƯU Ý:
