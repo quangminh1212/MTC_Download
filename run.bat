@@ -8,9 +8,10 @@ echo.
 echo Chon chuc nang:
 echo 1. Cai dat lan dau
 echo 2. Chay downloader
-echo 3. Thoat
+echo 3. Sua loi ChromeDriver
+echo 4. Thoat
 echo.
-set /p choice="Nhap lua chon (1-3): "
+set /p choice="Nhap lua chon (1-4): "
 
 if "%choice%"=="1" (
     echo.
@@ -31,6 +32,15 @@ if "%choice%"=="2" (
 )
 
 if "%choice%"=="3" (
+    echo.
+    echo Dang sua loi ChromeDriver...
+    python fix_chrome.py
+    echo.
+    pause
+    goto start
+)
+
+if "%choice%"=="4" (
     echo Tam biet!
     exit
 )
