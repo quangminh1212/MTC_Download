@@ -42,22 +42,61 @@ MTC_Download/
     "note": "URL truyện và phạm vi chương (end_chapter = -1 để tải hết)"
   },
   "settings": {
-    "delay_between_chapters": 2,
+    "delay_between_chapters": 2000,
     "max_retries": 3,
-    "headless": false,
+    "headless": 0,
     "browser": "auto",
-    "note": "Cấu hình: delay (giây), thử lại, headless, browser"
+    "note": "Cấu hình: delay (milliseconds), thử lại, headless (0/1), browser"
   }
 }
 ```
 
-## 🔧 Tùy chọn trình duyệt
+## 🔧 Hướng dẫn cấu hình chi tiết
 
+### 📝 **Cấu hình tài khoản (account)**
+```json
+"account": {
+  "username": "email@gmail.com",     // Email đăng nhập MeTruyenCV
+  "password": "your_password"        // Mật khẩu tài khoản
+}
+```
+
+### 📚 **Cấu hình tải truyện (download)**
+```json
+"download": {
+  "story_url": "https://metruyencv.com/truyen/ten-truyen",  // URL truyện
+  "start_chapter": 1,              // Chương bắt đầu
+  "end_chapter": 10,               // Chương kết thúc (-1 = tải hết)
+  "output_folder": "downloads"     // Thư mục lưu file
+}
+```
+
+### ⚙️ **Cấu hình hệ thống (settings)**
+```json
+"settings": {
+  "delay_between_chapters": 2000,  // Delay giữa chương (milliseconds)
+  "max_retries": 3,                // Số lần thử lại khi lỗi
+  "headless": 0,                   // 0 = hiển thị browser, 1 = ẩn browser
+  "browser": "auto"                // Loại trình duyệt
+}
+```
+
+### 🌐 **Tùy chọn trình duyệt**
 - `"auto"` - Tự động chọn (Edge → Firefox → Chrome → Brave)
 - `"edge"` - Microsoft Edge
-- `"firefox"` - Mozilla Firefox  
+- `"firefox"` - Mozilla Firefox
 - `"chrome"` - Google Chrome
 - `"brave"` - Brave Browser
+
+### ⏱️ **Cấu hình delay (milliseconds)**
+- `1000` = 1 giây
+- `2000` = 2 giây (khuyến nghị)
+- `5000` = 5 giây (an toàn hơn)
+- `500` = 0.5 giây (nhanh nhưng có thể bị chặn)
+
+### 👁️ **Cấu hình headless**
+- `0` = Hiển thị trình duyệt (khuyến nghị để debug)
+- `1` = Ẩn trình duyệt (chạy nền, nhanh hơn)
 
 ## ✨ Tính năng
 

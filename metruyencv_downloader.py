@@ -28,56 +28,62 @@ from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
-def create_driver(browser_choice="auto"):
-    """Tạo WebDriver với trình duyệt được chọn, không headless"""
+def create_driver(browser_choice="auto", headless=0):
+    """Tạo WebDriver với trình duyệt được chọn
+    Args:
+        browser_choice: Loại trình duyệt (auto/chrome/firefox/edge/brave)
+        headless: 0 = hiển thị trình duyệt, 1 = ẩn trình duyệt
+    """
     browser_choice = browser_choice.lower()
 
     if browser_choice == "edge":
         print("Đang khởi tạo Microsoft Edge...")
-        return _create_edge_driver()
+        return _create_edge_driver(headless)
     elif browser_choice == "firefox":
         print("Đang khởi tạo Mozilla Firefox...")
-        return _create_firefox_driver()
+        return _create_firefox_driver(headless)
     elif browser_choice == "chrome":
         print("Đang khởi tạo Google Chrome...")
-        return _create_chrome_driver()
+        return _create_chrome_driver(headless)
     elif browser_choice == "brave":
         print("Đang khởi tạo Brave Browser...")
-        return _create_brave_driver()
+        return _create_brave_driver(headless)
     else:
         # Auto mode - thử theo thứ tự ưu tiên
         print("Đang tự động chọn trình duyệt...")
 
         # Thử Edge trước (trình duyệt mặc định trên Windows)
         try:
-            return _create_edge_driver()
+            return _create_edge_driver(headless)
         except Exception as e:
             print(f"Edge không khả dụng: {e}")
 
         # Thử Firefox
         try:
-            return _create_firefox_driver()
+            return _create_firefox_driver(headless)
         except Exception as e:
             print(f"Firefox không khả dụng: {e}")
 
         # Thử Chrome
         try:
-            return _create_chrome_driver()
+            return _create_chrome_driver(headless)
         except Exception as e:
             print(f"Chrome không khả dụng: {e}")
 
         # Thử Brave cuối cùng
         try:
-            return _create_brave_driver()
+            return _create_brave_driver(headless)
         except Exception as e:
             print(f"Brave không khả dụng: {e}")
 
         raise Exception("Không thể khởi tạo bất kỳ trình duyệt nào! Vui lòng cài đặt Edge, Firefox, Chrome hoặc Brave.")
 
-def _create_edge_driver():
+def _create_edge_driver(headless=0):
     """Tạo Edge WebDriver"""
     edge_options = EdgeOptions()
-    # Không sử dụng headless
+    # Headless mode
+    if headless == 1:
+        edge_options.add_argument('--headless')
     edge_options.add_argument('--disable-blink-features=AutomationControlled')
     edge_options.add_experimental_option("excludeSwitches", ["enable-automation"])
     edge_options.add_experimental_option('useAutomationExtension', False)
@@ -94,10 +100,12 @@ def _create_edge_driver():
     print("✓ Đã khởi tạo Microsoft Edge")
     return driver
 
-def _create_firefox_driver():
+def _create_firefox_driver(headless=0):
     """Tạo Firefox WebDriver"""
     firefox_options = FirefoxOptions()
-    # Không sử dụng headless
+    # Headless mode
+    if headless == 1:
+        firefox_options.add_argument('--headless')
     firefox_options.set_preference("dom.webdriver.enabled", False)
     firefox_options.set_preference('useAutomationExtension', False)
 
@@ -105,10 +113,12 @@ def _create_firefox_driver():
     print("✓ Đã khởi tạo Mozilla Firefox")
     return driver
 
-def _create_chrome_driver():
+def _create_chrome_driver(headless=0):
     """Tạo Chrome WebDriver"""
     chrome_options = Options()
-    # Không sử dụng headless - để hiển thị trình duyệt
+    # Headless mode
+    if headless == 1:
+        chrome_options.add_argument('--headless')
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
     chrome_options.add_experimental_option('useAutomationExtension', False)
@@ -125,7 +135,7 @@ def _create_chrome_driver():
     print("✓ Đã khởi tạo Google Chrome")
     return driver
 
-def _create_brave_driver():
+def _create_brave_driver(headless=0):
     """Tạo Brave WebDriver"""
     import os
 
@@ -148,7 +158,9 @@ def _create_brave_driver():
     # Sử dụng Chrome options với binary_location là Brave
     brave_options = Options()
     brave_options.binary_location = brave_path
-    # Không sử dụng headless - để hiển thị trình duyệt
+    # Headless mode
+    if headless == 1:
+        brave_options.add_argument('--headless')
     brave_options.add_argument('--disable-blink-features=AutomationControlled')
     brave_options.add_experimental_option("excludeSwitches", ["enable-automation"])
     brave_options.add_experimental_option('useAutomationExtension', False)
@@ -928,8 +940,9 @@ def main():
 
     # Lấy cấu hình từ settings
     browser_choice = settings_config.get("browser", "auto")
-    delay_between_chapters = settings_config.get("delay_between_chapters", 2)
+    delay_between_chapters = settings_config.get("delay_between_chapters", 2000)  # milliseconds
     max_retries = settings_config.get("max_retries", 3)
+    headless = settings_config.get("headless", 0)  # 0 = hiển thị, 1 = ẩn
     output_folder = download_config.get("output_folder", "downloads")
 
     # Kiểm tra thông tin cần thiết
@@ -946,8 +959,9 @@ def main():
     print(f"Chương: {start_chapter} đến {end_chapter if end_chapter > 0 else 'cuối'}")
     print(f"Tài khoản: {username}")
     print(f"Trình duyệt: {browser_choice}")
+    print(f"Headless: {'Ẩn' if headless == 1 else 'Hiển thị'}")
     print(f"Thư mục lưu: {output_folder}")
-    print(f"Delay giữa các chương: {delay_between_chapters}s")
+    print(f"Delay giữa các chương: {delay_between_chapters}ms")
 
     # Tạo login_config cho các hàm khác
     login_config = {
@@ -960,7 +974,7 @@ def main():
     # Tạo WebDriver một lần duy nhất
     driver = None
     try:
-        driver = create_driver(browser_choice)
+        driver = create_driver(browser_choice, headless)
 
         # Tạo thư mục output nếu chưa có
         if output_folder and output_folder != "downloads":
@@ -1009,13 +1023,13 @@ def main():
                             driver.quit()
                         except:
                             pass
-                        driver = create_driver(browser_choice)
+                        driver = create_driver(browser_choice, headless)
                         time.sleep(2)
 
             if not chapter_success:
                 print(f"❌ Không thể tải {chapter['title']} sau {max_retries} lần thử")
 
-            time.sleep(delay_between_chapters)  # Nghỉ theo cấu hình
+            time.sleep(delay_between_chapters / 1000.0)  # Chuyển milliseconds thành seconds
     finally:
         # Đóng WebDriver khi hoàn thành
         if driver:

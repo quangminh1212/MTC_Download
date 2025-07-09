@@ -16,9 +16,9 @@ Mở file config.json và điền thông tin như sau:
     "output_folder": "downloads"
   },
   "settings": {
-    "delay_between_chapters": 2,
+    "delay_between_chapters": 2000,
     "max_retries": 3,
-    "headless": false,
+    "headless": 0,
     "browser": "auto"
   }
 }
@@ -31,9 +31,9 @@ CHI TIẾT CẤU HÌNH:
 - start_chapter: Chương bắt đầu tải (mặc định: 1)
 - end_chapter: Chương kết thúc (-1 để tải hết, hoặc số chương cụ thể)
 - output_folder: Thư mục lưu truyện (mặc định: downloads)
-- delay_between_chapters: Thời gian nghỉ giữa các chương (giây)
+- delay_between_chapters: Thời gian nghỉ giữa các chương (milliseconds)
 - max_retries: Số lần thử lại khi lỗi
-- headless: Chạy ẩn trình duyệt (true/false)
+- headless: Chạy ẩn trình duyệt (0=hiển thị, 1=ẩn)
 - browser: Trình duyệt sử dụng (auto/chrome/firefox/edge)
 
 VÍ DỤ CẤU HÌNH:
@@ -50,9 +50,10 @@ VÍ DỤ CẤU HÌNH:
     "output_folder": "downloads"
   },
   "settings": {
-    "delay_between_chapters": 2,
+    "delay_between_chapters": 2000,
     "max_retries": 3,
-    "headless": false
+    "headless": 0,
+    "browser": "auto"
   }
 }
 
