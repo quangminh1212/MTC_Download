@@ -114,6 +114,13 @@ download_status = {
     'logs': []
 }
 
+def serialize_status_for_json(status_dict):
+    """Convert download_status to JSON-serializable format"""
+    status_copy = status_dict.copy()
+    if status_copy.get('start_time') and hasattr(status_copy['start_time'], 'strftime'):
+        status_copy['start_time'] = status_copy['start_time'].strftime('%Y-%m-%d %H:%M:%S')
+    return status_copy
+
 # Performance middleware
 @app.before_request
 def before_request():
@@ -352,7 +359,7 @@ def api_status():
     try:
         return jsonify({
             'success': True,
-            'data': download_status
+            'data': serialize_status_for_json(download_status)
         })
     except Exception as e:
         app.logger.error(f'Error in api_status: {str(e)}')
@@ -513,7 +520,7 @@ def api_cache_clear():
 @socketio.on('connect')
 def handle_connect():
     """Xử lý khi client kết nối"""
-    emit('status_update', download_status)
+    emit('status_update', serialize_status_for_json(download_status))
 
 @socketio.on('disconnect')
 def handle_disconnect():
@@ -525,8 +532,9 @@ def start_download_background(novel_url, start_chapter, end_chapter):
     try:
         # Import web_downloader here to avoid circular import
         from web_downloader import WebDownloader
-        
+
         # Update status
+        start_time = datetime.now()
         download_status.update({
             'is_downloading': True,
             'current_novel': novel_url,
@@ -534,11 +542,11 @@ def start_download_background(novel_url, start_chapter, end_chapter):
             'total_chapters': end_chapter - start_chapter + 1,
             'current_chapter': start_chapter,
             'status_message': 'Đang khởi tạo...',
-            'start_time': datetime.now(),
+            'start_time': start_time,
             'logs': []
         })
-        
-        socketio.emit('download_started', download_status)
+
+        socketio.emit('download_started', serialize_status_for_json(download_status))
         
         # Create downloader instance
         downloader = WebDownloader(config_manager, socketio)
@@ -552,10 +560,10 @@ def start_download_background(novel_url, start_chapter, end_chapter):
             'status_message': 'Hoàn thành' if success else 'Lỗi',
             'progress': 100 if success else download_status['progress']
         })
-        
+
         socketio.emit('download_completed', {
             'success': success,
-            'status': download_status
+            'status': serialize_status_for_json(download_status)
         })
         
     except Exception as e:
@@ -563,9 +571,10 @@ def start_download_background(novel_url, start_chapter, end_chapter):
             'is_downloading': False,
             'status_message': f'Lỗi: {str(e)}',
         })
+
         socketio.emit('download_error', {
             'error': str(e),
-            'status': download_status
+            'status': serialize_status_for_json(download_status)
         })
 
 def add_log(message, level='info'):
