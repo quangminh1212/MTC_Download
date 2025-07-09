@@ -1,18 +1,38 @@
 HƯỚNG DẪN SỬ DỤNG MeTruyenCV Downloader
 ==========================================
 
+CÁCH 1: SỬ DỤNG FILE BATCH (WINDOWS)
+------------------------------------
+Double-click vào file run.bat và chọn:
+1 = Cài đặt lần đầu
+2 = Chạy downloader
+3 = Thoát
+
+CÁCH 2: SỬ DỤNG THỦ CÔNG
+------------------------
+
 BƯỚC 1: Cài đặt
 ---------------
-Chạy lệnh:
 python install.py
 
-BƯỚC 2: Thay đổi URL truyện
----------------------------
-Mở file simple_downloader.py
-Tìm dòng:
-story_url = "https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong"
+BƯỚC 2: Cấu hình
+----------------
+Mở file config.json và chỉnh sửa:
+{
+    "story_url": "URL_TRUYEN_CUA_BAN",
+    "start_chapter": 1,
+    "end_chapter": 10
+}
 
-Thay thế bằng URL truyện bạn muốn tải
+Trong đó:
+- story_url: Link truyện cần tải
+- start_chapter: Chương bắt đầu (mặc định 1)
+- end_chapter: Chương kết thúc (null = tải hết)
+
+VÍ DỤ:
+- Tải hết: "end_chapter": null
+- Tải 10 chương đầu: "end_chapter": 10
+- Tải từ chương 5 đến 15: "start_chapter": 5, "end_chapter": 15
 
 BƯỚC 3: Chạy
 ------------
@@ -22,7 +42,7 @@ KẾT QUẢ:
 --------
 - Truyện sẽ được tải vào thư mục có tên truyện
 - Mỗi chương là 1 file .txt riêng
-- Chương trình sẽ tự động tải tất cả chương
+- Chương trình tải theo cấu hình trong config.json
 
 LƯU Ý:
 -------

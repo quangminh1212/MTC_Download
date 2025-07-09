@@ -7,6 +7,7 @@ Tải truyện từ metruyencv.com và lưu thành file txt
 
 import os
 import time
+import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -96,13 +97,37 @@ def download_chapter(driver, chapter_url, chapter_title, story_folder):
         print(f"✗ Lỗi khi tải {chapter_title}: {e}")
         return False
 
+def load_config():
+    """Đọc cấu hình từ config.json"""
+    try:
+        with open('config.json', 'r', encoding='utf-8') as f:
+            config = json.load(f)
+        return config
+    except FileNotFoundError:
+        print("Không tìm thấy file config.json!")
+        return None
+    except json.JSONDecodeError:
+        print("File config.json không đúng định dạng!")
+        return None
+
 def main():
     """Hàm chính"""
-    # URL truyện - THAY ĐỔI URL NÀY
-    story_url = "https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong"
-    
+    # Đọc cấu hình
+    config = load_config()
+    if not config:
+        return
+
+    story_url = config.get("story_url")
+    start_chapter = config.get("start_chapter", 1)
+    end_chapter = config.get("end_chapter")
+
+    if not story_url:
+        print("Không tìm thấy story_url trong config.json!")
+        return
+
     print("Bắt đầu tải truyện...")
     print(f"URL: {story_url}")
+    print(f"Chương: {start_chapter} đến {end_chapter if end_chapter else 'cuối'}")
     
     # Thiết lập driver
     driver = setup_driver()
@@ -122,22 +147,30 @@ def main():
         
         # Lấy danh sách chương
         chapters = get_chapters(driver)
-        
+
         if not chapters:
             print("Không tìm thấy chương nào!")
             return
-        
+
+        # Xác định phạm vi tải
+        if end_chapter and end_chapter <= len(chapters):
+            chapters_to_download = chapters[start_chapter-1:end_chapter]
+        else:
+            chapters_to_download = chapters[start_chapter-1:]
+
+        print(f"Sẽ tải {len(chapters_to_download)} chương (từ {start_chapter} đến {start_chapter + len(chapters_to_download) - 1})")
+
         # Tải từng chương
         success = 0
-        for i, chapter in enumerate(chapters, 1):
-            print(f"[{i}/{len(chapters)}] Đang tải: {chapter['title']}")
-            
+        for i, chapter in enumerate(chapters_to_download, 1):
+            print(f"[{i}/{len(chapters_to_download)}] Đang tải: {chapter['title']}")
+
             if download_chapter(driver, chapter['url'], chapter['title'], story_folder):
                 success += 1
-            
+
             time.sleep(1)  # Nghỉ 1 giây
         
-        print(f"\nHoàn thành! Đã tải {success}/{len(chapters)} chương")
+        print(f"\nHoàn thành! Đã tải {success}/{len(chapters_to_download)} chương")
         print(f"Truyện được lưu trong thư mục: {story_folder}")
         
     except Exception as e:
