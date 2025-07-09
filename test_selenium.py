@@ -14,10 +14,40 @@ from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from selenium.webdriver.edge.options import Options as EdgeOptions
 
 def create_driver():
-    """Tạo WebDriver với trình duyệt mặc định, không headless"""
-    print("Đang khởi tạo trình duyệt...")
-    
-    # Thử Chrome trước
+    """Tạo WebDriver với trình duyệt mặc định của hệ thống, không headless"""
+    print("Đang khởi tạo trình duyệt mặc định...")
+
+    # Thử Edge trước (trình duyệt mặc định trên Windows)
+    try:
+        edge_options = EdgeOptions()
+        # Không sử dụng headless
+        edge_options.add_argument('--disable-blink-features=AutomationControlled')
+        edge_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        edge_options.add_experimental_option('useAutomationExtension', False)
+        edge_options.add_argument('--disable-web-security')
+        edge_options.add_argument('--allow-running-insecure-content')
+
+        driver = webdriver.Edge(options=edge_options)
+        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+        print("✓ Đã khởi tạo Edge browser (trình duyệt mặc định)")
+        return driver
+    except Exception as e:
+        print(f"Edge không khả dụng: {e}")
+
+    # Thử Firefox
+    try:
+        firefox_options = FirefoxOptions()
+        # Không sử dụng headless
+        firefox_options.set_preference("dom.webdriver.enabled", False)
+        firefox_options.set_preference('useAutomationExtension', False)
+
+        driver = webdriver.Firefox(options=firefox_options)
+        print("✓ Đã khởi tạo Firefox browser")
+        return driver
+    except Exception as e:
+        print(f"Firefox không khả dụng: {e}")
+
+    # Thử Chrome cuối cùng
     try:
         chrome_options = Options()
         # Không sử dụng headless - để hiển thị trình duyệt
@@ -26,43 +56,15 @@ def create_driver():
         chrome_options.add_experimental_option('useAutomationExtension', False)
         chrome_options.add_argument('--disable-web-security')
         chrome_options.add_argument('--allow-running-insecure-content')
-        
+
         driver = webdriver.Chrome(options=chrome_options)
         driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         print("✓ Đã khởi tạo Chrome browser")
         return driver
     except Exception as e:
         print(f"Chrome không khả dụng: {e}")
-    
-    # Thử Firefox
-    try:
-        firefox_options = FirefoxOptions()
-        # Không sử dụng headless
-        firefox_options.set_preference("dom.webdriver.enabled", False)
-        firefox_options.set_preference('useAutomationExtension', False)
-        
-        driver = webdriver.Firefox(options=firefox_options)
-        print("✓ Đã khởi tạo Firefox browser")
-        return driver
-    except Exception as e:
-        print(f"Firefox không khả dụng: {e}")
-    
-    # Thử Edge
-    try:
-        edge_options = EdgeOptions()
-        # Không sử dụng headless
-        edge_options.add_argument('--disable-blink-features=AutomationControlled')
-        edge_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        edge_options.add_experimental_option('useAutomationExtension', False)
-        
-        driver = webdriver.Edge(options=edge_options)
-        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-        print("✓ Đã khởi tạo Edge browser")
-        return driver
-    except Exception as e:
-        print(f"Edge không khả dụng: {e}")
-    
-    raise Exception("Không thể khởi tạo bất kỳ trình duyệt nào! Vui lòng cài đặt Chrome, Firefox hoặc Edge.")
+
+    raise Exception("Không thể khởi tạo bất kỳ trình duyệt nào! Vui lòng cài đặt Edge, Firefox hoặc Chrome.")
 
 def test_metruyencv():
     """Test truy cập MeTruyenCV"""
