@@ -41,30 +41,38 @@ def get_chrome_version():
 def download_chromedriver(version):
     """Tải ChromeDriver thủ công"""
     try:
-        # URL API để lấy ChromeDriver
-        api_url = f"https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json"
-        
-        print("Đang lấy thông tin ChromeDriver...")
-        response = requests.get(api_url, timeout=30)
-        data = response.json()
-        
-        # Tìm version phù hợp
-        chromedriver_url = None
-        for item in data['versions']:
-            if item['version'].startswith(version):
-                for download in item['downloads'].get('chromedriver', []):
-                    if download['platform'] == 'win64':
-                        chromedriver_url = download['url']
-                        break
-                if chromedriver_url:
+        # URL trực tiếp tải ChromeDriver
+        base_url = "https://storage.googleapis.com/chrome-for-testing-public"
+
+        # Thử các version gần nhất
+        versions_to_try = [
+            f"{version}.0.0.0",
+            f"{version}.0.0.1",
+            f"{version}.0.0.2",
+            "131.0.6778.85",  # Version stable
+            "130.0.6723.116",
+            "129.0.6668.100"
+        ]
+
+        print("Đang thử tải ChromeDriver...")
+
+        for ver in versions_to_try:
+            try:
+                chromedriver_url = f"{base_url}/{ver}/win64/chromedriver-win64.zip"
+                print(f"Thử version {ver}...")
+
+                response = requests.get(chromedriver_url, timeout=30)
+                if response.status_code == 200:
+                    print(f"✓ Tìm thấy ChromeDriver version {ver}")
                     break
-        
-        if not chromedriver_url:
-            print(f"Không tìm thấy ChromeDriver cho Chrome {version}")
+            except:
+                continue
+        else:
+            print("Không tìm thấy ChromeDriver phù hợp")
             return None
-        
+
         print(f"Đang tải ChromeDriver từ: {chromedriver_url}")
-        
+
         # Tải file
         response = requests.get(chromedriver_url, timeout=60)
         zip_path = "chromedriver.zip"
@@ -78,7 +86,7 @@ def download_chromedriver(version):
         
         # Tìm file chromedriver.exe
         chromedriver_exe = None
-        for root, dirs, files in os.walk("chromedriver_temp"):
+        for root, _, files in os.walk("chromedriver_temp"):
             for file in files:
                 if file == "chromedriver.exe":
                     chromedriver_exe = os.path.join(root, file)
