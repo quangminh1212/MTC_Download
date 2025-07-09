@@ -23,69 +23,86 @@ def decode_content(encoded_content):
         # Bước 1: Decode base64
         decoded_bytes = base64.b64decode(encoded_content)
 
-        # Bước 2: Thử decompress với gzip
+        # Bước 2: Thử XOR với các key đơn giản
+        for key_byte in range(1, 256):
+            try:
+                xor_result = bytes([b ^ key_byte for b in decoded_bytes])
+                content = xor_result.decode('utf-8')
+                if len(content) > 100 and any(word in content for word in ['Tiểu', 'thế', 'người', 'một', 'có']):
+                    print(f"XOR key found: {key_byte}")
+                    return content
+            except:
+                continue
+
+        # Bước 3: Thử Caesar cipher trên từng byte
+        for shift in range(1, 256):
+            try:
+                shifted_result = bytes([(b + shift) % 256 for b in decoded_bytes])
+                content = shifted_result.decode('utf-8')
+                if len(content) > 100 and any(word in content for word in ['Tiểu', 'thế', 'người', 'một', 'có']):
+                    print(f"Caesar shift found: {shift}")
+                    return content
+            except:
+                continue
+
+        # Bước 4: Thử reverse bytes
+        try:
+            reversed_bytes = decoded_bytes[::-1]
+            content = reversed_bytes.decode('utf-8')
+            if len(content) > 100 and any(word in content for word in ['Tiểu', 'thế', 'người', 'một', 'có']):
+                print("Reverse bytes worked")
+                return content
+        except:
+            pass
+
+        # Bước 5: Thử decompress với gzip
         try:
             content = gzip.decompress(decoded_bytes).decode('utf-8')
             return content
         except:
             pass
 
-        # Bước 3: Thử decompress với zlib
+        # Bước 6: Thử decompress với zlib
         try:
             content = zlib.decompress(decoded_bytes).decode('utf-8')
             return content
         except:
             pass
 
-        # Bước 4: Thử AES decrypt với các key phổ biến
+        # Bước 7: Thử AES decrypt với các key phổ biến
         try:
-            # Thử một số key phổ biến cho trang web này
             possible_keys = [
                 b'metruyencv12345',  # 16 bytes
-                b'metruyencv123456789012345678901234',  # 32 bytes
                 b'1234567890123456',  # 16 bytes
                 b'abcdef1234567890',  # 16 bytes
+                b'metruyencv123456789012345678901234',  # 32 bytes
             ]
 
             for key in possible_keys:
                 try:
-                    if len(key) == 16:
-                        cipher = AES.new(key, AES.MODE_ECB)
-                    elif len(key) == 32:
-                        cipher = AES.new(key[:32], AES.MODE_ECB)
-                    else:
-                        continue
-
-                    decrypted = cipher.decrypt(decoded_bytes)
-                    # Thử unpad
-                    try:
-                        unpadded = unpad(decrypted, AES.block_size)
-                        content = unpadded.decode('utf-8')
-                        if len(content) > 50 and 'Tiểu' in content:  # Kiểm tra có nội dung tiếng Việt
-                            return content
-                    except:
-                        # Thử không unpad
+                    if len(key) >= 16:
+                        cipher = AES.new(key[:16], AES.MODE_ECB)
+                        decrypted = cipher.decrypt(decoded_bytes[:len(decoded_bytes)//16*16])
                         content = decrypted.decode('utf-8', errors='ignore').strip('\x00')
-                        if len(content) > 50 and 'Tiểu' in content:
+                        if len(content) > 50 and any(word in content for word in ['Tiểu', 'thế', 'người']):
                             return content
                 except:
                     continue
         except ImportError:
-            pass  # Không có pycryptodome
+            pass
         except:
             pass
 
-        # Bước 5: Thử decode trực tiếp UTF-8
+        # Bước 8: Thử decode trực tiếp UTF-8
         try:
             content = decoded_bytes.decode('utf-8')
             return content
         except:
             pass
 
-        # Bước 6: Thử decode latin-1 (fallback)
+        # Bước 9: Thử decode latin-1 (fallback)
         try:
             content = decoded_bytes.decode('latin-1')
-            # Kiểm tra xem có phải nội dung thật không
             if len(content) > 50:
                 return content
         except:
@@ -267,7 +284,11 @@ def download_chapter(chapter_url, chapter_title, story_folder):
             f.write("=" * 50 + "\n\n")
             f.write(content)
 
-        print(f"✓ Đã tải: {chapter_title} ({len(content)} ký tự)")
+        # Kiểm tra xem nội dung có bị mã hóa không
+        if len(content) < 500 or not any(word in content for word in ['Tiểu', 'thế', 'người', 'một', 'có', 'là', 'của']):
+            print(f"⚠️  Đã tải: {chapter_title} ({len(content)} ký tự) - Nội dung có thể vẫn bị mã hóa")
+        else:
+            print(f"✓ Đã tải: {chapter_title} ({len(content)} ký tự)")
         return True
 
     except Exception as e:
@@ -327,6 +348,15 @@ def main():
     
     print(f"\nHoàn thành! Đã tải {success}/{len(chapters_to_download)} chương")
     print(f"Truyện được lưu trong thư mục: {story_folder}")
+
+    if success > 0:
+        print("\n" + "="*50)
+        print("📝 LƯU Ý VỀ NỘI DUNG:")
+        print("- Nếu thấy ký tự lạ trong file txt, nội dung có thể vẫn bị mã hóa")
+        print("- Trang web sử dụng thuật toán mã hóa phức tạp")
+        print("- Dự án đã tải được cấu trúc chương thành công")
+        print("- Có thể cần reverse engineering thêm để giải mã hoàn toàn")
+        print("="*50)
 
 if __name__ == "__main__":
     main()
