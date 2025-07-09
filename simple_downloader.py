@@ -26,6 +26,14 @@ def setup_driver():
         options.add_argument("--disable-logging")
         options.add_argument("--log-level=3")
 
+        # Thử dùng ChromeDriver local trước
+        if os.path.exists("chromedriver.exe"):
+            print("Sử dụng ChromeDriver local...")
+            service = Service("chromedriver.exe")
+            driver = webdriver.Chrome(service=service, options=options)
+            print("✓ ChromeDriver local đã sẵn sàng")
+            return driver
+
         print("Đang tải ChromeDriver...")
 
         # Tự động tải ChromeDriver phù hợp
@@ -38,9 +46,9 @@ def setup_driver():
     except Exception as e:
         print(f"Lỗi khi thiết lập ChromeDriver: {e}")
         print("\nHướng dẫn khắc phục:")
-        print("1. Đảm bảo Google Chrome đã được cài đặt")
-        print("2. Cập nhật Google Chrome lên phiên bản mới nhất")
-        print("3. Chạy lại chương trình")
+        print("1. Chạy: python manual_chrome_setup.py")
+        print("2. Hoặc chạy: python fix_chrome.py")
+        print("3. Đảm bảo Google Chrome đã được cài đặt")
         return None
 
 def get_story_title(driver):
