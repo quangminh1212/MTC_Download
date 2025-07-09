@@ -15,8 +15,8 @@ MeTruyenCV Downloader - Web Interface
 6. Theo dõi tiến trình tải trên trang web
 
 📁 CẤU TRÚC DỰ ÁN:
-- app.py: Web server chính
-- ultra_simple.py: Logic tải truyện với Selenium
+- web_server.py: Web server chính
+- downloader.py: Logic tải truyện với Selenium
 - templates/: Giao diện HTML
 - run.bat: File khởi động
 - config.json: Cấu hình truyện và trình duyệt

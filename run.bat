@@ -22,4 +22,4 @@ echo.
 timeout /t 3 /nobreak >nul
 start http://localhost:3000
 
-python app.py
+python web_server.py

@@ -10,7 +10,7 @@ import json
 import threading
 import time
 from flask import Flask, render_template, request, jsonify, redirect, url_for
-from ultra_simple import get_story_info, get_chapters, download_chapter
+from downloader import get_story_info, get_chapters, download_chapter
 
 app = Flask(__name__)
 
