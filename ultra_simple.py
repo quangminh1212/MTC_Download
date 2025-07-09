@@ -158,27 +158,58 @@ def download_chapter(chapter_url, chapter_title, story_folder):
                         encoded_content = content_match.group(1)
                         print(f"Tìm thấy nội dung mã hóa ({len(encoded_content)} ký tự)")
 
-                        # Decode base64
+                        # Thử nhiều cách decode
+                        print(f"Nội dung mã hóa: {encoded_content[:50]}...")
+
+                        # Cách 1: Base64 thông thường
                         try:
                             decoded_bytes = base64.b64decode(encoded_content)
                             content = decoded_bytes.decode('utf-8')
-                            print(f"Decode thành công ({len(content)} ký tự)")
+                            print(f"Decode base64 thành công ({len(content)} ký tự)")
                             break
-                        except Exception as decode_error:
-                            print(f"Lỗi decode base64: {decode_error}")
-                            # Thử decode với padding
-                            try:
-                                # Thêm padding nếu cần
-                                missing_padding = len(encoded_content) % 4
-                                if missing_padding:
-                                    encoded_content += '=' * (4 - missing_padding)
-                                decoded_bytes = base64.b64decode(encoded_content)
-                                content = decoded_bytes.decode('utf-8')
-                                print(f"Decode với padding thành công ({len(content)} ký tự)")
-                                break
-                            except Exception as e2:
-                                print(f"Vẫn lỗi decode: {e2}")
-                                continue
+                        except Exception as e1:
+                            print(f"Lỗi decode base64: {e1}")
+
+                        # Cách 2: Base64 với padding
+                        try:
+                            missing_padding = len(encoded_content) % 4
+                            if missing_padding:
+                                encoded_content += '=' * (4 - missing_padding)
+                            decoded_bytes = base64.b64decode(encoded_content)
+                            content = decoded_bytes.decode('utf-8')
+                            print(f"Decode base64 với padding thành công ({len(content)} ký tự)")
+                            break
+                        except Exception as e2:
+                            print(f"Lỗi decode base64 với padding: {e2}")
+
+                        # Cách 3: Thử decode với latin-1 trước
+                        try:
+                            decoded_bytes = base64.b64decode(encoded_content)
+                            content = decoded_bytes.decode('latin-1')
+                            print(f"Decode base64 latin-1 thành công ({len(content)} ký tự)")
+                            break
+                        except Exception as e3:
+                            print(f"Lỗi decode base64 latin-1: {e3}")
+
+                        # Cách 4: Có thể nội dung đã được URL decode
+                        try:
+                            import urllib.parse
+                            url_decoded = urllib.parse.unquote(encoded_content)
+                            decoded_bytes = base64.b64decode(url_decoded)
+                            content = decoded_bytes.decode('utf-8')
+                            print(f"Decode URL + base64 thành công ({len(content)} ký tự)")
+                            break
+                        except Exception as e4:
+                            print(f"Lỗi decode URL + base64: {e4}")
+
+                        # Cách 5: Có thể là plain text
+                        try:
+                            content = encoded_content
+                            print(f"Sử dụng plain text ({len(content)} ký tự)")
+                            break
+                        except Exception as e5:
+                            print(f"Lỗi plain text: {e5}")
+                            continue
                 except Exception as e:
                     print(f"Lỗi khi extract content: {e}")
                     continue
