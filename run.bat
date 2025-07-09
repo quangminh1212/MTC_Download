@@ -8,16 +8,12 @@ echo.
 echo Dang tu dong cai dat va chay...
 echo.
 
-echo [1/3] Cai dat dependencies...
-python simple_install.py
+echo [1/2] Cai dat dependencies...
+pip install requests beautifulsoup4 lxml --quiet
 echo.
 
-echo [2/3] Tai ChromeDriver thu cong...
-python manual_chrome_setup.py
-echo.
-
-echo [3/3] Chay downloader...
-python simple_downloader.py
+echo [2/2] Chay downloader (khong can ChromeDriver)...
+python ultra_simple.py
 echo.
 
 echo ================================================
