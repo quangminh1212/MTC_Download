@@ -595,7 +595,7 @@ def load_config():
         print("Không tìm thấy config.json!")
         return None
 
-def get_story_info(story_url, driver=None, browser_choice="auto", login_config=None):
+def get_story_info(story_url, driver=None, browser_choice="auto", login_config=None, output_folder="downloads"):
     """Lấy thông tin truyện sử dụng Selenium"""
     driver_created = False
     try:
@@ -626,9 +626,10 @@ def get_story_info(story_url, driver=None, browser_choice="auto", login_config=N
         except:
             story_title = "Unknown_Story"
 
-        # Tạo thư mục
+        # Tạo thư mục truyện trong thư mục output
         safe_title = "".join(c for c in story_title if c.isalnum() or c in (' ', '-', '_')).strip()
-        story_folder = safe_title.replace(" ", "_")
+        story_folder_name = safe_title.replace(" ", "_")
+        story_folder = os.path.join(output_folder, story_folder_name)
         os.makedirs(story_folder, exist_ok=True)
 
         print(f"Tên truyện: {story_title}")
@@ -977,12 +978,11 @@ def main():
         driver = create_driver(browser_choice, headless)
 
         # Tạo thư mục output nếu chưa có
-        if output_folder and output_folder != "downloads":
+        if output_folder:
             os.makedirs(output_folder, exist_ok=True)
-            os.chdir(output_folder)
 
         # Lấy thông tin truyện
-        story_folder = get_story_info(story_url, driver, browser_choice, login_config)
+        story_folder = get_story_info(story_url, driver, browser_choice, login_config, output_folder)
         if not story_folder:
             return
 
