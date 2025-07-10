@@ -778,80 +778,35 @@ def download_chapter(chapter_url, chapter_title, story_folder, driver=None, brow
             # Propagate KeyboardInterrupt lên hàm gọi
             raise
 
-        # Phương pháp 1: Tìm nội dung từ div#chapter-content (ưu tiên)
+        # Phương pháp 1: Tìm nội dung từ div#chapter-content (ưu tiên) - KHÔNG LOẠI BỎ GÌ
         content = None
         try:
-            # Tìm div có class="break-words" và id="chapter-content"
-            chapter_content_div = driver.find_element(By.XPATH, "//div[@class='break-words' and @id='chapter-content']")
+            # Tìm div có id="chapter-content" (không cần class="break-words")
+            chapter_content_div = driver.find_element(By.XPATH, "//div[@id='chapter-content']")
             if chapter_content_div:
-                # Lấy nội dung HTML
+                # Lấy toàn bộ nội dung HTML mà không loại bỏ gì
                 content_html = chapter_content_div.get_attribute('innerHTML')
 
                 if content_html:
-                    # Loại bỏ các thẻ canvas (quảng cáo)
-                    content_html = re.sub(r'<canvas[^>]*>.*?</canvas>', '', content_html, flags=re.DOTALL)
-                    content_html = re.sub(r'<canvas[^>]*\s*/>', '', content_html)
-
-                    # Loại bỏ các div quảng cáo
-                    content_html = re.sub(r'<div[^>]*id="middle-content[^"]*"[^>]*>.*?</div>', '', content_html, flags=re.DOTALL)
-                    content_html = re.sub(r'<div[^>]*id="middle-content[^"]*"[^>]*></div>', '', content_html)
-
-                    # Loại bỏ phần quảng cáo cuối (data-x-show)
-                    content_html = re.sub(r'<div[^>]*data-x-show[^>]*>.*?</div>', '', content_html, flags=re.DOTALL)
-
-                    # Loại bỏ các thẻ script
-                    content_html = re.sub(r'<script[^>]*>.*?</script>', '', content_html, flags=re.DOTALL)
-
-                    # Loại bỏ các link quảng cáo
-                    content_html = re.sub(r'<a[^>]*href[^>]*>.*?</a>', '', content_html, flags=re.DOTALL)
-
-                    # Loại bỏ các đoạn text quảng cáo (bắt đầu với -----)
-                    content_html = re.sub(r'-----.*?(?=<br|$)', '', content_html, flags=re.DOTALL)
-
-                    # Chuyển <br> thành xuống dòng
+                    # Chỉ chuyển <br> thành xuống dòng và decode HTML entities
                     content_html = re.sub(r'<br\s*/?>', '\n', content_html)
 
-                    # Loại bỏ tất cả HTML tags còn lại
+                    # Loại bỏ tất cả HTML tags nhưng giữ nguyên nội dung
                     content = re.sub(r'<[^>]+>', '', content_html)
 
-                    # Làm sạch nội dung
-                    content = html.unescape(content)  # Decode HTML entities
-                    content = re.sub(r'\n\s*\n', '\n\n', content)  # Loại bỏ dòng trống thừa
+                    # Decode HTML entities
+                    content = html.unescape(content)
+
+                    # Chỉ strip khoảng trắng đầu cuối
                     content = content.strip()
 
-                    if content and len(content) > 100:
-                        print(f"✓ Lấy được nội dung từ div#chapter-content ({len(content)} ký tự)")
+                    if content:
+                        print(f"✓ Lấy được toàn bộ nội dung từ div#chapter-content ({len(content)} ký tự)")
                     else:
                         content = None
 
         except NoSuchElementException:
-            print("Không tìm thấy div.break-words#chapter-content, thử XPath khác...")
-            # Fallback: thử chỉ với id
-            try:
-                chapter_content_div = driver.find_element(By.XPATH, "//div[@id='chapter-content']")
-                if chapter_content_div:
-                    content_html = chapter_content_div.get_attribute('innerHTML')
-                    if content_html:
-                        # Áp dụng cùng logic làm sạch
-                        content_html = re.sub(r'<canvas[^>]*>.*?</canvas>', '', content_html, flags=re.DOTALL)
-                        content_html = re.sub(r'<canvas[^>]*\s*/>', '', content_html)
-                        content_html = re.sub(r'<div[^>]*id="middle-content[^"]*"[^>]*>.*?</div>', '', content_html, flags=re.DOTALL)
-                        content_html = re.sub(r'<div[^>]*data-x-show[^>]*>.*?</div>', '', content_html, flags=re.DOTALL)
-                        content_html = re.sub(r'<script[^>]*>.*?</script>', '', content_html, flags=re.DOTALL)
-                        content_html = re.sub(r'<a[^>]*href[^>]*>.*?</a>', '', content_html, flags=re.DOTALL)
-                        content_html = re.sub(r'-----.*?(?=<br|$)', '', content_html, flags=re.DOTALL)
-                        content_html = re.sub(r'<br\s*/?>', '\n', content_html)
-                        content = re.sub(r'<[^>]+>', '', content_html)
-                        content = html.unescape(content)
-                        content = re.sub(r'\n\s*\n', '\n\n', content)
-                        content = content.strip()
-
-                        if content and len(content) > 100:
-                            print(f"✓ Lấy được nội dung từ div#chapter-content fallback ({len(content)} ký tự)")
-                        else:
-                            content = None
-            except:
-                print("Không tìm thấy div#chapter-content")
+            print("Không tìm thấy div#chapter-content")
         except Exception as e:
             print(f"Lỗi khi lấy nội dung từ div#chapter-content: {e}")
 
@@ -897,12 +852,10 @@ def download_chapter(chapter_url, chapter_title, story_folder, driver=None, brow
                                         print(f"Lỗi decode Unicode: {e}")
                                         pass
 
-                                    # Loại bỏ HTML tags
+                                    # Chỉ loại bỏ HTML tags, giữ nguyên tất cả nội dung khác
                                     clean_code = re.sub(r'<[^>]+>', '', decoded_code)
 
-                                    # Loại bỏ dấu gạch ngang đầu
-                                    clean_code = re.sub(r'^-+\s*', '', clean_code.strip())
-
+                                    # KHÔNG loại bỏ gì khác, giữ nguyên tất cả nội dung
                                     if clean_code.strip():
                                         full_content += clean_code.strip() + "\n\n"
 

@@ -6,15 +6,15 @@
   },
   "download": {
     "story_url": "https://metruyencv.com/truyen/sieu-cap-phuc-che-he-thong",
-    "start_chapter": 1,
-    "end_chapter": 3,
+    "start_chapter": 2,
+    "end_chapter": 2,
     "output_folder": "downloads",
     "note": "URL truyện cần tải và phạm vi chương (end_chapter = -1 để tải hết)"
   },
   "settings": {
     "delay_between_chapters": 200,
     "max_retries": 3,
-    "headless": 1,
+    "headless": 0,
     "browser": "chrome",
     "note": "Cấu hình tải: delay (milliseconds), số lần thử lại, headless mode (0=hiển thị, 1=ẩn), browser (auto/chrome/firefox/edge)"
   }
