@@ -781,17 +781,32 @@ def download_chapter(chapter_url, chapter_title, story_folder, driver=None, brow
         # Phương pháp 1: Tìm nội dung từ div#chapter-content (ưu tiên)
         content = None
         try:
-            # Tìm div có id="chapter-content"
-            chapter_content_div = driver.find_element(By.XPATH, "//div[@id='chapter-content']")
+            # Tìm div có class="break-words" và id="chapter-content"
+            chapter_content_div = driver.find_element(By.XPATH, "//div[@class='break-words' and @id='chapter-content']")
             if chapter_content_div:
                 # Lấy nội dung HTML
                 content_html = chapter_content_div.get_attribute('innerHTML')
 
                 if content_html:
-                    # Loại bỏ các thẻ canvas và script
+                    # Loại bỏ các thẻ canvas (quảng cáo)
                     content_html = re.sub(r'<canvas[^>]*>.*?</canvas>', '', content_html, flags=re.DOTALL)
-                    content_html = re.sub(r'<script[^>]*>.*?</script>', '', content_html, flags=re.DOTALL)
+                    content_html = re.sub(r'<canvas[^>]*\s*/>', '', content_html)
+
+                    # Loại bỏ các div quảng cáo
+                    content_html = re.sub(r'<div[^>]*id="middle-content[^"]*"[^>]*>.*?</div>', '', content_html, flags=re.DOTALL)
                     content_html = re.sub(r'<div[^>]*id="middle-content[^"]*"[^>]*></div>', '', content_html)
+
+                    # Loại bỏ phần quảng cáo cuối (data-x-show)
+                    content_html = re.sub(r'<div[^>]*data-x-show[^>]*>.*?</div>', '', content_html, flags=re.DOTALL)
+
+                    # Loại bỏ các thẻ script
+                    content_html = re.sub(r'<script[^>]*>.*?</script>', '', content_html, flags=re.DOTALL)
+
+                    # Loại bỏ các link quảng cáo
+                    content_html = re.sub(r'<a[^>]*href[^>]*>.*?</a>', '', content_html, flags=re.DOTALL)
+
+                    # Loại bỏ các đoạn text quảng cáo (bắt đầu với -----)
+                    content_html = re.sub(r'-----.*?(?=<br|$)', '', content_html, flags=re.DOTALL)
 
                     # Chuyển <br> thành xuống dòng
                     content_html = re.sub(r'<br\s*/?>', '\n', content_html)
@@ -810,7 +825,33 @@ def download_chapter(chapter_url, chapter_title, story_folder, driver=None, brow
                         content = None
 
         except NoSuchElementException:
-            print("Không tìm thấy div#chapter-content")
+            print("Không tìm thấy div.break-words#chapter-content, thử XPath khác...")
+            # Fallback: thử chỉ với id
+            try:
+                chapter_content_div = driver.find_element(By.XPATH, "//div[@id='chapter-content']")
+                if chapter_content_div:
+                    content_html = chapter_content_div.get_attribute('innerHTML')
+                    if content_html:
+                        # Áp dụng cùng logic làm sạch
+                        content_html = re.sub(r'<canvas[^>]*>.*?</canvas>', '', content_html, flags=re.DOTALL)
+                        content_html = re.sub(r'<canvas[^>]*\s*/>', '', content_html)
+                        content_html = re.sub(r'<div[^>]*id="middle-content[^"]*"[^>]*>.*?</div>', '', content_html, flags=re.DOTALL)
+                        content_html = re.sub(r'<div[^>]*data-x-show[^>]*>.*?</div>', '', content_html, flags=re.DOTALL)
+                        content_html = re.sub(r'<script[^>]*>.*?</script>', '', content_html, flags=re.DOTALL)
+                        content_html = re.sub(r'<a[^>]*href[^>]*>.*?</a>', '', content_html, flags=re.DOTALL)
+                        content_html = re.sub(r'-----.*?(?=<br|$)', '', content_html, flags=re.DOTALL)
+                        content_html = re.sub(r'<br\s*/?>', '\n', content_html)
+                        content = re.sub(r'<[^>]+>', '', content_html)
+                        content = html.unescape(content)
+                        content = re.sub(r'\n\s*\n', '\n\n', content)
+                        content = content.strip()
+
+                        if content and len(content) > 100:
+                            print(f"✓ Lấy được nội dung từ div#chapter-content fallback ({len(content)} ký tự)")
+                        else:
+                            content = None
+            except:
+                print("Không tìm thấy div#chapter-content")
         except Exception as e:
             print(f"Lỗi khi lấy nội dung từ div#chapter-content: {e}")
 
