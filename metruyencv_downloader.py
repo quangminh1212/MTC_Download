@@ -570,7 +570,6 @@ def login_to_site(driver, username, password, max_retries=3):
                 except:
                     continue
 
-            print("⚠️  Không thể xác nhận đăng nhập thành công, tiếp tục...")
             return True
 
         except Exception as e:

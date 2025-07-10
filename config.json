@@ -7,7 +7,7 @@
   "download": {
     "story_url": "https://metruyencv.com/truyen/sieu-cap-phuc-che-he-thong",
     "start_chapter": 1,
-    "end_chapter": 5,
+    "end_chapter": 3,
     "output_folder": "downloads",
     "note": "URL truyện cần tải và phạm vi chương (end_chapter = -1 để tải hết)"
   },
