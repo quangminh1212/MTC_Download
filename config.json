@@ -5,9 +5,9 @@
     "note": "Thông tin đăng nhập MeTruyenCV"
   },
   "download": {
-    "story_url": "https://metruyencv.com/truyen/tan-the-chi-sieu-thi-he-thong",
+    "story_url": "https://metruyencv.com/truyen/sieu-cap-phuc-che-he-thong",
     "start_chapter": 1,
-    "end_chapter": 3,
+    "end_chapter": 1300,
     "output_folder": "downloads",
     "note": "URL truyện cần tải và phạm vi chương (end_chapter = -1 để tải hết)"
   },
