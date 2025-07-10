@@ -14,7 +14,7 @@
   "settings": {
     "delay_between_chapters": 2000,
     "max_retries": 3,
-    "headless": 0,
+    "headless": 1,
     "browser": "chrome",
     "note": "Cấu hình tải: delay (milliseconds), số lần thử lại, headless mode (0=hiển thị, 1=ẩn), browser (auto/chrome/firefox/edge)"
   }
