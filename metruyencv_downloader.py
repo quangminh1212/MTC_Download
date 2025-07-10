@@ -773,7 +773,11 @@ def download_chapter(chapter_url, chapter_title, story_folder, driver=None, brow
         driver.get(chapter_url)
 
         # Đợi trang load
-        time.sleep(3)
+        try:
+            time.sleep(3)
+        except KeyboardInterrupt:
+            # Propagate KeyboardInterrupt lên hàm gọi
+            raise
 
         # Phương pháp 1: Tìm nội dung từ div#chapter-content (ưu tiên)
         content = None
@@ -1002,34 +1006,44 @@ def main():
 
         # Tải từng chương
         success = 0
-        for i, chapter in enumerate(chapters_to_download, 1):
-            print(f"[{i}/{len(chapters_to_download)}] Đang tải: {chapter['title']}")
+        try:
+            for i, chapter in enumerate(chapters_to_download, 1):
+                print(f"[{i}/{len(chapters_to_download)}] Đang tải: {chapter['title']}")
 
-            # Thử tải chương với retry logic
-            chapter_success = False
-            for retry in range(max_retries):
-                try:
-                    if download_chapter(chapter['url'], chapter['title'], story_folder, driver, browser_choice, login_config):
-                        chapter_success = True
-                        success += 1
-                        break
-                    else:
-                        print(f"⚠️  Thất bại lần {retry + 1}/{max_retries}")
-                except Exception as e:
-                    print(f"❌ Lỗi lần {retry + 1}/{max_retries}: {e}")
-                    if retry < max_retries - 1:
-                        print("🔄 Tạo driver mới và thử lại...")
-                        try:
-                            driver.quit()
-                        except:
-                            pass
-                        driver = create_driver(browser_choice, headless)
-                        time.sleep(2)
+                # Thử tải chương với retry logic
+                chapter_success = False
+                for retry in range(max_retries):
+                    try:
+                        if download_chapter(chapter['url'], chapter['title'], story_folder, driver, browser_choice, login_config):
+                            chapter_success = True
+                            success += 1
+                            break
+                        else:
+                            print(f"⚠️  Thất bại lần {retry + 1}/{max_retries}")
+                    except KeyboardInterrupt:
+                        # Propagate KeyboardInterrupt ngay lập tức
+                        raise
+                    except Exception as e:
+                        print(f"❌ Lỗi lần {retry + 1}/{max_retries}: {e}")
+                        if retry < max_retries - 1:
+                            print("🔄 Tạo driver mới và thử lại...")
+                            try:
+                                driver.quit()
+                            except:
+                                pass
+                            driver = create_driver(browser_choice, headless)
+                            time.sleep(2)
 
-            if not chapter_success:
-                print(f"❌ Không thể tải {chapter['title']} sau {max_retries} lần thử")
+                if not chapter_success:
+                    print(f"❌ Không thể tải {chapter['title']} sau {max_retries} lần thử")
 
-            time.sleep(delay_between_chapters / 1000.0)  # Chuyển milliseconds thành seconds
+                time.sleep(delay_between_chapters / 1000.0)  # Chuyển milliseconds thành seconds
+
+        except KeyboardInterrupt:
+            print(f"\n\n⚠️  Người dùng dừng chương trình (Ctrl+C)")
+            print(f"📊 Tiến độ: Đã tải thành công {success}/{len(chapters_to_download)} chương")
+            print(f"📁 Các chương đã tải được lưu trong: {story_folder}")
+            print("💡 Bạn có thể chỉnh sửa start_chapter trong config.json để tiếp tục từ chương tiếp theo")
     finally:
         # Đóng WebDriver khi hoàn thành
         if driver:

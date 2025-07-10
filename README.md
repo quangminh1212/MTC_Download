@@ -133,8 +133,26 @@ MTC_Download/
 
 - Trình duyệt sẽ hiển thị khi tải (không chạy ẩn)
 - Nội dung có thể vẫn bị mã hóa (đang nghiên cứu giải pháp)
-- Nhấn `Ctrl+C` để dừng quá trình tải
+- **Nhấn `Ctrl+C` để dừng quá trình tải một cách an toàn**
 - Cần tài khoản MeTruyenCV để tải một số truyện
+
+## 🛑 Dừng chương trình an toàn
+
+Khi muốn dừng quá trình tải:
+
+1. **Nhấn `Ctrl+C`** trong terminal
+2. Chương trình sẽ:
+   - Hiển thị số chương đã tải thành công
+   - Đóng trình duyệt đúng cách
+   - Lưu các chương đã tải
+   - Hiển thị hướng dẫn tiếp tục
+
+3. **Để tiếp tục từ chương đã dừng:**
+   - Mở `config.json`
+   - Thay đổi `start_chapter` thành chương tiếp theo
+   - Chạy lại chương trình
+
+**Ví dụ:** Nếu dừng ở chương 25, đổi `"start_chapter": 26` để tiếp tục
 
 ## 🛠️ Yêu cầu hệ thống
 
