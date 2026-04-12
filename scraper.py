@@ -11,10 +11,6 @@ from typing import Optional, List, Dict
 import requests
 from bs4 import BeautifulSoup
 
-if sys.platform == "win32":
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
-
 SOURCE_BASE = "https://tiemtruyenchu.com"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
