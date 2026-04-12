@@ -20,7 +20,7 @@ from .config import (
     APK_PATH, OUTPUT_DIR, API_BASE, USER_AGENT, log,
 )
 from .adb import AdbController
-from .pipeline import download_via_adb
+from .pipeline import download_book
 from .utils import safe_name
 
 
@@ -58,6 +58,8 @@ class App(tk.Tk):
         # ADB
         self._adb_path = AdbController.find_adb()
         self._adb      = None
+        self._selected_book_id = None
+        self._selected_book_title = ""
 
         self._style()
         self._ui()
@@ -287,8 +289,6 @@ class App(tk.Tk):
         book = self._book_var.get().strip()
         if not book:
             messagebox.showwarning("", "Nhập tên truyện"); return
-        if not self._adb or not self._adb.device:
-            messagebox.showwarning("", "Kết nối BlueStacks trước"); return
         if self._thread and self._thread.is_alive():
             return
         try:
@@ -296,6 +296,11 @@ class App(tk.Tk):
             end   = int(self._ch_to.get()) if self._ch_to.get().strip() else None
         except ValueError:
             messagebox.showerror("", "Số chương không hợp lệ"); return
+
+        book_id = None
+        if self._selected_book_id and \
+           self._book_lookup_key(self._selected_book_title) == self._book_lookup_key(book):
+            book_id = self._selected_book_id
 
         self._btn_start.config(state="disabled")
         self._btn_stop.config(state="normal")
@@ -305,7 +310,7 @@ class App(tk.Tk):
 
         self._thread = threading.Thread(
             target=self._worker,
-            args=(book, Path(self._out_dir.get()), start, end),
+            args=(book, Path(self._out_dir.get()), start, end, book_id),
             daemon=True,
         )
         self._thread.start()
@@ -314,7 +319,7 @@ class App(tk.Tk):
         self._stop = True
         self._lg("Đang dừng...", "w")
 
-    def _worker(self, book_name, out_dir, start, end):
+    def _worker(self, book_name, out_dir, start, end, book_id=None):
         self._lg(f"Bắt đầu: «{book_name}»", "ora")
         try:
             def _progress(done, total):
@@ -323,11 +328,11 @@ class App(tk.Tk):
                     self.after(0, lambda p=pct, m=f"{done}/{total}":
                                (self._bar.config(value=p),
                                 self._bar_lbl.set(m)))
-            result = download_via_adb(
+            result = download_book(
                 adb=self._adb, book_name=book_name,
                 ch_start=start, ch_end=end, output_dir=out_dir,
                 log_fn=self._lg, stop_flag=lambda: self._stop,
-                progress_cb=_progress,
+                progress_cb=_progress, book_id=book_id,
             )
             if result.get("success"):
                 self._lg(f"Xong! ✔{result['ok']}  ✖{result['fail']}", "ok")
@@ -418,10 +423,12 @@ class App(tk.Tk):
         return enriched
 
     def _select_book_from_item(self, book):
-        title = (book.get("title") or "").strip()
+        title = (book.get("title") or book.get("name") or "").strip()
         if not title:
             return
         self._book_var.set(title)
+        self._selected_book_id = book.get("api_id") or book.get("id")
+        self._selected_book_title = title
         chapter_count = book.get("chapter_count")
         if chapter_count:
             self._ch_to.set(str(chapter_count))
@@ -741,10 +748,11 @@ class App(tk.Tk):
             bid = int(sel[0])
             book = next((b for b in all_books if b["id"]==bid), None)
             if book:
-                self._book_var.set(book.get("name",""))
-                ch = book.get("latest_index", book.get("chapter_count",0))
-                self._ch_to.set(str(ch))
-                self._lg(f"Chọn: {book.get('name','')} ({ch} ch)", "acc")
+                self._select_book_from_item({
+                    "id": book.get("id"),
+                    "name": book.get("name", ""),
+                    "chapter_count": book.get("latest_index", book.get("chapter_count", 0)),
+                })
                 win.destroy()
 
         tree.bind("<Double-1>", _on_select)

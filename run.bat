@@ -10,12 +10,12 @@ if not exist "%PYTHON%" (
     echo [setup] Creating virtual environment...
     python -m venv "%DIR%venv"
     echo [setup] Installing packages...
-    "%PIP%" install requests -q
+    "%PIP%" install requests pycryptodome ftfy -q
     echo [setup] Done.
 )
 
-"%PYTHON%" -c "import requests" 2>nul || (
-    "%PIP%" install requests -q
+"%PYTHON%" -c "import requests, Crypto, ftfy" 2>nul || (
+    "%PIP%" install requests pycryptodome ftfy -q
 )
 
 
