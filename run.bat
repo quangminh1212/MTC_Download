@@ -10,17 +10,12 @@ if not exist "%PYTHON%" (
     echo [setup] Creating virtual environment...
     python -m venv "%DIR%venv"
     echo [setup] Installing packages...
-    "%PIP%" install requests pycryptodome beautifulsoup4 -q
+    "%PIP%" install requests -q
     echo [setup] Done.
 )
 
-"%PYTHON%" -c "import requests, Crypto" 2>nul || (
-    "%PIP%" install requests pycryptodome -q
+"%PYTHON%" -c "import requests" 2>nul || (
+    "%PIP%" install requests -q
 )
 
-if /i "%1"=="cli" (
-    shift
-    "%PYTHON%" "%DIR%downloader.py" %1 %2 %3 %4 %5 %6 %7 %8 %9
-) else (
-    "%PYTHON%" "%DIR%gui.py" %*
-)
+"%PYTHON%" "%DIR%gui.py" %*
