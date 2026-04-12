@@ -18,4 +18,26 @@ if not exist "%PYTHON%" (
     "%PIP%" install requests -q
 )
 
-"%PYTHON%" "%DIR%gui.py" %*
+echo.
+echo  ========================================
+echo   MTC Novel Downloader - Hot Reload Mode
+echo   Luu file .py = tu dong restart app
+echo   Ctrl+C = thoat hoan toan
+echo  ========================================
+echo.
+
+set MTC_HOT_RELOAD=1
+
+:loop
+echo [%time%] Starting gui.py...
+"%PYTHON%" "%DIR%gui.py"
+set EC=%errorlevel%
+
+if "%EC%"=="42" (
+    echo [%time%] File changed - reloading...
+    timeout /t 1 /nobreak >nul
+    goto loop
+)
+
+echo [%time%] Exited (code: %EC%).
+pause

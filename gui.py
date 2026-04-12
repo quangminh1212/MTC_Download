@@ -4,12 +4,29 @@
 gui.py – MTC Novel Downloader (BlueStacks Mode)
 Chạy app MTC.apk trên BlueStacks, tự động đọc text qua ADB.
 """
-import sys, io, os, json, threading, queue, time
+import sys, io, os, json, threading, queue, time, logging
 from pathlib import Path
+from logging.handlers import RotatingFileHandler
 
 if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+
+# ── Logging ───────────────────────────────────────────────────────────────────
+_LOG_FILE = Path(__file__).parent / "mtc.log"
+_log = logging.getLogger("mtc")
+_log.setLevel(logging.DEBUG)
+_fh = RotatingFileHandler(_LOG_FILE, maxBytes=5*1024*1024, backupCount=3,
+                           encoding="utf-8")
+_fh.setFormatter(logging.Formatter(
+    "%(asctime)s  %(levelname)-5s  %(message)s", datefmt="%Y-%m-%d %H:%M:%S"))
+_log.addHandler(_fh)
+# Console handler (INFO only)
+_ch = logging.StreamHandler(sys.stderr)
+_ch.setLevel(logging.INFO)
+_ch.setFormatter(logging.Formatter("%(levelname)s: %(message)s"))
+_log.addHandler(_ch)
+_log.info("=== MTC Novel Downloader started ===")
 
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
@@ -311,6 +328,11 @@ class App(tk.Tk):
     # ── Log ───────────────────────────────────────────────────────────────
     def _lg(self, msg, tag=""):
         self._q.put((msg, tag))
+        # Also write to file log
+        lvl = {"err": logging.ERROR, "w": logging.WARNING,
+               "ok": logging.INFO, "acc": logging.INFO,
+               "ora": logging.INFO}.get(tag, logging.DEBUG)
+        _log.log(lvl, msg)
 
     def _poll(self):
         try:
@@ -541,5 +563,50 @@ class App(tk.Tk):
         os.startfile(str(out))
 
 
+# ── Hot-reload file watcher ───────────────────────────────────────────────────
+_EXIT_RELOAD = 42
+_WATCH_DIR   = Path(__file__).parent
+_WATCH_EXT   = {".py"}
+
+def _file_watcher(app: App):
+    """Background thread: poll .py files every 2s, restart on change."""
+    snapshots = {}
+    for f in _WATCH_DIR.glob("*.py"):
+        try:
+            snapshots[f] = f.stat().st_mtime
+        except OSError:
+            pass
+    _log.debug(f"File watcher: tracking {len(snapshots)} files")
+
+    while True:
+        time.sleep(2)
+        for f in _WATCH_DIR.glob("*.py"):
+            try:
+                mt = f.stat().st_mtime
+            except OSError:
+                continue
+            old = snapshots.get(f)
+            if old is not None and mt > old:
+                _log.info(f"File changed: {f.name} — reloading...")
+                app.after(0, lambda: _do_reload(app))
+                return
+            snapshots[f] = mt
+
+def _do_reload(app: App):
+    """Gracefully close GUI and exit with reload code."""
+    _log.info("Hot-reload: shutting down for restart")
+    try:
+        app.destroy()
+    except Exception:
+        pass
+    os._exit(_EXIT_RELOAD)
+
+
 if __name__ == "__main__":
-    App().mainloop()
+    app = App()
+    # Start file watcher for hot-reload  (dev mode)
+    if os.environ.get("MTC_HOT_RELOAD", "0") == "1":
+        _log.info("Hot-reload enabled (MTC_HOT_RELOAD=1)")
+        t = threading.Thread(target=_file_watcher, args=(app,), daemon=True)
+        t.start()
+    app.mainloop()
