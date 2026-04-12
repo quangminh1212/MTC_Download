@@ -12,6 +12,15 @@ from .config import (
     APK_PATH, log,
 )
 from . import api
+from .api import STATUS_ALL, STATUS_COMPLETED, STATUS_ONGOING, STATUS_PAUSED
+
+_STATUS_LABELS = [
+    ("Hoàn thành", STATUS_COMPLETED),
+    ("Còn tiếp",   STATUS_ONGOING),
+    ("Tạm dừng",   STATUS_PAUSED),
+    ("Tất cả",     STATUS_ALL),
+]
+_STATUS_MAP = {s: lbl for lbl, s in _STATUS_LABELS}
 from .adb import AdbController
 from .pipeline import download_via_adb
 from .utils import safe_name
@@ -136,23 +145,36 @@ class App(tk.Tk):
         ttk.Button(sr, text="Tìm", command=self._search, width=5,
                    style="Sd.TButton").pack(side="left", padx=(6,0))
 
-        hr = tk.Frame(p, bg=BG2)
-        hr.pack(fill="x", padx=12, pady=(2,0))
-        _lbl(hr, "TRUYỆN", FG3, ("Segoe UI",8,"bold"), bg=BG2).pack(side="left")
-        self._stl = _lbl(hr, "", FG3, ("Segoe UI",8), bg=BG2)
+        # Status filter row
+        fr = tk.Frame(p, bg=BG2)
+        fr.pack(fill="x", padx=12, pady=(4,2))
+        _lbl(fr, "Lọc:", FG3, ("Segoe UI",8), bg=BG2).pack(side="left")
+        self._status_var = tk.StringVar(value="Hoàn thành")
+        self._status_cb = ttk.Combobox(
+            fr, textvariable=self._status_var, state="readonly",
+            values=[lbl for lbl, _ in _STATUS_LABELS], width=12, font=FONT)
+        self._status_cb.pack(side="left", padx=(4,0))
+        self._status_cb.bind("<<ComboboxSelected>>", lambda _: self._on_filter())
+        self._stl = _lbl(fr, "", FG3, ("Segoe UI",8), bg=BG2)
         self._stl.pack(side="right")
+
+        hr = tk.Frame(p, bg=BG2)
+        hr.pack(fill="x", padx=12, pady=(0,0))
+        _lbl(hr, "TRUYỆN", FG3, ("Segoe UI",8,"bold"), bg=BG2).pack(side="left")
 
         tf = tk.Frame(p, bg=BG2)
         tf.pack(fill="both", expand=True)
-        cols = ("id","name","ch")
+        cols = ("id","name","ch","st")
         self._tree = ttk.Treeview(tf, columns=cols,
                                    show="headings", selectmode="browse")
         self._tree.heading("id",   text="ID",         anchor="center")
         self._tree.heading("name", text="Tên truyện")
         self._tree.heading("ch",   text="Ch.",        anchor="center")
-        self._tree.column("id",   width=55,  anchor="center", stretch=False)
-        self._tree.column("name", width=275, anchor="w")
+        self._tree.heading("st",   text="TT",         anchor="center")
+        self._tree.column("id",   width=50,  anchor="center", stretch=False)
+        self._tree.column("name", width=230, anchor="w")
         self._tree.column("ch",   width=46,  anchor="center", stretch=False)
+        self._tree.column("st",   width=55,  anchor="center", stretch=False)
         self._tree.tag_configure("o", background=BG2)
         self._tree.tag_configure("e", background=BG)
         vsb = ttk.Scrollbar(tf, orient="vertical", command=self._tree.yview)
@@ -389,6 +411,14 @@ class App(tk.Tk):
         threading.Thread(target=_w, daemon=True).start()
 
     # ── Book list ─────────────────────────────────────────────────────────
+    def _get_status_filter(self) -> int:
+        lbl = self._status_var.get()
+        return next((s for l, s in _STATUS_LABELS if l == lbl), STATUS_COMPLETED)
+
+    def _on_filter(self):
+        self._page = 1
+        self._do_list()
+
     def _do_list(self):
         self._stl.config(text="Đang tải...")
         threading.Thread(target=self._fetch, args=(None,), daemon=True).start()
@@ -400,8 +430,11 @@ class App(tk.Tk):
 
     def _fetch(self, q):
         try:
-            data  = api.search_books(self._session, q, self._page) if q \
-                    else api.list_books(self._session, self._page, 30)
+            st = self._get_status_filter()
+            if q:
+                data = api.search_books(self._session, q, self._page, status=st)
+            else:
+                data = api.list_books(self._session, self._page, 50, status=st)
             books = data.get("data", [])
             pagi  = data.get("pagination", {}) or {}
             self._books = books
@@ -416,8 +449,9 @@ class App(tk.Tk):
             self._tree.delete(r)
         for i, b in enumerate(books):
             ch = b.get("latest_index", b.get("chapter_count", 0))
+            st = _STATUS_MAP.get(b.get("status", 0), "?")
             self._tree.insert("", "end", iid=str(b["id"]),
-                              values=(b["id"], b.get("name",""), ch),
+                              values=(b["id"], b.get("name",""), ch, st),
                               tags=("o" if i % 2 else "e",))
         self._pglbl.config(text=f"Trang {self._page}/{self._lpage}")
         self._stl.config(text=f"{total} truyện")

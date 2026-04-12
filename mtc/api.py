@@ -7,6 +7,12 @@ from urllib3.util.retry import Retry
 
 from .config import API_BASE, USER_AGENT, API_TIMEOUT, API_RETRY
 
+# Book status constants
+STATUS_ALL       = 0
+STATUS_ONGOING   = 1
+STATUS_COMPLETED = 2
+STATUS_PAUSED    = 3
+
 
 def make_session(token: Optional[str] = None) -> requests.Session:
     """Create HTTP session with retry."""
@@ -30,9 +36,19 @@ def _get(session: requests.Session, path: str, params: dict = None) -> Dict:
     return resp.json()
 
 
-def search_books(session: requests.Session, query: str, page: int = 1) -> Dict:
-    return _get(session, "books", {"search": query, "per_page": 20, "page": page})
+def search_books(session: requests.Session, query: str,
+                 page: int = 1, status: int = STATUS_ALL) -> Dict:
+    params = {"search": query, "per_page": 50, "page": page}
+    if status:
+        params["filter[status]"] = status
+    return _get(session, "books", params)
 
 
-def list_books(session: requests.Session, page: int = 1, per_page: int = 20) -> Dict:
-    return _get(session, "books", {"per_page": per_page, "page": page})
+def list_books(session: requests.Session, page: int = 1, per_page: int = 50,
+               status: int = STATUS_COMPLETED) -> Dict:
+    """List books. Default: only completed (status=2)."""
+    params = {"per_page": per_page, "page": page}
+    if status:
+        params["filter[status]"] = status
+    return _get(session, "books", params)
+
