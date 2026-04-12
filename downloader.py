@@ -324,7 +324,7 @@ def get_book_by_id(session: requests.Session, book_id: int) -> Optional[Dict]:
             if book["id"] == book_id:
                 return book
         pagination = data.get("pagination", {})
-        total_pages = pagination.get("last_page", 1) if pagination else 1
+        total_pages = pagination.get("last", 1) if pagination else 1
         if page >= total_pages or len(books) < 50:
             break
         page += 1
@@ -580,7 +580,7 @@ def cmd_list(args, session):
     pagi  = data.get("pagination", {})
     print_books_table(books, f"Danh sach truyen - Trang {args.page}")
     if pagi:
-        print(f"\nTotal: {pagi.get('total', '?')} | Page {args.page}/{pagi.get('last_page', '?')}")
+        print(f"\nTotal: {pagi.get('total', '?')} | Page {args.page}/{pagi.get('last', '?')}")
 
 def cmd_search(args, session):
     log.info(f"Searching: '{args.query}'")

@@ -498,7 +498,7 @@ class App(tk.Tk):
             books = data.get("data",[])
             pagi  = data.get("pagination",{}) or {}
             self._books  = books
-            self._lpage  = pagi.get("last_page",1)
+            self._lpage  = pagi.get("last", 1)
             total = pagi.get("total",len(books))
             self.after(0, lambda: self._fill(books, total, self._lpage))
         except Exception as e:
