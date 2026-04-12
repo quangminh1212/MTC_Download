@@ -589,32 +589,21 @@ def cmd_download(args, session, app_key):
 
 def main():
     parser = argparse.ArgumentParser(
-        prog="mtc_downloader",
+        prog="downloader",
         description=f"MTC Novel Downloader v{VERSION} - android.lonoapp.net",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # List available novels
-  python mtc_downloader.py list
-
-  # Search by name
-  python mtc_downloader.py search "dau pha thuong khung"
-
-  # Show novel info
-  python mtc_downloader.py info --id 140643
-  python mtc_downloader.py info --slug lang-nhan-my-nu-moi-tu-van
-
-  # Download all chapters
-  python mtc_downloader.py download --id 140643
-
-  # Download specific chapter range
-  python mtc_downloader.py download --id 140643 --from 1 --to 100
-
-  # Download with decryption (if you have the APP_KEY)
-  python mtc_downloader.py download --id 140643 --app-key base64:xxxx
-
-  # Login before downloading (may unlock content)
-  python mtc_downloader.py download --id 140643 --email you@mail.com --password pass
+  run.bat list
+  run.bat list --page 2
+  run.bat search "nhat kiep tien pham"
+  run.bat info --id 140643
+  run.bat info --slug lang-nhan-my-nu-moi-tu-van
+  run.bat download --id 140643
+  run.bat download --id 140643 --from 1 --to 100
+  run.bat download --id 140643 --output D:\truyen
+  run.bat download --id 140643 --app-key base64:xxxx
+  run.bat download --id 140643 --email you@mail.com --password pass
         """
     )
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose logging")
@@ -623,7 +612,7 @@ Examples:
     parser.add_argument("--app-key",  default=None, dest="app_key",
                         help="Decryption key (format: base64:xxxxx)")
     
-    sub = parser.add_subparsers(dest="cmd", required=True)
+    sub = parser.add_subparsers(dest="cmd")
     
     # list
     lp = sub.add_parser("list", help="List all novels")
@@ -652,6 +641,12 @@ Examples:
     dp.add_argument("--delay", type=float, default=DELAY, help="Delay between requests (s)")
     
     args = parser.parse_args()
+
+    # No subcommand → print help
+    if not args.cmd:
+        parser.print_help()
+        return
+
     setup_logging(args.verbose)
     
     # Auth
