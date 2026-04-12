@@ -10,7 +10,7 @@ if not exist "%PYTHON%" (
     echo [setup] Creating virtual environment...
     python -m venv "%DIR%venv"
     echo [setup] Installing packages...
-    "%PIP%" install requests pycryptodome -q
+    "%PIP%" install requests pycryptodome beautifulsoup4 -q
     echo [setup] Done.
 )
 
