@@ -86,11 +86,15 @@ class App(tk.Tk):
         self._q         = queue.Queue()
         self._thread    = None
         self._stop      = False
+        self._cur_tab   = "adb"
 
         # ADB
         self._adb_path  = AdbController.find_adb() if _au else None
         self._adb       = None
         self._adb_devs  = []
+
+        # Tab underline widgets (prevent memory leak)
+        self._tab_lines = {}
 
         self._style()
         self._ui()
@@ -157,7 +161,7 @@ class App(tk.Tk):
         nb_frame = tk.Frame(self, bg=BORDER)
         nb_frame.pack(fill="x")
         self._tab_btns = {}
-        for name, label in [("api","API Mode"), ("adb","ADB / Tự động (APK thật)")]:
+        for name, label in [("api","API Mode"), ("adb","ADB / Giả lập (APK thật)")]:
             btn = tk.Button(nb_frame, text=label, bg=BG2, fg=FG2,
                             font=FB, bd=0, padx=16, pady=8, cursor="hand2",
                             activebackground=BHOV, activeforeground=BLUE,
@@ -195,17 +199,20 @@ class App(tk.Tk):
         labels = {"api": "API Mode", "adb": "APK / ADB Mode"}
         colors = {"api": BLUE, "adb": ORANGE}
         for n, btn in self._tab_btns.items():
+            # Remove old underline if exists
+            if n in self._tab_lines:
+                self._tab_lines[n].destroy()
+                del self._tab_lines[n]
             if n == name:
-                btn.config(bg=BG, fg=BLUE if n=="api" else ORANGE,
-                           relief="flat")
-                tk.Frame(btn, bg=BLUE if n=="api" else ORANGE,
-                         height=2).place(relx=0,rely=1,relwidth=1,anchor="sw")
+                btn.config(bg=BG, fg=colors[n], relief="flat")
+                line = tk.Frame(btn, bg=colors[n], height=2)
+                line.place(relx=0, rely=1, relwidth=1, anchor="sw")
+                self._tab_lines[n] = line
             else:
                 btn.config(bg=BG2, fg=FG2, relief="flat")
             panels[n].lower()
         panels[name].lift()
-        self._mode_chip.config(text=labels[name],
-                                bg=colors[name])
+        self._mode_chip.config(text=labels[name], bg=colors[name])
         self._cur_tab = name
 
     # ── Sidebar (shared) ──────────────────────────────────────────────────────
@@ -329,30 +336,41 @@ class App(tk.Tk):
         dr = tk.Frame(df, bg=BG)
         dr.pack(fill="x", padx=10, pady=(8,4))
         _lbl(dr,"ADB:").pack(side="left")
-        self._adb_path_var = tk.StringVar(value=self._adb_path or "adb")
-        _ef(dr,self._adb_path_var,28).pack(side="left",padx=(4,12))
+        self._adb_path_var = tk.StringVar(value=self._adb_path or "(chưa tìm thấy)")
+        _ef(dr,self._adb_path_var,28).pack(side="left",padx=(4,8))
+        ttk.Button(dr,text="Tìm ADB",style="Sd.TButton",
+                   command=self._find_all_adb).pack(side="left",padx=(0,4))
         ttk.Button(dr,text="Quét thiết bị",
                    command=self._scan_devices).pack(side="left")
         self._adb_status = _lbl(dr,"")
         self._adb_status.pack(side="left",padx=10)
 
         dr2 = tk.Frame(df, bg=BG)
-        dr2.pack(fill="x", padx=10, pady=(0,8))
+        dr2.pack(fill="x", padx=10, pady=(0,4))
         _lbl(dr2,"Thiết bị:").pack(side="left")
         self._dev_var = tk.StringVar()
         self._dev_cb  = ttk.Combobox(dr2, textvariable=self._dev_var,
                                       state="readonly", width=30, font=F)
-        self._dev_cb.pack(side="left",padx=(4,12))
+        self._dev_cb.pack(side="left",padx=(4,8))
+        self._dev_cb.bind("<<ComboboxSelected>>", self._on_device_select)
         ttk.Button(dr2,text="Cài APK",
                    command=self._install_apk).pack(side="left")
         self._apk_status = _lbl(dr2,"")
         self._apk_status.pack(side="left",padx=8)
 
+        # Emulator connect row
+        dr3 = tk.Frame(df, bg=BG)
+        dr3.pack(fill="x", padx=10, pady=(0,8))
+        _lbl(dr3,"Kết nối giả lập:").pack(side="left")
+        self._emu_host = tk.StringVar(value="127.0.0.1:5555")
+        _ef(dr3,self._emu_host,16).pack(side="left",padx=(4,8))
+        ttk.Button(dr3,text="Connect",style="Sd.TButton",
+                   command=self._connect_emulator).pack(side="left")
+        self._emu_status = _lbl(dr3, "")
+        self._emu_status.pack(side="left",padx=8)
+
         # ADB controls
         tk.Frame(p, bg=BORDER, height=1).pack(fill="x", padx=20, pady=(8,0))
-        af = tk.Frame(p, bg=BG)
-        af.pack(fill="x", padx=20, pady=(10,0))
-        lc = dict(bg=BG,fg=FG2,font=F)
 
         # Book info from list
         self._adb_book_lbl = _lbl(p, "← Chọn truyện từ sidebar",
@@ -362,6 +380,7 @@ class App(tk.Tk):
 
         cf = tk.Frame(p, bg=BG)
         cf.pack(fill="x", padx=20, pady=(8,0))
+        lc = dict(bg=BG,fg=FG2,font=F)
         tk.Label(cf,text="Từ chương:",**lc).grid(row=0,column=0,sticky="w",pady=4)
         self._adb_fr=tk.StringVar(value="1")
         _ef(cf,self._adb_fr,6).grid(row=0,column=1,sticky="w",padx=(4,16),pady=4)
@@ -382,9 +401,9 @@ class App(tk.Tk):
                           highlightbackground="#fdd835")
         info_f.pack(fill="x", padx=20, pady=(8,0))
         tk.Label(info_f,
-                 text="ℹ️  Chế độ ADB chạy app MTC thật trên điện thoại/emulator.\n"
-                      "Yêu cầu: Bật USB Debugging, kết nối ADB hoặc dùng emulator (LDPlayer, BlueStacks, Android Studio).\n"
-                      "App sẽ tự điều hướng, đọc text hiển thị → lưu file TXT. Không cần APP_KEY.",
+                 text="ℹ️  Chế độ ADB chạy app MTC thật trên điện thoại/giả lập.\n"
+                      "Hỗ trợ: LDPlayer, BlueStacks, Nox, MEmu, Android Studio AVD.\n"
+                      "Yêu cầu: Bật USB Debugging, kết nối ADB. App tự điều hướng, đọc text → lưu TXT.",
                  bg="#fff8e1", fg="#5d4037", font=("Segoe UI",8),
                  justify="left", anchor="w", wraplength=620).pack(padx=10,pady=8)
 
@@ -443,7 +462,6 @@ class App(tk.Tk):
         txt.tag_configure("acc", foreground=BLUE)
         txt.tag_configure("dim", foreground=FG3)
         txt.tag_configure("ora", foreground=ORANGE)
-        self._log_widget = txt  # both tabs share one log widget reference
         if tag == "adb":
             self._log_adb = txt
         else:
@@ -457,10 +475,9 @@ class App(tk.Tk):
         try:
             while True:
                 msg, tag = self._q.get_nowait()
-                # Write to both log widgets
-                for w in (getattr(self,"_log_api",None),
-                          getattr(self,"_log_adb",None)):
-                    if w is None: continue
+                # Write to the log widget of current tab
+                w = self._log_adb if self._cur_tab == "adb" else self._log_api
+                if w:
                     w.config(state="normal")
                     w.insert("end", f"{time.strftime('%H:%M:%S')}  ", "dim")
                     w.insert("end", msg+"\n", tag or None)
@@ -572,22 +589,63 @@ class App(tk.Tk):
         threading.Thread(target=_w, daemon=True).start()
 
     # ── ADB device ────────────────────────────────────────────────────────────
-    def _scan_devices(self):
-        adb_bin = self._adb_path_var.get().strip() or "adb"
-        self._adb = AdbController(adb_bin) if _au else None
-        if not self._adb:
+    def _find_all_adb(self):
+        """Show dialog listing all found ADB binaries."""
+        if not _au:
             messagebox.showerror("","auto.py not found"); return
+        found = AdbController.find_all_adb()
+        if not found:
+            messagebox.showinfo("ADB",
+                "Không tìm thấy ADB.\n"
+                "Hãy cài Android SDK platform-tools hoặc emulator "
+                "(LDPlayer, BlueStacks, Nox, MEmu).")
+            return
+        # Show selection
+        items = [f"{f['source']}: {f['path']}" for f in found]
+        if len(items) == 1:
+            self._adb_path_var.set(found[0]["path"])
+            self._lg(f"ADB: {found[0]['source']} → {found[0]['path']}", "ok")
+            return
+        # Simple selection popup
+        win = tk.Toplevel(self)
+        win.title("Chọn ADB")
+        win.geometry("500x200")
+        win.configure(bg=BG)
+        _lbl(win, "Tìm thấy nhiều ADB:", FG, FB).pack(padx=10,pady=(10,5))
+        lb = tk.Listbox(win, font=F, bg=BG2, selectbackground=BHOV)
+        for item in items:
+            lb.insert("end", item)
+        lb.pack(fill="both", expand=True, padx=10, pady=5)
+        lb.select_set(0)
+        def _pick():
+            idx = lb.curselection()
+            if idx:
+                self._adb_path_var.set(found[idx[0]]["path"])
+                self._lg(f"ADB: {found[idx[0]]['source']} → {found[idx[0]]['path']}", "ok")
+            win.destroy()
+        ttk.Button(win, text="Chọn", command=_pick).pack(pady=(0,10))
+
+    def _scan_devices(self):
+        adb_bin = self._adb_path_var.get().strip()
+        if not adb_bin or adb_bin.startswith("("):
+            messagebox.showwarning("","Vui lòng chọn đường dẫn ADB trước.\n"
+                                   "Nhấn 'Tìm ADB' hoặc nhập đường dẫn thủ công.")
+            return
+        if not _au:
+            messagebox.showerror("","Module auto.py không tải được"); return
+        self._adb = AdbController(adb_bin)
         self._adb.start_server()
         devs = self._adb.devices()
         self._adb_devs = devs
         if devs:
-            serials = [d["serial"] for d in devs]
-            self._dev_cb["values"] = serials
-            self._dev_cb.set(serials[0])
-            self._adb.device = serials[0]
+            items = [f"{d['serial']} ({d['type']})" for d in devs]
+            self._dev_cb["values"] = items
+            self._dev_cb.set(items[0])
+            self._adb.device = devs[0]["serial"]
             self._adb_status.config(
                 text=f"✔ {len(devs)} thiết bị", fg=GREEN)
-            self._lg(f"Tìm thấy {len(devs)} thiết bị: {serials}","ok")
+            self._lg(f"Tìm thấy {len(devs)} thiết bị: "
+                     f"{[d['serial'] for d in devs]}", "ok")
             # Check if MTC installed
             pkg = self._adb.get_installed_package()
             if pkg:
@@ -596,11 +654,57 @@ class App(tk.Tk):
                 self._apk_status.config(text="Chưa cài APK", fg=YELLOW)
         else:
             self._adb_status.config(text="Không có thiết bị", fg=RED)
-            self._lg("Không tìm thấy thiết bị. Kết nối ADB hoặc bật emulator.","err")
+            self._lg("Không tìm thấy thiết bị.\n"
+                     "  → Kiểm tra: Emulator đang chạy? USB Debugging bật?\n"
+                     "  → Thử 'Connect' với cổng 127.0.0.1:5555 (hoặc 62001 cho Nox)", "err")
+
+    def _on_device_select(self, _=None):
+        """When a device is selected from the combo box."""
+        idx = self._dev_cb.current()
+        if idx >= 0 and idx < len(self._adb_devs):
+            self._adb.device = self._adb_devs[idx]["serial"]
+            self._lg(f"Đã chọn: {self._adb.device}", "acc")
+            # Re-check APK status
+            pkg = self._adb.get_installed_package()
+            if pkg:
+                self._apk_status.config(text=f"✔ Đã cài: {pkg}", fg=GREEN)
+            else:
+                self._apk_status.config(text="Chưa cài APK", fg=YELLOW)
+
+    def _connect_emulator(self):
+        """Connect to emulator via ADB TCP."""
+        host = self._emu_host.get().strip()
+        if not host:
+            messagebox.showwarning("","Nhập địa chỉ (vd: 127.0.0.1:5555)"); return
+        adb_bin = self._adb_path_var.get().strip()
+        if not adb_bin or adb_bin.startswith("("):
+            messagebox.showwarning("","Vui lòng chọn ADB trước"); return
+        if not _au:
+            return
+        if not self._adb:
+            self._adb = AdbController(adb_bin)
+            self._adb.start_server()
+        self._emu_status.config(text="Đang kết nối...", fg=YELLOW)
+        def _w():
+            ok = self._adb.connect(host)
+            if ok:
+                self.after(0, lambda: self._emu_status.config(
+                    text=f"✔ Đã kết nối {host}", fg=GREEN))
+                self._lg(f"Connected to {host}", "ok")
+                # Auto-scan
+                self.after(500, self._scan_devices)
+            else:
+                self.after(0, lambda: self._emu_status.config(
+                    text=f"✖ Không kết nối được", fg=RED))
+                self._lg(f"Failed to connect to {host}", "err")
+        threading.Thread(target=_w, daemon=True).start()
 
     def _install_apk(self):
         if not self._adb:
             messagebox.showwarning("","Quét thiết bị trước"); return
+        if not APK_PATH.exists():
+            messagebox.showerror("","Không tìm thấy file MTC.apk\n"
+                                 f"Kiểm tra: {APK_PATH}"); return
         self._apk_status.config(text="Đang cài...", fg=YELLOW)
         def _w():
             ok = self._adb.install_apk(APK_PATH, self._lg)
@@ -723,6 +827,13 @@ class App(tk.Tk):
         self._lg(f"Bắt đầu ADB: «{book_name}»","ora")
         self._lg("  → App sẽ tự chạy trên thiết bị và đọc text màn hình")
         try:
+            def _progress(done, total):
+                if total > 0:
+                    pct = int(done / total * 100)
+                    self.after(0, lambda p=pct, m=f"[{done}/{total}]":
+                               (self._bar_adb.config(value=p),
+                                self._barlbl_adb.set(m)))
+
             result = download_via_adb(
                 adb        = self._adb,
                 book_name  = book_name,
@@ -731,6 +842,7 @@ class App(tk.Tk):
                 output_dir = out_dir,
                 log        = lambda m: self._lg(m),
                 stop_flag  = lambda: self._stop,
+                progress_cb= _progress,
             )
             if result.get("success"):
                 self._lg(f"Hoàn thành!  ✔{result['ok']}  ✖{result['fail']}", "ok")
@@ -755,13 +867,17 @@ class App(tk.Tk):
         if d: var.set(d)
 
     def _open_folder(self):
-        tab = getattr(self, "_cur_tab", "adb")
+        tab = self._cur_tab
         out = Path(self._adb_out.get() if tab=="adb" else self._out.get())
-        if self._sel:
+        if self._sel and _dl:
             sub = out / dl.safe_name(self._sel["name"])
             if sub.exists(): out = sub
         out.mkdir(parents=True, exist_ok=True)
-        os.startfile(str(out))
+        if sys.platform == "win32":
+            os.startfile(str(out))
+        else:
+            import subprocess
+            subprocess.run(["xdg-open", str(out)])
 
 
 if __name__ == "__main__":

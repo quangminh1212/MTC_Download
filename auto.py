@@ -4,6 +4,8 @@
 auto.py – MTC Novel Downloader via ADB Automation
 Chạy app MTC.apk thật trên device/emulator, đọc text qua UIAutomator.
 Không cần APP_KEY, không cần root.
+
+Supported emulators: LDPlayer, BlueStacks, Nox, MEmu, Android Studio AVD.
 """
 import sys, io, os, re, time, subprocess, threading, xml.etree.ElementTree as ET
 from pathlib import Path
@@ -15,38 +17,73 @@ PACKAGE      = "com.novelfever.app.android"
 PACKAGE_ALT  = "com.example.novelfeverx"           # debug/alt variant
 OUTPUT_DIR   = Path(__file__).parent / "downloads"
 SCROLL_STEPS = 20       # max scrolls per chapter page
-SCROLL_DELAY = 0.6      # seconds between scrolls
-NAV_DELAY    = 1.5      # seconds to wait after navigation
+SCROLL_DELAY = 0.8      # seconds between scrolls (emulator needs more)
+NAV_DELAY    = 2.0      # seconds to wait after navigation
+INSTALL_TIMEOUT = 180   # seconds for APK install (emulator is slower)
 
 # ADB keycodes
 KEY_BACK  = 4
 KEY_HOME  = 3
 KEY_ENTER = 66
 
+# Common emulator ADB paths
+_EMULATOR_ADB_PATHS = [
+    # Android Studio SDK
+    Path.home() / "AppData/Local/Android/Sdk/platform-tools/adb.exe",
+    Path("C:/Android/platform-tools/adb.exe"),
+    Path("C:/Program Files/Android/sdk/platform-tools/adb.exe"),
+    # LDPlayer
+    Path("C:/LDPlayer/LDPlayer9/adb.exe"),
+    Path("C:/LDPlayer/LDPlayer4.0/adb.exe"),
+    Path("C:/Program Files/LDPlayer/LDPlayer9/adb.exe"),
+    Path("C:/Program Files (x86)/LDPlayer/LDPlayer9/adb.exe"),
+    # BlueStacks
+    Path("C:/Program Files/BlueStacks_nxt/HD-Adb.exe"),
+    Path("C:/Program Files/BlueStacks/HD-Adb.exe"),
+    # Nox
+    Path("C:/Program Files/Nox/bin/nox_adb.exe"),
+    Path("C:/Program Files (x86)/Nox/bin/nox_adb.exe"),
+    # MEmu
+    Path("C:/Program Files/Microvirt/MEmu/adb.exe"),
+    Path("C:/Program Files (x86)/Microvirt/MEmu/adb.exe"),
+]
+
+# Accessibility services to try (in order of preference)
+_ACCESSIBILITY_SERVICES = [
+    "com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService",
+    "com.google.android.marvin.talkback/.TalkBackService",
+    "com.android.talkback/com.google.android.marvin.talkback.TalkBackService",
+]
+
 
 # ── ADB Controller ────────────────────────────────────────────────────────────
 class AdbController:
-    """Thin wrapper around adb CLI commands."""
+    """Thin wrapper around adb CLI commands, compatible with real devices and emulators."""
 
     def __init__(self, adb_path: str = "adb", device: Optional[str] = None):
         self.adb    = adb_path
         self.device = device  # serial number (None = first available)
         self._pkg   = None    # resolved package name
+        self._w     = 0       # cached screen width
+        self._h     = 0       # cached screen height
 
     # ── Low-level ─────────────────────────────────────────────────────────
-    def _cmd(self, *args, timeout: int = 30) -> tuple[str, str]:
+    def _cmd(self, *args, timeout: int = 30) -> tuple:
         cmd = [self.adb]
         if self.device:
             cmd += ["-s", self.device]
-        cmd += list(str(a) for a in args)
+        cmd += [str(a) for a in args]
         try:
             r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout,
-                               encoding="utf-8", errors="replace")
+                               encoding="utf-8", errors="replace",
+                               creationflags=subprocess.CREATE_NO_WINDOW if sys.platform == "win32" else 0)
             return r.stdout.strip(), r.stderr.strip()
         except subprocess.TimeoutExpired:
             return "", "timeout"
         except FileNotFoundError:
-            return "", "adb not found"
+            return "", f"adb not found: {self.adb}"
+        except Exception as e:
+            return "", str(e)
 
     def sh(self, *args, timeout: int = 20) -> str:
         out, _ = self._cmd("shell", *args, timeout=timeout)
@@ -55,28 +92,63 @@ class AdbController:
     # ── Device management ─────────────────────────────────────────────────
     @staticmethod
     def find_adb() -> Optional[str]:
-        """Find adb binary in PATH or common Android SDK locations."""
+        """Find adb binary in PATH or common emulator/SDK locations."""
         import shutil
         if shutil.which("adb"):
             return "adb"
-        candidates = [
-            Path.home() / "AppData/Local/Android/Sdk/platform-tools/adb.exe",
-            Path("C:/Android/platform-tools/adb.exe"),
-            Path("C:/Program Files/Android/sdk/platform-tools/adb.exe"),
-        ]
-        for p in candidates:
+        for p in _EMULATOR_ADB_PATHS:
             if p.exists():
                 return str(p)
         return None
 
+    @staticmethod
+    def find_all_adb() -> List[Dict[str, str]]:
+        """Find all available ADB binaries with their source type."""
+        import shutil
+        results = []
+        seen = set()
+        # System PATH
+        sys_adb = shutil.which("adb")
+        if sys_adb:
+            rp = str(Path(sys_adb).resolve())
+            if rp not in seen:
+                seen.add(rp)
+                results.append({"path": sys_adb, "source": "System PATH"})
+        # Known paths
+        labels = {
+            "Android/Sdk": "Android SDK",
+            "LDPlayer": "LDPlayer",
+            "BlueStacks": "BlueStacks",
+            "Nox": "Nox",
+            "Microvirt": "MEmu",
+        }
+        for p in _EMULATOR_ADB_PATHS:
+            if p.exists():
+                rp = str(p.resolve())
+                if rp not in seen:
+                    seen.add(rp)
+                    label = "Unknown"
+                    for key, val in labels.items():
+                        if key.lower() in str(p).lower():
+                            label = val
+                            break
+                    results.append({"path": str(p), "source": label})
+        return results
+
     def devices(self) -> List[Dict[str, str]]:
-        out, _ = self._cmd("devices", "-l")
+        """List connected devices and emulators."""
+        out, err = self._cmd("devices", "-l")
+        if not out and err:
+            return []
         result = []
         for line in out.splitlines()[1:]:
             parts = line.split()
-            if len(parts) >= 2 and parts[1] in ("device", "emulator"):
-                info = {"serial": parts[0], "type": parts[1]}
-                # Additional info
+            if len(parts) >= 2 and parts[1] == "device":
+                info = {"serial": parts[0], "type": "device"}
+                # Detect if it's an emulator by serial pattern
+                if parts[0].startswith("emulator-") or parts[0].startswith("127.0.0.1:"):
+                    info["type"] = "emulator"
+                # Parse additional properties
                 for p in parts[2:]:
                     if ":" in p:
                         k, v = p.split(":", 1)
@@ -87,19 +159,33 @@ class AdbController:
     def start_server(self):
         self._cmd("start-server", timeout=10)
 
+    def kill_server(self):
+        self._cmd("kill-server", timeout=5)
+
+    def connect(self, host_port: str) -> bool:
+        """Connect to an emulator via TCP (e.g. '127.0.0.1:5555')."""
+        out, err = self._cmd("connect", host_port, timeout=10)
+        return "connected" in (out + err).lower()
+
     # ── APK ───────────────────────────────────────────────────────────────
     def install_apk(self, apk_path: Path,
                     progress_cb: Callable[[str], None] = print) -> bool:
-        progress_cb(f"Installing {apk_path.name}...")
-        out, err = self._cmd("install", "-r", "-d", str(apk_path), timeout=120)
+        if not apk_path.exists():
+            progress_cb(f"APK file not found: {apk_path}")
+            return False
+        progress_cb(f"Installing {apk_path.name} (may take a while on emulator)...")
+        out, err = self._cmd("install", "-r", "-d", str(apk_path), timeout=INSTALL_TIMEOUT)
         full = out + err
-        success = "Success" in full or "success" in full.lower()
-        progress_cb("Install OK" if success else f"Install failed: {full[:200]}")
+        success = "success" in full.lower()
+        if success:
+            progress_cb("Install OK")
+        else:
+            progress_cb(f"Install failed: {full[:300]}")
         return success
 
     def is_installed(self, package: str) -> bool:
         out = self.sh("pm", "list", "packages", package)
-        return package in out
+        return f"package:{package}" in out
 
     def get_installed_package(self) -> Optional[str]:
         """Return whichever MTC variant is installed."""
@@ -111,7 +197,7 @@ class AdbController:
 
     # ── App control ───────────────────────────────────────────────────────
     def launch(self, package: str) -> None:
-        """Launch app via monkey (most reliable)."""
+        """Launch app via monkey (most reliable on all devices/emulators)."""
         self.sh("monkey", "-p", package,
                 "-c", "android.intent.category.LAUNCHER", "1")
         time.sleep(NAV_DELAY)
@@ -122,54 +208,77 @@ class AdbController:
     def go_back(self, times: int = 1) -> None:
         for _ in range(times):
             self.sh("input", "keyevent", str(KEY_BACK))
-            time.sleep(0.4)
+            time.sleep(0.5)
 
     def go_home(self) -> None:
         self.sh("input", "keyevent", str(KEY_HOME))
 
     # ── Accessibility (force Flutter semantics) ───────────────────────────
-    def enable_accessibility(self) -> None:
+    def enable_accessibility(self, log: Callable[[str], None] = print) -> bool:
         """
-        Enable Android accessibility service to force Flutter to generate
+        Enable accessibility service to force Flutter to generate
         its semantics tree, making text readable via UIAutomator.
-        TalkBack is used (available on all Android devices).
+        Tries multiple services for compatibility with stock emulators.
         """
-        svc = "com.google.android.marvin.talkback/.TalkBackService"
+        # Check if any accessibility service exists on the device
+        for svc in _ACCESSIBILITY_SERVICES:
+            # Set it
+            self.sh("settings", "put", "secure", "enabled_accessibility_services", svc)
+            self.sh("settings", "put", "secure", "accessibility_enabled", "1")
+            time.sleep(1.5)
+            # Verify
+            current = self.sh("settings", "get", "secure", "enabled_accessibility_services")
+            if current and svc.split("/")[0] in current:
+                log(f"Accessibility: {svc.split('/')[0]}")
+                return True
+
+        # Fallback: just enable the flag, Flutter may still generate semantics
+        # if any accessibility service is present
         self.sh("settings", "put", "secure", "accessibility_enabled", "1")
-        self.sh("settings", "put", "secure", "enabled_accessibility_services", svc)
-        time.sleep(1.5)
+        log("WARN: No standard accessibility service found. "
+            "Flutter text extraction may not work on this device.")
+        return False
 
     def disable_accessibility(self) -> None:
         self.sh("settings", "put", "secure", "accessibility_enabled", "0")
         self.sh("settings", "put", "secure", "enabled_accessibility_services", "")
 
     # ── Screen ────────────────────────────────────────────────────────────
-    def screen_size(self) -> tuple[int, int]:
+    def screen_size(self) -> tuple:
+        """Return (width, height) of screen."""
+        if self._w and self._h:
+            return self._w, self._h
         out = self.sh("wm", "size")
+        # Format: "Physical size: 1080x1920" → W=1080, H=1920
         m = re.search(r"(\d+)x(\d+)", out)
         if m:
-            return int(m.group(2)), int(m.group(1))  # w, h
-        return 1080, 1920
+            self._w, self._h = int(m.group(1)), int(m.group(2))
+        else:
+            self._w, self._h = 1080, 1920
+        return self._w, self._h
 
     def tap(self, x: int, y: int) -> None:
         self.sh("input", "tap", str(x), str(y))
-        time.sleep(0.3)
+        time.sleep(0.4)
 
     def long_press(self, x: int, y: int) -> None:
         self.sh("input", "swipe", str(x), str(y), str(x), str(y), "800")
         time.sleep(0.5)
 
-    def swipe_up(self, w: int, h: int) -> None:
+    def swipe_up(self, w: int = 0, h: int = 0) -> None:
         """Scroll content down by swiping up."""
+        if not w or not h:
+            w, h = self.screen_size()
         mx = w // 2
         self.sh("input", "swipe",
                 str(mx), str(int(h * 0.75)),
                 str(mx), str(int(h * 0.25)),
-                "300")
+                "350")
         time.sleep(SCROLL_DELAY)
 
     def type_text(self, text: str) -> None:
-        escaped = text.replace(" ", "%s").replace("'", "\\'")
+        """Type text via ADB. Special chars are escaped."""
+        escaped = text.replace(" ", "%s").replace("'", "\\'").replace("\"", '\\"')
         self.sh("input", "text", escaped)
 
     def tap_text(self, text: str) -> bool:
@@ -184,11 +293,13 @@ class AdbController:
     # ── UIAutomator ───────────────────────────────────────────────────────
     def dump_ui(self, compressed: bool = True) -> str:
         """Dump current screen UI hierarchy as XML string."""
-        args = ["uiautomator", "dump", "/sdcard/_ui.xml"]
+        remote = "/sdcard/_ui.xml"
+        args = ["uiautomator", "dump"]
         if compressed:
             args.append("--compressed")
+        args.append(remote)
         self.sh(*args, timeout=15)
-        out, _ = self._cmd("shell", "cat", "/sdcard/_ui.xml")
+        out, _ = self._cmd("shell", "cat", remote)
         return out
 
     def get_all_text(self, xml_str: str) -> List[str]:
@@ -211,13 +322,15 @@ class AdbController:
             # Fallback: regex
             return re.findall(r'(?:text|content-desc)="([^"]{2,})"', xml_str)
 
-    def _find_bounds(self, text: str) -> Optional[tuple[int, int]]:
+    def _find_bounds(self, text: str) -> Optional[tuple]:
         """Find center coordinates of element with given text."""
         xml_str = self.dump_ui()
         try:
             root = ET.fromstring(xml_str)
             for node in root.iter():
-                if node.get("text","") == text or node.get("content-desc","") == text:
+                node_text = node.get("text", "")
+                node_desc = node.get("content-desc", "")
+                if node_text == text or node_desc == text:
                     b = node.get("bounds", "")
                     m = re.findall(r"\d+", b)
                     if len(m) == 4:
@@ -228,14 +341,34 @@ class AdbController:
             pass
         return None
 
-    def wait_for_text(self, text: str, timeout: float = 8.0) -> bool:
+    def _find_bounds_partial(self, text: str) -> Optional[tuple]:
+        """Find center coordinates of element containing text (partial match)."""
+        xml_str = self.dump_ui()
+        text_lower = text.lower()
+        try:
+            root = ET.fromstring(xml_str)
+            for node in root.iter():
+                node_text = node.get("text", "").lower()
+                node_desc = node.get("content-desc", "").lower()
+                if text_lower in node_text or text_lower in node_desc:
+                    b = node.get("bounds", "")
+                    m = re.findall(r"\d+", b)
+                    if len(m) == 4:
+                        cx = (int(m[0]) + int(m[2])) // 2
+                        cy = (int(m[1]) + int(m[3])) // 2
+                        return cx, cy
+        except Exception:
+            pass
+        return None
+
+    def wait_for_text(self, text: str, timeout: float = 10.0) -> bool:
         """Wait until given text appears on screen."""
         t0 = time.time()
         while time.time() - t0 < timeout:
             xml = self.dump_ui()
             if text in xml:
                 return True
-            time.sleep(0.8)
+            time.sleep(1.0)
         return False
 
     def current_activity(self) -> str:
@@ -243,34 +376,47 @@ class AdbController:
         m = re.search(r"mCurrentFocus=.*?(\S+/\S+Activity)", out)
         return m.group(1) if m else ""
 
+    def get_android_version(self) -> str:
+        """Get Android version of connected device."""
+        return self.sh("getprop", "ro.build.version.release")
+
+    def get_device_model(self) -> str:
+        """Get device model name."""
+        return self.sh("getprop", "ro.product.model")
+
     # ── MTC App Navigation ────────────────────────────────────────────────
     def nav_to_book(self, book_name: str,
                     log: Callable[[str], None] = print) -> bool:
         """Navigate from home screen to a book's chapter list."""
         log("Finding search in app...")
-        # Try tapping search icon (common positions)
         w, h = self.screen_size()
 
-        # Wait for app to load
-        time.sleep(2)
+        # Wait for app to load (emulator may need extra time)
+        time.sleep(3)
         dump = self.dump_ui()
 
         # Look for search button by content-desc
         for search_label in ["Tìm kiếm", "Search", "search", "tìm"]:
             if search_label.lower() in dump.lower():
                 if self.tap_text(search_label):
-                    time.sleep(1)
+                    time.sleep(1.5)
+                    break
+                # Try partial match
+                bounds = self._find_bounds_partial(search_label)
+                if bounds:
+                    self.tap(bounds[0], bounds[1])
+                    time.sleep(1.5)
                     break
         else:
             # Tap top-right area where search usually is
             self.tap(w - 80, 80)
-            time.sleep(1)
+            time.sleep(1.5)
 
         # Type book name
-        log(f"Searching for: {book_name}")
+        log(f"Searching: {book_name}")
         self.type_text(book_name)
         self.sh("input", "keyevent", str(KEY_ENTER))
-        time.sleep(2)
+        time.sleep(3)  # emulator search may be slower
 
         # Tap first result
         dump2 = self.dump_ui()
@@ -299,17 +445,13 @@ class AdbController:
 
         # Scroll to find chapter N
         w, h = self.screen_size()
-        for _ in range(10):
+        for _ in range(15):
             dump = self.dump_ui()
             target = f"Chương {chapter_index}"
             if target in dump:
                 self.tap_text(target)
                 time.sleep(NAV_DELAY)
                 return True
-            # Also try just the number
-            if re.search(rf'\b{chapter_index}\b', dump):
-                # Find and tap it
-                pass
             self.swipe_up(w, h)
         return False
 
@@ -380,6 +522,7 @@ def download_via_adb(
     output_dir: Path = OUTPUT_DIR,
     log:        Callable[[str], None] = print,
     stop_flag:  Callable[[], bool] = lambda: False,
+    progress_cb: Optional[Callable[[int, int], None]] = None,
 ) -> Dict:
     """
     Full pipeline:
@@ -387,6 +530,7 @@ def download_via_adb(
       2. Launch MTC app
       3. Search + open book
       4. For each chapter: navigate → read → save
+    No blocking input() calls – fully automated.
     """
     from downloader import safe_name, merge_to_single_file
 
@@ -395,28 +539,33 @@ def download_via_adb(
     if not pkg:
         log("MTC app not installed. Installing...")
         if not adb.install_apk(APK_PATH, log):
-            log("ERROR: Install failed.")
             return {"success": False, "reason": "install_failed"}
         pkg = adb.get_installed_package() or PACKAGE
 
     log(f"Package: {pkg}")
+    model = adb.get_device_model()
+    ver   = adb.get_android_version()
+    if model or ver:
+        log(f"Device: {model} (Android {ver})")
 
     # Enable accessibility for Flutter semantics
     log("Enabling accessibility (Flutter semantics)...")
-    adb.enable_accessibility()
+    adb.enable_accessibility(log)
 
     # Launch app
     log("Launching MTC app...")
+    adb.force_stop(pkg)
+    time.sleep(0.5)
     adb.launch(pkg)
 
     # Navigate to book
     if not adb.nav_to_book(book_name, log):
-        log(f"WARNING: Could not auto-navigate to '{book_name}'. "
-            f"Please open the book manually and press Ctrl+C when ready.")
-        try:
-            input("Press ENTER when chapter list is visible → ")
-        except EOFError:
-            pass
+        log(f"WARN: Could not auto-navigate to '{book_name}'.")
+        log("  → Please open the book manually on the device, then the tool will continue.")
+        # Wait a bit, then try again
+        time.sleep(5)
+        if stop_flag():
+            return {"success": False, "reason": "stopped_by_user"}
 
     # Prepare output directory
     book_dir = output_dir / safe_name(book_name)
@@ -425,11 +574,17 @@ def download_via_adb(
     if ch_end is None:
         ch_end = ch_start + 9999  # effectively unlimited
 
+    total = ch_end - ch_start + 1
     n_ok = n_fail = 0
     for ch_idx in range(ch_start, ch_end + 1):
         if stop_flag():
             log("Stopped by user.")
             break
+
+        # Progress callback
+        done_count = ch_idx - ch_start
+        if progress_cb:
+            progress_cb(done_count, total)
 
         ch_file = book_dir / f"{ch_idx:06d}_Chuong_{ch_idx}.txt"
         if ch_file.exists() and ch_file.stat().st_size > 100:
@@ -461,7 +616,7 @@ def download_via_adb(
 
         # Go back to chapter list
         adb.go_back(2)
-        time.sleep(0.8)
+        time.sleep(1.0)
 
     # Merge
     merge_to_single_file(book_dir, book_name)
@@ -485,7 +640,8 @@ if __name__ == "__main__":
 
     adb_path = AdbController.find_adb()
     if not adb_path:
-        print("ERROR: adb not found. Install Android SDK platform-tools.")
+        print("ERROR: adb not found. Install Android SDK platform-tools")
+        print("       or use an emulator (LDPlayer, BlueStacks, etc.)")
         sys.exit(1)
 
     adb = AdbController(adb_path, args.device)
@@ -494,7 +650,7 @@ if __name__ == "__main__":
     if not devs:
         print("ERROR: No device connected. Connect a device or start an emulator.")
         sys.exit(1)
-    print(f"Using device: {devs[0]['serial']}")
+    print(f"Using device: {devs[0]['serial']} ({devs[0]['type']})")
     if not args.device:
         adb.device = devs[0]["serial"]
 
