@@ -49,12 +49,6 @@ ACCESSIBILITY_SERVICES = [
     "com.android.talkback/com.google.android.marvin.talkback.TalkBackService",
 ]
 
-# ── API ───────────────────────────────────────────────────────────────────────
-API_BASE    = "https://android.lonoapp.net/api"
-USER_AGENT  = "Dart/3.0 (dart:io)"
-API_TIMEOUT = 30
-API_RETRY   = 3
-
 # ── UI Palette ────────────────────────────────────────────────────────────────
 BG     = "#ffffff"
 BG2    = "#f8f9fa"

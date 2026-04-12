@@ -3,7 +3,7 @@ import time
 from pathlib import Path
 from typing import Optional, Dict, Callable
 
-from .config import APK_PATH, OUTPUT_DIR, PACKAGE, log
+from .config import OUTPUT_DIR, log
 from .adb import AdbController
 from .utils import safe_name, merge_to_single_file
 
@@ -20,38 +20,12 @@ def download_via_adb(
 ) -> Dict:
     """
     Pipeline tải truyện qua BlueStacks:
-      1. Bật accessibility → Flutter semantics tree
-      2. Mở app MTC
-      3. Tìm truyện → mở
-      4. Từng chương: điều hướng → đọc text → lưu file
+      User đã mở truyện trên MTC app sẵn.
+      1. Bật accessibility
+      2. Từng chương: điều hướng → đọc text → lưu file
     """
-    # Ensure APK installed
-    pkg = adb.get_installed_package()
-    if not pkg:
-        log_fn("App MTC chưa cài. Đang cài...")
-        if not adb.install_apk(APK_PATH, log_fn):
-            return {"success": False, "reason": "install_failed"}
-        pkg = adb.get_installed_package() or PACKAGE
-
-    log_fn(f"Package: {pkg}")
-    model, ver = adb.get_device_model(), adb.get_android_version()
-    if model or ver:
-        log_fn(f"Device: {model} (Android {ver})")
-
-    log_fn("Bật accessibility (Flutter semantics)...")
+    log_fn("Bật accessibility...")
     adb.enable_accessibility(log_fn)
-
-    log_fn("Mở app MTC...")
-    adb.force_stop(pkg)
-    time.sleep(0.5)
-    adb.launch(pkg)
-
-    if not adb.nav_to_book(book_name, log_fn):
-        log_fn(f"⚠ Không tìm thấy «{book_name}» trong app.")
-        log_fn("  → Hãy mở truyện thủ công trên BlueStacks, tool sẽ tiếp tục...")
-        time.sleep(5)
-        if stop_flag():
-            return {"success": False, "reason": "stopped"}
 
     book_dir = output_dir / safe_name(book_name)
     book_dir.mkdir(parents=True, exist_ok=True)
