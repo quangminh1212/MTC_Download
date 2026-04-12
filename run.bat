@@ -2,26 +2,29 @@
 chcp 65001 >nul 2>&1
 setlocal
 
-set "SCRIPT_DIR=%~dp0"
-set "VENV=%SCRIPT_DIR%venv"
-set "PYTHON=%VENV%\Scripts\python.exe"
-set "PIP=%VENV%\Scripts\pip.exe"
+set "DIR=%~dp0"
+set "PYTHON=%DIR%venv\Scripts\python.exe"
+set "PIP=%DIR%venv\Scripts\pip.exe"
 
-:: Check venv exists, create if missing
+:: Create venv if missing
 if not exist "%PYTHON%" (
     echo [setup] Creating virtual environment...
-    python -m venv "%VENV%"
-    echo [setup] Installing dependencies...
-    "%PIP%" install requests pycryptodome tqdm -q
+    python -m venv "%DIR%venv"
+    echo [setup] Installing packages...
+    "%PIP%" install requests pycryptodome -q
     echo [setup] Done.
 )
 
-:: Check & install missing packages
-"%PYTHON%" -c "import requests, Crypto, tqdm" 2>nul
-if errorlevel 1 (
-    echo [setup] Installing missing packages...
-    "%PIP%" install requests pycryptodome tqdm -q
+:: Install missing packages silently
+"%PYTHON%" -c "import requests, Crypto" 2>nul || (
+    "%PIP%" install requests pycryptodome -q
 )
 
-:: Run the downloader with all provided args
-"%PYTHON%" "%SCRIPT_DIR%downloader.py" %*
+:: "run.bat cli ..." → CLI mode
+if /i "%1"=="cli" (
+    shift
+    "%PYTHON%" "%DIR%downloader.py" %1 %2 %3 %4 %5 %6 %7 %8 %9
+) else (
+    :: Default → GUI
+    "%PYTHON%" "%DIR%gui.py" %*
+)
