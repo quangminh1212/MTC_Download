@@ -19,9 +19,11 @@ PACKAGE     = "com.novelfever.app.android"
 PACKAGE_ALT = "com.example.novelfeverx"
 
 # ── ADB / Automation ─────────────────────────────────────────────────────────
-SCROLL_STEPS    = 25
-SCROLL_DELAY    = 0.8
-NAV_DELAY       = 2.5
+SCROLL_STEPS    = 20
+SCROLL_DELAY    = 0.25
+NAV_DELAY       = 0.8
+TAP_DELAY       = 0.15
+BACK_DELAY      = 0.15
 INSTALL_TIMEOUT = 180
 KEY_BACK  = 4
 KEY_HOME  = 3

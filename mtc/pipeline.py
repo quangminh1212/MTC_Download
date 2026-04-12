@@ -92,7 +92,7 @@ def download_via_adb(
             log_fn(f"  [ch{ch_idx}] ✔ ({len(text)} ký tự)"); n_ok += 1
 
         adb.go_back(2)
-        time.sleep(1.0)
+        time.sleep(0.3)
 
     merge_to_single_file(book_dir, book_name)
     log_fn(f"\nXong! ✔{n_ok}  ✖{n_fail}  →  {book_dir}")
