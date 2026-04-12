@@ -24,4 +24,4 @@ if errorlevel 1 (
 )
 
 :: Run the downloader with all provided args
-"%PYTHON%" "%SCRIPT_DIR%mtc_downloader.py" %*
+"%PYTHON%" "%SCRIPT_DIR%downloader.py" %*
