@@ -172,4 +172,9 @@ desktop.ini
 
 # Downloaded content folders (uncomment to ignore all downloaded stories)
 # downloads/
-# Tận_Thế_Chi_Siêu_Thị_Hệ_Thống/
+
+# Test output
+test_output/
+
+# Download progress tracking files
+.progress.json
