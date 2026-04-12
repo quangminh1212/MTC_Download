@@ -49,6 +49,9 @@ ACCESSIBILITY_SERVICES = [
     "com.android.talkback/com.google.android.marvin.talkback.TalkBackService",
 ]
 
+# ── API (metadata only – content is AES-encrypted) ───────────────────────────
+API_BASE   = "https://android.lonoapp.net/api"
+USER_AGENT = "Dart/3.0 (dart:io)"
 # ── UI Palette ────────────────────────────────────────────────────────────────
 BG     = "#ffffff"
 BG2    = "#f8f9fa"

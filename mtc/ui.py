@@ -5,11 +5,19 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
+try:
+    import requests
+    from requests.adapters import HTTPAdapter
+    from urllib3.util.retry import Retry
+    _HAS_REQUESTS = True
+except ImportError:
+    _HAS_REQUESTS = False
+
 from .config import (
     BG, BG2, BORDER, BLUE, BLUE2, BHOV, FG, FG2, FG3,
     GREEN, YELLOW, RED, ORANGE,
     FONT, FONT_BOLD, FONT_HEAD, FONT_MONO,
-    APK_PATH, OUTPUT_DIR, log,
+    APK_PATH, OUTPUT_DIR, API_BASE, USER_AGENT, log,
 )
 from .adb import AdbController
 from .pipeline import download_via_adb
@@ -100,8 +108,14 @@ class App(tk.Tk):
 
         tk.Frame(body, bg=BORDER, height=1).pack(fill="x", pady=4)
 
-        # ── Book name ─────────────────────────────────────────────────────
-        _lbl(body, "Tên truyện (để đặt tên thư mục):", FG2).pack(anchor="w")
+        # ── Book name + list button ──────────────────────────────────────
+        bf2 = tk.Frame(body, bg=BG)
+        bf2.pack(fill="x", pady=(0,2))
+        _lbl(bf2, "Tên truyện:", FG2).pack(side="left")
+        ttk.Button(bf2, text="📋 Danh sách", style="G.TButton",
+                   command=self._show_book_list).pack(side="right")
+        ttk.Button(bf2, text="Khám phá", style="G.TButton",
+                   command=self._goto_explore).pack(side="right", padx=(0,4))
         self._book_var = tk.StringVar()
         _ef(body, self._book_var, 36).pack(fill="x", pady=(2,6))
 
@@ -340,3 +354,140 @@ class App(tk.Tk):
                 out = sub
         out.mkdir(parents=True, exist_ok=True)
         os.startfile(str(out))
+
+    # ── Khám phá (ADB) ───────────────────────────────────────────────────
+    def _goto_explore(self):
+        if not self._adb or not self._adb.device:
+            messagebox.showwarning("", "Kết nối BlueStacks trước"); return
+        self._lg("Mở tab Khám Phá...", "acc")
+        def _w():
+            w, h = self._adb.screen_size()
+            # Tap "Khám Phá" tab (usually bottom-left area)
+            self._adb.tap(w // 4, h - 60)
+            time.sleep(0.8)
+            self._lg("Đã tap vào Khám Phá", "ok")
+        threading.Thread(target=_w, daemon=True).start()
+
+    # ── Danh sách truyện (API metadata popup) ────────────────────────────
+    def _show_book_list(self):
+        if not _HAS_REQUESTS:
+            messagebox.showerror("", "Cần cài requests:\npip install requests")
+            return
+        win = tk.Toplevel(self)
+        win.title("Danh sách truyện – MTC")
+        win.geometry("520x500")
+        win.configure(bg=BG)
+        win.attributes("-topmost", True)
+
+        # Filter row
+        top = tk.Frame(win, bg=BG)
+        top.pack(fill="x", padx=8, pady=6)
+        _lbl(top, "Lọc:", bg=BG).pack(side="left")
+        filter_var = tk.StringVar(value="Hoàn thành")
+        cb = ttk.Combobox(top, textvariable=filter_var, state="readonly",
+                          values=["Hoàn thành","Còn tiếp","Tạm dừng","Tất cả"],
+                          width=12, font=FONT)
+        cb.pack(side="left", padx=(4,8))
+        # Search
+        _lbl(top, "🔍", bg=BG).pack(side="left")
+        search_var = tk.StringVar()
+        se = tk.Entry(top, textvariable=search_var, bg=BG, fg=FG, font=FONT,
+                      bd=1, relief="solid", width=18, insertbackground=FG)
+        se.pack(side="left", padx=4)
+        count_lbl = _lbl(top, "", FG3, ("Segoe UI",8), bg=BG)
+        count_lbl.pack(side="right")
+
+        # Treeview
+        tf = tk.Frame(win, bg=BG)
+        tf.pack(fill="both", expand=True, padx=8, pady=(0,4))
+        cols = ("name","ch")
+        tree = ttk.Treeview(tf, columns=cols, show="headings", selectmode="browse")
+        tree.heading("name", text="Tên truyện")
+        tree.heading("ch",   text="Chương", anchor="center")
+        tree.column("name", width=380, anchor="w")
+        tree.column("ch",   width=60,  anchor="center", stretch=False)
+        vsb = ttk.Scrollbar(tf, orient="vertical", command=tree.yview)
+        tree.configure(yscrollcommand=vsb.set)
+        vsb.pack(side="right", fill="y")
+        tree.pack(side="left", fill="both", expand=True)
+
+        # Page nav
+        pg = tk.Frame(win, bg=BG)
+        pg.pack(fill="x", padx=8, pady=(0,6))
+        page_var = [1, 1]  # [current, last]
+        pg_lbl = _lbl(pg, "—", FG2, bg=BG)
+        pg_lbl.pack(side="left", padx=8)
+        ttk.Button(pg, text="‹ Trước", style="G.TButton",
+                   command=lambda: _load(page_var[0]-1)).pack(side="left")
+        ttk.Button(pg, text="Sau ›", style="G.TButton",
+                   command=lambda: _load(page_var[0]+1)).pack(side="left", padx=4)
+
+        _STATUS = {"Hoàn thành":2, "Còn tiếp":1, "Tạm dừng":3, "Tất cả":0}
+        all_books = []
+
+        def _load(page=1):
+            if page < 1 or (page_var[1] and page > page_var[1]):
+                return
+            page_var[0] = page
+            count_lbl.config(text="Đang tải...")
+            threading.Thread(target=lambda: _fetch(page), daemon=True).start()
+
+        def _fetch(page):
+            try:
+                sess = requests.Session()
+                retry = Retry(total=2, backoff_factor=1,
+                              status_forcelist=[429,500,502,503,504])
+                sess.mount("https://", HTTPAdapter(max_retries=retry))
+                sess.headers.update({"User-Agent": USER_AGENT,
+                                     "Accept": "application/json"})
+                params = {"per_page": 50, "page": page}
+                st = _STATUS.get(filter_var.get(), 0)
+                if st:
+                    params["filter[status]"] = st
+                q = search_var.get().strip()
+                if q:
+                    params["search"] = q
+                r = sess.get(f"{API_BASE}/books", params=params, timeout=15)
+                d = r.json()
+                books = d.get("data", [])
+                pagi = d.get("pagination", {}) or {}
+                page_var[1] = pagi.get("last", 1)
+                total = pagi.get("total", len(books))
+                nonlocal all_books
+                all_books = books
+                win.after(0, lambda: _fill(books, total, page))
+            except Exception as e:
+                win.after(0, lambda: count_lbl.config(text=f"Lỗi: {e}"))
+
+        def _fill(books, total, page):
+            for r in tree.get_children():
+                tree.delete(r)
+            for i, b in enumerate(books):
+                ch = b.get("latest_index", b.get("chapter_count", 0))
+                tree.insert("", "end", iid=str(b["id"]),
+                            values=(b.get("name",""), ch),
+                            tags=("o" if i%2 else "e",))
+            tree.tag_configure("o", background=BG2)
+            tree.tag_configure("e", background=BG)
+            count_lbl.config(text=f"{total} truyện")
+            pg_lbl.config(text=f"Trang {page}/{page_var[1]}")
+
+        def _on_select(_=None):
+            sel = tree.selection()
+            if not sel:
+                return
+            bid = int(sel[0])
+            book = next((b for b in all_books if b["id"]==bid), None)
+            if book:
+                self._book_var.set(book.get("name",""))
+                ch = book.get("latest_index", book.get("chapter_count",0))
+                self._ch_to.set(str(ch))
+                self._lg(f"Chọn: {book.get('name','')} ({ch} ch)", "acc")
+                win.destroy()
+
+        tree.bind("<Double-1>", _on_select)
+
+        cb.bind("<<ComboboxSelected>>", lambda _: _load(1))
+        se.bind("<Return>", lambda _: _load(1))
+
+        _load(1)
