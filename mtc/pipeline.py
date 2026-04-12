@@ -254,8 +254,8 @@ def download_via_api(
     book_dir.mkdir(parents=True, exist_ok=True)
 
     total = len(targets)
-    n_ok = 0
-    n_fail = 0
+    completed_indices = set()
+    failed_chapters: List[Dict] = []
     log_fn(f"Tải trực tiếp qua API: {api_book_name} ({total} chương)")
 
     for done, chapter in enumerate(targets):
@@ -267,11 +267,10 @@ def download_via_api(
             progress_cb(done, total)
 
         ch_idx = chapter.get("index") or 0
-        ch_id = chapter.get("id")
         ch_file = book_dir / f"{ch_idx:06d}_Chuong_{ch_idx}.txt"
         if ch_file.exists() and ch_file.stat().st_size > 100:
             log_fn(f"  [ch{ch_idx}] Đã có, bỏ qua")
-            n_ok += 1
+            completed_indices.add(ch_idx)
             continue
 
         try:
@@ -282,17 +281,40 @@ def download_via_api(
                 encoding="utf-8",
             )
             log_fn(f"  [ch{ch_idx}] ✔ API ({len(content)} ký tự)")
-            n_ok += 1
+            completed_indices.add(ch_idx)
         except Exception as exc:
             log_fn(f"  [ch{ch_idx}] ⚠ API lỗi: {exc}")
-            n_fail += 1
-            if n_fail >= 5:
-                log_fn("Quá nhiều lỗi API. Dừng.")
-                break
+            failed_chapters.append(chapter)
+
+    retry_round = 0
+    while failed_chapters and retry_round < 2 and not stop_flag():
+        retry_round += 1
+        pending = failed_chapters
+        failed_chapters = []
+        log_fn(f"\nRetry API lượt {retry_round}: {len(pending)} chương")
+        for chapter in pending:
+            ch_idx = chapter.get("index") or 0
+            ch_file = book_dir / f"{ch_idx:06d}_Chuong_{ch_idx}.txt"
+            if ch_file.exists() and ch_file.stat().st_size > 100:
+                completed_indices.add(ch_idx)
+                continue
+            try:
+                chapter_name, content = _fetch_api_chapter_text(sess, chapter, max_attempts=5)
+                ch_file.write_text(
+                    f"{'='*60}\n{chapter_name}\n{'='*60}\n\n{content}\n",
+                    encoding="utf-8",
+                )
+                log_fn(f"  [ch{ch_idx}] ✔ API retry ({len(content)} ký tự)")
+                completed_indices.add(ch_idx)
+            except Exception as exc:
+                log_fn(f"  [ch{ch_idx}] ⚠ API vẫn lỗi: {exc}")
+                failed_chapters.append(chapter)
 
     merge_to_single_file(book_dir, api_book_name)
     if progress_cb:
         progress_cb(total, total)
+    n_ok = len(completed_indices)
+    n_fail = len(failed_chapters)
     log_fn(f"\nXong API! ✔{n_ok}  ✖{n_fail}  →  {book_dir}")
     return {
         "success": n_ok > 0,

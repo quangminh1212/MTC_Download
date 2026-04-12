@@ -99,10 +99,10 @@ class App(tk.Tk):
         # ── ADB status row ────────────────────────────────────────────────
         af = tk.Frame(body, bg=BG)
         af.pack(fill="x", pady=(0,6))
-        _lbl(af, "ADB:", FG2, FONT_BOLD).pack(side="left")
-        self._adb_lbl = _lbl(af, "đang quét...", FG3)
+        _lbl(af, "BlueStacks:", FG2, FONT_BOLD).pack(side="left")
+        self._adb_lbl = _lbl(af, "tuỳ chọn fallback, đang dò...", FG3)
         self._adb_lbl.pack(side="left", padx=4)
-        ttk.Button(af, text="Quét", style="G.TButton",
+        ttk.Button(af, text="Dò", style="G.TButton",
                    command=self._scan_devices).pack(side="right")
         self._btn_apk = ttk.Button(af, text="Cài APK", style="G.TButton",
                                     command=self._install_apk)
@@ -121,6 +121,7 @@ class App(tk.Tk):
         ttk.Button(bf2, text="Khám phá", style="G.TButton",
                    command=self._goto_explore).pack(side="right", padx=(0,4))
         self._book_var = tk.StringVar()
+        self._book_var.trace_add("write", self._on_book_var_changed)
         _ef(body, self._book_var, 36).pack(fill="x", pady=(2,6))
 
         # ── Chapter range ─────────────────────────────────────────────────
@@ -146,8 +147,8 @@ class App(tk.Tk):
         info = tk.Frame(body, bg="#fff8e1", highlightthickness=1,
                         highlightbackground="#fdd835")
         info.pack(fill="x", pady=(0,6))
-        tk.Label(info, text="ℹ️  Mở MTC trên BlueStacks → vào truyện cần tải\n"
-                 "     → nhập tên + chương → bấm Bắt đầu",
+        tk.Label(info, text="ℹ️  Ưu tiên tải trực tiếp qua API.\n"
+             "     BlueStacks chỉ cần cho quét / khám phá / fallback khi API lỗi.",
                  bg="#fff8e1", fg="#5d4037", font=("Segoe UI",8),
                  justify="left", anchor="w").pack(padx=8, pady=6)
 
@@ -226,9 +227,9 @@ class App(tk.Tk):
     # ── ADB ───────────────────────────────────────────────────────────────
     def _auto_connect(self):
         if not self._adb_path:
-            self._chip.config(text="✖ No ADB")
-            self._adb_lbl.config(text="không tìm thấy", fg=RED)
-            self._lg("ADB không tìm thấy. Cài BlueStacks.", "err")
+            self._chip.config(text="API")
+            self._adb_lbl.config(text="không có fallback ADB", fg=YELLOW)
+            self._lg("Không tìm thấy ADB. Vẫn tải trực tiếp qua API; BlueStacks chỉ là fallback.", "w")
             return
         self._lg(f"ADB: {self._adb_path}", "acc")
         threading.Thread(target=self._do_connect, daemon=True).start()
@@ -249,9 +250,9 @@ class App(tk.Tk):
             self.after(0, self._on_fail)
 
     def _on_ok(self, serial):
-        self._chip.config(text=f"✔ {serial}")
-        self._adb_lbl.config(text=f"✔ {serial}", fg=GREEN)
-        self._lg(f"Kết nối OK: {serial}", "ok")
+        self._chip.config(text="API + ADB")
+        self._adb_lbl.config(text=f"fallback sẵn sàng: {serial}", fg=GREEN)
+        self._lg(f"BlueStacks fallback OK: {serial}", "ok")
         pkg = self._adb.get_installed_package()
         if pkg:
             self._btn_apk.config(text="✔ APK")
@@ -261,17 +262,17 @@ class App(tk.Tk):
             self._lg("MTC chưa cài. Bấm 'Cài APK'.", "w")
 
     def _on_fail(self):
-        self._chip.config(text="✖ Offline")
-        self._adb_lbl.config(text="không tìm thấy", fg=RED)
-        self._lg("Không tìm thấy BlueStacks.", "err")
+        self._chip.config(text="API")
+        self._adb_lbl.config(text="không thấy BlueStacks, API vẫn dùng được", fg=YELLOW)
+        self._lg("Không tìm thấy BlueStacks. Vẫn tiếp tục ở chế độ API trực tiếp.", "w")
 
     def _scan_devices(self):
-        self._lg("Quét thiết bị...", "acc")
+        self._lg("Dò BlueStacks fallback...", "acc")
         threading.Thread(target=self._do_connect, daemon=True).start()
 
     def _install_apk(self):
         if not self._adb or not self._adb.device:
-            messagebox.showwarning("", "Kết nối BlueStacks trước"); return
+            messagebox.showwarning("", "Tính năng này cần BlueStacks đã kết nối"); return
         if not APK_PATH.exists():
             messagebox.showerror("", f"Không tìm thấy\n{APK_PATH}"); return
         self._lg("Cài APK...", "ora")
@@ -301,6 +302,11 @@ class App(tk.Tk):
         if self._selected_book_id and \
            self._book_lookup_key(self._selected_book_title) == self._book_lookup_key(book):
             book_id = self._selected_book_id
+
+        if self._adb and self._adb.device:
+            self._lg("Ưu tiên tải qua API; BlueStacks chỉ dùng nếu cần fallback.", "dim")
+        else:
+            self._lg("Chưa có BlueStacks fallback. Sẽ tải trực tiếp qua API.", "dim")
 
         self._btn_start.config(state="disabled")
         self._btn_stop.config(state="normal")
@@ -349,6 +355,12 @@ class App(tk.Tk):
     @staticmethod
     def _book_lookup_key(text: str) -> str:
         return "".join(ch for ch in (text or "").casefold() if ch.isalnum())
+
+    def _on_book_var_changed(self, *_):
+        current = (self._book_var.get() or "").strip()
+        if self._book_lookup_key(current) != self._book_lookup_key(self._selected_book_title):
+            self._selected_book_id = None
+            self._selected_book_title = ""
 
     def _http_session(self):
         sess = requests.Session()
@@ -440,7 +452,7 @@ class App(tk.Tk):
 
     def _show_scanned_books(self):
         if not self._adb or not self._adb.device:
-            messagebox.showwarning("", "Kết nối BlueStacks trước")
+            messagebox.showwarning("", "Quét từ màn hình cần BlueStacks đã kết nối")
             return
 
         win = tk.Toplevel(self)
@@ -627,7 +639,7 @@ class App(tk.Tk):
     # ── Khám phá (ADB) ───────────────────────────────────────────────────
     def _goto_explore(self):
         if not self._adb or not self._adb.device:
-            messagebox.showwarning("", "Kết nối BlueStacks trước"); return
+            messagebox.showwarning("", "Khám phá bằng tap ADB cần BlueStacks đã kết nối"); return
         self._lg("Mở tab Khám Phá...", "acc")
         def _w():
             w, h = self._adb.screen_size()
