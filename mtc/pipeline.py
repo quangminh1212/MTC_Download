@@ -105,10 +105,32 @@ def _extract_between(data: bytes, start_marker: bytes, end_marker: bytes) -> Opt
     if start < 0:
         return None
     start += len(start_marker)
-    end = data.find(end_marker)
+    end = data.find(end_marker, start)
     if end < 0 or start >= end:
         return None
     return data[start:end]
+
+
+def _existing_chapter_looks_ok(ch_file: Path) -> bool:
+    if not ch_file.exists() or ch_file.stat().st_size <= 100:
+        return False
+    try:
+        text = ch_file.read_text(encoding="utf-8")
+    except Exception:
+        return False
+
+    parts = text.split("\n\n", 1)
+    body = parts[1].strip() if len(parts) == 2 else text.strip()
+    non_empty_lines = [line for line in body.splitlines() if line.strip()]
+    if len(body) < 600:
+        return False
+    if len(non_empty_lines) <= 2:
+        return False
+    return True
+
+
+class LockedChapterPreviewError(PermissionError):
+    pass
 
 
 def _decode_base64_loose(data: bytes) -> bytes:
@@ -207,12 +229,18 @@ def _fetch_api_chapter_text(sess, chapter: Dict, max_attempts: int = 3) -> tuple
             resp = sess.get(f"{API_BASE}/chapters/{ch_id}", timeout=30)
             resp.raise_for_status()
             detail = (resp.json() or {}).get("data") or {}
+            if detail.get("is_locked"):
+                raise LockedChapterPreviewError(
+                    f"Chương bị khóa, API chỉ trả preview (giá {detail.get('unlock_price') or 0})"
+                )
             chapter_name = detail.get("name") or fallback_name
             content = _decrypt_content_blob(detail.get("content") or "")
             content = _cleanup_api_text(content, chapter_name)
             if len(content) < 50:
                 raise ValueError("Nội dung sau giải mã quá ngắn")
             return chapter_name, content
+        except LockedChapterPreviewError:
+            raise
         except Exception as exc:
             last_error = exc
             if attempt < max_attempts:
@@ -255,6 +283,7 @@ def download_via_api(
 
     total = len(targets)
     completed_indices = set()
+    locked_indices: List[int] = []
     failed_chapters: List[Dict] = []
     log_fn(f"Tải trực tiếp qua API: {api_book_name} ({total} chương)")
 
@@ -268,7 +297,7 @@ def download_via_api(
 
         ch_idx = chapter.get("index") or 0
         ch_file = book_dir / f"{ch_idx:06d}_Chuong_{ch_idx}.txt"
-        if ch_file.exists() and ch_file.stat().st_size > 100:
+        if _existing_chapter_looks_ok(ch_file):
             log_fn(f"  [ch{ch_idx}] Đã có, bỏ qua")
             completed_indices.add(ch_idx)
             continue
@@ -282,6 +311,11 @@ def download_via_api(
             )
             log_fn(f"  [ch{ch_idx}] ✔ API ({len(content)} ký tự)")
             completed_indices.add(ch_idx)
+        except LockedChapterPreviewError as exc:
+            if ch_file.exists() and not _existing_chapter_looks_ok(ch_file):
+                ch_file.unlink(missing_ok=True)
+            log_fn(f"  [ch{ch_idx}] 🔒 {exc}")
+            locked_indices.append(ch_idx)
         except Exception as exc:
             log_fn(f"  [ch{ch_idx}] ⚠ API lỗi: {exc}")
             failed_chapters.append(chapter)
@@ -295,7 +329,7 @@ def download_via_api(
         for chapter in pending:
             ch_idx = chapter.get("index") or 0
             ch_file = book_dir / f"{ch_idx:06d}_Chuong_{ch_idx}.txt"
-            if ch_file.exists() and ch_file.stat().st_size > 100:
+            if _existing_chapter_looks_ok(ch_file):
                 completed_indices.add(ch_idx)
                 continue
             try:
@@ -306,23 +340,37 @@ def download_via_api(
                 )
                 log_fn(f"  [ch{ch_idx}] ✔ API retry ({len(content)} ký tự)")
                 completed_indices.add(ch_idx)
+            except LockedChapterPreviewError as exc:
+                if ch_file.exists() and not _existing_chapter_looks_ok(ch_file):
+                    ch_file.unlink(missing_ok=True)
+                log_fn(f"  [ch{ch_idx}] 🔒 {exc}")
+                locked_indices.append(ch_idx)
             except Exception as exc:
                 log_fn(f"  [ch{ch_idx}] ⚠ API vẫn lỗi: {exc}")
                 failed_chapters.append(chapter)
 
-    merge_to_single_file(book_dir, api_book_name)
+    n_ok = len(completed_indices)
+    failed_indices = sorted((chapter.get("index") or 0) for chapter in failed_chapters)
+    n_fail = len(failed_indices) + len(locked_indices)
+    if n_fail == 0:
+        merge_to_single_file(book_dir, api_book_name)
     if progress_cb:
         progress_cb(total, total)
-    n_ok = len(completed_indices)
-    n_fail = len(failed_chapters)
     log_fn(f"\nXong API! ✔{n_ok}  ✖{n_fail}  →  {book_dir}")
     return {
-        "success": n_ok > 0,
+        "success": n_fail == 0 and n_ok > 0,
         "ok": n_ok,
         "fail": n_fail,
         "output": str(book_dir),
         "book_id": api_book_id,
         "book_name": api_book_name,
+        "locked_chapters": sorted(set(locked_indices)),
+        "failed_chapter_indices": failed_indices,
+        "reason": (
+            f"{len(locked_indices)} chương bị khóa, API chỉ có preview"
+            if locked_indices else
+            (f"Còn {len(failed_indices)} chương lỗi API" if failed_indices else "")
+        ),
     }
 
 
@@ -355,13 +403,24 @@ def download_book(
         log_fn(f"API lỗi, chuyển sang ADB: {exc}")
 
     if not adb or not adb.device:
+        api_reason = result.get("reason") if 'result' in locals() and isinstance(result, dict) else None
+        if api_reason:
+            return {"success": False, "reason": f"{api_reason}. Không có ADB để fallback"}
         return {"success": False, "reason": "Không có ADB để fallback và API không tải được"}
 
-    log_fn("Fallback sang ADB...")
+    pending_indices = sorted(set(
+        (result.get("locked_chapters") or []) +
+        (result.get("failed_chapter_indices") or [])
+    )) if 'result' in locals() and isinstance(result, dict) else []
+    fallback_start = pending_indices[0] if pending_indices else ch_start
+    if pending_indices:
+        log_fn(f"Fallback sang ADB từ chương {fallback_start}...")
+    else:
+        log_fn("Fallback sang ADB...")
     return download_via_adb(
         adb=adb,
         book_name=book_name,
-        ch_start=ch_start,
+        ch_start=fallback_start,
         ch_end=ch_end,
         output_dir=output_dir,
         log_fn=log_fn,
@@ -407,7 +466,7 @@ def download_via_adb(
             progress_cb(ch_idx - ch_start, total)
 
         ch_file = book_dir / f"{ch_idx:06d}_Chuong_{ch_idx}.txt"
-        if ch_file.exists() and ch_file.stat().st_size > 100:
+        if _existing_chapter_looks_ok(ch_file):
             log_fn(f"  [ch{ch_idx}] Đã có, bỏ qua"); n_ok += 1; continue
 
         if ch_idx == ch_start:
