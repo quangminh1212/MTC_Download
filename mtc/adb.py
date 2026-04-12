@@ -10,6 +10,7 @@ from .config import (
     BS_ADB_PATHS, OTHER_ADB_PATHS, ACCESSIBILITY_SERVICES,
     log,
 )
+from .utils import repair_adb_text
 
 # ── Story text filter ─────────────────────────────────────────────────────────
 _UI_NOISE = re.compile(
@@ -26,6 +27,35 @@ def _is_story_text(t: str) -> bool:
     if re.match(r"^\d+$", t):
         return False
     return True
+
+
+def _clean_ui_text(value: str) -> str:
+    value = repair_adb_text((value or "").replace("\xa0", " "))
+    return value.strip()
+
+
+def _parse_bounds_rect(bounds: str) -> Optional[tuple]:
+    numbers = re.findall(r"\d+", bounds or "")
+    if len(numbers) != 4:
+        return None
+    return tuple(int(n) for n in numbers)
+
+
+def _normalize_xml_dump(raw: str) -> str:
+    if not raw:
+        return ""
+    start = raw.find("<?xml")
+    if start < 0:
+        start = raw.find("<hierarchy")
+    if start < 0:
+        return raw.strip()
+
+    end_tag = "</hierarchy>"
+    end = raw.rfind(end_tag)
+    if end < 0:
+        return raw[start:].strip()
+    end += len(end_tag)
+    return raw[start:end].strip()
 
 
 class AdbController:
@@ -55,6 +85,20 @@ class AdbController:
             return "", f"adb not found: {self.adb}"
         except Exception as e:
             return "", str(e)
+
+    def ensure_device(self) -> bool:
+        if not self.device:
+            return True
+        serials = {item["serial"] for item in self.devices()}
+        if self.device in serials:
+            return True
+        if re.match(r"^\d+\.\d+\.\d+\.\d+:\d+$", self.device):
+            self.start_server()
+            self.connect(self.device)
+            time.sleep(0.2)
+            serials = {item["serial"] for item in self.devices()}
+            return self.device in serials
+        return False
 
     def sh(self, *args, timeout: int = 15) -> str:
         out, _ = self._cmd("shell", *args, timeout=timeout)
@@ -182,15 +226,174 @@ class AdbController:
 
     # ── UIAutomator (speed-optimized) ─────────────────────────────────────
     def dump_ui(self) -> str:
-        """Dump UI XML directly to stdout (skip file I/O on device)."""
-        out = self.sh("uiautomator", "dump", "--compressed",
-                      "/dev/stdout", timeout=8)
-        # Fallback: file-based dump if stdout fails
-        if not out or "<hierarchy" not in out:
-            self.sh("uiautomator", "dump", "--compressed",
-                    "/sdcard/_ui.xml", timeout=8)
-            out, _ = self._cmd("shell", "cat", "/sdcard/_ui.xml")
-        return out
+        """Dump UI XML using the fastest working transport and retry on transient failures."""
+        self.ensure_device()
+
+        for attempt in range(2):
+            out, err = self._cmd(
+                "exec-out", "uiautomator", "dump", "--compressed", "/dev/tty",
+                timeout=8,
+            )
+            merged = (out or "") + (err or "")
+            if "<hierarchy" in merged:
+                return _normalize_xml_dump(merged)
+
+            self._cmd("shell", "uiautomator", "dump", "--compressed", "/sdcard/_ui.xml", timeout=8)
+            file_out, file_err = self._cmd("shell", "cat", "/sdcard/_ui.xml", timeout=8)
+            merged = (file_out or "") + (file_err or "")
+            if "<hierarchy" in merged:
+                return _normalize_xml_dump(merged)
+
+            if attempt == 0:
+                self.ensure_device()
+                time.sleep(0.15)
+
+        return ""
+
+    @staticmethod
+    def _extract_reader_payload(xml_str: str) -> Optional[Dict]:
+        if not xml_str:
+            return None
+        try:
+            root = ET.fromstring(xml_str)
+        except ET.ParseError:
+            return None
+
+        best_text = ""
+        for node in root.iter():
+            payload = _clean_ui_text(node.get("content-desc", "") or node.get("text", ""))
+            if payload.count("\n") < 5:
+                continue
+            if len(payload) > len(best_text):
+                best_text = payload
+
+        if not best_text:
+            return None
+
+        lines = [line.strip() for line in best_text.splitlines()]
+        lines = [line for line in lines if line]
+        if not lines:
+            return None
+
+        title = lines[0]
+        match = re.search(r"Chương\s+(\d+)", title, re.IGNORECASE)
+        body_lines = lines[1:]
+        if body_lines and body_lines[0] == title:
+            body_lines = body_lines[1:]
+        body = "\n\n".join(body_lines).strip()
+        if len(body) < 50:
+            return None
+
+        return {
+            "title": title,
+            "chapter_index": int(match.group(1)) if match else None,
+            "text": body,
+        }
+
+    def _reader_menu_visible(self, xml_str: str) -> bool:
+        texts = self.get_all_text(xml_str)
+        lookup = {item.lower() for item in texts}
+        return "d.s chương" in lookup and "tải lại nội dung" in lookup
+
+    def _reader_nav_point(self, direction: str) -> tuple:
+        w, h = self.screen_size()
+        if direction == "next":
+            return int(w * 0.70), int(h * 0.392)
+        return int(w * 0.293), int(h * 0.392)
+
+    def reader_open_menu(self) -> None:
+        w, h = self.screen_size()
+        self.tap(w // 2, int(h * 0.75))
+        time.sleep(0.05)
+
+    def reader_toggle_menu(self) -> None:
+        w, h = self.screen_size()
+        self.tap(w // 2, h // 2)
+
+    def reader_close_menu(self) -> None:
+        w, h = self.screen_size()
+        self.tap(int(w * 0.933), int(h * 0.305))
+        time.sleep(0.05)
+
+    def reader_next_chapter(self, log_fn: Callable[[str], None] = print) -> bool:
+        before = self._extract_reader_payload(self.dump_ui())
+
+        self.reader_open_menu()
+        time.sleep(0.35)
+        overlay_xml = self.dump_ui()
+        if not self._reader_menu_visible(overlay_xml):
+            log_fn("  Fast next bỏ qua: không bật được menu reader")
+            return False
+
+        self.tap(*self._reader_nav_point("next"))
+        time.sleep(0.4)
+        self.reader_close_menu()
+        time.sleep(0.25)
+
+        after = self._extract_reader_payload(self.dump_ui())
+        before_idx = before.get("chapter_index") if before else None
+        after_idx = after.get("chapter_index") if after else None
+        if before_idx is not None and after_idx == before_idx + 1:
+            log_fn("  Sang chương tiếp theo (fast)")
+            return True
+        if before and after and before.get("title") != after.get("title"):
+            log_fn("  Sang chương tiếp theo (fast)")
+            return True
+
+        log_fn("  Fast next thất bại, sẽ fallback sang mở danh sách chương")
+        return False
+
+    def open_chapter_list(self, log_fn: Callable[[str], None] = print) -> bool:
+        xml = self.dump_ui()
+        texts = self.get_all_text(xml)
+        if any(text.startswith("Số chương") for text in texts):
+            return True
+
+        center = self._parse_bounds(xml, "D.S Chương", exact=False)
+        if center:
+            self.tap(*center)
+            time.sleep(0.25)
+            xml = self.dump_ui()
+            texts = self.get_all_text(xml)
+            if any(text.startswith("Số chương") for text in texts):
+                return True
+
+        payload = self._extract_reader_payload(xml)
+        if payload:
+            self.reader_open_menu()
+            time.sleep(0.4)
+            overlay_xml = self.dump_ui()
+            center = self._parse_bounds(overlay_xml, "D.S Chương", exact=False)
+            if center:
+                self.tap(*center)
+                time.sleep(0.35)
+            xml = self.dump_ui()
+            texts = self.get_all_text(xml)
+            if any(text.startswith("Số chương") for text in texts):
+                return True
+
+        log_fn("⚠ Không mở được danh sách chương")
+        return False
+
+    def _find_chapter_center(self, xml_str: str, chapter_index: int) -> Optional[tuple]:
+        try:
+            root = ET.fromstring(xml_str)
+        except ET.ParseError:
+            return None
+
+        target = f"Chương {chapter_index}"
+        for node in root.iter():
+            if node.get("clickable") != "true":
+                continue
+            text = _clean_ui_text(node.get("text", ""))
+            desc = _clean_ui_text(node.get("content-desc", ""))
+            haystack = text or desc
+            if target not in haystack:
+                continue
+            rect = _parse_bounds_rect(node.get("bounds", ""))
+            if rect:
+                return (rect[0] + rect[2]) // 2, (rect[1] + rect[3]) // 2
+        return None
 
     def get_all_text(self, xml_str: str) -> List[str]:
         if not xml_str:
@@ -199,15 +402,15 @@ class AdbController:
             root = ET.fromstring(xml_str)
             texts = []
             for node in root.iter():
-                t = node.get("text", "").strip()
+                t = _clean_ui_text(node.get("text", ""))
                 if t and len(t) > 1:
                     texts.append(t)
-                cd = node.get("content-desc", "").strip()
+                cd = _clean_ui_text(node.get("content-desc", ""))
                 if cd and len(cd) > 1 and cd not in texts:
                     texts.append(cd)
             return texts
         except ET.ParseError:
-            return re.findall(r'(?:text|content-desc)="([^"]{2,})"', xml_str)
+            return [_clean_ui_text(t) for t in re.findall(r'(?:text|content-desc)="([^"]{2,})"', xml_str)]
 
     def tap_text(self, text: str, xml_cache: str = "") -> bool:
         """Tap on text element. Pass xml_cache to avoid redundant dump."""
@@ -233,14 +436,14 @@ class AdbController:
             root = ET.fromstring(xml_str)
             tl = text.lower()
             for node in root.iter():
-                nt = node.get("text", "")
-                nc = node.get("content-desc", "")
+                nt = _clean_ui_text(node.get("text", ""))
+                nc = _clean_ui_text(node.get("content-desc", ""))
                 match = (nt == text or nc == text) if exact \
                         else (tl in nt.lower() or tl in nc.lower())
                 if match:
-                    m = re.findall(r"\d+", node.get("bounds", ""))
-                    if len(m) == 4:
-                        return (int(m[0])+int(m[2]))//2, (int(m[1])+int(m[3]))//2
+                    rect = _parse_bounds_rect(node.get("bounds", ""))
+                    if rect:
+                        return (rect[0] + rect[2]) // 2, (rect[1] + rect[3]) // 2
         except Exception:
             pass
         return None
@@ -248,7 +451,8 @@ class AdbController:
     def wait_for_text(self, text: str, timeout: float = 5.0) -> bool:
         t0 = time.time()
         while time.time() - t0 < timeout:
-            if text in self.dump_ui():
+            dump = self.dump_ui()
+            if any(text.lower() in item.lower() for item in self.get_all_text(dump)):
                 return True
             time.sleep(0.3)
         return False
@@ -267,13 +471,10 @@ class AdbController:
         time.sleep(1.5)
         dump = self.dump_ui()
 
-        # Use cached dump for tap
         for label in ["Tìm kiếm", "Search", "search", "tìm"]:
-            if label.lower() in dump.lower():
-                if self.tap_text(label, dump):
-                    time.sleep(0.5); break
-                if self.tap_text_partial(label, dump):
-                    time.sleep(0.5); break
+            if self.tap_text(label, dump) or self.tap_text_partial(label, dump):
+                time.sleep(0.5)
+                break
         else:
             self.tap(w - 80, 80); time.sleep(0.5)
 
@@ -283,7 +484,7 @@ class AdbController:
         time.sleep(1.5)
 
         dump2 = self.dump_ui()
-        if book_name[:8] in dump2 and self.tap_text(book_name, dump2):
+        if self.tap_text(book_name, dump2):
             time.sleep(NAV_DELAY); return True
         for t in self.get_all_text(dump2):
             if book_name[:6].lower() in t.lower() and self.tap_text(t, dump2):
@@ -293,25 +494,162 @@ class AdbController:
     def nav_to_chapter(self, chapter_index: int,
                        log_fn: Callable[[str], None] = print) -> bool:
         log_fn(f"Đi đến chương {chapter_index}...")
-        dump = self.dump_ui()
-        for label in ["Danh sách chương", "Chương",
-                       f"Chương {chapter_index}", "Đọc"]:
-            if self.tap_text(label, dump):
-                time.sleep(NAV_DELAY); break
+        if not self.open_chapter_list(log_fn):
+            return False
 
-        target = f"Chương {chapter_index}"
         for _ in range(10):
             dump = self.dump_ui()
-            if target in dump:
-                self.tap_text(target, dump)
-                time.sleep(NAV_DELAY)
+            center = self._find_chapter_center(dump, chapter_index)
+            if center:
+                self.tap(*center)
+                time.sleep(0.18)
                 return True
             self.swipe_up()
         return False
 
+    @staticmethod
+    def _book_key(title: str) -> str:
+        return "".join(ch for ch in title.casefold() if ch.isalnum())
+
+    def _parse_book_card(self, raw_text: str, bounds: str) -> Optional[Dict]:
+        lines = [re.sub(r"\s+", " ", _clean_ui_text(line)) for line in raw_text.splitlines()]
+        lines = [line for line in lines if line]
+        if len(lines) < 4:
+            return None
+
+        tags = []
+        while lines and lines[0].startswith("#"):
+            tags.append(lines.pop(0))
+
+        if len(lines) < 3:
+            return None
+
+        detail_lines = lines[:-2]
+        if not detail_lines:
+            return None
+
+        title = detail_lines[0]
+        author = detail_lines[1] if len(detail_lines) > 1 else ""
+        extra = detail_lines[2:] if len(detail_lines) > 2 else []
+
+        rating_text = lines[-2]
+        chapter_line = lines[-1]
+        chapter_digits = re.sub(r"\D", "", chapter_line)
+        rect = _parse_bounds_rect(bounds)
+        if not rect:
+            return None
+
+        rating = None
+        try:
+            rating = float(rating_text.replace(",", "."))
+        except ValueError:
+            pass
+
+        return {
+            "title": title,
+            "author": author,
+            "tags": tags,
+            "extra_lines": extra,
+            "rating": rating,
+            "rating_text": rating_text,
+            "chapter_count": int(chapter_digits) if chapter_digits else None,
+            "chapter_text": chapter_digits or chapter_line,
+            "raw_text": "\n".join(tags + detail_lines + [rating_text, chapter_line]),
+            "bounds": rect,
+            "center": ((rect[0] + rect[2]) // 2, (rect[1] + rect[3]) // 2),
+        }
+
+    def scan_visible_books(self, log_fn: Callable[[str], None] = print) -> List[Dict]:
+        xml = self.dump_ui()
+        if not xml:
+            return []
+
+        try:
+            root = ET.fromstring(xml)
+        except ET.ParseError:
+            log_fn("⚠ Không đọc được UI dump")
+            return []
+
+        books = []
+        seen = set()
+
+        for node in root.iter():
+            if node.get("class") != "android.view.View":
+                continue
+            if node.get("clickable") != "true":
+                continue
+
+            raw_text = _clean_ui_text(node.get("content-desc", ""))
+            if raw_text.count("\n") < 3:
+                continue
+
+            rect = _parse_bounds_rect(node.get("bounds", ""))
+            if not rect:
+                continue
+            if rect[1] < 120 or (rect[3] - rect[1]) < 100:
+                continue
+
+            book = self._parse_book_card(raw_text, node.get("bounds", ""))
+            if not book or len(book["title"]) < 4:
+                continue
+
+            key = self._book_key(book["title"])
+            if key in seen:
+                continue
+
+            seen.add(key)
+            books.append(book)
+
+        books.sort(key=lambda item: (item["bounds"][1], item["bounds"][0]))
+        if books:
+            log_fn(f"Quét thấy {len(books)} truyện trên màn hình")
+        return books
+
+    def scan_book_list(self, max_items: int = 40, max_scrolls: int = 6,
+                       log_fn: Callable[[str], None] = print) -> List[Dict]:
+        all_books: List[Dict] = []
+        seen = set()
+        stagnant_rounds = 0
+
+        for round_idx in range(max_scrolls):
+            current = self.scan_visible_books(log_fn=lambda *_: None)
+            new_count = 0
+            for book in current:
+                key = self._book_key(book["title"])
+                if key in seen:
+                    continue
+                seen.add(key)
+                all_books.append(book)
+                new_count += 1
+
+            log_fn(f"Quét lượt {round_idx + 1}: +{new_count} truyện")
+            if len(all_books) >= max_items:
+                break
+
+            if new_count == 0:
+                stagnant_rounds += 1
+                if stagnant_rounds >= 2:
+                    break
+            else:
+                stagnant_rounds = 0
+
+            self.swipe_up()
+
+        return all_books[:max_items]
+
     # ── Text Extraction (speed-optimized) ─────────────────────────────────
     def read_current_chapter(self,
                              log_fn: Callable[[str], None] = print) -> str:
+        xml = self.dump_ui()
+        if self._reader_menu_visible(xml):
+            self.reader_close_menu()
+            time.sleep(0.08)
+            xml = self.dump_ui()
+        payload = self._extract_reader_payload(xml)
+        if payload:
+            log_fn(f"Đọc nhanh {payload['title']}...")
+            return payload["text"]
+
         collected, seen, repeats = [], set(), 0
         log_fn("Đọc nội dung chương...")
 

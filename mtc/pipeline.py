@@ -48,12 +48,22 @@ def download_via_adb(
         if ch_file.exists() and ch_file.stat().st_size > 100:
             log_fn(f"  [ch{ch_idx}] Đã có, bỏ qua"); n_ok += 1; continue
 
-        log_fn(f"  [ch{ch_idx}] Điều hướng...")
-        if not adb.nav_to_chapter(ch_idx, log_fn):
-            log_fn(f"  [ch{ch_idx}] ⚠ Không tìm thấy chương"); n_fail += 1
-            if n_fail >= 5:
-                log_fn("Quá nhiều lỗi điều hướng. Dừng."); break
-            continue
+        if ch_idx == ch_start:
+            log_fn(f"  [ch{ch_idx}] Điều hướng tới chương đầu...")
+            if not adb.nav_to_chapter(ch_idx, log_fn):
+                log_fn(f"  [ch{ch_idx}] ⚠ Không tìm thấy chương"); n_fail += 1
+                if n_fail >= 5:
+                    log_fn("Quá nhiều lỗi điều hướng. Dừng."); break
+                continue
+        else:
+            log_fn(f"  [ch{ch_idx}] Chuyển chương nhanh...")
+            if not adb.reader_next_chapter(log_fn):
+                log_fn(f"  [ch{ch_idx}] ⚠ Chuyển chương nhanh lỗi, thử fallback")
+                if not adb.nav_to_chapter(ch_idx, log_fn):
+                    log_fn(f"  [ch{ch_idx}] ⚠ Không tìm thấy chương"); n_fail += 1
+                    if n_fail >= 5:
+                        log_fn("Quá nhiều lỗi điều hướng. Dừng."); break
+                    continue
 
         text = adb.read_current_chapter(log_fn)
         if not text or len(text) < 50:
@@ -65,8 +75,9 @@ def download_via_adb(
             )
             log_fn(f"  [ch{ch_idx}] ✔ ({len(text)} ký tự)"); n_ok += 1
 
-        adb.go_back(2)
-        time.sleep(0.3)
+        if ch_idx == ch_end:
+            adb.go_back(2)
+            time.sleep(0.2)
 
     merge_to_single_file(book_dir, book_name)
     log_fn(f"\nXong! ✔{n_ok}  ✖{n_fail}  →  {book_dir}")

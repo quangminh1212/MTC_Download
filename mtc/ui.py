@@ -1,5 +1,5 @@
 """ui.py – MTC Overlay (compact, always-on-top control panel)."""
-import os, threading, queue, time, logging
+import os, re, difflib, threading, queue, time, logging
 from pathlib import Path
 
 import tkinter as tk
@@ -114,6 +114,8 @@ class App(tk.Tk):
         _lbl(bf2, "Tên truyện:", FG2).pack(side="left")
         ttk.Button(bf2, text="📋 Danh sách", style="G.TButton",
                    command=self._show_book_list).pack(side="right")
+        ttk.Button(bf2, text="📱 Quét", style="G.TButton",
+               command=self._show_scanned_books).pack(side="right", padx=(0,4))
         ttk.Button(bf2, text="Khám phá", style="G.TButton",
                    command=self._goto_explore).pack(side="right", padx=(0,4))
         self._book_var = tk.StringVar()
@@ -338,6 +340,266 @@ class App(tk.Tk):
                 self._btn_start.config(state="normal"),
                 self._btn_stop.config(state="disabled"),
                 self._bar.config(value=100)))
+
+    @staticmethod
+    def _book_lookup_key(text: str) -> str:
+        return "".join(ch for ch in (text or "").casefold() if ch.isalnum())
+
+    def _http_session(self):
+        sess = requests.Session()
+        retry = Retry(total=2, backoff_factor=1,
+                      status_forcelist=[429,500,502,503,504])
+        sess.mount("https://", HTTPAdapter(max_retries=retry))
+        sess.headers.update({"User-Agent": USER_AGENT, "Accept": "application/json"})
+        return sess
+
+    def _get_author_name(self, sess, cache, user_id: int) -> str:
+        if not user_id:
+            return ""
+        if user_id in cache:
+            return cache[user_id]
+        try:
+            resp = sess.get(f"{API_BASE}/users/{user_id}", timeout=10)
+            data = (resp.json() or {}).get("data") or {}
+            cache[user_id] = (data.get("name") or "").strip()
+        except Exception:
+            cache[user_id] = ""
+        return cache[user_id]
+
+    def _enrich_scanned_book(self, sess, book, user_cache):
+        title = (book.get("title") or "").strip()
+        if not title:
+            return book
+
+        try:
+            resp = sess.get(
+                f"{API_BASE}/books",
+                params={"per_page": 10, "page": 1, "search": title},
+                timeout=15,
+            )
+            candidates = (resp.json() or {}).get("data") or []
+        except Exception:
+            return book
+
+        lookup_key = self._book_lookup_key(title)
+        best = None
+        best_score = 0.0
+        for candidate in candidates:
+            candidate_key = self._book_lookup_key(candidate.get("name", ""))
+            score = difflib.SequenceMatcher(None, lookup_key, candidate_key).ratio()
+            if lookup_key and lookup_key == candidate_key:
+                score += 0.25
+            if score > best_score:
+                best = candidate
+                best_score = score
+
+        if not best or best_score < 0.65:
+            return book
+
+        enriched = dict(book)
+        poster = best.get("poster") or {}
+        enriched.update({
+            "api_id": best.get("id"),
+            "chapter_count": best.get("latest_index") or best.get("chapter_count") or 0,
+            "status_name": best.get("status_name") or best.get("state") or "",
+            "bookmark_count": best.get("bookmark_count") or 0,
+            "synopsis": (best.get("synopsis") or "").strip(),
+            "note": (best.get("note") or "").strip(),
+            "poster_url": poster.get("150") or poster.get("300") or poster.get("default") or "",
+            "link": best.get("link") or "",
+        })
+
+        api_author = self._get_author_name(sess, user_cache, best.get("user_id"))
+        if api_author:
+            enriched["api_author"] = api_author
+            if not enriched.get("author"):
+                enriched["author"] = api_author
+
+        return enriched
+
+    def _select_book_from_item(self, book):
+        title = (book.get("title") or "").strip()
+        if not title:
+            return
+        self._book_var.set(title)
+        chapter_count = book.get("chapter_count")
+        if chapter_count:
+            self._ch_to.set(str(chapter_count))
+        self._lg(
+            f"Chọn truyện: {title}"
+            f"{' (' + str(chapter_count) + ' chương)' if chapter_count else ''}",
+            "acc",
+        )
+
+    def _show_scanned_books(self):
+        if not self._adb or not self._adb.device:
+            messagebox.showwarning("", "Kết nối BlueStacks trước")
+            return
+
+        win = tk.Toplevel(self)
+        win.title("Quét truyện từ màn hình – MTC")
+        win.geometry("1040x620")
+        win.configure(bg=BG)
+        win.attributes("-topmost", True)
+
+        top = tk.Frame(win, bg=BG)
+        top.pack(fill="x", padx=8, pady=6)
+        _lbl(top, "Quét trực tiếp danh sách truyện đang mở trên BlueStacks", FG2,
+             FONT_BOLD, bg=BG).pack(side="left")
+        count_lbl = _lbl(top, "", FG3, ("Segoe UI", 8), bg=BG)
+        count_lbl.pack(side="right")
+
+        tree_wrap = tk.Frame(win, bg=BG)
+        tree_wrap.pack(fill="both", expand=True, padx=8, pady=(0, 6))
+        cols = ("tags", "name", "author", "score", "ch", "status")
+        tree = ttk.Treeview(tree_wrap, columns=cols, show="headings", selectmode="browse")
+        tree.heading("tags", text="Tag")
+        tree.heading("name", text="Tên truyện")
+        tree.heading("author", text="Tác giả")
+        tree.heading("score", text="Điểm")
+        tree.heading("ch", text="Chương")
+        tree.heading("status", text="Trạng thái")
+        tree.column("tags", width=180, anchor="w", stretch=False)
+        tree.column("name", width=420, anchor="w")
+        tree.column("author", width=180, anchor="w")
+        tree.column("score", width=70, anchor="center", stretch=False)
+        tree.column("ch", width=70, anchor="center", stretch=False)
+        tree.column("status", width=110, anchor="center", stretch=False)
+        vsb = ttk.Scrollbar(tree_wrap, orient="vertical", command=tree.yview)
+        tree.configure(yscrollcommand=vsb.set)
+        vsb.pack(side="right", fill="y")
+        tree.pack(side="left", fill="both", expand=True)
+
+        info = tk.Frame(win, bg=BG2, highlightthickness=1, highlightbackground=BORDER)
+        info.pack(fill="x", padx=8, pady=(0, 6))
+        detail_var = tk.StringVar(value="Đang quét danh sách truyện...")
+        tk.Label(info, textvariable=detail_var, bg=BG2, fg=FG, justify="left",
+                 anchor="nw", font=FONT, wraplength=980).pack(fill="x", padx=10, pady=10)
+
+        actions = tk.Frame(win, bg=BG)
+        actions.pack(fill="x", padx=8, pady=(0, 8))
+
+        items = []
+
+        def _selected_book():
+            sel = tree.selection()
+            if not sel:
+                return None
+            try:
+                idx = int(sel[0].split(":", 1)[1])
+            except (IndexError, ValueError):
+                return None
+            if 0 <= idx < len(items):
+                return items[idx]
+            return None
+
+        def _format_detail(book):
+            tags = " ".join(book.get("tags") or []) or "—"
+            author = book.get("author") or book.get("api_author") or "—"
+            rating = book.get("rating_text") or "—"
+            chapter_count = book.get("chapter_count") or book.get("chapter_text") or "—"
+            lines = [
+                book.get("title") or "—",
+                f"Tag: {tags}",
+                f"Tác giả: {author}",
+                f"Điểm: {rating}   Chương: {chapter_count}",
+            ]
+            if book.get("chapter_count"):
+                lines.append(f"Số chương hiện có: {book['chapter_count']}")
+            if book.get("status_name"):
+                lines.append(f"Trạng thái: {book['status_name']}")
+            if book.get("bookmark_count"):
+                lines.append(f"Theo dõi: {book['bookmark_count']}")
+            synopsis = book.get("synopsis") or book.get("note") or ""
+            synopsis = re.sub(r"\s+", " ", synopsis).strip()
+            if synopsis:
+                if len(synopsis) > 420:
+                    synopsis = synopsis[:420].rsplit(" ", 1)[0] + "..."
+                lines.append("")
+                lines.append(synopsis)
+            return "\n".join(lines)
+
+        def _on_select(_=None):
+            book = _selected_book()
+            if book:
+                detail_var.set(_format_detail(book))
+
+        def _choose_selected():
+            book = _selected_book()
+            if not book:
+                return
+            self._select_book_from_item(book)
+            win.destroy()
+
+        ttk.Button(actions, text="Quét lại", style="G.TButton",
+                   command=lambda: _load_scan()).pack(side="left")
+        ttk.Button(actions, text="Dùng truyện đã chọn", style="TButton",
+                   command=_choose_selected).pack(side="left", padx=(6, 0))
+
+        def _fill(books):
+            nonlocal items
+            items = books
+            for row in tree.get_children():
+                tree.delete(row)
+            if not books:
+                count_lbl.config(text="0 truyện")
+                detail_var.set("Không quét được truyện nào từ màn hình hiện tại.")
+                return
+
+            for idx, book in enumerate(books):
+                tags = " ".join((book.get("tags") or [])[:2]) or "—"
+                tree.insert(
+                    "", "end", iid=f"scan:{idx}",
+                    values=(
+                        tags,
+                        book.get("title") or "",
+                        book.get("author") or book.get("api_author") or "",
+                        book.get("rating_text") or "",
+                        book.get("chapter_count") or "",
+                        book.get("status_name") or "",
+                    ),
+                    tags=(("odd" if idx % 2 else "even"),),
+                )
+            tree.tag_configure("odd", background=BG2)
+            tree.tag_configure("even", background=BG)
+            count_lbl.config(text=f"{len(books)} truyện")
+            first = tree.get_children()
+            if first:
+                tree.selection_set(first[0])
+                _on_select()
+
+        def _safe_ui(callback):
+            try:
+                win.after(0, callback)
+            except tk.TclError:
+                pass
+
+        def _scan_worker():
+            self._lg("Quét danh sách truyện trên màn hình...", "acc")
+            try:
+                books = self._adb.scan_book_list(log_fn=self._lg)
+                if _HAS_REQUESTS and books:
+                    sess = self._http_session()
+                    user_cache = {}
+                    books = [self._enrich_scanned_book(sess, book, user_cache) for book in books]
+                _safe_ui(lambda: _fill(books))
+            except Exception as e:
+                _safe_ui(lambda: (
+                    count_lbl.config(text="Lỗi quét"),
+                    detail_var.set(f"Không quét được danh sách truyện.\n\n{e}"),
+                ))
+
+        def _load_scan():
+            count_lbl.config(text="Đang quét...")
+            detail_var.set("Đang quét danh sách truyện và đối chiếu metadata...")
+            for row in tree.get_children():
+                tree.delete(row)
+            threading.Thread(target=_scan_worker, daemon=True).start()
+
+        tree.bind("<<TreeviewSelect>>", _on_select)
+        tree.bind("<Double-1>", lambda _: _choose_selected())
+
+        _load_scan()
 
     # ── Misc ──────────────────────────────────────────────────────────────
     def _browse(self):
