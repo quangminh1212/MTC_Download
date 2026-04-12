@@ -210,28 +210,89 @@ def make_session(token: Optional[str] = None) -> requests.Session:
 
 # ─── Auth ─────────────────────────────────────────────────────────────────────
 def login(email: str, password: str) -> Optional[Dict]:
-    """Login and return {'token': ..., 'key': ...} or None."""
+    """
+    Login to MTC API (android.lonoapp.net) with MTC app credentials.
+    Returns dict with: token, key (if found), raw_data (full response for key scanning).
+    """
     s = make_session()
     try:
         resp = s.post(f"{API_URL}/auth/login", json={
-            "email": email,
-            "password": password,
-            "device_name": "Windows_PC",
+            "email":       email,
+            "password":    password,
+            "device_name": "Android_Phone",  # mimic app
         }, timeout=TIMEOUT)
         data = resp.json()
         if data.get("success") and data.get("data"):
-            result = {"token": None, "key": None}
             d = data["data"]
-            result["token"] = d.get("token") or d.get("access_token") or d.get("api_token")
-            result["key"]   = d.get("key") or d.get("app_key") or d.get("decrypt_key")
-            log.info("Login successful!")
-            log.debug(f"Auth data keys: {list(d.keys())}")
+            result: Dict = {
+                "token":    None,
+                "key":      None,
+                "raw_data": d,  # full payload for key scanning in GUI
+            }
+            # Token
+            result["token"] = (d.get("token") or d.get("access_token")
+                                or d.get("api_token"))
+            # Explicit key fields
+            result["key"] = (d.get("key") or d.get("app_key")
+                             or d.get("decrypt_key") or d.get("cipher_key"))
+            # Auto-scan ALL string fields for base64 AES key (16/24/32 bytes)
+            if not result["key"]:
+                for k, v in d.items():
+                    if isinstance(v, str) and len(v) > 20:
+                        try:
+                            raw = base64.b64decode(
+                                v.replace("base64:", "") + "==")
+                            if len(raw) in (16, 24, 32):
+                                result["key"] = v
+                                log.info(f"Auto-detected key in field '{k}'")
+                                break
+                        except Exception:
+                            pass
+            log.info(f"Login OK  |  token={'yes' if result['token'] else 'no'}"
+                     f"  key={'yes' if result['key'] else 'no'}"
+                     f"  raw_fields={list(d.keys())}")
             return result
         else:
-            log.warning(f"Login failed: {data.get('message', 'Unknown')}")
+            log.warning(f"Login failed: {data.get('message', 'Unknown error')}")
+            log.debug(f"Full response: {data}")
     except Exception as e:
         log.error(f"Login error: {e}")
     return None
+
+
+def probe_chapter_content(session: requests.Session, chapter_id: int) -> Dict:
+    """
+    Probe a single chapter to detect content type after login.
+    Returns: {'encrypted': bool, 'plain': bool, 'length': int, 'sample': str}
+    """
+    try:
+        data = api_get(session, f"chapters/{chapter_id}")
+        ch   = data.get("data", {})
+        raw  = ch.get("content", "")
+        enc  = is_encrypted(raw)
+        return {
+            "encrypted": enc,
+            "plain":     not enc and len(raw) > 50,
+            "length":    len(raw),
+            "sample":    raw[:120],
+        }
+    except Exception as e:
+        return {"error": str(e)}
+
+
+def fetch_user_profile(session: requests.Session) -> Dict:
+    """Try to fetch user profile + any server-side key."""
+    for ep in ["auth/me", "auth/user", "user", "users/me",
+               "profile", "auth/profile"]:
+        try:
+            r = session.get(f"{API_URL}/{ep}", timeout=TIMEOUT)
+            if r.status_code == 200:
+                d = r.json().get("data", r.json())
+                if isinstance(d, dict):
+                    return d
+        except Exception:
+            pass
+    return {}
 
 # ─── API ─────────────────────────────────────────────────────────────────────
 def api_get(session: requests.Session, path: str, params: dict = None) -> Dict:
