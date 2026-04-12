@@ -1,8 +1,11 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-gui.py â€“ MTC Novel Downloader GUI
-Google Driveâ€“style light interface, uses android.lonoapp.net API (same as MTC.apk)
+gui.py – MTC Novel Downloader GUI
+Google Drive light style.
+Two modes:
+  • API  – download via android.lonoapp.net (may be encrypted)
+  • ADB  – run MTC.apk on device/emulator, extract text via UIAutomator (always readable)
 """
 import sys, io, os, json, threading, queue, time
 from pathlib import Path
@@ -14,193 +17,233 @@ if sys.platform == "win32":
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 
-# â”€â”€ Palette: Google Drive light â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-BG      = "#ffffff"
-BG2     = "#f8f9fa"
-BORDER  = "#dadce0"
-ACCENT  = "#1a73e8"
-ACCENT2 = "#1557b0"
-BG_HOV  = "#e8f0fe"
-FG      = "#202124"
-FG2     = "#5f6368"
-FG3     = "#80868b"
-GREEN   = "#137333"
-YELLOW  = "#f29900"
-RED     = "#c5221f"
+# ── Palette ──────────────────────────────────────────────────────────────────
+BG     = "#ffffff"
+BG2    = "#f8f9fa"
+BORDER = "#dadce0"
+BLUE   = "#1a73e8"
+BLUE2  = "#1557b0"
+BHOV   = "#e8f0fe"
+FG     = "#202124"
+FG2    = "#5f6368"
+FG3    = "#80868b"
+GREEN  = "#137333"
+YELLOW = "#f29900"
+RED    = "#c5221f"
+ORANGE = "#fa7b17"
 
-F       = ("Segoe UI", 9)
-FB      = ("Segoe UI", 9,  "bold")
-FH      = ("Segoe UI", 11, "bold")
-FM      = ("Consolas", 8)
+F  = ("Segoe UI", 9)
+FB = ("Segoe UI", 9,  "bold")
+FH = ("Segoe UI", 11, "bold")
+FM = ("Consolas", 8)
 
-# â”€â”€ Import core â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── Imports ───────────────────────────────────────────────────────────────────
 try:
     import downloader as dl
-    _ok = True
+    _dl = True
 except ImportError:
-    _ok = False
+    _dl = False
+
+try:
+    from auto import AdbController, download_via_adb, APK_PATH
+    _au = True
+except ImportError:
+    _au = False
 
 
-# â”€â”€ Helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-def _e(parent, var, w=14, show=""):
-    """Styled borderless Entry inside a highlight frame."""
+# ── Small helpers ─────────────────────────────────────────────────────────────
+def _ef(parent, var, w=14, show=""):
     fr = tk.Frame(parent, bg=BG, highlightthickness=1,
-                  highlightbackground=BORDER, highlightcolor=ACCENT)
-    ent = tk.Entry(fr, textvariable=var, bg=BG, fg=FG,
-                   font=F, bd=0, width=w, show=show, insertbackground=FG)
-    ent.pack(ipady=5, padx=6)
-    ent.bind("<FocusIn>",  lambda _: fr.config(highlightbackground=ACCENT))
-    ent.bind("<FocusOut>", lambda _: fr.config(highlightbackground=BORDER))
+                  highlightbackground=BORDER, highlightcolor=BLUE)
+    e = tk.Entry(fr, textvariable=var, bg=BG, fg=FG,
+                 font=F, bd=0, width=w, show=show, insertbackground=FG)
+    e.pack(ipady=5, padx=6)
+    e.bind("<FocusIn>",  lambda _: fr.config(highlightbackground=BLUE))
+    e.bind("<FocusOut>", lambda _: fr.config(highlightbackground=BORDER))
     return fr
+
+def _lbl(parent, text, color=FG2, font=F, **kw):
+    kw.setdefault("bg", BG)
+    return tk.Label(parent, text=text, fg=color, font=font, **kw)
 
 
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("MTC Novel Downloader")
-        self.geometry("1140x720")
-        self.minsize(920, 600)
+        self.geometry("1160x740")
+        self.minsize(960, 620)
         self.configure(bg=BG)
 
-        # â”€â”€ State â”€â”€
-        self._session   = dl.make_session() if _ok else None
+        # State
+        self._session   = dl.make_session() if _dl else None
         self._token     = None
         self._app_key   = None
         self._books     = []
         self._sel       = None
         self._page      = 1
-        self._last_page = 1
+        self._lpage     = 1
         self._q         = queue.Queue()
         self._thread    = None
         self._stop      = False
+
+        # ADB
+        self._adb_path  = AdbController.find_adb() if _au else None
+        self._adb       = None
+        self._adb_devs  = []
 
         self._style()
         self._ui()
         self._poll()
         self.after(400, self._do_list)
 
-    # â”€â”€ Style â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    # ── Style ─────────────────────────────────────────────────────────────────
     def _style(self):
         s = ttk.Style(self)
         s.theme_use("clam")
-        s.configure(".", background=BG, foreground=FG,
-                    font=F, borderwidth=0)
-        s.configure("TFrame",  background=BG)
-        s.configure("S.TFrame",background=BG2)
-        s.configure("TLabel",  background=BG, foreground=FG)
-        s.configure("D.TLabel",background=BG, foreground=FG2)
-        s.configure("S.TLabel",background=BG2,foreground=FG)
-        # Blue primary button
-        s.configure("TButton", background=ACCENT, foreground="#fff",
-                    font=FB, padding=(14,7), relief="flat", borderwidth=0)
+        s.configure(".", background=BG, foreground=FG, font=F, borderwidth=0)
+        s.configure("TFrame",   background=BG)
+        s.configure("S.TFrame", background=BG2)
+        s.configure("TLabel",   background=BG, foreground=FG)
+        s.configure("TButton",  background=BLUE, foreground="#fff",
+                    font=FB, padding=(14,7), relief="flat")
         s.map("TButton",
-              background=[("active",ACCENT2),("pressed",ACCENT2)],
+              background=[("active",BLUE2),("pressed",BLUE2)],
               relief=[("pressed","flat")])
-        # Ghost (text) button
-        s.configure("G.TButton", background=BG, foreground=ACCENT,
-                    font=FB, padding=(10,6), relief="flat", borderwidth=0)
+        s.configure("G.TButton", background=BG, foreground=BLUE,
+                    font=FB, padding=(10,6), relief="flat")
         s.map("G.TButton",
-              background=[("active",BG_HOV),("pressed",BG_HOV)],
-              foreground=[("active",ACCENT2)])
-        # Side ghost
+              background=[("active",BHOV),("pressed",BHOV)],
+              foreground=[("active",BLUE2)])
+        s.configure("O.TButton", background=ORANGE, foreground="#fff",
+                    font=FB, padding=(14,7), relief="flat")
+        s.map("O.TButton",
+              background=[("active","#e8630a"),("pressed","#e8630a")],
+              relief=[("pressed","flat")])
         s.configure("Sd.TButton", background=BG2, foreground=FG,
-                    font=F, padding=(6,4), relief="flat", borderwidth=0)
+                    font=F, padding=(6,4), relief="flat")
         s.map("Sd.TButton", background=[("active",BORDER)])
-        # Entry
         s.configure("TEntry", fieldbackground=BG, foreground=FG,
                     insertcolor=FG, borderwidth=1, relief="flat", padding=(6,5))
-        # Scrollbar
         s.configure("TScrollbar", background=BORDER, troughcolor=BG2,
                     borderwidth=0, arrowcolor=FG3, gripcount=0)
         s.map("TScrollbar", background=[("active",FG3)])
-        # Progressbar
         s.configure("Horizontal.TProgressbar",
-                    troughcolor=BORDER, background=ACCENT,
+                    troughcolor=BORDER, background=BLUE,
                     borderwidth=0, thickness=4)
-        # Treeview
         s.configure("Treeview", background=BG, foreground=FG,
                     fieldbackground=BG, rowheight=30, borderwidth=0, font=F)
         s.configure("Treeview.Heading", background=BG2, foreground=FG2,
                     font=FB, borderwidth=0, relief="flat", padding=(6,6))
         s.map("Treeview",
-              background=[("selected",BG_HOV)],
-              foreground=[("selected",ACCENT)])
+              background=[("selected",BHOV)],
+              foreground=[("selected",BLUE)])
 
-    # â”€â”€ UI â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    # ── UI ────────────────────────────────────────────────────────────────────
     def _ui(self):
         # Top bar
         tb = tk.Frame(self, bg=BG, height=52)
         tb.pack(fill="x")
         tb.pack_propagate(False)
         tk.Frame(tb, bg=BORDER, height=1).place(relx=0,rely=1,relwidth=1,anchor="sw")
-        tk.Label(tb, text="MTC Novel Downloader",
-                 bg=BG, fg=FG, font=("Segoe UI",12,"bold")).pack(side="left",padx=20,pady=10)
-        tk.Label(tb, text="â€” android.lonoapp.net", bg=BG, fg=FG2, font=F).pack(
-                 side="left",pady=10)
-        # Auth status chip
-        self._chip_var = tk.StringVar(value="ChÆ°a Ä‘Äƒng nháº­p")
-        self._chip = tk.Label(tb, textvariable=self._chip_var,
-                              bg=BG2, fg=FG2, font=FB,
-                              padx=12, pady=4, relief="flat")
-        self._chip.pack(side="right", padx=20, pady=10)
+        _lbl(tb, "MTC Novel Downloader", FG, ("Segoe UI",12,"bold")).pack(
+              side="left", padx=20, pady=10)
+        _lbl(tb, "android.lonoapp.net", FG2).pack(side="left", pady=10)
+        self._mode_chip = tk.Label(tb, text="", bg=BLUE, fg="#fff", font=FB,
+                                    padx=12, pady=3)
+        self._mode_chip.pack(side="right", padx=20, pady=10)
 
-        # Main split
+        # Notebook (tabs)
+        nb_frame = tk.Frame(self, bg=BORDER)
+        nb_frame.pack(fill="x")
+        self._tab_btns = {}
+        for name, label in [("api","API Mode"), ("adb","ADB / Tự động (APK thật)")]:
+            btn = tk.Button(nb_frame, text=label, bg=BG2, fg=FG2,
+                            font=FB, bd=0, padx=16, pady=8, cursor="hand2",
+                            activebackground=BHOV, activeforeground=BLUE,
+                            command=lambda n=name: self._switch_tab(n))
+            btn.pack(side="left")
+            self._tab_btns[name] = btn
+        tk.Frame(nb_frame, bg=BORDER, height=2).pack(fill="x", side="bottom")
+
+        # Main area
         main = tk.Frame(self, bg=BG)
         main.pack(fill="both", expand=True)
 
-        left = tk.Frame(main, bg=BG2, width=440)
+        # Left sidebar (book list) — shared across tabs
+        left = tk.Frame(main, bg=BG2, width=430)
         left.pack(side="left", fill="y")
         left.pack_propagate(False)
         tk.Frame(main, bg=BORDER, width=1).pack(side="left", fill="y")
 
-        right = tk.Frame(main, bg=BG)
-        right.pack(side="left", fill="both", expand=True)
+        # Right: API panel
+        self._api_panel = tk.Frame(main, bg=BG)
+        self._api_panel.place(relx=0, rely=0, relwidth=1, relheight=1)
 
-        self._left(left)
-        self._right(right)
+        # Right: ADB panel
+        self._adb_panel = tk.Frame(main, bg=BG)
+        self._adb_panel.place(relx=0, rely=0, relwidth=1, relheight=1)
+        self._adb_panel.lower()
 
-    # â”€â”€ Left sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-    def _left(self, p):
-        # Search
+        self._sidebar(left)
+        self._api_tab(self._api_panel)
+        self._adb_tab(self._adb_panel)
+        self._switch_tab("adb")  # default = ADB mode
+
+    def _switch_tab(self, name: str):
+        panels = {"api": self._api_panel, "adb": self._adb_panel}
+        labels = {"api": "API Mode", "adb": "APK / ADB Mode"}
+        colors = {"api": BLUE, "adb": ORANGE}
+        for n, btn in self._tab_btns.items():
+            if n == name:
+                btn.config(bg=BG, fg=BLUE if n=="api" else ORANGE,
+                           relief="flat")
+                tk.Frame(btn, bg=BLUE if n=="api" else ORANGE,
+                         height=2).place(relx=0,rely=1,relwidth=1,anchor="sw")
+            else:
+                btn.config(bg=BG2, fg=FG2, relief="flat")
+            panels[n].lower()
+        panels[name].lift()
+        self._mode_chip.config(text=labels[name],
+                                bg=colors[name])
+        self._cur_tab = name
+
+    # ── Sidebar (shared) ──────────────────────────────────────────────────────
+    def _sidebar(self, p):
         sr = tk.Frame(p, bg=BG2)
-        sr.pack(fill="x", padx=12, pady=(14,6))
-
+        sr.pack(fill="x", padx=12, pady=(12,6))
         sb = tk.Frame(sr, bg=BG, highlightthickness=1,
-                      highlightbackground=BORDER, highlightcolor=ACCENT)
+                      highlightbackground=BORDER, highlightcolor=BLUE)
         sb.pack(side="left", fill="x", expand=True)
-        tk.Label(sb, text="ðŸ”", bg=BG, fg=FG2, font=F).pack(side="left",padx=(8,0))
+        _lbl(sb, "🔍", FG2).pack(side="left", padx=(6,0))
         self._sq = tk.StringVar()
         se = tk.Entry(sb, textvariable=self._sq, bg=BG, fg=FG,
                       font=F, bd=0, insertbackground=FG)
         se.pack(side="left", fill="x", expand=True, ipady=6, padx=4)
         se.bind("<Return>", lambda _: self._search())
-        se.bind("<FocusIn>",  lambda _: sb.config(highlightbackground=ACCENT))
+        se.bind("<FocusIn>",  lambda _: sb.config(highlightbackground=BLUE))
         se.bind("<FocusOut>", lambda _: sb.config(highlightbackground=BORDER))
-        ttk.Button(sr, text="TÃ¬m", command=self._search, width=5).pack(
+        ttk.Button(sr, text="Tìm", command=self._search, width=5).pack(
                    side="left", padx=(6,0))
 
-        # Header row
         hr = tk.Frame(p, bg=BG2)
         hr.pack(fill="x", padx=12, pady=(2,0))
-        tk.Label(hr, text="DANH SÃCH", bg=BG2, fg=FG3,
-                 font=("Segoe UI",8,"bold")).pack(side="left")
-        self._stl = tk.Label(hr, text="", bg=BG2, fg=FG3,
-                              font=("Segoe UI",8))
+        _lbl(hr,"TRUYỆN",FG3,("Segoe UI",8,"bold"),bg=BG2).pack(side="left")
+        self._stl = _lbl(hr,"",FG3,("Segoe UI",8),bg=BG2)
         self._stl.pack(side="right")
 
-        # Tree
         tf = tk.Frame(p, bg=BG2)
         tf.pack(fill="both", expand=True)
         cols = ("id","name","ch")
         self._tree = ttk.Treeview(tf, columns=cols,
                                    show="headings", selectmode="browse")
-        self._tree.heading("id",   text="ID",    anchor="center")
-        self._tree.heading("name", text="TÃªn truyá»‡n")
-        self._tree.heading("ch",   text="Ch.",   anchor="center")
-        self._tree.column("id",   width=65, anchor="center", stretch=False)
-        self._tree.column("name", width=290, anchor="w")
-        self._tree.column("ch",   width=50,  anchor="center", stretch=False)
-        self._tree.tag_configure("o", background="#f8f9fa")
+        self._tree.heading("id",  text="ID",    anchor="center")
+        self._tree.heading("name",text="Tên truyện")
+        self._tree.heading("ch",  text="Ch.",   anchor="center")
+        self._tree.column("id",  width=62, anchor="center", stretch=False)
+        self._tree.column("name",width=295,anchor="w")
+        self._tree.column("ch",  width=46, anchor="center", stretch=False)
+        self._tree.tag_configure("o", background=BG2)
         self._tree.tag_configure("e", background=BG)
         vsb = ttk.Scrollbar(tf, orient="vertical", command=self._tree.yview)
         self._tree.configure(yscrollcommand=vsb.set)
@@ -208,134 +251,205 @@ class App(tk.Tk):
         self._tree.pack(side="left", fill="both", expand=True)
         self._tree.bind("<<TreeviewSelect>>", self._on_sel)
 
-        # Pagination
         pg = tk.Frame(p, bg=BG2)
         pg.pack(fill="x", padx=12, pady=8)
-        ttk.Button(pg, text="â€¹", style="Sd.TButton", width=3,
+        ttk.Button(pg,text="‹",style="Sd.TButton",width=3,
                    command=self._prev).pack(side="left")
-        self._pglbl = tk.Label(pg, text="â€”", bg=BG2, fg=FG2, font=F)
+        self._pglbl = _lbl(pg,"—",FG2,bg=BG2)
         self._pglbl.pack(side="left", padx=8)
-        ttk.Button(pg, text="â€º", style="Sd.TButton", width=3,
+        ttk.Button(pg,text="›",style="Sd.TButton",width=3,
                    command=self._next).pack(side="left")
 
-    # â”€â”€ Right panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-    def _right(self, p):
-        # â”€â”€ Login section â”€â”€
-        lf = tk.LabelFrame(p, text=" TÃ i khoáº£n MTC  (dÃ¹ng email/pass á»©ng dá»¥ng MTC) ",
+    # ── API tab ───────────────────────────────────────────────────────────────
+    def _api_tab(self, p):
+        # Login
+        lf = tk.LabelFrame(p, text=" Tài khoản MTC ",
                            bg=BG, fg=FG2, font=("Segoe UI",8,"bold"),
-                           bd=1, relief="groove", labelanchor="nw")
-        lf.pack(fill="x", padx=20, pady=(16,0))
-
+                           bd=1, relief="groove")
+        lf.pack(fill="x", padx=20, pady=(14,0))
         lr = tk.Frame(lf, bg=BG)
-        lr.pack(fill="x", padx=10, pady=10)
-
-        tk.Label(lr, text="Email:", bg=BG, fg=FG2, font=F).pack(side="left")
+        lr.pack(fill="x", padx=10, pady=8)
+        _lbl(lr,"Email:").pack(side="left")
         self._email = tk.StringVar()
-        _e(lr, self._email, 22).pack(side="left", padx=(4,12))
-
-        tk.Label(lr, text="Máº­t kháº©u:", bg=BG, fg=FG2, font=F).pack(side="left")
+        _ef(lr,self._email,22).pack(side="left",padx=(4,12))
+        _lbl(lr,"Mật khẩu:").pack(side="left")
         self._pwd = tk.StringVar()
-        _e(lr, self._pwd, 16, show="â€¢").pack(side="left", padx=(4,12))
-
-        ttk.Button(lr, text="ÄÄƒng nháº­p", command=self._login).pack(side="left")
-
-        self._auth_lbl = tk.Label(lr, text="", bg=BG, fg=FG3, font=F)
+        _ef(lr,self._pwd,16,show="•").pack(side="left",padx=(4,12))
+        ttk.Button(lr,text="Đăng nhập",command=self._login).pack(side="left")
+        self._auth_lbl = _lbl(lr,"")
         self._auth_lbl.pack(side="left", padx=10)
 
-        # Key row (shown after login if key found)
-        self._key_row = tk.Frame(lf, bg=BG)
-        self._key_row.pack(fill="x", padx=10, pady=(0,8))
-        tk.Label(self._key_row, text="APP_KEY phÃ¡t hiá»‡n:", bg=BG, fg=FG2,
-                 font=F).pack(side="left")
-        self._key_var = tk.StringVar()
-        _e(self._key_row, self._key_var, 40).pack(side="left", padx=4)
-        self._key_row.pack_forget()  # hidden initially
+        # Book info
+        tk.Frame(p, bg=BORDER, height=1).pack(fill="x", padx=20, pady=(10,0))
+        inf = tk.Frame(p, bg=BG)
+        inf.pack(fill="x", padx=20, pady=(10,0))
+        self._tn  = _lbl(inf,"← Chọn truyện từ danh sách",FG2,FH,
+                          wraplength=580,justify="left",anchor="w")
+        self._tn.pack(fill="x")
+        self._tm  = _lbl(inf,"",FG2,anchor="w")
+        self._tm.pack(fill="x",pady=(3,0))
+        self._tsy = _lbl(inf,"",FG2,wraplength=580,justify="left",anchor="nw")
+        self._tsy.pack(fill="x",pady=(4,0))
 
-        # â”€â”€ Book info â”€â”€
-        tk.Frame(p, bg=BORDER, height=1).pack(fill="x", padx=20, pady=(12,0))
-        info = tk.Frame(p, bg=BG)
-        info.pack(fill="x", padx=20, pady=(10,0))
-        self._t_name = tk.Label(info, text="â† Chá»n truyá»‡n tá»« danh sÃ¡ch",
-                                 bg=BG, fg=FG2, font=FH,
-                                 anchor="w", wraplength=580, justify="left")
-        self._t_name.pack(fill="x")
-        self._t_meta = tk.Label(info, text="", bg=BG, fg=FG2, font=F, anchor="w")
-        self._t_meta.pack(fill="x", pady=(3,0))
-        self._t_syn  = tk.Label(info, text="", bg=BG, fg=FG2, font=F,
-                                 anchor="nw", wraplength=580, justify="left")
-        self._t_syn.pack(fill="x", pady=(4,0))
-
-        # â”€â”€ Download controls â”€â”€
-        tk.Frame(p, bg=BORDER, height=1).pack(fill="x", padx=20, pady=(12,0))
+        # Controls
+        tk.Frame(p, bg=BORDER, height=1).pack(fill="x", padx=20, pady=(10,0))
         cf = tk.Frame(p, bg=BG)
         cf.pack(fill="x", padx=20, pady=(10,0))
-
-        lc = {"bg":BG, "fg":FG2, "font":F}
-        tk.Label(cf, text="Tá»« chÆ°Æ¡ng:", **lc).grid(row=0,column=0,sticky="w",pady=4)
-        self._fr = tk.StringVar(value="1")
-        _e(cf,self._fr,6).grid(row=0,column=1,sticky="w",padx=(4,16),pady=4)
-        tk.Label(cf,text="Äáº¿n chÆ°Æ¡ng:",**lc).grid(row=0,column=2,sticky="w",pady=4)
-        self._to = tk.StringVar(value="")
-        _e(cf,self._to,6).grid(row=0,column=3,sticky="w",padx=(4,0),pady=4)
-
-        tk.Label(cf,text="LÆ°u vÃ o:",**lc).grid(row=1,column=0,sticky="w",pady=4)
-        of = tk.Frame(cf, bg=BG)
+        lc = dict(bg=BG,fg=FG2,font=F)
+        tk.Label(cf,text="Từ chương:",**lc).grid(row=0,column=0,sticky="w",pady=4)
+        self._fr=tk.StringVar(value="1")
+        _ef(cf,self._fr,6).grid(row=0,column=1,sticky="w",padx=(4,16),pady=4)
+        tk.Label(cf,text="Đến chương:",**lc).grid(row=0,column=2,sticky="w",pady=4)
+        self._to=tk.StringVar()
+        _ef(cf,self._to,6).grid(row=0,column=3,sticky="w",padx=(4,0),pady=4)
+        tk.Label(cf,text="Lưu vào:",**lc).grid(row=1,column=0,sticky="w",pady=4)
+        of=tk.Frame(cf,bg=BG)
         of.grid(row=1,column=1,columnspan=3,sticky="ew",pady=4)
-        self._out = tk.StringVar(value=str(Path.cwd()/"downloads"))
-        _e(of,self._out,30).pack(side="left")
-        ttk.Button(of,text="Thay Ä‘á»•i",style="G.TButton",
+        self._out=tk.StringVar(value=str(Path.cwd()/"downloads"))
+        _ef(of,self._out,30).pack(side="left")
+        ttk.Button(of,text="...",style="G.TButton",width=3,
                    command=self._browse).pack(side="left",padx=(6,0))
-
         tk.Label(cf,text="Delay (s):",**lc).grid(row=2,column=0,sticky="w",pady=4)
-        self._delay = tk.StringVar(value="0.5")
-        _e(cf,self._delay,6).grid(row=2,column=1,sticky="w",padx=(4,0),pady=4)
-        cf.columnconfigure(3, weight=1)
+        self._delay=tk.StringVar(value="0.5")
+        _ef(cf,self._delay,6).grid(row=2,column=1,sticky="w",padx=(4,0),pady=4)
+        cf.columnconfigure(3,weight=1)
 
-        # â”€â”€ Progress â”€â”€
-        pf = tk.Frame(p, bg=BG)
-        pf.pack(fill="x", padx=20, pady=(8,4))
-        self._bar = ttk.Progressbar(pf, mode="determinate",
-                                    style="Horizontal.TProgressbar")
-        self._bar.pack(fill="x")
-        self._bar_lbl = tk.StringVar()
-        tk.Label(pf, textvariable=self._bar_lbl, bg=BG,
-                 fg=FG2, font=F).pack(anchor="w", pady=(2,0))
+        self._bar_api, self._barlbl_api = self._prog_row(p)
+        self._btn_api, self._stop_api   = self._btn_row(p, self._start_api, self._stop_dl)
+        self._mklog(p, "api")
 
-        # â”€â”€ Buttons â”€â”€
-        bf = tk.Frame(p, bg=BG)
-        bf.pack(fill="x", padx=20, pady=(4,8))
-        self._btn_dl = ttk.Button(bf, text="Táº£i xuá»‘ng", command=self._start)
-        self._btn_dl.pack(side="left")
-        self._btn_stop = ttk.Button(bf, text="Dá»«ng", style="G.TButton",
-                                     command=self._stopdl, state="disabled")
-        self._btn_stop.pack(side="left", padx=(8,0))
-        ttk.Button(bf,text="Má»Ÿ thÆ° má»¥c",style="G.TButton",
-                   command=self._open).pack(side="right")
+    # ── ADB tab ───────────────────────────────────────────────────────────────
+    def _adb_tab(self, p):
+        # Device section
+        df = tk.LabelFrame(p, text=" ADB Device / Android Emulator ",
+                           bg=BG, fg=FG2, font=("Segoe UI",8,"bold"),
+                           bd=1, relief="groove")
+        df.pack(fill="x", padx=20, pady=(14,0))
 
-        # â”€â”€ Log â”€â”€
-        tk.Frame(p, bg=BORDER, height=1).pack(fill="x", padx=20)
-        lh = tk.Frame(p, bg=BG)
-        lh.pack(fill="x", padx=20, pady=(8,4))
-        tk.Label(lh,text="Nháº­t kÃ½",bg=BG,fg=FG2,font=FB).pack(side="left")
-        ttk.Button(lh,text="XoÃ¡",style="G.TButton",
+        dr = tk.Frame(df, bg=BG)
+        dr.pack(fill="x", padx=10, pady=(8,4))
+        _lbl(dr,"ADB:").pack(side="left")
+        self._adb_path_var = tk.StringVar(value=self._adb_path or "adb")
+        _ef(dr,self._adb_path_var,28).pack(side="left",padx=(4,12))
+        ttk.Button(dr,text="Quét thiết bị",
+                   command=self._scan_devices).pack(side="left")
+        self._adb_status = _lbl(dr,"")
+        self._adb_status.pack(side="left",padx=10)
+
+        dr2 = tk.Frame(df, bg=BG)
+        dr2.pack(fill="x", padx=10, pady=(0,8))
+        _lbl(dr2,"Thiết bị:").pack(side="left")
+        self._dev_var = tk.StringVar()
+        self._dev_cb  = ttk.Combobox(dr2, textvariable=self._dev_var,
+                                      state="readonly", width=30, font=F)
+        self._dev_cb.pack(side="left",padx=(4,12))
+        ttk.Button(dr2,text="Cài APK",
+                   command=self._install_apk).pack(side="left")
+        self._apk_status = _lbl(dr2,"")
+        self._apk_status.pack(side="left",padx=8)
+
+        # ADB controls
+        tk.Frame(p, bg=BORDER, height=1).pack(fill="x", padx=20, pady=(8,0))
+        af = tk.Frame(p, bg=BG)
+        af.pack(fill="x", padx=20, pady=(10,0))
+        lc = dict(bg=BG,fg=FG2,font=F)
+
+        # Book info from list
+        self._adb_book_lbl = _lbl(p, "← Chọn truyện từ sidebar",
+                                   FG2, FH, wraplength=600,
+                                   justify="left", anchor="w")
+        self._adb_book_lbl.pack(fill="x", padx=20, pady=(8,0))
+
+        cf = tk.Frame(p, bg=BG)
+        cf.pack(fill="x", padx=20, pady=(8,0))
+        tk.Label(cf,text="Từ chương:",**lc).grid(row=0,column=0,sticky="w",pady=4)
+        self._adb_fr=tk.StringVar(value="1")
+        _ef(cf,self._adb_fr,6).grid(row=0,column=1,sticky="w",padx=(4,16),pady=4)
+        tk.Label(cf,text="Đến chương:",**lc).grid(row=0,column=2,sticky="w",pady=4)
+        self._adb_to=tk.StringVar()
+        _ef(cf,self._adb_to,6).grid(row=0,column=3,sticky="w",padx=(4,0),pady=4)
+        tk.Label(cf,text="Lưu vào:",**lc).grid(row=1,column=0,sticky="w",pady=4)
+        of2=tk.Frame(cf,bg=BG)
+        of2.grid(row=1,column=1,columnspan=3,sticky="ew",pady=4)
+        self._adb_out=tk.StringVar(value=str(Path.cwd()/"downloads"))
+        _ef(of2,self._adb_out,30).pack(side="left")
+        ttk.Button(of2,text="...",style="G.TButton",width=3,
+                   command=lambda: self._browse2(self._adb_out)).pack(side="left",padx=(6,0))
+        cf.columnconfigure(3,weight=1)
+
+        # Info box
+        info_f = tk.Frame(p, bg="#fff8e1", highlightthickness=1,
+                          highlightbackground="#fdd835")
+        info_f.pack(fill="x", padx=20, pady=(8,0))
+        tk.Label(info_f,
+                 text="ℹ️  Chế độ ADB chạy app MTC thật trên điện thoại/emulator.\n"
+                      "Yêu cầu: Bật USB Debugging, kết nối ADB hoặc dùng emulator (LDPlayer, BlueStacks, Android Studio).\n"
+                      "App sẽ tự điều hướng, đọc text hiển thị → lưu file TXT. Không cần APP_KEY.",
+                 bg="#fff8e1", fg="#5d4037", font=("Segoe UI",8),
+                 justify="left", anchor="w", wraplength=620).pack(padx=10,pady=8)
+
+        self._bar_adb, self._barlbl_adb = self._prog_row(p)
+        self._btn_adb, self._stop_adb   = self._btn_row(p, self._start_adb, self._stop_dl,
+                                                          primary_style="O.TButton",
+                                                          primary_text="▶  Bắt đầu tự động tải")
+        self._mklog(p, "adb")
+
+    # ── Shared widget factories ───────────────────────────────────────────────
+    def _prog_row(self, parent):
+        pf = tk.Frame(parent, bg=BG)
+        pf.pack(fill="x", padx=20, pady=(8,2))
+        bar = ttk.Progressbar(pf, mode="determinate",
+                               style="Horizontal.TProgressbar")
+        bar.pack(fill="x")
+        lv = tk.StringVar()
+        tk.Label(pf, textvariable=lv, bg=BG, fg=FG2, font=F).pack(
+                 anchor="w", pady=(2,0))
+        return bar, lv
+
+    def _btn_row(self, parent, start_cmd, stop_cmd,
+                 primary_style="TButton",
+                 primary_text="Tải xuống"):
+        bf = tk.Frame(parent, bg=BG)
+        bf.pack(fill="x", padx=20, pady=(4,6))
+        b1 = ttk.Button(bf, text=primary_text, style=primary_style,
+                         command=start_cmd)
+        b1.pack(side="left")
+        b2 = ttk.Button(bf, text="Dừng", style="G.TButton",
+                         command=stop_cmd, state="disabled")
+        b2.pack(side="left", padx=(8,0))
+        ttk.Button(bf, text="Mở thư mục", style="G.TButton",
+                   command=self._open_folder).pack(side="right")
+        return b1, b2
+
+    def _mklog(self, parent, tag: str):
+        tk.Frame(parent, bg=BORDER, height=1).pack(fill="x", padx=20)
+        lh = tk.Frame(parent, bg=BG)
+        lh.pack(fill="x", padx=20, pady=(6,3))
+        _lbl(lh, "Nhật ký", FG2, FB).pack(side="left")
+        ttk.Button(lh, text="Xoá", style="G.TButton",
                    command=self._clrlog).pack(side="right")
-        lf2 = tk.Frame(p, bg=BG)
-        lf2.pack(fill="both", expand=True, padx=20, pady=(0,16))
-        self._log = tk.Text(lf2, bg=BG2, fg=FG2, font=FM,
-                             bd=0, wrap="word", state="disabled",
-                             highlightthickness=1, highlightbackground=BORDER,
-                             selectbackground=BG_HOV)
-        lvsb = ttk.Scrollbar(lf2, orient="vertical", command=self._log.yview)
-        self._log.configure(yscrollcommand=lvsb.set)
-        lvsb.pack(side="right", fill="y")
-        self._log.pack(side="left", fill="both", expand=True)
-        self._log.tag_configure("ok",  foreground=GREEN)
-        self._log.tag_configure("w",   foreground=YELLOW)
-        self._log.tag_configure("err", foreground=RED)
-        self._log.tag_configure("acc", foreground=ACCENT)
-        self._log.tag_configure("dim", foreground=FG3)
+        lf = tk.Frame(parent, bg=BG)
+        lf.pack(fill="both", expand=True, padx=20, pady=(0,12))
+        txt = tk.Text(lf, bg=BG2, fg=FG2, font=FM, bd=0, wrap="word",
+                       state="disabled", highlightthickness=1,
+                       highlightbackground=BORDER, selectbackground=BHOV)
+        vsb = ttk.Scrollbar(lf, orient="vertical", command=txt.yview)
+        txt.configure(yscrollcommand=vsb.set)
+        vsb.pack(side="right", fill="y")
+        txt.pack(side="left", fill="both", expand=True)
+        txt.tag_configure("ok",  foreground=GREEN)
+        txt.tag_configure("w",   foreground=YELLOW)
+        txt.tag_configure("err", foreground=RED)
+        txt.tag_configure("acc", foreground=BLUE)
+        txt.tag_configure("dim", foreground=FG3)
+        txt.tag_configure("ora", foreground=ORANGE)
+        self._log_widget = txt  # both tabs share one log widget reference
+        if tag == "adb":
+            self._log_adb = txt
+        else:
+            self._log_api = txt
 
-    # â”€â”€ Log â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    # ── Log ───────────────────────────────────────────────────────────────────
     def _lg(self, msg, tag=""):
         self._q.put((msg, tag))
 
@@ -343,117 +457,36 @@ class App(tk.Tk):
         try:
             while True:
                 msg, tag = self._q.get_nowait()
-                self._log.config(state="normal")
-                self._log.insert("end", f"{time.strftime('%H:%M:%S')}  ", "dim")
-                self._log.insert("end", msg+"\n", tag or None)
-                self._log.see("end")
-                self._log.config(state="disabled")
+                # Write to both log widgets
+                for w in (getattr(self,"_log_api",None),
+                          getattr(self,"_log_adb",None)):
+                    if w is None: continue
+                    w.config(state="normal")
+                    w.insert("end", f"{time.strftime('%H:%M:%S')}  ", "dim")
+                    w.insert("end", msg+"\n", tag or None)
+                    w.see("end")
+                    w.config(state="disabled")
         except queue.Empty:
             pass
         self.after(80, self._poll)
 
     def _clrlog(self):
-        self._log.config(state="normal")
-        self._log.delete("1.0","end")
-        self._log.config(state="disabled")
+        for w in (getattr(self,"_log_api",None),
+                  getattr(self,"_log_adb",None)):
+            if w:
+                w.config(state="normal")
+                w.delete("1.0","end")
+                w.config(state="disabled")
 
-    # â”€â”€ Auth â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-    def _login(self):
-        if not _ok: return
-        em = self._email.get().strip()
-        pw = self._pwd.get().strip()
-        if not em or not pw:
-            messagebox.showwarning("Thiáº¿u thÃ´ng tin","Nháº­p email vÃ  máº­t kháº©u MTC")
-            return
-        self._auth_lbl.config(text="Äang Ä‘Äƒng nháº­p...", fg=YELLOW)
-        self.update_idletasks()
-
-        def _w():
-            auth = dl.login(em, pw)
-            if not auth:
-                self.after(0, lambda: (
-                    self._auth_lbl.config(text="âœ– ÄÄƒng nháº­p tháº¥t báº¡i", fg=RED),
-                    self._chip_var.set("ChÆ°a Ä‘Äƒng nháº­p"),
-                    self._chip.config(fg=FG2),
-                    self._lg("ÄÄƒng nháº­p tháº¥t báº¡i â€” kiá»ƒm tra email/máº­t kháº©u","err"),
-                ))
-                return
-
-            self._token   = auth.get("token")
-            self._app_key = auth.get("key")
-            self._session = dl.make_session(self._token)
-
-            # After login, probe chapter content type
-            chapters_probe = None
-            try:
-                # Get first chapter ID
-                chs = dl.get_all_chapters(self._session,
-                                           list(dl.list_books(self._session,1,5)
-                                                .get("data",[])[0:1])
-                                           and dl.list_books(self._session,1,5)
-                                           .get("data",[])[0]["id"] if True else 0)
-                if chs:
-                    chapters_probe = dl.probe_chapter_content(self._session, chs[0]["id"])
-            except Exception:
-                pass
-
-            # Fetch profile for any extra keys
-            profile = dl.fetch_user_profile(self._session)
-
-            key_found = bool(self._app_key)
-            if not key_found and profile:
-                import base64 as _b64
-                for v in profile.values():
-                    if isinstance(v, str) and len(v) > 20:
-                        try:
-                            raw = _b64.b64decode(v.replace("base64:","")+  "==")
-                            if len(raw) in (16,24,32):
-                                self._app_key = v
-                                key_found = True
-                                break
-                        except Exception:
-                            pass
-
-            def _done():
-                status = f"âœ” {em.split('@')[0]}"
-                self._chip_var.set(status)
-                self._chip.config(fg=GREEN)
-                self._auth_lbl.config(fg=GREEN,
-                    text=f"ÄÄƒng nháº­p thÃ nh cÃ´ng  |  token: {'âœ”' if self._token else 'âœ–'}")
-
-                self._lg(f"ÄÄƒng nháº­p thÃ nh cÃ´ng: {em}", "ok")
-                self._lg(f"  Token: {'âœ” cÃ³' if self._token else 'âœ– khÃ´ng'}")
-                self._lg(f"  APP_KEY: {'âœ” tÃ¬m tháº¥y!' if self._app_key else 'âœ– khÃ´ng cÃ³ trong response'}")
-                self._lg(f"  Profile fields: {list(profile.keys()) if profile else 'khÃ´ng láº¥y Ä‘Æ°á»£c'}")
-
-                if chapters_probe:
-                    enc = chapters_probe.get("encrypted", True)
-                    self._lg(f"  Content sau login: {'ÄÃƒ MÃƒ HOÃ' if enc else 'â­ PLAIN TEXT!'}", 
-                             "w" if enc else "ok")
-                    self._lg(f"  Sample: {chapters_probe.get('sample','')[:80]!r}", "dim")
-
-                if self._app_key:
-                    self._key_var.set(self._app_key)
-                    self._key_row.pack(fill="x", padx=10, pady=(0,8))
-                    self._lg(f"  KEY: {self._app_key[:40]}...", "ok")
-                else:
-                    self._lg("  Server KHÃ”NG tráº£ key trong response â€” ná»™i dung váº«n cáº§n giáº£i mÃ£", "w")
-                    self._lg("  â†’ Náº¿u báº¡n biáº¿t APP_KEY, nháº­p vÃ o Ã´ APP_KEY bÃªn dÆ°á»›i", "dim")
-
-            self.after(0, _done)
-
-        threading.Thread(target=_w, daemon=True).start()
-
-    # â”€â”€ Books â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    # ── Book list ─────────────────────────────────────────────────────────────
     def _do_list(self):
-        if not _ok: return
-        self._stl.config(text="Äang táº£i...")
+        if not _dl: return
+        self._stl.config(text="Đang tải...")
         threading.Thread(target=self._fetch, args=(None,), daemon=True).start()
 
     def _search(self):
         q = self._sq.get().strip() or None
         self._page = 1
-        self._stl.config(text="Äang táº£i...")
         threading.Thread(target=self._fetch, args=(q,), daemon=True).start()
 
     def _fetch(self, q):
@@ -462,49 +495,48 @@ class App(tk.Tk):
                 data = dl.search_books(self._session, q, self._page)
             else:
                 data = dl.list_books(self._session, self._page, 30)
-            books = data.get("data", [])
-            pagi  = data.get("pagination", {}) or {}
-            total = pagi.get("total", len(books))
-            lp    = pagi.get("last_page", 1)
-            self._books = books
-            self._last_page = lp
-            self.after(0, lambda: self._fill(books, total, lp))
+            books = data.get("data",[])
+            pagi  = data.get("pagination",{}) or {}
+            self._books  = books
+            self._lpage  = pagi.get("last_page",1)
+            total = pagi.get("total",len(books))
+            self.after(0, lambda: self._fill(books, total, self._lpage))
         except Exception as e:
-            self.after(0, lambda: (
-                self._lg(f"Lá»—i táº£i danh sÃ¡ch: {e}", "err"),
-                self._stl.config(text="Lá»—i"),
-            ))
+            self.after(0, lambda: self._lg(f"Lỗi danh sách: {e}","err"))
 
     def _fill(self, books, total, lp):
         for r in self._tree.get_children():
             self._tree.delete(r)
-        for i, b in enumerate(books):
-            ch = b.get("latest_index", b.get("chapter_count", 0))
-            self._tree.insert("","end", iid=str(b["id"]),
-                              values=(b["id"], b.get("name",""), ch),
+        for i,b in enumerate(books):
+            ch = b.get("latest_index",b.get("chapter_count",0))
+            self._tree.insert("","end",iid=str(b["id"]),
+                              values=(b["id"],b.get("name",""),ch),
                               tags=("o" if i%2 else "e",))
         self._pglbl.config(text=f"Trang {self._page}/{lp}")
-        self._stl.config(text=f"{total} truyá»‡n")
+        self._stl.config(text=f"{total} truyện")
 
     def _on_sel(self, _=None):
         sel = self._tree.selection()
         if not sel: return
         bid  = int(sel[0])
         book = next((b for b in self._books if b["id"]==bid), None)
-        if book:
-            self._sel = book
-            n  = book.get("name","")
-            ch = book.get("latest_index", book.get("chapter_count",0))
-            st = book.get("status_name","")
-            rt = book.get("review_score",0)
-            rv = book.get("review_count",0)
-            syn = (book.get("synopsis") or "")[:280]
-            self._t_name.config(text=n, fg=FG)
-            self._t_meta.config(
-                text=f"ID {book['id']}  Â·  {ch} chÆ°Æ¡ng  Â·  {st}  Â·  â˜… {rt}/5  ({rv} Ä‘Ã¡nh giÃ¡)")
-            self._t_syn.config(text=syn)
-            self._to.set(str(ch))
-            self._lg(f"Chá»n: {n}", "acc")
+        if not book: return
+        self._sel = book
+        n   = book.get("name","")
+        ch  = book.get("latest_index",book.get("chapter_count",0))
+        st  = book.get("status_name","")
+        rt  = book.get("review_score",0)
+        rv  = book.get("review_count",0)
+        syn = (book.get("synopsis") or "")[:250]
+        # Update API tab
+        self._tn.config(text=n, fg=FG)
+        self._tm.config(text=f"ID {book['id']}  ·  {ch} chương  ·  {st}  ·  ★{rt} ({rv})")
+        self._tsy.config(text=syn)
+        self._to.set(str(ch))
+        # Update ADB tab
+        self._adb_book_lbl.config(text=f"Truyện: {n}  [{ch} chương]", fg=FG)
+        self._adb_to.set(str(ch))
+        self._lg(f"Chọn: {n}", "acc")
 
     def _prev(self):
         if self._page > 1:
@@ -512,135 +544,225 @@ class App(tk.Tk):
             self._do_list()
 
     def _next(self):
-        if self._page < self._last_page:
+        if self._page < self._lpage:
             self._page += 1
             self._do_list()
 
-    # â”€â”€ Download â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-    def _start(self):
+    # ── API Login ─────────────────────────────────────────────────────────────
+    def _login(self):
+        if not _dl: return
+        em = self._email.get().strip()
+        pw = self._pwd.get().strip()
+        if not em or not pw:
+            messagebox.showwarning("","Nhập email và mật khẩu"); return
+        self._auth_lbl.config(text="Đang đăng nhập...", fg=YELLOW)
+        def _w():
+            auth = dl.login(em, pw)
+            if not auth:
+                self.after(0, lambda: self._auth_lbl.config(
+                    text="✖ Thất bại", fg=RED))
+                self._lg("Đăng nhập thất bại","err"); return
+            self._token   = auth.get("token")
+            self._app_key = auth.get("key")
+            self._session = dl.make_session(self._token)
+            self.after(0, lambda: self._auth_lbl.config(
+                text=f"✔ {em.split('@')[0]}" +
+                     ("  +KEY!" if self._app_key else ""), fg=GREEN))
+            self._lg(f"Đăng nhập OK: {em}  key={'✔' if self._app_key else '✖'}","ok")
+        threading.Thread(target=_w, daemon=True).start()
+
+    # ── ADB device ────────────────────────────────────────────────────────────
+    def _scan_devices(self):
+        adb_bin = self._adb_path_var.get().strip() or "adb"
+        self._adb = AdbController(adb_bin) if _au else None
+        if not self._adb:
+            messagebox.showerror("","auto.py not found"); return
+        self._adb.start_server()
+        devs = self._adb.devices()
+        self._adb_devs = devs
+        if devs:
+            serials = [d["serial"] for d in devs]
+            self._dev_cb["values"] = serials
+            self._dev_cb.set(serials[0])
+            self._adb.device = serials[0]
+            self._adb_status.config(
+                text=f"✔ {len(devs)} thiết bị", fg=GREEN)
+            self._lg(f"Tìm thấy {len(devs)} thiết bị: {serials}","ok")
+            # Check if MTC installed
+            pkg = self._adb.get_installed_package()
+            if pkg:
+                self._apk_status.config(text=f"✔ Đã cài: {pkg}", fg=GREEN)
+            else:
+                self._apk_status.config(text="Chưa cài APK", fg=YELLOW)
+        else:
+            self._adb_status.config(text="Không có thiết bị", fg=RED)
+            self._lg("Không tìm thấy thiết bị. Kết nối ADB hoặc bật emulator.","err")
+
+    def _install_apk(self):
+        if not self._adb:
+            messagebox.showwarning("","Quét thiết bị trước"); return
+        self._apk_status.config(text="Đang cài...", fg=YELLOW)
+        def _w():
+            ok = self._adb.install_apk(APK_PATH, self._lg)
+            self.after(0, lambda: self._apk_status.config(
+                text="✔ Đã cài" if ok else "✖ Thất bại",
+                fg=GREEN if ok else RED))
+        threading.Thread(target=_w, daemon=True).start()
+
+    # ── Download ──────────────────────────────────────────────────────────────
+    def _busy(self):
+        return bool(self._thread and self._thread.is_alive())
+
+    def _start_api(self):
         if not self._sel:
-            messagebox.showwarning("ChÆ°a chá»n","Chá»n truyá»‡n tá»« danh sÃ¡ch"); return
-        if self._thread and self._thread.is_alive():
-            messagebox.showinfo("Äang cháº¡y","CÃ³ tiáº¿n trÃ¬nh Ä‘ang cháº¡y"); return
+            messagebox.showwarning("","Chọn truyện từ danh sách"); return
+        if self._busy():
+            messagebox.showinfo("","Đang tải..."); return
         try:
             start = int(self._fr.get() or 1)
             end   = int(self._to.get()) if self._to.get().strip() else None
             delay = float(self._delay.get() or 0.5)
         except ValueError:
-            messagebox.showerror("Lá»—i","ChÆ°Æ¡ng/Delay pháº£i lÃ  sá»‘"); return
+            messagebox.showerror("","Số không hợp lệ"); return
 
-        # Use key from key field if set
-        app_key = self._key_var.get().strip() or self._app_key or None
-
-        self._btn_dl.config(state="disabled")
-        self._btn_stop.config(state="normal")
+        self._btn_api.config(state="disabled")
+        self._stop_api.config(state="normal")
         self._stop = False
-        self._bar["value"] = 0
-        self._bar_lbl.set("")
-
+        self._bar_api["value"] = 0
+        self._barlbl_api.set("")
         self._thread = threading.Thread(
-            target=self._worker,
-            args=(self._sel, Path(self._out.get()), start, end, delay, app_key),
+            target=self._api_worker,
+            args=(self._sel, Path(self._out.get()), start, end, delay,
+                  self._app_key),
             daemon=True)
         self._thread.start()
 
-    def _stopdl(self):
-        self._stop = True
-        self._lg("Äang dá»«ng...","w")
+    def _start_adb(self):
+        if not self._sel:
+            messagebox.showwarning("","Chọn truyện từ sidebar trước"); return
+        if not self._adb or not self._adb.device:
+            messagebox.showwarning("","Quét và chọn thiết bị ADB trước"); return
+        if self._busy():
+            messagebox.showinfo("","Đang chạy..."); return
+        try:
+            start = int(self._adb_fr.get() or 1)
+            end   = int(self._adb_to.get()) if self._adb_to.get().strip() else None
+        except ValueError:
+            messagebox.showerror("","Số không hợp lệ"); return
 
-    def _worker(self, book, out_dir, start, end, delay, app_key):
+        self._btn_adb.config(state="disabled")
+        self._stop_adb.config(state="normal")
+        self._stop = False
+        self._bar_adb["value"] = 0
+        self._barlbl_adb.set("")
+
+        book_name = self._sel.get("name","")
+        self._thread = threading.Thread(
+            target=self._adb_worker,
+            args=(book_name, Path(self._adb_out.get()), start, end),
+            daemon=True)
+        self._thread.start()
+
+    def _stop_dl(self):
+        self._stop = True
+        self._lg("Đang dừng...","w")
+
+    def _api_worker(self, book, out_dir, start, end, delay, app_key):
         name    = book["name"]
         book_id = book["id"]
-        self._lg(f"Báº¯t Ä‘áº§u táº£i: Â«{name}Â»", "acc")
-        if app_key:
-            self._lg(f"Giáº£i mÃ£: âœ” APP_KEY={app_key[:30]}...", "ok")
-        else:
-            self._lg("Giáº£i mÃ£: KhÃ´ng cÃ³ APP_KEY â€” ghi placeholder náº¿u content mÃ£ hoÃ¡", "w")
+        self._lg(f"Bắt đầu tải (API): «{name}»","acc")
         try:
             out_dir.mkdir(parents=True, exist_ok=True)
-            bdir  = out_dir / dl.safe_name(name)
+            bdir = out_dir / dl.safe_name(name)
             bdir.mkdir(parents=True, exist_ok=True)
-            pf    = bdir / ".progress.json"
-
+            pf   = bdir / ".progress.json"
             done = set()
             if pf.exists():
-                try:
-                    done = set(json.loads(pf.read_text("utf-8")).get("done",[]))
-                    self._lg(f"Resume: {len(done)} chÆ°Æ¡ng Ä‘Ã£ cÃ³")
-                except Exception:
-                    pass
+                try: done = set(json.loads(pf.read_text("utf-8")).get("done",[]))
+                except: pass
 
-            self._lg("Láº¥y danh sÃ¡ch chÆ°Æ¡ng...")
             chs = dl.get_all_chapters(self._session, book_id)
-            self._lg(f"Tá»•ng {len(chs)} chÆ°Æ¡ng")
-
+            self._lg(f"Tổng {len(chs)} chương")
             if end is None:
-                end = chs[-1].get("index", len(chs)) if chs else 1
-
+                end = chs[-1].get("index",len(chs)) if chs else 1
             to_dl = [c for c in chs
                      if start <= c.get("index",0) <= end
                      and c["id"] not in done
                      and not c.get("is_locked")]
-            n = len(to_dl)
-            self._lg(f"Sáº½ táº£i {n} chÆ°Æ¡ng (ch.{start}â€“{end})")
-
+            n  = len(to_dl)
             nok = nenc = nfail = 0
             for i, ch in enumerate(to_dl, 1):
-                if self._stop:
-                    self._lg("Dá»«ng bá»Ÿi ngÆ°á»i dÃ¹ng","w"); break
-                nm  = ch.get("name", f"ChÆ°Æ¡ng {ch.get('index',i)}")
-                idx = ch.get("index", i)
+                if self._stop: self._lg("Dừng","w"); break
+                nm  = ch.get("name",f"Chương {ch.get('index',i)}")
+                idx = ch.get("index",i)
                 pct = int(i/n*100)
                 self.after(0, lambda p=pct, m=f"[{i}/{n}]  {nm}":
-                           (self._bar.config(value=p), self._bar_lbl.set(m)))
-
-                ch_data = dl.get_chapter(self._session, ch["id"], delay)
-                if not ch_data:
-                    self._lg(f"  âœ– {nm}","err"); nfail+=1; continue
-
-                raw  = ch_data.get("content","")
-                text = dl.process_content(raw, app_key)
-
-                cf = bdir / f"{idx:06d}_{dl.safe_name(nm)}.txt"
-                dl.write_chapter_file(cf, ch_data, text)
+                           (self._bar_api.config(value=p),
+                            self._barlbl_api.set(m)))
+                cd = dl.get_chapter(self._session, ch["id"], delay)
+                if not cd: nfail+=1; self._lg(f"  ✖ {nm}","err"); continue
+                text = dl.process_content(cd.get("content",""), app_key)
+                cf   = bdir / f"{idx:06d}_{dl.safe_name(nm)}.txt"
+                dl.write_chapter_file(cf, cd, text)
                 done.add(ch["id"])
-                pf.write_text(json.dumps({"done":list(done)},ensure_ascii=False),
-                              encoding="utf-8")
-
-                if text:
-                    nok+=1; self._lg(f"  âœ” {nm}","ok")
-                else:
-                    nenc+=1; self._lg(f"  âš  {nm} (mÃ£ hoÃ¡)","w")
-
+                pf.write_text(json.dumps({"done":list(done)},ensure_ascii=False),"utf-8")
+                if text: nok+=1; self._lg(f"  ✔ {nm}","ok")
+                else:    nenc+=1; self._lg(f"  ⚠ {nm} (mã hoá)","w")
             dl.merge_to_single_file(bdir, name)
-            self._lg("â”€"*40,"dim")
-            self._lg(f"Xong!  âœ”{nok}  âš {nenc}(mÃ£ hoÃ¡)  âœ–{nfail}(lá»—i)",
+            self._lg(f"Xong!  ✔{nok}  ⚠{nenc}  ✖{nfail}",
                      "ok" if nenc==0 else "w")
-            self._lg(f"ThÆ° má»¥c: {bdir}")
         except Exception as e:
-            self._lg(f"Lá»—i: {e}","err")
+            self._lg(f"Lỗi: {e}","err")
         finally:
-            self.after(0, self._done)
+            self.after(0, lambda: (
+                self._btn_api.config(state="normal"),
+                self._stop_api.config(state="disabled"),
+                self._bar_api.config(value=100)))
 
-    def _done(self):
-        self._btn_dl.config(state="normal")
-        self._btn_stop.config(state="disabled")
-        self._bar["value"] = 100
+    def _adb_worker(self, book_name, out_dir, start, end):
+        self._lg(f"Bắt đầu ADB: «{book_name}»","ora")
+        self._lg("  → App sẽ tự chạy trên thiết bị và đọc text màn hình")
+        try:
+            result = download_via_adb(
+                adb        = self._adb,
+                book_name  = book_name,
+                ch_start   = start,
+                ch_end     = end,
+                output_dir = out_dir,
+                log        = lambda m: self._lg(m),
+                stop_flag  = lambda: self._stop,
+            )
+            if result.get("success"):
+                self._lg(f"Hoàn thành!  ✔{result['ok']}  ✖{result['fail']}", "ok")
+                self._lg(f"Lưu tại: {result['output']}")
+            else:
+                self._lg(f"Thất bại: {result.get('reason','')}","err")
+        except Exception as e:
+            self._lg(f"Lỗi ADB: {e}","err")
+        finally:
+            self.after(0, lambda: (
+                self._btn_adb.config(state="normal"),
+                self._stop_adb.config(state="disabled"),
+                self._bar_adb.config(value=100)))
 
-    # â”€â”€ Misc â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    # ── Misc ──────────────────────────────────────────────────────────────────
     def _browse(self):
-        d = filedialog.askdirectory(title="Chá»n thÆ° má»¥c lÆ°u")
+        d = filedialog.askdirectory()
         if d: self._out.set(d)
 
-    def _open(self):
-        folder = Path(self._out.get())
+    def _browse2(self, var):
+        d = filedialog.askdirectory()
+        if d: var.set(d)
+
+    def _open_folder(self):
+        tab = getattr(self, "_cur_tab", "adb")
+        out = Path(self._adb_out.get() if tab=="adb" else self._out.get())
         if self._sel:
-            sub = folder / dl.safe_name(self._sel["name"])
-            if sub.exists(): folder = sub
-        folder.mkdir(parents=True, exist_ok=True)
-        os.startfile(str(folder))
+            sub = out / dl.safe_name(self._sel["name"])
+            if sub.exists(): out = sub
+        out.mkdir(parents=True, exist_ok=True)
+        os.startfile(str(out))
 
 
 if __name__ == "__main__":
     App().mainloop()
-
