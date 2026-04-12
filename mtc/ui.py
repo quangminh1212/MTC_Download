@@ -94,8 +94,9 @@ class App(tk.Tk):
         self._adb_lbl.pack(side="left", padx=4)
         ttk.Button(af, text="Quét", style="G.TButton",
                    command=self._scan_devices).pack(side="right")
-        ttk.Button(af, text="Cài APK", style="G.TButton",
-                   command=self._install_apk).pack(side="right", padx=(0,4))
+        self._btn_apk = ttk.Button(af, text="Cài APK", style="G.TButton",
+                                    command=self._install_apk)
+        self._btn_apk.pack(side="right", padx=(0,4))
 
         tk.Frame(body, bg=BORDER, height=1).pack(fill="x", pady=4)
 
@@ -235,8 +236,10 @@ class App(tk.Tk):
         self._lg(f"Kết nối OK: {serial}", "ok")
         pkg = self._adb.get_installed_package()
         if pkg:
+            self._btn_apk.config(text="✔ APK")
             self._lg(f"APK: {pkg}", "ok")
         else:
+            self._btn_apk.config(text="Cài APK")
             self._lg("MTC chưa cài. Bấm 'Cài APK'.", "w")
 
     def _on_fail(self):
@@ -256,8 +259,11 @@ class App(tk.Tk):
         self._lg("Cài APK...", "ora")
         def _w():
             ok = self._adb.install_apk(APK_PATH, self._lg)
-            tag = "ok" if ok else "err"
-            self._lg("✔ Đã cài" if ok else "✖ Lỗi cài APK", tag)
+            if ok:
+                self.after(0, lambda: self._btn_apk.config(text="✔ APK"))
+                self._lg("✔ Đã cài", "ok")
+            else:
+                self._lg("✖ Lỗi cài APK", "err")
         threading.Thread(target=_w, daemon=True).start()
 
     # ── Download ──────────────────────────────────────────────────────────
