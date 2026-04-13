@@ -186,3 +186,16 @@ test_output/
 # Local Frida server binary downloaded on demand
 frida-server
 frida-server.xz
+
+# Root-level runtime/debug artifacts
+/*.png
+/ui_dump.xml
+/_ui.xml
+/api_batch.log
+/api_batch_state.json
+/export_state.json
+/search_output.txt
+/logcat_recent.txt
+/mitm_capture.bin
+/pulled_*.txt
+

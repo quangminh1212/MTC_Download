@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""download_all.py – Batch download ALL novels from MTC library via ADB.
+"""download_all.py – Batch download ALL novels from MTC library.
 
 Usage:
-    python download_all.py                  # Download all books
+    python download_all.py                  # Queue in-app downloads for all books
+    python download_all.py --mode hybrid    # Export chapters via API + ADB fallback
     python download_all.py --list           # Just list books in library
     python download_all.py --book "Title"   # Download specific book
     python download_all.py --skip-existing  # Skip books that already have files
@@ -37,14 +38,73 @@ def count_existing_chapters(book_dir: Path) -> int:
     return count
 
 
+def queue_book_download_in_app(
+    adb: AdbController,
+    title: str,
+    total_chapters: int,
+) -> dict:
+    """Use the app's own `Tải truyện` popup to queue one book for download."""
+    log("  📱 Dùng popup Tải truyện trong app...")
+
+    book_info = adb.open_library_book(title, log_fn=lambda msg: log(f"    {msg}"))
+    if not book_info:
+        return {
+            "success": False,
+            "queued_in_app": False,
+            "reason": "Không mở được truyện từ Tủ Truyện",
+        }
+
+    target_total = total_chapters or book_info.get("read_total") or 0
+    if target_total <= 0:
+        adb.return_to_library(log_fn=lambda msg: log(f"    {msg}"))
+        return {
+            "success": False,
+            "queued_in_app": False,
+            "reason": "Không xác định được tổng chương để xếp tải",
+        }
+
+    if not adb.open_current_book_reader(log_fn=lambda msg: log(f"    {msg}")):
+        adb.return_to_library(log_fn=lambda msg: log(f"    {msg}"))
+        return {
+            "success": False,
+            "queued_in_app": False,
+            "reason": "Không vào được reader để mở popup tải",
+        }
+
+    queued = adb.queue_current_book_full_download(
+        ch_start=1,
+        ch_end=target_total,
+        log_fn=lambda msg: log(f"    {msg}"),
+    )
+    adb.return_to_library(log_fn=lambda msg: log(f"    {msg}"))
+
+    if not queued:
+        return {
+            "success": False,
+            "queued_in_app": False,
+            "reason": f"Không xếp được lệnh tải ch1-{target_total}",
+        }
+
+    return {
+        "success": True,
+        "queued_in_app": True,
+        "range_end": target_total,
+        "reason": "",
+    }
+
+
 def download_one_book(
     adb: AdbController,
     title: str,
     total_chapters: int,
     skip_existing: bool = False,
+    mode: str = "app",
 ) -> dict:
-    """Download a single book, trying API first then ADB fallback."""
+    """Process a single book using the selected strategy."""
     from mtc.utils import safe_name
+
+    if mode == "app":
+        return queue_book_download_in_app(adb=adb, title=title, total_chapters=total_chapters)
 
     book_dir = OUTPUT_DIR / safe_name(title)
     existing = count_existing_chapters(book_dir) if book_dir.exists() else 0
@@ -57,7 +117,7 @@ def download_one_book(
         log(f"  📂 Đã có {existing}/{total_chapters} chương, sẽ tải bổ sung")
 
     # Try API first (faster, more reliable)
-    if _HAS_API_DEPS:
+    if mode == "hybrid" and _HAS_API_DEPS:
         try:
             log(f"  ⚡ Thử tải qua API...")
             api_result = download_via_api(
@@ -73,7 +133,7 @@ def download_one_book(
         except Exception as e:
             log(f"  ⚠ API lỗi: {e}")
 
-    # ADB fallback: need to open book in library, then navigate + read
+    # ADB export path: need to open book in library, then navigate + read
     log(f"  📱 Tải qua ADB...")
 
     # First, open the book from library
@@ -97,12 +157,18 @@ def download_one_book(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Download novels from MTC app via ADB")
+    parser = argparse.ArgumentParser(description="Download novels from MTC app")
     parser.add_argument("--list", action="store_true", help="Just list books in library")
     parser.add_argument("--book", type=str, help="Download specific book by title (partial match)")
     parser.add_argument("--skip-existing", action="store_true", help="Skip books already fully downloaded")
     parser.add_argument("--max-books", type=int, default=200, help="Max books to process")
     parser.add_argument("--device", type=str, default="127.0.0.1:5555", help="ADB device")
+    parser.add_argument(
+        "--mode",
+        choices=["app", "hybrid", "adb"],
+        default="app",
+        help="app = dùng popup Tải truyện trong app; hybrid = API + ADB export; adb = chỉ ADB export",
+    )
     args = parser.parse_args()
 
     adb_path = AdbController.find_adb()
@@ -122,6 +188,9 @@ def main():
 
     log(f"✅ ADB: {adb_path}")
     log(f"✅ Package: {pkg}")
+
+    if args.mode == "app" and args.skip_existing:
+        log("ℹ --skip-existing chỉ áp dụng cho mode export; mode app sẽ để app tự quyết định chương đã tải hay chưa")
 
     # Enable accessibility for Flutter
     adb.enable_accessibility(log_fn=lambda msg: log(f"  {msg}"))
@@ -158,7 +227,10 @@ def main():
             return 1
 
     log(f"\n{'='*70}")
-    log(f"🚀 BẮT ĐẦU TẢI: {len(targets)} truyện")
+    if args.mode == "app":
+        log(f"🚀 BẮT ĐẦU XẾP TẢI TRONG APP: {len(targets)} truyện")
+    else:
+        log(f"🚀 BẮT ĐẦU TẢI EXPORT: {len(targets)} truyện")
     log(f"{'='*70}\n")
 
     results = []
@@ -173,11 +245,13 @@ def main():
             title=title,
             total_chapters=total,
             skip_existing=args.skip_existing,
+            mode=args.mode,
         )
 
         ok = result.get("ok", 0)
         fail = result.get("fail", 0)
         skipped = result.get("skipped", False)
+        queued_in_app = result.get("queued_in_app", False)
 
         results.append({
             "title": title,
@@ -186,10 +260,16 @@ def main():
             "fail": fail,
             "success": result.get("success", False),
             "skipped": skipped,
+            "queued_in_app": queued_in_app,
+            "range_end": result.get("range_end", total),
         })
 
         if skipped:
             log(f"  ⏭ Đã bỏ qua (đủ chương)")
+        elif args.mode == "app" and result.get("success"):
+            log(f"  ✅ Đã gửi lệnh tải trong app: ch1-{result.get('range_end', total)}")
+        elif args.mode == "app":
+            log(f"  ⚠ Không xếp tải được: {result.get('reason', '?')}")
         elif result.get("success"):
             log(f"  ✅ Thành công: {ok}/{total} chương")
         else:
@@ -206,7 +286,14 @@ def main():
 
     for r in results:
         status = "⏭" if r["skipped"] else ("✅" if r["success"] else "❌")
-        print(f"  {status} {r['title']}: {r['ok']}/{r['total']} chương")
+        if args.mode == "app":
+            print(f"  {status} {r['title']}: ch1-{r['range_end']}")
+        else:
+            print(f"  {status} {r['title']}: {r['ok']}/{r['total']} chương")
+
+    if args.mode == "app":
+        log(f"\nTổng: {total_success}/{len(results)} truyện đã xếp tải trong app, {len(results) - total_success} truyện lỗi")
+        return 0 if total_success == len(results) else 1
 
     log(f"\nTổng: {total_success}/{len(results)} truyện OK, {total_ok} chương tải được, {total_fail} lỗi, {total_skipped} bỏ qua")
 
