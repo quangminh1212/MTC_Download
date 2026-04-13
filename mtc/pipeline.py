@@ -441,10 +441,18 @@ def download_book(
 
     if not adb or not adb.device:
         if verify_result and not verify_result.get("success"):
-            return {"success": False, "reason": f"{_format_verify_reason(verify_result)}. Không có ADB để fallback"}
+            return {
+                "success": False,
+                "reason": f"{_format_verify_reason(verify_result)}. Không có ADB để fallback",
+                **verify_result,
+            }
         api_reason = result.get("reason") if 'result' in locals() and isinstance(result, dict) else None
         if api_reason:
-            return {"success": False, "reason": f"{api_reason}. Không có ADB để fallback"}
+            return {
+                "success": False,
+                "reason": f"{api_reason}. Không có ADB để fallback",
+                **result,
+            }
         return {"success": False, "reason": "Không có ADB để fallback và API không tải được"}
 
     pending_indices = sorted(set(
@@ -479,6 +487,13 @@ def download_book(
     if not verify_result.get("success"):
         adb_result["success"] = False
         adb_result["reason"] = _format_verify_reason(verify_result)
+    adb_result.update({
+        "missing_files": verify_result.get("missing_files", []),
+        "short_files": verify_result.get("short_files", []),
+        "locked_missing": verify_result.get("locked_missing", []),
+        "locked_short": verify_result.get("locked_short", []),
+        "word_count_mismatch": verify_result.get("word_count_mismatch", []),
+    })
     return adb_result
 
 

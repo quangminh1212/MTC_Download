@@ -342,8 +342,10 @@ class App(tk.Tk):
             )
             if result.get("success"):
                 self._lg(f"Xong! ✔{result['ok']}  ✖{result['fail']}", "ok")
+                self._log_verify_result(result)
             else:
                 self._lg(f"Lỗi: {result.get('reason','')}", "err")
+                self._log_verify_result(result)
         except Exception as e:
             self._lg(f"Lỗi: {e}", "err")
         finally:
@@ -361,6 +363,44 @@ class App(tk.Tk):
         if self._book_lookup_key(current) != self._book_lookup_key(self._selected_book_title):
             self._selected_book_id = None
             self._selected_book_title = ""
+
+    def _format_chapter_ranges(self, items, limit=12):
+        nums = sorted({int(item) for item in (items or []) if isinstance(item, int) or str(item).isdigit()})
+        if not nums:
+            return ""
+        ranges = []
+        start = prev = nums[0]
+        for num in nums[1:]:
+            if num == prev + 1:
+                prev = num
+                continue
+            ranges.append(f"{start}-{prev}" if start != prev else str(start))
+            start = prev = num
+        ranges.append(f"{start}-{prev}" if start != prev else str(start))
+        if len(ranges) > limit:
+            return ", ".join(ranges[:limit]) + ", ..."
+        return ", ".join(ranges)
+
+    def _log_verify_result(self, result):
+        verified = result.get("verified")
+        total = result.get("verify_total") or result.get("total")
+        if verified is not None and total:
+            tag = "ok" if result.get("success") else "w"
+            self._lg(f"Verify: đủ {verified}/{total} chương", tag)
+
+        sections = [
+            ("Chương khóa thiếu file", result.get("locked_missing"), "w"),
+            ("Chương khóa còn file cụt", result.get("locked_short"), "w"),
+            ("Chương thiếu file", result.get("missing_files"), "err"),
+            ("Chương ngắn bất thường", result.get("short_files"), "err"),
+            ("Chương lệch word_count", result.get("word_count_mismatch"), "err"),
+            ("Chương API báo khóa", result.get("locked_chapters"), "w"),
+            ("Chương API còn lỗi", result.get("failed_chapter_indices"), "err"),
+        ]
+        for label, values, tag in sections:
+            text = self._format_chapter_ranges(values)
+            if text:
+                self._lg(f"{label}: {text}", tag)
 
     def _http_session(self):
         sess = requests.Session()
