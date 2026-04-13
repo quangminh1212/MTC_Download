@@ -1,0 +1,15 @@
+﻿--------- beginning of main
+I/AlarmManager( 2547): setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 2444132]
+I/AlarmManager( 2547): setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 2444134]
+D/BoundBrokerSvc( 2689): onBind: Intent { act=com.google.android.gms.potokens.service.IntegrityTokenRefreshTaskService.ACTION_TASK_READY dat=chimera-action: cmp=com.google.android.gms/.chimera.GmsInternalBoundBrokerService }
+D/BoundBrokerSvc( 2689): Loading bound service for intent: Intent { act=com.google.android.gms.potokens.service.IntegrityTokenRefreshTaskService.ACTION_TASK_READY dat=chimera-action: cmp=com.google.android.gms/.chimera.GmsInternalBoundBrokerService }
+I/NetworkScheduler.Stats( 2547): (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+I/NetworkScheduler.Stats( 2547): (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
+D/BoundBrokerSvc( 2689): onUnbind: Intent { act=com.google.android.gms.potokens.service.IntegrityTokenRefreshTaskService.ACTION_TASK_READY dat=chimera-action: cmp=com.google.android.gms/.chimera.GmsInternalBoundBrokerService }
+--------- beginning of system
+E/storaged( 1892): getDiskStats failed with result NOT_SUPPORTED and size 0
+D/BoundBrokerSvc( 2689): onBind: Intent { act=com.google.android.gms.potokens.service.IntegrityTokenRefreshTaskService.ACTION_TASK_READY dat=chimera-action: cmp=com.google.android.gms/.chimera.GmsInternalBoundBrokerService }
+D/BoundBrokerSvc( 2689): Loading bound service for intent: Intent { act=com.google.android.gms.potokens.service.IntegrityTokenRefreshTaskService.ACTION_TASK_READY dat=chimera-action: cmp=com.google.android.gms/.chimera.GmsInternalBoundBrokerService }
+I/NetworkScheduler.Stats( 2547): (REDACTED) Task %s/%s started execution. cause:%s exec_start_elapsed_seconds: %s
+D/BoundBrokerSvc( 2689): onUnbind: Intent { act=com.google.android.gms.potokens.service.IntegrityTokenRefreshTaskService.ACTION_TASK_READY dat=chimera-action: cmp=com.google.android.gms/.chimera.GmsInternalBoundBrokerService }
+I/NetworkScheduler.Stats( 2547): (REDACTED) Task %s/%s finished executing. cause:%s result: %s elapsed_millis: %s uptime_millis: %s exec_start_elapsed_seconds: %s
