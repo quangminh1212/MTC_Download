@@ -1070,8 +1070,18 @@ class App(tk.Tk):
                 _on_select()
 
         def _safe_ui(callback):
+            def _run():
+                try:
+                    if not win.winfo_exists():
+                        return
+                    callback()
+                except tk.TclError:
+                    pass
+
             try:
-                win.after(0, callback)
+                if not win.winfo_exists():
+                    return
+                win.after(0, _run)
             except tk.TclError:
                 pass
 
