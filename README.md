@@ -19,3 +19,26 @@ Script trên sẽ tải và giải nén ra file `frida-server` tại thư mục 
 ```
 
 `frida-server` đã được thêm vào `.gitignore`, nên file này sẽ luôn là local-only và không được commit lên remote.
+
+## Python setup
+
+Recommended install flow for international use:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+If you need Frida support for Frida-based scripts, install the optional dependency as follows:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+Or with editable install for development:
+
+```powershell
+python -m pip install -e .
+```

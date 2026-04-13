@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mtc_download"
+version = "1.0.0"
+description = "MTC/NovelFever downloader and APK analysis toolkit for BlueStacks/ADB."
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["mtc", "novelfever", "download", "apk", "adb", "frida", "pycryptodome"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security :: Cryptography",
+    "Topic :: Utilities",
+]
+
+dependencies = [
+    "requests>=2.31",
+    "urllib3>=2.0",
+    "pycryptodome>=3.19",
+    "ftfy>=7.1.1",
+]
+
+[project.optional-dependencies]
+frida = ["frida>=16.1.0"]
