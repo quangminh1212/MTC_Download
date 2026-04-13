@@ -23,9 +23,195 @@ from mtc.pipeline import download_via_adb, download_via_api, _HAS_API_DEPS
 from mtc.config import OUTPUT_DIR
 
 
+ROOT_DIR = Path(__file__).resolve().parent
+CATALOG_PATH = ROOT_DIR / "all_books.json"
+
+
 def log(msg: str):
     ts = time.strftime("%H:%M:%S")
     print(f"[{ts}] {msg}", flush=True)
+
+
+def _lookup_key(text: str) -> str:
+    return "".join(ch for ch in (text or "").casefold() if ch.isalnum())
+
+
+def _publish_status_from_text(text: str) -> str:
+    lowered = (text or "").casefold()
+    if "hoàn thành" in lowered:
+        return "completed"
+    if "còn tiếp" in lowered:
+        return "ongoing"
+    return "unknown"
+
+
+def _publish_status_label(status: str) -> str:
+    labels = {
+        "all": "Tất cả",
+        "completed": "Hoàn thành",
+        "ongoing": "Còn tiếp",
+        "unknown": "Không rõ",
+    }
+    return labels.get(status, status)
+
+
+def load_book_queries(book_file: Path) -> list[str]:
+    if not book_file.exists():
+        raise FileNotFoundError(f"Không thấy file danh sách truyện: {book_file}")
+
+    if book_file.suffix.lower() == ".json":
+        data = json.loads(book_file.read_text(encoding="utf-8"))
+        if not isinstance(data, list):
+            raise ValueError("File JSON danh sách truyện phải là mảng")
+
+        queries = []
+        for item in data:
+            if isinstance(item, str):
+                title = item.strip()
+            elif isinstance(item, dict):
+                title = str(item.get("title") or item.get("name") or "").strip()
+            else:
+                title = ""
+            if title:
+                queries.append(title)
+        return queries
+
+    lines = book_file.read_text(encoding="utf-8").splitlines()
+    return [line.strip() for line in lines if line.strip() and not line.strip().startswith("#")]
+
+
+def collect_book_queries(args) -> list[str]:
+    queries = []
+    if args.book:
+        queries.append(args.book.strip())
+    if args.book_file:
+        queries.extend(load_book_queries(Path(args.book_file)))
+
+    seen = set()
+    result = []
+    for query in queries:
+        key = _lookup_key(query)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        result.append(query)
+    return result
+
+
+def book_matches_query(title: str, query: str) -> bool:
+    title_folded = (title or "").casefold()
+    query_folded = (query or "").casefold()
+    if query_folded and query_folded in title_folded:
+        return True
+
+    title_key = _lookup_key(title)
+    query_key = _lookup_key(query)
+    return bool(query_key and query_key in title_key)
+
+
+def filter_books_by_queries(books: list[dict], queries: list[str]) -> tuple[list[dict], list[str]]:
+    if not queries:
+        return books, []
+
+    selected = []
+    selected_keys = set()
+    unmatched = []
+    for query in queries:
+        matched_any = False
+        for book in books:
+            if not book_matches_query(book["title"], query):
+                continue
+            matched_any = True
+            if book["key"] in selected_keys:
+                continue
+            selected_keys.add(book["key"])
+            selected.append(book)
+        if not matched_any:
+            unmatched.append(query)
+    return selected, unmatched
+
+
+def load_catalog_status_index() -> dict[str, dict]:
+    if not CATALOG_PATH.exists():
+        return {}
+
+    try:
+        data = json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+    if not isinstance(data, list):
+        return {}
+
+    result = {}
+    for item in data:
+        if not isinstance(item, dict):
+            continue
+        title = str(item.get("name") or item.get("title") or "").strip()
+        key = _lookup_key(title)
+        if not key:
+            continue
+        status_text = str(item.get("status_name") or item.get("state") or "").strip()
+        status = _publish_status_from_text(status_text)
+        if status == "unknown":
+            continue
+        result[key] = {
+            "publish_status": status,
+            "status_text": status_text,
+            "status_source": "catalog",
+        }
+    return result
+
+
+def resolve_book_publish_status(adb: AdbController, book: dict, catalog_statuses: dict[str, dict]) -> dict:
+    cached = catalog_statuses.get(book["key"])
+    if cached:
+        resolved = dict(book)
+        resolved.update(cached)
+        return resolved
+
+    log(f"  🔎 Kiểm tra trạng thái phát hành: {book['title']}")
+    if not adb.open_library_book(book["title"], log_fn=lambda *_: None):
+        resolved = dict(book)
+        resolved.update({
+            "publish_status": "unknown",
+            "status_text": "Không mở được chi tiết",
+            "status_source": "detail",
+        })
+        return resolved
+
+    detail = adb.get_book_detail_meta()
+    status_text = detail.get("status_text") or "Không rõ trạng thái"
+    resolved = dict(book)
+    resolved.update({
+        "publish_status": _publish_status_from_text(status_text),
+        "status_text": status_text,
+        "status_source": "detail",
+    })
+    adb.return_to_library(log_fn=lambda *_: None)
+    return resolved
+
+
+def filter_books_by_publish_status(
+    adb: AdbController,
+    books: list[dict],
+    status_filter: str,
+) -> list[dict]:
+    if status_filter == "all":
+        return books
+
+    catalog_statuses = load_catalog_status_index()
+    filtered = []
+    for book in books:
+        resolved = resolve_book_publish_status(adb, book, catalog_statuses)
+        if resolved.get("publish_status") == status_filter:
+            filtered.append(resolved)
+
+    log(
+        f"🎯 Lọc trạng thái {_publish_status_label(status_filter)}: "
+        f"{len(filtered)}/{len(books)} truyện"
+    )
+    return filtered
 
 
 def count_existing_chapters(book_dir: Path) -> int:
@@ -160,9 +346,16 @@ def main():
     parser = argparse.ArgumentParser(description="Download novels from MTC app")
     parser.add_argument("--list", action="store_true", help="Just list books in library")
     parser.add_argument("--book", type=str, help="Download specific book by title (partial match)")
+    parser.add_argument("--book-file", type=str, help="Load titles to queue from .txt or .json list")
     parser.add_argument("--skip-existing", action="store_true", help="Skip books already fully downloaded")
     parser.add_argument("--max-books", type=int, default=200, help="Max books to process")
     parser.add_argument("--device", type=str, default="127.0.0.1:5555", help="ADB device")
+    parser.add_argument(
+        "--status-filter",
+        choices=["all", "completed", "ongoing"],
+        default="all",
+        help="Lọc theo trạng thái phát hành của truyện trong app/catalog",
+    )
     parser.add_argument(
         "--mode",
         choices=["app", "hybrid", "adb"],
@@ -192,6 +385,10 @@ def main():
     if args.mode == "app" and args.skip_existing:
         log("ℹ --skip-existing chỉ áp dụng cho mode export; mode app sẽ để app tự quyết định chương đã tải hay chưa")
 
+    queries = collect_book_queries(args)
+    if queries:
+        log(f"📝 Đã nạp {len(queries)} truy vấn truyện")
+
     # Enable accessibility for Flutter
     adb.enable_accessibility(log_fn=lambda msg: log(f"  {msg}"))
 
@@ -207,24 +404,29 @@ def main():
     log(f"📚 TỦ TRUYỆN: {len(books)} truyện")
     log(f"{'='*70}")
 
-    for i, b in enumerate(books, 1):
+    targets, unmatched_queries = filter_books_by_queries(books, queries)
+    if unmatched_queries:
+        log(f"⚠ Không khớp {len(unmatched_queries)} truy vấn: {', '.join(unmatched_queries[:10])}")
+    if queries and not targets:
+        log("❌ Không tìm thấy truyện nào khớp danh sách yêu cầu")
+        return 1
+
+    targets = filter_books_by_publish_status(adb, targets, args.status_filter)
+    if not targets:
+        log("❌ Không còn truyện nào sau khi áp dụng bộ lọc")
+        return 1
+
+    for i, b in enumerate(targets, 1):
         from mtc.utils import safe_name
         book_dir = OUTPUT_DIR / safe_name(b["title"])
         existing = count_existing_chapters(book_dir) if book_dir.exists() else 0
-        status = "✅" if existing >= b["read_total"] and b["read_total"] > 0 else f"📥 {existing}"
-        print(f"  {i:3d}. [{status}/{b['read_total']}] {b['title']}")
+        download_status = "✅" if existing >= b["read_total"] and b["read_total"] > 0 else f"📥 {existing}"
+        publish_status = b.get("publish_status")
+        publish_label = f" | {_publish_status_label(publish_status)}" if publish_status else ""
+        print(f"  {i:3d}. [{download_status}/{b['read_total']}] {b['title']}{publish_label}")
 
     if args.list:
         return 0
-
-    # Filter books to download
-    targets = books
-    if args.book:
-        query = args.book.lower()
-        targets = [b for b in books if query in b["title"].lower()]
-        if not targets:
-            log(f"❌ Không tìm thấy truyện khớp: {args.book}")
-            return 1
 
     log(f"\n{'='*70}")
     if args.mode == "app":

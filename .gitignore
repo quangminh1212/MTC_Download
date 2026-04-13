@@ -198,4 +198,19 @@ frida-server.xz
 /logcat_recent.txt
 /mitm_capture.bin
 /pulled_*.txt
+/mtc.log
+/base.apk
+/base_debug_unsigned.apk
+/mtc_backup.ab
+/novelfever_backup.ab
+/app_bundle.js
+/app-ed2d0a7f.js
+/apk_decoded/
+/libapp_extracted/
+/libflutter_extracted/
+/exports/
+/novel_exports/
+/sample_big.txt
+/sample_small.txt
+/__pycache__/
 
