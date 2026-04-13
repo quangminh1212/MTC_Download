@@ -566,8 +566,8 @@ class AdbController:
             root = ET.fromstring(xml_str)
             tl = text.lower()
             for node in root.iter():
-                nt = _clean_ui_text(node.get("text", ""))
-                nc = _clean_ui_text(node.get("content-desc", ""))
+                nt = _clean_ui_text(repair_adb_text(node.get("text", "")))
+                nc = _clean_ui_text(repair_adb_text(node.get("content-desc", "")))
                 match = (nt == text or nc == text) if exact \
                         else (tl in nt.lower() or tl in nc.lower())
                 if match:
