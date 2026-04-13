@@ -393,10 +393,10 @@ class App(tk.Tk):
         win.configure(bg=BG)
         win.attributes("-topmost", True)
 
-           top = tk.Frame(win, bg=BG)
-           top.pack(fill="x", padx=8, pady=6)
-           _lbl(top, "Quét danh sách truyện bằng ADB từ app đang mở", FG2,
-               FONT_BOLD, bg=BG).pack(side="left")
+        top = tk.Frame(win, bg=BG)
+        top.pack(fill="x", padx=8, pady=6)
+        _lbl(top, "Quét danh sách truyện bằng ADB từ app đang mở", FG2,
+             FONT_BOLD, bg=BG).pack(side="left")
         count_lbl = _lbl(top, "", FG3, ("Segoe UI", 8), bg=BG)
         count_lbl.pack(side="right")
 
@@ -404,26 +404,39 @@ class App(tk.Tk):
         filters.pack(fill="x", padx=8, pady=(0, 6))
         _lbl(filters, "🔍", bg=BG).pack(side="left")
         search_var = tk.StringVar()
-                se = tk.Entry(filters, textvariable=search_var, bg=BG, fg=FG, font=FONT,
-                                            bd=1, relief="solid", width=22, insertbackground=FG)
-                se.pack(side="left", padx=4)
-                _lbl(filters, "Sắp xếp:", bg=BG).pack(side="left", padx=(10, 4))
-                sort_var = tk.StringVar(value="Tên A-Z")
-                sort_cb = ttk.Combobox(filters, textvariable=sort_var, state="readonly",
-                                                             values=["Tên A-Z", "Nhiều chương", "Điểm cao"],
-                                                             width=14, font=FONT)
-                sort_cb.pack(side="left")
+        tk.Entry(
+            filters,
+            textvariable=search_var,
+            bg=BG,
+            fg=FG,
+            font=FONT,
+            bd=1,
+            relief="solid",
+            width=22,
+            insertbackground=FG,
+        ).pack(side="left", padx=4)
+        _lbl(filters, "Sắp xếp:", bg=BG).pack(side="left", padx=(10, 4))
+        sort_var = tk.StringVar(value="Tên A-Z")
+        sort_cb = ttk.Combobox(
+            filters,
+            textvariable=sort_var,
+            state="readonly",
+            values=["Tên A-Z", "Nhiều chương", "Điểm cao"],
+            width=14,
+            font=FONT,
+        )
+        sort_cb.pack(side="left")
 
-                tree_wrap = tk.Frame(win, bg=BG)
-                tree_wrap.pack(fill="both", expand=True, padx=8, pady=(0, 6))
-                cols = ("name", "author", "ch", "score")
-                tree = ttk.Treeview(tree_wrap, columns=cols, show="headings", selectmode="browse")
-                tree.heading("name", text="Tên truyện")
-                tree.heading("author", text="Tác giả")
-                tree.heading("ch", text="Chương")
-                tree.heading("score", text="Điểm")
-                tree.column("name", width=500, anchor="w")
-                tree.column("author", width=180, anchor="w")
+        tree_wrap = tk.Frame(win, bg=BG)
+        tree_wrap.pack(fill="both", expand=True, padx=8, pady=(0, 6))
+        cols = ("name", "author", "ch", "score")
+        tree = ttk.Treeview(tree_wrap, columns=cols, show="headings", selectmode="browse")
+        tree.heading("name", text="Tên truyện")
+        tree.heading("author", text="Tác giả")
+        tree.heading("ch", text="Chương")
+        tree.heading("score", text="Điểm")
+        tree.column("name", width=500, anchor="w")
+        tree.column("author", width=180, anchor="w")
         tree.column("ch", width=70, anchor="center", stretch=False)
         tree.column("score", width=70, anchor="center", stretch=False)
         vsb = ttk.Scrollbar(tree_wrap, orient="vertical", command=tree.yview)
@@ -434,8 +447,16 @@ class App(tk.Tk):
         info = tk.Frame(win, bg=BG2, highlightthickness=1, highlightbackground=BORDER)
         info.pack(fill="x", padx=8, pady=(0, 6))
         detail_var = tk.StringVar(value="Đang quét danh sách truyện...")
-        tk.Label(info, textvariable=detail_var, bg=BG2, fg=FG, justify="left",
-                 anchor="nw", font=FONT, wraplength=980).pack(fill="x", padx=10, pady=10)
+        tk.Label(
+            info,
+            textvariable=detail_var,
+            bg=BG2,
+            fg=FG,
+            justify="left",
+            anchor="nw",
+            font=FONT,
+            wraplength=980,
+        ).pack(fill="x", padx=10, pady=10)
 
         actions = tk.Frame(win, bg=BG)
         actions.pack(fill="x", padx=8, pady=(0, 8))
@@ -486,12 +507,6 @@ class App(tk.Tk):
                 return
             self._select_book_from_item(book)
             win.destroy()
-        ttk.Button(actions, text="Quét lại", style="G.TButton",
-                   command=lambda: _load_scan()).pack(side="left")
-        ttk.Button(actions, text="Mở Khám phá rồi quét", style="G.TButton",
-                   command=lambda: _goto_explore_and_rescan()).pack(side="left", padx=(6, 0))
-        ttk.Button(actions, text="Dùng truyện đã chọn", style="TButton",
-                   command=_choose_selected).pack(side="left", padx=(6, 0))
 
         def _passes_filter(book):
             query = (search_var.get() or "").strip()
@@ -524,7 +539,7 @@ class App(tk.Tk):
                 )
             return sorted(books, key=lambda book: self._book_lookup_key(book.get("title") or ""))
 
-        def _fill(books, source_label=""):
+        def _fill(books, current_source=""):
             nonlocal items
             items = _sort_books(list(books))
             for row in tree.get_children():
@@ -537,7 +552,9 @@ class App(tk.Tk):
             for idx, book in enumerate(items):
                 chapter_value = book.get("chapter_count") or book.get("chapter_text") or ""
                 tree.insert(
-                    "", "end", iid=f"scan:{idx}",
+                    "",
+                    "end",
+                    iid=f"scan:{idx}",
                     values=(
                         book.get("title") or "",
                         book.get("author") or "",
@@ -548,7 +565,7 @@ class App(tk.Tk):
                 )
             tree.tag_configure("odd", background=BG2)
             tree.tag_configure("even", background=BG)
-            extra = f" ({source_label})" if source_label else ""
+            extra = f" ({current_source})" if current_source else ""
             count_lbl.config(text=f"{len(items)} truyện{extra}")
             first = tree.get_children()
             if first:
@@ -588,7 +605,6 @@ class App(tk.Tk):
                     raise RuntimeError("Không có BlueStacks để quét danh sách")
 
                 books, current_source = self._scan_books_via_adb()
-
                 if not books:
                     self._lg("ADB không thấy card truyện nào trên màn hình hiện tại.", "w")
                     self._lg("Hãy mở tab Khám phá hoặc màn kết quả tìm kiếm rồi bấm quét lại.", "w")
@@ -599,14 +615,17 @@ class App(tk.Tk):
                     source_label[0] = current_source
                     _fill([book for book in full_items if _passes_filter(book)], current_source)
                     if not full_items:
-                        detail_var.set("ADB chưa thấy card truyện nào trên màn hình hiện tại.\n\nHãy mở tab Khám phá hoặc màn kết quả tìm kiếm trong app rồi quét lại.")
+                        detail_var.set(
+                            "ADB chưa thấy card truyện nào trên màn hình hiện tại.\n\n"
+                            "Hãy mở tab Khám phá hoặc màn kết quả tìm kiếm trong app rồi quét lại."
+                        )
 
                 _safe_ui(_update_full)
-            except Exception as e:
-                self._lg(f"ADB scan lỗi: {e}", "w")
+            except Exception as exc:
+                self._lg(f"ADB scan lỗi: {exc}", "w")
                 _safe_ui(lambda: (
                     count_lbl.config(text="Lỗi quét"),
-                    detail_var.set(f"Không quét được danh sách truyện.\n\n{e}"),
+                    detail_var.set(f"Không quét được danh sách truyện.\n\n{exc}"),
                 ))
 
         def _apply_filter(*_):
@@ -618,6 +637,12 @@ class App(tk.Tk):
             for row in tree.get_children():
                 tree.delete(row)
             threading.Thread(target=_scan_worker, daemon=True).start()
+
+        ttk.Button(actions, text="Quét lại", style="G.TButton", command=_load_scan).pack(side="left")
+        ttk.Button(actions, text="Mở Khám phá rồi quét", style="G.TButton",
+                   command=_goto_explore_and_rescan).pack(side="left", padx=(6, 0))
+        ttk.Button(actions, text="Dùng truyện đã chọn", style="TButton",
+                   command=_choose_selected).pack(side="left", padx=(6, 0))
 
         tree.bind("<<TreeviewSelect>>", _on_select)
         tree.bind("<Double-1>", lambda _: _choose_selected())

@@ -379,16 +379,26 @@ class AdbController:
         except ET.ParseError:
             return None
 
-        best_text = ""
+        candidates = []
         for node in root.iter():
             payload = _clean_ui_text(node.get("content-desc", "") or node.get("text", ""))
             if payload.count("\n") < 5:
                 continue
-            if len(payload) > len(best_text):
-                best_text = payload
+            rect = _parse_bounds_rect(node.get("bounds", ""))
+            if rect:
+                width = max(0, rect[2] - rect[0])
+                height = max(0, rect[3] - rect[1])
+                if width < 100 or height < 100:
+                    continue
+                area = width * height
+            else:
+                area = 0
+            candidates.append((area, payload))
 
-        if not best_text:
+        if not candidates:
             return None
+
+        _, best_text = max(candidates, key=lambda item: (item[0], len(item[1])))
 
         lines = [line.strip() for line in best_text.splitlines()]
         lines = [line for line in lines if line]
