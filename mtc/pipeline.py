@@ -896,6 +896,7 @@ def download_via_adb(
         total = ch_end - ch_start + 1
         n_ok = 0
         n_fail = 0
+        in_reader = False  # Track if we've actually entered the reader
 
         for ch_idx in range(ch_start, ch_end + 1):
             if stop_flag():
@@ -912,8 +913,8 @@ def download_via_adb(
                 n_ok += 1
                 continue
 
-            if ch_idx == ch_start:
-                log_fn(f"  [ch{ch_idx}] Điều hướng tới chương đầu...")
+            if not in_reader:
+                log_fn(f"  [ch{ch_idx}] Điều hướng tới chương {ch_idx}...")
                 if not adb.nav_to_chapter(ch_idx, log_fn):
                     log_fn(f"  [ch{ch_idx}] ⚠ Không tìm thấy chương")
                     n_fail += 1
@@ -921,6 +922,7 @@ def download_via_adb(
                         log_fn("Quá nhiều lỗi điều hướng. Dừng.")
                         break
                     continue
+                in_reader = True
             else:
                 log_fn(f"  [ch{ch_idx}] Chuyển chương nhanh...")
                 if not adb.reader_next_chapter(log_fn):

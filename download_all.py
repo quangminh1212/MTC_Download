@@ -12,9 +12,8 @@ from pathlib import Path
 
 # Ensure proper UTF-8 output on Windows
 if sys.platform == "win32":
-    import io
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -82,13 +81,7 @@ def download_one_book(
         log(f"  ❌ Không tìm thấy truyện trong Tủ Truyện")
         return {"success": False, "ok": 0, "fail": 0, "reason": "Không mở được truyện từ Tủ Truyện"}
 
-    # Open reader
-    if not adb.open_current_book_reader(log_fn=lambda msg: log(f"    {msg}")):
-        log(f"  ❌ Không vào được reader")
-        adb.return_to_library(log_fn=lambda msg: log(f"    {msg}"))
-        return {"success": False, "ok": 0, "fail": 0, "reason": "Không mở được reader"}
-
-    # Now use download_via_adb (it expects to be in the book already)
+    # download_via_adb handles chapter list navigation from the book detail page
     result = download_via_adb(
         adb=adb,
         book_name=title,

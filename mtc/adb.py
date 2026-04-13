@@ -630,14 +630,15 @@ class AdbController:
         except ET.ParseError:
             return None
 
-        target = f"Chương {chapter_index}"
+        # Use word boundary to avoid matching "Chương 4" inside "Chương 419"
+        pattern = re.compile(rf"Chương\s+{chapter_index}(?:\D|$)")
         for node in root.iter():
             if node.get("clickable") != "true":
                 continue
             text = _clean_ui_text(node.get("text", ""))
             desc = _clean_ui_text(node.get("content-desc", ""))
             haystack = text or desc
-            if target not in haystack:
+            if not pattern.search(haystack):
                 continue
             rect = _parse_bounds_rect(node.get("bounds", ""))
             if rect:

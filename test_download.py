@@ -40,18 +40,8 @@ def test_download_book(adb, title, max_chapters=5):
     log(f"  -> Mo thanh cong: {book_info.get('title', '?')}")
     time.sleep(0.5)
 
-    # Step 2: Open reader
-    log("Step 2: Mo reader...")
-    if not adb.open_current_book_reader(log_fn=lambda msg: log(f"  {msg}")):
-        log("FAIL: Khong vao duoc reader")
-        adb.return_to_library(log_fn=lambda msg: log(f"  {msg}"))
-        return False
-
-    log("  -> Da vao reader")
-    time.sleep(0.5)
-
-    # Step 3: Download via ADB
-    log(f"Step 3: Tai {max_chapters} chuong qua ADB...")
+    # Step 2: Download via ADB (handles chapter list navigation itself)
+    log(f"Step 2: Tai {max_chapters} chuong qua ADB...")
     result = download_via_adb(
         adb=adb,
         book_name=title,
