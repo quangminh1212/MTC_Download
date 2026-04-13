@@ -1,0 +1,361 @@
+﻿Total number of currently running services:0
+TASK com.bluestacks.gamecenter id=47 userId=0
+  ACTIVITY com.bluestacks.gamecenter/.AppCenterActivity 209e5b1 pid=2629
+    Local Activity 5af3738 State:
+      mResumed=false mStopped=true mFinished=false
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 452mcc2mnc [vi_VN] ldltr sw600dp w1066dp h576dp 240dpi lrg long land finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1600, 900) mAppBounds=Rect(0, 0 - 1600, 900) mWindowingMode=fullscreen mActivityType=standard} s.8}
+      mLoadersStarted=true
+      FragmentManager misc state:
+        mHost=android.app.Activity$HostCallbacks@e3613f2
+        mContainer=android.app.Activity$HostCallbacks@e3613f2
+        mCurState=3 mStateSaved=true mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false      mIsAmbientMode=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=25650 (12139473 ms ago)
+    View Hierarchy:
+      DecorView@1043e1a[AppCenterActivity]
+        android.widget.LinearLayout{6466a43 V.E...... .......D 0,0-1600,900}
+          android.view.ViewStub{32dd8c0 G.E...... ......I. 0,0-0,0 #102018a android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{70ff9f9 V.E...... .......D 0,0-1600,900 #1020002 android:id/content}
+            android.widget.FrameLayout{f8d7d3e V.E...... ......ID 0,0-1600,900 #7f07004a app:id/mainLayout}
+              android.widget.LinearLayout{75b679f G.E...... ......ID 0,0-1600,900 #7f070051 app:id/progressBarLayout}
+                android.widget.ProgressBar{f77c0ec V.ED..... ......ID 774,439-825,490 #7f070049 app:id/loadingBar}
+              android.widget.RelativeLayout{54d3cb5 G.E...... ......ID 0,0-1600,900 #7f07004b app:id/noInternetLayout}
+                android.widget.LinearLayout{3602f4a V.E...... ......ID 0,219-1600,680}
+                  android.widget.ImageView{b98debb V.ED..... ......ID 717,0-882,165}
+                  android.widget.TextView{395ffd8 V.ED..... ......ID 0,189-1600,225}
+                  android.widget.TextView{3e1ef31 V.ED..... ......ID 0,234-1600,285}
+                  android.widget.Button{ef9f616 VFED..C.. ......ID 755,327-844,373 #7f070052 app:id/reloadWebview}
+                  android.widget.Button{46cab97 VFED..C.. ......ID 737,415-862,461 #7f07003f app:id/goToHome}
+              androidx.swiperefreshlayout.widget.SwipeRefreshLayout{c574184 V.ED..... .......D 0,0-1600,900 #7f070058 app:id/swipeRefreshWidget}
+                androidx.swiperefreshlayout.widget.a{7354d6d G.ED..... ......ID 770,-60-830,0}
+                com.bluestacks.gamecenter.GameCenterWebView{a629530 VFEDHVC.. ......ID 0,0-1600,900 #7f070029 app:id/appCenterView}
+    Looper (main, tid 2) {22cc349}
+      (Total messages: 0, polling=false, quitting=false)
+    Autofill Compat Mode: false
+    AutofillManager:
+      sessionId: -2147483648
+      state: UNKNOWN
+      context: com.bluestacks.gamecenter.AppCenterActivity@5af3738
+      client: com.bluestacks.gamecenter.AppCenterActivity@5af3738
+      enabled: false
+      hasService: true
+      hasCallback: false
+      onInvisibleCalled false
+      last autofilled data: null
+      tracked views: null
+      fillable ids: null
+      entered ids: null
+      save trigger id: null
+      save on finish(): false
+      compat mode enabled: false
+      debug: true verbose: false
+    ResourcesManager:
+      cached apks: total=3 created=0 evicted=23 hit=2 miss=26 max=3
+      total apks: 22
+      resources: 5
+      resource impls: 5
+
+TASK null id=2 userId=0
+  ACTIVITY com.uncube.launcher3/com.bluestacks.launcher.activity.HomeActivity 9371cff pid=2700
+    Local Activity 4894586 State:
+      mResumed=false mStopped=true mFinished=false
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 452mcc2mnc [vi_VN] ldltr sw600dp w600dp h1042dp 240dpi lrg long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 900, 1600) mAppBounds=Rect(0, 0 - 900, 1600) mWindowingMode=fullscreen mActivityType=home} s.51}
+      mLoadersStarted=true
+      Active Fragments in 483bcf1:
+        #0: n0{30f10d6 #0 androidx.lifecycle.LifecycleDispatcher.report_fragment_tag}
+          mFragmentId=#0 mContainerId=#0 mTag=androidx.lifecycle.LifecycleDispatcher.report_fragment_tag
+          mState=3 mIndex=0 mWho=android:fragment:0 mBackStackNesting=0
+          mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+          mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+          mRetainInstance=false mRetaining=false mUserVisibleHint=true
+          mFragmentManager=FragmentManager{483bcf1 in HostCallbacks{f8f57}}
+          mHost=android.app.Activity$HostCallbacks@f8f57
+          Child FragmentManager{896ba44 in n0{30f10d6}}:
+            FragmentManager misc state:
+              mHost=android.app.Activity$HostCallbacks@f8f57
+              mContainer=android.app.Fragment$1@986372d
+              mParent=n0{30f10d6 #0 androidx.lifecycle.LifecycleDispatcher.report_fragment_tag}
+              mCurState=3 mStateSaved=true mDestroyed=false
+        #1: a{cc36462 #1 com.ironsource.lifecycle.IronsourceLifecycleFragment}
+          mFragmentId=#0 mContainerId=#0 mTag=com.ironsource.lifecycle.IronsourceLifecycleFragment
+          mState=3 mIndex=1 mWho=android:fragment:1 mBackStackNesting=0
+          mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+          mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+          mRetainInstance=false mRetaining=false mUserVisibleHint=true
+          mFragmentManager=FragmentManager{483bcf1 in HostCallbacks{f8f57}}
+          mHost=android.app.Activity$HostCallbacks@f8f57
+          Child FragmentManager{d93c9f3 in a{cc36462}}:
+            FragmentManager misc state:
+              mHost=android.app.Activity$HostCallbacks@f8f57
+              mContainer=android.app.Fragment$1@46736b0
+              mParent=a{cc36462 #1 com.ironsource.lifecycle.IronsourceLifecycleFragment}
+              mCurState=3 mStateSaved=true mDestroyed=false
+      Added Fragments:
+        #0: n0{30f10d6 #0 androidx.lifecycle.LifecycleDispatcher.report_fragment_tag}
+        #1: a{cc36462 #1 com.ironsource.lifecycle.IronsourceLifecycleFragment}
+      FragmentManager misc state:
+        mHost=android.app.Activity$HostCallbacks@f8f57
+        mContainer=android.app.Activity$HostCallbacks@f8f57
+        mCurState=3 mStateSaved=true mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false      mIsAmbientMode=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=9808367 (2356757 ms ago)
+    View Hierarchy:
+      DecorView@5d0fb27[HomeActivity]
+        android.widget.LinearLayout{fa689e6 V.E...... .......D 0,0-900,1600}
+          android.view.ViewStub{ebc1929 G.E...... ......I. 0,0-0,0 #102018a android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{4f83041 V.E...... .......D 0,0-900,1600}
+            androidx.appcompat.widget.FitWindowsLinearLayout{3a75b28 V.E...... .......D 0,0-900,1600 #7f0a0037 app:id/action_bar_root}
+              androidx.appcompat.widget.ViewStubCompat{47764ae G.E...... ......I. 0,0-0,0 #7f0a0042 app:id/action_mode_bar_stub}
+              androidx.appcompat.widget.ContentFrameLayout{e14554b V.E...... .......D 0,0-900,1600 #1020002 android:id/content}
+                android.widget.FrameLayout{1fc261a V.E...... .......D 0,0-900,1600}
+                  androidx.drawerlayout.widget.DrawerLayout{b68cc5 VFE...... .......D 0,0-900,1600 #7f0a010c app:id/drawer_layout}
+                    androidx.constraintlayout.widget.ConstraintLayout{813073c V.E...... .......D 0,0-900,1600 #7f0a00cf app:id/constraint_layout}
+                      android.widget.FrameLayout{1ade6a9 G.E...... ......I. 0,0-0,0 #7f0a0053 app:id/ad_container_parent}
+                        io.flutter.embedding.android.p{5f9952f GFE...... ......I. 0,0-0,0 #1}
+                          io.flutter.embedding.android.j{dab01d4 G.E...... ......I. 0,0-0,0}
+                      android.widget.FrameLayout{417124f V.E...... .......D 0,0-900,1600 #7f0a034e app:id/view_home}
+                        com.bluestacks.launcher.widget.ItemOptionView{d810ddc VFED..... .F.....D 0,0-900,1600 #7f0a019f app:id/item_option}
+                          androidx.constraintlayout.widget.ConstraintLayout{6541ee5 V.E...... .......D 0,0-900,1600}
+                            androidx.appcompat.widget.h0{d591dba I.ED..... ......I. 564,0-879,29 #7f0a01ac app:id/jpAdsRegulationText}
+                            com.bluestacks.launcher.widget.Desktop{ddc846b VFED..... ......ID 44,166-856,1290 #7f0a00f3 app:id/desktop}
+                              com.bluestacks.launcher.widget.CellContainer{cff2bc8 V.ED..... ........ 0,0-812,1124}
+                                c6.c{cacc461 VFED..CL. ........ 0,0-270,281}
+                                c6.c{d6b5b86 VFED..CL. ........ 540,0-810,281}
+                                c6.c{c3cfc47 VFED..CL. ........ 270,0-540,281}
+                            androidx.constraintlayout.widget.ConstraintLayout{bf3c74 VFE...C.. ......ID 151,81-750,130 #7f0a028b app:id/searchContainer}
+                              androidx.appcompat.widget.AppCompatImageView{b90459d V.ED..... ......ID 19,15-38,34 #7f0a028e app:id/searchPlayIcon}
+                              androidx.appcompat.widget.AppCompatImageView{611aa12 V.ED..... ......ID 561,15-580,34 #7f0a028d app:id/searchIcon}
+                              androidx.appcompat.widget.k{34315e3 VFED..CL. ......ID 38,0-562,49 #7f0a028c app:id/searchEditText}
+                            com.bluestacks.launcher.widget.PagerIndicator{4cdabe0 I.ED..... ......ID 0,1290-900,1306 #7f0a00f4 app:id/desktopIndicator}
+                            android.widget.LinearLayout{5309e99 I.E...... ......ID 376,1306-524,1336 #7f0a0198 app:id/install_progress_layout}
+                              android.widget.ProgressBar{95c555e V.ED..... ......ID 10,7-25,22 #7f0a01c0 app:id/loadingBar}
+                              androidx.appcompat.widget.h0{3072d3f V.ED..... ......ID 35,4-138,25 #7f0a0199 app:id/installingGame}
+                            android.widget.LinearLayout{791a60c V.E...... .......D -153,1367-1055,1600 #7f0a0102 app:id/dock}
+                              androidx.appcompat.widget.h0{2e38b55 V.ED..... ........ 0,9-1208,34 #7f0a0254 app:id/popular_gam}
+                              android.widget.FrameLayout{814696a V.E...... .......D 0,34-1208,233 #7f0a0169 app:id/frameLayout}
+                                android.view.View{acb5e5b V.ED..... ......ID 0,83-1208,199 #7f0a034d app:id/viewBackground}
+                                android.widget.FrameLayout{4b916f8 V.E...... .......D 0,0-1208,199}
+                                  android.widget.ProgressBar{39e87d1 G.ED..... ......ID 589,84-619,114 #7f0a0103 app:id/dockLoadingBar}
+                                  android.widget.LinearLayout{487b236 V.E...... .......D 62,-8-1146,175 #7f0a0069 app:id/allappsLinearLayout}
+                                    android.widget.LinearLayout{1d78537 VFE...C.. .......D 66,0-384,183 #7f0a0074 app:id/appOneLinearLayout}
+                                      android.widget.FrameLayout{2e4aaa4 V.E...... ......ID 113,21-204,112 #7f0a007c app:id/app_image_one}
+                                        androidx.appcompat.widget.AppCompatImageView{632d00d I.ED..... ......ID 65,3-88,26 #7f0a0257 app:id/popup_image_one}
+                                      androidx.appcompat.widget.h0{614bbc2 V.ED..... ........ 0,120-318,183 #7f0a0084 app:id/app_name_one}
+                                    android.widget.LinearLayout{2153dd3 VFE...C.. .......D 384,0-701,183 #7f0a0077 app:id/appTwoLinearLayout}
+                                      android.widget.FrameLayout{13cd10 V.E...... ......ID 113,21-204,112 #7f0a007f app:id/app_image_two}
+                                        androidx.appcompat.widget.AppCompatImageView{b496009 I.ED..... ......ID 65,3-88,26 #7f0a025a app:id/popup_image_two}
+                                      androidx.appcompat.widget.h0{976d20e V.ED..... ........ 0,120-317,183 #7f0a0087 app:id/app_name_two}
+                                    android.widget.LinearLayout{6be42f VFE...C.. .......D 701,0-1018,183 #7f0a0076 app:id/appThreeLinearLayout}
+                                      android.widget.FrameLayout{8d0aa3c V.E...... ......ID 113,21-204,112 #7f0a007e app:id/app_image_three}
+                                        androidx.appcompat.widget.AppCompatImageView{b1ef3c5 I.ED..... ......ID 65,3-88,26 #7f0a0259 app:id/popup_image_three}
+                                      androidx.appcompat.widget.h0{9d2011a V.ED..... ........ 0,120-317,183 #7f0a0086 app:id/app_name_three}
+                                    android.widget.LinearLayout{edc944b GFE...C.. ......I. 0,0-0,0 #7f0a0073 app:id/appFourLinearLayout}
+                                      android.widget.FrameLayout{61c2e28 V.E...... ......I. 0,0-0,0 #7f0a007b app:id/app_image_four}
+                                        androidx.appcompat.widget.AppCompatImageView{b000741 I.ED..... ......ID 0,0-0,0 #7f0a0256 app:id/popup_image_four}
+                                      androidx.appcompat.widget.h0{e7f14e6 V.ED..... ......I. 0,0-0,0 #7f0a0083 app:id/app_name_four}
+                                    android.widget.LinearLayout{45e2a27 GFE...C.. ......I. 0,0-0,0 #7f0a0072 app:id/appFiveLinearLayout}
+                                      android.widget.FrameLayout{e1a04d4 V.E...... ......I. 0,0-0,0 #7f0a007a app:id/app_image_five}
+                                        androidx.appcompat.widget.AppCompatImageView{e84d67d I.ED..... ......ID 0,0-0,0 #7f0a0255 app:id/popup_image_five}
+                                      androidx.appcompat.widget.h0{9979972 V.ED..... ......I. 0,0-0,0 #7f0a0082 app:id/app_name_five}
+                                    android.widget.LinearLayout{67941c3 GFE...C.. ......I. 0,0-0,0 #7f0a0075 app:id/appSixLinearLayout}
+                                      android.widget.FrameLayout{37c9a40 V.E...... ......I. 0,0-0,0 #7f0a007d app:id/app_image_six}
+                                        androidx.appcompat.widget.AppCompatImageView{8d5d79 I.ED..... ......ID 0,0-0,0 #7f0a0258 app:id/popup_image_six}
+                                      androidx.appcompat.widget.h0{341dabe V.ED..... ......I. 0,0-0,0 #7f0a0085 app:id/app_name_six}
+                            com.bluestacks.launcher.widget.GroupPopupView{a4371f IFE...C.. ......ID 0,0-900,1600 #7f0a0177 app:id/groupPopup}
+                              androidx.cardview.widget.CardView{fb11a6c I.E...... ......ID 0,0-900,1600}
+                                android.widget.LinearLayout{ffd5835 V.E...... ......ID 6,6-894,1594}
+                                  androidx.appcompat.widget.h0{dbce4ca VFED..C.. ......ID 25,20-888,53 #7f0a0179 app:id/group_popup_label}
+                                  com.bluestacks.launcher.widget.CellContainer{55f263b V.ED..... ......ID 37,53-851,1568 #7f0a0176 app:id/group}
+                            android.view.View{3cb7158 V.ED..... ......ID 44,166-82,1290 #7f0a01b2 app:id/leftDragHandle}
+                            android.view.View{c3842b1 V.ED..... ......ID 818,166-856,1290 #7f0a026f app:id/rightDragHandle}
+                          com.bluestacks.launcher.widget.ItemOptionView$c{e2c8396 V.ED..... ........ 0,0-900,1600}
+                      android.widget.FrameLayout{50feb17 V.E...... ........ 0,0-900,1600 #7f0a0244 app:id/overlay_container}
+                      android.widget.FrameLayout{c324b04 G.E...... ......ID 0,0-0,0 #7f0a0181 app:id/home_progress_bar}
+                        android.widget.ProgressBar{d5d58ed V.ED..... ......ID 0,0-0,0}
+    Looper (main, tid 2) {6254322}
+      (Total messages: 0, polling=false, quitting=false)
+    Autofill Compat Mode: false
+    AutofillManager:
+      sessionId: -2147483648
+      state: UNKNOWN
+      context: com.bluestacks.launcher.activity.HomeActivity@4894586
+      client: com.bluestacks.launcher.activity.HomeActivity@4894586
+      enabled: false
+      hasService: true
+      hasCallback: false
+      onInvisibleCalled false
+      last autofilled data: null
+      tracked views: null
+      fillable ids: null
+      entered ids: null
+      save trigger id: null
+      save on finish(): false
+      compat mode enabled: false
+      debug: false verbose: false
+    ResourcesManager:
+      cached apks: total=3 created=0 evicted=1411 hit=127 miss=1414 max=3
+      total apks: 23
+      resources: 5
+      resource impls: 5
+    Local FragmentActivity 4894586 State:
+      mCreated=true mResumed=false mStopped=true    Active Fragments:
+    s{69e21b3} (6b00eb6a-b81c-4f7c-aaa4-6a7a0a39cfdf tag=com.bumptech.glide.manager){parent=null}
+        mFragmentId=#0 mContainerId=#0 mTag=com.bumptech.glide.manager
+        mState=4 mWho=6b00eb6a-b81c-4f7c-aaa4-6a7a0a39cfdf mBackStackNesting=0
+        mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+        mRetainInstance=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{30b1370 in a{44396e9}}}
+        mHost=androidx.fragment.app.FragmentActivity$a@44396e9
+        mPopDirection=false
+        Child FragmentManager{9f86f6e in s{69e21b3}}}:
+          Back Stack Index: 0
+          FragmentManager misc state:
+            mHost=androidx.fragment.app.FragmentActivity$a@44396e9
+            mContainer=androidx.fragment.app.r$f@dcf260f
+            mParent=s{69e21b3} (6b00eb6a-b81c-4f7c-aaa4-6a7a0a39cfdf tag=com.bumptech.glide.manager){parent=null}
+            mCurState=4 mStateSaved=true mStopped=true mDestroyed=false
+    l{6f1ca30} (c7e9ca67-95f8-4423-a8e8-1a0c46de345c id=0x7f0a0053)
+        mFragmentId=#7f0a0053 mContainerId=#7f0a0053 mTag=null
+        mState=4 mWho=c7e9ca67-95f8-4423-a8e8-1a0c46de345c mBackStackNesting=0
+        mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+        mRetainInstance=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{30b1370 in a{44396e9}}}
+        mHost=androidx.fragment.app.FragmentActivity$a@44396e9
+        mArguments=Bundle[{dart_entrypoint_uri=null, should_attach_engine_to_activity=true, destroy_engine_with_fragment=true, should_delay_first_android_view_draw=false, flutterview_transparency_mode=transparent, ad_configuration=AdConfiguration(ironSourceApiKey=1dcda1f05, ironSourceAdUnitId=cbpad66xwt0qwkbn, cpiAppStatPrefix=bs5_sidepanel, cpiAppLocation=AndroidLauncherSidepanel, onAlwaysTopPackage=false, cpiVideoAdLocation=AndroidLauncherSidepanelVideo), dart_entrypoint_args=null, should_automatically_handle_on_back_pressed=false, flutterview_render_mode=surface, app_bundle_path=null, initial_route=/, dart_entrypoint=main, handle_deeplinking=false, border_sides=[Z@aa2c6c1}]
+        mSavedViewState={1=android.view.AbsSavedState$1@bc9ab8e}
+        mPopDirection=false
+        mContainer=android.widget.FrameLayout{1ade6a9 G.E...... ......I. 0,0-0,0 #7f0a0053 app:id/ad_container_parent}
+        mView=io.flutter.embedding.android.p{5f9952f GFE...... ......I. 0,0-0,0 #1}
+        Child FragmentManager{d65f69c in l{6f1ca30}}}:
+          Back Stack Index: 0
+          FragmentManager misc state:
+            mHost=androidx.fragment.app.FragmentActivity$a@44396e9
+            mContainer=androidx.fragment.app.r$f@e35b8a5
+            mParent=l{6f1ca30} (c7e9ca67-95f8-4423-a8e8-1a0c46de345c id=0x7f0a0053)
+            mCurState=4 mStateSaved=true mStopped=true mDestroyed=false
+    Added Fragments:
+      #0: l{6f1ca30} (c7e9ca67-95f8-4423-a8e8-1a0c46de345c id=0x7f0a0053)
+      #1: s{69e21b3} (6b00eb6a-b81c-4f7c-aaa4-6a7a0a39cfdf tag=com.bumptech.glide.manager){parent=null}
+    Back Stack Index: 0
+    FragmentManager misc state:
+      mHost=androidx.fragment.app.FragmentActivity$a@44396e9
+      mContainer=androidx.fragment.app.FragmentActivity$a@44396e9
+      mCurState=4 mStateSaved=true mStopped=true mDestroyed=false
+
+TASK com.novelfever.app.android id=116 userId=0
+  ACTIVITY com.novelfever.app.android/com.example.novelfeverx.MainActivity 8637b36 pid=28055
+    Local Activity 902085d State:
+      mResumed=true mStopped=false mFinished=false
+      mChangingConfigurations=false
+      mCurrentConfig={1.0 452mcc2mnc [vi_VN] ldltr sw600dp w600dp h1042dp 240dpi lrg long port finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 900, 1600) mAppBounds=Rect(0, 0 - 900, 1600) mWindowingMode=fullscreen mActivityType=standard} s.51}
+      mLoadersStarted=true
+      Active Fragments in eabfbc3:
+        #0: ReportFragment{1c1cc40 #0 androidx.lifecycle.LifecycleDispatcher.report_fragment_tag}
+          mFragmentId=#0 mContainerId=#0 mTag=androidx.lifecycle.LifecycleDispatcher.report_fragment_tag
+          mState=5 mIndex=0 mWho=android:fragment:0 mBackStackNesting=0
+          mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+          mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+          mRetainInstance=false mRetaining=false mUserVisibleHint=true
+          mFragmentManager=FragmentManager{eabfbc3 in HostCallbacks{53fa779}}
+          mHost=android.app.Activity$HostCallbacks@53fa779
+          Child FragmentManager{1b75cbe in ReportFragment{1c1cc40}}:
+            FragmentManager misc state:
+              mHost=android.app.Activity$HostCallbacks@53fa779
+              mContainer=android.app.Fragment$1@248911f
+              mParent=ReportFragment{1c1cc40 #0 androidx.lifecycle.LifecycleDispatcher.report_fragment_tag}
+              mCurState=5 mStateSaved=false mDestroyed=false
+        #1: b{2176c6c #1 com.ironsource.lifecycle.IronsourceLifecycleFragment}
+          mFragmentId=#0 mContainerId=#0 mTag=com.ironsource.lifecycle.IronsourceLifecycleFragment
+          mState=5 mIndex=1 mWho=android:fragment:1 mBackStackNesting=0
+          mAdded=true mRemoving=false mFromLayout=false mInLayout=false
+          mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+          mRetainInstance=false mRetaining=false mUserVisibleHint=true
+          mFragmentManager=FragmentManager{eabfbc3 in HostCallbacks{53fa779}}
+          mHost=android.app.Activity$HostCallbacks@53fa779
+          Child FragmentManager{e8a4235 in b{2176c6c}}:
+            FragmentManager misc state:
+              mHost=android.app.Activity$HostCallbacks@53fa779
+              mContainer=android.app.Fragment$1@b0886ca
+              mParent=b{2176c6c #1 com.ironsource.lifecycle.IronsourceLifecycleFragment}
+              mCurState=5 mStateSaved=false mDestroyed=false
+      Added Fragments:
+        #0: ReportFragment{1c1cc40 #0 androidx.lifecycle.LifecycleDispatcher.report_fragment_tag}
+        #1: b{2176c6c #1 com.ironsource.lifecycle.IronsourceLifecycleFragment}
+      FragmentManager misc state:
+        mHost=android.app.Activity$HostCallbacks@53fa779
+        mContainer=android.app.Activity$HostCallbacks@53fa779
+        mCurState=5 mStateSaved=false mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false      mIsAmbientMode=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=12155400 (9726 ms ago)
+    View Hierarchy:
+      DecorView@5ef203b[MainActivity]
+        android.widget.LinearLayout{b44e358 V.E...... ........ 0,0-900,1600}
+          android.view.ViewStub{7a9ccb1 G.E...... ......I. 0,0-0,0 #102018a android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{1904596 V.E...... ........ 0,0-900,1600 #1020002 android:id/content}
+            io.flutter.embedding.android.FlutterView{9f28795 VFE...... ........ 0,0-900,1600 #1}
+              io.flutter.embedding.android.FlutterSurfaceView{7a58517 V.E...... ........ 0,0-900,1600}
+        android.view.View{6d0dd04 I.ED..... ......ID 0,0-900,36 #102002f android:id/statusBarBackground}
+    Looper (main, tid 2) {9ebe227}
+      Message 0: { when=+2s14ms callback=io.flutter.plugins.webviewflutter.InstanceManager$$ExternalSyntheticLambda0 target=android.os.Handler }
+      Message 1: { when=+40m42s140ms callback=com.google.android.gms.measurement.internal.zzau target=com.google.android.gms.internal.measurement.zzcz }
+      (Total messages: 2, polling=false, quitting=false)
+    Autofill Compat Mode: false
+    AutofillManager:
+      sessionId: -2147483648
+      state: UNKNOWN
+      context: com.example.novelfeverx.MainActivity@902085d
+      client: com.example.novelfeverx.MainActivity@902085d
+      enabled: false
+      hasService: true
+      hasCallback: false
+      onInvisibleCalled false
+      last autofilled data: null
+      tracked views: null
+      fillable ids: null
+      entered ids: null
+      save trigger id: null
+      save on finish(): false
+      compat mode enabled: false
+      debug: false verbose: false
+    ResourcesManager:
+      cached apks: total=3 created=0 evicted=41 hit=2 miss=44 max=3
+      total apks: 22
+      resources: 5
+      resource impls: 5

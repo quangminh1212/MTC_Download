@@ -138,8 +138,8 @@ class App(tk.Tk):
         info.pack(fill="x", pady=(0,6))
         tk.Label(
             info,
-            text="ℹ️  Chế độ hiện tại: chỉ tải bằng ADB.\n"
-             "     BlueStacks là bắt buộc cho quét / khám phá / tải chương.\n"
+            text="ℹ️  Chế độ hiện tại: ưu tiên Fast API để tải chương nhanh.\n"
+             "     BlueStacks dùng cho quét / khám phá / batch hoàn thành và fallback ADB khi API lỗi.\n"
              "     '⇩ Hoàn thành' dùng popup Tải truyện trong app.",
             bg="#fff8e1",
             fg="#5d4037",
@@ -232,7 +232,7 @@ class App(tk.Tk):
         if not self._adb_path:
             self._chip.config(text="ADB")
             self._adb_lbl.config(text="chưa có BlueStacks/ADB", fg=YELLOW)
-            self._lg("Không tìm thấy ADB. Ở chế độ hiện tại, BlueStacks là bắt buộc.", "w")
+            self._lg("Không tìm thấy ADB. Vẫn có thể tải nhanh qua API, nhưng quét/batch/fallback sẽ không dùng được.", "w")
             return
         self._lg(f"ADB: {self._adb_path}", "acc")
         threading.Thread(target=self._do_connect, daemon=True).start()
@@ -302,10 +302,9 @@ class App(tk.Tk):
             messagebox.showerror("", "Số chương không hợp lệ"); return
 
         if not (self._adb and self._adb.device):
-            messagebox.showwarning("", "Cần BlueStacks/ADB để tải ở chế độ ADB-only")
-            return
-
-        self._lg("ADB-only mode: tải truyện trực tiếp qua BlueStacks.", "dim")
+            self._lg("Không có ADB: sẽ thử tải nhanh qua API trước.", "w")
+        else:
+            self._lg("Ưu tiên Fast API; nếu API lỗi sẽ fallback sang ADB.", "dim")
 
         self._set_busy(True)
         self._stop = False

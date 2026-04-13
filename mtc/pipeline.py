@@ -1,12 +1,331 @@
-"""pipeline.py – Download orchestrator via ADB/BlueStacks only."""
+"""pipeline.py – Download orchestrator with fast API path and ADB fallback."""
+import base64
+import difflib
 import re
+import string
 import time
 from pathlib import Path
 from typing import Callable, Dict, List, Optional, Tuple
 
-from .config import OUTPUT_DIR
+try:
+    import requests
+    from requests.adapters import HTTPAdapter
+    from urllib3.util.retry import Retry
+    from Crypto.Cipher import AES
+    from ftfy import fix_text
+    _HAS_API_DEPS = True
+except Exception:
+    requests = None
+    HTTPAdapter = None
+    Retry = None
+    AES = None
+    fix_text = None
+    _HAS_API_DEPS = False
+
+from .config import OUTPUT_DIR, API_BASE, USER_AGENT
 from .adb import AdbController
 from .utils import safe_name
+
+
+_API_HEADERS = {
+    "content-type": "application/json",
+    "Accept": "application/json",
+    "User-Agent": USER_AGENT,
+    "x-app": "app.android",
+}
+_BASE64_BYTES = set((string.ascii_letters + string.digits + "+/=").encode())
+
+
+def _lookup_key(text: str) -> str:
+    return "".join(ch for ch in (text or "").casefold() if ch.isalnum())
+
+
+def _api_session():
+    if not _HAS_API_DEPS:
+        raise RuntimeError("Thiếu requests/pycryptodome/ftfy để tải nhanh qua API")
+
+    session = requests.Session()
+    retry = Retry(total=2, backoff_factor=0.5, status_forcelist=[429, 500, 502, 503, 504])
+    session.mount("https://", HTTPAdapter(max_retries=retry))
+    session.headers.update(_API_HEADERS)
+    return session
+
+
+def _resolve_book(session, book_name: str, book_id: Optional[int] = None) -> Optional[Dict]:
+    if book_id:
+        response = session.get(f"{API_BASE}/books/{book_id}", timeout=15)
+        response.raise_for_status()
+        data = (response.json() or {}).get("data") or {}
+        if data:
+            return data
+
+    query_key = _lookup_key(book_name)
+    best = None
+    best_score = 0.0
+
+    for page in range(1, 8):
+        response = session.get(
+            f"{API_BASE}/books",
+            params={"page": page, "limit": 100},
+            timeout=20,
+        )
+        response.raise_for_status()
+        candidates = (response.json() or {}).get("data") or []
+        if not candidates:
+            break
+
+        for candidate in candidates:
+            title_key = _lookup_key(candidate.get("name", ""))
+            score = difflib.SequenceMatcher(None, query_key, title_key).ratio()
+            if query_key and (query_key == title_key or query_key in title_key or title_key in query_key):
+                score += 0.25
+            if score > best_score:
+                best = candidate
+                best_score = score
+
+        if best_score >= 1.10 or len(candidates) < 100:
+            break
+
+    return best if best_score >= 0.65 else None
+
+
+def _fetch_chapter_list(session, book_id: int) -> List[Dict]:
+    response = session.get(
+        f"{API_BASE}/chapters",
+        params={
+            "filter[book_id]": book_id,
+            "filter[type]": "published",
+            "limit": 50000,
+        },
+        timeout=30,
+    )
+    response.raise_for_status()
+    data = (response.json() or {}).get("data") or []
+    return sorted(data, key=lambda item: item.get("index") or 0)
+
+
+def _extract_between(data: bytes, start_marker: bytes, end_marker: bytes) -> Optional[bytes]:
+    start = data.find(start_marker)
+    if start < 0:
+        return None
+    start += len(start_marker)
+    end = data.find(end_marker, start)
+    if end < 0 or start >= end:
+        return None
+    return data[start:end]
+
+
+def _decode_base64_loose(data: bytes) -> bytes:
+    cleaned = bytes(ch for ch in data if ch in _BASE64_BYTES and ch != ord("="))
+    if not cleaned:
+        raise ValueError("base64 rỗng sau khi lọc")
+    missing_padding = (-len(cleaned)) % 4
+    if missing_padding:
+        cleaned += b"=" * missing_padding
+    return base64.b64decode(cleaned)
+
+
+def _decrypt_content_blob(blob: str) -> str:
+    if not blob:
+        raise ValueError("content blob rỗng")
+
+    raw = blob.encode("ascii")
+    outer = _decode_base64_loose(raw)
+    iv_bytes = _extract_between(outer, b'"iv":"', b'","value":"')
+    value_bytes = _extract_between(outer, b'"value":"', b'","mac"')
+    if not iv_bytes or not value_bytes:
+        raise ValueError("Không tách được iv/value từ content blob")
+
+    key = raw[17:33]
+    if len(key) != 16:
+        raise ValueError("Khóa AES không hợp lệ")
+
+    iv = _decode_base64_loose(iv_bytes)[:16]
+    payload = _decode_base64_loose(value_bytes)
+    plain = AES.new(key, AES.MODE_CBC, iv).decrypt(payload)
+
+    pad = plain[-1]
+    if 1 <= pad <= 16 and plain.endswith(bytes([pad]) * pad):
+        plain = plain[:-pad]
+
+    return fix_text(plain.decode("latin1"))
+
+
+def _cleanup_api_text(text: str, chapter_name: str = "") -> str:
+    text = (text or "").replace("\r\n", "\n").replace("\r", "\n")
+    lines = [line.strip() for line in text.split("\n")]
+
+    non_empty = [(idx, line) for idx, line in enumerate(lines) if line]
+    for pos, (idx, line) in enumerate(non_empty[:4]):
+        if re.fullmatch(r"\d+\s*/\s*\d+", line):
+            drop = {item_idx for item_idx, _ in non_empty[:pos + 1]}
+            lines = [item for item_idx, item in enumerate(lines) if item_idx not in drop]
+            break
+
+    non_empty_lines = [line for line in lines if line]
+    if non_empty_lines and chapter_name:
+        first_line = non_empty_lines[0]
+        similarity = difflib.SequenceMatcher(None, _lookup_key(first_line), _lookup_key(chapter_name)).ratio()
+        looks_garbled = bool(re.search(r"[^\w\sÀ-ỹ.,:;!?()'\"“”/\-]", first_line))
+        if len(first_line) < 120 and (similarity >= 0.25 or (looks_garbled and first_line.casefold().startswith("ch"))):
+            removed = False
+            new_lines: List[str] = []
+            for line in lines:
+                if line and not removed:
+                    removed = True
+                    continue
+                new_lines.append(line)
+            lines = new_lines
+
+    cleaned: List[str] = []
+    blank = False
+    for line in lines:
+        if not line:
+            if cleaned and not blank:
+                cleaned.append("")
+            blank = True
+            continue
+        cleaned.append(line)
+        blank = False
+
+    return "\n".join(cleaned).strip()
+
+
+def _fetch_api_chapter_text(session, chapter: Dict, max_attempts: int = 3) -> Tuple[str, str]:
+    chapter_index = chapter.get("index") or 0
+    chapter_id = chapter.get("id")
+    fallback_name = chapter.get("name") or f"Chương {chapter_index}"
+    last_error: Optional[Exception] = None
+
+    for attempt in range(1, max_attempts + 1):
+        try:
+            response = session.get(f"{API_BASE}/chapters/{chapter_id}", timeout=30)
+            response.raise_for_status()
+            detail = (response.json() or {}).get("data") or {}
+            chapter_name = detail.get("name") or fallback_name
+            content = _cleanup_api_text(_decrypt_content_blob(detail.get("content") or ""), chapter_name)
+            if len(content) < 50:
+                raise ValueError("Nội dung sau giải mã quá ngắn")
+            return chapter_name, content
+        except Exception as exc:
+            last_error = exc
+            if attempt < max_attempts:
+                time.sleep(0.3 * attempt)
+
+    assert last_error is not None
+    raise last_error
+
+
+def download_via_api(
+    book_name: str,
+    ch_start: int = 1,
+    ch_end: Optional[int] = None,
+    output_dir: Path = OUTPUT_DIR,
+    log_fn: Callable[[str], None] = print,
+    stop_flag: Callable[[], bool] = lambda: False,
+    progress_cb: Optional[Callable[[int, int], None]] = None,
+    book_id: Optional[int] = None,
+) -> Dict:
+    session = _api_session()
+    book = _resolve_book(session, book_name, book_id)
+    if not book:
+        return {"success": False, "ok": 0, "fail": 0, "reason": "Không tìm thấy truyện qua API"}
+
+    api_book_id = book.get("id")
+    api_book_name = book.get("name") or book_name
+    chapters = _fetch_chapter_list(session, api_book_id)
+    if not chapters:
+        return {"success": False, "ok": 0, "fail": 0, "reason": "Không lấy được danh sách chương qua API"}
+
+    if ch_end is None:
+        ch_end = max((item.get("index") or 0) for item in chapters)
+
+    targets = [item for item in chapters if ch_start <= (item.get("index") or 0) <= ch_end]
+    if not targets:
+        return {"success": False, "ok": 0, "fail": 0, "reason": "Khoảng chương không hợp lệ"}
+
+    book_dir = output_dir / safe_name(api_book_name)
+    book_dir.mkdir(parents=True, exist_ok=True)
+    removed_full = _delete_book_full_files(book_dir, log_fn=lambda *_: None)
+    if removed_full:
+        log_fn(f"Đã xóa {removed_full} file _FULL cũ trong {book_dir.name}")
+
+    total = len(targets)
+    ok_count = 0
+    fail_count = 0
+    failed_targets: List[Dict] = []
+    log_fn(f"Fast API: {api_book_name} ({total} chương)")
+
+    for done, chapter in enumerate(targets):
+        if stop_flag():
+            log_fn("Đã dừng.")
+            break
+
+        if progress_cb:
+            progress_cb(done, total)
+
+        chapter_index = chapter.get("index") or 0
+        existing_file = _find_existing_chapter_file(book_dir, chapter_index)
+        legacy_existing = bool(existing_file and _is_legacy_chapter_file(existing_file, chapter_index))
+        if existing_file and _existing_chapter_looks_ok(existing_file) and not legacy_existing:
+            log_fn(f"  [ch{chapter_index}] Đã có, bỏ qua")
+            ok_count += 1
+            continue
+
+        try:
+            chapter_title, content = _fetch_api_chapter_text(session, chapter)
+            chapter_file = book_dir / f"{chapter_index:06d}_{safe_name(chapter_title)}.txt"
+            chapter_file.write_text(
+                f"{'='*60}\n{chapter_title}\n{'='*60}\n\n{content}\n",
+                encoding="utf-8",
+            )
+            if legacy_existing and existing_file and existing_file != chapter_file and existing_file.exists():
+                existing_file.unlink()
+            log_fn(f"  [ch{chapter_index}] ⚡ API {chapter_file.name} ({len(content)} ký tự)")
+            ok_count += 1
+        except Exception as exc:
+            log_fn(f"  [ch{chapter_index}] ⚠ API lỗi: {exc}")
+            fail_count += 1
+            failed_targets.append(chapter)
+
+    if failed_targets and not stop_flag():
+        log_fn(f"Retry-pass API cho {len(failed_targets)} chương lỗi tạm thời...")
+        retry_targets = failed_targets
+        failed_targets = []
+        fail_count = 0
+        for chapter in retry_targets:
+            chapter_index = chapter.get("index") or 0
+            try:
+                chapter_title, content = _fetch_api_chapter_text(session, chapter)
+                chapter_file = book_dir / f"{chapter_index:06d}_{safe_name(chapter_title)}.txt"
+                chapter_file.write_text(
+                    f"{'='*60}\n{chapter_title}\n{'='*60}\n\n{content}\n",
+                    encoding="utf-8",
+                )
+                log_fn(f"  [ch{chapter_index}] ✔ API retry ({len(content)} ký tự)")
+                ok_count += 1
+            except Exception as exc:
+                log_fn(f"  [ch{chapter_index}] ✖ API retry lỗi: {exc}")
+                fail_count += 1
+                failed_targets.append(chapter)
+
+    if progress_cb:
+        progress_cb(total, total)
+
+    success = ok_count > 0 and fail_count == 0
+    reason = "" if success else (
+        f"API tải được {ok_count} chương, lỗi {fail_count} chương" if ok_count > 0 else "API không tải được chương nào"
+    )
+    log_fn(f"\nXong API! ✔{ok_count}  ✖{fail_count}  →  {book_dir}")
+    return {
+        "success": success,
+        "ok": ok_count,
+        "fail": fail_count,
+        "output": str(book_dir),
+        "book_id": api_book_id,
+        "book_name": api_book_name,
+        "reason": reason,
+    }
 
 
 def _existing_chapter_looks_ok(ch_file: Path) -> bool:
@@ -236,10 +555,27 @@ def download_book(
     stop_flag:   Callable[[], bool] = lambda: False,
     progress_cb: Optional[Callable[[int, int], None]] = None,
 ) -> Dict:
-    if not adb or not adb.device:
-        return {"success": False, "reason": "Cần BlueStacks/ADB để tải ở chế độ ADB-only"}
+    api_result = None
+    try:
+        api_result = download_via_api(
+            book_name=book_name,
+            ch_start=ch_start,
+            ch_end=ch_end,
+            output_dir=output_dir,
+            log_fn=log_fn,
+            stop_flag=stop_flag,
+            progress_cb=progress_cb,
+        )
+        if api_result.get("success"):
+            return api_result
+        log_fn(f"API chưa hoàn tất: {api_result.get('reason', 'không rõ lỗi')}")
+    except Exception as exc:
+        log_fn(f"API lỗi, sẽ fallback ADB: {exc}")
 
-    log_fn("ADB-only mode: tải truyện trực tiếp qua BlueStacks")
+    if not adb or not adb.device:
+        return api_result or {"success": False, "reason": "Không có ADB để fallback và API không tải được"}
+
+    log_fn("Fallback sang ADB để vá các chương còn thiếu...")
     return download_via_adb(
         adb=adb,
         book_name=book_name,

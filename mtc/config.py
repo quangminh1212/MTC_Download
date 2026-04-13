@@ -51,7 +51,9 @@ ACCESSIBILITY_SERVICES = [
 ]
 
 # ── Download mode ────────────────────────────────────────────────────────────
-# App hiện chỉ chạy qua ADB/BlueStacks.
+# APK hiện vẫn chứa fast path qua API chapter detail + AES/CBC decrypt.
+API_BASE   = "https://android.lonoapp.net/api"
+USER_AGENT = "Dart/3.0 (dart:io)"
 
 # ── UI Palette ────────────────────────────────────────────────────────────────
 BG     = "#ffffff"
