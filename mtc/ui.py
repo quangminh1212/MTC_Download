@@ -682,11 +682,10 @@ class App(tk.Tk):
             messagebox.showwarning("", "Khám phá bằng tap ADB cần BlueStacks đã kết nối"); return
         self._lg("Mở tab Khám Phá...", "acc")
         def _w():
-            w, h = self._adb.screen_size()
-            # Tap "Khám Phá" tab (usually bottom-left area)
-            self._adb.tap(w // 4, h - 60)
-            time.sleep(0.8)
-            self._lg("Đã tap vào Khám Phá", "ok")
+            if self._adb.open_explore_tab(self._lg):
+                self._lg("Đã mở tab Khám Phá", "ok")
+            else:
+                self._lg("⚠ Không mở được tab Khám Phá", "err")
         threading.Thread(target=_w, daemon=True).start()
 
     # ── Danh sách truyện (API metadata popup) ────────────────────────────

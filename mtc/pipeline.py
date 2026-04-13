@@ -605,6 +605,25 @@ def download_via_adb(
     log_fn("Bật accessibility...")
     adb.enable_accessibility(log_fn)
 
+    if not adb.open_chapter_list(log_fn=lambda *_: None):
+        log_fn("ADB chưa đứng ở màn truyện hiện tại, thử tự mở truyện...")
+        if not adb.nav_to_book(book_name, log_fn):
+            adb.disable_accessibility()
+            return {
+                "success": False,
+                "ok": 0,
+                "fail": 0,
+                "reason": "ADB không mở được đúng truyện để fallback",
+            }
+        if not adb.open_chapter_list(log_fn):
+            adb.disable_accessibility()
+            return {
+                "success": False,
+                "ok": 0,
+                "fail": 0,
+                "reason": "ADB đã vào app nhưng không mở được danh sách chương",
+            }
+
     book_dir = output_dir / safe_name(book_name)
     book_dir.mkdir(parents=True, exist_ok=True)
 

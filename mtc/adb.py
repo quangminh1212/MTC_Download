@@ -1,5 +1,5 @@
 """adb.py – ADB controller for BlueStacks emulator (speed-optimized)."""
-import sys, re, time, subprocess, shutil, xml.etree.ElementTree as ET
+import sys, re, time, difflib, subprocess, shutil, xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Optional, List, Dict, Callable
 
@@ -67,6 +67,28 @@ class AdbController:
         self._pkg   = None
         self._w     = 0
         self._h     = 0
+
+    @staticmethod
+    def _extract_ui_size(xml_str: str) -> Optional[tuple]:
+        if not xml_str:
+            return None
+        try:
+            root = ET.fromstring(xml_str)
+        except ET.ParseError:
+            return None
+
+        max_x = 0
+        max_y = 0
+        for node in root.iter():
+            rect = _parse_bounds_rect(node.get("bounds", ""))
+            if not rect:
+                continue
+            max_x = max(max_x, rect[2])
+            max_y = max(max_y, rect[3])
+
+        if max_x > 0 and max_y > 0:
+            return max_x, max_y
+        return None
 
     # ── Low-level ─────────────────────────────────────────────────────────
     def _cmd(self, *args, timeout: int = 30) -> tuple:
@@ -202,12 +224,110 @@ class AdbController:
     def screen_size(self) -> tuple:
         if self._w and self._h:
             return self._w, self._h
+
+        ui_size = self._extract_ui_size(self.dump_ui())
+        if ui_size:
+            self._w, self._h = ui_size
+            return self._w, self._h
+
         m = re.search(r"(\d+)x(\d+)", self.sh("wm", "size"))
         if m:
             self._w, self._h = int(m.group(1)), int(m.group(2))
         else:
             self._w, self._h = 1080, 1920
         return self._w, self._h
+
+    def _main_tabs_visible(self, xml_str: str = "") -> bool:
+        texts = "\n".join(self.get_all_text(xml_str or self.dump_ui()))
+        return all(label in texts for label in ("Tủ Truyện", "Khám Phá", "Xếp Hạng", "Tài Khoản"))
+
+    def _find_bottom_tab_center(self, tab_index: int, xml_str: str = "") -> Optional[tuple]:
+        xml = xml_str or self.dump_ui()
+        try:
+            root = ET.fromstring(xml)
+        except ET.ParseError:
+            return None
+
+        marker = f"Tab {tab_index} trong tổng số 4"
+        for node in root.iter():
+            if node.get("clickable") != "true":
+                continue
+            desc = _clean_ui_text(node.get("content-desc", ""))
+            if marker not in desc:
+                continue
+            rect = _parse_bounds_rect(node.get("bounds", ""))
+            if rect:
+                return (rect[0] + rect[2]) // 2, (rect[1] + rect[3]) // 2
+        return None
+
+    def ensure_main_tabs(self, log_fn: Callable[[str], None] = print) -> bool:
+        if self._main_tabs_visible():
+            return True
+
+        pkg = self._pkg or self.get_installed_package()
+        if not pkg:
+            log_fn("⚠ Không tìm thấy package MTC để mở app")
+            return False
+
+        for attempt in range(2):
+            self.force_stop(pkg)
+            time.sleep(0.5)
+            self.launch(pkg)
+            time.sleep(1.6)
+            if self._main_tabs_visible():
+                return True
+            log_fn(f"⚠ Chưa về được màn hình chính (lượt {attempt + 1})")
+        return False
+
+    def open_explore_tab(self, log_fn: Callable[[str], None] = print) -> bool:
+        if not self.ensure_main_tabs(log_fn):
+            return False
+
+        center = self._find_bottom_tab_center(2)
+        if not center:
+            log_fn("⚠ Không tìm thấy tab Khám Phá")
+            return False
+
+        self.tap(*center)
+        time.sleep(0.8)
+        return True
+
+    def _find_header_buttons(self, xml_str: str = "") -> List[tuple]:
+        xml = xml_str or self.dump_ui()
+        try:
+            root = ET.fromstring(xml)
+        except ET.ParseError:
+            return []
+
+        buttons: List[tuple] = []
+        for node in root.iter():
+            if node.get("class") != "android.widget.Button":
+                continue
+            if node.get("clickable") != "true":
+                continue
+            rect = _parse_bounds_rect(node.get("bounds", ""))
+            if not rect or rect[1] > 140:
+                continue
+            desc = _clean_ui_text(node.get("content-desc", ""))
+            text = _clean_ui_text(node.get("text", ""))
+            buttons.append((rect, desc, text))
+        buttons.sort(key=lambda item: item[0][0])
+        return buttons
+
+    def open_search_screen(self, log_fn: Callable[[str], None] = print) -> bool:
+        if not self.open_explore_tab(log_fn):
+            return False
+
+        buttons = self._find_header_buttons()
+        blank_buttons = [item for item in buttons if not item[1] and not item[2]]
+        if len(blank_buttons) < 1:
+            log_fn("⚠ Không tìm thấy nút mở màn hình tìm kiếm")
+            return False
+
+        rect = blank_buttons[0][0]
+        self.tap((rect[0] + rect[2]) // 2, (rect[1] + rect[3]) // 2)
+        time.sleep(0.8)
+        return bool(self._parse_bounds(self.dump_ui(), "Tìm", exact=False))
 
     def tap(self, x: int, y: int) -> None:
         self.sh("input", "tap", str(x), str(y))
@@ -466,30 +586,24 @@ class AdbController:
     # ── MTC Navigation (speed-optimized) ──────────────────────────────────
     def nav_to_book(self, book_name: str,
                     log_fn: Callable[[str], None] = print) -> bool:
-        log_fn("Tìm search trong app...")
-        w, h = self.screen_size()
-        time.sleep(1.5)
+        log_fn("Mở màn hình tìm truyện...")
+        if not self.open_search_screen(log_fn):
+            return False
+
         dump = self.dump_ui()
+        center = self._parse_bounds(dump, "Tìm", exact=False)
+        if not center:
+            log_fn("⚠ Không tìm thấy ô tìm kiếm trong app")
+            return False
 
-        for label in ["Tìm kiếm", "Search", "search", "tìm"]:
-            if self.tap_text(label, dump) or self.tap_text_partial(label, dump):
-                time.sleep(0.5)
-                break
-        else:
-            self.tap(w - 80, 80); time.sleep(0.5)
-
+        self.tap(*center)
+        time.sleep(0.2)
         log_fn(f"Tìm: {book_name}")
         self.type_text(book_name)
-        self.sh("input", "keyevent", str(KEY_ENTER))
-        time.sleep(1.5)
+        time.sleep(1.2)
 
         dump2 = self.dump_ui()
-        if self.tap_text(book_name, dump2):
-            time.sleep(NAV_DELAY); return True
-        for t in self.get_all_text(dump2):
-            if book_name[:6].lower() in t.lower() and self.tap_text(t, dump2):
-                time.sleep(NAV_DELAY); return True
-        return False
+        return self._tap_book_result(book_name, dump2)
 
     def nav_to_chapter(self, chapter_index: int,
                        log_fn: Callable[[str], None] = print) -> bool:
@@ -559,8 +673,29 @@ class AdbController:
             "center": ((rect[0] + rect[2]) // 2, (rect[1] + rect[3]) // 2),
         }
 
-    def scan_visible_books(self, log_fn: Callable[[str], None] = print) -> List[Dict]:
-        xml = self.dump_ui()
+    def _tap_book_result(self, book_name: str, xml_str: str = "") -> bool:
+        query_key = self._book_key(book_name)
+        best = None
+        best_score = 0.0
+
+        for book in self.scan_visible_books(log_fn=lambda *_: None, xml_str=xml_str):
+            title_key = self._book_key(book["title"])
+            score = difflib.SequenceMatcher(None, query_key, title_key).ratio()
+            if query_key and (query_key in title_key or title_key in query_key):
+                score += 0.2
+            if score > best_score:
+                best = book
+                best_score = score
+
+        if not best or best_score < 0.65:
+            return False
+
+        self.tap(*best["center"])
+        time.sleep(NAV_DELAY)
+        return True
+
+    def scan_visible_books(self, log_fn: Callable[[str], None] = print, xml_str: str = "") -> List[Dict]:
+        xml = xml_str or self.dump_ui()
         if not xml:
             return []
 
