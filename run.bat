@@ -3,11 +3,11 @@ chcp 65001 >nul 2>&1
 setlocal EnableDelayedExpansion
 
 set DIR=%~dp0
-set PYTHON=%DIR%venv\Scripts\python.exe
+set PYTHON=%DIR%.venv\Scripts\python.exe
 
 if not exist "%PYTHON%" (
     echo [setup] Creating virtual environment...
-    python -m venv "%DIR%venv"
+    python -m venv "%DIR%.venv"
     echo [setup] Virtual environment ready.
 )
 

@@ -1,0 +1,63 @@
+============================================================
+Chương 13: Phân tích Benfica
+============================================================
+
+Về đến phòng làm việc, anh đóng cửa rồi gọi giao diện hệ thống ra trước mắt. Hồ sơ đối thủ kế tiếp hiện lên: Benfica.
+
+Màn hình nhảy ra lớp dữ liệu đầu tiên như một cái tát thẳng mặt. Tỷ lệ giữ bóng, số cú sút trung bình mỗi trận, tần suất xuyên phá nách hàng thủ, tốc độ chuyển trạng thái sau khi đoạt lại bóng, hiệu suất phản pressing trong 5 giây đầu sau khi mất bóng. Gần như ở mọi chỉ số quan trọng, Benfica đều hơn Naval một khoảng đủ rộng để biến mọi sự lạc quan thành trò cười nếu ai đó dám nhìn trận này bằng cảm xúc.
+
+Trần Phong không nhìn những con số ấy lâu. Anh mở băng hình. Clip đầu tiên là một pha triển khai bóng tưởng như bình thường từ giữa sân. Hai hậu vệ biên Benfica cùng dâng, tiền vệ trụ lùi xuống làm điểm nối. Một tiền đạo kéo trung vệ đối phương lệch vị trí, còn tiền vệ công lao thẳng vào khoảng trống vừa hở ra sau lưng. Ba đường chuyền, một pha xâm nhập, một cú dứt điểm.
+
+Clip thứ hai là một kiểu kết liễu khác. Benfica kéo khối đối phương nghiêng sang phải bằng vài nhịp phối hợp ngắn, rồi đảo cánh cực nhanh sang trái. Hậu vệ biên băng lên nhận bóng, trả ngược vào trong, bóng lại được nhả một chạm ra tuyến 2. Sút. Bàn thắng.
+
+Clip thứ ba còn đáng sợ hơn. Benfica mất bóng ở giữa sân, đối thủ vừa định xoay người phản công thì ba chiếc áo đỏ đã ập tới như bầy chó săn ngửi thấy máu. Không cho ngẩng đầu, không cho chỉnh bóng, không cho suy nghĩ. Chưa đầy 3 giây sau, bóng đã trở lại chân Benfica, còn đội kia thì tan luôn cơ hội thoát pressing.
+
+Trần Phong ngồi im trong thứ ánh sáng xanh lạnh của màn hình, một tay đặt lên đầu gậy gỗ mun, tay kia kéo từng đoạn băng chạy chậm lại. Anh không tìm cách đo khoảng cách giữa Naval và Benfica. Khoảng cách ấy quá rõ, không cần đo. Thứ anh tìm là vết nứt.
+
+12 phút sau, anh dừng lại ở một khoảnh khắc rất nhỏ. Benfica đang lên bóng ở cánh trái, hậu vệ biên dâng gần sát hàng công, tiền vệ lệch trái bó vào trong để tạo tam giác phối hợp. Bóng bị cắt. Trong đúng 2 giây đầu tiên của trạng thái chuyển đổi, phía sau lưng hậu vệ biên ấy hở ra một khoảng trống. Không lớn, không kéo dài, chỉ vừa đủ cho một đường phất chéo và một pha bứt tốc nếu người chuyền đủ nhanh, người chạy đủ quyết liệt, và người còn lại đủ tỉnh để không làm thừa một chạm.
+
+Anh mở tiếp 4 đoạn băng khác. Khoảng trống đó lại hiện ra. Không phải lần nào cũng có, không phải đội nào cũng chạm được vào, nhưng nó tồn tại. Một khe hở nhỏ nằm sau lưng thói quen dâng rất cao của Benfica, thứ chỉ xuất hiện trước khi lớp bọc thứ 2 kịp trượt sang che lại.
+
+Trần Phong tựa lưng vào ghế, mắt vẫn không rời màn hình. Benfica mạnh ở 3 thứ: độ rộng, người nhận bóng giữa 2 tuyến, và phản pressing. Họ kéo sân ra tối đa, buộc đối thủ giãn ngang rồi đâm vào khoảng giữa hậu vệ cánh và trung vệ như dao thọc vào khe xương sườn. Chỉ cần một cầu thủ của họ quay người được ở khu vực giữa tuyến tiền vệ và hàng thủ, cả khối phòng ngự đối phương sẽ co lại, mà một khi khối đã co thì 2 biên sẽ mở. Còn khi mất bóng, đó không phải lúc Benfica yếu nhất, mà là lúc chúng hung nhất.
+
+Không thể đá đôi công với họ. Không thể tranh quyền kiểm soát bóng. Không thể để Eriksen giữ bóng lâu ở trung lộ. Không thể để Suso hứng lên rồi ngoặt thêm một nhịp. Không thể dâng hàng thủ cao rồi tin rằng mình đủ nhanh để chạy đua với những pha đảo cánh của Benfica.
+
+Vậy chỉ còn một cách: chịu đòn, khóa trung lộ, dẫn Benfica ra biên, ép họ tạt trong tư thế bị kiểm soát, và khi đoạt được bóng thì phải đâm ngay vào khoảng trống sau lưng hậu vệ biên trước khi lớp bọc thứ 2 khép lại. Nghe thì đơn giản, nhưng thứ đơn giản nhất thường lại là thứ khó làm nhất, vì nó đòi hỏi kỷ luật tuyệt đối từ 11 con người trong suốt 90 phút.
+
+3 giờ sáng, đèn trong phòng làm việc vẫn còn sáng. Khi phần lớn đại bản doanh Naval đã chìm vào yên lặng, trên màn hình trước mặt Trần Phong chỉ còn lại 2 sơ đồ. Sơ đồ thứ 1 là của Benfica: 2 biên mở rộng, tuyến 2 lao lên như lưỡi dao thứ 2, cả đội co bóp không gian bằng nhịp ép sân chính xác đến lạnh người. Sơ đồ thứ 2 là thứ anh muốn Naval trở thành trong trận này: một khối thấp, hẹp, xấu xí, lì lợm, sẵn sàng nhường mọi thứ trừ khoảng trước mặt khung thành.
+
+Sáng hôm sau, buổi tập kín bắt đầu sớm hơn thường lệ. Không khí trên sân phụ nặng như thép. Chuỗi 5 vòng hồi sinh vừa qua không còn để lại chút hưng phấn dư thừa nào. Sau cú vấp trước Rio Ave rồi bật lại bằng 2 chiến thắng nữa, cả đội đã đủ hiểu rằng chỉ cần thả lỏng nửa nhịp thôi, mọi thứ sẽ gãy ngay lập tức.
+
+Tấm bảng chiến thuật dựng giữa sân, gió sớm thổi lật mép giấy phành phạch. Trần Phong đứng cạnh bảng, gậy gỗ mun đặt thẳng xuống nền cỏ. Anh không mở đầu bằng những câu kích động rỗng tuếch, không có "cứ chơi hết mình" không có "đừng sợ họ" cũng không có lấy 1 lời nói về tinh thần kiểu dễ nghe. Anh chỉ gõ đầu gậy xuống mép bảng 3 cái.
+
+Cộc. Cộc. Cộc.
+
+"Benfica không cần các cậu sai nhiều."
+
+Cả đội im lặng.
+
+"Họ chỉ cần các cậu sai 1 lần."
+
+Anh xoay bảng lại. Sơ đồ đội hình Benfica hiện ra, những mũi tên đỏ đan chằng chịt như mạng nhện. "Họ mạnh ở 2 biên. Họ mạnh ở khoảng giữa 2 tuyến. Họ mạnh nhất ở khoảnh khắc các cậu vừa cướp được bóng mà còn chưa kịp nghĩ mình phải làm gì tiếp theo." Đầu gậy chỉ vào khoảng trước mặt hàng thủ Naval. "Khu vực này là thứ duy nhất không được mở." Rồi chuyển sang 2 nách hàng thủ. "Họ sẽ cố đâm vào đây cả trận." Sau cùng, đầu gậy trượt ra khoảng không phía sau lưng hậu vệ biên Benfica trên sơ đồ đối diện. "Và đây là chỗ chúng ta đâm lại."
+
+Một vài ánh mắt trong đội thay đổi hẳn. Không còn là ánh mắt bị tên tuổi Benfica đè nặng, mà là ánh mắt của những người vừa được cho thấy rằng bức tường trước mặt mình, dù lớn đến đâu, vẫn có chỗ để đặt mũi dao vào. Trần Phong gọi Van Dijk lên trước. "Cậu là người khóa nhịp đầu tiên. Nếu tiền đạo của họ lùi xuống, cậu không lao theo vô điều kiện. Cậu giữ hàng. Chỉ bước lên khi tuyến giữa đã khóa được đường bật nhả tiếp theo. Tôi không cần cậu thắng mọi pha bóng. Tôi cần cậu không phá cấu trúc." Van Dijk gật đầu.
+
+Đầu gậy chuyển sang tiền vệ trụ. "Việc của cậu không phải cướp bóng đẹp. Việc của cậu là đứng đúng chỗ để người nhận bóng của họ không quay người nổi." Rồi sang Suso. "Cậu sẽ chạy nhiều hơn rê." Suso hơi nhíu mày, nhưng không cãi. "Ở trung lộ, 2 chạm là giới hạn. Chạm thứ 3 của cậu trước Benfica thường cũng là lúc bóng biến mất." Anh nhìn tiếp sang Eriksen. "Cậu là nhát cắt đầu tiên khi chúng ta ra bóng. Nhận được là chuyền. Không ngắm. Không vuốt. Không dựng bóng lên để nghĩ xem mình muốn đẹp đến đâu." Eriksen cười rất nhạt. Anh biết đó là sự thật.
+
+Cuối cùng, Trần Phong gọi Mané và Icardi đứng vào vị trí trên bảng. "Sadio, cậu xuất phát rộng hơn thường lệ. Khi bóng tới chân Eriksen, cậu đã phải bắt đầu chạy." Đầu gậy chọc vào khoảng sau lưng hậu vệ biên Benfica. "Không chờ thấy bóng mới chạy. Chạy trước để ép họ quay đầu." Anh quay sang Icardi. "Cậu không đứng chết giữa 2 trung vệ nữa. Cậu nghiêng sang khoảng giữa trung vệ lệch phải và hậu vệ biên. Khi Mané đâm vào sau lưng, cậu cắt vào cột gần. Nếu họ co lại, cậu giật ra chấm 11 m. Nếu bóng bật ra, dứt điểm 1 chạm." Icardi nhìn lên sơ đồ thêm 1 lần rồi gật đầu.
+
+Trần Phong lùi lại nửa bước. "Nghe cho rõ. Chúng ta không đến đó để chơi đẹp hơn họ. Chúng ta cũng không đến đó để giữ bóng nhiều hơn họ. Chúng ta đến đó để bắt họ phải khó chịu." Không ai lên tiếng. "Benfica quen thắng những đội cúi đầu trước khi bóng lăn. Vậy thì trận này, việc đầu tiên các cậu phải làm là khiến họ hiểu mình sẽ phải đá đủ 90 phút."
+
+Buổi tập chiến thuật sau đó bị xé nhỏ đến mức gần như tàn nhẫn. 10 phút chỉ để tập cách lùi đồng thời khi bóng được rót vào nách giữa trung vệ và hậu vệ cánh. 15 phút chỉ để tập đường thoát pressing đầu tiên: trung vệ lên Eriksen, Eriksen mở chéo cho Mané, Mané đẩy tiếp 1 chạm. 20 phút chỉ để tập chuyện nghe có vẻ nhỏ nhất: sau khi phá được bóng, ai là người giữ vị trí để khối đội hình không gãy ra làm đôi.
+
+Không ai được phép thả lỏng. Chỉ 1 lần Suso giữ bóng thừa nửa nhịp ở giữa sân, Trần Phong đã thổi còi cắt ngang buổi tập.
+
+"Làm lại."
+
+Suso quăng tay, hơi bực. "Em vẫn giữ được mà."
+
+Trần Phong nhìn thẳng vào anh. "Trước Benfica, thứ cậu vừa gọi là giữ được chỉ là chưa chết ngay."
+
+Không khí trên sân phụ đông cứng lại. Suso không cãi nữa.
+
+Đến cuối buổi tập, áo tập của cả đội ướt sũng, còn sơ đồ trên bảng chiến thuật đã dày đặc những vết gạch chằng chịt như vết mổ. Trần Phong nhìn từng người 1 lần cuối. "Trận này có thể các cậu vẫn thua." Không ai đổi nét mặt. "Nhưng nếu thua mà đá đúng, các cậu sẽ học được cách tồn tại trước những đội như thế." Anh siết đầu gậy. "Còn nếu thua vì tự quên mình là ai, tôi sẽ giết các cậu trước khi Benfica kịp làm việc đó.".

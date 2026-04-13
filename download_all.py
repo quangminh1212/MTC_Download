@@ -24,7 +24,7 @@ from mtc.config import OUTPUT_DIR
 
 
 ROOT_DIR = Path(__file__).resolve().parent
-CATALOG_PATH = ROOT_DIR / "all_books.json"
+CATALOG_PATH = ROOT_DIR / "data" / "all_books.json"
 
 
 def log(msg: str):

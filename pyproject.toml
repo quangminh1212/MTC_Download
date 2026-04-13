@@ -5,17 +5,17 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mtc_download"
 version = "1.0.0"
-description = "MTC/NovelFever downloader and APK analysis toolkit for BlueStacks/ADB."
+description = "MTC/NovelFever novel downloader via ADB + BlueStacks automation."
 readme = "README.md"
 requires-python = ">=3.10"
-keywords = ["mtc", "novelfever", "download", "apk", "adb", "frida", "pycryptodome"]
+keywords = ["mtc", "novelfever", "download", "adb", "bluestacks"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
-    "Topic :: Security :: Cryptography",
     "Topic :: Utilities",
+    "Environment :: Console",
 ]
 
 dependencies = [
@@ -27,3 +27,17 @@ dependencies = [
 
 [project.optional-dependencies]
 frida = ["frida>=16.1.0"]
+dev   = ["pytest>=8.0", "pytest-timeout>=2.3"]
+
+[project.scripts]
+mtc-download = "download_all:main"
+mtc-export   = "export_all:main"
+mtc-batch    = "api_batch:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mtc*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
