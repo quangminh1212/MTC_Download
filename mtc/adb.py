@@ -589,9 +589,10 @@ class AdbController:
 
         # === Single subprocess: taps + sleeps + dump + cat ===
         # Close-menu tap overlaps with uiautomator dump (no sleep between).
+        # Timing: 0.15/0.15 tested 10/10 reliable at ~2.1s/chapter.
         all_in_one = (
-            f"input tap {mx} {my}; sleep 0.2; "
-            f"input tap {nx} {ny}; sleep 0.25; "
+            f"input tap {mx} {my}; sleep 0.15; "
+            f"input tap {nx} {ny}; sleep 0.15; "
             f"input tap {cx} {cy}; "
             "uiautomator dump --compressed /sdcard/_ui.xml >/dev/null 2>&1; "
             "cat /sdcard/_ui.xml"
@@ -885,6 +886,32 @@ class AdbController:
         if not best or best_score < 0.65:
             return False
 
+        self.tap(*best["center"])
+        time.sleep(NAV_DELAY)
+        return True
+
+    def tap_library_book(self, book_name: str,
+                         log_fn: Callable[[str], None] = print) -> bool:
+        """From Library screen, find and tap a book by name → novel detail page."""
+        xml = self.dump_ui()
+        texts = self.get_all_text(xml)
+        if not any("Tủ Truyện" in t for t in texts):
+            return False  # Not on Library
+        books = self.scan_visible_library_books(log_fn=lambda *_: None, xml_str=xml)
+        if not books:
+            return False
+        query_key = self._book_key(book_name)
+        best, best_score = None, 0.0
+        for book in books:
+            title_key = self._book_key(book["title"])
+            score = difflib.SequenceMatcher(None, query_key, title_key).ratio()
+            if query_key and (query_key in title_key or title_key in query_key):
+                score += 0.2
+            if score > best_score:
+                best, best_score = book, score
+        if not best or best_score < 0.5:
+            return False
+        log_fn(f"  Tap '{best['title']}' từ Tủ Truyện...")
         self.tap(*best["center"])
         time.sleep(NAV_DELAY)
         return True

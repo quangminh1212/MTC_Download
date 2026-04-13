@@ -869,20 +869,26 @@ def download_via_adb(
     try:
         if not adb.open_chapter_list(log_fn=lambda *_: None):
             log_fn("ADB chưa đứng ở màn truyện hiện tại, thử tự mở truyện...")
-            if not adb.nav_to_book(book_name, log_fn):
-                return {
-                    "success": False,
-                    "ok": 0,
-                    "fail": 0,
-                    "reason": "ADB không mở được đúng truyện để bắt đầu tải",
-                }
-            if not adb.open_chapter_list(log_fn):
-                return {
-                    "success": False,
-                    "ok": 0,
-                    "fail": 0,
-                    "reason": "ADB đã vào app nhưng không mở được danh sách chương",
-                }
+            # Try Library screen first (fast path)
+            opened = False
+            if adb.tap_library_book(book_name, log_fn):
+                opened = adb.open_chapter_list(log_fn=lambda *_: None)
+            # Fallback to search
+            if not opened:
+                if not adb.nav_to_book(book_name, log_fn):
+                    return {
+                        "success": False,
+                        "ok": 0,
+                        "fail": 0,
+                        "reason": "ADB không mở được đúng truyện để bắt đầu tải",
+                    }
+                if not adb.open_chapter_list(log_fn):
+                    return {
+                        "success": False,
+                        "ok": 0,
+                        "fail": 0,
+                        "reason": "ADB đã vào app nhưng không mở được danh sách chương",
+                    }
 
         book_dir = output_dir / safe_name(book_name)
         book_dir.mkdir(parents=True, exist_ok=True)
