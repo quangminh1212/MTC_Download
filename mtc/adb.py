@@ -796,10 +796,27 @@ class AdbController:
         time.sleep(0.2)
         log_fn(f"Tìm: {book_name}")
         self.type_text(book_name)
-        time.sleep(1.2)
+        time.sleep(1.8)
 
         dump2 = self.dump_ui()
-        return self._tap_book_result(book_name, dump2)
+        if self._tap_book_result(book_name, dump2):
+            return True
+
+        # Flutter renders search results on canvas — not in accessibility tree.
+        # Fallback: tap the first grid cell by coordinate (top-left result).
+        log_fn("↪ Kết quả không accessible, thử tọa độ lưới đầu tiên...")
+        w, h = self.screen_size()
+        # First grid item center: ~15% from left, ~10.5% from top (900×1600 measured)
+        fx = int(w * 0.15)
+        fy = int(h * 0.105)
+        self.tap(fx, fy)
+        time.sleep(NAV_DELAY)
+        meta = self.get_book_detail_meta()
+        if meta.get("read_center"):
+            log_fn(f"✓ Mở sách tại ({fx},{fy})")
+            return True
+        log_fn("✗ Tọa độ lưới không dẫn đến trang chi tiết sách")
+        return False
 
     def nav_to_chapter(self, chapter_index: int,
                        log_fn: Callable[[str], None] = print) -> bool:
