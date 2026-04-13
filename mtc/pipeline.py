@@ -1,7 +1,8 @@
 """pipeline.py – Download orchestrator via ADB/BlueStacks only."""
+import re
 import time
 from pathlib import Path
-from typing import Callable, Dict, Optional
+from typing import Callable, Dict, List, Optional, Tuple
 
 from .config import OUTPUT_DIR
 from .adb import AdbController
@@ -39,6 +40,190 @@ def _find_existing_chapter_file(book_dir: Path, chapter_index: int) -> Optional[
     for path in candidates:
         return path
     return None
+
+
+def _collect_legacy_chapter_indexes(book_dir: Path) -> List[int]:
+    chapter_indexes: List[int] = []
+    for path in sorted(book_dir.glob("*.txt")):
+        match = re.fullmatch(r"(\d{6})_Chuong_(\d+)\.txt", path.name, re.IGNORECASE)
+        if not match:
+            continue
+        chapter_indexes.append(int(match.group(2)))
+    return sorted(set(chapter_indexes))
+
+
+def _compact_chapter_ranges(chapter_indexes: List[int]) -> List[Tuple[int, int]]:
+    if not chapter_indexes:
+        return []
+
+    ranges: List[Tuple[int, int]] = []
+    start = chapter_indexes[0]
+    prev = chapter_indexes[0]
+    for chapter_index in chapter_indexes[1:]:
+        if chapter_index == prev + 1:
+            prev = chapter_index
+            continue
+        ranges.append((start, prev))
+        start = prev = chapter_index
+    ranges.append((start, prev))
+    return ranges
+
+
+def _delete_book_full_files(book_dir: Path, log_fn: Callable[[str], None] = print) -> int:
+    removed = 0
+    for full_file in sorted(book_dir.glob("*_FULL.txt")):
+        try:
+            full_file.unlink()
+            removed += 1
+            log_fn(f"Xóa file cũ: {full_file.name}")
+        except OSError as exc:
+            log_fn(f"⚠ Không xóa được {full_file.name}: {exc}")
+    return removed
+
+
+def upgrade_existing_downloads(
+    adb: AdbController,
+    output_dir: Path = OUTPUT_DIR,
+    log_fn: Callable[[str], None] = print,
+    stop_flag: Callable[[], bool] = lambda: False,
+    progress_cb: Optional[Callable[[int, int], None]] = None,
+) -> Dict:
+    if not adb or not adb.device:
+        return {"success": False, "reason": "Cần BlueStacks/ADB để nâng cấp file chapter cũ"}
+
+    if not output_dir.exists():
+        return {"success": False, "reason": f"Không thấy thư mục output: {output_dir}"}
+
+    book_dirs = sorted(path for path in output_dir.iterdir() if path.is_dir())
+    migration_plan = []
+    deleted_full = 0
+
+    for book_dir in book_dirs:
+        deleted_full += _delete_book_full_files(book_dir, log_fn)
+        legacy_indexes = _collect_legacy_chapter_indexes(book_dir)
+        if legacy_indexes:
+            migration_plan.append(
+                {
+                    "book_dir": book_dir,
+                    "book_name": book_dir.name,
+                    "legacy_indexes": legacy_indexes,
+                    "ranges": _compact_chapter_ranges(legacy_indexes),
+                }
+            )
+
+    if not migration_plan:
+        reason = "Không còn file chapter kiểu cũ; chỉ dọn file _FULL xong"
+        log_fn(reason)
+        return {
+            "success": True,
+            "books_total": 0,
+            "books_upgraded": 0,
+            "books_failed": 0,
+            "chapters_upgraded": 0,
+            "chapters_failed": 0,
+            "full_deleted": deleted_full,
+            "failed_books": [],
+            "reason": reason,
+        }
+
+    total_books = len(migration_plan)
+    books_upgraded = 0
+    books_failed = 0
+    chapters_upgraded = 0
+    chapters_failed = 0
+    failed_books: List[str] = []
+
+    log_fn(
+        f"Chuẩn bị nâng cấp {sum(len(item['legacy_indexes']) for item in migration_plan)} chapter cũ "
+        f"của {total_books} truyện"
+    )
+
+    for book_pos, item in enumerate(migration_plan, start=1):
+        if stop_flag():
+            break
+
+        book_name = item["book_name"]
+        ranges = item["ranges"]
+        remaining_chapters = sum(end - start + 1 for start, end in ranges)
+        book_failed = False
+
+        if progress_cb:
+            progress_cb(book_pos - 1, total_books)
+
+        log_fn(
+            f"[{book_pos}/{total_books}] {book_name}: "
+            f"{len(item['legacy_indexes'])} chapter cũ, {len(ranges)} lượt đọc lại"
+        )
+
+        for range_pos, (ch_start, ch_end) in enumerate(ranges, start=1):
+            if stop_flag():
+                break
+
+            if not adb.open_library_book(book_name, log_fn=log_fn):
+                failed_books.append(book_name)
+                books_failed += 1
+                chapters_failed += remaining_chapters
+                book_failed = True
+                break
+
+            log_fn(f"  [{range_pos}/{len(ranges)}] Nâng cấp ch{ch_start}-{ch_end}")
+            range_total = ch_end - ch_start + 1
+            result = download_via_adb(
+                adb=adb,
+                book_name=book_name,
+                ch_start=ch_start,
+                ch_end=ch_end,
+                output_dir=output_dir,
+                log_fn=log_fn,
+                stop_flag=stop_flag,
+            )
+            ok_count = result.get("ok", 0)
+            fail_count = result.get("fail", 0)
+            accounted = ok_count + fail_count
+            missing_count = max(range_total - accounted, 0) if not result.get("success") else 0
+
+            chapters_upgraded += ok_count
+            chapters_failed += fail_count + missing_count
+            remaining_chapters -= range_total
+
+            adb.return_to_library(log_fn)
+
+            if not result.get("success"):
+                failed_books.append(book_name)
+                books_failed += 1
+                book_failed = True
+                break
+
+        if not book_failed:
+            books_upgraded += 1
+
+    if progress_cb:
+        progress_cb(total_books, total_books)
+
+    success = books_failed == 0 and chapters_failed == 0
+    if success:
+        reason = (
+            f"Đã nâng cấp {chapters_upgraded} chapter cũ của {books_upgraded} truyện "
+            f"và xóa {deleted_full} file _FULL"
+        )
+    else:
+        reason = (
+            f"Đã nâng cấp {chapters_upgraded} chapter, lỗi {chapters_failed} chapter, "
+            f"xóa {deleted_full} file _FULL"
+        )
+
+    log_fn(reason)
+    return {
+        "success": success,
+        "books_total": total_books,
+        "books_upgraded": books_upgraded,
+        "books_failed": books_failed,
+        "chapters_upgraded": chapters_upgraded,
+        "chapters_failed": chapters_failed,
+        "full_deleted": deleted_full,
+        "failed_books": failed_books,
+        "reason": reason,
+    }
 
 
 def download_book(
@@ -225,6 +410,9 @@ def download_via_adb(
 
         book_dir = output_dir / safe_name(book_name)
         book_dir.mkdir(parents=True, exist_ok=True)
+        removed_full = _delete_book_full_files(book_dir, log_fn=lambda *_: None)
+        if removed_full:
+            log_fn(f"Đã xóa {removed_full} file _FULL cũ trong {book_dir.name}")
 
         if ch_end is None:
             ch_end = ch_start + 9999

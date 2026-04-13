@@ -915,6 +915,55 @@ class AdbController:
 
         return all_books[:max_items]
 
+    def open_library_book(
+        self,
+        book_name: str,
+        max_scrolls: int = 40,
+        log_fn: Callable[[str], None] = print,
+    ) -> Optional[Dict]:
+        if not self.open_library_tab(log_fn):
+            return None
+
+        query_key = self._book_key(book_name)
+        seen_pages = set()
+        stagnant_rounds = 0
+
+        for round_idx in range(max_scrolls):
+            xml = self.dump_ui()
+            visible_books = self.scan_visible_library_books(log_fn=lambda *_: None, xml_str=xml)
+            best = None
+            best_score = 0.0
+
+            for book in visible_books:
+                title_key = book.get("key") or self._book_key(book.get("title", ""))
+                score = difflib.SequenceMatcher(None, query_key, title_key).ratio()
+                if query_key and (query_key in title_key or title_key in query_key):
+                    score += 0.2
+                if score > best_score:
+                    best = book
+                    best_score = score
+
+            if best and best_score >= 0.70:
+                log_fn(f"Mở từ Tủ Truyện: {best['title']}")
+                self.tap(*best["center"])
+                time.sleep(1.1)
+                return best
+
+            page_signature = tuple(book["key"] for book in visible_books)
+            if page_signature in seen_pages:
+                stagnant_rounds += 1
+                if stagnant_rounds >= 2:
+                    break
+            else:
+                seen_pages.add(page_signature)
+                stagnant_rounds = 0
+
+            log_fn(f"Quét Tủ Truyện để mở truyện: lượt {round_idx + 1}")
+            self.swipe_up()
+
+        log_fn(f"⚠ Không tìm thấy truyện trong Tủ Truyện: {book_name}")
+        return None
+
     def get_book_detail_meta(self, xml_str: str = "") -> Dict:
         xml = xml_str or self.dump_ui()
         texts = self.get_all_text(xml)
