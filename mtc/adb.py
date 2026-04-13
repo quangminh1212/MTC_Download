@@ -408,6 +408,24 @@ class AdbController:
                 str(mx), str(int(h * 0.75)), str(mx), str(int(h * 0.25)), "150")
         time.sleep(SCROLL_DELAY)
 
+    def swipe_down(self) -> None:
+        """Scroll content DOWN (reveal items above current view)."""
+        w, h = self.screen_size()
+        mx = w // 2
+        self.sh("input", "swipe",
+                str(mx), str(int(h * 0.25)), str(mx), str(int(h * 0.75)), "150")
+        time.sleep(SCROLL_DELAY)
+
+    def scroll_to_top(self, max_swipes: int = 15) -> None:
+        """Scroll to the top of the current scrollable view."""
+        prev_xml = ""
+        for _ in range(max_swipes):
+            self.swipe_down()
+            xml = self.dump_ui()
+            if xml == prev_xml:
+                break
+            prev_xml = xml
+
     def type_text(self, text: str) -> None:
         self.sh("input", "text", text.replace(" ", "%s").replace("'", "\\'"))
 
@@ -886,6 +904,9 @@ class AdbController:
         if not self.open_library_tab(log_fn):
             return []
 
+        # Scroll to top first to ensure we start from the beginning
+        self.scroll_to_top(max_swipes=10)
+
         all_books: List[Dict] = []
         seen = set()
         stagnant_rounds = 0
@@ -923,6 +944,9 @@ class AdbController:
     ) -> Optional[Dict]:
         if not self.open_library_tab(log_fn):
             return None
+
+        # Scroll to top first to ensure we search from the beginning
+        self.scroll_to_top(max_swipes=10)
 
         query_key = self._book_key(book_name)
         seen_pages = set()
