@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:drawable="@drawable/gmts_button_bg_radius" android:insetTop="@dimen/gmts_padding_content_small" android:insetBottom="@dimen/gmts_padding_content_small"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

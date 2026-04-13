@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:paddingTop="@dimen/gmts_padding_outer_default" android:paddingBottom="@dimen/gmts_padding_outer_default" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textAppearance="@style/gmts_FontNativeAssetsHeadline" android:id="@id/gmts_title_text" android:paddingBottom="@dimen/gmts_padding_outer_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/gmts_retrieved_assets" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:textAppearance="@style/gmts_FontNativeAssets" android:id="@id/gmts_detail_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/gmts_native_image" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/gmts_title_text" />
+</androidx.constraintlayout.widget.ConstraintLayout>

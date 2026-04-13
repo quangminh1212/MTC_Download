@@ -182,3 +182,7 @@ test_output/
 
 # Download progress tracking files
 .progress.json
+
+# Local Frida server binary downloaded on demand
+frida-server
+frida-server.xz

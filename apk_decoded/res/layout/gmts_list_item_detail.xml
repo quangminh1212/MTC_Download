@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/gmts_CardView.Padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout android:paddingLeft="@dimen/gmts_padding_outer_default" android:paddingTop="@dimen/gmts_padding_outer_small" android:paddingBottom="@dimen/gmts_caption_padding_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/gmts_padding_outer_default"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:gravity="left" android:layout_gravity="left" android:orientation="horizontal" android:id="@id/gmts_details_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <CheckBox android:id="@id/gmts_checkbox" android:paddingRight="@dimen/gmts_padding_outer_small" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingEnd="@dimen/gmts_padding_outer_small" android:buttonTint="@drawable/gmts_cb_selector" />
+            <LinearLayout android:gravity="left" android:layout_gravity="left" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView android:textAppearance="@style/gmts_FontHeadline2" android:id="@id/gmts_title_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="MoPub" />
+                <androidx.appcompat.widget.AppCompatTextView android:textAppearance="@style/gmts_FontHeadline4" android:id="@id/gmts_detail_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/gmts_compatible_with_format_ads" />
+                <com.google.android.flexbox.FlexboxLayout android:orientation="horizontal" android:id="@id/gmts_captions_container" android:layout_width="fill_parent" android:layout_height="wrap_content" app:alignContent="flex_start" app:alignItems="flex_start" app:flexWrap="wrap" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

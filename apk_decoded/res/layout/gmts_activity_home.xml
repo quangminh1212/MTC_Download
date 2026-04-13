@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/gmts_main_content" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:theme="@style/gmts_AppTheme.AppBarOverlay" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/gmts_AppTheme.AppBarOverlay" android:id="@id/gmts_main_toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/gmts_AppTheme.PopupOverlay" />
+        <com.google.android.material.tabs.TabLayout android:id="@id/gmts_tab" android:layout_width="fill_parent" android:layout_height="wrap_content" app:tabIndicatorColor="@color/gmts_light_text" app:tabIndicatorFullWidth="true" app:tabIndicatorGravity="bottom" app:tabIndicatorHeight="1.0dip" app:tabTextAppearance="@style/gmts_FontHeadline3" app:tabTextColor="@color/gmts_light_text" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/gmts_content_main" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

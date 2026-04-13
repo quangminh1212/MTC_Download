@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="@dimen/gmts_padding_outer_large" android:insetRight="@dimen/gmts_padding_outer_large" android:insetTop="@dimen/gmts_padding_outer_large" android:insetBottom="@dimen/gmts_padding_outer_large"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="rectangle">
+        <solid android:color="@android:color/white" />
+    </shape>
+</inset>
