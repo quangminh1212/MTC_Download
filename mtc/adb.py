@@ -431,21 +431,26 @@ class AdbController:
 
     # ── UIAutomator (speed-optimized) ─────────────────────────────────────
     def dump_ui(self) -> str:
-        """Dump UI XML using the fastest working transport and retry on transient failures."""
+        """Dump UI XML – shell combined command first (fastest on BlueStacks)."""
         self.ensure_device()
 
         for attempt in range(2):
+            # Shell dump+cat in one call (~150ms, reliable)
             out, err = self._cmd(
-                "exec-out", "uiautomator", "dump", "--compressed", "/dev/tty",
+                "shell",
+                "uiautomator dump --compressed /sdcard/_ui.xml >/dev/null 2>&1; cat /sdcard/_ui.xml",
                 timeout=8,
             )
             merged = (out or "") + (err or "")
             if "<hierarchy" in merged:
                 return _normalize_xml_dump(merged)
 
-            self._cmd("shell", "uiautomator", "dump", "--compressed", "/sdcard/_ui.xml", timeout=8)
-            file_out, file_err = self._cmd("shell", "cat", "/sdcard/_ui.xml", timeout=8)
-            merged = (file_out or "") + (file_err or "")
+            # Fallback: exec-out (unreliable on some BlueStacks builds)
+            out, err = self._cmd(
+                "exec-out", "uiautomator", "dump", "--compressed", "/dev/tty",
+                timeout=8,
+            )
+            merged = (out or "") + (err or "")
             if "<hierarchy" in merged:
                 return _normalize_xml_dump(merged)
 
@@ -557,6 +562,32 @@ class AdbController:
 
         log_fn("  Fast next thất bại, sẽ fallback sang mở danh sách chương")
         return False
+
+    def turbo_advance_and_read(self, log_fn: Callable[[str], None] = print) -> Optional[Dict]:
+        """Advance to next chapter AND read content in one fast pass (~0.6s).
+
+        Combines open_menu → tap_next → close_menu → single dump → extract.
+        Returns payload dict or None on failure.
+        """
+        self.reader_open_menu()
+        time.sleep(0.1)
+        self.tap(*self._reader_nav_point("next"))
+        time.sleep(0.2)
+        self.reader_close_menu()
+        time.sleep(0.1)
+
+        for retry in range(3):
+            xml = self.dump_ui()
+            if self._reader_menu_visible(xml):
+                self.reader_close_menu()
+                time.sleep(0.1)
+                xml = self.dump_ui()
+            payload = self._extract_reader_payload(xml)
+            if payload and len(payload.get("text", "")) >= 50:
+                return payload
+            if retry < 2:
+                time.sleep(0.25)
+        return None
 
     @staticmethod
     def _chapter_list_visible(texts: List[str]) -> bool:

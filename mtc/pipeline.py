@@ -896,7 +896,8 @@ def download_via_adb(
         total = ch_end - ch_start + 1
         n_ok = 0
         n_fail = 0
-        in_reader = False  # Track if we've actually entered the reader
+        in_reader = False
+        last_read_ch = None  # Track last chapter read for turbo gap detection
 
         for ch_idx in range(ch_start, ch_end + 1):
             if stop_flag():
@@ -913,7 +914,27 @@ def download_via_adb(
                 n_ok += 1
                 continue
 
-            if not in_reader:
+            payload = None
+
+            # Turbo path: consecutive chapter while already in reader
+            if in_reader and last_read_ch is not None and ch_idx == last_read_ch + 1:
+                log_fn(f"  [ch{ch_idx}] Turbo...")
+                payload = adb.turbo_advance_and_read(log_fn)
+                if payload:
+                    log_fn(f"  Turbo ✔ {payload.get('title', '')}")
+                else:
+                    log_fn(f"  [ch{ch_idx}] Turbo fail, fallback nav...")
+                    if not adb.nav_to_chapter(ch_idx, log_fn):
+                        log_fn(f"  [ch{ch_idx}] ⚠ Không tìm thấy chương")
+                        n_fail += 1
+                        in_reader = False
+                        if n_fail >= 5:
+                            log_fn("Quá nhiều lỗi điều hướng. Dừng.")
+                            break
+                        continue
+                    payload = adb.read_current_chapter_payload(log_fn)
+            else:
+                # First chapter or gap – use full navigation
                 log_fn(f"  [ch{ch_idx}] Điều hướng tới chương {ch_idx}...")
                 if not adb.nav_to_chapter(ch_idx, log_fn):
                     log_fn(f"  [ch{ch_idx}] ⚠ Không tìm thấy chương")
@@ -923,19 +944,7 @@ def download_via_adb(
                         break
                     continue
                 in_reader = True
-            else:
-                log_fn(f"  [ch{ch_idx}] Chuyển chương nhanh...")
-                if not adb.reader_next_chapter(log_fn):
-                    log_fn(f"  [ch{ch_idx}] ⚠ Chuyển chương nhanh lỗi, thử fallback")
-                    if not adb.nav_to_chapter(ch_idx, log_fn):
-                        log_fn(f"  [ch{ch_idx}] ⚠ Không tìm thấy chương")
-                        n_fail += 1
-                        if n_fail >= 5:
-                            log_fn("Quá nhiều lỗi điều hướng. Dừng.")
-                            break
-                        continue
-
-            payload = adb.read_current_chapter_payload(log_fn)
+                payload = adb.read_current_chapter_payload(log_fn)
             text = (payload.get("text") or "").strip()
             chapter_title = (payload.get("title") or f"Chương {ch_idx}").strip()
             ch_file = book_dir / f"{ch_idx:06d}_{safe_name(chapter_title)}.txt"
@@ -951,6 +960,7 @@ def download_via_adb(
                     existing_file.unlink()
                 log_fn(f"  [ch{ch_idx}] ✔ {ch_file.name} ({len(text)} ký tự)")
                 n_ok += 1
+                last_read_ch = ch_idx
 
             if ch_idx == ch_end:
                 adb.go_back(2)
