@@ -4,21 +4,12 @@ setlocal EnableDelayedExpansion
 
 set DIR=%~dp0
 set PYTHON=%DIR%venv\Scripts\python.exe
-set PIP=%DIR%venv\Scripts\pip.exe
 
 if not exist "%PYTHON%" (
     echo [setup] Creating virtual environment...
     python -m venv "%DIR%venv"
-    echo [setup] Installing packages...
-    "%PIP%" install requests pycryptodome ftfy -q
-    echo [setup] Done.
+    echo [setup] Virtual environment ready.
 )
-
-"%PYTHON%" -c "import requests, Crypto, ftfy" 2>nul || (
-    "%PIP%" install requests pycryptodome ftfy -q
-)
-
-
 
 echo.
 echo  ========================================
