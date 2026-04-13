@@ -307,6 +307,7 @@ class AdbController:
 
         query = _clean_ui_text(text)
         query_key = query.casefold()
+        query_norm = self._book_key(query)
         for node in root.iter():
             if node.get("clickable") != "true":
                 continue
@@ -316,9 +317,15 @@ class AdbController:
                 _clean_ui_text(node.get("content-desc", "")),
             )
             if exact:
-                match = any(value == query for value in values)
+                match = any(
+                    value == query or (query_norm and self._book_key(value) == query_norm)
+                    for value in values if value
+                )
             else:
-                match = any(query_key in value.casefold() for value in values if value)
+                match = any(
+                    query_key in value.casefold() or (query_norm and query_norm in self._book_key(value))
+                    for value in values if value
+                )
             if not match:
                 continue
 
@@ -1175,33 +1182,45 @@ class AdbController:
         return all_books[:max_items]
 
     # ── Text Extraction (speed-optimized) ─────────────────────────────────
-    def read_current_chapter(self,
-                             log_fn: Callable[[str], None] = print) -> str:
+    def read_current_chapter_payload(self,
+                                     log_fn: Callable[[str], None] = print) -> Dict:
         xml = self.dump_ui()
         if self._reader_menu_visible(xml):
             self.reader_close_menu()
             time.sleep(0.08)
             xml = self.dump_ui()
+
         payload = self._extract_reader_payload(xml)
         if payload:
             log_fn(f"Đọc nhanh {payload['title']}...")
-            return payload["text"]
+            return payload
 
         collected, seen, repeats = [], set(), 0
+        title = ""
+        chapter_index = None
         log_fn("Đọc nội dung chương...")
 
         for step in range(SCROLL_STEPS):
-            dump    = self.dump_ui()
-            texts   = self.get_all_text(dump)
+            dump = self.dump_ui()
+            texts = self.get_all_text(dump)
+            if not title:
+                title = next((item for item in texts if item.startswith("Chương ")), "")
+                if title:
+                    match = re.search(r"Chương\s+(\d+)", title, re.IGNORECASE)
+                    if match:
+                        chapter_index = int(match.group(1))
+
             content = [t for t in texts if _is_story_text(t)]
-            h_key   = "|".join(content[:5])
+            h_key = "|".join(content[:5])
 
             if h_key in seen:
                 repeats += 1
-                if repeats >= 1:  # End after 1 repeat (faster)
-                    log_fn(f"  Hết chương (scroll {step})"); break
+                if repeats >= 1:
+                    log_fn(f"  Hết chương (scroll {step})")
+                    break
             else:
-                seen.add(h_key); repeats = 0
+                seen.add(h_key)
+                repeats = 0
                 for t in content:
                     if not collected or t != collected[-1]:
                         collected.append(t)
@@ -1209,4 +1228,12 @@ class AdbController:
             log_fn(f"  Scroll {step+1}: +{len(content)} đoạn")
             self.swipe_up()
 
-        return "\n".join(collected)
+        return {
+            "title": title,
+            "chapter_index": chapter_index,
+            "text": "\n".join(collected),
+        }
+
+    def read_current_chapter(self,
+                             log_fn: Callable[[str], None] = print) -> str:
+        return self.read_current_chapter_payload(log_fn).get("text", "")

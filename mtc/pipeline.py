@@ -26,6 +26,21 @@ def _existing_chapter_looks_ok(ch_file: Path) -> bool:
     return True
 
 
+def _is_legacy_chapter_file(ch_file: Path, chapter_index: int) -> bool:
+    return ch_file.name.casefold() == f"{chapter_index:06d}_Chuong_{chapter_index}.txt".casefold()
+
+
+def _find_existing_chapter_file(book_dir: Path, chapter_index: int) -> Optional[Path]:
+    prefix = f"{chapter_index:06d}_"
+    candidates = sorted(book_dir.glob(f"{prefix}*.txt"))
+    if not candidates:
+        return None
+    candidates.sort(key=lambda path: (_is_legacy_chapter_file(path, chapter_index), path.name.casefold()))
+    for path in candidates:
+        return path
+    return None
+
+
 def download_book(
     adb:         Optional[AdbController],
     book_name:   str,
@@ -226,8 +241,9 @@ def download_via_adb(
             if progress_cb:
                 progress_cb(ch_idx - ch_start, total)
 
-            ch_file = book_dir / f"{ch_idx:06d}_Chuong_{ch_idx}.txt"
-            if _existing_chapter_looks_ok(ch_file):
+            existing_file = _find_existing_chapter_file(book_dir, ch_idx)
+            legacy_existing = bool(existing_file and _is_legacy_chapter_file(existing_file, ch_idx))
+            if existing_file and _existing_chapter_looks_ok(existing_file) and not legacy_existing:
                 log_fn(f"  [ch{ch_idx}] Đã có, bỏ qua")
                 n_ok += 1
                 continue
@@ -253,16 +269,21 @@ def download_via_adb(
                             break
                         continue
 
-            text = adb.read_current_chapter(log_fn)
+            payload = adb.read_current_chapter_payload(log_fn)
+            text = (payload.get("text") or "").strip()
+            chapter_title = (payload.get("title") or f"Chương {ch_idx}").strip()
+            ch_file = book_dir / f"{ch_idx:06d}_{safe_name(chapter_title)}.txt"
             if not text or len(text) < 50:
                 log_fn(f"  [ch{ch_idx}] ⚠ Nội dung trống")
                 n_fail += 1
             else:
                 ch_file.write_text(
-                    f"{'='*60}\nChương {ch_idx}\n{'='*60}\n\n{text}\n",
+                    f"{'='*60}\n{chapter_title}\n{'='*60}\n\n{text}\n",
                     encoding="utf-8",
                 )
-                log_fn(f"  [ch{ch_idx}] ✔ ({len(text)} ký tự)")
+                if legacy_existing and existing_file and existing_file != ch_file and existing_file.exists():
+                    existing_file.unlink()
+                log_fn(f"  [ch{ch_idx}] ✔ {ch_file.name} ({len(text)} ký tự)")
                 n_ok += 1
 
             if ch_idx == ch_end:
