@@ -218,6 +218,16 @@ def _cleanup_api_text(text: str, chapter_name: str = "") -> str:
     return "\n".join(cleaned).strip()
 
 
+def _chapter_body_from_file(ch_file: Path) -> str:
+    text = ch_file.read_text(encoding="utf-8", errors="replace")
+    parts = text.split("\n\n", 1)
+    return parts[1].strip() if len(parts) == 2 else text.strip()
+
+
+def _body_word_count(text: str) -> int:
+    return len(re.findall(r"\S+", text or ""))
+
+
 def _fetch_api_chapter_text(sess, chapter: Dict, max_attempts: int = 3) -> tuple[str, str]:
     ch_idx = chapter.get("index") or 0
     ch_id = chapter.get("id")
@@ -385,6 +395,21 @@ def download_book(
     progress_cb: Optional[Callable[[int, int], None]] = None,
     book_id:     Optional[int] = None,
 ) -> Dict:
+    def _format_verify_reason(verify_result: Dict) -> str:
+        parts = []
+        if verify_result.get("missing_files"):
+            parts.append(f"thiếu {len(verify_result['missing_files'])} chương")
+        if verify_result.get("short_files"):
+            parts.append(f"{len(verify_result['short_files'])} chương ngắn bất thường")
+        if verify_result.get("locked_missing"):
+            parts.append(f"{len(verify_result['locked_missing'])} chương khóa chưa có file")
+        if verify_result.get("locked_short"):
+            parts.append(f"{len(verify_result['locked_short'])} chương khóa còn file cụt")
+        if verify_result.get("word_count_mismatch"):
+            parts.append(f"{len(verify_result['word_count_mismatch'])} chương lệch word_count")
+        return ", ".join(parts) if parts else "verify không đạt"
+
+    verify_result = None
     try:
         result = download_via_api(
             book_name=book_name,
@@ -397,12 +422,26 @@ def download_book(
             book_id=book_id,
         )
         if result.get("success"):
-            return result
+            verify_result = verify_downloaded_book(
+                book_name=book_name,
+                output_dir=output_dir,
+                book_id=result.get("book_id") or book_id,
+                ch_start=ch_start,
+                ch_end=ch_end,
+                log_fn=log_fn,
+            )
+            if verify_result.get("success"):
+                result["verified"] = verify_result.get("verified")
+                result["verify_total"] = verify_result.get("total")
+                return result
+            log_fn(f"Verify không đạt sau API: {_format_verify_reason(verify_result)}")
         log_fn(f"API không dùng được: {result.get('reason', 'không rõ lỗi')}")
     except Exception as exc:
         log_fn(f"API lỗi, chuyển sang ADB: {exc}")
 
     if not adb or not adb.device:
+        if verify_result and not verify_result.get("success"):
+            return {"success": False, "reason": f"{_format_verify_reason(verify_result)}. Không có ADB để fallback"}
         api_reason = result.get("reason") if 'result' in locals() and isinstance(result, dict) else None
         if api_reason:
             return {"success": False, "reason": f"{api_reason}. Không có ADB để fallback"}
@@ -417,7 +456,7 @@ def download_book(
         log_fn(f"Fallback sang ADB từ chương {fallback_start}...")
     else:
         log_fn("Fallback sang ADB...")
-    return download_via_adb(
+    adb_result = download_via_adb(
         adb=adb,
         book_name=book_name,
         ch_start=fallback_start,
@@ -427,6 +466,109 @@ def download_book(
         stop_flag=stop_flag,
         progress_cb=progress_cb,
     )
+    verify_result = verify_downloaded_book(
+        book_name=book_name,
+        output_dir=output_dir,
+        book_id=(result.get("book_id") if 'result' in locals() and isinstance(result, dict) else None) or book_id,
+        ch_start=ch_start,
+        ch_end=ch_end,
+        log_fn=log_fn,
+    )
+    adb_result["verified"] = verify_result.get("verified")
+    adb_result["verify_total"] = verify_result.get("total")
+    if not verify_result.get("success"):
+        adb_result["success"] = False
+        adb_result["reason"] = _format_verify_reason(verify_result)
+    return adb_result
+
+
+def verify_downloaded_book(
+    book_name: str,
+    output_dir: Path = OUTPUT_DIR,
+    book_id: Optional[int] = None,
+    ch_start: int = 1,
+    ch_end: Optional[int] = None,
+    log_fn: Callable[[str], None] = print,
+) -> Dict:
+    sess = _api_session()
+    book = _resolve_book(sess, book_name, book_id)
+    if not book:
+        return {"success": False, "reason": "Không tìm thấy truyện để verify"}
+
+    api_book_id = book.get("id")
+    api_book_name = book.get("name") or book_name
+    chapters = _fetch_chapter_list(sess, api_book_id)
+    if ch_end is None:
+        ch_end = max((item.get("index") or 0) for item in chapters)
+
+    targets = [item for item in chapters if ch_start <= (item.get("index") or 0) <= ch_end]
+    if not targets:
+        return {"success": False, "reason": "Không có chương nào trong khoảng verify"}
+
+    book_dir = output_dir / safe_name(api_book_name)
+    if not book_dir.exists():
+        return {"success": False, "reason": f"Chưa có thư mục tải: {book_dir}"}
+
+    missing_files: List[int] = []
+    short_files: List[int] = []
+    locked_missing: List[int] = []
+    locked_short: List[int] = []
+    word_count_mismatch: List[int] = []
+    verified_indices: List[int] = []
+
+    for chapter in targets:
+        ch_idx = chapter.get("index") or 0
+        ch_id = chapter.get("id")
+        ch_file = book_dir / f"{ch_idx:06d}_Chuong_{ch_idx}.txt"
+
+        resp = sess.get(f"{API_BASE}/chapters/{ch_id}", timeout=30)
+        resp.raise_for_status()
+        detail = (resp.json() or {}).get("data") or {}
+        is_locked = bool(detail.get("is_locked"))
+        expected_words = int(detail.get("word_count") or 0)
+
+        if not ch_file.exists():
+            if is_locked:
+                locked_missing.append(ch_idx)
+            else:
+                missing_files.append(ch_idx)
+            continue
+
+        if not _existing_chapter_looks_ok(ch_file):
+            if is_locked:
+                locked_short.append(ch_idx)
+            else:
+                short_files.append(ch_idx)
+            continue
+
+        body = _chapter_body_from_file(ch_file)
+        file_words = _body_word_count(body)
+        if expected_words and file_words < max(80, int(expected_words * 0.55)):
+            word_count_mismatch.append(ch_idx)
+            continue
+
+        verified_indices.append(ch_idx)
+
+    ok = not any((missing_files, short_files, locked_missing, locked_short, word_count_mismatch))
+    log_fn(
+        f"Verify: ok={len(verified_indices)} / {len(targets)} | "
+        f"missing={len(missing_files)} short={len(short_files)} "
+        f"locked_missing={len(locked_missing)} locked_short={len(locked_short)} "
+        f"mismatch={len(word_count_mismatch)}"
+    )
+    return {
+        "success": ok,
+        "book_id": api_book_id,
+        "book_name": api_book_name,
+        "output": str(book_dir),
+        "verified": len(verified_indices),
+        "total": len(targets),
+        "missing_files": missing_files,
+        "short_files": short_files,
+        "locked_missing": locked_missing,
+        "locked_short": locked_short,
+        "word_count_mismatch": word_count_mismatch,
+    }
 
 
 def download_via_adb(
