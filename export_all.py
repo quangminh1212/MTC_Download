@@ -2,10 +2,10 @@
 
 Strategy per book:
   1. Skip if downloads/<name>/ already has enough chapters
-  2. Open book from Tủ Truyện → enter reader
-  3. Open reader overlay → tap "Công cụ" → tap "TẢI TẤT CẢ"
-  4. Wait for download to finish (poll UI)
-  5. Open overlay again → tap "Công cụ" → tap "XUẤT EBOOK"
+  2. Tủ Truyện → search book → tap Công cụ hotspot (left of first result)
+  3. Tap "TẢI TẤT CẢ" in Công cụ dialog, wait for download (poll UI)
+  4. Re-open Công cụ via same search path
+  5. Tap "XUẤT EBOOK" → book-selection dialog → XUẤT TẤT CẢ → Văn bản (TXT)
   6. Pull exported .txt from /sdcard/Download/NovelFever/
   7. Parse and save chapters to downloads/<name>/
 
@@ -187,29 +187,76 @@ def find_clickable_center(xml_str: str, keyword: str) -> tuple | None:
                 return (x1 + x2) // 2, (y1 + y2) // 2
     return None
 
-def open_cong_cu_dialog(adb: AdbController, *, retries=2) -> bool:
-    """Open reader overlay and tap 'Công cụ'. Returns True if dialog appeared."""
-    for attempt in range(retries):
-        adb.reader_open_menu()
-        time.sleep(0.6)
-        xml = adb.dump_ui()
-        if not adb._reader_menu_visible(xml):
-            adb.reader_toggle_menu()
-            time.sleep(0.4)
-            xml = adb.dump_ui()
+# Screen dimensions (BlueStacks, confirmed)
+_SW, _SH = 900, 1600
+# Left side of first search result → opens Công cụ dialog
+_CU_TAP = (int(_SW * 0.15), int(_SH * 0.105))  # (135, 168)
 
-        # Try exact 'Công cụ' or partial 'cụ'
-        for kw in ('Công cụ', 'cụ', 'Cong cu', 'công cụ'):
-            center = find_clickable_center(xml, kw)
-            if center:
-                adb.tap(*center)
-                time.sleep(0.5)
-                # Check dialog appeared (look for TẢI TẤT CẢ or XUẤT EBOOK)
-                xml2 = adb.dump_ui()
-                texts = get_all_text_lower(xml2)
-                if any('tải tất cả' in t or 'xuất ebook' in t or 'xuat ebook' in t for t in texts):
-                    return True
+def open_cong_cu_via_search(adb: AdbController, book_name: str, *, retries=2) -> bool:
+    """Navigate to Tủ Truyện, search for book, tap the Công cụ hotspot (left
+    side of first result).  Returns True once the Công cụ dialog appears."""
+    for attempt in range(retries):
+        # 1. Tủ Truyện tab
+        adb.tap(113, 1558)
+        time.sleep(1.2)
+
+        # 2. Search icon
+        adb.tap(720, 75)
+        time.sleep(0.8)
+
+        # 3. Clear + type (first 40 chars enough to disambiguate)
+        adb.sh('shell', 'input', 'keyevent', 'KEYCODE_CTRL_A')
+        adb.sh('shell', 'input', 'keyevent', 'KEYCODE_DEL')
+        adb.type_text(book_name[:40])
+        time.sleep(2.2)
+
+        # 4. Tap Công cụ hotspot (left side of first result)
+        adb.tap(*_CU_TAP)
+        time.sleep(1.3)
+
+        # 5. Verify dialog
+        xml = adb.dump_ui()
+        texts = get_all_text_lower(xml)
+        if any('tải tất cả' in t or 'xuất ebook' in t for t in texts):
+            return True
+
+        # Dismiss whatever appeared and retry
+        adb.sh('shell', 'input', 'keyevent', 'KEYCODE_BACK')
+        time.sleep(0.8)
     return False
+
+# Keep old name as alias so rest of file still compiles
+def open_cong_cu_dialog(adb: AdbController, *, retries=2) -> bool:  # noqa (unused)
+    raise RuntimeError('use open_cong_cu_via_search instead')
+
+def handle_xuat_ebook_dialogs(adb: AdbController) -> bool:
+    """After tapping XUẤT EBOOK, drive two cascading dialogs:
+      1. "Chọn truyện để xuất" (Flutter canvas) → tap XUẤT TẤT CẢ at (693,1337)
+      2. "Chọn định dạng xuất" → tap Văn bản (UIAutomator or coord (450,816))
+    Returns True (best effort – always proceeds)."""
+    time.sleep(1.5)  # wait for book-selection dialog
+
+    # --- dialog 1: book selection ------------------------------------------
+    # Flutter-rendered: UIAutomator sees text but no bounds.
+    # XUẤT TẤT CẢ confirmed at (693, 1337).
+    xml = adb.dump_ui()
+    texts = get_all_text_lower(xml)
+    # Try to find XUẤT TẤT CẢ via accessibility first
+    center = find_clickable_center(xml, 'xuất tất cả')
+    if center:
+        adb.tap(*center)
+    else:
+        adb.tap(693, 1337)  # confirmed fallback
+    time.sleep(1.5)
+
+    # --- dialog 2: format selection ----------------------------------------
+    xml2 = adb.dump_ui()
+    center2 = find_clickable_center(xml2, 'văn bản')
+    if center2:
+        adb.tap(*center2)
+    else:
+        adb.tap(450, 816)  # confirmed: "Văn bản (TXT/EPUB)" center
+    return True
 
 def tap_in_dialog(adb: AdbController, keyword: str) -> bool:
     """Tap a button within the currently-shown dialog."""
@@ -223,8 +270,8 @@ def tap_in_dialog(adb: AdbController, keyword: str) -> bool:
 def wait_for_download(adb: AdbController, book_name: str,
                       chapter_count: int, log_fn=print) -> bool:
     """Poll until download progress disappears or timeout."""
-    # Estimate wait: ~1 sec/chapter, minimum 20s, max 10 minutes
-    timeout = max(20, min(chapter_count * 1.2, 600))
+    # Estimate wait: ~3 sec/chapter, minimum 60s, no hard cap (large books can take hours)
+    timeout = max(60, chapter_count * 3)
     log_fn(f'  Waiting up to {timeout:.0f}s for download ({chapter_count} chapters)...')
 
     start = time.time()
@@ -278,121 +325,118 @@ def save_state(state: dict) -> None:
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 def process_book(adb: AdbController, book: dict, state: dict, force=False) -> str:
-    """Process one book. Returns 'ok', 'skip', or 'fail'."""
-    bid   = book['id']
-    bname = book['name']
+    """Process one book via Search→Công cụ (no reader entry). Returns 'ok'|'skip'|'fail'."""
+    bid    = book['id']
+    bname  = book['name']
     btotal = book.get('chapter_count', 0)
 
-    log = lambda msg: print(f'  [{bid}] {msg}', flush=True)
+    def log(msg):
+        print(f'  [#{bid} {bname[:40]}] {msg}', flush=True)
 
-    # ── 1. Check already done ────────────────────────────────────────────────
+    def reset():
+        adb.tap(113, 1558)   # T\u1ee7 Truy\u1ec7n tab \u2013 idempotent reset
+        time.sleep(0.6)
+
+    # ── 1. Skip if enough already saved ─────────────────────────────────────
     saved = count_saved_chapters(bname)
     if not force and saved > 0 and (btotal == 0 or saved >= int(btotal * 0.80)):
-        log(f'SKIP – {saved}/{btotal} chapters already saved')
+        log(f'skip \u2013 {saved}/{btotal} chapters already saved')
+        return 'skip'
+    if not force and state.get(str(bid)) == 'ok' and saved > 0:
+        log(f'skip \u2013 marked done in state file')
         return 'skip'
 
-    if str(bid) in state and state[str(bid)] == 'ok' and not force:
-        log(f'SKIP – marked done in state file')
-        return 'skip'
+    print(f'\n[#{bid}] {bname} ({btotal} chapters, {saved} saved)')
 
-    print(f'\n[{bid}] Processing: {bname} ({btotal} chapters, {saved} saved)')
-
-    # ── 2. Open book from library ────────────────────────────────────────────
-    book_info = adb.open_library_book(bname, log_fn=log)
-    if not book_info:
-        log('FAIL – not found in library')
-        return 'fail'
-    time.sleep(0.4)
-
-    # ── 3. Enter reader ──────────────────────────────────────────────────────
-    ok = adb.open_current_book_reader(log_fn=log)
-    if not ok:
-        log('FAIL – could not open reader')
-        adb.go_back(2)
-        return 'fail'
-    time.sleep(0.6)
-
-    # ── 4. Trigger TẢI TẤT CẢ ───────────────────────────────────────────────
-    log('Opening Công cụ dialog...')
-    if not open_cong_cu_dialog(adb):
-        log('FAIL – Công cụ dialog not found; check explore_reader.py output')
-        adb.go_back(3)
+    # ── 2. Open Công cụ dialog via library search ────────────────────────────
+    log('Opening C\u00f4ng c\u1ee5 via search...')
+    if not open_cong_cu_via_search(adb, bname):
+        log('FAIL \u2013 C\u00f4ng c\u1ee5 dialog not found')
+        reset()
         return 'fail'
 
-    log('Tapping TẢI TẤT CẢ...')
-    if not tap_in_dialog(adb, 'tất cả'):
-        # Try alternate text
-        if not tap_in_dialog(adb, 'tai tat ca'):
-            log('FAIL – TẢI TẤT CẢ button not found')
-            adb.go_back(3)
-            return 'fail'
+    # ── 3. Tap TẢI TẤT CẢ ───────────────────────────────────────────────────
+    log('Tapping T\u1ea2I T\u1ea4T C\u1ea2...')
+    if not tap_in_dialog(adb, 't\u1ea3i t\u1ea5t c\u1ea3'):
+        if not tap_in_dialog(adb, 't\u1ea5t c\u1ea3'):
+            adb.tap(450, 797)   # confirmed coord fallback
+    time.sleep(1.5)
 
-    time.sleep(1.0)
-    # Might show "already downloaded" toast — that's fine too
-    xml_after = adb.dump_ui()
+    xml_after  = adb.dump_ui()
     texts_after = get_all_text_lower(xml_after)
-    already = any('đã tải tất cả' in t or 'bạn đã tải' in t for t in texts_after)
-    if not already:
-        # Wait for download to complete
-        wait_for_download(adb, bname, btotal, log_fn=log)
+    is_done    = any('\u0111\u00e3 t\u1ea3i t\u1ea5t c\u1ea3' in t or 'b\u1ea1n \u0111\u00e3 t\u1ea3i' in t for t in texts_after)
 
-    # ── 5. Trigger XUẤT EBOOK ────────────────────────────────────────────────
-    # Re-open overlay and Công cụ dialog
-    log('Opening Công cụ dialog for XUẤT EBOOK...')
-    time.sleep(1.0)
-    if not open_cong_cu_dialog(adb):
-        log('FAIL – could not re-open Công cụ dialog for export')
-        adb.go_back(3)
+    if is_done:
+        log('Book already downloaded, skipping wait.')
+        adb.sh('shell', 'input', 'keyevent', 'KEYCODE_BACK')
+        time.sleep(0.5)
+    else:
+        time.sleep(1.0)
+        reset()
+        downloaded = wait_for_download(adb, bname, btotal, log_fn=log)
+        if not downloaded:
+            log('Warning: download timed out – export may be incomplete')
+
+    # ── 4. Re-open Công cụ for export ────────────────────────────────────────
+    log('Re-opening C\u00f4ng c\u1ee5 for XU\u1ea4T EBOOK...')
+    if not open_cong_cu_via_search(adb, bname):
+        log('FAIL \u2013 could not re-open C\u00f4ng c\u1ee5 for export')
+        reset()
         return 'fail'
 
-    log('Tapping XUẤT EBOOK...')
-    if not tap_in_dialog(adb, 'xuất ebook') and not tap_in_dialog(adb, 'ebook'):
-        log('FAIL – XUẤT EBOOK button not found')
-        adb.go_back(3)
-        return 'fail'
+    # ── 5. Tap XUẤT EBOOK ────────────────────────────────────────────────────
+    log('Tapping XU\u1ea4T EBOOK...')
+    if not tap_in_dialog(adb, 'xu\u1ea5t ebook'):
+        if not tap_in_dialog(adb, 'ebook'):
+            adb.tap(450, 889)   # confirmed coord fallback
+    time.sleep(1.5)
 
-    time.sleep(3.0)  # Give app time to write file
+    # ── 6. Drive cascading dialogs (book-selection → format) ─────────────────
+    log('Handling export dialogs...')
+    handle_xuat_ebook_dialogs(adb)
 
-    # ── 6. Pull export file ──────────────────────────────────────────────────
-    log('Pulling export file...')
-    # Check if file exists and has content
-    exports = list_device_exports()
+    # ── 7. Poll for export file (app writes async; large books take 60-120s) ──
+    log('Waiting for export file...')
     exp_name = f'{bname}.txt'
-    if exp_name not in exports or exports[exp_name] < MIN_CONTENT_BYTES:
-        # Wait a bit more and retry
-        time.sleep(5)
+    exports  = {}
+    deadline = time.time() + 120
+    while time.time() < deadline:
+        time.sleep(6)
         exports = list_device_exports()
+        if exp_name in exports and exports[exp_name] >= MIN_CONTENT_BYTES:
+            log(f'  Export file ready ({exports[exp_name]} bytes)')
+            break
+    else:
+        exports = list_device_exports()  # final check after timeout
+
     if exp_name not in exports:
-        log(f'FAIL – export file not found: {exp_name}')
+        log(f'FAIL \u2013 export file not found: {exp_name}')
         log(f'  Available: {list(exports.keys())[:5]}')
-        adb.go_back(3)
+        reset()
         return 'fail'
     if exports[exp_name] < MIN_CONTENT_BYTES:
-        log(f'FAIL – export file too small ({exports[exp_name]} bytes)')
-        adb.go_back(3)
+        log(f'FAIL \u2013 export too small ({exports[exp_name]}B) \u2014 book not downloaded?')
+        reset()
         return 'fail'
 
     local_file = pull_export_file(bname)
     if not local_file:
-        log('FAIL – could not pull file')
-        adb.go_back(3)
+        log('FAIL \u2013 could not pull file')
+        reset()
         return 'fail'
 
-    # ── 7. Parse and save chapters ───────────────────────────────────────────
-    log('Parsing and saving chapters...')
+    # ── 8. Parse and save chapters ───────────────────────────────────────────
+    log('Parsing chapters...')
     chapters = parse_export_file(local_file)
     if not chapters:
-        log('FAIL – no chapters parsed from export file')
-        adb.go_back(3)
+        log('FAIL \u2013 no chapters parsed from export file')
+        reset()
         return 'fail'
 
     saved_new = save_chapters(bname, chapters)
-    log(f'OK – saved {saved_new} new chapters ({len(chapters)} total in export)')
+    log(f'OK \u2013 {saved_new} new chapters saved ({len(chapters)} total in export)')
 
-    # ── 8. Go back to library ────────────────────────────────────────────────
-    adb.go_back(3)
-    time.sleep(0.5)
-
+    reset()
     return 'ok'
 
 
