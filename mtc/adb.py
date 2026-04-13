@@ -563,29 +563,63 @@ class AdbController:
         log_fn("  Fast next thất bại, sẽ fallback sang mở danh sách chương")
         return False
 
+    def _dump_ui_fast(self) -> str:
+        """dump_ui without ensure_device() – for turbo loop where device is known."""
+        out, err = self._cmd(
+            "shell",
+            "uiautomator dump --compressed /sdcard/_ui.xml >/dev/null 2>&1; cat /sdcard/_ui.xml",
+            timeout=8,
+        )
+        merged = (out or "") + (err or "")
+        if "<hierarchy" in merged:
+            return _normalize_xml_dump(merged)
+        return ""
+
     def turbo_advance_and_read(self, log_fn: Callable[[str], None] = print) -> Optional[Dict]:
-        """Advance to next chapter AND read content in one fast pass (~0.6s).
+        """Advance to next chapter AND read content in one fast pass.
 
-        Combines open_menu → tap_next → close_menu → single dump → extract.
-        Returns payload dict or None on failure.
+        All taps + sleeps + UI dump run in a SINGLE adb shell subprocess,
+        minimizing Windows process-creation overhead.
+        Returns payload dict or None.
         """
-        self.reader_open_menu()
-        time.sleep(0.1)
-        self.tap(*self._reader_nav_point("next"))
-        time.sleep(0.2)
-        self.reader_close_menu()
-        time.sleep(0.1)
+        w, h = self.screen_size()
+        mx, my = w // 2, int(h * 0.75)          # menu open (bottom-center)
+        nx, ny = self._reader_nav_point("next")  # next chapter button
+        cx, cy = int(w * 0.933), int(h * 0.305)  # close menu
 
-        for retry in range(3):
-            xml = self.dump_ui()
+        # === Single subprocess: taps + sleeps + dump + cat ===
+        # Close-menu tap overlaps with uiautomator dump (no sleep between).
+        all_in_one = (
+            f"input tap {mx} {my}; sleep 0.2; "
+            f"input tap {nx} {ny}; sleep 0.25; "
+            f"input tap {cx} {cy}; "
+            "uiautomator dump --compressed /sdcard/_ui.xml >/dev/null 2>&1; "
+            "cat /sdcard/_ui.xml"
+        )
+        out, err = self._cmd("shell", all_in_one, timeout=15)
+        merged = (out or "") + (err or "")
+        if "<hierarchy" in merged:
+            xml = _normalize_xml_dump(merged)
             if self._reader_menu_visible(xml):
-                self.reader_close_menu()
-                time.sleep(0.1)
-                xml = self.dump_ui()
+                # Menu still visible – close and re-dump
+                self.tap(cx, cy)
+                time.sleep(0.15)
+                xml = self._dump_ui_fast()
             payload = self._extract_reader_payload(xml)
             if payload and len(payload.get("text", "")) >= 50:
                 return payload
-            if retry < 2:
+
+        # Fallback: separate dump if all-in-one didn't return good XML
+        for retry in range(2):
+            xml = self._dump_ui_fast()
+            if self._reader_menu_visible(xml):
+                self.tap(cx, cy)
+                time.sleep(0.15)
+                xml = self._dump_ui_fast()
+            payload = self._extract_reader_payload(xml)
+            if payload and len(payload.get("text", "")) >= 50:
+                return payload
+            if retry < 1:
                 time.sleep(0.25)
         return None
 
