@@ -6,7 +6,7 @@ from typing import Optional, List, Dict, Callable
 from .config import (
     PACKAGE, PACKAGE_ALT, APK_PATH,
     SCROLL_STEPS, SCROLL_DELAY, NAV_DELAY, TAP_DELAY, BACK_DELAY,
-    INSTALL_TIMEOUT, KEY_BACK, KEY_ENTER,
+    INSTALL_TIMEOUT, KEY_BACK, KEY_ENTER, KEY_DEL,
     BS_ADB_PATHS, OTHER_ADB_PATHS, ACCESSIBILITY_SERVICES,
     log,
 )
@@ -292,6 +292,66 @@ class AdbController:
         time.sleep(0.8)
         return True
 
+    def _find_clickable_text_center(
+        self,
+        text: str,
+        *,
+        exact: bool = False,
+        xml_str: str = "",
+    ) -> Optional[tuple]:
+        xml = xml_str or self.dump_ui()
+        try:
+            root = ET.fromstring(xml)
+        except ET.ParseError:
+            return None
+
+        query = _clean_ui_text(text)
+        query_key = query.casefold()
+        for node in root.iter():
+            if node.get("clickable") != "true":
+                continue
+
+            values = (
+                _clean_ui_text(node.get("text", "")),
+                _clean_ui_text(node.get("content-desc", "")),
+            )
+            if exact:
+                match = any(value == query for value in values)
+            else:
+                match = any(query_key in value.casefold() for value in values if value)
+            if not match:
+                continue
+
+            rect = _parse_bounds_rect(node.get("bounds", ""))
+            if rect:
+                return (rect[0] + rect[2]) // 2, (rect[1] + rect[3]) // 2
+        return None
+
+    def open_library_tab(self, log_fn: Callable[[str], None] = print) -> bool:
+        if not self.ensure_main_tabs(log_fn):
+            return False
+
+        center = self._find_bottom_tab_center(1)
+        if not center:
+            log_fn("⚠ Không tìm thấy tab Tủ Truyện")
+            return False
+
+        self.tap(*center)
+        time.sleep(0.8)
+
+        xml = self.dump_ui()
+        history_center = self._find_clickable_text_center("Lịch sử", xml_str=xml)
+        if history_center:
+            self.tap(*history_center)
+            time.sleep(0.35)
+
+        xml = self.dump_ui()
+        if self.scan_visible_library_books(xml_str=xml):
+            return True
+
+        texts = self.get_all_text(xml)
+        return any(text == "Tủ Truyện" for text in texts)
+
     def _find_header_buttons(self, xml_str: str = "") -> List[tuple]:
         xml = xml_str or self.dump_ui()
         try:
@@ -473,10 +533,44 @@ class AdbController:
         log_fn("  Fast next thất bại, sẽ fallback sang mở danh sách chương")
         return False
 
+    @staticmethod
+    def _chapter_list_visible(texts: List[str]) -> bool:
+        if any(text.startswith("Số chương") for text in texts):
+            return True
+        return any(text[:1].isdigit() and "\nChương " in text for text in texts)
+
+    def _find_visible_chapter_item_center(self, xml_str: str = "") -> Optional[tuple]:
+        xml = xml_str or self.dump_ui()
+        try:
+            root = ET.fromstring(xml)
+        except ET.ParseError:
+            return None
+
+        candidates = []
+        for node in root.iter():
+            if node.get("clickable") != "true":
+                continue
+            value = _clean_ui_text(node.get("text", "") or node.get("content-desc", ""))
+            if not value or "Chương " not in value:
+                continue
+            if not (value.startswith("Chương ") or value[:1].isdigit()):
+                continue
+
+            rect = _parse_bounds_rect(node.get("bounds", ""))
+            if not rect:
+                continue
+            candidates.append((rect[1], ((rect[0] + rect[2]) // 2, (rect[1] + rect[3]) // 2)))
+
+        if not candidates:
+            return None
+
+        candidates.sort(key=lambda item: item[0])
+        return candidates[-1][1]
+
     def open_chapter_list(self, log_fn: Callable[[str], None] = print) -> bool:
         xml = self.dump_ui()
         texts = self.get_all_text(xml)
-        if any(text.startswith("Số chương") for text in texts):
+        if self._chapter_list_visible(texts):
             return True
 
         center = self._parse_bounds(xml, "D.S Chương", exact=False)
@@ -485,7 +579,7 @@ class AdbController:
             time.sleep(0.25)
             xml = self.dump_ui()
             texts = self.get_all_text(xml)
-            if any(text.startswith("Số chương") for text in texts):
+            if self._chapter_list_visible(texts):
                 return True
 
         payload = self._extract_reader_payload(xml)
@@ -499,7 +593,7 @@ class AdbController:
                 time.sleep(0.35)
             xml = self.dump_ui()
             texts = self.get_all_text(xml)
-            if any(text.startswith("Số chương") for text in texts):
+            if self._chapter_list_visible(texts):
                 return True
 
         log_fn("⚠ Không mở được danh sách chương")
@@ -703,6 +797,304 @@ class AdbController:
         self.tap(*best["center"])
         time.sleep(NAV_DELAY)
         return True
+
+    @staticmethod
+    def _parse_library_book_item(raw_desc: str, bounds: str) -> Optional[Dict]:
+        lines = [re.sub(r"\s+", " ", _clean_ui_text(line)) for line in raw_desc.splitlines()]
+        lines = [line for line in lines if line]
+        if len(lines) < 2:
+            return None
+
+        progress_line = next((line for line in lines[1:] if "Đã đọc" in line), "")
+        match = re.search(r"Đã đọc\s*(\d+)\s*/\s*(\d+)", progress_line, re.IGNORECASE)
+        if not match:
+            return None
+
+        rect = _parse_bounds_rect(bounds)
+        if not rect:
+            return None
+
+        read_current = int(match.group(1))
+        read_total = int(match.group(2))
+        title = lines[0]
+        return {
+            "title": title,
+            "progress_text": progress_line,
+            "read_current": read_current,
+            "read_total": read_total,
+            "fully_read": read_total > 0 and read_current >= read_total,
+            "bounds": rect,
+            "center": ((rect[0] + rect[2]) // 2, (rect[1] + rect[3]) // 2),
+            "key": AdbController._book_key(title),
+        }
+
+    def scan_visible_library_books(
+        self,
+        log_fn: Callable[[str], None] = print,
+        xml_str: str = "",
+    ) -> List[Dict]:
+        xml = xml_str or self.dump_ui()
+        if not xml:
+            return []
+
+        try:
+            root = ET.fromstring(xml)
+        except ET.ParseError:
+            log_fn("⚠ Không đọc được UI dump ở Tủ Truyện")
+            return []
+
+        books: List[Dict] = []
+        seen = set()
+        for node in root.iter():
+            if node.get("clickable") != "true":
+                continue
+            raw_desc = _clean_ui_text(node.get("content-desc", ""))
+            if "Đã đọc" not in raw_desc:
+                continue
+
+            rect = _parse_bounds_rect(node.get("bounds", ""))
+            if not rect:
+                continue
+            if rect[1] < 200 or (rect[3] - rect[1]) < 40:
+                continue
+
+            book = self._parse_library_book_item(raw_desc, node.get("bounds", ""))
+            if not book:
+                continue
+            if book["key"] in seen:
+                continue
+
+            seen.add(book["key"])
+            books.append(book)
+
+        books.sort(key=lambda item: (item["bounds"][1], item["bounds"][0]))
+        return books
+
+    def scan_library_books(
+        self,
+        max_items: int = 200,
+        max_scrolls: int = 40,
+        log_fn: Callable[[str], None] = print,
+    ) -> List[Dict]:
+        if not self.open_library_tab(log_fn):
+            return []
+
+        all_books: List[Dict] = []
+        seen = set()
+        stagnant_rounds = 0
+
+        for round_idx in range(max_scrolls):
+            current = self.scan_visible_library_books(log_fn=lambda *_: None)
+            new_count = 0
+            for book in current:
+                if book["key"] in seen:
+                    continue
+                seen.add(book["key"])
+                all_books.append(book)
+                new_count += 1
+
+            log_fn(f"Quét Tủ Truyện lượt {round_idx + 1}: +{new_count} truyện")
+            if len(all_books) >= max_items:
+                break
+
+            if new_count == 0:
+                stagnant_rounds += 1
+                if stagnant_rounds >= 2:
+                    break
+            else:
+                stagnant_rounds = 0
+
+            self.swipe_up()
+
+        return all_books[:max_items]
+
+    def get_book_detail_meta(self, xml_str: str = "") -> Dict:
+        xml = xml_str or self.dump_ui()
+        texts = self.get_all_text(xml)
+        status_text = next((text for text in texts if text.startswith("Chương - ")), "")
+        read_center = self._find_clickable_text_center("Đọc truyện", exact=True, xml_str=xml)
+        if not read_center:
+            read_center = self._find_clickable_text_center("Đọc", exact=True, xml_str=xml)
+        return {
+            "status_text": status_text,
+            "can_read": bool(read_center),
+            "read_center": read_center,
+        }
+
+    @staticmethod
+    def detail_status_is_completed(status_text: str) -> bool:
+        lowered = _clean_ui_text(status_text).casefold()
+        if not lowered:
+            return False
+        if "còn tiếp" in lowered:
+            return False
+        return "hoàn thành" in lowered
+
+    def open_current_book_reader(self, log_fn: Callable[[str], None] = print) -> bool:
+        detail = self.get_book_detail_meta()
+        center = detail.get("read_center")
+        if not center:
+            log_fn("  ⚠ Không tìm thấy nút Đọc truyện")
+            return False
+
+        self.tap(*center)
+        time.sleep(1.2)
+        xml = self.dump_ui()
+        if self._extract_reader_payload(xml):
+            return True
+
+        texts = self.get_all_text(xml)
+        if self._chapter_list_visible(texts):
+            chapter_center = self._find_visible_chapter_item_center(xml)
+            if not chapter_center:
+                log_fn("  ⚠ Đang ở D.S Chương nhưng không tìm thấy item để mở reader")
+                return False
+            self.tap(*chapter_center)
+            time.sleep(1.0)
+            xml = self.dump_ui()
+            if self._extract_reader_payload(xml):
+                return True
+            texts = self.get_all_text(xml)
+        if any(text.startswith("Chương ") for text in texts):
+            return True
+
+        log_fn("  ⚠ Không vào được reader")
+        return False
+
+    def _parse_reader_download_dialog(self, xml_str: str = "") -> Optional[Dict[str, tuple]]:
+        xml = xml_str or self.dump_ui()
+        try:
+            root = ET.fromstring(xml)
+        except ET.ParseError:
+            return None
+
+        fields = []
+        confirm = None
+        cancel = None
+        for node in root.iter():
+            cls = node.get("class", "")
+            rect = _parse_bounds_rect(node.get("bounds", ""))
+            if not rect:
+                continue
+
+            center = ((rect[0] + rect[2]) // 2, (rect[1] + rect[3]) // 2)
+            if cls == "android.widget.EditText":
+                fields.append((rect[1], center))
+                continue
+
+            desc = _clean_ui_text(node.get("content-desc", ""))
+            if desc == "Đồng ý":
+                confirm = center
+            elif desc == "Hủy":
+                cancel = center
+
+        fields.sort(key=lambda item: item[0])
+        if len(fields) < 2 or not confirm:
+            return None
+
+        return {
+            "start": fields[0][1],
+            "end": fields[1][1],
+            "confirm": confirm,
+            "cancel": cancel,
+        }
+
+    def open_reader_download_dialog(self, log_fn: Callable[[str], None] = print) -> bool:
+        overlay_xml = ""
+        center = None
+        for attempt in range(2):
+            if attempt == 0:
+                self.reader_open_menu()
+            else:
+                self.reader_toggle_menu()
+            time.sleep(0.55)
+            overlay_xml = self.dump_ui()
+            if not self._reader_menu_visible(overlay_xml):
+                continue
+            center = self._find_clickable_text_center("Tải truyện", exact=True, xml_str=overlay_xml)
+            if center:
+                break
+
+        if not center:
+            log_fn("  ⚠ Không tìm thấy mục Tải truyện trong reader")
+            return False
+
+        self.tap(*center)
+        time.sleep(0.6)
+        dialog = self._parse_reader_download_dialog(self.dump_ui())
+        if dialog:
+            return True
+
+        log_fn("  ⚠ Không mở được popup tải truyện")
+        return False
+
+    def _clear_focused_text(self, max_chars: int = 8) -> None:
+        for _ in range(max_chars):
+            self.sh("input", "keyevent", str(KEY_DEL))
+            time.sleep(0.03)
+
+    def submit_reader_download_range(
+        self,
+        ch_start: int,
+        ch_end: int,
+        log_fn: Callable[[str], None] = print,
+    ) -> bool:
+        dialog = self._parse_reader_download_dialog(self.dump_ui())
+        if not dialog:
+            log_fn("  ⚠ Popup tải truyện chưa sẵn sàng")
+            return False
+
+        for key, value in (("start", ch_start), ("end", ch_end)):
+            self.tap(*dialog[key])
+            time.sleep(0.15)
+            self._clear_focused_text()
+            time.sleep(0.05)
+            self.type_text(str(value))
+            time.sleep(0.15)
+
+        self.tap(*dialog["confirm"])
+        time.sleep(0.8)
+
+        texts = self.get_all_text(self.dump_ui())
+        if any("Bạn đã tải tất cả các chương rồi." in text for text in texts):
+            log_fn(f"  App báo đã tải đủ ch{ch_start}-{ch_end}")
+            return True
+        if any("Bạn muốn tải" in text for text in texts):
+            log_fn("  ⚠ Popup tải truyện vẫn còn mở sau khi bấm Đồng ý")
+            return False
+
+        log_fn(f"  Đã gửi lệnh tải trong app: ch{ch_start}-{ch_end}")
+        return True
+
+    def queue_current_book_full_download(
+        self,
+        ch_end: int,
+        ch_start: int = 1,
+        log_fn: Callable[[str], None] = print,
+    ) -> bool:
+        if ch_end < ch_start:
+            log_fn("  ⚠ Khoảng chương không hợp lệ")
+            return False
+        if not self.open_reader_download_dialog(log_fn):
+            return False
+        return self.submit_reader_download_range(ch_start, ch_end, log_fn)
+
+    def return_to_library(self, log_fn: Callable[[str], None] = print, max_steps: int = 6) -> bool:
+        for _ in range(max_steps):
+            xml = self.dump_ui()
+            if self.scan_visible_library_books(xml_str=xml):
+                return True
+            if self._main_tabs_visible(xml):
+                return self.open_library_tab(log_fn)
+            self.go_back()
+            time.sleep(0.8)
+
+        xml = self.dump_ui()
+        if self.scan_visible_library_books(xml_str=xml):
+            return True
+
+        log_fn("⚠ Không quay lại được Tủ Truyện")
+        return False
 
     def scan_visible_books(self, log_fn: Callable[[str], None] = print, xml_str: str = "") -> List[Dict]:
         xml = xml_str or self.dump_ui()

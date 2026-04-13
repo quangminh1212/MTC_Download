@@ -12,7 +12,7 @@ from .config import (
     APK_PATH, OUTPUT_DIR, log,
 )
 from .adb import AdbController
-from .pipeline import download_book
+from .pipeline import download_book, queue_completed_books_in_app
 from .utils import safe_name
 
 
@@ -139,7 +139,8 @@ class App(tk.Tk):
         tk.Label(
             info,
             text="ℹ️  Chế độ hiện tại: chỉ tải bằng ADB.\n"
-             "     BlueStacks là bắt buộc cho quét / khám phá / tải chương.",
+             "     BlueStacks là bắt buộc cho quét / khám phá / tải chương.\n"
+             "     '⇩ Hoàn thành' dùng popup Tải truyện trong app.",
             bg="#fff8e1",
             fg="#5d4037",
             font=("Segoe UI",8),
@@ -161,6 +162,13 @@ class App(tk.Tk):
         self._btn_start = ttk.Button(bf, text="▶  Bắt đầu tải",
                                       command=self._start)
         self._btn_start.pack(side="left")
+        self._btn_batch = ttk.Button(
+            bf,
+            text="⇩ Hoàn thành",
+            style="G.TButton",
+            command=self._start_completed_batch,
+        )
+        self._btn_batch.pack(side="left", padx=(6,0))
         self._btn_stop = ttk.Button(bf, text="Dừng", style="G.TButton",
                                      command=self._stop_dl, state="disabled")
         self._btn_stop.pack(side="left", padx=(6,0))
@@ -299,9 +307,9 @@ class App(tk.Tk):
 
         self._lg("ADB-only mode: tải truyện trực tiếp qua BlueStacks.", "dim")
 
-        self._btn_start.config(state="disabled")
-        self._btn_stop.config(state="normal")
+        self._set_busy(True)
         self._stop = False
+        self._bar.config(mode="determinate")
         self._bar["value"] = 0
         self._bar_lbl.set("")
 
@@ -312,9 +320,38 @@ class App(tk.Tk):
         )
         self._thread.start()
 
+    def _start_completed_batch(self):
+        if self._thread and self._thread.is_alive():
+            return
+
+        if not (self._adb and self._adb.device):
+            messagebox.showwarning("", "Cần BlueStacks/ADB để tải hàng loạt trong app")
+            return
+
+        self._lg(
+            "Batch mode: quét Tủ Truyện, lọc truyện trạng thái hoàn thành và dùng popup 'Tải truyện' từ ch1 đến chương cuối.",
+            "dim",
+        )
+
+        self._set_busy(True)
+        self._stop = False
+        self._bar.config(mode="indeterminate")
+        self._bar["value"] = 0
+        self._bar.start(10)
+        self._bar_lbl.set("Đang quét Tủ Truyện...")
+
+        self._thread = threading.Thread(target=self._worker_completed_batch, daemon=True)
+        self._thread.start()
+
     def _stop_dl(self):
         self._stop = True
         self._lg("Đang dừng...", "w")
+
+    def _set_busy(self, busy: bool):
+        normal_state = "disabled" if busy else "normal"
+        self._btn_start.config(state=normal_state)
+        self._btn_batch.config(state=normal_state)
+        self._btn_stop.config(state="normal" if busy else "disabled")
 
     def _worker(self, book_name, out_dir, start, end):
         self._lg(f"Bắt đầu: «{book_name}»", "ora")
@@ -341,8 +378,38 @@ class App(tk.Tk):
             self._lg(f"Lỗi: {e}", "err")
         finally:
             self.after(0, lambda: (
-                self._btn_start.config(state="normal"),
-                self._btn_stop.config(state="disabled"),
+                self._set_busy(False),
+                self._bar.stop(),
+                self._bar.config(mode="determinate"),
+                self._bar.config(value=100)))
+
+    def _worker_completed_batch(self):
+        self._lg("Bắt đầu batch tải hoàn thành trong app", "ora")
+        try:
+            def _progress(done, _total):
+                self.after(0, lambda d=done: self._bar_lbl.set(f"Đã kiểm tra {d} truyện"))
+
+            result = queue_completed_books_in_app(
+                adb=self._adb,
+                log_fn=self._lg,
+                stop_flag=lambda: self._stop,
+                progress_cb=_progress,
+            )
+            if result.get("success"):
+                self._lg(
+                    f"Batch xong! queued={result['queued']} skipped={result['skipped']} failed={result['failed']}",
+                    "ok",
+                )
+            else:
+                self._lg(f"Batch lỗi: {result.get('reason', '')}", "err")
+            self._log_verify_result(result)
+        except Exception as e:
+            self._lg(f"Lỗi batch: {e}", "err")
+        finally:
+            self.after(0, lambda: (
+                self._set_busy(False),
+                self._bar.stop(),
+                self._bar.config(mode="determinate"),
                 self._bar.config(value=100)))
 
     @staticmethod

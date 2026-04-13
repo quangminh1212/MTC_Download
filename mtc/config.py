@@ -28,6 +28,7 @@ INSTALL_TIMEOUT = 180
 KEY_BACK  = 4
 KEY_HOME  = 3
 KEY_ENTER = 66
+KEY_DEL   = 67
 
 # BlueStacks ADB paths (priority)
 BS_ADB_PATHS = [
