@@ -22,7 +22,7 @@ except Exception:
     fix_text = None
     _HAS_API_DEPS = False
 
-from .config import OUTPUT_DIR, API_BASE, USER_AGENT, log
+from .config import OUTPUT_DIR, API_BASE, USER_AGENT, USE_API, log
 from .adb import AdbController
 from .utils import safe_name, merge_to_single_file
 
@@ -33,6 +33,7 @@ _API_HEADERS = {
     "User-Agent": USER_AGENT,
     "x-app": "app.android",
 }
+_CAN_USE_API = _HAS_API_DEPS and USE_API
 _BASE64_BYTES = set((string.ascii_letters + string.digits + "+/=").encode())
 
 
@@ -41,7 +42,7 @@ def _lookup_key(text: str) -> str:
 
 
 def _api_session():
-    if not _HAS_API_DEPS:
+    if not _CAN_USE_API:
         raise RuntimeError("Thiếu requests/pycryptodome/ftfy để tải trực tiếp qua API")
 
     sess = requests.Session()
@@ -395,105 +396,20 @@ def download_book(
     progress_cb: Optional[Callable[[int, int], None]] = None,
     book_id:     Optional[int] = None,
 ) -> Dict:
-    def _format_verify_reason(verify_result: Dict) -> str:
-        parts = []
-        if verify_result.get("missing_files"):
-            parts.append(f"thiếu {len(verify_result['missing_files'])} chương")
-        if verify_result.get("short_files"):
-            parts.append(f"{len(verify_result['short_files'])} chương ngắn bất thường")
-        if verify_result.get("locked_missing"):
-            parts.append(f"{len(verify_result['locked_missing'])} chương khóa chưa có file")
-        if verify_result.get("locked_short"):
-            parts.append(f"{len(verify_result['locked_short'])} chương khóa còn file cụt")
-        if verify_result.get("word_count_mismatch"):
-            parts.append(f"{len(verify_result['word_count_mismatch'])} chương lệch word_count")
-        return ", ".join(parts) if parts else "verify không đạt"
-
-    verify_result = None
-    try:
-        result = download_via_api(
-            book_name=book_name,
-            ch_start=ch_start,
-            ch_end=ch_end,
-            output_dir=output_dir,
-            log_fn=log_fn,
-            stop_flag=stop_flag,
-            progress_cb=progress_cb,
-            book_id=book_id,
-        )
-        if result.get("success"):
-            verify_result = verify_downloaded_book(
-                book_name=book_name,
-                output_dir=output_dir,
-                book_id=result.get("book_id") or book_id,
-                ch_start=ch_start,
-                ch_end=ch_end,
-                log_fn=log_fn,
-            )
-            if verify_result.get("success"):
-                result["verified"] = verify_result.get("verified")
-                result["verify_total"] = verify_result.get("total")
-                return result
-            log_fn(f"Verify không đạt sau API: {_format_verify_reason(verify_result)}")
-        log_fn(f"API không dùng được: {result.get('reason', 'không rõ lỗi')}")
-    except Exception as exc:
-        log_fn(f"API lỗi, chuyển sang ADB: {exc}")
-
     if not adb or not adb.device:
-        if verify_result and not verify_result.get("success"):
-            return {
-                "success": False,
-                "reason": f"{_format_verify_reason(verify_result)}. Không có ADB để fallback",
-                **verify_result,
-            }
-        api_reason = result.get("reason") if 'result' in locals() and isinstance(result, dict) else None
-        if api_reason:
-            return {
-                "success": False,
-                "reason": f"{api_reason}. Không có ADB để fallback",
-                **result,
-            }
-        return {"success": False, "reason": "Không có ADB để fallback và API không tải được"}
+        return {"success": False, "reason": "Cần BlueStacks/ADB để tải ở chế độ ADB-only"}
 
-    pending_indices = sorted(set(
-        (result.get("locked_chapters") or []) +
-        (result.get("failed_chapter_indices") or [])
-    )) if 'result' in locals() and isinstance(result, dict) else []
-    fallback_start = pending_indices[0] if pending_indices else ch_start
-    if pending_indices:
-        log_fn(f"Fallback sang ADB từ chương {fallback_start}...")
-    else:
-        log_fn("Fallback sang ADB...")
+    log_fn("ADB-only mode: bỏ qua toàn bộ API")
     adb_result = download_via_adb(
         adb=adb,
         book_name=book_name,
-        ch_start=fallback_start,
+        ch_start=ch_start,
         ch_end=ch_end,
         output_dir=output_dir,
         log_fn=log_fn,
         stop_flag=stop_flag,
         progress_cb=progress_cb,
     )
-    verify_result = verify_downloaded_book(
-        book_name=book_name,
-        output_dir=output_dir,
-        book_id=(result.get("book_id") if 'result' in locals() and isinstance(result, dict) else None) or book_id,
-        ch_start=ch_start,
-        ch_end=ch_end,
-        log_fn=log_fn,
-    )
-    adb_result["verified"] = verify_result.get("verified")
-    adb_result["verify_total"] = verify_result.get("total")
-    if not verify_result.get("success"):
-        adb_result["success"] = False
-        adb_result["reason"] = _format_verify_reason(verify_result)
-    adb_result.update({
-        "missing_files": verify_result.get("missing_files", []),
-        "short_files": verify_result.get("short_files", []),
-        "locked_missing": verify_result.get("locked_missing", []),
-        "locked_short": verify_result.get("locked_short", []),
-        "word_count_mismatch": verify_result.get("word_count_mismatch", []),
-    })
     return adb_result
 
 
@@ -505,6 +421,9 @@ def verify_downloaded_book(
     ch_end: Optional[int] = None,
     log_fn: Callable[[str], None] = print,
 ) -> Dict:
+    if not _CAN_USE_API:
+        return {"success": False, "reason": "Đã tắt verify qua API ở chế độ ADB-only"}
+
     sess = _api_session()
     book = _resolve_book(sess, book_name, book_id)
     if not book:
@@ -679,4 +598,8 @@ def download_via_adb(
     merge_to_single_file(book_dir, book_name)
     log_fn(f"\nXong! ✔{n_ok}  ✖{n_fail}  →  {book_dir}")
     adb.disable_accessibility()
-    return {"success": True, "ok": n_ok, "fail": n_fail, "output": str(book_dir)}
+    success = n_ok > 0 and n_fail == 0
+    reason = "" if success else (
+        f"ADB tải được {n_ok} chương, lỗi {n_fail} chương" if n_ok > 0 else "ADB không đọc được chương nào"
+    )
+    return {"success": success, "ok": n_ok, "fail": n_fail, "output": str(book_dir), "reason": reason}

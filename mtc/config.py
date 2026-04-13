@@ -52,6 +52,7 @@ ACCESSIBILITY_SERVICES = [
 # ── API (metadata only – content is AES-encrypted) ───────────────────────────
 API_BASE   = "https://android.lonoapp.net/api"
 USER_AGENT = "Dart/3.0 (dart:io)"
+USE_API    = False
 # ── UI Palette ────────────────────────────────────────────────────────────────
 BG     = "#ffffff"
 BG2    = "#f8f9fa"

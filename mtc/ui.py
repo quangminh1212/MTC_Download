@@ -19,11 +19,14 @@ from .config import (
     BG, BG2, BORDER, BLUE, BLUE2, BHOV, FG, FG2, FG3,
     GREEN, YELLOW, RED, ORANGE,
     FONT, FONT_BOLD, FONT_HEAD, FONT_MONO,
-    APK_PATH, OUTPUT_DIR, API_BASE, USER_AGENT, log,
+    APK_PATH, OUTPUT_DIR, API_BASE, USER_AGENT, USE_API, log,
 )
 from .adb import AdbController
 from .pipeline import download_book
 from .utils import safe_name
+
+
+_CAN_USE_API = _HAS_REQUESTS and USE_API
 
 
 def _ef(parent, var, w=14, show=""):
@@ -152,10 +155,16 @@ class App(tk.Tk):
         info = tk.Frame(body, bg="#fff8e1", highlightthickness=1,
                         highlightbackground="#fdd835")
         info.pack(fill="x", pady=(0,6))
-        tk.Label(info, text="ℹ️  Ưu tiên tải trực tiếp qua API.\n"
-             "     BlueStacks chỉ cần cho quét / khám phá / fallback khi API lỗi.",
-                 bg="#fff8e1", fg="#5d4037", font=("Segoe UI",8),
-                 justify="left", anchor="w").pack(padx=8, pady=6)
+        tk.Label(
+            info,
+            text="ℹ️  Chế độ hiện tại: chỉ tải bằng ADB.\n"
+             "     BlueStacks là bắt buộc cho quét / khám phá / tải chương.",
+            bg="#fff8e1",
+            fg="#5d4037",
+            font=("Segoe UI",8),
+            justify="left",
+            anchor="w",
+        ).pack(padx=8, pady=6)
 
         # ── Progress ──────────────────────────────────────────────────────
         self._bar = ttk.Progressbar(body, mode="determinate",
@@ -232,9 +241,9 @@ class App(tk.Tk):
     # ── ADB ───────────────────────────────────────────────────────────────
     def _auto_connect(self):
         if not self._adb_path:
-            self._chip.config(text="API")
-            self._adb_lbl.config(text="không có fallback ADB", fg=YELLOW)
-            self._lg("Không tìm thấy ADB. Vẫn tải trực tiếp qua API; BlueStacks chỉ là fallback.", "w")
+            self._chip.config(text="ADB")
+            self._adb_lbl.config(text="chưa có BlueStacks/ADB", fg=YELLOW)
+            self._lg("Không tìm thấy ADB. Ở chế độ hiện tại, BlueStacks là bắt buộc.", "w")
             return
         self._lg(f"ADB: {self._adb_path}", "acc")
         threading.Thread(target=self._do_connect, daemon=True).start()
@@ -255,9 +264,9 @@ class App(tk.Tk):
             self.after(0, self._on_fail)
 
     def _on_ok(self, serial):
-        self._chip.config(text="API + ADB")
-        self._adb_lbl.config(text=f"fallback sẵn sàng: {serial}", fg=GREEN)
-        self._lg(f"BlueStacks fallback OK: {serial}", "ok")
+        self._chip.config(text="ADB")
+        self._adb_lbl.config(text=f"đã kết nối: {serial}", fg=GREEN)
+        self._lg(f"BlueStacks OK: {serial}", "ok")
         pkg = self._adb.get_installed_package()
         if pkg:
             self._btn_apk.config(text="✔ APK")
@@ -267,9 +276,9 @@ class App(tk.Tk):
             self._lg("MTC chưa cài. Bấm 'Cài APK'.", "w")
 
     def _on_fail(self):
-        self._chip.config(text="API")
-        self._adb_lbl.config(text="không thấy BlueStacks, API vẫn dùng được", fg=YELLOW)
-        self._lg("Không tìm thấy BlueStacks. Vẫn tiếp tục ở chế độ API trực tiếp.", "w")
+        self._chip.config(text="ADB")
+        self._adb_lbl.config(text="không thấy BlueStacks", fg=YELLOW)
+        self._lg("Không tìm thấy BlueStacks. Không thể tải ở chế độ ADB-only.", "w")
 
     def _scan_devices(self):
         self._lg("Dò BlueStacks fallback...", "acc")
@@ -308,10 +317,11 @@ class App(tk.Tk):
            self._book_lookup_key(self._selected_book_title) == self._book_lookup_key(book):
             book_id = self._selected_book_id
 
-        if self._adb and self._adb.device:
-            self._lg("Ưu tiên tải qua API; BlueStacks chỉ dùng nếu cần fallback.", "dim")
-        else:
-            self._lg("Chưa có BlueStacks fallback. Sẽ tải trực tiếp qua API.", "dim")
+        if not (self._adb and self._adb.device):
+            messagebox.showwarning("", "Cần BlueStacks/ADB để tải ở chế độ ADB-only")
+            return
+
+        self._lg("ADB-only mode: tải truyện trực tiếp qua BlueStacks.", "dim")
 
         self._btn_start.config(state="disabled")
         self._btn_stop.config(state="normal")
@@ -724,8 +734,8 @@ class App(tk.Tk):
         )
 
     def _show_scanned_books(self):
-        if not _HAS_REQUESTS and (not self._adb or not self._adb.device):
-            messagebox.showwarning("", "Cần API hoặc BlueStacks để quét danh sách truyện")
+        if not self._adb or not self._adb.device:
+            messagebox.showwarning("", "Cần BlueStacks/ADB để quét danh sách truyện")
             return
 
         win = tk.Toplevel(self)
@@ -736,7 +746,7 @@ class App(tk.Tk):
 
         top = tk.Frame(win, bg=BG)
         top.pack(fill="x", padx=8, pady=6)
-        _lbl(top, "Quét toàn bộ catalog truyện qua API; ADB chỉ fallback khi API lỗi", FG2,
+        _lbl(top, "Quét danh sách truyện bằng ADB từ app đang mở; API đã tắt", FG2,
              FONT_BOLD, bg=BG).pack(side="left")
         count_lbl = _lbl(top, "", FG3, ("Segoe UI", 8), bg=BG)
         count_lbl.pack(side="right")
@@ -1240,18 +1250,17 @@ class App(tk.Tk):
                 _safe_ui(lambda e=exc: metadata_var.set(f"Metadata lọc lỗi: {e}"))
 
         def _scan_worker():
-            self._lg("Quét toàn bộ danh sách truyện...", "acc")
+            self._lg("Quét danh sách truyện bằng ADB...", "acc")
             try:
-                current_source = "API"
-                if _HAS_REQUESTS:
-                    api_books, total = self._fetch_catalog_books(log_fn=self._lg)
-                    books = [self._catalog_item_from_api(book) for book in api_books]
-                    self._lg(f"Quét catalog xong: {len(books)}/{total} truyện", "ok")
-                elif self._adb and self._adb.device:
-                    current_source = "ADB fallback"
-                    books = self._adb.scan_book_list(max_items=300, max_scrolls=40, log_fn=self._lg)
+                current_source = "ADB"
+                if self._adb and self._adb.device:
+                    books = self._adb.scan_book_list(max_items=800, max_scrolls=120, log_fn=self._lg)
                 else:
-                    raise RuntimeError("Không có API hoặc BlueStacks để quét danh sách")
+                    raise RuntimeError("Không có BlueStacks để quét danh sách")
+
+                if not books:
+                    self._lg("ADB không thấy card truyện nào trên màn hình hiện tại.", "w")
+                    self._lg("Hãy mở tab Khám phá hoặc màn kết quả tìm kiếm rồi bấm quét lại.", "w")
 
                 def _update_full():
                     nonlocal full_items
@@ -1262,38 +1271,14 @@ class App(tk.Tk):
                     filter_btn.config(state="disabled")
                     filter_summary_var.set(_filter_summary())
                     _fill([book for book in full_items if _passes_filter(book)], current_source)
+                    if not full_items:
+                        detail_var.set("ADB chưa thấy card truyện nào trên màn hình hiện tại.\n\nHãy mở tab Khám phá hoặc màn kết quả tìm kiếm trong app rồi quét lại.")
 
                 _safe_ui(_update_full)
-                if _HAS_REQUESTS and books:
-                    threading.Thread(target=lambda: _metadata_worker(books), daemon=True).start()
+                metadata_ready[0] = False
+                _safe_ui(lambda: metadata_var.set("Metadata lọc: tắt vì đang chạy ADB-only"))
             except Exception as e:
-                self._lg(f"API catalog lỗi: {e}", "w")
-                if self._adb and self._adb.device:
-                    try:
-                        current_source = "ADB fallback"
-                        books = self._adb.scan_book_list(max_items=300, max_scrolls=40, log_fn=self._lg)
-                        if _HAS_REQUESTS and books:
-                            sess = self._http_session()
-                            user_cache = {}
-                            books = [self._enrich_scanned_book(sess, book, user_cache) for book in books]
-
-                        def _update_full_fallback():
-                            nonlocal full_items
-                            full_items = books
-                            source_label[0] = current_source
-                            metadata_ready[0] = False
-                            metadata_var.set("Metadata lọc: đang nạp...")
-                            filter_btn.config(state="disabled")
-                            filter_summary_var.set(_filter_summary())
-                            _fill([book for book in full_items if _passes_filter(book)], current_source)
-
-                        _safe_ui(_update_full_fallback)
-                        if _HAS_REQUESTS and books:
-                            threading.Thread(target=lambda: _metadata_worker(books), daemon=True).start()
-                        return
-                    except Exception as fallback_error:
-                        e = f"{e}\n\nADB fallback: {fallback_error}"
-
+                self._lg(f"ADB scan lỗi: {e}", "w")
                 _safe_ui(lambda: (
                     count_lbl.config(text="Lỗi quét"),
                     detail_var.set(f"Không quét được danh sách truyện.\n\n{e}"),
@@ -1304,8 +1289,8 @@ class App(tk.Tk):
 
         def _load_scan():
             count_lbl.config(text="Đang quét...")
-            detail_var.set("Đang quét toàn bộ catalog truyện và nạp vào danh sách...")
-            metadata_var.set("Metadata lọc: đang nạp...")
+            detail_var.set("Đang quét danh sách truyện bằng ADB trong app...")
+            metadata_var.set("Metadata lọc: tắt vì đang chạy ADB-only")
             filter_btn.config(state="disabled")
             for row in tree.get_children():
                 tree.delete(row)
@@ -1348,8 +1333,8 @@ class App(tk.Tk):
 
     # ── Danh sách truyện (API metadata popup) ────────────────────────────
     def _show_book_list(self):
-        if not _HAS_REQUESTS:
-            messagebox.showerror("", "Cần cài requests:\npip install requests")
+        if not _CAN_USE_API:
+            self._show_scanned_books()
             return
         win = tk.Toplevel(self)
         win.title("Danh sách truyện – MTC")
