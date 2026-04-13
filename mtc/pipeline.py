@@ -1,6 +1,7 @@
 """pipeline.py – Download orchestrator with fast API path and ADB fallback."""
 import base64
 import difflib
+import json
 import re
 import string
 import time
@@ -34,10 +35,112 @@ _API_HEADERS = {
     "x-app": "app.android",
 }
 _BASE64_BYTES = set((string.ascii_letters + string.digits + "+/=").encode())
+_BOOK_ID_CACHE_FILE = OUTPUT_DIR / ".book_id_cache.json"
 
 
 def _lookup_key(text: str) -> str:
     return "".join(ch for ch in (text or "").casefold() if ch.isalnum())
+
+
+def _load_book_id_cache() -> Dict[str, Dict]:
+    if not _BOOK_ID_CACHE_FILE.exists():
+        return {}
+
+    try:
+        data = json.loads(_BOOK_ID_CACHE_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+    return data if isinstance(data, dict) else {}
+
+
+def _save_book_id_cache(cache: Dict[str, Dict]) -> None:
+    _BOOK_ID_CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    _BOOK_ID_CACHE_FILE.write_text(
+        json.dumps(cache, ensure_ascii=False, indent=2, sort_keys=True),
+        encoding="utf-8",
+    )
+
+
+def _cache_book_mapping(book_name: str, book: Dict) -> None:
+    book_id = book.get("id")
+    if not book_id:
+        return
+
+    cache = _load_book_id_cache()
+    payload = {"id": book_id, "name": book.get("name") or book_name}
+    changed = False
+
+    for candidate_name in (book_name, book.get("name") or ""):
+        key = _lookup_key(candidate_name)
+        if not key:
+            continue
+        if cache.get(key) == payload:
+            continue
+        cache[key] = payload
+        changed = True
+
+    if changed:
+        _save_book_id_cache(cache)
+
+
+def _book_from_id(session, book_id: int) -> Optional[Dict]:
+    response = session.get(f"{API_BASE}/books/{book_id}", timeout=15)
+    response.raise_for_status()
+    data = (response.json() or {}).get("data") or {}
+    return data or None
+
+
+def _search_books(session, keyword: str) -> List[Dict]:
+    keyword = re.sub(r"\s+", " ", keyword or "").strip()
+    if not keyword:
+        return []
+
+    response = session.get(
+        f"{API_BASE}/books/search",
+        params={"keyword": keyword},
+        timeout=20,
+    )
+    response.raise_for_status()
+    return (response.json() or {}).get("data") or []
+
+
+def _score_book_candidate(book_name: str, candidate: Dict) -> float:
+    query_key = _lookup_key(book_name)
+    title_key = _lookup_key(candidate.get("name", ""))
+    if not query_key or not title_key:
+        return 0.0
+
+    score = difflib.SequenceMatcher(None, query_key, title_key).ratio()
+    if query_key == title_key:
+        score += 0.4
+    elif query_key in title_key or title_key in query_key:
+        score += 0.25
+
+    return score
+
+
+def _search_keywords(book_name: str) -> List[str]:
+    normalized = re.sub(r"\s+", " ", book_name or "").strip()
+    if not normalized:
+        return []
+
+    keywords = [normalized]
+    for separator in ("(", "[", ":", " - ", " – ", " — "):
+        if separator in normalized:
+            head = normalized.split(separator, 1)[0].strip()
+            if head:
+                keywords.append(head)
+
+    seen = set()
+    ordered = []
+    for keyword in keywords:
+        folded = keyword.strip()
+        if not folded or folded in seen:
+            continue
+        seen.add(folded)
+        ordered.append(folded)
+    return ordered
 
 
 def _api_session():
@@ -53,13 +156,50 @@ def _api_session():
 
 def _resolve_book(session, book_name: str, book_id: Optional[int] = None) -> Optional[Dict]:
     if book_id:
-        response = session.get(f"{API_BASE}/books/{book_id}", timeout=15)
-        response.raise_for_status()
-        data = (response.json() or {}).get("data") or {}
+        data = _book_from_id(session, book_id)
         if data:
+            _cache_book_mapping(book_name, data)
             return data
 
     query_key = _lookup_key(book_name)
+
+    cached = _load_book_id_cache().get(query_key)
+    if cached and cached.get("id"):
+        try:
+            data = _book_from_id(session, int(cached["id"]))
+            if data:
+                _cache_book_mapping(book_name, data)
+                return data
+        except Exception:
+            pass
+
+    search_best = None
+    search_best_score = 0.0
+    seen_ids = set()
+    for keyword in _search_keywords(book_name):
+        try:
+            candidates = _search_books(session, keyword)
+        except Exception:
+            continue
+
+        for candidate in candidates:
+            candidate_id = candidate.get("id")
+            if candidate_id in seen_ids:
+                continue
+            seen_ids.add(candidate_id)
+
+            score = _score_book_candidate(book_name, candidate)
+            if score > search_best_score:
+                search_best = candidate
+                search_best_score = score
+
+        if search_best_score >= 1.0:
+            break
+
+    if search_best and search_best_score >= 0.7:
+        _cache_book_mapping(book_name, search_best)
+        return search_best
+
     best = None
     best_score = 0.0
 
@@ -75,10 +215,7 @@ def _resolve_book(session, book_name: str, book_id: Optional[int] = None) -> Opt
             break
 
         for candidate in candidates:
-            title_key = _lookup_key(candidate.get("name", ""))
-            score = difflib.SequenceMatcher(None, query_key, title_key).ratio()
-            if query_key and (query_key == title_key or query_key in title_key or title_key in query_key):
-                score += 0.25
+            score = _score_book_candidate(book_name, candidate)
             if score > best_score:
                 best = candidate
                 best_score = score
@@ -86,7 +223,10 @@ def _resolve_book(session, book_name: str, book_id: Optional[int] = None) -> Opt
         if best_score >= 1.10 or len(candidates) < 100:
             break
 
-    return best if best_score >= 0.65 else None
+    if best and best_score >= 0.65:
+        _cache_book_mapping(book_name, best)
+        return best
+    return None
 
 
 def _fetch_chapter_list(session, book_id: int) -> List[Dict]:
