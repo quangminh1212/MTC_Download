@@ -1,13 +1,13 @@
-"""Smoke tests for mtc.api and mtc.downloader modules."""
+"""Smoke tests for download.api and download.downloader modules."""
 import json
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from mtc.api import create_session, search_books, fetch_full_catalog, resolve_book
-from mtc.downloader import load_catalog
-from mtc.utils import safe_name
+from download.api import create_session, search_books, fetch_full_catalog, resolve_book
+from download.downloader import load_catalog
+from download.utils import safe_name
 
 
 def test_safe_name():
