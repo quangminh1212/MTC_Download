@@ -19,6 +19,73 @@ from mtc.config import CATALOG
 TARGET = Path(r"c:\dev\MTC")
 TARGET.mkdir(parents=True, exist_ok=True)
 
+ADB = r"C:\Program Files\BlueStacks_nxt\HD-Adb.exe"
+DEVICE = "127.0.0.1:5555"
+UI_DUMP = Path("data/_ui_dump.xml")
+
+
+def adb_cmd(*args):
+    cmd = [ADB, "-s", DEVICE] + list(args)
+    r = subprocess.run(cmd, capture_output=True, timeout=30, encoding="utf-8", errors="replace")
+    return r.stdout
+
+
+def dump_ui() -> str:
+    adb_cmd("shell", "uiautomator", "dump", "/sdcard/ui.xml")
+    UI_DUMP.parent.mkdir(parents=True, exist_ok=True)
+    adb_cmd("pull", "/sdcard/ui.xml", str(UI_DUMP))
+    return UI_DUMP.read_text(encoding="utf-8")
+
+
+def parse_novels(xml_text: str) -> list[str]:
+    """Parse novel titles from UI dump XML."""
+    titles = []
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError:
+        return titles
+    for node in root.iter("node"):
+        if node.get("clickable") != "true":
+            continue
+        desc = node.get("content-desc", "")
+        if not desc or "\n" not in desc:
+            continue
+        lines = desc.strip().split("\n")
+        if len(lines) < 4 or not lines[0].startswith("#"):
+            continue
+        title = next((l.strip() for l in lines if not l.startswith("#")), None)
+        if title:
+            titles.append(title)
+    return titles
+
+
+def scroll_and_extract_all() -> list[str]:
+    """Scroll through the app list and extract all novel titles."""
+    all_titles = []
+    seen = set()
+    no_new = 0
+    for i in range(50):
+        print(f"  Scroll #{i}...")
+        xml_text = dump_ui()
+        titles = parse_novels(xml_text)
+        new_count = 0
+        for t in titles:
+            if t not in seen:
+                seen.add(t)
+                all_titles.append(t)
+                new_count += 1
+                print(f"    + {t}")
+        if new_count == 0:
+            no_new += 1
+            if no_new >= 3:
+                print("  3 lần liên tiếp không có truyện mới, dừng.")
+                break
+        else:
+            no_new = 0
+        adb_cmd("shell", "input", "swipe", "450", "1400", "450", "400", "800")
+        time.sleep(1.5)
+    return all_titles
+
 
 def git_commit(msg: str):
     """Stage all and commit in TARGET repo."""
@@ -125,15 +192,33 @@ def download_one_book(session, book: dict) -> dict:
 def main():
     session = create_session()
 
-    # Refresh catalog
-    print("Đang cập nhật catalog từ API...")
-    books = fetch_full_catalog(session)
-    if books:
-        save_catalog(books)
-        print(f"Catalog: {len(books)} truyện")
+    if "--from-app" in sys.argv:
+        print("Đang trích xuất danh sách truyện từ BlueStacks...")
+        titles = scroll_and_extract_all()
+        print(f"\nTìm thấy {len(titles)} truyện từ app.")
+        if not titles:
+            print("Không tìm thấy truyện nào!")
+            return
+        # Resolve each title to book data via API
+        books = []
+        for t in titles:
+            info = resolve_book(session, t)
+            if info:
+                books.append(info)
+                print(f"  ✔ {t} → #{info['id']}")
+            else:
+                print(f"  ✖ Không tìm thấy: {t}")
+        print(f"Đã resolve {len(books)}/{len(titles)} truyện.")
     else:
-        books = load_catalog()
-        print(f"Dùng catalog local: {len(books)} truyện")
+        # Refresh catalog
+        print("Đang cập nhật catalog từ API...")
+        books = fetch_full_catalog(session)
+        if books:
+            save_catalog(books)
+            print(f"Catalog: {len(books)} truyện")
+        else:
+            books = load_catalog()
+            print(f"Dùng catalog local: {len(books)} truyện")
 
     if not books:
         print("Không có truyện nào!")
