@@ -1,4 +1,4 @@
-C:\Program Files\BlueStacks_nxt\HD-Adb.exe
+﻿C:\Program Files\BlueStacks_nxt\HD-Adb.exe
 
 
 
@@ -4321,3 +4321,964 @@ Xong! ✔5  ✖0  →  c:\Dev\MTC\Thu Nhập Và Thanh Toán
   [ch760] ⚡ Chương 760 Thiên Lộ Chiến - Buông Tay Mà Làm.txt (201 ký tự)
   [ch761] ⚡ Chương 761 Thiên Lộ Chiến - Trốn.txt (310 ký tự)
   [ch762] ⚡ Chương 762 Thiên Lộ Chiến - Ăn Không Nói Có Ngụy Quân Tử.txt (141 ký tự)
+  [ch763] ⚠ Nội dung sau giải mã quá ngắn
+  [ch764] ⚡ Chương 764 Thiên Lộ Chiến - Củng Cố Lực Lượng.txt (130 ký tự)
+  [ch765] ⚡ Chương 765 Thiên Lộ Chiến - Tiền Bối.txt (294 ký tự)
+  [ch766] ⚡ Chương 766 Thiên Lộ Chiến - Nước Đi Đầu Tiên Của Nhược Hàn.txt (273 ký tự)
+  [ch767] ⚠ Nội dung sau giải mã quá ngắn
+  [ch768] ⚡ Chương 768 Thiên Lộ Chiến - Huynh Đệ À Chúng Ta Giảng Hòa Được Không.txt (129 ký tự)
+  [ch769] ⚡ Chương 769 Thiên Lộ Chiến - Không Thể Đoán Trước.txt (229 ký tự)
+  [ch770] ⚡ Chương 770 Thiên Lộ Chiến - Thần Phục Hoặc Chết.txt (138 ký tự)
+  [ch771] ⚡ Chương 771 Thiên Lộ Chiến - Làm Tốt Việc Của Mình.txt (120 ký tự)
+  [ch772] ⚡ Chương 772 Thiên Lộ Chiến - Mục Đích.txt (171 ký tự)
+  [ch773] ⚡ Chương 773 Thiên Lộ Chiến - Thành Công Vào Cung.txt (401 ký tự)
+  [ch774] ⚠ Nội dung sau giải mã quá ngắn
+  [ch775] ⚡ Chương 775 Thiên Lộ Chiến - Thiên Sát.txt (305 ký tự)
+  [ch776] ⚡ Chương 776 Thiên Lộ Chiến - Biến Chất.txt (302 ký tự)
+  [ch777] ⚡ Chương 777 Thiên Lộ Chiến - Diệt Hắc Lâu.txt (247 ký tự)
+  [ch778] ⚡ Chương 778 Thiên Lộ Chiến - Trêu Đùa.txt (322 ký tự)
+  [ch779] ⚡ Chương 779 Thiên Lộ Chiến - Bất Ngờ.txt (224 ký tự)
+  [ch780] ⚡ Chương 780 Thiên Lộ Chiến - Bắt Xong Lại Thả.txt (171 ký tự)
+  [ch781] ⚡ Chương 781 Thiên Lộ Chiến - Thao Túng.txt (296 ký tự)
+  [ch782] ⚠ Nội dung sau giải mã quá ngắn
+  [ch783] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch784] ⚡ Chương 784 Thiên Lộ Chiến - Chính Biến.txt (244 ký tự)
+  [ch785] ⚡ Chương 785 Thiên Lộ Chiến - Vở Kịch.txt (337 ký tự)
+  [ch786] ⚠ Nội dung sau giải mã quá ngắn
+  [ch787] ⚡ Chương 787 Thiên Lộ Chiến - Tác Động Bất Ngờ.txt (306 ký tự)
+  [ch788] ⚡ Chương 788 Thiên Lộ Chiến - Dâng Tặng Bảo Vật.txt (250 ký tự)
+  [ch789] ⚡ Chương 789 Thiên Lộ Chiến - Thanh Trắc Quân - Hắc Sắc Quân Đoàn.txt (296 ký tự)
+  [ch790] ⚡ Chương 790 Thiên Lộ Chiến - Thanh Trắc Quân - Hắc Sắc Quân Đoàn {2}.txt (177 ký tự)
+  [ch791] ⚡ Chương 791 Thiên Lộ Chiến - Hủy Diệt.txt (333 ký tự)
+  [ch792] ⚡ Chương 792 Thiên Lộ Chiến - U Ảo Lam Băng.txt (260 ký tự)
+  [ch793] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch794] ⚡ Chương 794 Thiên Lộ Chiến - Trao Đổi Thông Tin.txt (255 ký tự)
+  [ch795] ⚡ Chương 795 Thiên Lộ Chiến - Thiên Giới Có Biến.txt (317 ký tự)
+  [ch796] ⚡ Chương 796 Thiên Lộ Chiến - Phương Án Giải Quyết.txt (261 ký tự)
+  [ch797] ⚠ Invalid base64-encoded string: number of data characters (21) cannot be 1 more than a multiple of 4
+  [ch798] ⚡ Chương 798 Thiên Lộ Chiến - Thoát Chết.txt (174 ký tự)
+  [ch799] ⚡ Chương 799 Thiên Lộ Chiến - Bất Bình Đẳng.txt (212 ký tự)
+  [ch800] ⚡ Chương 800 Thiên Lộ Chiến - Sống Phóng Khoáng.txt (632 ký tự)
+  [ch801] ⚡ Chương 801 Thiên Lộ Chiến - Sao Chép Trang Bị.txt (254 ký tự)
+  [ch802] ⚠ Nội dung sau giải mã quá ngắn
+  [ch803] ⚠ Nội dung sau giải mã quá ngắn
+  [ch804] ⚡ Chương 804 Thiên Lộ Chiến - Khuấy Đảo Phong Vân.txt (319 ký tự)
+  [ch805] ⚡ Chương 805 Thiên Lộ Chiến - Nham Hiểm.txt (331 ký tự)
+  [ch806] ⚠ Nội dung sau giải mã quá ngắn
+  [ch807] ⚡ Chương 807 Thiên Lộ Chiến - Chúng Ta Thương Lượng Được Không.txt (248 ký tự)
+  [ch808] ⚠ Nội dung sau giải mã quá ngắn
+  [ch809] ⚡ Chương 809 Thiên Lộ Chiến - Nguyệt Hàm.txt (72 ký tự)
+  [ch810] ⚡ Chương 810 Thiên Lộ Chiến - Buông Tay.txt (220 ký tự)
+  [ch811] ⚡ Chương 811 Thiên Lộ Chiến - Họa Thủy Đông Dẫn.txt (150 ký tự)
+  [ch812] ⚡ Chương 812 Thiên Lộ Chiến - Lời Thật Mất Lòng.txt (238 ký tự)
+  [ch813] ⚡ Chương 813 Thiên Lộ Chiến - Đánh Cuộc.txt (148 ký tự)
+  [ch814] ⚡ Chương 814 Thiên Lộ Chiến - Suy Nghĩ Của Mộ Khuynh Thành.txt (87 ký tự)
+  [ch815] ⚡ Chương 815 Thiên Lộ Chiến - Nguyệt Hàm Vô Sỉ.txt (234 ký tự)
+  [ch816] ⚡ Chương 816 Thiên Lộ Chiến - Đại Bại.txt (298 ký tự)
+  [ch817] ⚡ Chương 817 Thiên Lộ Chiến - Nguyệt Hàm Ngạc Nhiên.txt (92 ký tự)
+  [ch818] ⚡ Chương 818 Thiên Lộ Chiến - Huấn Luyện Đặc Biệt.txt (244 ký tự)
+  [ch819] ⚡ Chương 819 Thiên Lộ Chiến - Thuyết Phục Thành Công.txt (321 ký tự)
+  [ch820] ⚡ Chương 820 Thiên Lộ Chiến - Hội Ngộ.txt (268 ký tự)
+  [ch821] ⚡ Chương 821 Thiên Lộ Chiến - Triệu Linh Quân Quyết Định.txt (213 ký tự)
+  [ch822] ⚡ Chương 822 Thiên Lộ Chiến - Chuyện Lạ.txt (325 ký tự)
+  [ch823] ⚡ Chương 823 Thiên Lộ Chiến - Quyết Định Dứt Khoát.txt (229 ký tự)
+  [ch824] ⚡ Chương 824 Thiên Lộ Chiến - Triệu Linh Quân Chủ Động.txt (349 ký tự)
+  [ch825] ⚡ Chương 825 Thiên Lộ Chiến - Đạo Làm Con.txt (114 ký tự)
+  [ch826] ⚡ Chương 826 Thiên Lộ Chiến - Hết Lòng.txt (259 ký tự)
+  [ch827] ⚡ Chương 827 Thiên Lộ Chiến - Bỏ Qua Liêm Sỉ.txt (195 ký tự)
+  [ch828] ⚡ Chương 828 Thiên Lộ Chiến - Dẻo Miệng.txt (60 ký tự)
+  [ch829] ⚡ Chương 829 Thiên Lộ Chiến - Đừng Coi Thường Hắn.txt (134 ký tự)
+  [ch830] ⚠ Nội dung sau giải mã quá ngắn
+  [ch831] ⚡ Chương 831 Thiên Lộ Chiến - Thao Tâm Chiến Kỹ {1}.txt (333 ký tự)
+  [ch832] ⚠ Nội dung sau giải mã quá ngắn
+  [ch833] ⚡ Chương 833 Thiên Lộ Chiến - Hoang Đường.txt (127 ký tự)
+  [ch834] ⚡ Chương 834 Thiên Lộ Chiến - Kể Khổ Đại Hội.txt (275 ký tự)
+  [ch835] ⚡ Chương 835 Thiên Lộ Chiến - Chu Hinh Vô Tâm.txt (252 ký tự)
+  [ch836] ⚡ Chương 836 Thiên Lộ Chiến - Đế Nguyệt Sắp Loạn.txt (222 ký tự)
+  [ch837] ⚡ Chương 837 Thiên Lộ Chiến - Sát Lục Đêm Mưa.txt (125 ký tự)
+  [ch838] ⚡ Chương 838 Thiên Lộ Chiến - Không Cần Mặt Mũi.txt (292 ký tự)
+  [ch839] ⚡ Chương 839 Thiên Lộ Chiến - Lựa Chọn Thế Nào.txt (306 ký tự)
+  [ch840] ⚡ Chương 840 Thiên Lộ Chiến - Một Đường Sinh Lộ.txt (52 ký tự)
+  [ch841] ⚡ Chương 841 Thiên Lộ Chiến - Tình Báo.txt (181 ký tự)
+  [ch842] ⚡ Chương 842 Thiên Lộ Chiến - Thiên Cơ Các.txt (154 ký tự)
+  [ch843] ⚡ Chương 843 Thiên Lộ Chiến - Từ Bỏ Hay Bước Tiếp.txt (219 ký tự)
+  [ch844] ⚡ Chương 844 Thiên Lộ Chiến - Lập Uy.txt (264 ký tự)
+  [ch845] ⚡ Chương 845 Thiên Lộ Chiến - Có Làm Mới Có Ăn.txt (216 ký tự)
+  [ch846] ⚡ Chương 846 Thiên Lộ Chiến - Bất Tử Dụ Hoặc.txt (230 ký tự)
+  [ch847] ⚡ Chương 847 Thiên Lộ Chiến - Nhòm Rau Gắp Thịt.txt (296 ký tự)
+  [ch848] ⚡ Chương 848 Thiên Lộ Chiến - Liều Ăn Nhiều.txt (170 ký tự)
+  [ch849] ⚡ Chương 849 Thiên Lộ Chiến - Hội Ngộ.txt (115 ký tự)
+  [ch850] ⚡ Chương 850 Thiên Lộ Chiến - Chịu Trách Nhiệm.txt (256 ký tự)
+  [ch851] ⚡ Chương 851 Thiên Lộ Chiến - Nể Không Phải Sợ.txt (310 ký tự)
+  [ch852] ⚡ Chương 852 Thiên Lộ Chiến - Triệu Linh Quân Cảnh Cáo.txt (146 ký tự)
+  [ch853] ⚡ Chương 853 Thiên Lộ Chiến - Một Phút.txt (284 ký tự)
+  [ch854] ⚡ Chương 854 Thiên Lộ Chiến - Đáng Thương Nhất Là Tấm Lòng Cha Mẹ.txt (185 ký tự)
+  [ch855] ⚡ Chương 855 Thiên Lộ Chiến - Cô Nương Xin Tự Trọng.txt (278 ký tự)
+  [ch856] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch857] ⚡ Chương 857 Thiên Lộ Chiến - Quy Tắc Hòa Bình.txt (133 ký tự)
+  [ch858] ⚡ Chương 858 Thiên Lộ Chiến - Đệ Thất Thanh Liên.txt (343 ký tự)
+  [ch859] ⚡ Chương 859 Thiên Lộ Chiến - Vận Mệnh Nhân Tộc.txt (273 ký tự)
+  [ch860] ⚡ Chương 860 Thiên Lộ Chiến - Lý Do Bị Kỳ Thị.txt (140 ký tự)
+  [ch861] ⚠ Nội dung sau giải mã quá ngắn
+  [ch862] ⚡ Chương 862 Thiên Lộ Chiến - Mưu Đồ.txt (259 ký tự)
+  [ch863] ⚡ Chương 863 Thiên Lộ Chiến - Tung Hỏa Mù.txt (203 ký tự)
+  [ch864] ⚡ Chương 864 Thiên Lộ Chiến - Nước Cờ Của Thiên Cơ Các.txt (283 ký tự)
+  [ch865] ⚡ Chương 865 Thiên Lộ Chiến - Si Tình.txt (261 ký tự)
+  [ch866] ⚡ Chương 866 Thiên Lộ Chiến - Tỷ Muội Căng Thẳng.txt (234 ký tự)
+  [ch867] ⚡ Chương 867 Thiên Lộ Chiến - Dồn Ép.txt (204 ký tự)
+  [ch868] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch869] ⚡ Chương 869 Thiên Lộ Chiến - Tiến Tới Thượng Cấp Vi Diện.txt (294 ký tự)
+  [ch870] ⚡ Chương 870 Thiên Lộ Chiến - Gặp Lại.txt (134 ký tự)
+  [ch871] ⚡ Chương 871 Thiên Lộ Chiến - Khiêu Khích Và Cái Kết.txt (139 ký tự)
+  [ch872] ⚡ Chương 872 Thiên Lộ Chiến - Toàn Tài.txt (203 ký tự)
+  [ch873] ⚡ Chương 873 Thiên Lộ Chiến - Trở Thành Bảo Bối.txt (275 ký tự)
+  [ch874] ⚡ Chương 874 Thiên Lộ Chiến - Mộng Cảnh Dò Tâm.txt (148 ký tự)
+  [ch875] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 875 Thiên Lộ Chiến - Đánh Giá Hoàn Mỹ.txt'
+  [ch876] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 876 Thiên Lộ Chiến - Rất Thuyết Phục.txt'
+  [ch877] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 877 Thiên Lộ Chiến - Quay Xe.txt'
+  [ch878] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 878 Thiên Lộ Chiến - Tranh Biện.txt'
+  [ch879] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 879 Thiên Lộ Chiến - Gây Chuyện.txt'
+  [ch880] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch881] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 881 Thiên Lộ Chiến - Đánh Cược.txt'
+  [ch882] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 882 Thiên Lộ Chiến - Cầu Người.txt'
+  [ch883] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 883 Thiên Lộ Chiến - Chạn Vương Chi Tâm.txt'
+  [ch884] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 884 Thiên Lộ Chiến - Kẻ Đáng Ghét.txt'
+  [ch885] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 885 Thiên Lộ Chiến - Xúi Dại.txt'
+  [ch886] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 886 Thiên Lộ Chiến - Thiên Tiếu Tới.txt'
+  [ch887] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 887 Thiên Lộ Chiến - Cầu Người.txt'
+  [ch888] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 888 Thiên Lộ Chiến - Xóa Bỏ Ân Oán.txt'
+  [ch889] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 889 Thiên Lộ Chiến - Ra Mắt Ấn Tượng.txt'
+  [ch890] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch891] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 891 Thiên Lộ Chiến - Chế Tạo Bảo Vật.txt'
+  [ch892] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 892 Thiên Lộ Chiến - Trẫm Sai Rồi.txt'
+  [ch893] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 893 Thiên Lộ Chiến - Tâm Tư Của Nhược Hàn.txt'
+  [ch894] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 894 Thiên Lộ Chiến - Lần Đầu Hợp Tác.txt'
+  [ch895] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 895 Thiên Lộ Chiến - Ứng Biến Bất Ngờ.txt'
+  [ch896] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 896 Thiên Lộ Chiến - Kỷ Lục Liên Phá.txt'
+  [ch897] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 897 Thiên Lộ Chiến - Dị Biến.txt'
+  [ch898] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 898 Thiên Lộ Chiến - Án Binh Bất Động.txt'
+  [ch899] ⚠ Nội dung sau giải mã quá ngắn
+  [ch900] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 900 Thiên Lộ Chiến - Thầy Trò Vô Sỉ.txt'
+  [ch901] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 901 Thiên Lộ Chiến - Tổ Đội Ăn Chực.txt'
+  [ch902] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch903] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 903 Thiên Lộ Chiến - Không Có Lần Sau.txt'
+  [ch904] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 904 Thiên Lộ Chiến - Nội Gián.txt'
+  [ch905] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 905 Thiên Lộ Chiến - Tề Quân Hoa Ảo Tưởng.txt'
+  [ch906] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 906 Thiên Lộ Chiến - Nữ Nhân Tán Gẫu.txt'
+  [ch907] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 907 Thiên Lộ Chiến - Kẻ Cô Đơn.txt'
+  [ch908] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 908 Thiên Lộ Chiến - Thế Ta Thì Sao.txt'
+  [ch909] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 909 Thiện Lộ Chiến - Thanh Liên Nằm Mộng.txt'
+  [ch910] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 910 Thiên Lộ Chiến - Lời Mời Từ Thanh Liên.txt'
+  [ch911] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch912] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 912 Thiên Lộ Chiến - Tiêu Huyền Lo Lắng.txt'
+  [ch913] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 913 Thiên Lộ Chiến - Tiêu Huyền Chăm Chú.txt'
+  [ch914] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 914 Thiên Lộ Chiến - Nhân Loại Thất Thủ.txt'
+  [ch915] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 915 Thiên Lộ Chiến - Chân Nam Nhân.txt'
+  [ch916] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 916 Thiên Lộ Chiến - Khác Biệt Và Nhẫn Tâm.txt'
+  [ch917] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 917 Thiên Lộ Chiến - Chỉnh Đốn Tiêu Huyền.txt'
+  [ch918] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch919] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 919 Thiên Lộ Chiến - Tề Quân HoaTới Cửa.txt'
+  [ch920] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 920 Thiên Lộ Chiến - Làm Người Ta Kinh Hãi.txt'
+  [ch921] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 921 Thiên Lộ Chiến - Kẻ Say.txt'
+  [ch922] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 922 Thiên Lộ Chiến - Điên Thật Rồi.txt'
+  [ch923] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 923 Thiên Lộ Chiến - Công Khai Gạ Gẫm.txt'
+  [ch924] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 924 Thiên Lộ Chiến - Tham Lam.txt'
+  [ch925] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 925 Thiên Lộ Chiến - Tham Vọng Của Thiên Tiếu.txt'
+  [ch926] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 926 Thiên Lộ Chiến - Một Đám Ngu Ngốc.txt'
+  [ch927] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 927 Thiên Lộ Chiến - Cay Độc Như Thiên Tiếu.txt'
+  [ch928] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 928 Thiên Lộ Chiến - Tề Quân Hoa Lập Uy.txt'
+  [ch929] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 929 Thiên Lộ Chiến - Đại Hội.txt'
+  [ch930] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 930 Thiên Lộ Chiến - Một Mớ Rắc Rối.txt'
+  [ch931] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 931 Thiên Lộ Chiến - Vừa Đấm Vừa Xoa.txt'
+  [ch932] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 932 Thiên Lộ Chiến - Hướng Tới Siêu Cấp Vi Diện.txt'
+  [ch933] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 933 Thiên Lộ Chiến - Sai Nhưng Cần Thiết.txt'
+  [ch934] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 934 Thiên Lộ Chiến - Cứu Sống Họa Thiên Hậu.txt'
+  [ch935] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 935 Thiên Lộ Chiến - Điều Kỳ Lạ Ở Siêu Cấp Vi Diện.txt'
+  [ch936] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 936 Thiên Lộ Chiến - Mừng Nàng Quay Trở Lại.txt'
+  [ch937] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 937 Thiên Lộ Chiến - Họa Thiên Hậu Cao Tay.txt'
+  [ch938] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 938 Thiên Lộ Chiến - Kẻ Thứ Ba.txt'
+  [ch939] ⚠ Nội dung sau giải mã quá ngắn
+  [ch940] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 940 Thiên Lộ Chiến - Chờ Đợi Thời Cơ.txt'
+  [ch941] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 941 Thiên Lộ Chiến - Người Có Muốn Cưới Thêm Tiểu Thiếp Không.txt'
+  [ch942] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 942 Thiên Lộ Chiến - Kiên Trì Đến Cùng.txt'
+  [ch943] ⚠ Nội dung sau giải mã quá ngắn
+  [ch944] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 944 Thiên Lộ Chiến - Đông Như Kiến Cỏ.txt'
+  [ch945] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 945 Thiên Lộ Chiến - Đại Địa Băng Giá.txt'
+  [ch946] ⚠ Nội dung sau giải mã quá ngắn
+  [ch947] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 947 Thiên Lộ Chiến - Rút Lui.txt'
+  [ch948] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 948 Thiên Lộ Chiến - Biến Số Xuất Hiện.txt'
+  [ch949] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 949 Thiên Lộ Chiến - Trong Đầu Ta Có Thế Thôi.txt'
+  [ch950] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 950 Thiên Lộ Chiến - Tầm Nhìn Thiên Đạo.txt'
+  [ch951] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 951 Thiên Lộ Chiến - Âm Mưu Của Đế Linh Long.txt'
+  [ch952] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 952 Thiên Lộ Chiến - Trêu Chọc Đế Linh Long.txt'
+  [ch953] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 953 Thiên Lộ Chiến - Bắt Giữ Diệu Châu.txt'
+  [ch954] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 954 Thiên Lộ Chiến - Lời Nói Dối Thành Sự Thật.txt'
+  [ch955] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 955 Thiên Lộ Chiến - Đúng Như Tưởng Tượng.txt'
+  [ch956] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 956 Thiên Lộ Chiến - Thầy Ăn Mặn Trò Khát Nước.txt'
+  [ch957] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 957 Thiên Lộ Chiến - Âm Dương Song Tu Thần Quyết Tiến Cấp.txt'
+  [ch958] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 958 Thiên Lộ Chiến - Du Lịch Cũng Mỹ Nhân.txt'
+  [ch959] ⚠ Nội dung sau giải mã quá ngắn
+  [ch960] ⚠ Nội dung sau giải mã quá ngắn
+  [ch961] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch962] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 962 Thiên Lộ Chiến - Một Lần Cá Cược Trả Cả Đời.txt'
+  [ch963] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 963 Thiên Lộ Chiến - Gây Sự Chú Ý.txt'
+  [ch964] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 964 Thiên Lộ Chiến - Hàn Tử Hà Lo Lắng.txt'
+  [ch965] ⚠ Nội dung sau giải mã quá ngắn
+  [ch966] ⚠ Nội dung sau giải mã quá ngắn
+  [ch967] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 967 Thiên Lộ Chiến - Bịa Chuyện.txt'
+  [ch968] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 968 Thiên Lộ Chiến - Ngươi Nói Đúng.txt'
+  [ch969] ⚠ Nội dung sau giải mã quá ngắn
+  [ch970] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 970 Thiên Lộ Chiến - Bất Thường Hắc Điếm.txt'
+  [ch971] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch972] ⚠ Nội dung sau giải mã quá ngắn
+  [ch973] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 973 Thiên Lộ Chiến - Thọ Nguyên Ít Ỏi.txt'
+  [ch974] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 974 Thiên Lộ Chiến - Có Mùi Âm Mưu.txt'
+  [ch975] ⚠ Nội dung sau giải mã quá ngắn
+  [ch976] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 976 Thiên Lộ Chiến - Văn Đế Bị Hoài Nghi.txt'
+  [ch977] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 977 Thiên Lộ Chiến - Xây Dựng Một Đội Quân.txt'
+  [ch978] ⚠ Nội dung sau giải mã quá ngắn
+  [ch979] ⚠ Nội dung sau giải mã quá ngắn
+  [ch980] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 980 Thiên Lộ Chiến - Náo Loạn.txt'
+  [ch981] ⚠ Nội dung sau giải mã quá ngắn
+  [ch982] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch983] ⚠ Nội dung sau giải mã quá ngắn
+  [ch984] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 984 Thiên Lộ Chiến - Tự Bạo.txt'
+  [ch985] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 985 Thiên Lộ Chiến - Triệu Thanh Thư Bi Ai.txt'
+  [ch986] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 986 Thiên Lộ Chiến - Tứ Ứng Cử.txt'
+  [ch987] ⚠ Nội dung sau giải mã quá ngắn
+  [ch988] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 988 Thiên Lộ Chiến - Kỳ Tích Thành Sự Thật.txt'
+  [ch989] ⚠ Nội dung sau giải mã quá ngắn
+  [ch990] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch991] ⚠ Nội dung sau giải mã quá ngắn
+  [ch992] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 992 Thiên Lộ Chiến - Linh Cảm Không Lành.txt'
+  [ch993] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 993 Thiên Lộ Chiến - Bước Đầu Thành Công.txt'
+  [ch994] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 994 Thiên Lộ Chiến - Khi Nào Mới Cưới.txt'
+  [ch995] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 995 Thiên Lộ Chiến - Diễn Kỹ Đỉnh Cao.txt'
+  [ch996] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 996 Thiên Lộ Chiến - Nước Cờ Của Chu Quân Sơn.txt'
+  [ch997] ⚠ Nội dung sau giải mã quá ngắn
+  [ch998] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 998 Thiên Lộ Chiến - Đòn Phủ Đầu Của Liễu Mị Yêu.txt'
+  [ch999] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 999 Thiên Lộ Chiến - Sự Thật Phũ Phàng.txt'
+  [ch1000] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1000 Thiên Lộ Chiến - Tiến Thoái Lưỡng Nan.txt'
+  [ch1001] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1001 Thiên Lộ Chiến - Bất Ngờ Thay Đổi.txt'
+  [ch1002] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1002 Thiên Lộ Chiến - Gài Bẫy Liễu Mị Yêu.txt'
+  [ch1003] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1003 Thiên Lộ Chiến - Do Dự.txt'
+  [ch1004] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1005] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1005 Thiên Lộ Chiến - Giành Quyền Chủ Động.txt'
+  [ch1006] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1006 Thiên Lộ Chiến - Nhất Chiêu Phá Phòng.txt'
+  [ch1007] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1007 Thiên Lộ Chiến - Băng Linh Và Băng Hằng Đuổi Tới.txt'
+  [ch1008] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1009] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1010] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1010 Thiên Lộ Chiến - Thần Phục Và Sa Đọa.txt'
+  [ch1011] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1012] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1013] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1013 Thiên Lộ Chiến - Cảm Ơn Đã Hợp Tác.txt'
+  [ch1014] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1014 Thiên Lộ Chiến - Một Trời Một Vực.txt'
+  [ch1015] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1015 Thiên Lộ Chiến - Ý Thức Trách Nhiệm.txt'
+  [ch1016] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1016 Thiên Lộ Chiến - Giải Sầu Càng Thêm Sầu.txt'
+  [ch1017] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1017 Thiên Lộ Chiến - Trần Ngọc Huyền Vào Tròng.txt'
+  [ch1018] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1018 Thiên Lộ Chiến - Hàng Phục Thành Công.txt'
+  [ch1019] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1020] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1021] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1022] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1022 Thiên Lộ Chiến - Lâm Trận Bỏ Chạy.txt'
+  [ch1023] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1023 Thiên Lộ Chiến - Sát Thủ Bị Lãng Quên.txt'
+  [ch1024] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1025] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1026] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1027] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1028] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1029] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1030] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1030 Thiên Lộ Chiến - Chắc Chắn Thất Bại.txt'
+  [ch1031] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1031 Thiên Lộ Chiến - Công Khai Hợp Tác.txt'
+  [ch1032] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1033] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1034] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1035] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1036] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1037] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1037 Thiên Lộ Chiến - Giành Quyền Lãnh Đạo.txt'
+  [ch1038] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1038 Thiên Lộ Chiến - Cẩn Thận Không Thừa.txt'
+  [ch1039] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1039 Thiên Lộ Chiến - Cùng Chung Chí Hướng.txt'
+  [ch1040] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1041] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1042] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1042 Thiên Lộ Chiến - Không Làm Không Hứa.txt'
+  [ch1043] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1044] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1044 Thiên Lộ Chiến - Chúng Ta Luyện Tập.txt'
+  [ch1045] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1046] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1047] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1047 Thiên Lộ Chiến - Không Có Lý Do Để Từ Chối.txt'
+  [ch1048] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1049] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1050] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1050 Thiên Lộ Chiến - Giữ Hình Tượng.txt'
+  [ch1051] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1052] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1052 Thiên Lộ Chiến - Lạnh Lùng Sắt Đá.txt'
+  [ch1053] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1053 Thiên Lộ Chiến - Lý Trưởng Lão Tuyệt Vọng.txt'
+  [ch1054] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1055] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1055 Thiên Lộ Chiến - Hành Động Khác Thường.txt'
+  [ch1056] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1057] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1057 Thiên Lộ Chiến - Chu Quân Sơn Điên Cuồng.txt'
+  [ch1058] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1058 Thiên Lộ Chiến - Chu Quân Sơn Liều Lĩnh.txt'
+  [ch1059] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1059 Thiên Lộ Chiến - Ý Chí Của Thiên Tiếu.txt'
+  [ch1060] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1060 Thiên Lộ Chiến - Băng Thần Bị Phong Ấn.txt'
+  [ch1061] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1061 Thiên Lộ Chiến - Điên Nhất Thì Dùng.txt'
+  [ch1062] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1062 Thiên Lộ Chiến - Các Người Nghĩ Mình Là Ai.txt'
+  [ch1063] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1063 Thiên Lộ Chiến - Kẻ Thù Của Kẻ Thù Là Bạn.txt'
+  [ch1064] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1065] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1065 Thiên Lộ Chiến - Phá Hủy Thanh Liên Giới.txt'
+  [ch1066] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1067] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1068] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1069] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1069 Thiên Lộ Chiến - Đơn Độc Vào Hang Sói.txt'
+  [ch1070] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1070 Thiên Lộ Chiến - Triệu Thanh Thư Bất Ổn.txt'
+  [ch1071] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1072] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1072 Thiên Lộ Chiến - Tiên Thiên Đế Nguyên Quyết.txt'
+  [ch1073] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1073 Thiên Lộ Chiến - Lý Trí Của Thiên Tiếu.txt'
+  [ch1074] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1074 Thiên Lộ Chiến - Coi Thường.txt'
+  [ch1075] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1075 Thiên Lộ Chiến - Ta Là Triệu Thanh Thư Ngươi Là Thiên Tiếu.txt'
+  [ch1076] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1077] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1078] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1079] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1079 Thiên Lộ Chiến - Đường Cùng.txt'
+  [ch1080] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1080 Thiên Lộ Chiến - Cùng Một Con Thuyền.txt'
+  [ch1081] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1081 Thiên Lộ Chiến - Giải Cứu Đại Ma Đầu.txt'
+  [ch1082] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1083] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1084] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1085] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1086] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1087] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1087 Thiên Tiếu Xui Xẻo.txt'
+  [ch1088] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1089] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1090] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1090 Biến Rác Rưởi Thành Mỹ Vị Nhân Gian.txt'
+  [ch1091] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1092] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1093] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1094] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1095] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1096] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1097] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1098] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1099] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1100] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1100 Tinh Linh Thuần Phục.txt'
+  [ch1101] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1102] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1103] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1104] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1105] ⚠ Invalid base64-encoded string: number of data characters (21) cannot be 1 more than a multiple of 4
+  [ch1106] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1107] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1108] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1109] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1110] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1110 Thiên Tiếu Xui Xẻo.txt'
+  [ch1111] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1112] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1113] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1114] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1115] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1116] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1117] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1117 Hỗ Trợ.txt'
+  [ch1118] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1119] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1120] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1121] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1122] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1123] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1124] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1124 Kết Cục Tốt Nhất.txt'
+  [ch1125] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1126] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1127] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1128] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1129] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1129 Vấn Đề Của Băng Long Thành.txt'
+  [ch1130] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1131] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1132] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1132 Tiên Thiên Đế Nguyên Quyết Tiến Cấp.txt'
+  [ch1133] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1134] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1135] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1136] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1137] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1138] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1138 Sớm Quay Trở Về.txt'
+  [ch1139] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1140] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1140 Chặn Đường Lui.txt'
+  [ch1141] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1142] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1143] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1144] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1144 Thư Bỏ Vợ.txt'
+  [ch1145] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1146] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1147] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1148] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1149] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1150] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1151] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1152] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1153] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1154] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1155] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1156] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1157] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1158] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1158 Bắt Giữ Thái Tử Phi.txt'
+  [ch1159] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1160] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1160 Thật Sự Không Nhớ Nổi.txt'
+  [ch1161] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1162] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1163] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1164] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1165] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1165 Hi Vọng Mong Manh.txt'
+  [ch1166] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1167] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1168] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1169] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1170] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1171] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1171 Thợ Săn Và Con Mồi.txt'
+  [ch1172] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1173] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1174] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1175] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1176] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1177] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1178] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1178 Cao Thủ Thưởng Thức.txt'
+  [ch1179] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1180] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1181] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1181 Nước Đi Này Tại Hạ Không Lường Trước Được.txt'
+  [ch1182] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1183] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1184] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1185] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1185 Thợ Săn Hóa Con Mồi.txt'
+  [ch1186] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1186 Hưng Phấn Và Sợ Hãi.txt'
+  [ch1187] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1188] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1189] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1190] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1191] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1192] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1193] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1193 Thiên Mục.txt'
+  [ch1194] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1195] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1196] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1196 Không Thể Coi Thường.txt'
+  [ch1197] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1198] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1198 Kỳ Tích Bị nghi Ngờ.txt'
+  [ch1199] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1200] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1200 Tiểu Đệ Đầu Tiên.txt'
+  [ch1201] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1202] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1203] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1204] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1204 Người Thủ Hộ.txt'
+  [ch1205] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1206] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1207] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1208] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1209] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1210] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1211] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1212] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1213] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1213 Ngày Cuối Ở Băng Long Thành.txt'
+  [ch1214] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1215] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1215 Ta Không Thích.txt'
+  [ch1216] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1216 Đệ Nhất Đế Vương - Đế Đạo Linh Thần.txt'
+  [ch1217] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1218] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1218 Kiên Định Tín Niệm.txt'
+  [ch1219] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1219 Suy Nghĩ Ngây Thơ.txt'
+  [ch1220] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1221] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1222] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1223] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1223 Bại Ngưu Lôi.txt'
+  [ch1224] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1225] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1226] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1227] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1227 Bị Hắt Hủi.txt'
+  [ch1228] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1229] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1229 Sẽ Hối Hận.txt'
+  [ch1230] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1230 Ngươi Quá Chậm.txt'
+  [ch1231] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1232] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1233] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1233 Cơ Hội Trời Ban.txt'
+  [ch1234] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1235] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1236] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1237] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1238] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1239] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1240] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1240 Oan Gia Thành Thân Thuộc.txt'
+  [ch1241] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1242] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1242 Không Thể Lỗ Được.txt'
+  [ch1243] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1243 Giám Thị Tìm Tới.txt'
+  [ch1244] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1245] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1245 Bắt Đầu Xây Dựng Thế Lực.txt'
+  [ch1246] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1246 Nhập Gia Tùy Tục.txt'
+  [ch1247] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1248] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1248 Cược Lớn.txt'
+  [ch1249] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1249 Toan Tính Của Cao Tầng.txt'
+  [ch1250] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1250 Quy Tắc Của Thiên Giới.txt'
+  [ch1251] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1252] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1253] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1254] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1255] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1255 Một Lần Nữa.txt'
+  [ch1256] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1256 Tranh Đấu Nội Bộ.txt'
+  [ch1257] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1258] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1259] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1259 Lần Đầu Chạm Mặt.txt'
+  [ch1260] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1261] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1261 Mượn Rượu Giải Sầu.txt'
+  [ch1262] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1262 Say Rượu Làm Loạn.txt'
+  [ch1263] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1264] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1265] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1266] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1267] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1267 Nhất Tiễn Hạ Song Điêu.txt'
+  [ch1268] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1269] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1270] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1270 Phong Ấn Có Biến - Sóng Động Nơi Đáy Biển.txt'
+  [ch1271] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1271 Bài Toán Khó.txt'
+  [ch1272] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1273] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1273 Cùng Ngươi Diễn.txt'
+  [ch1274] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1275] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1276] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1277] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1277 Cực Kỳ Khiếp Sợ.txt'
+  [ch1278] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1279] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1279 Tính Toán Của Nhược Hàn - Thời Cơ Tốt Nhất.txt'
+  [ch1280] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1281] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1282] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1282 Mưu Mô Xảo Trá.txt'
+  [ch1283] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1283 Thần Phục Hoặc Chết.txt'
+  [ch1284] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1285] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1285 Hoàng Hậu Tiêu Hân Nghiên.txt'
+  [ch1286] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1287] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1288] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1289] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1290] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1290 Cáo Mượn Oai Hùm.txt'
+  [ch1291] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1291 Ta Muốn Chơi Ngươi.txt'
+  [ch1292] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1293] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1293 Báu Vật Quý Giá.txt'
+  [ch1294] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1294 Ngoại Tình.txt'
+  [ch1295] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1295 Tác Dụng Thiện Cảm Tối Đa.txt'
+  [ch1296] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1296 Mâu Thuẫn Nội Bộ.txt'
+  [ch1297] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1297 Tiến Độ Quá Chậm.txt'
+  [ch1298] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1299] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1300] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1300 Nghịch Thiên Cải Mệnh.txt'
+  [ch1301] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1302] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1303] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1304] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1305] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1306] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1307] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1308] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1308 Móc Nối Với Nhau.txt'
+  [ch1309] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1310] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1311] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1311 Ăn Hết Thịt Còn Muốn Nuốt Cả Xương.txt'
+  [ch1312] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1312 Hoàng Đế Hoàn Hảo.txt'
+  [ch1313] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1313 Kẻ Phá Đám.txt'
+  [ch1314] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1314 Kết Hợp Chiến Đấu.txt'
+  [ch1315] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1315 Thanh Trắc Quân.txt'
+  [ch1316] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1317] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1318] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1319] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1320] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1321] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1322] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1322 Ta Đã Bao Giờ Nói Dối Ngươi Chưa.txt'
+  [ch1323] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1324] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1325] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1326] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1327] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1328] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1329] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1330] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1331] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1332] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1333] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1334] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1335] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1336] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1336 Lợi Ích Đại Tộc.txt'
+  [ch1337] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1338] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1338 Thiên Tửu.txt'
+  [ch1339] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1340] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1341] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1342] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1343] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1343 Chó Chê Mèo Lắm Lông.txt'
+  [ch1344] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1344 Thiên Giới Đại Nạn.txt'
+  [ch1345] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1346] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1346 Liên Hoàn Ám Sát.txt'
+  [ch1347] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1348] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1348 Vô Tiền Khoáng Hậu.txt'
+  [ch1349] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1350] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1351] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1351 Đã Lâu Không Gặp.txt'
+  [ch1352] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1353] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1354] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1355] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1355 Trọng Tình Trọng Nghĩa Muôn Đời Khổ.txt'
+  [ch1356] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1356 Thái Bình Thịnh Thế.txt'
+  [ch1357] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1358] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1358 Sai Một Ly Đi Một Dặm.txt'
+  [ch1359] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1360] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1361] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1361 Thăm Dò.txt'
+  [ch1362] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1363] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1363 Tái Lập Kỳ Tích.txt'
+  [ch1364] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1365] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1366] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1367] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1368] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1368 Sức Mạnh Tri Thức.txt'
+  [ch1369] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1370] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1370 Lực Lượng Tăng Cường.txt'
+  [ch1371] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1372] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1372 Số Phận Bi Thương Thành Vở Kịch Hài.txt'
+  [ch1373] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1374] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1375] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1376] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1377] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1378] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1378 Vệ Thiên Chiến.txt'
+  [ch1379] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1380] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1381] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1382] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1383] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1383 Cả Thiên Giới Trầm Cảm.txt'
+  [ch1384] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1385] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1385 Thẳng Thắn Thuyết Phục.txt'
+  [ch1386] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1386 Lần Nữa Lập Giao Ước.txt'
+  [ch1387] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1388] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1389] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1389 Cần Làm Đến Thế Không.txt'
+  [ch1390] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1391] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1392] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1392 Mưu Sâu Kế Hiểm.txt'
+  [ch1393] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1394] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1395] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1395 Dân Chúng Khổ Cực.txt'
+  [ch1396] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1397] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1398] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1399] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1400] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1400 Cẩn Trọng An Nhã Tâm.txt'
+  [ch1401] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1402] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1403] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1404] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1405] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1406] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1407] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1408] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1409] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1410] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1411] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1412] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1413] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1414] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1415] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1416] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1417] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1418] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1418 Cú Sốc To Lớn.txt'
+  [ch1419] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1420] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1421] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1422] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1423] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1424] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1425] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1425 Đỉnh Cấp Hàng Nhái.txt'
+  [ch1426] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1427] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1428] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1429] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1430] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1431] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1431 Trăm Năm Nữa Ai Biết Chuyện Gì Sẽ Xảy Ra.txt'
+  [ch1432] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1432 Tiếp Xúc Thương Khung Đế Quốc.txt'
+  [ch1433] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1434] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1435] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1435 Hiểu Ra Vấn Đề.txt'
+  [ch1436] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1437] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1438] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1439] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1439 Cha Nào Con Nấy.txt'
+  [ch1440] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1441] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1442] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1443] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1444] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1444 Đôi Bên Cùng Diễn.txt'
+  [ch1445] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1445 Không Theo Sáo Lộ Hồ Nguyệt Hi.txt'
+  [ch1446] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1447] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1447 Sai Lầm Của Hồ Nguyệt Hi.txt'
+  [ch1448] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1449] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1450] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1451] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1451 Trưởng Bối Nói Chuyện.txt'
+  [ch1452] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1453] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1453 Đuổi Cổ Vạn Bảo Các.txt'
+  [ch1454] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1455] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1456] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1457] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1458] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1458 Một Câu Công Bằng.txt'
+  [ch1459] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1460] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1461] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1461 Chưa Đủ Tàn Nhẫn.txt'
+  [ch1462] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1463] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1463 Thủ Đoạn Của Mộ Dung Gia Hân.txt'
+  [ch1464] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1465] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1466] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1467] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1468] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1469] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1470] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1470 Cho Họ Lý Do Để Thuyết Phục Chính Mình.txt'
+  [ch1471] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1472] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1473] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1474] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1475] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1476] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1476 Chưa Trải Sự Đời ..txt'
+  [ch1477] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1478] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1478 Ta Với Ngươi Khác Nhau.txt'
+  [ch1479] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1480] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1481] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1482] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1483] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1484] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1485] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1486] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1486 Các Vị Có Chút Ngốc.txt'
+  [ch1487] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1488] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1488 Thần Tử Thách Đấu.txt'
+  [ch1489] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1490] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1491] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1491 Ông Vua Cận Chiến.txt'
+  [ch1492] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1493] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1494] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1494 Từ Bỏ Truy Sát.txt'
+  [ch1495] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1496] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1497] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1498] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1499] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1500] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1500 Trợn Mắt Bịa Đặt.txt'
+  [ch1501] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1501 Anh Hùng Cứu Mỹ.txt'
+  [ch1502] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1503] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1504] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1505] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1506] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1507] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1508] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1509] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1509 Vấn Đề Nan Giải.txt'
+  [ch1510] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1511] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1512] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1513] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1514] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1515] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1516] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1517] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1518] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1519] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1520] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1521] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1521 Lợi Ích Và Tình Thân.txt'
+  [ch1522] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1523] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1523 Giới Hạn Cuối Cùng.txt'
+  [ch1524] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1525] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1526] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1527] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1528] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1529] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1530] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1531] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1532] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1533] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1534] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1535] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1535 Không Khoan Nhượng.txt'
+  [ch1536] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1537] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1538] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1538 Phá Xong Tái Thiết.txt'
+  [ch1539] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1540] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1541] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1541 Cầu Phú Quý Trong Hiểm Cảnh.txt'
+  [ch1542] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1543] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1544] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1545] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1546] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1547] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1548] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1549] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1550] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1551] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1552] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1553] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1554] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1555] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1556] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1557] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1558] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1559] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1560] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1561] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1562] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1563] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1563 Tình Huống Bế Tắc.txt'
+  [ch1564] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1564 Thương Đổi Mạng.txt'
+  [ch1565] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1566] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1567] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1568] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1569] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1570] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1570 Thuyết Phục Thành Công.txt'
+  [ch1571] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1572] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1573] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1574] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1575] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1576] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1577] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1578] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1579] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1580] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1580 Tương Lai Tàn Khốc.txt'
+  [ch1581] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1582] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1583] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1584] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1585] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1586] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1587] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1588] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1589] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1590] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1591] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1592] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1592 Tốt Quá Lại Không Ổn.txt'
+  [ch1593] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1593 Đãi Ngộ Đồng Minh.txt'
+  [ch1594] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1595] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1596] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1597] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1597 Nổi Tiếng Bất Đắc Dĩ.txt'
+  [ch1598] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1599] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1600] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1600 Ngọn Hải Đăng Trong Bão Tố.txt'
+  [ch1601] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1602] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1603] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1604] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1605] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1606] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1607] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1608] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1609] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1610] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1611] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1612] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1613] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1613 Biến Số Cực Đại.txt'
+  [ch1614] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1615] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1616] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1617] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1617 Liều Lĩnh.txt'
+  [ch1618] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1619] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1620] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1621] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1621 Khốc Liệt.txt'
+  [ch1622] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1623] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1623 Tổn Thất Thảm Trọng.txt'
+  [ch1624] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1625] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1625 Đừng Tự Hạ Thấp Mình.txt'
+  [ch1626] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1627] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1628] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1628 Đề Xuất.txt'
+  [ch1629] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1630] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1630 Người Làm Đại Sự Không Câu Nệ Tiểu Tiết.txt'
+  [ch1631] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1631 Cùng Chung Mối Thù.txt'
+  [ch1632] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1633] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1634] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1635] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1636] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1637] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1638] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1639] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1640] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1641] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1641 Dị Tộc Tiến Hóa.txt'
+  [ch1642] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1643] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1644] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1645] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1645 Kế Hoạch Hoàn Hảo Và Kẻ Phá Đám.txt'
+  [ch1646] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1647] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1647 Xinh Đẹp Là Một Tội Lỗi.txt'
+  [ch1648] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1649] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1649 Đau Đớn Tột Cùng.txt'
+  [ch1650] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1650 Hắc Sắc Thiên Phú.txt'
+  [ch1651] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1651 Thập Đế Đại Lục.txt'
+  [ch1652] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1653] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1653 Đâm Lao Phải Theo Lao.txt'
+  [ch1654] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1655] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1655 Phong Thần Ân Y.txt'
+  [ch1656] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1657] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1657 Hỗn Loạn Có Quy Tắc.txt'
+  [ch1658] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1659] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1659 Thăm Dò.txt'
+  [ch1660] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1661] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1662] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1663] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1664] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1665] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1665 Ý Trời.txt'
+  [ch1666] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1667] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1668] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1669] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1670] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1671] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1672] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1673] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1673 Đêm Mưa Kỳ Lạ.txt'
+  [ch1674] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1675] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1676] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1677] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1677 Ấn Tượng Xấu.txt'
+  [ch1678] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1679] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1680] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1680 Mỗi Người Một Chí Hướng.txt'
+  [ch1681] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1681 Mồi Lửa Cho Quả Bom.txt'
+  [ch1682] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1682 Cân Bằng Sụp Đổ.txt'
+  [ch1683] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1683 Cân Bằng.txt'
+  [ch1684] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1685] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1686] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1687] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1688] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1688 Không Có Hứng Thú.txt'
+  [ch1689] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1690] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1691] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1692] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1692 Bất Ngờ Nối Tiếp Bất Ngờ.txt'
+  [ch1693] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1694] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1694 Phong Khởi Địa.txt'
+  [ch1695] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1696] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1696 Vì Hắn Xứng Đáng.txt'
+  [ch1697] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1698] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1698 Thành Công Bước Đầu.txt'
+  [ch1699] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1699 Cái Giá Rất Đắt.txt'
+  [ch1700] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1700 Kẻ Thù Đích Thực.txt'
+  [ch1701] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1701 Giả Định Chiến Tranh.txt'
+  [ch1702] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1703] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1704] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1705] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1706] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1706 Sửa Chữa Bảo Vật.txt'
+  [ch1707] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1707 Phân Tích Đáng Sợ.txt'
+  [ch1708] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1709] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1710] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1710 Không Phải Dạng Vừa.txt'
+  [ch1711] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1712] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1713] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1713 Phát Hiện Vấn Đề.txt'
+  [ch1714] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1715] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1716] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1717] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1718] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1718 Giết Nhầm Còn Hơn Bỏ Sót.txt'
+  [ch1719] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1720] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1721] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1721 Tướng Mệnh Vượng Phu.txt'
+  [ch1722] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1722 Mệnh Cách Cực Hạn.txt'
+  [ch1723] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1723 Cứ Như Vậy Đi.txt'

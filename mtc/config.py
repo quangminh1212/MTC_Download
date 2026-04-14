@@ -6,6 +6,19 @@ from logging.handlers import RotatingFileHandler
 # ── Fix Windows console & Global Logging ────────────────────────────────────
 LOG_FILE = Path(__file__).resolve().parent.parent / "log.txt"
 
+_BOM = b"\xef\xbb\xbf"
+
+def _ensure_bom(path: Path) -> None:
+    """Ensure *path* starts with a UTF-8 BOM so editors auto-detect encoding."""
+    try:
+        raw = path.read_bytes()
+    except FileNotFoundError:
+        raw = b""
+    if not raw.startswith(_BOM):
+        path.write_bytes(_BOM + raw)
+
+_ensure_bom(LOG_FILE)
+
 
 class _DualLogger(io.TextIOWrapper):
     def __init__(self, buffer, encoding, errors, orig):
@@ -73,7 +86,7 @@ EXIT_RELOAD = 42
 log = logging.getLogger("mtc")
 log.setLevel(logging.DEBUG)
 _fh = RotatingFileHandler(
-    LOG_FILE, maxBytes=5 * 1024 * 1024, backupCount=3, encoding="utf-8"
+    LOG_FILE, maxBytes=5 * 1024 * 1024, backupCount=3, encoding="utf-8-sig"
 )
 _fh.setFormatter(
     logging.Formatter(
@@ -81,7 +94,7 @@ _fh.setFormatter(
     )
 )
 log.addHandler(_fh)
-_ch = logging.StreamHandler(sys.stderr)
+_ch = logging.StreamHandler(sys.__stderr__)
 _ch.setLevel(logging.INFO)
 _ch.setFormatter(logging.Formatter("%(levelname)s: %(message)s"))
 log.addHandler(_ch)
