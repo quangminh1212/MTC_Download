@@ -1,4 +1,0 @@
-requests>=2.31
-urllib3>=2.0
-pycryptodome>=3.19
-ftfy>=7.1.1
