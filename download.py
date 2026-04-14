@@ -93,9 +93,9 @@ def main():
         return
 
     # --- Single book ---
-    if args.book:
+    if args.book or args.id:
         result = download_book(
-            book_name=args.book,
+            book_name=args.book or "",
             ch_start=args.start,
             ch_end=args.end,
             output_dir=output,
