@@ -12,10 +12,10 @@ from .config import (
 )
 from .utils import repair_adb_text
 
-# ΓöÇΓöÇ Story text filter ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+# ── Story text filter ──────────────────────────────────────────
 _UI_NOISE = re.compile(
-    r"^(Ch╞░╞íng|Mß╗Ñc lß╗Ñc|Trang chß╗º|C├ái ─æß║╖t|Quay lß║íi|Tiß║┐p theo|Ch╞░╞íng tr╞░ß╗¢c"
-    r"|─Éß╗ìc th├¬m|─É─âng nhß║¡p|Tß║úi|Download|Quß║úng c├ío|Ad|Loading).*$",
+    r"^(Chương|Mục lục|Trang chủ|Cài đặt|Quay lại|Tiếp theo|Chương trước"
+    r"|Đọc thêm|Đăng nhập|Tải|Download|Quảng cáo|Ad|Loading).*$",
     re.IGNORECASE,
 )
 
