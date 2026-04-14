@@ -19,6 +19,11 @@ from .utils import safe_name
 
 # ── Helpers ─────────────────────────────────────────────────────────────────
 def _find_chapter_file(book_dir: Path, ch_index: int) -> Optional[Path]:
+    # Try new naming (no prefix)
+    for p in sorted(book_dir.glob("*.txt")):
+        if p.stem.startswith(f"Chương {ch_index} ") or p.stem == f"Chương {ch_index}":
+            return p
+    # Fallback: old naming with 6-digit prefix
     prefix = f"{ch_index:06d}_"
     for p in sorted(book_dir.glob(f"{prefix}*.txt")):
         return p
@@ -105,7 +110,7 @@ def download_book(
 
         try:
             title, content = fetch_chapter_text(session, ch)
-            ch_file = book_dir / f"{ch_idx:06d}_{safe_name(title)}.txt"
+            ch_file = book_dir / f"{safe_name(title).replace('_', ' ')}.txt"
             ch_file.write_text(
                 f"{'=' * 60}\n{title}\n{'=' * 60}\n\n{content}\n",
                 encoding="utf-8",
@@ -130,7 +135,7 @@ def download_book(
             ch_idx = ch.get("index") or 0
             try:
                 title, content = fetch_chapter_text(session, ch)
-                ch_file = book_dir / f"{ch_idx:06d}_{safe_name(title)}.txt"
+                ch_file = book_dir / f"{safe_name(title).replace('_', ' ')}.txt"
                 ch_file.write_text(
                     f"{'=' * 60}\n{title}\n{'=' * 60}\n\n{content}\n",
                     encoding="utf-8",
