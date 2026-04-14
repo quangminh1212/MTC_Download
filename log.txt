@@ -1285,3 +1285,540 @@ Catalog: 396 truyện
   [ch371] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
   [ch446] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
   [ch451] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch469] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch487] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch597] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch609] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch682] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch849] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch992] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  Retry 15 chương lỗi...
+  ✔1010  ✖0  ⊘0  (tổng 1010 chương)
+  📦 Committed: 📚 The Gamer Hệ Thống (1010/1010 chương)
+
+[5/396] ⚡ Gamer Xưng Bá Dị Giới (#100739, 1056 ch, Hoàn thành)
+  [ch72] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch150] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch222] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch271] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch355] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch357] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch412] ⚠ Nội dung sau giải mã quá ngắn
+  [ch428] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch442] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch495] ⚠ Nội dung sau giải mã quá ngắn
+  [ch502] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch510] ⚠ Nội dung sau giải mã quá ngắn
+  [ch512] ⚠ Nội dung sau giải mã quá ngắn
+  [ch531] ⚠ Nội dung sau giải mã quá ngắn
+  [ch536] ⚠ Nội dung sau giải mã quá ngắn
+  [ch538] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch543] ⚠ Nội dung sau giải mã quá ngắn
+  [ch549] ⚠ Nội dung sau giải mã quá ngắn
+  [ch577] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch582] ⚠ Nội dung sau giải mã quá ngắn
+  [ch615] ⚠ Nội dung sau giải mã quá ngắn
+  [ch624] ⚠ Nội dung sau giải mã quá ngắn
+  [ch625] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch647] ⚠ Nội dung sau giải mã quá ngắn
+  [ch667] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch684] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch729] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch747] ⚠ Nội dung sau giải mã quá ngắn
+  [ch759] ⚠ Nội dung sau giải mã quá ngắn
+  [ch767] ⚠ Nội dung sau giải mã quá ngắn
+  [ch771] ⚠ Nội dung sau giải mã quá ngắn
+  [ch779] ⚠ Nội dung sau giải mã quá ngắn
+  [ch791] ⚠ Nội dung sau giải mã quá ngắn
+  [ch796] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+Đang trích xuất danh sách truyện từ BlueStacks...
+  Scroll #0...
+    + Duy Nhất Người Chơi Bản Closed Beta: Bắt Đầu Giết Gà Bạo 1 Vạn Ức
+    + Conan: Coi Là Chân Tửu Cùng Mori Ran Trao Đổi Cơ Thể
+    + Vừa Lên Lớp 12, Hệ Thống Để Cho Ta Đi Thảo Phạt Ma Vương?
+    + Thần Cấp Thích Khách, Ta Có Một Chi Động Vật Sát Thủ Đội
+    + Bắt Đầu Một Trăm Triệu Thần Thạch, Quang Minh Nữ Thần Cầu Không Hàng!
+    + Đấu La: Võ Hồn Phương Thiên Họa Kích, Ta Hiếu Ra Cường Đại
+    + Đấu La Tuyệt Thế: Thiên Đan Ma Hổ
+    + Yêu Ma Khôi Phục: Bắt Đầu Thức Tỉnh Thần Tượng Trấn Ngục Kình
+    + Ta, Thánh Địa Thánh Tử, Gia Nhập Group Chat
+  Scroll #1...
+  [ch809] ⚠ Nội dung sau giải mã quá ngắn
+    + Bắt Đầu Thánh Địa Đạo Tử, Ngươi Để Cho Ta Đi Phế Vật Lưu?
+    + Từ Máy Móc Thợ Săn Bắt Đầu
+    + Trùng Sinh Sáu Số Không: Ta Mang Đệ Đệ Muội Muội Chạy Thường Thường Bậc Trung
+    + Để Ngươi Xây Dựng Tân Thủ Thôn, Ngươi Đem Thần Ma Làm Lao Công
+    + Toàn Cầu Quỷ Dị, Khách Nhân Của Ta Tất Cả Đều Là Đại Lão
+    + Hogwarts Ma Lực Tức Chính Nghĩa
+  [ch810] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  Scroll #2...
+    + Xuyên Nhanh: Ta Tại Công Đức Hiệu Cầm Đồ Đương Chưởng Quỹ
+    + Thân Muội Đánh Nát Bạch Ngọc Chén Nhỏ, Giáo Sư Gọi Ta Lấy Thân Bồi
+    + Vậy Liền Để Bọn Họ Dâng Lên Trung Thành Đi!
+    + Tống Võ Yên Vân, Bắt Đầu Hồng Tuyến Gọi Ta Lão Đại
+    + Người Tại Tu Tiên Giới, Giúp Muội Tại Cao Võ Thế Giới Thành Tiên
+  [ch819] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #3...
+    + Nữ Chính Đồ Đệ Muốn Trùng Đồng? Trở Tay Vứt Bỏ Đào Nàng Cốt
+    + Ăn Người Tu Tiên Giới, Dựa Vào Mô Phỏng Lật Tung Bàn Cờ
+    + Sau Khi Thành Thần Hào Biết Được Bạn Gái Cũ Sinh Ra Long Phượng Thai
+    + Bắt Đầu Khôi Lỗi Hoàng Chủ? Trực Tiếp Triệu Hoán Đại Đế Cường Giả
+    + Nhảy Cái Quảng Trường Vũ, Bắt Ta Làm Gì?
+    + Thần Quỷ Thế Giới: Đạo Gia Ta Giết Điên Rồi
+  Scroll #4...
+    + Đường Ca Tu Tiên, Mệnh Cách Thành Thánh
+    + Kịch Bản Phản Diện, Mở Đầu Cướp Hôn Công Chúa Vương Triều
+    + Ta Thành Công Toàn Bộ Nhờ Tương Lai Chính Mình
+    + Ta Mở Thật Sự Là Cô Nhi Viện, Không Phải Sát Thủ Đường
+    + Toàn Dân Chuyển Chức: Chỉ Có Ta Có Thể Nhìn Đến Ẩn Tàng Nhắc Nhở
+  Scroll #5...
+  [ch840] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+    + Băng Phong Tận Thế: Ta Chế Tạo Hoàn Mỹ Lãnh Địa
+    + Luyện Sai Tà Công, Pháp Thiên Tượng Địa
+    + Thê Tử Của Ta Là Đại Thừa Kỳ Đại Lão
+    + Hồng Hoang: Ta Hồng Vân, Bắt Đầu Đổi Đi Hồng Mông Tử Khí
+    + Yu-Gi-Oh! Đây Mới Thật Sự Là Quyết Đấu!
+    + Phản Phái: Ai Nói Là Ta Tới Từ Hôn?
+  Scroll #6...
+    + Thiên Mệnh Vương Hầu
+    + Phụ Tử Đoạt Đích
+    + Đại Minh: Mã Hoàng Hậu Di Chúc, Ta Thế Mà Là Thái Tử
+    + Kiểm Kê Nhân Vật Đại Thế Giới Huyền Huyễn: Bắt Đầu Từ An Lan
+  Scroll #7...
+    + Hải Dương Tai Biến: Bắt Đầu Thức Tỉnh Sss Cấp Thiên Phú
+    + Toàn Dân Chuyển Chức: Ta Vậy Mà Trở Thành Nghề Nghiệp Đoàn Sủng
+    + Chư Thiên: Ai Đem Hắn Bỏ Vào Phim Kinh Dị?
+    + Gọi Ngươi Đi Chịu Chết, Không Có Để Ngươi Vô Địch
+    + Cẩm Y Răng Nanh
+    + Khai Cục Thượng Giao Sinh Tử Hệ Thống, Tổ Tông Cầu Ta Nạp Thiếp
+  [ch860] ⚠ Nội dung sau giải mã quá ngắn
+  [ch862] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  Scroll #8...
+    + Phong Tuyết Thê Bách Lý, Tướng Quân Thế Vô Song
+    + Hồng Hoang Chi Công Đức Thiên Tôn
+    + Bắc Cảnh Nắm Giữ Mười Triệu Binh, Nữ Đế Quỳ Cầu Đừng Tạo Phản
+    + Tổng Thị: Bắt Đầu Được Triệu Phán Nhi Cứu
+  Scroll #9...
+    + Trùng Sinh Bảy Số Không Niên Đại Tiểu Cẩm Lý Có Không Gian
+    + Ta: Bắt Đầu Trở Thành Đại Tần Tiên Đình Chi Chủ
+    + Game Tận Thế Giáng Lâm: Ta Công Kích Vĩnh Cửu Thêm Sinh Mệnh
+    + Thanh Huyền Võ Đế
+    + Xuyên Việt Nguyên Thủy Chi Ngã Vi Nhân Hoàng
+    + Tuyệt Thế Đường Môn Chi Thuốc Xổ Thành Thần
+  Scroll #10...
+    + Trong Hôn Lễ, Lão Bà Tỏ Tình Với Bạch Nguyệt Quang
+    + Hệ Thống Thần Thú: Bồi Dưỡng Thần Thú Liền Biến Cường
+    + Đánh Dấu Đại Tuyết Long Kỵ, Ngươi Quản Cái Này Gọi Biên Thuỳ Tiểu Hầu
+    + Ta Godzilla, Cẩu Tại Kỷ Cambri Tiến Hóa Năm Ức Năm
+  Scroll #11...
+  [ch884] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+    + Ngự Hạm Phi Tiên: Ta Tại Huyền Huyễn Làm Hạm Tu
+    + Từ Bỏ Sss Cấp Chức Nghiệp, Ta Hóa Thành Bug Tối Thượng
+    + Để Ngươi Ngự Thú, Ngươi Lại Trực Tiếp Khế Ước Với Tuyệt Chủng Sinh Vật?
+    + Tiêu Phí Phản Hoàn: Tự Do Tài Chính Hậu Đích Khoái Lạc Nhân Sinh
+    + Bắt Đầu Thức Tỉnh Hệ Thống Chụp Ảnh, Ta Sao Chép 98 Triệu Quả Dưa Hấu
+    + Sau Khi Giải Độc Cho Sư Tỷ, Thức Tỉnh Nghịch Thiên Song Tu Thể Chất
+  Scroll #12...
+    + Võ Hiệp Chư Thiên Từ Lục Tiểu Phượng Bắt Đầu  Thêm Tiền Kiếm Khách
+    + Xuyên Qua Tam Quốc: Mang Tào Mạnh Đức Đi Hán Trung
+    + Tận Thế Di Chuyển: Đây Mới Là Pháp Tắc Sinh Tồn!!!
+    + Hồng Hoang: Ta, La Hầu, Khai Cục Diễn Hóa Già Thiên Pháp
+  Scroll #13...
+    + Ta Có Một Toà Siêu Cấp Binh Công Xưởng
+    + Hồng Hoang: Ta Chính Là Trong Mộ Đệ Nhất Tôn Thần
+    + Chuyển Sinh Người Qua Đường Giáp, Bắt Đầu Mua Xuống Nữ Phản Diện
+    + Trường Sinh: Từ Cưới Đại Tẩu Muội Muội Bắt Đầu
+    + Ta Đều Muốn Nằm Thẳng , Đến Cái Gì Đi Làm Hệ Thống?
+    + Trường Sinh: Từ Gấp Người Giấy Bắt Đầu Cày Kinh Nghiệm
+  Scroll #14...
+    + Tỷ Phu, Dẫn Ta Thành Tiên!
+    + Địa Ngục Luyện Tâm Ba Ngàn Năm, Mãn Cấp Phong Đô Trấn Yêu Hầu
+    + Hồng Hoang: Bắt Đầu Từ Tăng Phúc Cấp Số Nhân Liền Vô Địch
+    + Lưu Lạc Hoang Đảo, Chế Tạo Trong Mộng Đào Nguyên
+  Scroll #15...
+    + Đại Minh: Ta Mỗi Ngày Thu Được Một Cái Tương Lai Chuyển Phát Nhanh
+    + Nằm Vùng Hợp Hoan Tông? May Mà Dương Khí Của Ta Vô Hạn
+    + Ngươi Chọc Hắn Làm Gì? Hắn Đến Từ Tu La Địa Ngục!
+    + Người Tại Thái Dương Viết Nhật Ký, Hồng Hoang Toàn Lộn Xộn
+    + Đấu La Chi Long Ngâm Cửu Tiêu
+    + Lật Bài Tẩy Trên Trảm Tiên Đài, Chư Thần Van Xin Ta Đừng Chết!
+    + Thế Giới Huyền Huyễn Mỹ Thực Vô Địch
+  Scroll #16...
+  [ch922] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+    + Điên Cuồng Áp Tiêu Hệ Thống, Áp Tiêu Liền Có Thể Mạnh Lên!
+    + Ta Muốn Tuyệt Thế Mỹ Nhân, Chứ Không Phải Muốn Biến Thành Mỹ Nhân
+    + Ngự Thú Tiến Hóa Thương
+  [ch924] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #17...
+    + Vốn Là Vô Địch, Không Cần Tu Luyện
+    + Tại Hokage Dạy Học, Hệ Thống Nói Ta Là Naruto Bạn Học
+    + Xuyên Qua Cổ Đại, Từ Giải Cứu Xinh Đẹp Mẹ Vợ Bắt Đầu
+    + Bắc Lương: Từ Trong Đống Người Chết Leo Ra  Dị Tính Vương
+    + Huyết Thống Thế Giới
+    + Hogwarts Chi Hỏa Thần Khai Đạo
+  Scroll #18...
+  [ch932] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+    + Ta Tại Hải Tặc Thế Giới Bắt Đầu Thành Gia Lập Nghiệp
+    + Ta Có Thể Trao Đổi Ngộ Tính
+    + Hồng Hoang: Vu Tộc Bất Tranh Bá, Đương Đại Địa Tạo Vật Chủ
+    + Vừa Bắt Đầu Đã Luyện Hóa Kim Sí Đại Bàng, Thánh Nhân Choáng Váng!
+  Scroll #19...
+    + Đa Tử Đa Phúc: Khai Cục Kim Đan Kỳ
+    + Một Giây Ức Phát, Ngươi Quản Cái Này Gọi Hỏa Cầu Thuật?
+    + Di Động Tòa Thành Cầu Sinh: Ta Có Duy Nhất Thần Cấp Thiên Phú
+    + Gia Tộc Tu Tiên: Ta Làm Trấn Tộc Linh Thú
+    + Hoàng Đế Bù Nhìn? Bắt Đầu Triệu Hoán Đổng Trác Làm Bạo Quân!
+    + Yêu Võ Loạn Thế, Ta Có Một Gốc Thiên Phú Thần Thụ
+  Scroll #20...
+  [ch948] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+    + Đạo Sĩ Bị Ly Hôn, Vô Số Nữ Thần Đến Trêu Chọc Ta
+    + Kiếm Đến
+    + Sư Tôn, Ngươi Đem Sư Huynh Trả Lại Cho Ta Có Được Hay Không?
+    + Nương Tử Nhà Ta Toàn Là Boss Phản Diện
+  [ch950] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #21...
+    + Hồng Hoang: Ta Ở Trong Tiệt Giáo Viết Nhật Ký, Thông Thiên Giáo Chủ Nổi Điên Lên Giết Chóc
+    + Thành Tựu Ma Tôn, Đánh Dấu Dưỡng Thành 300 Năm
+    + Sss Cấp Cung Tiễn Thủ, Đòn Đánh Thường Vĩnh Cửu Thêm Thuộc Tính
+    + Vạn Linh Thần Quang Bình
+    + Đoạn Kiếm Sơn
+    + Trường Sinh Tiên Hồ Lô
+  Scroll #22...
+    + Trường Sinh Tiên Tộc, Từ Luyện Đan Học Đồ Bắt Đầu
+    + Toàn Viên Hoàng Đế: Đem Tu Tiên Giới Cho Làm Mơ Hồ
+    + Tận Thế Cầu Sinh: Bắt Đầu Vô Hạn Hỏa Lực
+    + Ta Hồng Hoang Quá Mức Gian Nan
+  [ch960] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  Scroll #23...
+  [ch965] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+    + Vũ Khí Hệ Ngự Thú Đại Sư
+    + Nữ Tử Trưởng Ngục Giam? Vô Lương Tác Giả Đừng Làm Ta
+    + Dòng Dõi Đều Vô Địch, Ta Liền Phách Lối Điểm Thế Nào
+    + Chết Tiệt! Kẻ Nào Tung Tin Đồn Ta Là Sát Tinh?!
+    + Chư Thiên: Vô Số Ta, Gia Nhập Vào Chat Group
+    + Ngươi Chọc Hắn Làm Gì? Đồ Đệ Của Hắn Đều Là Tiên Đế
+  [ch966] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #24...
+    + Tận Thế Thiên Tai: Ta Từ Sát Lục Bên Trong Quật Khởi
+    + Mở Đầu Thức Tỉnh Độc Thần: Ta Chọn Diệu Thủ Không Không
+    + Tận Thế Trò Chơi: Tê! Bắt Đầu Giáo Hoa Quỳ Trước Người?
+    + Đốt Tiên Ký
+  [ch968] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch969] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #25...
+    + Ỷ Thiên Thanh Thư: Mệnh Ta Do Ta Không Do Trời
+    + Ta Trên Giường Thông Hồng Hoang
+    + Xuyên Không Bộ Lạc Nguyên Thuỷ Tai Thú, Mở Đầu Bị Trục Xuất
+    + Hồ Yêu: Bắt Đầu Hàn Thiên Tôn, Nhã Nhã Nghĩ Đao Ta?
+    + Trọng Sinh 1983 Ta Lên Núi Săn Bắn Đi Săn Phát Tài
+    + Quét Ngang Võ Đạo: Từ Giết Địch Bạo Công Lực Bắt Đầu
+  [ch974] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  Scroll #26...
+  [ch975] ⚠ Nội dung sau giải mã quá ngắn
+    + Đệ Nhất Tiên Diệt Thế
+    + Xuyên Qua Tiểu Binh: Ta Tại Cổ Đại Thế Giới Cầu Sinh Ký
+    + Hàn Đông Tận Thế: Một Cỗ Xe Buýt Lưu Lãng Toàn Cầu
+    + Thái Nhất Đạo Quả
+  [ch976] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #27...
+    + Cường Thủ Trưởng Bối Của Nhân Vật Chính, Ta Không Vô Địch Ai Vô Địch!
+    + Bắt Đầu Vô Hạn Tài Nguyên, Ta Chế Tạo Chư Thiên Đệ Nhất Tông
+    + Ta Đều Thành Đỉnh Lưu, Bảng Độ Thuần Thục Mới Đến
+    + Trảm Tiên Nhân
+    + Trên Đài Trảm Tiên Là Ai, Ta Chính Là Tổ Sư Của Vạn Vị Tiên
+    + Tang Khí Tiên
+  [ch983] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch984] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #28...
+    + Niên Đại: Đạo Pháp Thông Thần, Ngươi Nói Ta Mê Tín?
+    + Ngự Thú Hệ Vu Sư
+    + Cộng Điểm: Tạo Hóa Chi Chủ
+    + Không Có Tốt Nghiệp, Ta Liền Cưới Nữ Lão Sư Xinh Đẹp
+  [ch986] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #29...
+  [ch988] ⚠ Nội dung sau giải mã quá ngắn
+    + Thiên Linh Căn, Ma Hồ Tiên Duyên
+    + Hoàng Thất Bị Ruồng Bỏ, Mở Đầu Thành Lập Vô Thượng Tiên Triều
+    + Trước Mặt Mọi Người Gặm Quái Dị Thăng Cấp, Đặc Biệt Cục Cầu Ta Nhậm Chức
+    + Hồng Hoang: Ta Cùng Hồng Quân Bình Phân Thế Giới
+    + Không Theo Thánh
+    + Bắt Đầu Phản Sát Người Làm Văn Hộ, Ta Thành Đại Càn Hung Đồ
+    + Toàn Dân Chuyển Chức: Ngự Long Sư Là Phế Nhất Chức Nghiệp ?
+  Scroll #30...
+  [ch992] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+    + Tổng Võ: Tác Dụng Phụ Nghịch Chuyển, Nữ Hiệp Nhóm Bị Ngược Khóc
+    + Thời Gian Tuần Hoàn: Bắt Đầu Liền Bị Lục Phiến Môn Bắt Lấy
+    + Hồng Hoang: Thông Thiên Sư Tôn, Ta Mang Ngươi Bay
+    + Ỷ Thiên: Khuyển Tử Trương Vô Kỵ, Gia Sư Trương Tam Phong
+  [ch997] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #31...
+    + Võng Du: Cẩu Tại Tân Thủ Thôn, Phân Thân Bức Ta Thành Tiên
+    + Nằm Thẳng Thế Tử, Ta Viết Bách Triều Hoàng Hậu Vào Yên Chi Bình
+    + Ta, Thái Sơ Đạo Thai, Ba Tuổi Tới Cửa Đoạt Nàng Dâu
+    + Cựu Nhật Chi Lục
+    + Đấu La Chi Để Bản Thể Tông Sớm Vĩ Đại
+    + Mô Phỏng: Thân Phận Ta Vô Hạn Đổi Mới, Quét Ngang Chư Thiên
+  [ch998] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #32...
+  [ch1005] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+    + Hồng Hoang: Xiển Giáo Đại Sư Huynh, Hoàn Ngược Xiển Tiệt Tiên
+    + Trên Đường Trường Sinh Nhặt Nhạnh Chỗ Tốt Người
+    + Đệ Đệ Ta Là Thiên Tuyển Chi Tử
+    + Khởi Đầu Với Danh Hiệu Cấp Thần, Ta Chính Là Tận Thế Thiên Tai
+  [ch1007] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  Scroll #33...
+    + Toàn Dân Phi Thăng! Một Tỷ Bốn Trăm Triệu Ma Tu Khiến Dị Giới Khóc Thét!
+    + Triệu Hoán Người Trái Đất Đến Tu Tiên
+    + Người Tại Quỷ Dị, Hoàn Mỹ Sinh Hoạt Hệ Thống Cái Quỷ Gì?
+    + Vô Hạn Cướp Đoạt, Từ Trảm Yêu Trừ Ma Bắt Đầu Thành Thần
+    + Tây Du: Xuyên Thành Bạch Cốt Tinh, Bái Sư Phương Thốn Sơn
+    + Thần Hào: Từ Thuần Ái Đến Tra Nam
+  [ch1012] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #34...
+  [ch1015] ⚠ Nội dung sau giải mã quá ngắn
+    + Thôn Phệ Tinh Không Chi Nguyên Trọng Chi Chủ
+    + Mang Chó Phán Quan, Có Tiền Có Thể Khiến Cho Ta Xoa Đẩy!
+    + Tây Du: Ta Ở Thiên Đình Làm 996
+  Scroll #35...
+    + Trạch Ma Nữ
+    + Trang Bị Hệ Tu Tiên
+    + Mỗi Giây Một Khô Lâu Binh, Ta Là Vong Linh Thiên Tai
+    + Dược Sư Yếu Sao? Thức Tỉnh Sss+ Thiên Phú, Mọi Người Đều Phải Quỳ Cầu Ta Ra Tay
+    + Toàn Tộc! Cung Cấp Ta Khoa Cử
+    + Cao Võ: Đạo Thần Gia, Mù Mắt Kiếm Nương
+  [ch1027] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #36...
+    + Thần Thoại: Ta Ở Thương Triều Làm Bạo Quân
+    + Xuyên Thư Thành Phản Phái Bạo Quân, Trẫm Thì Sợ Gì Thiên Mệnh?
+    + Tây Du: Cái Gì Tây Phương Đại Hưng? Chưa Nghe Qua!
+    + Nhân Tại Tây Du, Khai Cục Triệu Hoán An Lan Cướp Đường Tăng!
+  [ch1029] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #37...
+    + Hồng Hoang: Ra Ngoài Lăn Lộn, Quan Trọng Là
+    + Mô Phỏng Tu Tiên, Biến Thân Loli Ăn Ta Mị Đạo Sát Chiêu
+    + Biến Thân Nữ Đế Dưỡng Thành Sau, Ta Cử Thế Vô Địch
+    + Lương Vương
+    + Dị Hoá Võ Đạo
+    + Từ Dã Nhân Bộ Lạc Đến Chí Cao Thiên Đình
+  [ch1032] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1034] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #38...
+    + Phía Sau Màn, Quét Ngang Hết Thảy
+    + Ta Thật Không Muốn Làm Vua Hải Tặc A!
+    + Tuyết Lớn Đầy Phong Đao
+    + Giết Người Đoạt Công Pháp: Từ Trấn Phủ Ti Bắt Đầu Trấn Thiên Hạ
+  Scroll #39...
+  [ch1043] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+    + Hồng Hoang: Vu Tộc Quật Khởi, Ta Thành Thánh Trước Cả Hồng Quân
+    + Mục Đồng: Hôm Nay Tình Báo, Ngũ Chỉ Sơn Đè Ép Cái Khỉ
+    + Phàm Nhân Tu Tiên: Vừa Bắt Đầu Đã Bán Thân Cho Xà Yêu Ngàn Năm
+    + Ta Một Quái Vật, Làm Sao Đều Coi Ta Là Đồng Đội ?
+    + Toàn Nhân Loại Ký Ức Thức Tỉnh, Trừ Ta Ra
+    + Võ Hiệp: Thực Lực Vượt Chỉ Tiêu Từ Đánh Dấu Long Thần Công Bắt Đầu
+  [ch1046] ⚠ Nội dung sau giải mã quá ngắn
+  Scroll #40...
+  [ch1047] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+    + Tây Du: Thông Thiên Tọa Hạ Trâu, Há Lại Cho Phật Môn Độ!
+    + Sau Khi Bị Phế, Các Nàng Đều Muốn Ta Ăn Cơm Mềm
+    + Ai Bảo Hắn Chơi Yu-Gi-Oh A???
+    + Toàn Dân Đại Hàng Hải: Ta Bắt Đầu Một Đầu Tàu Ma
+  Scroll #41...
+    + Ta Ở Tu Tiên Giới Sở Hữu Đặc Tính Mc
+    + Hồng Hoang: Vừa Bắt Đầu Đã Giận Dữ Cắn Hồng Quân
+    + Ai Dạy Ngươi Tu Tiên Như Này?
+    + Tổng Võ: Nữ Hiệp Đừng Sợ, Ta Là Người Tốt Nha!
+    + Đánh Dấu Cẩm Y Vệ, Bắt Đầu Phong Vân Võ Học
+    + Trường Sinh Vạn Cổ: Ta Thành Vô Địch Chuẩn Đế
+  [ch1055] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  Retry 73 chương lỗi...
+  Scroll #42...
+    + Đại Đường: Bạo Binh Chục Tỷ, Quét Ngang Vô Địch!
+    + Tận Thế Cự Quy, Quốc Gia Giúp Ta Xoát Bị Động
+    + Cự Tuyệt Sss Cấp Thiên Phú Bị Phong Giết, Ta Thành Duy Nhất Chân Thần
+    + Phi Chính Thức Thám Hiểm Bút Ký
+  Scroll #43...
+    + Vô Hạn Ngục Chủ, Ta Phòng Giam Bên Trong Tất Cả Đều Là Nữ Ma Đầu
+    + Uchiha Bản Thân Góc Nhìn
+    + Tống Võ: Ta Tại Thiếu Lâm Xoát Thành Tựu
+    + Ta Một Mực Vung Đao, Còn Lại Giao Cho Chakra
+    + Ta Tại Trấn Phủ Ti Tra Án Những Năm Kia
+    + Marvel: Giả Nhà Phát Minh
+  [ch412] ✖ retry: Nội dung sau giải mã quá ngắn
+  Scroll #44...
+  [ch428] ✖ retry: Nội dung sau giải mã quá ngắn
+    + Từ Đầy Mắt Chữ Đỏ Bắt Đầu
+    + Ta Chỉ Muốn An Tĩnh Tu Tiên
+    + Hồng Hoang: Vừa Bắt Đầu Đã Bái Sư Tiếp Dẫn, Chuẩn Đề Mắng Tôi Vô Sỉ?
+    + Người Tại Phong Thần, Ta Dựa Vào Bán Mù Hộp Thành Thánh!
+  [ch495] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  Scroll #45...
+  [ch502] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+    + Xuyên Qua Đại Tần: Dâng Thủy Hoàng Đế Thuốc Trường Sinh Bất Lão
+    + Ta 6 Tuổi Liền Thành Phía Sau Màn Đại Lão
+    + Nhân Vật Phản Diện Tào Tặc: Kế Thừa Thiên Mệnh Chi Tử Hết Thảy
+    + Tuần Thiên Yêu Bộ
+    + Đa Tử Đa Phúc, Hậu Duệ Của Ta Lại Vô Địch!
+    + Từ Võ Đạo Bắt Đầu Vô Địch
+  [ch510] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  Scroll #46...
+  [ch512] ✖ retry: Nội dung sau giải mã quá ngắn
+    + Bắt Đầu Một Thư Sinh: Từ Kính Dạ Ti Ngục Bắt Đầu
+    + Vu Khống Đế Tân Tàn Bạo, Lão Tổ Xuất Sơn Ngươi Quỳ Cái Gì
+    + Bắt Đầu Đánh Dấu Tam Phân Quy Nguyên Khí
+    + Bắt Đầu Trường Sinh Bất Lão, Cùng Con Trai Địa Chủ Tu Tiên
+  [ch531] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch536] ✖ retry: Nội dung sau giải mã quá ngắn
+  Scroll #47...
+    + Thôn Phệ Càn Khôn: Từ Phế Vật Đến Vạn Giới Chí Tôn
+    + Từ Tiểu Lý Phi Đao Bắt Đầu Tung Hoành Chư Thiên
+    + Ta Thừa Kế Lão Công Thần Vị
+    + Hồng Hoang: Ta Nhiều Lần Ra Độc Kế, Mười Hai Tổ Vu Khuyên Ta Tỉnh Táo!
+    + Xuyên Thành King? Bắt Đầu Trực Diện Vaccine Man!
+    + Ta Là Đường Tam Tạng, Cà Khịa Chư Thiên Đến Phát Khóc
+  [ch543] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  Scroll #48...
+    + Tên Kiếm Tu Này Quá Cuốn
+    + Phản Phái Thiếu Đại Đức, Phi Long Cưỡi Mặt, Làm Sao Thua?
+    + Ở Thôn Phệ Tinh Không Check-In Trở Nên Mạnh Mẽ
+    + Tu Tiên Bắt Đầu Từ Tình Báo Mỗi Ngày
+  [ch582] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch615] ✖ retry: Nội dung sau giải mã quá ngắn
+  Scroll #49...
+    + Bế Quan Vạn Năm, Tôi Từ Một Công Nhân Đốt Lò Biến Thành Lão Tổ Tông Môn
+    + Thần Hào: Ta Thật Là Đại Phản Phái A
+    + Siêu Thần Rút Thưởng Sư, Toàn Dân Đều Là Ta Người Làm Công
+    + Yêu Tộc Đến Một Tiểu Thái Tuế, Điên Đến Nữ Đế Tâm Tan Vỡ
+    + Lăng Thiên Độc Tôn
+    + Người Tại Dragon Ball! Bắt Đầu Lựa Chọn Zen’o Thần Thông
+  [ch624] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch647] ✖ retry: Nội dung sau giải mã quá ngắn
+
+Tìm thấy 257 truyện từ app.
+  [ch747] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch759] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Duy Nhất Người Chơi Bản Closed Beta: Bắt Đầu Giết Gà Bạo 1 Vạn Ức
+  [ch767] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch771] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Conan: Coi Là Chân Tửu Cùng Mori Ran Trao Đổi Cơ Thể
+  [ch779] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch791] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Vừa Lên Lớp 12, Hệ Thống Để Cho Ta Đi Thảo Phạt Ma Vương?
+  [ch796] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch809] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Thần Cấp Thích Khách, Ta Có Một Chi Động Vật Sát Thủ Đội
+  [ch819] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch840] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Bắt Đầu Một Trăm Triệu Thần Thạch, Quang Minh Nữ Thần Cầu Không Hàng!
+  [ch860] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch862] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Đấu La: Võ Hồn Phương Thiên Họa Kích, Ta Hiếu Ra Cường Đại
+  [ch922] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch924] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Đấu La Tuyệt Thế: Thiên Đan Ma Hổ
+  [ch950] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch960] ✖ retry: Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Yêu Ma Khôi Phục: Bắt Đầu Thức Tỉnh Thần Tượng Trấn Ngục Kình
+  [ch966] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch968] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Ta, Thánh Địa Thánh Tử, Gia Nhập Group Chat
+  [ch969] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch974] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Bắt Đầu Thánh Địa Đạo Tử, Ngươi Để Cho Ta Đi Phế Vật Lưu?
+  [ch975] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch976] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Từ Máy Móc Thợ Săn Bắt Đầu
+  [ch984] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch986] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Trùng Sinh Sáu Số Không: Ta Mang Đệ Đệ Muội Muội Chạy Thường Thường Bậc Trung
+  [ch988] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch997] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Để Ngươi Xây Dựng Tân Thủ Thôn, Ngươi Đem Thần Ma Làm Lao Công
+  [ch998] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Toàn Cầu Quỷ Dị, Khách Nhân Của Ta Tất Cả Đều Là Đại Lão
+  [ch1007] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1012] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Hogwarts Ma Lực Tức Chính Nghĩa
+  [ch1015] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1027] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1029] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Xuyên Nhanh: Ta Tại Công Đức Hiệu Cầm Đồ Đương Chưởng Quỹ
+  [ch1032] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1034] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Thân Muội Đánh Nát Bạch Ngọc Chén Nhỏ, Giáo Sư Gọi Ta Lấy Thân Bồi
+  [ch1043] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1046] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✖ Không tìm thấy: Vậy Liền Để Bọn Họ Dâng Lên Trung Thành Đi!
+  [ch1047] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1055] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✔1005  ✖51  ⊘0  (tổng 1056 chương)
+  ✖ Không tìm thấy: Tống Võ Yên Vân, Bắt Đầu Hồng Tuyến Gọi Ta Lão Đại
+  📦 Committed: 📚 Gamer Xưng Bá Dị Giới (1005/1056 chương)
+
+[6/396] ⚡ Ma Thần Thiên Quân (#101011, 2714 ch, Hoàn thành)
+  ✖ Không tìm thấy: Người Tại Tu Tiên Giới, Giúp Muội Tại Cao Võ Thế Giới Thành Tiên
+  ✖ Không tìm thấy: Nữ Chính Đồ Đệ Muốn Trùng Đồng? Trở Tay Vứt Bỏ Đào Nàng Cốt
+  ✖ Không tìm thấy: Ăn Người Tu Tiên Giới, Dựa Vào Mô Phỏng Lật Tung Bàn Cờ
+  ✖ Không tìm thấy: Sau Khi Thành Thần Hào Biết Được Bạn Gái Cũ Sinh Ra Long Phượng Thai
+  ✖ Không tìm thấy: Bắt Đầu Khôi Lỗi Hoàng Chủ? Trực Tiếp Triệu Hoán Đại Đế Cường Giả
+  ✖ Không tìm thấy: Nhảy Cái Quảng Trường Vũ, Bắt Ta Làm Gì?
+  ✖ Không tìm thấy: Thần Quỷ Thế Giới: Đạo Gia Ta Giết Điên Rồi
+  ✖ Không tìm thấy: Đường Ca Tu Tiên, Mệnh Cách Thành Thánh
+  ✖ Không tìm thấy: Kịch Bản Phản Diện, Mở Đầu Cướp Hôn Công Chúa Vương Triều
+  ✖ Không tìm thấy: Ta Thành Công Toàn Bộ Nhờ Tương Lai Chính Mình
+  ✖ Không tìm thấy: Ta Mở Thật Sự Là Cô Nhi Viện, Không Phải Sát Thủ Đường
+  ✖ Không tìm thấy: Toàn Dân Chuyển Chức: Chỉ Có Ta Có Thể Nhìn Đến Ẩn Tàng Nhắc Nhở
+  ✖ Không tìm thấy: Băng Phong Tận Thế: Ta Chế Tạo Hoàn Mỹ Lãnh Địa
+  ✖ Không tìm thấy: Luyện Sai Tà Công, Pháp Thiên Tượng Địa
+  ✖ Không tìm thấy: Thê Tử Của Ta Là Đại Thừa Kỳ Đại Lão
+  ✖ Không tìm thấy: Hồng Hoang: Ta Hồng Vân, Bắt Đầu Đổi Đi Hồng Mông Tử Khí
+  ✖ Không tìm thấy: Yu-Gi-Oh! Đây Mới Thật Sự Là Quyết Đấu!
+  ✖ Không tìm thấy: Phản Phái: Ai Nói Là Ta Tới Từ Hôn?
+  ✖ Không tìm thấy: Thiên Mệnh Vương Hầu
+  ✖ Không tìm thấy: Phụ Tử Đoạt Đích
+  [ch96] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Đại Minh: Mã Hoàng Hậu Di Chúc, Ta Thế Mà Là Thái Tử
+  ✖ Không tìm thấy: Kiểm Kê Nhân Vật Đại Thế Giới Huyền Huyễn: Bắt Đầu Từ An Lan
+  ✖ Không tìm thấy: Hải Dương Tai Biến: Bắt Đầu Thức Tỉnh Sss Cấp Thiên Phú
+  ✖ Không tìm thấy: Toàn Dân Chuyển Chức: Ta Vậy Mà Trở Thành Nghề Nghiệp Đoàn Sủng
+  ✖ Không tìm thấy: Chư Thiên: Ai Đem Hắn Bỏ Vào Phim Kinh Dị?
+  ✖ Không tìm thấy: Gọi Ngươi Đi Chịu Chết, Không Có Để Ngươi Vô Địch
+  ✖ Không tìm thấy: Cẩm Y Răng Nanh
+  ✖ Không tìm thấy: Khai Cục Thượng Giao Sinh Tử Hệ Thống, Tổ Tông Cầu Ta Nạp Thiếp
+  ✖ Không tìm thấy: Phong Tuyết Thê Bách Lý, Tướng Quân Thế Vô Song
+  ✖ Không tìm thấy: Hồng Hoang Chi Công Đức Thiên Tôn
+  ✖ Không tìm thấy: Bắc Cảnh Nắm Giữ Mười Triệu Binh, Nữ Đế Quỳ Cầu Đừng Tạo Phản
+  ✖ Không tìm thấy: Tổng Thị: Bắt Đầu Được Triệu Phán Nhi Cứu
+  ✖ Không tìm thấy: Trùng Sinh Bảy Số Không Niên Đại Tiểu Cẩm Lý Có Không Gian
+  ✖ Không tìm thấy: Ta: Bắt Đầu Trở Thành Đại Tần Tiên Đình Chi Chủ
+  ✖ Không tìm thấy: Game Tận Thế Giáng Lâm: Ta Công Kích Vĩnh Cửu Thêm Sinh Mệnh
+  ✖ Không tìm thấy: Thanh Huyền Võ Đế
+  ✔ Xuyên Việt Nguyên Thủy Chi Ngã Vi Nhân Hoàng → #129186
+  [ch183] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Tuyệt Thế Đường Môn Chi Thuốc Xổ Thành Thần
+  ✖ Không tìm thấy: Trong Hôn Lễ, Lão Bà Tỏ Tình Với Bạch Nguyệt Quang
+  [ch192] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Hệ Thống Thần Thú: Bồi Dưỡng Thần Thú Liền Biến Cường
+  ✖ Không tìm thấy: Đánh Dấu Đại Tuyết Long Kỵ, Ngươi Quản Cái Này Gọi Biên Thuỳ Tiểu Hầu
+  ✖ Không tìm thấy: Ta Godzilla, Cẩu Tại Kỷ Cambri Tiến Hóa Năm Ức Năm
+  ✖ Không tìm thấy: Ngự Hạm Phi Tiên: Ta Tại Huyền Huyễn Làm Hạm Tu
+  ✖ Không tìm thấy: Từ Bỏ Sss Cấp Chức Nghiệp, Ta Hóa Thành Bug Tối Thượng
+  [ch218] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Để Ngươi Ngự Thú, Ngươi Lại Trực Tiếp Khế Ước Với Tuyệt Chủng Sinh Vật?
+  [ch219] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Tiêu Phí Phản Hoàn: Tự Do Tài Chính Hậu Đích Khoái Lạc Nhân Sinh
+  ✖ Không tìm thấy: Bắt Đầu Thức Tỉnh Hệ Thống Chụp Ảnh, Ta Sao Chép 98 Triệu Quả Dưa Hấu
+  ✖ Không tìm thấy: Sau Khi Giải Độc Cho Sư Tỷ, Thức Tỉnh Nghịch Thiên Song Tu Thể Chất
+  ✖ Không tìm thấy: Võ Hiệp Chư Thiên Từ Lục Tiểu Phượng Bắt Đầu  Thêm Tiền Kiếm Khách
+  ✖ Không tìm thấy: Xuyên Qua Tam Quốc: Mang Tào Mạnh Đức Đi Hán Trung
+  ✖ Không tìm thấy: Tận Thế Di Chuyển: Đây Mới Là Pháp Tắc Sinh Tồn!!!
+  [ch244] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Hồng Hoang: Ta, La Hầu, Khai Cục Diễn Hóa Già Thiên Pháp
+  ✖ Không tìm thấy: Ta Có Một Toà Siêu Cấp Binh Công Xưởng
+  ✖ Không tìm thấy: Hồng Hoang: Ta Chính Là Trong Mộ Đệ Nhất Tôn Thần
+  ✖ Không tìm thấy: Chuyển Sinh Người Qua Đường Giáp, Bắt Đầu Mua Xuống Nữ Phản Diện
+  ✖ Không tìm thấy: Trường Sinh: Từ Cưới Đại Tẩu Muội Muội Bắt Đầu
+  ✖ Không tìm thấy: Ta Đều Muốn Nằm Thẳng , Đến Cái Gì Đi Làm Hệ Thống?
+  ✖ Không tìm thấy: Trường Sinh: Từ Gấp Người Giấy Bắt Đầu Cày Kinh Nghiệm
+  ✖ Không tìm thấy: Tỷ Phu, Dẫn Ta Thành Tiên!
+  ✖ Không tìm thấy: Địa Ngục Luyện Tâm Ba Ngàn Năm, Mãn Cấp Phong Đô Trấn Yêu Hầu
+  ✖ Không tìm thấy: Hồng Hoang: Bắt Đầu Từ Tăng Phúc Cấp Số Nhân Liền Vô Địch
