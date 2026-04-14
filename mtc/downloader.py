@@ -91,7 +91,7 @@ def download_book(
         
         content = get_chapter_content(session, book_id, ch_id)
         if content:
-            ch_file = book_dir / f"{i:04d}_{safe_name(ch_title)}.txt"
+            ch_file = book_dir / f"{safe_name(ch_title)}.txt"
             ch_file.write_text(content, encoding="utf-8")
             success_count += 1
             if log_fn and i % 10 == 0:

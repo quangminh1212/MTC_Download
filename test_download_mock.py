@@ -61,12 +61,12 @@ def test_download():
     print(f"\n   Đang tải {len(MOCK_CHAPTERS)} chương...")
     for i, chapter in enumerate(MOCK_CHAPTERS, 1):
         ch_title = chapter["title"]
-        ch_file = book_dir / f"{i:04d}_{safe_name(ch_title)}.txt"
+        ch_file = book_dir / f"{safe_name(ch_title)}.txt"
         
         # Write content
         content = f"{ch_title}\n\n{MOCK_CONTENT}"
         ch_file.write_text(content, encoding="utf-8")
-        print(f"   ✓ {i:04d}_{safe_name(ch_title)}.txt")
+        print(f"   ✓ {safe_name(ch_title)}.txt")
     
     print(f"\n✅ Hoàn thành!")
     print(f"   Đã tải: {len(MOCK_CHAPTERS)} chương")
