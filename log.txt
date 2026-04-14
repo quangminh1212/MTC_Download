@@ -1247,3 +1247,41 @@ Catalog: 396 truyện
   [ch76] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
   [ch83] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
   [ch144] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch202] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch228] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch281] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch301] ⚠ Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch347] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch351] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch359] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch401] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch583] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch611] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch612] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch650] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch705] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch738] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch775] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch819] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch842] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch913] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch949] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch957] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch973] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch992] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1058] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1093] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  Retry 28 chương lỗi...
+  [ch83] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✔1105  ✖1  ⊘0  (tổng 1106 chương)
+  📦 Committed: 📚 Công Cuộc Bị 999 Em Gái Chinh Phục (1105/1106 chương)
+
+[4/396] ⚡ The Gamer Hệ Thống (#100738, 1010 ch, Hoàn thành)
+  [ch5] ⚠ Invalid base64-encoded string: number of data characters (21) cannot be 1 more than a multiple of 4
+  [ch125] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch138] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch210] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch265] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch371] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch446] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch451] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
