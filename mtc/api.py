@@ -48,13 +48,31 @@ def get_book_info(session: requests.Session, book_id: int) -> Optional[Dict[str,
 
 
 def get_chapters(session: requests.Session, book_id: int) -> List[Dict[str, Any]]:
-    """Get all chapters of a book."""
+    """Get all chapters of a book by getting book info first."""
     try:
-        url = f"{API_BASE}/books/{book_id}/chapters"
-        resp = session.get(url, timeout=30)
-        resp.raise_for_status()
-        data = resp.json()
-        return data.get("data", [])
+        # Get book info to find chapter IDs
+        book = get_book_info(session, book_id)
+        if not book:
+            return []
+        
+        # Generate chapter list from first to latest
+        first_ch = book.get("first_chapter")
+        latest_ch = book.get("latest_chapter")
+        chapter_count = book.get("chapter_count", 0)
+        
+        if not first_ch or not latest_ch:
+            return []
+        
+        # Create chapter list (approximate IDs)
+        chapters = []
+        for i in range(chapter_count):
+            chapters.append({
+                "id": first_ch + i,
+                "index": i + 1,
+                "title": f"Chương {i + 1}"
+            })
+        
+        return chapters
     except Exception as e:
         log.error(f"Get chapters failed: {e}")
         return []
@@ -63,11 +81,32 @@ def get_chapters(session: requests.Session, book_id: int) -> List[Dict[str, Any]
 def get_chapter_content(session: requests.Session, book_id: int, chapter_id: int) -> Optional[str]:
     """Get chapter content."""
     try:
-        url = f"{API_BASE}/books/{book_id}/chapters/{chapter_id}"
+        url = f"{API_BASE}/chapters/{chapter_id}"
         resp = session.get(url, timeout=30)
         resp.raise_for_status()
         data = resp.json()
-        return data.get("data", {}).get("content")
+        
+        content = data.get("data", {}).get("content")
+        if not content:
+            return None
+        
+        # Content is encrypted, try to decode
+        try:
+            import base64
+            import json
+            
+            # Try to decode as base64 JSON
+            decoded = base64.b64decode(content)
+            content_data = json.loads(decoded)
+            
+            # Extract actual content
+            if isinstance(content_data, dict):
+                return content_data.get("value", content)
+            return str(content_data)
+        except:
+            # If decoding fails, return as is
+            return content
+            
     except Exception as e:
         log.error(f"Get chapter content failed: {e}")
         return None
