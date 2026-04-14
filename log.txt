@@ -1097,3 +1097,150 @@ Catalog: 396 truyện
   [ch768] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
   [ch777] ✖ retry: Nội dung sau giải mã quá ngắn
   [ch778] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch780] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch781] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch793] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch814] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch826] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch845] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch848] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch851] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch852] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch854] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch856] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch879] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch894] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch896] ✖ retry: Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch902] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch905] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch907] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch908] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch909] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch913] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch917] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch918] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch928] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch929] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch936] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\000936_Chương 930_ Thần quốc sụp đổ (2).txt'
+  [ch938] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch940] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch942] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch955] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch972] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch976] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch985] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch989] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch999] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\000999_Chương 994_ Hợp tác.txt'
+  [ch1004] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1005] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1008] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1012] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1014] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1015] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1023] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1025] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1027] ✖ retry: Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1029] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1032] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001032_Chương 1027_ Cuộc tấn công thứ ba (1).txt'
+  [ch1033] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1035] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1037] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1051] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1057] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1058] ✖ retry: Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1060] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1063] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1067] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001067_Chương 1061_.txt'
+  [ch1068] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1070] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1073] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1083] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001083_Chương 1078_ Quyền hạn trả đũa.txt'
+  [ch1085] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1093] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1097] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1099] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1101] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1102] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1103] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1111] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1130] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1154] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1156] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1159] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1164] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1170] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1173] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1174] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1186] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1190] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1191] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001191_Chương 1186_ Binh bại.txt'
+  [ch1221] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1230] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1232] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1235] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001235_Chương 1230_ Biển Uzebe.txt'
+  [ch1237] ✖ retry: Invalid base64-encoded string: number of data characters (21) cannot be 1 more than a multiple of 4
+  [ch1244] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1245] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001245_Chương 1240_ Tôn Quyền âm mưu.txt'
+  [ch1252] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1257] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1265] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1271] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1285] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1287] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001287_Chương 1282_ Trận chiến đồi Thịt Băm (2).txt'
+  [ch1289] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1290] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1295] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1301] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1303] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1312] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1323] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1328] ✖ retry: Invalid base64-encoded string: number of data characters (29) cannot be 1 more than a multiple of 4
+  [ch1330] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1334] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1335] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1339] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1346] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1347] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1353] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1372] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1373] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1378] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1381] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1410] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1423] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1425] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1426] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1427] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1428] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1432] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001432_Chương 1427_ Nhiệm vụ chinh phục không gian.txt'
+  [ch1434] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1435] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1437] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1438] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1440] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1441] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1442] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1444] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001444_Chương 1439_ Chiêu Minh Dực Thánh vương.txt'
+  [ch1445] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1446] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001446_Chương 1441_ Điểm yếu của Stalin.txt'
+  [ch1447] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1448] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001448_Chương 1443_ Chính trị là tảng băng chìm.txt'
+  [ch1450] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1451] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1452] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001452_Chương 1447_ Khó khăn của Bravia.txt'
+  [ch1453] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1455] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1456] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1457] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1462] ✖ retry: [Errno 2] No such file or directory: 'c:\\dev\\MTC\\Đế Chế Đại Việt\\001462_Chương 1457_ Tấn công điện Cẩm Linh.txt'
+  [ch1463] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1464] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1466] ✖ retry: Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1468] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1469] ✖ retry: Nội dung sau giải mã quá ngắn
+  [ch1471] ✖ retry: Nội dung sau giải mã quá ngắn
+  ✔1258  ✖212  ⊘0  (tổng 1470 chương)
+  📦 Committed: 📚 Đế Chế Đại Việt (1258/1470 chương)
+
+[3/396] ⚡ Công Cuộc Bị 999 Em Gái Chinh Phục (#100677, 1106 ch, Hoàn thành)
+  [ch26] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4

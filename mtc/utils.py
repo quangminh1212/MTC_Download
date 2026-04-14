@@ -13,11 +13,23 @@ def safe_name(name: str) -> str:
     return name[:200]
 
 
+def _chapter_sort_key(path: Path) -> tuple:
+    """Extract chapter number for sorting; fallback to name."""
+    m = re.search(r"Chương\s+(\d+)", path.stem)
+    if m:
+        return (0, int(m.group(1)), path.stem)
+    # Old naming: leading digits
+    m2 = re.match(r"(\d+)", path.stem)
+    if m2:
+        return (0, int(m2.group(1)), path.stem)
+    return (1, 0, path.stem)
+
+
 def merge_to_single_file(book_dir: Path, book_name: str) -> Path:
     """Merge all chapter TXT files into one."""
     chapter_files = sorted(
-        [f for f in book_dir.glob("[0-9]*.txt")],
-        key=lambda f: f.name,
+        [f for f in book_dir.glob("*.txt") if not f.name.startswith("_")],
+        key=_chapter_sort_key,
     )
     merged = book_dir / f"_{safe_name(book_name)}_FULL.txt"
     with merged.open("w", encoding="utf-8") as out:
