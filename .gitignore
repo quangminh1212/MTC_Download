@@ -170,6 +170,12 @@ Thumbs.db
 # Windows
 desktop.ini
 
+# APK analysis artifacts
+*.apk
+backup.ab
+crypto_strings.txt
+mtc_apk_extracted/
+
 # Config files with sensitive data (uncomment if needed)
 # config.json
 # *.json
