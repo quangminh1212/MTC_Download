@@ -34,7 +34,14 @@ htmlcov/
 # Project specific
 data/
 token.txt
-test_*.py
+test_api_endpoints.py
+test_download_mock.py
+test_encoding.py
+test_real_api.py
+test_download_simple.py
+test_web_scraping.py
+test_api_alternatives.py
+test_chapter_encryption.py
 downloads/
 extract/
 
