@@ -1,0 +1,19 @@
+======================================== 
+HƯỚNG DẪN CẤU HÌNH BLUESTACKS 
+======================================== 
+ 
+1. Mở BlueStacks Settings (biểu tượng bánh răng) 
+2. Vào Network hoặc Advanced 
+3. Chọn Manual Proxy Configuration 
+4. Nhập: 
+   - Host: 192.168.1.113 
+   - Port: 8080 
+5. Save và Restart BlueStacks 
+ 
+6. Trong BlueStacks, mở Browser 
+7. Truy cập: http://mitm.it 
+8. Tải và cài Android certificate 
+ 
+9. Mở app MTC và đọc bất kỳ chương nào 
+10. Script sẽ tự động tìm APP_KEY 
+======================================== 
