@@ -90,22 +90,27 @@ def get_chapter_content(session: requests.Session, book_id: int, chapter_id: int
         if not content:
             return None
         
-        # Content is encrypted, try to decode
+        # Content is Laravel encrypted (base64 JSON with iv, value, mac)
         try:
             import base64
             import json
+            from Crypto.Cipher import AES
+            from Crypto.Util.Padding import unpad
             
-            # Try to decode as base64 JSON
-            decoded = base64.b64decode(content)
-            content_data = json.loads(decoded)
+            # Decode base64
+            encrypted_data = json.loads(base64.b64decode(content))
             
-            # Extract actual content
-            if isinstance(content_data, dict):
-                return content_data.get("value", content)
-            return str(content_data)
-        except:
-            # If decoding fails, return as is
-            return content
+            # Extract components
+            iv = base64.b64decode(encrypted_data['iv'])
+            encrypted_value = base64.b64decode(encrypted_data['value'])
+            
+            # Try common keys or brute force
+            # For now, return encrypted content with note
+            return f"[ENCRYPTED CONTENT]\n\nIV: {encrypted_data['iv'][:50]}...\nValue length: {len(encrypted_value)} bytes\n\nNote: Content is encrypted with Laravel encryption. Need APP_KEY to decrypt."
+            
+        except Exception as e:
+            log.error(f"Decryption failed: {e}")
+            return f"[ENCRYPTED CONTENT - Cannot decode]\n\n{content[:200]}..."
             
     except Exception as e:
         log.error(f"Get chapter content failed: {e}")
