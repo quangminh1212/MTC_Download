@@ -4,38 +4,6 @@ from pathlib import Path
 from datetime import datetime
 
 
-_ADB_MOJIBAKE_MARKERS = ("├", "┤", "┐", "└", "┴", "┬", "╞", "╣", "║", "ß", "�")
-
-
-def _repair_score(text: str) -> int:
-    viet_chars = "ăâêôơưđĂÂÊÔƠƯĐáàảãạắằẳẵặấầẩẫậéèẻẽẹếềểễệíìỉĩịóòỏõọốồổỗộớờởỡợúùủũụứừửữựýỳỷỹỵ"
-    score = sum(text.count(ch) for ch in viet_chars)
-    score -= sum(text.count(ch) for ch in _ADB_MOJIBAKE_MARKERS)
-    score -= text.count("�") * 2
-    return score
-
-
-def repair_adb_text(text: str) -> str:
-    """Best-effort fix for Vietnamese mojibake returned by ADB/UIAutomator."""
-    if not text or not any(marker in text for marker in _ADB_MOJIBAKE_MARKERS):
-        return text
-
-    best = text
-    best_score = _repair_score(text)
-
-    for legacy_encoding in ("cp437", "cp850"):
-        try:
-            fixed = text.encode(legacy_encoding).decode("utf-8")
-        except UnicodeError:
-            continue
-        score = _repair_score(fixed)
-        if score > best_score:
-            best = fixed
-            best_score = score
-
-    return best
-
-
 def safe_name(name: str) -> str:
     """Create filesystem-safe name."""
     name = unicodedata.normalize("NFC", name)

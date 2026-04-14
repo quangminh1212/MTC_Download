@@ -1,78 +1,44 @@
-"""config.py – Constants, paths, palette, logging setup."""
+"""config.py – Constants, paths, palette, logging setup (API-only)."""
 import sys, io, logging
 from pathlib import Path
 from logging.handlers import RotatingFileHandler
 
-# ── Fix Windows console & Global Logging ────────────────────────────────────────
-LOG_FILE   = Path(__file__).resolve().parent.parent / "log.txt"
+# ── Fix Windows console & Global Logging ────────────────────────────────────
+LOG_FILE = Path(__file__).resolve().parent.parent / "log.txt"
 
-class GlobalDualLogger(io.TextIOWrapper):
+
+class _DualLogger(io.TextIOWrapper):
     def __init__(self, buffer, encoding, errors):
         super().__init__(buffer, encoding=encoding, errors=errors)
         self.terminal = sys.__stdout__
-        # Create/Append to log.txt globally
         self.log_file = open(LOG_FILE, "a", encoding="utf-8")
-        
+
     def write(self, message):
         self.terminal.write(message)
         self.log_file.write(message)
         self.log_file.flush()
-        
+
     def flush(self):
         self.terminal.flush()
         self.log_file.flush()
 
+
 if sys.platform == "win32":
-    sys.stdout = GlobalDualLogger(sys.stdout.buffer, "utf-8", "replace")
-    sys.stderr = GlobalDualLogger(sys.stderr.buffer, "utf-8", "replace")
+    sys.stdout = _DualLogger(sys.stdout.buffer, "utf-8", "replace")
+    sys.stderr = _DualLogger(sys.stderr.buffer, "utf-8", "replace")
 
-# ── Paths ─────────────────────────────────────────────────────────────────────
+# ── Paths ───────────────────────────────────────────────────────────────────
 ROOT_DIR   = Path(__file__).resolve().parent.parent
-APK_PATH   = ROOT_DIR / "MTC.apk"
 OUTPUT_DIR = ROOT_DIR / "downloads"
+DATA_DIR   = ROOT_DIR / "data"
+CATALOG    = DATA_DIR / "all_books.json"
+TOKEN_FILE = ROOT_DIR / "token.txt"
 
-# ── MTC App ───────────────────────────────────────────────────────────────────
-PACKAGE     = "com.novelfever.app.android"
-PACKAGE_ALT = "com.example.novelfeverx"
-
-# ── ADB / Automation ─────────────────────────────────────────────────────────
-SCROLL_STEPS    = 20
-SCROLL_DELAY    = 0.25
-NAV_DELAY       = 0.8
-TAP_DELAY       = 0.15
-BACK_DELAY      = 0.15
-INSTALL_TIMEOUT = 180
-KEY_BACK  = 4
-KEY_HOME  = 3
-KEY_ENTER = 66
-KEY_DEL   = 67
-
-# BlueStacks ADB paths (priority)
-BS_ADB_PATHS = [
-    Path("C:/Program Files/BlueStacks_nxt/HD-Adb.exe"),
-    Path("C:/Program Files/BlueStacks/HD-Adb.exe"),
-    Path("C:/Program Files (x86)/BlueStacks_nxt/HD-Adb.exe"),
-]
-# Fallback ADB paths
-OTHER_ADB_PATHS = [
-    Path.home() / "AppData/Local/Android/Sdk/platform-tools/adb.exe",
-    Path("C:/LDPlayer/LDPlayer9/adb.exe"),
-    Path("C:/Program Files/LDPlayer/LDPlayer9/adb.exe"),
-    Path("C:/Program Files/Nox/bin/nox_adb.exe"),
-]
-# Accessibility services
-ACCESSIBILITY_SERVICES = [
-    "com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService",
-    "com.google.android.marvin.talkback/.TalkBackService",
-    "com.android.talkback/com.google.android.marvin.talkback.TalkBackService",
-]
-
-# ── Download mode ────────────────────────────────────────────────────────────
-# APK hiện vẫn chứa fast path qua API chapter detail + AES/CBC decrypt.
+# ── API ─────────────────────────────────────────────────────────────────────
 API_BASE   = "https://android.lonoapp.net/api"
 USER_AGENT = "Dart/3.0 (dart:io)"
 
-# ── UI Palette ────────────────────────────────────────────────────────────────
+# ── UI Palette (for GUI) ───────────────────────────────────────────────────
 BG     = "#ffffff"
 BG2    = "#f8f9fa"
 BORDER = "#dadce0"
@@ -88,20 +54,24 @@ RED    = "#c5221f"
 ORANGE = "#fa7b17"
 
 FONT      = ("Segoe UI", 9)
-FONT_BOLD = ("Segoe UI", 9,  "bold")
+FONT_BOLD = ("Segoe UI", 9, "bold")
 FONT_HEAD = ("Segoe UI", 11, "bold")
 FONT_MONO = ("Consolas", 8)
 
-# ── Hot reload ────────────────────────────────────────────────────────────────
+# ── Hot reload ──────────────────────────────────────────────────────────────
 EXIT_RELOAD = 42
 
-# ── Logging ───────────────────────────────────────────────────────────────────
+# ── Logging ─────────────────────────────────────────────────────────────────
 log = logging.getLogger("mtc")
 log.setLevel(logging.DEBUG)
-_fh = RotatingFileHandler(LOG_FILE, maxBytes=5*1024*1024, backupCount=3,
-                           encoding="utf-8")
-_fh.setFormatter(logging.Formatter(
-    "%(asctime)s  %(levelname)-5s  %(message)s", datefmt="%Y-%m-%d %H:%M:%S"))
+_fh = RotatingFileHandler(
+    LOG_FILE, maxBytes=5 * 1024 * 1024, backupCount=3, encoding="utf-8"
+)
+_fh.setFormatter(
+    logging.Formatter(
+        "%(asctime)s  %(levelname)-5s  %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
+    )
+)
 log.addHandler(_fh)
 _ch = logging.StreamHandler(sys.stderr)
 _ch.setLevel(logging.INFO)

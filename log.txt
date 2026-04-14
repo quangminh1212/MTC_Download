@@ -108,3 +108,133 @@ C:\Program Files\BlueStacks_nxt\HD-Adb.exe
 [13:16:47]   Accessibility OK: com.google.android.marvin.talkback
 [13:16:47] 📚 Quét Tủ Truyện...
 [13:17:05]   Quét Tủ Truyện lượt 1: +1 truyện
+[13:21:11] ✅ ADB: C:\Program Files\BlueStacks_nxt\HD-Adb.exe
+[13:21:11] ✅ Package: com.novelfever.app.android
+[13:21:12]   Accessibility OK: com.google.android.marvin.talkback
+[13:21:12] 📚 Quét Tủ Truyện...
+[13:21:32]   Quét Tủ Truyện lượt 1: +1 truyện
+[13:21:34]   Quét Tủ Truyện lượt 2: +0 truyện
+[13:21:36]   Quét Tủ Truyện lượt 3: +0 truyện
+[13:21:36] 
+======================================================================
+[13:21:36] 📚 TỦ TRUYỆN: 1 truyện
+[13:21:36] ======================================================================
+    1. [📥 0/1790] Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:21:50] ✅ ADB: C:\Program Files\BlueStacks_nxt\HD-Adb.exe
+[13:21:50] ✅ Package: com.novelfever.app.android
+[13:21:50] 📝 Đã nạp 1 truy vấn truyện
+[13:21:51]   Accessibility OK: com.google.android.marvin.talkback
+[13:21:51] 📚 Quét Tủ Truyện...
+[13:22:10]   Quét Tủ Truyện lượt 1: +1 truyện
+[13:22:12]   Quét Tủ Truyện lượt 2: +0 truyện
+[13:22:14]   Quét Tủ Truyện lượt 3: +0 truyện
+[13:22:14] 
+======================================================================
+[13:22:14] 📚 TỦ TRUYỆN: 1 truyện
+[13:22:14] ======================================================================
+    1. [📥 0/1790] Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:22:14] 
+======================================================================
+[13:22:14] 🚀 BẮT ĐẦU XẾP TẢI TRONG APP: 1 truyện
+[13:22:14] ======================================================================
+
+[13:22:14] 
+[1/1] 📖 Ta Có Trăm Vạn Điểm Kỹ Năng (1790 chương)
+[13:22:14]   📱 Dùng popup Tải truyện trong app...
+[13:22:31]     Mở từ Tủ Truyện: Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:22:50]       Đã gửi lệnh tải trong app: ch1-1790
+[13:23:00]   ✅ Đã gửi lệnh tải trong app: ch1-1790
+[13:23:00] 
+======================================================================
+[13:23:00] 📊 KẾT QUẢ TỔNG HỢP
+[13:23:00] ======================================================================
+  ✅ Ta Có Trăm Vạn Điểm Kỹ Năng: ch1-1790
+[13:23:00] 
+Tổng: 1/1 truyện đã xếp tải trong app, 0 truyện lỗi
+Quét Tủ Truyện lượt 1: +1 truyện
+Quét Tủ Truyện lượt 2: +0 truyện
+Quét Tủ Truyện lượt 3: +0 truyện
+[{'title': 'Ta Có Trăm Vạn Điểm Kỹ Năng', 'progress_text': 'Đã đọc 1790/1790', 'read_current': 1790, 'read_total': 1790, 'fully_read': True, 'bounds': (12, 216, 888, 351), 'center': (450, 283), 'key': 'tacótrămvạnđiểmkỹnăng'}]
+[13:24:43] ✅ ADB: C:\Program Files\BlueStacks_nxt\HD-Adb.exe
+[13:24:43] ✅ Package: com.novelfever.app.android
+[13:24:43] 📝 Đã nạp 1 truy vấn truyện
+[13:24:44]   Accessibility OK: com.google.android.marvin.talkback
+[13:24:44] 📚 Quét Tủ Truyện...
+[13:25:02]   Quét Tủ Truyện lượt 1: +1 truyện
+[13:25:04]   Quét Tủ Truyện lượt 2: +0 truyện
+[13:25:06]   Quét Tủ Truyện lượt 3: +0 truyện
+[13:25:06] 
+======================================================================
+[13:25:06] 📚 TỦ TRUYỆN: 1 truyện
+[13:25:06] ======================================================================
+    1. [📥 0/1790] Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:25:06] 
+======================================================================
+[13:25:06] 🚀 BẮT ĐẦU TẢI EXPORT: 1 truyện
+[13:25:06] ======================================================================
+
+[13:25:06] 
+[1/1] 📖 Ta Có Trăm Vạn Điểm Kỹ Năng (1790 chương)
+[13:25:06]   ⚡ Thử tải qua API...
+[13:25:11]   ⚠ API không hoàn tất: Không tìm thấy truyện qua API
+[13:25:11]   📱 Tải qua ADB...
+[13:25:28]     Mở từ Tủ Truyện: Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:25:29]     Bật accessibility...
+[13:25:30]     Accessibility OK: com.google.android.marvin.talkback
+[13:25:33]       [ch1] Điều hướng tới chương 1...
+[13:25:33]     Đi đến chương 1...
+API deps: True
+[13:26:12] ✅ ADB: C:\Program Files\BlueStacks_nxt\HD-Adb.exe
+[13:26:12] ✅ Package: com.novelfever.app.android
+[13:26:12] 📝 Đã nạp 1 truy vấn truyện
+[13:26:13]   Accessibility OK: com.google.android.marvin.talkback
+[13:26:13] 📚 Quét Tủ Truyện...
+[13:26:34]       [ch1] ⚠ Không tìm thấy chương
+[13:26:34]       [ch2] Điều hướng tới chương 2...
+[13:26:34]     Đi đến chương 2...
+[13:26:34]     ⚠ Không mở được danh sách chương
+[13:26:34]       [ch2] ⚠ Không tìm thấy chương
+[13:26:34]       [ch3] Điều hướng tới chương 3...
+[13:26:34]     Đi đến chương 3...
+[13:26:35]     ⚠ Không mở được danh sách chương
+[13:26:35]       [ch3] ⚠ Không tìm thấy chương
+[13:26:35]       [ch4] Điều hướng tới chương 4...
+[13:26:35]     Đi đến chương 4...
+[13:26:35]     ⚠ Không mở được danh sách chương
+[13:26:35]       [ch4] ⚠ Không tìm thấy chương
+[13:26:35]       [ch5] Điều hướng tới chương 5...
+[13:26:35]     Đi đến chương 5...
+[13:26:36]     ⚠ Không mở được danh sách chương
+[13:26:36]       [ch5] ⚠ Không tìm thấy chương
+[13:26:36]     Quá nhiều lỗi điều hướng. Dừng.
+[13:26:36]     
+Xong! ✔0  ✖5  →  C:\Dev\MTC_Download\downloads\Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:26:37]   ⚠ Kết quả: ✔0 ✖5 - ADB không đọc được chương nào
+[13:26:37] 
+======================================================================
+[13:26:37] 📊 KẾT QUẢ TỔNG HỢP
+[13:26:37] ======================================================================
+  ❌ Ta Có Trăm Vạn Điểm Kỹ Năng: 0/1790 chương
+[13:26:37] 
+Tổng: 0/1 truyện OK, 0 chương tải được, 5 lỗi, 0 bỏ qua
+[13:26:51]   Quét Tủ Truyện lượt 1: +1 truyện
+[13:26:53]   Quét Tủ Truyện lượt 2: +0 truyện
+API: https://android.lonoapp.net/api
+Output: C:\Dev\MTC_Download\downloads
+Token: C:\Dev\MTC_Download\token.txt
+C:\Dev\MTC_Download\mtc\api.py:276: SyntaxWarning: "\-" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\-"? A raw string is also an option.
+  garbled = bool(re.search(r"[^\w\sÀ-ỹ.,:;!?()'\"""/\-]", first))
+Traceback (most recent call last):
+  File [35m"<string>"[0m, line [35m1[0m, in [35m<module>[0m
+    from mtc import __version__; print(f'mtc v{__version__}'); from mtc.config import API_BASE, OUTPUT_DIR, TOKEN_FILE; print(f'API: {API_BASE}'); print(f'Output: {OUTPUT_DIR}'); print(f'Token: {TOKEN_FILE}'); [1;31mfrom mtc.api import create_session, resolve_book, search_books, fetch_chapters, decrypt_content, fetch_chapter_text, fetch_full_catalog[0m; print('api.py OK'); from mtc.downloader import download_book, download_batch, load_catalog, refresh_catalog; print('downloader.py OK'); from mtc.utils import safe_name, merge_to_single_file; print('utils.py OK'); from mtc.ui import App; print('ui.py OK')
+                                                                                                                                                                                                                  [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"C:\Dev\MTC_Download\mtc\api.py"[0m, line [35m15[0m, in [35m<module>[0m
+    from ftfy import fix_text
+[1;35mModuleNotFoundError[0m: [35mNo module named 'ftfy'[0m
+API: https://android.lonoapp.net/api
+Output: C:\Dev\MTC_Download\downloads
+Token: C:\Dev\MTC_Download\token.txt
+api.py OK
+downloader.py OK
+utils.py OK
+ui.py OK

@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mtc_download"
-version = "1.0.0"
-description = "MTC/NovelFever novel downloader via ADB + BlueStacks automation."
+version = "2.0.0"
+description = "MTC/NovelFever novel downloader (pure API)."
 readme = "README.md"
 requires-python = ">=3.10"
-keywords = ["mtc", "novelfever", "download", "adb", "bluestacks"]
+keywords = ["mtc", "novelfever", "download", "novel"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
@@ -26,13 +26,10 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-frida = ["frida>=16.1.0"]
-dev   = ["pytest>=8.0", "pytest-timeout>=2.3"]
+dev = ["pytest>=8.0", "pytest-timeout>=2.3"]
 
 [project.scripts]
-mtc-download = "download_all:main"
-mtc-export   = "export_all:main"
-mtc-batch    = "api_batch:main"
+mtc-download = "download:main"
 
 [tool.setuptools.packages.find]
 where = ["."]

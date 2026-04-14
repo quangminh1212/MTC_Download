@@ -1,2 +1,3 @@
 """MTC Novel Downloader – BlueStacks ADB mode."""
-__version__ = "1.0.0"
+"""MTC Novel Downloader – Pure API mode."""
+__version__ = "2.0.0"
