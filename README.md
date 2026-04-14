@@ -17,32 +17,32 @@ pip install -r requirements.txt
 Đặt file `token.txt` ở thư mục gốc chứa Bearer token (lấy từ app).
 Token cần thiết để tải chương VIP/khóa.
 
-### CLI (`download.py`)
+### CLI (`cli.py`)
 
 ```powershell
 # Tải một truyện
-python download.py "Vạn Biến Hồn Đế"
+python cli.py "Vạn Biến Hồn Đế"
 
 # Tải một truyện với khoảng chương
-python download.py "Vạn Biến Hồn Đế" --start 1 --end 100
+python cli.py "Vạn Biến Hồn Đế" --start 1 --end 100
 
 # Cập nhật catalog và tải tất cả
-python download.py --refresh --all
+python cli.py --refresh --all
 
 # Chỉ tải truyện hoàn thành
-python download.py --all --completed
+python cli.py --all --completed
 
 # Liệt kê catalog
-python download.py --list
+python cli.py --list
 
 # Tìm kiếm trên API
-python download.py --search "Hồn Đế"
+python cli.py --search "Hồn Đế"
 ```
 
 ### GUI
 
 ```powershell
-python gui.py
+python app.py
 # hoặc với hot-reload:
 run.bat
 ```
@@ -50,8 +50,8 @@ run.bat
 ## Cấu trúc dự án
 
 ```
-download.py          # CLI chính
-gui.py               # GUI (tkinter)
+cli.py               # CLI chính
+app.py               # GUI (tkinter)
 run.bat              # Launcher với hot-reload
 mtc/
   __init__.py        # Package, version

@@ -5282,3 +5282,91 @@ Xong! ✔5  ✖0  →  c:\Dev\MTC\Thu Nhập Và Thanh Toán
   [ch1721] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1721 Tướng Mệnh Vượng Phu.txt'
   [ch1722] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1722 Mệnh Cách Cực Hạn.txt'
   [ch1723] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1723 Cứ Như Vậy Đi.txt'
+  [ch1724] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1725] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1726] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1726 Mạnh Chưa Chắc Đã Thắng.txt'
+  [ch1727] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1727 Tử Thủ.txt'
+  [ch1728] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1728 Những Kẻ Kỳ Quái.txt'
+  [ch1729] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1730] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1730 Phá Cục.txt'
+  [ch1731] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1732] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1733] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1733 Trách Nhiệm Nặng Nề.txt'
+  [ch1734] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1735] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1736] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1737] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1737 Nói Được Làm Được.txt'
+  [ch1738] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1739] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1740] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1741] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1741 Uy Nghiêm Thần Thánh.txt'
+  [ch1742] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1743] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1743 Giới Hạn.txt'
+  [ch1744] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1744 Ánh Mắt Độc Đáo.txt'
+  [ch1745] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1745 Song Tiêu Hợp Bích.txt'
+  [ch1746] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1747] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1748] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1749] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1750] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1751] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1752] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1752 Leo Lên Tân Thần.txt'
+  [ch1753] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1754] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1754 Quan Tâm.txt'
+  [ch1755] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1755 Lựa Chọn Khó Khăn.txt'
+  [ch1756] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1757] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1757 Giao Ước Niềm Tin.txt'
+  [ch1758] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1758 Chư Thần Tụ Hội.txt'
+  [ch1759] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1760] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1761] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1762] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1762 Hoàn Mỹ Đế Vương Ngạo Thần.txt'
+  [ch1763] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1763 Bất Hạnh Chồng Chất.txt'
+  [ch1764] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1764 Phiền Phức Thủy Thần.txt'
+  [ch1765] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1766] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1767] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1768] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1769] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1769 Nhún Nhường.txt'
+  [ch1770] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch1771] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1772] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1773] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1774] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1775] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1776] ⚠ Nội dung sau giải mã quá ngắn
+  [ch1777] ⚠ [Errno 2] No such file or directory: 'c:\\Dev\\MTC\\Vạn Biến Hồn Đế\\Chương 1777 Vui Quá Hóa Buồn.txt'
+Traceback (most recent call last):
+  File [35m"C:\Dev\MTC_Download\mtc\api.py"[0m, line [35m318[0m, in [35mfetch_chapter_text[0m
+    raise ValueError("Nội dung sau giải mã quá ngắn")
+[1;35mValueError[0m: [35mNội dung sau giải mã quá ngắn[0m
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File [35m"C:\Dev\MTC_Download\download.py"[0m, line [35m114[0m, in [35m<module>[0m
+    [31mmain[0m[1;31m()[0m
+    [31m~~~~[0m[1;31m^^[0m
+  File [35m"C:\Dev\MTC_Download\download.py"[0m, line [35m84[0m, in [35mmain[0m
+    result = download_batch(
+        books,
+    ...<3 lines>...
+        status_filter=status_filter,
+    )
+  File [35m"C:\Dev\MTC_Download\mtc\downloader.py"[0m, line [35m242[0m, in [35mdownload_batch[0m
+    result = download_book(
+        book_name=name,
+    ...<3 lines>...
+        stop_flag=stop_flag,
+    )
+  File [35m"C:\Dev\MTC_Download\mtc\downloader.py"[0m, line [35m112[0m, in [35mdownload_book[0m
+    title, content = [31mfetch_chapter_text[0m[1;31m(session, ch)[0m
+                     [31m~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^[0m
+  File [35m"C:\Dev\MTC_Download\mtc\api.py"[0m, line [35m327[0m, in [35mfetch_chapter_text[0m
+    [31mtime.sleep[0m[1;31m(0.3 * attempt)[0m
+    [31m~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^[0m
+[1;35mKeyboardInterrupt[0m
+mtc package OK
+cli OK
+batch OK
+All imports passed!

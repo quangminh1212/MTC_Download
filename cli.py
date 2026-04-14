@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""download.py – Unified CLI for downloading novels via API.
+"""cli.py – Unified CLI for downloading novels via API.
 
 Usage:
-    python download.py "Tên Truyện"         # download one book
-    python download.py --all                 # download all from catalog
-    python download.py --refresh             # refresh catalog then download all
-    python download.py --completed           # only completed books
-    python download.py --list                # list catalog
-    python download.py --search "keyword"    # search API
+    python cli.py "Tên Truyện"         # download one book
+    python cli.py --all                 # download all from catalog
+    python cli.py --refresh             # refresh catalog then download all
+    python cli.py --completed           # only completed books
+    python cli.py --list                # list catalog
+    python cli.py --search "keyword"    # search API
 """
 import argparse
 import sys

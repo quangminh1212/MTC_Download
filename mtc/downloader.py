@@ -16,6 +16,9 @@ from .api import (
 )
 from .utils import safe_name
 
+MIN_CONTENT_LEN = 500   # Minimum acceptable chapter length (chars)
+MAX_SHORT_STREAK = 3    # Stop after N consecutive short chapters
+
 
 # ── Helpers ─────────────────────────────────────────────────────────────────
 def _find_chapter_file(book_dir: Path, ch_index: int) -> Optional[Path]:
@@ -91,7 +94,7 @@ def download_book(
     _delete_full_files(book_dir)
 
     total = len(targets)
-    ok, fail = 0, 0
+    ok, fail, short_streak = 0, 0, 0
     failed_targets: List[Dict] = []
     log_fn(f"⚡ API: {bname} ({total} chương, #{bid})")
 
@@ -118,8 +121,16 @@ def download_book(
             # Remove old file if different name
             if existing and existing != ch_file and existing.exists():
                 existing.unlink()
-            log_fn(f"  [ch{ch_idx}] ⚡ {ch_file.name} ({len(content)} ký tự)")
             ok += 1
+            if len(content) < MIN_CONTENT_LEN:
+                short_streak += 1
+                log_fn(f"  [ch{ch_idx}] ⚠ NỘI DUNG NGẮN {ch_file.name} ({len(content)} ký tự) [{short_streak}/{MAX_SHORT_STREAK}]")
+                if short_streak >= MAX_SHORT_STREAK:
+                    log_fn(f"⛔ Dừng tải: {MAX_SHORT_STREAK} chương liên tiếp quá ngắn (<{MIN_CONTENT_LEN} ký tự) — có thể cần token VIP.")
+                    break
+            else:
+                short_streak = 0
+                log_fn(f"  [ch{ch_idx}] ⚡ {ch_file.name} ({len(content)} ký tự)")
         except Exception as exc:
             log_fn(f"  [ch{ch_idx}] ⚠ {exc}")
             fail += 1
@@ -140,8 +151,16 @@ def download_book(
                     f"{'=' * 60}\n{title}\n{'=' * 60}\n\n{content}\n",
                     encoding="utf-8",
                 )
-                log_fn(f"  [ch{ch_idx}] ✔ retry ({len(content)} ký tự)")
                 ok += 1
+                if len(content) < MIN_CONTENT_LEN:
+                    short_streak += 1
+                    log_fn(f"  [ch{ch_idx}] ⚠ NỘI DUNG NGẮN retry ({len(content)} ký tự) [{short_streak}/{MAX_SHORT_STREAK}]")
+                    if short_streak >= MAX_SHORT_STREAK:
+                        log_fn(f"⛔ Dừng tải: {MAX_SHORT_STREAK} chương liên tiếp quá ngắn (<{MIN_CONTENT_LEN} ký tự) — có thể cần token VIP.")
+                        break
+                else:
+                    short_streak = 0
+                    log_fn(f"  [ch{ch_idx}] ✔ retry ({len(content)} ký tự)")
             except Exception as exc:
                 log_fn(f"  [ch{ch_idx}] ✖ retry: {exc}")
                 fail += 1
@@ -149,10 +168,14 @@ def download_book(
     if progress_cb:
         progress_cb(total, total)
 
-    success = ok > 0 and fail == 0
-    reason = "" if success else (
-        f"Tải được {ok}, lỗi {fail}" if ok else "Không tải được chương nào"
-    )
+    stopped_short = short_streak >= MAX_SHORT_STREAK
+    success = ok > 0 and fail == 0 and not stopped_short
+    if stopped_short:
+        reason = f"Dừng: {MAX_SHORT_STREAK} chương liên tiếp quá ngắn — cần token VIP"
+    elif not success:
+        reason = f"Tải được {ok}, lỗi {fail}" if ok else "Không tải được chương nào"
+    else:
+        reason = ""
     log_fn(f"Xong! ✔{ok}  ✖{fail}  →  {book_dir}")
     return {
         "success": success,

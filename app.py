@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""gui.py – Entry point for MTC Novel Downloader."""
+"""app.py – Entry point for MTC Novel Downloader."""
 import os, time, threading
 from pathlib import Path
 

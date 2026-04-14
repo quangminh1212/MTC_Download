@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""batch_to_mtc.py – Download ALL books from catalog to c:/dev/MTC, git commit each."""
+"""batch.py – Download ALL books from catalog to c:/dev/MTC, git commit each."""
 import json
 import os
 import re

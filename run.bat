@@ -22,8 +22,8 @@ echo.
 set MTC_HOT_RELOAD=1
 
 :loop
-echo [%time%] Starting gui.py...
-"%PYTHON%" "%DIR%gui.py"
+echo [%time%] Starting app.py...
+"%PYTHON%" "%DIR%app.py"
 set EC=%errorlevel%
 
 if "%EC%"=="42" (
