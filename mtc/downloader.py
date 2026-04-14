@@ -17,7 +17,7 @@ from .api import (
 from .utils import safe_name
 
 MIN_CONTENT_LEN = 500   # Minimum acceptable chapter length (chars)
-MAX_SHORT_STREAK = 3    # Stop after N consecutive short chapters
+MAX_SHORT_STREAK = 10    # Stop after N consecutive short chapters
 
 
 # ── Helpers ─────────────────────────────────────────────────────────────────
@@ -113,9 +113,15 @@ def download_book(
 
         try:
             title, content = fetch_chapter_text(session, ch)
-            ch_file = book_dir / f"{safe_name(title)}.txt"
+            is_titleless = (title == f"Chương {ch_idx}")
+            if is_titleless:
+                ch_header = f"Chương {ch_idx}:"
+                ch_file = book_dir / f"Chương {ch_idx}.txt"
+            else:
+                ch_header = f"Chương {ch_idx}: {title}."
+                ch_file = book_dir / f"Chương {ch_idx} {safe_name(title)}.txt"
             ch_file.write_text(
-                f"{'=' * 60}\n{title}\n{'=' * 60}\n\n{content}\n",
+                f"{'=' * 60}\n{ch_header}\n{'=' * 60}\n\n{content}\n",
                 encoding="utf-8",
             )
             # Remove old file if different name
@@ -146,9 +152,15 @@ def download_book(
             ch_idx = ch.get("index") or 0
             try:
                 title, content = fetch_chapter_text(session, ch)
-                ch_file = book_dir / f"{safe_name(title)}.txt"
+                is_titleless = (title == f"Chương {ch_idx}")
+                if is_titleless:
+                    ch_header = f"Chương {ch_idx}:"
+                    ch_file = book_dir / f"Chương {ch_idx}.txt"
+                else:
+                    ch_header = f"Chương {ch_idx}: {title}."
+                    ch_file = book_dir / f"Chương {ch_idx} {safe_name(title)}.txt"
                 ch_file.write_text(
-                    f"{'=' * 60}\n{title}\n{'=' * 60}\n\n{content}\n",
+                    f"{'=' * 60}\n{ch_header}\n{'=' * 60}\n\n{content}\n",
                     encoding="utf-8",
                 )
                 ok += 1
