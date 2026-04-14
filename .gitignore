@@ -6,6 +6,7 @@ __pycache__/
 # Log files
 mtc.log
 mtc.log.*
+log.txt
 
 # C extensions
 *.so

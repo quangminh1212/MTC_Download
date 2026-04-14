@@ -1244,3 +1244,6 @@ Catalog: 396 truyện
 
 [3/396] ⚡ Công Cuộc Bị 999 Em Gái Chinh Phục (#100677, 1106 ch, Hoàn thành)
   [ch26] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch76] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch83] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  [ch144] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
