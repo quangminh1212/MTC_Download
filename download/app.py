@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """app.py – Entry point for MTC Novel Downloader."""
-import os, time, threading
+import os, sys, time, threading
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from mtc.config import log, EXIT_RELOAD, ROOT_DIR
 from mtc.ui import App
@@ -13,7 +15,7 @@ _WATCH_DIR = ROOT_DIR / "mtc"
 def _file_watcher(app: App):
     """Poll .py files every 2s, exit on change for restart."""
     snapshots = {}
-    for f in list(_WATCH_DIR.glob("*.py")) + list(ROOT_DIR.glob("*.py")):
+    for f in list(_WATCH_DIR.glob("*.py")) + list((ROOT_DIR / "download").glob("*.py")):
         try:
             snapshots[f] = f.stat().st_mtime
         except OSError:
@@ -22,7 +24,7 @@ def _file_watcher(app: App):
 
     while True:
         time.sleep(2)
-        for f in list(_WATCH_DIR.glob("*.py")) + list(ROOT_DIR.glob("*.py")):
+        for f in list(_WATCH_DIR.glob("*.py")) + list((ROOT_DIR / "download").glob("*.py")):
             try:
                 mt = f.stat().st_mtime
             except OSError:

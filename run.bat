@@ -23,7 +23,7 @@ set MTC_HOT_RELOAD=1
 
 :loop
 echo [%time%] Starting app.py...
-"%PYTHON%" "%DIR%app.py"
+"%PYTHON%" "%DIR%download\app.py"
 set EC=%errorlevel%
 
 if "%EC%"=="42" (

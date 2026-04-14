@@ -9,7 +9,7 @@ import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from mtc.api import create_session, fetch_full_catalog, fetch_chapters, fetch_chapter_text, resolve_book, cache_book
 from mtc.downloader import load_catalog, save_catalog
