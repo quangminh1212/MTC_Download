@@ -697,10 +697,8 @@ class AdbController:
             return None
 
         # Use word boundary to avoid matching "Chương 4" inside "Chương 419"
-        pattern = re.compile(rf"Chương\s+{chapter_index}(?:\D|$)")
+        pattern = re.compile(rf"Chương[-: ]*\s*{chapter_index}(?:\D|$)", re.IGNORECASE)
         for node in root.iter():
-            if node.get("clickable") != "true":
-                continue
             text = _clean_ui_text(node.get("text", ""))
             desc = _clean_ui_text(node.get("content-desc", ""))
             haystack = text or desc
@@ -824,14 +822,31 @@ class AdbController:
         if not self.open_chapter_list(log_fn):
             return False
 
-        for _ in range(10):
+        for skip_idx in range(40):
             dump = self.dump_ui()
             center = self._find_chapter_center(dump, chapter_index)
             if center:
                 self.tap(*center)
                 time.sleep(0.18)
                 return True
-            self.swipe_up()
+            
+            # Determine direction to scroll
+            visible = []
+            pattern = re.compile(r"Chương[-: ]*\s*(\d+)", re.IGNORECASE)
+            for text in self.get_all_text(dump):
+                match = pattern.search(text)
+                if match:
+                    visible.append(int(match.group(1)))
+            
+            if visible:
+                avg_visible = sum(visible) / len(visible)
+                if avg_visible > chapter_index:
+                    self.swipe_down()
+                else:
+                    self.swipe_up()
+            else:
+                self.swipe_up()
+                
         return False
 
     @staticmethod

@@ -2,3 +2,109 @@ C:\Program Files\BlueStacks_nxt\HD-Adb.exe
 
 
 
+[13:09:03] ✅ ADB: C:\Program Files\BlueStacks_nxt\HD-Adb.exe
+[13:09:03] ✅ Package: com.novelfever.app.android
+[13:09:03]   Accessibility OK: com.google.android.marvin.talkback
+[13:09:03] 📚 Quét Tủ Truyện...
+[13:09:23]   Quét Tủ Truyện lượt 1: +1 truyện
+[13:09:25]   Quét Tủ Truyện lượt 2: +0 truyện
+[13:09:27]   Quét Tủ Truyện lượt 3: +0 truyện
+[13:09:27] 
+======================================================================
+[13:09:27] 📚 TỦ TRUYỆN: 1 truyện
+[13:09:27] ======================================================================
+    1. [📥 0/1790] Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:09:43] ✅ ADB: C:\Program Files\BlueStacks_nxt\HD-Adb.exe
+[13:09:43] ✅ Package: com.novelfever.app.android
+[13:09:43] 📝 Đã nạp 1 truy vấn truyện
+[13:09:43]   Accessibility OK: com.google.android.marvin.talkback
+[13:09:43] 📚 Quét Tủ Truyện...
+[13:10:02]   Quét Tủ Truyện lượt 1: +1 truyện
+[13:10:04]   Quét Tủ Truyện lượt 2: +0 truyện
+[13:10:06]   Quét Tủ Truyện lượt 3: +0 truyện
+[13:10:06] 
+======================================================================
+[13:10:06] 📚 TỦ TRUYỆN: 1 truyện
+[13:10:06] ======================================================================
+    1. [📥 0/1790] Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:10:06] 
+======================================================================
+[13:10:06] 🚀 BẮT ĐẦU TẢI EXPORT: 1 truyện
+[13:10:06] ======================================================================
+
+[13:10:06] 
+[1/1] 📖 Ta Có Trăm Vạn Điểm Kỹ Năng (1790 chương)
+[13:10:06]   📱 Tải qua ADB...
+[13:10:23]     Mở từ Tủ Truyện: Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:10:25]     Bật accessibility...
+[13:10:25]     Accessibility OK: com.google.android.marvin.talkback
+[13:10:29]       [ch1] Điều hướng tới chương 1...
+[13:10:29]     Đi đến chương 1...
+[13:10:54]       [ch1] ⚠ Không tìm thấy chương
+[13:10:54]       [ch2] Điều hướng tới chương 2...
+[13:10:54]     Đi đến chương 2...
+[13:12:54] ✅ ADB: C:\Program Files\BlueStacks_nxt\HD-Adb.exe
+[13:12:54] ✅ Package: com.novelfever.app.android
+[13:12:54] 📝 Đã nạp 1 truy vấn truyện
+[13:12:55]   Accessibility OK: com.google.android.marvin.talkback
+[13:12:55] 📚 Quét Tủ Truyện...
+[13:13:06]   ⚠ Chưa về được màn hình chính (lượt 1)
+[13:13:12]   ⚠ Chưa về được màn hình chính (lượt 2)
+[13:13:12] ❌ Không thấy truyện nào trong Tủ Truyện
+[13:13:41] ✅ ADB: C:\Program Files\BlueStacks_nxt\HD-Adb.exe
+[13:13:41] ✅ Package: com.novelfever.app.android
+[13:13:41] 📝 Đã nạp 1 truy vấn truyện
+[13:13:41]   Accessibility OK: com.google.android.marvin.talkback
+[13:13:41] 📚 Quét Tủ Truyện...
+[13:14:04]   Quét Tủ Truyện lượt 1: +1 truyện
+[13:14:06]   Quét Tủ Truyện lượt 2: +0 truyện
+[13:14:08]   Quét Tủ Truyện lượt 3: +0 truyện
+[13:14:08] 
+======================================================================
+[13:14:08] 📚 TỦ TRUYỆN: 1 truyện
+[13:14:08] ======================================================================
+    1. [📥 0/1790] Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:14:08] 
+======================================================================
+[13:14:08] 🚀 BẮT ĐẦU TẢI EXPORT: 1 truyện
+[13:14:08] ======================================================================
+
+[13:14:08] 
+[1/1] 📖 Ta Có Trăm Vạn Điểm Kỹ Năng (1790 chương)
+[13:14:08]   📱 Tải qua ADB...
+[13:14:25]     Mở từ Tủ Truyện: Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:14:27]     Bật accessibility...
+[13:14:27]     Accessibility OK: com.google.android.marvin.talkback
+[13:14:31]       [ch1] Điều hướng tới chương 1...
+[13:14:31]     Đi đến chương 1...
+[13:14:57]       [ch1] ⚠ Không tìm thấy chương
+[13:14:57]       [ch2] Điều hướng tới chương 2...
+[13:14:57]     Đi đến chương 2...
+[13:15:44] ✅ ADB: C:\Program Files\BlueStacks_nxt\HD-Adb.exe
+[13:15:44] ✅ Package: com.novelfever.app.android
+[13:15:44] 📝 Đã nạp 1 truy vấn truyện
+[13:15:45]   Accessibility OK: com.google.android.marvin.talkback
+[13:15:45] 📚 Quét Tủ Truyện...
+[13:15:53]   ⚠ Chưa về được màn hình chính (lượt 1)
+[13:16:24]   Quét Tủ Truyện lượt 1: +1 truyện
+[13:16:26]   Quét Tủ Truyện lượt 2: +0 truyện
+[13:16:28]   Quét Tủ Truyện lượt 3: +0 truyện
+[13:16:28] 
+======================================================================
+[13:16:28] 📚 TỦ TRUYỆN: 1 truyện
+[13:16:28] ======================================================================
+    1. [📥 0/1790] Ta Có Trăm Vạn Điểm Kỹ Năng
+[13:16:28] 
+======================================================================
+[13:16:28] 🚀 BẮT ĐẦU TẢI EXPORT: 1 truyện
+[13:16:28] ======================================================================
+
+[13:16:28] 
+[1/1] 📖 Ta Có Trăm Vạn Điểm Kỹ Năng (1790 chương)
+[13:16:28]   📱 Tải qua ADB...
+[13:16:46] ✅ ADB: C:\Program Files\BlueStacks_nxt\HD-Adb.exe
+[13:16:46] ✅ Package: com.novelfever.app.android
+[13:16:46] 📝 Đã nạp 1 truy vấn truyện
+[13:16:47]   Accessibility OK: com.google.android.marvin.talkback
+[13:16:47] 📚 Quét Tủ Truyện...
+[13:17:05]   Quét Tủ Truyện lượt 1: +1 truyện
