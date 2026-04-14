@@ -3,11 +3,11 @@ chcp 65001 >nul 2>&1
 setlocal EnableDelayedExpansion
 
 set DIR=%~dp0
-set PYTHON=%DIR%.venv\Scripts\python.exe
+set PYTHON=%DIR%..\.venv\Scripts\python.exe
 
 if not exist "%PYTHON%" (
     echo [setup] Creating virtual environment...
-    python -m venv "%DIR%.venv"
+    python -m venv "%DIR%..\.venv"
     echo [setup] Virtual environment ready.
 )
 
@@ -23,7 +23,7 @@ set MTC_HOT_RELOAD=1
 
 :loop
 echo [%time%] Starting app.py...
-"%PYTHON%" "%DIR%download\app.py"
+"%PYTHON%" "%DIR%..\mtc\app.py"
 set EC=%errorlevel%
 
 if "%EC%"=="42" (

@@ -13,8 +13,6 @@ import argparse
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
 from mtc.config import OUTPUT_DIR, log
 from mtc.api import create_session, search_books
 from mtc.downloader import (
