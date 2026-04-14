@@ -3,27 +3,40 @@
 from pathlib import Path
 from mtc.utils import safe_name, ensure_dir
 
-# Mock data
+# Mock data - Truyện hoàn thành
 MOCK_BOOK = {
-    "id": 12345,
-    "name": "Truyện Test Hoàn Thành",
+    "id": 99999,
+    "name": "Võ Luyện Đỉnh Phong - Hoàn Thành",
     "status_name": "Hoàn thành",
-    "chapter_count": 5
+    "chapter_count": 10,
+    "author": "Tác giả test",
+    "synopsis": "Một câu chuyện về hành trình tu luyện đến đỉnh cao võ đạo..."
 }
 
 MOCK_CHAPTERS = [
-    {"id": 1, "title": "Chương 1: Khởi đầu"},
-    {"id": 2, "title": "Chương 2: Phát triển"},
-    {"id": 3, "title": "Chương 3: Cao trào"},
-    {"id": 4, "title": "Chương 4: Hồi kết"},
-    {"id": 5, "title": "Chương 5: Kết thúc"},
+    {"id": 1, "title": "Chương 1: Khởi đầu hành trình"},
+    {"id": 2, "title": "Chương 2: Gặp gỡ sư phụ"},
+    {"id": 3, "title": "Chương 3: Tu luyện võ công"},
+    {"id": 4, "title": "Chương 4: Đại chiến ma đạo"},
+    {"id": 5, "title": "Chương 5: Đột phá cảnh giới"},
+    {"id": 6, "title": "Chương 6: Vào bí cảnh"},
+    {"id": 7, "title": "Chương 7: Tìm được bảo vật"},
+    {"id": 8, "title": "Chương 8: Quyết chiến kẻ thù"},
+    {"id": 9, "title": "Chương 9: Đăng đỉnh võ đạo"},
+    {"id": 10, "title": "Chương 10: Viên mãn kết thúc"},
 ]
 
-MOCK_CONTENT = """Đây là nội dung chương test.
+MOCK_CONTENT = """Nội dung chương truyện võ hiệp...
 
-Đoạn văn thứ nhất với nội dung mẫu.
+Thiên địa linh khí tụ tập, chủ nhân công bắt đầu tu luyện.
 
-Đoạn văn thứ hai với nội dung mẫu.
+Sau một đêm khổ công, công lực tăng thêm một tầng.
+
+Bỗng nhiên, một tiếng nổ vang lên từ xa...
+
+"Ai dám phá đảo tu luyện của ta?"
+
+Chủ nhân công mở mắt, ánh mắt sắc bén như kiếm.
 
 --- Hết chương ---
 """
