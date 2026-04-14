@@ -11,10 +11,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from mtc.api import create_session, fetch_full_catalog, fetch_chapters, fetch_chapter_text, resolve_book, cache_book
-from mtc.downloader import load_catalog, save_catalog
-from mtc.utils import safe_name
-from mtc.config import CATALOG
+from download.api import create_session, fetch_full_catalog, fetch_chapters, fetch_chapter_text, resolve_book, cache_book
+from download.downloader import load_catalog, save_catalog
+from download.utils import safe_name
+from download.config import CATALOG
 
 TARGET = Path(r"c:\dev\MTC")
 TARGET.mkdir(parents=True, exist_ok=True)

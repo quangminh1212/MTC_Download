@@ -29,11 +29,11 @@ dependencies = [
 dev = ["pytest>=8.0", "pytest-timeout>=2.3"]
 
 [project.scripts]
-mtc-download = "mtc.cli:main"
+mtc-download = "download.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["mtc*"]
+include = ["download*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
