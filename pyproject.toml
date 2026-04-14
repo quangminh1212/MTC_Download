@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mtc_download"
+version = "2.0.0"
+description = "MTC/NovelFever novel downloader (pure API)."
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["mtc", "novelfever", "download", "novel"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Utilities",
+    "Environment :: Console",
+]
+
+dependencies = [
+    "requests>=2.31",
+    "urllib3>=2.0",
+    "pycryptodome>=3.19",
+    "ftfy>=7.1.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-timeout>=2.3"]
+
+[project.scripts]
+mtc-download = "download.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["download*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
