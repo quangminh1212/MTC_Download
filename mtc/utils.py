@@ -8,7 +8,7 @@ def safe_name(name: str) -> str:
     """Create filesystem-safe name."""
     name = unicodedata.normalize("NFC", name)
     for c in r'\/:*?"<>|':
-        name = name.replace(c, "_")
+        name = name.replace(c, " ")
     name = re.sub(r"\s+", " ", name).strip()
     return name[:200]
 

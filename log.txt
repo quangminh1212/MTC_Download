@@ -1822,3 +1822,115 @@ Tìm thấy 257 truyện từ app.
   ✖ Không tìm thấy: Tỷ Phu, Dẫn Ta Thành Tiên!
   ✖ Không tìm thấy: Địa Ngục Luyện Tâm Ba Ngàn Năm, Mãn Cấp Phong Đô Trấn Yêu Hầu
   ✖ Không tìm thấy: Hồng Hoang: Bắt Đầu Từ Tăng Phúc Cấp Số Nhân Liền Vô Địch
+  ✖ Không tìm thấy: Lưu Lạc Hoang Đảo, Chế Tạo Trong Mộng Đào Nguyên
+  ✖ Không tìm thấy: Đại Minh: Ta Mỗi Ngày Thu Được Một Cái Tương Lai Chuyển Phát Nhanh
+  ✖ Không tìm thấy: Nằm Vùng Hợp Hoan Tông? May Mà Dương Khí Của Ta Vô Hạn
+  ✖ Không tìm thấy: Ngươi Chọc Hắn Làm Gì? Hắn Đến Từ Tu La Địa Ngục!
+  ✖ Không tìm thấy: Người Tại Thái Dương Viết Nhật Ký, Hồng Hoang Toàn Lộn Xộn
+  ✖ Không tìm thấy: Đấu La Chi Long Ngâm Cửu Tiêu
+  ✖ Không tìm thấy: Lật Bài Tẩy Trên Trảm Tiên Đài, Chư Thần Van Xin Ta Đừng Chết!
+  ✖ Không tìm thấy: Thế Giới Huyền Huyễn Mỹ Thực Vô Địch
+  [ch333] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Điên Cuồng Áp Tiêu Hệ Thống, Áp Tiêu Liền Có Thể Mạnh Lên!
+  ✖ Không tìm thấy: Ta Muốn Tuyệt Thế Mỹ Nhân, Chứ Không Phải Muốn Biến Thành Mỹ Nhân
+  ✖ Không tìm thấy: Ngự Thú Tiến Hóa Thương
+  ✖ Không tìm thấy: Vốn Là Vô Địch, Không Cần Tu Luyện
+  ✖ Không tìm thấy: Tại Hokage Dạy Học, Hệ Thống Nói Ta Là Naruto Bạn Học
+  ✖ Không tìm thấy: Xuyên Qua Cổ Đại, Từ Giải Cứu Xinh Đẹp Mẹ Vợ Bắt Đầu
+  [ch360] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Bắc Lương: Từ Trong Đống Người Chết Leo Ra  Dị Tính Vương
+  ✔ Huyết Thống Thế Giới → #102459
+  ✖ Không tìm thấy: Hogwarts Chi Hỏa Thần Khai Đạo
+  ✖ Không tìm thấy: Ta Tại Hải Tặc Thế Giới Bắt Đầu Thành Gia Lập Nghiệp
+  ✖ Không tìm thấy: Ta Có Thể Trao Đổi Ngộ Tính
+  ✖ Không tìm thấy: Hồng Hoang: Vu Tộc Bất Tranh Bá, Đương Đại Địa Tạo Vật Chủ
+  ✖ Không tìm thấy: Vừa Bắt Đầu Đã Luyện Hóa Kim Sí Đại Bàng, Thánh Nhân Choáng Váng!
+  ✖ Không tìm thấy: Đa Tử Đa Phúc: Khai Cục Kim Đan Kỳ
+  ✖ Không tìm thấy: Một Giây Ức Phát, Ngươi Quản Cái Này Gọi Hỏa Cầu Thuật?
+  [ch403] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Di Động Tòa Thành Cầu Sinh: Ta Có Duy Nhất Thần Cấp Thiên Phú
+  ✖ Không tìm thấy: Gia Tộc Tu Tiên: Ta Làm Trấn Tộc Linh Thú
+  ✖ Không tìm thấy: Hoàng Đế Bù Nhìn? Bắt Đầu Triệu Hoán Đổng Trác Làm Bạo Quân!
+  [ch419] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Yêu Võ Loạn Thế, Ta Có Một Gốc Thiên Phú Thần Thụ
+  ✖ Không tìm thấy: Đạo Sĩ Bị Ly Hôn, Vô Số Nữ Thần Đến Trêu Chọc Ta
+  ✖ Không tìm thấy: Kiếm Đến
+  ✖ Không tìm thấy: Sư Tôn, Ngươi Đem Sư Huynh Trả Lại Cho Ta Có Được Hay Không?
+  ✖ Không tìm thấy: Nương Tử Nhà Ta Toàn Là Boss Phản Diện
+  ✖ Không tìm thấy: Hồng Hoang: Ta Ở Trong Tiệt Giáo Viết Nhật Ký, Thông Thiên Giáo Chủ Nổi Điên Lên Giết Chóc
+  ✖ Không tìm thấy: Thành Tựu Ma Tôn, Đánh Dấu Dưỡng Thành 300 Năm
+  ✖ Không tìm thấy: Sss Cấp Cung Tiễn Thủ, Đòn Đánh Thường Vĩnh Cửu Thêm Thuộc Tính
+  ✖ Không tìm thấy: Vạn Linh Thần Quang Bình
+  ✖ Không tìm thấy: Đoạn Kiếm Sơn
+  ✖ Không tìm thấy: Trường Sinh Tiên Hồ Lô
+  ✖ Không tìm thấy: Trường Sinh Tiên Tộc, Từ Luyện Đan Học Đồ Bắt Đầu
+  ✖ Không tìm thấy: Toàn Viên Hoàng Đế: Đem Tu Tiên Giới Cho Làm Mơ Hồ
+  ✖ Không tìm thấy: Tận Thế Cầu Sinh: Bắt Đầu Vô Hạn Hỏa Lực
+  ✖ Không tìm thấy: Ta Hồng Hoang Quá Mức Gian Nan
+  ✖ Không tìm thấy: Vũ Khí Hệ Ngự Thú Đại Sư
+  ✖ Không tìm thấy: Nữ Tử Trưởng Ngục Giam? Vô Lương Tác Giả Đừng Làm Ta
+  ✖ Không tìm thấy: Dòng Dõi Đều Vô Địch, Ta Liền Phách Lối Điểm Thế Nào
+  ✖ Không tìm thấy: Chết Tiệt! Kẻ Nào Tung Tin Đồn Ta Là Sát Tinh?!
+  ✖ Không tìm thấy: Chư Thiên: Vô Số Ta, Gia Nhập Vào Chat Group
+  ✖ Không tìm thấy: Ngươi Chọc Hắn Làm Gì? Đồ Đệ Của Hắn Đều Là Tiên Đế
+  ✖ Không tìm thấy: Tận Thế Thiên Tai: Ta Từ Sát Lục Bên Trong Quật Khởi
+  ✖ Không tìm thấy: Mở Đầu Thức Tỉnh Độc Thần: Ta Chọn Diệu Thủ Không Không  [ch535] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+
+  [ch536] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4  ✖ Không tìm thấy: Tận Thế Trò Chơi: Tê! Bắt Đầu Giáo Hoa Quỳ Trước Người?
+
+  ✖ Không tìm thấy: Đốt Tiên Ký
+  ✖ Không tìm thấy: Ỷ Thiên Thanh Thư: Mệnh Ta Do Ta Không Do Trời
+  ✖ Không tìm thấy: Ta Trên Giường Thông Hồng Hoang
+  ✖ Không tìm thấy: Xuyên Không Bộ Lạc Nguyên Thuỷ Tai Thú, Mở Đầu Bị Trục Xuất
+  ✖ Không tìm thấy: Hồ Yêu: Bắt Đầu Hàn Thiên Tôn, Nhã Nhã Nghĩ Đao Ta?
+  ✖ Không tìm thấy: Trọng Sinh 1983 Ta Lên Núi Săn Bắn Đi Săn Phát Tài
+  ✖ Không tìm thấy: Quét Ngang Võ Đạo: Từ Giết Địch Bạo Công Lực Bắt Đầu
+  ✖ Không tìm thấy: Đệ Nhất Tiên Diệt Thế
+  [ch572] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Xuyên Qua Tiểu Binh: Ta Tại Cổ Đại Thế Giới Cầu Sinh Ký
+  [ch579] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Hàn Đông Tận Thế: Một Cỗ Xe Buýt Lưu Lãng Toàn Cầu
+  ✖ Không tìm thấy: Thái Nhất Đạo Quả
+  [ch587] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Cường Thủ Trưởng Bối Của Nhân Vật Chính, Ta Không Vô Địch Ai Vô Địch!
+  ✖ Không tìm thấy: Bắt Đầu Vô Hạn Tài Nguyên, Ta Chế Tạo Chư Thiên Đệ Nhất Tông
+  ✖ Không tìm thấy: Ta Đều Thành Đỉnh Lưu, Bảng Độ Thuần Thục Mới Đến
+  ✔ Trảm Tiên Nhân → #138229
+  ✖ Không tìm thấy: Trên Đài Trảm Tiên Là Ai, Ta Chính Là Tổ Sư Của Vạn Vị Tiên
+  ✖ Không tìm thấy: Tang Khí Tiên
+  ✖ Không tìm thấy: Niên Đại: Đạo Pháp Thông Thần, Ngươi Nói Ta Mê Tín?
+  ✔ Ngự Thú Hệ Vu Sư → #144909
+  ✖ Không tìm thấy: Cộng Điểm: Tạo Hóa Chi Chủ
+  ✖ Không tìm thấy: Không Có Tốt Nghiệp, Ta Liền Cưới Nữ Lão Sư Xinh Đẹp
+  ✖ Không tìm thấy: Thiên Linh Căn, Ma Hồ Tiên Duyên
+  ✖ Không tìm thấy: Hoàng Thất Bị Ruồng Bỏ, Mở Đầu Thành Lập Vô Thượng Tiên Triều
+  ✖ Không tìm thấy: Trước Mặt Mọi Người Gặm Quái Dị Thăng Cấp, Đặc Biệt Cục Cầu Ta Nhậm Chức
+  ✖ Không tìm thấy: Hồng Hoang: Ta Cùng Hồng Quân Bình Phân Thế Giới
+  ✖ Không tìm thấy: Không Theo Thánh
+  ✖ Không tìm thấy: Bắt Đầu Phản Sát Người Làm Văn Hộ, Ta Thành Đại Càn Hung Đồ
+  ✖ Không tìm thấy: Toàn Dân Chuyển Chức: Ngự Long Sư Là Phế Nhất Chức Nghiệp ?
+  ✖ Không tìm thấy: Tổng Võ: Tác Dụng Phụ Nghịch Chuyển, Nữ Hiệp Nhóm Bị Ngược Khóc
+  ✖ Không tìm thấy: Thời Gian Tuần Hoàn: Bắt Đầu Liền Bị Lục Phiến Môn Bắt Lấy
+  ✖ Không tìm thấy: Hồng Hoang: Thông Thiên Sư Tôn, Ta Mang Ngươi Bay
+  ✖ Không tìm thấy: Ỷ Thiên: Khuyển Tử Trương Vô Kỵ, Gia Sư Trương Tam Phong
+  ✖ Không tìm thấy: Võng Du: Cẩu Tại Tân Thủ Thôn, Phân Thân Bức Ta Thành Tiên
+  ✖ Không tìm thấy: Nằm Thẳng Thế Tử, Ta Viết Bách Triều Hoàng Hậu Vào Yên Chi Bình
+  [ch705] ⚠ Invalid base64-encoded string: number of data characters (25) cannot be 1 more than a multiple of 4
+  ✖ Không tìm thấy: Ta, Thái Sơ Đạo Thai, Ba Tuổi Tới Cửa Đoạt Nàng Dâu
+  ✖ Không tìm thấy: Cựu Nhật Chi Lục
+  ✖ Không tìm thấy: Đấu La Chi Để Bản Thể Tông Sớm Vĩ Đại
+  ✖ Không tìm thấy: Mô Phỏng: Thân Phận Ta Vô Hạn Đổi Mới, Quét Ngang Chư Thiên
+Traceback (most recent call last):
+  File "C:\Dev\MTC_Download\download.py", line 114, in <module>
+    main()
+    ~~~~^^
+  File "C:\Dev\MTC_Download\download.py", line 54, in main
+    print(f"  {i:4d}. [{status:>10s}] {b['name']} ({ch} ch, #{b['id']})")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\MTC_Download\mtc\config.py", line 17, in write
+    self.terminal.write(message)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u1ebf' in position 17: character maps to <undefined>

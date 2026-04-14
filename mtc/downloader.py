@@ -110,7 +110,7 @@ def download_book(
 
         try:
             title, content = fetch_chapter_text(session, ch)
-            ch_file = book_dir / f"{safe_name(title).replace('_', ' ')}.txt"
+            ch_file = book_dir / f"{safe_name(title)}.txt"
             ch_file.write_text(
                 f"{'=' * 60}\n{title}\n{'=' * 60}\n\n{content}\n",
                 encoding="utf-8",
@@ -135,7 +135,7 @@ def download_book(
             ch_idx = ch.get("index") or 0
             try:
                 title, content = fetch_chapter_text(session, ch)
-                ch_file = book_dir / f"{safe_name(title).replace('_', ' ')}.txt"
+                ch_file = book_dir / f"{safe_name(title)}.txt"
                 ch_file.write_text(
                     f"{'=' * 60}\n{title}\n{'=' * 60}\n\n{content}\n",
                     encoding="utf-8",
@@ -231,7 +231,7 @@ def download_batch(
             if bdir.is_dir():
                 existing = sum(
                     1 for f in bdir.glob("*.txt")
-                    if re.match(r"^\d{6}_", f.name) and f.stat().st_size > 100
+                    if not f.name.startswith("_") and f.stat().st_size > 100
                 )
                 if ch_count > 0 and existing >= ch_count * 0.9:
                     log_fn(f"[{i+1}/{total}] {name}: đã có {existing}/{ch_count} chương, bỏ qua")
