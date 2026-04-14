@@ -98,6 +98,46 @@ python test_decrypt_with_key.py "base64:YOUR_KEY_HERE"
 
 ❌ Chưa tìm được APP_KEY (cần thực hiện một trong 4 phương án trên)
 
+## Security Scanning với Snyk
+
+Dự án này hỗ trợ scan bảo mật với Snyk qua Kiro MCP tools:
+
+### Quick Start
+```bash
+# Chạy file batch để xem hướng dẫn
+snyk_quick_scan.bat
+```
+
+### Các lệnh Snyk chính (chạy trong Kiro chat)
+
+1. **Trust project folder**:
+   ```
+   snyk trust .
+   ```
+
+2. **Scan mã nguồn Python**:
+   ```
+   snyk code scan --path=. --severity-threshold=medium
+   ```
+
+3. **Scan dependencies**:
+   ```
+   snyk sca scan --path=. --command=python3
+   ```
+
+4. **Kiểm tra package health**:
+   ```
+   snyk package health check --package-name=mitmproxy --ecosystem=pypi
+   ```
+
+### Files hỗ trợ
+- 📖 [SNYK_COMMANDS.md](SNYK_COMMANDS.md) - Hướng dẫn chi tiết tất cả lệnh Snyk
+- 🔒 `snyk_trust_all.bat` - Trust tất cả folders
+- 🔍 `snyk_scan_all.bat` - Scan tổng thể
+- ⚡ `snyk_quick_scan.bat` - Quick reference
+
+**Lưu ý**: Snyk commands chỉ chạy được qua Kiro MCP tool, không thể chạy trực tiếp từ command line.
+
 ## Hỗ trợ
 
 Nếu gặp vấn đề, xem phần **Troubleshooting** trong [DECRYPTION_GUIDE.md](DECRYPTION_GUIDE.md)
