@@ -36,7 +36,7 @@ data/
 token.txt
 test_*.py
 downloads/
-extract/novels/
+extract/
 
 # APK
 *.apk
