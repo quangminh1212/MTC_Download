@@ -23,7 +23,7 @@ except Exception:
     fix_text = None
     _HAS_API_DEPS = False
 
-from .config import OUTPUT_DIR, API_BASE, USER_AGENT
+from .config import OUTPUT_DIR, API_BASE, USER_AGENT, ROOT_DIR
 from .adb import AdbController
 from .utils import safe_name
 
@@ -34,6 +34,14 @@ _API_HEADERS = {
     "User-Agent": USER_AGENT,
     "x-app": "app.android",
 }
+
+_TOKEN_FILE = ROOT_DIR / "token.txt"
+if _TOKEN_FILE.exists():
+    _token = _TOKEN_FILE.read_text(encoding="utf-8").strip()
+    if _token:
+        _API_HEADERS["Authorization"] = f"Bearer {_token}"
+        _API_HEADERS["Token"] = _token
+
 _BASE64_BYTES = set((string.ascii_letters + string.digits + "+/=").encode())
 _BOOK_ID_CACHE_FILE = OUTPUT_DIR / ".book_id_cache.json"
 
@@ -349,6 +357,9 @@ def _fetch_api_chapter_text(session, chapter: Dict, max_attempts: int = 3) -> Tu
             return chapter_name, content
         except Exception as exc:
             last_error = exc
+            if "401" in str(exc) or "403" in str(exc):
+                # Nếu lỗi Unauthorized hoặc Forbidden (VIP), không cần tốn thời gian retry
+                raise ValueError("Bị giới hạn bản quyền/VIP. Vui lòng cung cấp token đăng nhập hợp lệ vào file token.txt") from exc
             if attempt < max_attempts:
                 time.sleep(0.3 * attempt)
 

@@ -3,16 +3,33 @@ import sys, io, logging
 from pathlib import Path
 from logging.handlers import RotatingFileHandler
 
-# ── Fix Windows console ───────────────────────────────────────────────────────
+# ── Fix Windows console & Global Logging ────────────────────────────────────────
+LOG_FILE   = Path(__file__).resolve().parent.parent / "log.txt"
+
+class GlobalDualLogger(io.TextIOWrapper):
+    def __init__(self, buffer, encoding, errors):
+        super().__init__(buffer, encoding=encoding, errors=errors)
+        self.terminal = sys.__stdout__
+        # Create/Append to log.txt globally
+        self.log_file = open(LOG_FILE, "a", encoding="utf-8")
+        
+    def write(self, message):
+        self.terminal.write(message)
+        self.log_file.write(message)
+        self.log_file.flush()
+        
+    def flush(self):
+        self.terminal.flush()
+        self.log_file.flush()
+
 if sys.platform == "win32":
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+    sys.stdout = GlobalDualLogger(sys.stdout.buffer, "utf-8", "replace")
+    sys.stderr = GlobalDualLogger(sys.stderr.buffer, "utf-8", "replace")
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 ROOT_DIR   = Path(__file__).resolve().parent.parent
 APK_PATH   = ROOT_DIR / "MTC.apk"
 OUTPUT_DIR = ROOT_DIR / "downloads"
-LOG_FILE   = ROOT_DIR / "mtc.log"
 
 # ── MTC App ───────────────────────────────────────────────────────────────────
 PACKAGE     = "com.novelfever.app.android"
