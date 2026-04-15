@@ -49,3 +49,13 @@ extract/
 *.apk
 backup.ab
 mtc_apk_extracted/
+
+# Ignore mitmproxy traffic files
+*.flow
+*.mitm
+
+# Ignore temporary analysis files
+analyze_structure.py
+brute_force_*.py
+check_flows.py
+clean_decode.py
