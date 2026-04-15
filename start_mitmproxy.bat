@@ -18,4 +18,11 @@ echo Press Ctrl+C to stop
 echo ========================================
 echo.
 
-mitmweb --listen-host 0.0.0.0 --listen-port 8080 --web-host 127.0.0.1 --web-port 8081
+set "PYTHON_EXE=C:\Python314\python.exe"
+set "MITMWEB_EXE=%APPDATA%\Python\Python314\Scripts\mitmweb.exe"
+
+if exist "%MITMWEB_EXE%" (
+    "%MITMWEB_EXE%" --listen-host 0.0.0.0 --listen-port 8080 --web-host 127.0.0.1 --web-port 8081
+) else (
+    "%PYTHON_EXE%" -m mitmproxy.tools.main web --listen-host 0.0.0.0 --listen-port 8080 --web-host 127.0.0.1 --web-port 8081
+)
