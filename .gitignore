@@ -63,3 +63,4 @@ clean_decode.py
 # Dart snapshot analysis
 dart_snapshot.bin
 dart_snapshot_strings.txt
+mtc_extracted\
