@@ -44,6 +44,7 @@ test_api_alternatives.py
 test_chapter_encryption.py
 downloads/
 extract/
+mtc_extracted/
 
 # APK
 *.apk
