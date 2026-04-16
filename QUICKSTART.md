@@ -1,5 +1,12 @@
 # HƯỚNG DẪN SỬ DỤNG NHANH
 
+## ⚠️ Lưu ý quan trọng
+
+**Thư mục `mtc_extracted/`**:
+- Nội dung APK đã giải nén (chỉ để tham khảo)
+- **KHÔNG được sửa đổi** bất kỳ file nào
+- Đã được thêm vào `.gitignore`
+
 ## Bước 1: Cài đặt
 
 ### Windows:

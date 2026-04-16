@@ -1,5 +1,13 @@
 # MTC Downloader - Công cụ tải truyện hàng loạt
 
+## ⚠️ Lưu ý quan trọng
+
+**Thư mục `mtc_extracted/`**: 
+- Đây là nội dung APK đã được giải nén để phân tích
+- **KHÔNG được sửa đổi** bất kỳ file nào trong thư mục này
+- Thư mục này đã được thêm vào `.gitignore` (không commit lên Git)
+- Chỉ dùng để tham khảo cấu trúc APK và tìm API endpoints
+
 ## Phân tích từ MTC.apk
 
 ### API Endpoints đã tìm được:
