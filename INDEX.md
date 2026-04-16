@@ -34,9 +34,11 @@
 
 | Thư mục | Mô tả |
 |---------|-------|
-| `mtc_extracted/` | Nội dung APK đã giải nén |
+| `mtc_extracted/` | ⚠️ Nội dung APK đã giải nén - **KHÔNG SỬA ĐỔI** - Đã thêm vào `.gitignore` |
 | `downloads/` | Truyện đã tải (tự động tạo) |
 | `test_downloads/` | Test downloads (tự động tạo) |
+
+**⚠️ Lưu ý**: Thư mục `mtc_extracted/` chỉ dùng để tham khảo cấu trúc APK. Không được sửa đổi bất kỳ file nào trong đó.
 
 ## 🚀 Bắt đầu nhanh
 
