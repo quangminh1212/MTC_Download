@@ -63,4 +63,6 @@ clean_decode.py
 # Dart snapshot analysis
 dart_snapshot.bin
 dart_snapshot_strings.txt
-mtc_extracted\mtc_extracted/
+
+# MTC extracted APK content (read-only reference)
+mtc_extracted/
