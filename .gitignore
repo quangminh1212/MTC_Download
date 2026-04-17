@@ -44,7 +44,6 @@ test_api_alternatives.py
 test_chapter_encryption.py
 downloads/
 extract/
-mtc_extracted/
 
 # APK
 *.apk
@@ -60,3 +59,7 @@ analyze_structure.py
 brute_force_*.py
 check_flows.py
 clean_decode.py
+
+
+# MTC extracted APK content (read-only reference)
+mtc_extracted/
