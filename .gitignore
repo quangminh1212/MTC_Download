@@ -66,3 +66,16 @@ dart_snapshot_strings.txt
 
 # MTC extracted APK content (read-only reference)
 mtc_extracted/
+
+# Local downloaded/exported data
+downloads_test/
+
+# Local API debug artifacts
+api_response.json
+api_test.json
+book_*.json
+chapter_*.json
+chapters_*.json
+run_test*.py
+test_v*.py
+test_api.py
