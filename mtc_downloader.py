@@ -31,6 +31,8 @@ class MTCDownloader:
 
     def get_books(self, limit=100, page=1, **filters) -> Optional[Dict]:
         """Lấy danh sách truyện"""
+        if limit < 5:
+            limit = 5
         url = f"{self.base_url}/books"
         params = {"limit": limit, "page": page, **filters}
 
@@ -58,7 +60,7 @@ class MTCDownloader:
         """Lấy danh sách chương của truyện"""
         url = f"{self.base_url}/chapters"
         params = {
-            "book_id": book_id,
+            "filter[book_id]": book_id,
             "page": page,
             "limit": limit
         }
@@ -97,7 +99,7 @@ class MTCDownloader:
 
         book_data = book_info.get("data", {})
         book_name = book_data.get("name", f"book_{book_id}")
-        chapter_count = book_data.get("chapter_count", 0)
+        chapter_count = book_data.get("chapter_count") or book_data.get("latest_index", 0)
 
         print(f"📖 Tên truyện: {book_name}")
         print(f"📊 Tổng số chương: {chapter_count}")
