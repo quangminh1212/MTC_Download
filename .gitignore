@@ -70,6 +70,12 @@ mtc_extracted/
 # Local downloaded/exported data
 downloads_test/
 
+# Runtime artifacts from local download/audit runs
+logs/
+bookmarked_downloads/
+thuong_sinh_lono_work/
+*.out.txt
+
 # Local API debug artifacts
 api_response.json
 api_test.json
