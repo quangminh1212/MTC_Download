@@ -5,7 +5,7 @@ from pathlib import Path
 import requests
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
-from download_completed_to_mtc import chapter_filename
+from download_completed_to_mtc import chapter_filename, safe_book_dir_name, write_chapter
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -32,9 +32,10 @@ DELAY=0.15
 PAYLOAD_RE = re.compile(r'^[A-Za-z0-9+/=]+$')
 TAG_RE = re.compile(r'<[^>]+>')
 WS_RE = re.compile(r'[ \t\r\f\v]+')
-INVALID='<>:"/\\|?*[]()+'
 CONTROL_RE = re.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f]')
 CHAPTER_LINE_RE = re.compile(r'^\s*(?:ch\S{0,8})\s*\d+\s*[:.\-–—]?', re.I)
+ENCRYPTED_MARKER_RE = re.compile(r'eyJpdiI6|"iv":"|"value":"')
+CHAPTER_FILE_RE = re.compile(r'^Chương\s+(\d+)\b.*\.txt$', re.I)
 
 def b64d(data):
     if isinstance(data, str):
@@ -154,13 +155,27 @@ def strip_corrupted_title_prefix(body: str, title: str) -> str:
     return body_work.strip()
 
 def safe(name:str)->str:
-    if not name:
-        return 'unknown'
-    for c in INVALID:
-        name=name.replace(c,' ')
-    name=re.sub(r'[-–—]+',' ',name)
-    name=re.sub(r'\s+',' ',name).strip().rstrip('.')
-    return name[:180] or 'unknown'
+    return safe_book_dir_name(name or 'unknown')
+
+def cleanup_same_index_files(folder: Path, chapter_index: int, keep: Path) -> None:
+    for path in folder.glob('*.txt'):
+        if path == keep:
+            continue
+        match = CHAPTER_FILE_RE.match(path.name)
+        if not match:
+            continue
+        if int(match.group(1)) != int(chapter_index):
+            continue
+        if keep.exists() and keep.stat().st_size >= path.stat().st_size:
+            path.unlink(missing_ok=True)
+
+def validate_chapter_body(body: str) -> str:
+    text = str(body or '').strip()
+    if not text:
+        raise ValueError('empty chapter body')
+    if ENCRYPTED_MARKER_RE.search(text):
+        raise ValueError('encrypted payload remains after decode')
+    return text
 
 def fetch_all_chapters(session: requests.Session):
     rows=[]
@@ -198,30 +213,53 @@ else:
 folder=ROOT/safe(BOOK_NAME)
 folder.mkdir(parents=True, exist_ok=True)
 
+book_detail = s.get(BASE+f'/books/{BOOK_ID}', timeout=30)
+book_detail.encoding='utf-8'
+book_detail.raise_for_status()
+(folder/'info.json').write_text(
+    json.dumps(book_detail.json().get('data', {}), ensure_ascii=False, indent=2),
+    encoding='utf-8',
+)
+
 chapters=fetch_all_chapters(s)
 (folder/'chapters_manifest.json').write_text(json.dumps(chapters, ensure_ascii=False, indent=2), encoding='utf-8')
 print('chapters', len(chapters), flush=True)
+failed = []
 for idx,ch in enumerate(chapters,1):
-    cid=ch.get('id')
-    title=(ch.get('name') or f'Chương {idx}').strip()
-    out=folder/chapter_filename(ch, idx)
-    if out.exists() and out.stat().st_size > 20:
+    try:
+        cid=ch.get('id')
+        title=(ch.get('name') or f'Chương {idx}').strip()
+        out=folder/chapter_filename(ch, idx)
+        cleanup_same_index_files(folder, idx, out)
+        if out.exists() and out.stat().st_size > 200:
+            if idx%25==0 or idx==len(chapters):
+                print(f'progress {idx}/{len(chapters)} skip-existing', flush=True)
+            continue
+        r=s.get(BASE+f'/chapters/{cid}', timeout=30)
+        r.encoding='utf-8'
+        r.raise_for_status()
+        data=r.json().get('data',{})
+        cname=(data.get('name') or title).strip()
+        body=clean_text(maybe_decrypt(data.get('content') or ''))
+        body=strip_leading_duplicate_title(body, idx)
+        body=strip_corrupted_title_prefix(body, cname)
+        body=validate_chapter_body(body)
+        write_chapter(out, BOOK_NAME, out.stem, body)
+        cleanup_same_index_files(folder, idx, out)
+        if idx<=3:
+            print('sample_file', out.name)
+            print(body[:300].replace('\n',' '))
         if idx%25==0 or idx==len(chapters):
-            print(f'progress {idx}/{len(chapters)} skip-existing', flush=True)
-        continue
-    r=s.get(BASE+f'/chapters/{cid}', timeout=30)
-    r.encoding='utf-8'
-    r.raise_for_status()
-    data=r.json().get('data',{})
-    cname=(data.get('name') or title).strip()
-    body=clean_text(maybe_decrypt(data.get('content') or ''))
-    body=strip_leading_duplicate_title(body, idx)
-    body=strip_corrupted_title_prefix(body, cname)
-    out.write_text(f"{cname}\n\n{body}\n", encoding='utf-8')
-    if idx<=3:
-        print('sample_file', out.name)
-        print(body[:300].replace('\n',' '))
-    if idx%25==0 or idx==len(chapters):
-        print(f'progress {idx}/{len(chapters)}', flush=True)
+            print(f'progress {idx}/{len(chapters)}', flush=True)
+    except Exception as exc:
+        failed.append({'index': idx, 'chapter_id': ch.get('id'), 'name': ch.get('name'), 'error': str(exc)[:300]})
+        print(f'chapter_error {idx}/{len(chapters)} id={ch.get("id")} error={exc}', flush=True)
     time.sleep(DELAY)
+
+if failed:
+    print(f'done_with_errors {folder} failed={len(failed)}', flush=True)
+    for row in failed[:20]:
+        print(json.dumps(row, ensure_ascii=False), flush=True)
+    raise SystemExit(2)
+
 print('done', folder, flush=True)
