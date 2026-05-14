@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import json
-import re
 import subprocess
 import sys
 import time
 from pathlib import Path
+from download_completed_to_mtc import safe_book_dir_name
 
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -43,21 +43,15 @@ if STATE_PATH.exists():
         pass
 seen_done = {str(row.get('id')) for row in state.get('books', []) if row.get('status') == 'complete'}
 
-INVALID = '<>:"/\\|?*[]()+'
-
 def safe(name: str) -> str:
     if not name:
         return 'unknown'
-    for ch in INVALID:
-        name = name.replace(ch, ' ')
-    name = re.sub(r'[-–—]+', ' ', name)
-    name = re.sub(r'\s+', ' ', name).strip().rstrip('.')
-    return name[:180] or 'unknown'
+    return safe_book_dir_name(name)
 
 def txt_count(folder: Path) -> int:
     if not folder.exists():
         return 0
-    return sum(1 for p in folder.glob('*.txt') if p.is_file() and p.stat().st_size > 20)
+    return sum(1 for p in folder.glob('*.txt') if p.is_file() and p.stat().st_size > 200)
 
 for index, book in enumerate(books, 1):
     book_id = str(book['id'])
