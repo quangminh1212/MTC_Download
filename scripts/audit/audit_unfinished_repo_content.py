@@ -122,6 +122,7 @@ def audit_folder(folder: Path) -> dict:
         'empty_body_files': empty_body[:50],
         'mojibake_sample_count': len(mojibake),
         'mojibake_samples': mojibake[:20],
+        'mojibake_indices': sorted({idx for idx in (parse_chapter_index(Path(name)) for name in mojibake) if idx is not None})[:100],
     }
 
 
