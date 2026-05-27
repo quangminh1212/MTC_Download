@@ -82,3 +82,9 @@ chapters_*.json
 run_test*.py
 test_v*.py
 test_api.py
+
+# Local temporary/worktree artifacts
+tmp/
+archives/
+.claude/
+
