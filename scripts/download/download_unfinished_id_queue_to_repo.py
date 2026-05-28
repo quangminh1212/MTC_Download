@@ -162,30 +162,41 @@ def download_one_chapter(folder: Path, chapter: dict, seq: int) -> tuple[int, bo
 
 
 def commit_folder(folder: Path) -> tuple[bool, str]:
-    add = subprocess.run(
-        ["git", "add", "--", folder.name],
-        cwd=str(ROOT),
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-    )
-    if add.returncode != 0:
-        return False, add.stderr.strip()
-    commit = subprocess.run(
-        ["git", "commit", "-m", folder.name],
-        cwd=str(ROOT),
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-    )
-    output = (commit.stdout + commit.stderr).strip()
-    if commit.returncode == 0:
-        return True, output
-    if "nothing to commit" in output:
-        return True, "nothing to commit"
-    return False, output
+    last_output = ""
+    for attempt in range(1, 6):
+        add = subprocess.run(
+            ["git", "add", "--", folder.name],
+            cwd=str(ROOT),
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+        if add.returncode != 0:
+            last_output = add.stderr.strip() or add.stdout.strip()
+            if "index.lock" in last_output and attempt < 6:
+                time.sleep(0.5 * attempt)
+                continue
+            return False, last_output
+        commit = subprocess.run(
+            ["git", "commit", "-m", folder.name],
+            cwd=str(ROOT),
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
+        output = (commit.stdout + commit.stderr).strip()
+        if commit.returncode == 0:
+            return True, output
+        if "nothing to commit" in output:
+            return True, "nothing to commit"
+        last_output = output
+        if "index.lock" in output and attempt < 6:
+            time.sleep(0.5 * attempt)
+            continue
+        return False, output
+    return False, last_output
 
 
 def process_book(book: dict, chapter_workers: int, batch_size: int) -> dict:
