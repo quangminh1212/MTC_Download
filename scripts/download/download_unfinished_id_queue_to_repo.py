@@ -28,6 +28,7 @@ if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 ROOT = Path(r"C:\Dev\MTC_Continune")
+COMMIT_LOCK = ROOT / ".codex_commit.lock"
 LOG_DIR = Path(r"C:\Dev\MTC_Download\logs")
 QUEUE = LOG_DIR / "all_id_unfinished_missing_repo.json"
 STATE = LOG_DIR / "download_unfinished_id_queue_state.json"
@@ -163,40 +164,65 @@ def download_one_chapter(folder: Path, chapter: dict, seq: int) -> tuple[int, bo
 
 def commit_folder(folder: Path) -> tuple[bool, str]:
     last_output = ""
-    for attempt in range(1, 6):
-        add = subprocess.run(
-            ["git", "add", "--", folder.name],
-            cwd=str(ROOT),
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-        )
-        if add.returncode != 0:
-            last_output = add.stderr.strip() or add.stdout.strip()
-            if "index.lock" in last_output and attempt < 6:
+    lock_acquired = False
+    for lock_attempt in range(1, 121):
+        try:
+            fd = os.open(str(COMMIT_LOCK), os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            os.write(fd, str(os.getpid()).encode('utf-8', errors='ignore'))
+            os.close(fd)
+            lock_acquired = True
+            break
+        except FileExistsError:
+            try:
+                age = time.time() - COMMIT_LOCK.stat().st_mtime
+                if age > 600:
+                    COMMIT_LOCK.unlink(missing_ok=True)
+                    continue
+            except Exception:
+                pass
+            time.sleep(0.25)
+    if not lock_acquired:
+        return False, "commit lock timeout"
+    try:
+        for attempt in range(1, 6):
+            add = subprocess.run(
+                ["git", "add", "--", folder.name],
+                cwd=str(ROOT),
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+            )
+            if add.returncode != 0:
+                last_output = add.stderr.strip() or add.stdout.strip()
+                if "index.lock" in last_output and attempt < 6:
+                    time.sleep(0.5 * attempt)
+                    continue
+                return False, last_output
+            commit = subprocess.run(
+                ["git", "commit", "-m", folder.name],
+                cwd=str(ROOT),
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+            )
+            output = (commit.stdout + commit.stderr).strip()
+            if commit.returncode == 0:
+                return True, output
+            if "nothing to commit" in output:
+                return True, "nothing to commit"
+            last_output = output
+            if "index.lock" in output and attempt < 6:
                 time.sleep(0.5 * attempt)
                 continue
-            return False, last_output
-        commit = subprocess.run(
-            ["git", "commit", "-m", folder.name],
-            cwd=str(ROOT),
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-        )
-        output = (commit.stdout + commit.stderr).strip()
-        if commit.returncode == 0:
-            return True, output
-        if "nothing to commit" in output:
-            return True, "nothing to commit"
-        last_output = output
-        if "index.lock" in output and attempt < 6:
-            time.sleep(0.5 * attempt)
-            continue
-        return False, output
-    return False, last_output
+            return False, output
+        return False, last_output
+    finally:
+        try:
+            COMMIT_LOCK.unlink(missing_ok=True)
+        except Exception:
+            pass
 
 
 def process_book(book: dict, chapter_workers: int, batch_size: int) -> dict:
@@ -249,12 +275,6 @@ def process_book(book: dict, chapter_workers: int, batch_size: int) -> dict:
         "extra_after_count": len(extra_after),
         "status": status,
     }
-    if status == "ok":
-        committed, message = commit_folder(folder)
-        result["committed"] = committed
-        result["commit_message"] = message[:500]
-        if not committed:
-            result["status"] = "commit_failed"
     return result
 
 
