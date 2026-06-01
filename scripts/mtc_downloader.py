@@ -17,6 +17,12 @@ import time
 import os
 from pathlib import Path
 from typing import List, Dict, Optional
+from requests.adapters import HTTPAdapter
+
+DEFAULT_TIMEOUT = float(os.environ.get("MTC_HTTP_TIMEOUT", "30"))
+DEFAULT_RETRIES = int(os.environ.get("MTC_HTTP_RETRIES", "4"))
+DEFAULT_BACKOFF = float(os.environ.get("MTC_HTTP_BACKOFF", "0.75"))
+DEFAULT_POOL = int(os.environ.get("MTC_HTTP_POOL", "128"))
 
 class MTCDownloader:
     def __init__(self):
@@ -28,6 +34,24 @@ class MTCDownloader:
         }
         self.session = requests.Session()
         self.session.headers.update(self.headers)
+        adapter = HTTPAdapter(pool_connections=DEFAULT_POOL, pool_maxsize=DEFAULT_POOL, max_retries=0)
+        self.session.mount("https://", adapter)
+        self.session.mount("http://", adapter)
+
+    def _get_json(self, url: str, *, params: Optional[Dict] = None, label: str = "request") -> Optional[Dict]:
+        last_error = None
+        for attempt in range(1, DEFAULT_RETRIES + 1):
+            try:
+                response = self.session.get(url, params=params, timeout=DEFAULT_TIMEOUT)
+                response.raise_for_status()
+                return response.json()
+            except Exception as e:
+                last_error = e
+                if attempt >= DEFAULT_RETRIES:
+                    break
+                time.sleep(DEFAULT_BACKOFF * attempt)
+        print(f"? L?i khi {label}: {last_error}")
+        return None
 
     def get_books(self, limit=100, page=1, **filters) -> Optional[Dict]:
         """Lấy danh sách truyện"""
@@ -36,25 +60,13 @@ class MTCDownloader:
         url = f"{self.base_url}/books"
         params = {"limit": limit, "page": page, **filters}
 
-        try:
-            response = self.session.get(url, params=params, timeout=10)
-            response.raise_for_status()
-            return response.json()
-        except Exception as e:
-            print(f"❌ Lỗi khi lấy danh sách truyện: {e}")
-            return None
+        return self._get_json(url, params=params, label="l?y danh s?ch truy?n")
 
     def get_book_detail(self, book_id: int) -> Optional[Dict]:
         """Lấy thông tin chi tiết truyện"""
         url = f"{self.base_url}/books/{book_id}"
 
-        try:
-            response = self.session.get(url, timeout=10)
-            response.raise_for_status()
-            return response.json()
-        except Exception as e:
-            print(f"❌ Lỗi khi lấy thông tin truyện {book_id}: {e}")
-            return None
+        return self._get_json(url, label=f"l?y th?ng tin truy?n {book_id}")
 
     def get_chapters(self, book_id: int, page=1, limit=100) -> Optional[Dict]:
         """Lấy danh sách chương của truyện"""
@@ -65,25 +77,13 @@ class MTCDownloader:
             "limit": limit
         }
 
-        try:
-            response = self.session.get(url, params=params, timeout=10)
-            response.raise_for_status()
-            return response.json()
-        except Exception as e:
-            print(f"❌ Lỗi khi lấy danh sách chương: {e}")
-            return None
+        return self._get_json(url, params=params, label="l?y danh s?ch ch??ng")
 
     def get_chapter_content(self, chapter_id: int) -> Optional[Dict]:
         """Lấy nội dung chương"""
         url = f"{self.base_url}/chapters/{chapter_id}"
 
-        try:
-            response = self.session.get(url, timeout=10)
-            response.raise_for_status()
-            return response.json()
-        except Exception as e:
-            print(f"❌ Lỗi khi tải chương {chapter_id}: {e}")
-            return None
+        return self._get_json(url, label=f"t?i ch??ng {chapter_id}")
 
     def download_book(self, book_id: int, output_dir="downloads", delay=1.0):
         """Tải toàn bộ truyện"""

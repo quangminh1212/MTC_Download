@@ -266,6 +266,8 @@ def main() -> int:
     parser.add_argument("--max-seconds", type=int, default=None)
     parser.add_argument("--min-chapters", type=int, default=1)
     parser.add_argument("--max-chapters", type=int, default=None)
+    parser.add_argument("--shard-index", type=int, default=0)
+    parser.add_argument("--shard-count", type=int, default=1)
     args = parser.parse_args()
 
     queue = json.loads(QUEUE.read_text(encoding="utf-8"))
@@ -273,11 +275,21 @@ def main() -> int:
     if args.max_chapters is not None:
         queue = [item for item in queue if int(item.get("chapter_count") or 0) <= args.max_chapters]
     queue.sort(key=lambda item: (int(item.get("chapter_count") or 0), int(item["id"])))
+    shard_count = max(1, int(args.shard_count))
+    shard_index = int(args.shard_index)
+    if shard_index < 0 or shard_index >= shard_count:
+        raise SystemExit(f"Invalid shard settings: shard_index={shard_index} shard_count={shard_count}")
+    if shard_count > 1:
+        queue = [item for pos, item in enumerate(queue) if pos % shard_count == shard_index]
     state = load_state()
     done_ids = {int(item["id"]) for item in state.get("done", [])}
     started = time.time()
     processed = 0
-    print(f"queue={len(queue)} done={len(done_ids)} chapter_workers={args.chapter_workers}", flush=True)
+    print(
+        f"queue={len(queue)} done={len(done_ids)} chapter_workers={args.chapter_workers} "
+        f"shard={shard_index + 1}/{shard_count}",
+        flush=True,
+    )
     for seq, book in enumerate(queue, 1):
         book_id = int(book["id"])
         if book_id in done_ids:
