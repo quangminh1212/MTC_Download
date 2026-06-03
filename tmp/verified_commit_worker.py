@@ -1,23 +1,20 @@
 ﻿from __future__ import annotations
 
 import os
-import shutil
 import subprocess
 import sys
 import time
 from pathlib import Path
 
 ROOT = Path(r'C:\Dev\MTC_Continune')
-COMMIT_ROOT = Path(r'C:\Dev\MTC_Continune_CommitWork')
+BARE_ROOT = Path(r'C:\Dev\MTC_Continune_CommitBare.git')
 LOG = Path(r'C:\Dev\MTC_Download\logs\verified_commit_worker.log')
 WORKER_LOCK = Path(r'C:\Dev\MTC_Download\tmp\verified_commit_worker.singleton.lock')
 SKIP_CACHE: dict[str, tuple[float, str, float]] = {}
-PUSH_EVERY_COMMITS = 1
 INCOMPLETE_RECHECK_SECONDS = 600
 IGNORE = {'.git', '.claude', '.vscode', '_bad_quarantine', 'mtc_done'}
 GIT_TIMEOUT_SECONDS = 180
 PUSH_TIMEOUT_SECONDS = 300
-COPY_TIMEOUT_SECONDS = 600
 BRANCH = 'main'
 
 
@@ -33,91 +30,125 @@ def log(message: str) -> None:
         f.write(line + '\n')
 
 
-def run(cmd: list[str], cwd: Path | None = None, timeout: int = GIT_TIMEOUT_SECONDS) -> subprocess.CompletedProcess:
+def run(cmd: list[str], timeout: int = GIT_TIMEOUT_SECONDS, input_data: bytes | None = None) -> subprocess.CompletedProcess:
     env = os.environ.copy()
     env.setdefault('GIT_OPTIONAL_LOCKS', '0')
     env.setdefault('PYTHONUTF8', '1')
     try:
         return subprocess.run(
             cmd,
-            cwd=str(cwd) if cwd else None,
+            input=input_data,
             capture_output=True,
-            text=True,
-            encoding='utf-8',
-            errors='replace',
             timeout=timeout,
             env=env,
         )
     except subprocess.TimeoutExpired as exc:
-        stdout = exc.stdout if isinstance(exc.stdout, str) else ''
-        stderr = exc.stderr if isinstance(exc.stderr, str) else ''
-        log(f'timeout cmd={cmd!r} cwd={cwd} err={(stdout + stderr).strip()[:500]}')
-        return subprocess.CompletedProcess(cmd, 124, stdout or '', stderr or 'timeout')
+        out = (exc.stdout or b'') + (exc.stderr or b'')
+        log(f'timeout cmd={cmd!r} err={out.decode("utf-8", "replace")[:500]}')
+        return subprocess.CompletedProcess(cmd, 124, exc.stdout or b'', exc.stderr or b'timeout')
 
 
-def git(repo: Path, args: list[str], timeout: int = GIT_TIMEOUT_SECONDS) -> subprocess.CompletedProcess:
-    return run(['git', '-C', str(repo), *args], timeout=timeout)
+def text(result: subprocess.CompletedProcess) -> str:
+    return ((result.stdout or b'') + (result.stderr or b'')).decode('utf-8', 'replace')
+
+
+def git(args: list[str], timeout: int = GIT_TIMEOUT_SECONDS, input_data: bytes | None = None) -> subprocess.CompletedProcess:
+    return run(['git', '--git-dir', str(BARE_ROOT), *args], timeout=timeout, input_data=input_data)
 
 
 def source_origin() -> str:
-    result = git(ROOT, ['config', '--get', 'remote.origin.url'], timeout=30)
-    origin = (result.stdout or '').strip()
+    result = run(['git', '-C', str(ROOT), 'config', '--get', 'remote.origin.url'], timeout=30)
+    origin = (result.stdout or b'').decode('utf-8', 'replace').strip()
     if result.returncode != 0 or not origin:
-        raise RuntimeError(f'cannot read source origin: {(result.stdout + result.stderr).strip()}')
+        raise RuntimeError(f'cannot read source origin: {text(result)}')
     return origin
 
 
-def ensure_commit_clone() -> bool:
-    if (COMMIT_ROOT / '.git').exists():
+def ensure_bare_repo() -> bool:
+    if (BARE_ROOT / 'HEAD').exists():
         return True
-    if COMMIT_ROOT.exists() and any(COMMIT_ROOT.iterdir()):
-        log(f'commit_clone_dirty_path path={COMMIT_ROOT}; remove it manually or choose empty path')
+    if BARE_ROOT.exists() and any(BARE_ROOT.iterdir()):
+        log(f'bare_repo_dirty_path path={BARE_ROOT}')
         return False
-    COMMIT_ROOT.parent.mkdir(parents=True, exist_ok=True)
+    BARE_ROOT.parent.mkdir(parents=True, exist_ok=True)
     origin = source_origin()
-    log(f'clone_commit_worktree origin={origin} path={COMMIT_ROOT}')
-    clone = run(['git', 'clone', '--filter=blob:none', '--sparse', '--branch', BRANCH, origin, str(COMMIT_ROOT)], timeout=1800)
+    log(f'clone_bare_commit_repo origin={origin} path={BARE_ROOT}')
+    clone = run(['git', 'clone', '--bare', '--filter=blob:none', origin, str(BARE_ROOT)], timeout=1800)
     if clone.returncode != 0:
-        log(f'clone_failed err={(clone.stdout + clone.stderr).strip()[:1000]}')
+        log(f'clone_bare_failed err={text(clone)[:1000]}')
         return False
-    git(COMMIT_ROOT, ['config', 'core.sparseCheckout', 'true'], timeout=30)
-    git(COMMIT_ROOT, ['config', 'core.untrackedCache', 'true'], timeout=30)
-    git(COMMIT_ROOT, ['config', 'core.fsmonitor', 'true'], timeout=30)
     return True
 
 
-def refresh_commit_clone(folder_name: str) -> bool:
-    if not ensure_commit_clone():
-        return False
-    fetch = git(COMMIT_ROOT, ['fetch', 'origin', BRANCH, '--depth=1'], timeout=300)
+def refresh_bare_repo() -> str | None:
+    if not ensure_bare_repo():
+        return None
+    fetch = git(['fetch', 'origin', BRANCH], timeout=300)
     if fetch.returncode != 0:
-        log(f'fetch_failed err={(fetch.stdout + fetch.stderr).strip()[:800]}')
-        return False
-    reset = git(COMMIT_ROOT, ['reset', '--hard', f'origin/{BRANCH}'], timeout=300)
-    if reset.returncode != 0:
-        log(f'reset_failed err={(reset.stdout + reset.stderr).strip()[:800]}')
-        return False
-    sparse = git(COMMIT_ROOT, ['sparse-checkout', 'set', '--', folder_name], timeout=300)
-    if sparse.returncode != 0:
-        log(f'sparse_failed folder={folder_name} err={(sparse.stdout + sparse.stderr).strip()[:800]}')
-        return False
-    clean = git(COMMIT_ROOT, ['clean', '-fd', '--', folder_name], timeout=120)
-    if clean.returncode != 0:
-        log(f'clean_failed folder={folder_name} err={(clean.stdout + clean.stderr).strip()[:500]}')
-        return False
-    return True
+        log(f'fetch_failed err={text(fetch)[:1000]}')
+        return None
+    parent = git(['rev-parse', 'FETCH_HEAD'], timeout=30)
+    if parent.returncode != 0:
+        log(f'rev_parse_failed err={text(parent)[:500]}')
+        return None
+    return (parent.stdout or b'').decode('ascii', 'replace').strip()
 
 
-def copy_folder_to_commit_clone(folder: Path) -> bool:
-    destination = COMMIT_ROOT / folder.name
-    if destination.exists():
-        shutil.rmtree(destination)
-    cmd = ['robocopy', str(folder), str(destination), '/MIR', '/R:2', '/W:1', '/NFL', '/NDL', '/NJH', '/NJS', '/NP', '/XD', '.git']
-    result = run(cmd, timeout=COPY_TIMEOUT_SECONDS)
-    if result.returncode >= 8:
-        log(f'copy_failed folder={folder.name} code={result.returncode} err={(result.stdout + result.stderr).strip()[:800]}')
-        return False
-    return True
+def mktree(entries: list[tuple[str, str, str, str]]) -> str | None:
+    entries.sort(key=lambda item: item[3].encode('utf-8'))
+    payload = b''.join(f'{mode} {kind} {oid}\t{name}'.encode('utf-8') + b'\0' for mode, kind, oid, name in entries)
+    result = git(['mktree', '-z'], input_data=payload)
+    if result.returncode != 0:
+        log(f'mktree_failed err={text(result)[:800]}')
+        return None
+    return (result.stdout or b'').decode('ascii', 'replace').strip()
+
+
+def build_tree_for_dir(path: Path) -> str | None:
+    entries: list[tuple[str, str, str, str]] = []
+    try:
+        children = list(os.scandir(path))
+    except OSError as exc:
+        log(f'scandir_failed path={path} err={exc}')
+        return None
+    for child in children:
+        if child.name == '.git':
+            continue
+        child_path = Path(child.path)
+        if child.is_dir(follow_symlinks=False):
+            oid = build_tree_for_dir(child_path)
+            if not oid:
+                return None
+            entries.append(('040000', 'tree', oid, child.name))
+        elif child.is_file(follow_symlinks=False):
+            hashed = git(['hash-object', '-w', '--', str(child_path)], timeout=60)
+            if hashed.returncode != 0:
+                log(f'hash_failed file={child_path} err={text(hashed)[:500]}')
+                return None
+            oid = (hashed.stdout or b'').decode('ascii', 'replace').strip()
+            entries.append(('100644', 'blob', oid, child.name))
+    return mktree(entries)
+
+
+def parse_ls_tree_z(data: bytes) -> list[tuple[str, str, str, str]]:
+    entries: list[tuple[str, str, str, str]] = []
+    for record in data.split(b'\0'):
+        if not record:
+            continue
+        meta, name = record.split(b'\t', 1)
+        mode, kind, oid = meta.decode('ascii').split(' ', 2)
+        entries.append((mode, kind, oid, name.decode('utf-8', 'surrogateescape')))
+    return entries
+
+
+def build_root_tree(parent: str, folder_name: str, folder_tree: str) -> str | None:
+    listed = git(['ls-tree', '-z', f'{parent}^{{tree}}'], timeout=120)
+    if listed.returncode != 0:
+        log(f'ls_root_failed err={text(listed)[:800]}')
+        return None
+    entries = [entry for entry in parse_ls_tree_z(listed.stdout or b'') if entry[3] != folder_name]
+    entries.append(('040000', 'tree', folder_tree, folder_name))
+    return mktree(entries)
 
 
 def candidate_folders() -> list[Path]:
@@ -138,7 +169,7 @@ def candidate_folders() -> list[Path]:
             if cached and cached[0] == mtime and now - cached[2] < INCOMPLETE_RECHECK_SECONDS:
                 continue
             folders.append((mtime, folder))
-    folders.sort(key=lambda item: item[0])
+    folders.sort(key=lambda item: item[0], reverse=True)
     return [folder for _, folder in folders]
 
 
@@ -150,49 +181,47 @@ def commit_folder(folder: Path) -> bool:
         return False
     SKIP_CACHE.pop(folder.name, None)
 
-    if not refresh_commit_clone(folder.name):
+    parent = refresh_bare_repo()
+    if not parent:
         return False
-    if not copy_folder_to_commit_clone(folder):
+    folder_tree = build_tree_for_dir(folder)
+    if not folder_tree:
+        return False
+    current = git(['rev-parse', f'refs/heads/{BRANCH}'], timeout=30)
+    if current.returncode == 0:
+        current_head = (current.stdout or b'').decode('ascii', 'replace').strip()
+        if current_head != parent:
+            update_base = git(['update-ref', f'refs/heads/{BRANCH}', parent], timeout=60)
+            if update_base.returncode != 0:
+                log(f'update_base_ref_failed err={text(update_base)[:800]}')
+                return False
+    root_tree = build_root_tree(parent, folder.name, folder_tree)
+    if not root_tree:
         return False
 
-    add = git(COMMIT_ROOT, ['add', '--', folder.name], timeout=GIT_TIMEOUT_SECONDS)
-    if add.returncode != 0:
-        log(f'add_failed folder={folder.name} err={(add.stdout + add.stderr).strip()[:800]}')
-        return False
-    diff = git(COMMIT_ROOT, ['diff', '--cached', '--quiet', '--', folder.name], timeout=GIT_TIMEOUT_SECONDS)
-    if diff.returncode == 0:
+    same = git(['diff-tree', '--quiet', parent, root_tree, '--', folder.name], timeout=120)
+    if same.returncode == 0:
         SKIP_CACHE[folder.name] = (mtime, 'no_changes', now)
         log(f'nothing_to_commit folder={folder.name}')
         return False
-    if diff.returncode != 1:
-        log(f'diff_cached_failed folder={folder.name} err={(diff.stdout + diff.stderr).strip()[:800]}')
+    if same.returncode not in (1,):
+        log(f'diff_tree_failed folder={folder.name} err={text(same)[:800]}')
         return False
 
-    commit = git(COMMIT_ROOT, ['commit', '--untracked-files=no', '-m', folder.name, '--', folder.name], timeout=GIT_TIMEOUT_SECONDS)
-    out = (commit.stdout + commit.stderr).strip()
+    commit = git(['commit-tree', root_tree, '-p', parent, '-m', folder.name], timeout=120)
     if commit.returncode != 0:
-        if 'nothing to commit' in out or 'nothing added to commit' in out or 'no changes added to commit' in out:
-            SKIP_CACHE[folder.name] = (mtime, 'no_changes', now)
-            log(f'nothing_to_commit folder={folder.name}')
-            return False
-        log(f'commit_failed folder={folder.name} err={out[:1000]}')
+        log(f'commit_tree_failed folder={folder.name} err={text(commit)[:1000]}')
         return False
-
-    push = git(COMMIT_ROOT, ['push', 'origin', BRANCH], timeout=PUSH_TIMEOUT_SECONDS)
+    commit_id = (commit.stdout or b'').decode('ascii', 'replace').strip()
+    update = git(['update-ref', f'refs/heads/{BRANCH}', commit_id], timeout=60)
+    if update.returncode != 0:
+        log(f'update_ref_failed folder={folder.name} err={text(update)[:800]}')
+        return False
+    push = git(['push', 'origin', f'refs/heads/{BRANCH}:refs/heads/{BRANCH}'], timeout=PUSH_TIMEOUT_SECONDS)
     if push.returncode == 0:
-        log(f'committed_pushed folder={folder.name}')
+        log(f'committed_pushed folder={folder.name} commit={commit_id[:12]}')
         return True
-
-    log(f'push_failed folder={folder.name} err={(push.stdout + push.stderr).strip()[:1000]}')
-    recover = git(COMMIT_ROOT, ['pull', '--rebase', 'origin', BRANCH], timeout=300)
-    if recover.returncode == 0:
-        retry = git(COMMIT_ROOT, ['push', 'origin', BRANCH], timeout=PUSH_TIMEOUT_SECONDS)
-        if retry.returncode == 0:
-            log(f'committed_pushed_after_rebase folder={folder.name}')
-            return True
-        log(f'push_retry_failed folder={folder.name} err={(retry.stdout + retry.stderr).strip()[:1000]}')
-    else:
-        log(f'pull_rebase_failed folder={folder.name} err={(recover.stdout + recover.stderr).strip()[:1000]}')
+    log(f'push_failed folder={folder.name} err={text(push)[:1000]}')
     return False
 
 
@@ -212,7 +241,7 @@ def main() -> None:
         log('another verified_commit_worker is already running; exit')
         return
     try:
-        ensure_commit_clone()
+        ensure_bare_repo()
         while True:
             folders = candidate_folders()
             if not folders:
@@ -233,3 +262,5 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
+
