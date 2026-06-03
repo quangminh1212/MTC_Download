@@ -5,12 +5,14 @@ import os
 import re
 import subprocess
 import sys
+import uuid
 import time
 from pathlib import Path
 
 ROOT = Path(r'C:\Dev\MTC_Continune')
 LOG = Path(r'C:\Dev\MTC_Download\logs\verified_commit_worker.log')
 WORKER_LOCK = Path(r'C:\Dev\MTC_Download\tmp\verified_commit_worker.singleton.lock')
+TMP_INDEX_DIR = Path(r'C:\Dev\MTC_Download\tmp\git-indexes')
 SKIP_CACHE: dict[str, tuple[float, str, float]] = {}
 PUSH_EVERY_COMMITS = 1
 PUSH_EVERY_SECONDS = 30
@@ -33,6 +35,13 @@ def log(message: str) -> None:
 
 
 def run_git(args: list[str]) -> subprocess.CompletedProcess:
+    return run_git_with_env(args)
+
+
+def run_git_with_env(args: list[str], extra_env: dict[str, str] | None = None, timeout: int = GIT_TIMEOUT_SECONDS) -> subprocess.CompletedProcess:
+    env = os.environ.copy()
+    if extra_env:
+        env.update(extra_env)
     try:
         return subprocess.run(
             ['git', '-C', str(ROOT), *args],
@@ -40,7 +49,8 @@ def run_git(args: list[str]) -> subprocess.CompletedProcess:
             text=True,
             encoding='utf-8',
             errors='replace',
-            timeout=GIT_TIMEOUT_SECONDS,
+            timeout=timeout,
+            env=env,
         )
     except subprocess.TimeoutExpired as exc:
         stdout = exc.stdout if isinstance(exc.stdout, str) else ''
@@ -64,14 +74,6 @@ def run_git_push() -> subprocess.CompletedProcess:
         stderr = exc.stderr if isinstance(exc.stderr, str) else ''
         log(f'git_push_timeout err={(stdout + stderr).strip()[:500]}')
         return subprocess.CompletedProcess(['git', '-C', str(ROOT), 'push'], 124, stdout or '', stderr or 'timeout')
-
-def folder_has_staged_changes(folder: Path) -> bool:
-    proc = run_git(['diff', '--cached', '--name-only', '--', folder.name])
-    if proc.returncode != 0:
-        log(f'diff_cached_failed folder={folder.name} err={(proc.stdout + proc.stderr).strip()[:500]}')
-        return False
-    return bool(proc.stdout.strip())
-
 
 def candidate_folders() -> list[Path]:
     folders = []
@@ -102,25 +104,59 @@ def commit_folder(folder: Path) -> bool:
     if cached and cached[0] == mtime and now - cached[2] < INCOMPLETE_RECHECK_SECONDS:
         return False
     SKIP_CACHE.pop(folder.name, None)
-    add = run_git(['add', '--', folder.name])
-    if add.returncode != 0:
-        log(f'add_failed folder={folder.name} err={(add.stdout + add.stderr).strip()[:500]}')
-        return False
-    if not folder_has_staged_changes(folder):
-        SKIP_CACHE[folder.name] = (mtime, 'no_changes', now)
-        return False
-    commit = run_git(['commit', '--untracked-files=no', '-m', folder.name, '--', folder.name])
-    out = (commit.stdout + commit.stderr).strip()
-    if commit.returncode == 0:
+    TMP_INDEX_DIR.mkdir(parents=True, exist_ok=True)
+    index_path = TMP_INDEX_DIR / f'{os.getpid()}-{uuid.uuid4().hex}.index'
+    env = {'GIT_INDEX_FILE': str(index_path)}
+    try:
+        head = run_git_with_env(['rev-parse', 'HEAD'], env)
+        if head.returncode != 0:
+            log(f'head_failed folder={folder.name} err={(head.stdout + head.stderr).strip()[:500]}')
+            return False
+        head_sha = head.stdout.strip()
+
+        read_tree = run_git_with_env(['read-tree', head_sha], env)
+        if read_tree.returncode != 0:
+            log(f'read_tree_failed folder={folder.name} err={(read_tree.stdout + read_tree.stderr).strip()[:500]}')
+            return False
+
+        add = run_git_with_env(['add', '--', folder.name], env)
+        if add.returncode != 0:
+            log(f'add_failed folder={folder.name} err={(add.stdout + add.stderr).strip()[:500]}')
+            return False
+
+        new_tree = run_git_with_env(['write-tree'], env)
+        if new_tree.returncode != 0:
+            log(f'write_tree_failed folder={folder.name} err={(new_tree.stdout + new_tree.stderr).strip()[:500]}')
+            return False
+        new_tree_sha = new_tree.stdout.strip()
+
+        head_tree = run_git_with_env(['rev-parse', f'{head_sha}^{{tree}}'], env)
+        if head_tree.returncode != 0:
+            log(f'head_tree_failed folder={folder.name} err={(head_tree.stdout + head_tree.stderr).strip()[:500]}')
+            return False
+        if new_tree_sha == head_tree.stdout.strip():
+            SKIP_CACHE[folder.name] = (mtime, 'no_changes', now)
+            return False
+
+        commit = run_git_with_env(['commit-tree', new_tree_sha, '-p', head_sha, '-m', folder.name], env)
+        if commit.returncode != 0:
+            log(f'commit_tree_failed folder={folder.name} err={(commit.stdout + commit.stderr).strip()[:500]}')
+            return False
+        commit_sha = commit.stdout.strip()
+
+        update_ref = run_git_with_env(['update-ref', 'refs/heads/main', commit_sha, head_sha], env)
+        if update_ref.returncode != 0:
+            log(f'update_ref_failed folder={folder.name} err={(update_ref.stdout + update_ref.stderr).strip()[:500]}')
+            return False
+
         log(f'committed folder={folder.name}')
         return True
-    elif 'nothing to commit' in out or 'nothing added to commit' in out or 'no changes added to commit' in out:
-        SKIP_CACHE[folder.name] = (mtime, 'no_changes', now)
-        log(f'nothing_to_commit folder={folder.name}')
-        return False
-    else:
-        log(f'commit_failed folder={folder.name} err={out[:500]}')
-        return False
+    finally:
+        try:
+            index_path.unlink(missing_ok=True)
+            Path(str(index_path) + '.lock').unlink(missing_ok=True)
+        except Exception:
+            pass
 
 
 def main() -> None:
