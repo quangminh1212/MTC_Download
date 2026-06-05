@@ -1,0 +1,25 @@
+queue=1556 done=6365 chapter_workers=20 shard=4/5
+[787/1556] start id=153127 chapters=363 name=Thần Linh Kỷ Nguyên
+[787/1556] issue id=153127 remote=395 downloaded=0 missing_after=0 failed=0
+[1278/1556] start id=139086 chapters=888 name=Trường Sinh Từ Ngồi Thiền Khôi Lỗi Bắt Đầu
+? L?i khi t?i ch??ng 21611204: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 21611200: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 21645482: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 21645481: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))? L?i khi t?i ch??ng 21645480: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+? L?i khi t?i ch??ng 22358142: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[1278/1556] ok id=139086 remote=901 downloaded=901 missing_after=0 failed=0
+[1279/1556] start id=120367 chapters=890 name=Mau Xuyên Thế Giới Ăn Dưa Tuyến Đầu
+? L?i khi l?y danh s?ch ch??ng: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[1279/1556] no_chapters id=120367 remote=None downloaded=None missing_after=None failed=None
+[1280/1556] start id=125241 chapters=895 name=Như Thế Nào Biến Thành Đường Sông Cua ?!
+? L?i khi t?i ch??ng 17834523: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 17909194: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 17926335: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 17988145: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 17996056: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[1280/1556] ok id=125241 remote=888 downloaded=888 missing_after=0 failed=0
+processed_this_run=4
+done_total=6367
+failed_total=2350
+report=C:\Dev\MTC_Download\logs\download_unfinished_id_queue_report.json

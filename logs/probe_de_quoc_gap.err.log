@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "C:\Dev\MTC_DOWNLOAD\mtc_downloader.py", line 82, in get_chapter_content
+    response.raise_for_status()
+  File "C:\Users\GHC\AppData\Roaming\Python\Python310\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://android.lonoapp.net/api/chapters/14965639
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Dev\MTC_DOWNLOAD\probe_de_quoc_gap.py", line 8, in <module>
+    detail=d.get_chapter_content(cid)
+  File "C:\Dev\MTC_DOWNLOAD\mtc_downloader.py", line 85, in get_chapter_content
+    print(f"\u274c L\u1ed7i khi t\u1ea3i ch\u01b0\u01a1ng {chapter_id}: {e}")
+  File "C:\Program Files\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>

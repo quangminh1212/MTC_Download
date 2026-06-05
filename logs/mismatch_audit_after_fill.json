@@ -1,0 +1,60 @@
+[
+  {
+    "id": 119539,
+    "folder": "Thiên Sư Ta Có Một Thế Giới Khác",
+    "name": "Thiên Sư, Ta Có Một Thế Giới Khác",
+    "chapter_count": 538,
+    "latest_index": 542,
+    "have_unique": 540,
+    "max_present": 542,
+    "manifest_count": 538,
+    "manifest_max": 542,
+    "missing_vs_chapter_count": [],
+    "missing_vs_latest_index": [
+      539,
+      540
+    ],
+    "missing_vs_manifest": []
+  },
+  {
+    "id": 104659,
+    "folder": "Toàn Cầu Cuồng Hoan Đêm Vô Hạn",
+    "name": "Toàn Cầu Cuồng Hoan Đêm [ Vô Hạn ]",
+    "chapter_count": 119,
+    "latest_index": 109,
+    "have_unique": 109,
+    "max_present": 109,
+    "manifest_count": 109,
+    "manifest_max": 109,
+    "missing_vs_chapter_count": [
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119
+    ],
+    "missing_vs_latest_index": [],
+    "missing_vs_manifest": []
+  },
+  {
+    "id": 145433,
+    "folder": "Tứ Hợp Viện Chi Lạnh Nhạt Đời Sống",
+    "name": "Tứ Hợp Viện Chi Lạnh Nhạt Đời Sống",
+    "chapter_count": 1016,
+    "latest_index": 1019,
+    "have_unique": 1018,
+    "max_present": 1019,
+    "manifest_count": 1016,
+    "manifest_max": 1019,
+    "missing_vs_chapter_count": [],
+    "missing_vs_latest_index": [
+      1018
+    ],
+    "missing_vs_manifest": []
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "targets": [
+    {
+      "id": 136576,
+      "name": "Đấu La, Ta Thay Hoắc Vũ Hạo, Làm Thần Vương Trùng Sinh",
+      "folder": "Đấu La Ta Thay Hoắc Vũ Hạo Làm Thần Vương Trùng Sinh",
+      "downloaded": [],
+      "failed": [],
+      "status": "ok"
+    },
+    {
+      "id": 140101,
+      "name": "Thiên Địa Lưu Tiên",
+      "folder": "Thiên Địa Lưu Tiên",
+      "downloaded": [],
+      "failed": [],
+      "status": "ok"
+    },
+    {
+      "id": 140643,
+      "name": "Lãng Nhân: Mỹ Nữ, Mời Tư Vấn",
+      "folder": "Lãng Nhân Mỹ Nữ Mời Tư Vấn",
+      "downloaded": [],
+      "failed": [],
+      "status": "ok"
+    },
+    {
+      "id": 153347,
+      "name": "Chiến Lược Gia Thiên Tài",
+      "folder": "Chiến Lược Gia Thiên Tài",
+      "downloaded": [],
+      "failed": [],
+      "status": "ok"
+    },
+    {
+      "id": 139039,
+      "name": "Đấu La: Khí Vận Chi Nữ? Cơ Duyên? Tất Cả Là Của Ta!",
+      "folder": "Đấu La Khí Vận Chi Nữ Cơ Duyên Tất Cả Là Của Ta",
+      "downloaded": [
+        {
+          "index": 715,
+          "file": "Chương 715 Gặp lại Yên Nhiên và Vân Vận.txt"
+        },
+        {
+          "index": 716,
+          "file": "Chương 716 Dạo phố.txt"
+        },
+        {
+          "index": 717,
+          "file": "Chương 717 Tà bất thắng chính.txt"
+        }
+      ],
+      "failed": [],
+      "status": "ok"
+    },
+    {
+      "id": 146629,
+      "name": "May Mắn Xuyên Vào Vũ Trụ Creepypasta",
+      "folder": "May Mắn Xuyên Vào Vũ Trụ Creepypasta",
+      "downloaded": [],
+      "failed": [],
+      "status": "ok"
+    },
+    {
+      "id": 123401,
+      "name": "Hào Khí Anh Hùng",
+      "folder": "Hào Khí Anh Hùng",
+      "downloaded": [],
+      "failed": [],
+      "status": "ok"
+    },
+    {
+      "id": 113504,
+      "name": "Bánh Xe Vận Mệnh Tại Hogwarts",
+      "folder": "Bánh Xe Vận Mệnh Tại Hogwarts",
+      "downloaded": [],
+      "failed": [],
+      "status": "ok"
+    }
+  ],
+  "summary": {
+    "books": 8,
+    "downloaded": 3,
+    "failed": 0,
+    "skipped": 0
+  }
+}

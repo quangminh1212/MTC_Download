@@ -1,0 +1,35 @@
+book=Sử Dụng Bookhub
+book_id=105233
+out=C:\Dev\MTC\Sử Dụng Bookhub
+chapters_total=13 expected=13
+[1/13] download chapter_id=17463639 file=Chương 1 Bookhub dùng để làm gì.txt
+  OK decrypted=True written=Chương 1 Bookhub dùng để làm gì.txt
+[2/13] download chapter_id=14188350 file=Chương 2 Viết bản thảo.txt
+  OK decrypted=True written=Chương 2 Viết bản thảo.txt
+[3/13] download chapter_id=17463643 file=Chương 3 Soạn đại cương.txt
+  OK decrypted=True written=Chương 3 Soạn đại cương.txt
+[4/13] download chapter_id=14188490 file=Chương 5 Quản lý các Truyện của tôi.txt
+  OK decrypted=True written=Chương 5 Quản lý các Truyện của tôi.txt
+[5/13] download chapter_id=14189019 file=Chương 6 Danh sách chương.txt
+  OK decrypted=True written=Chương 6 Danh sách chương.txt
+[6/13] download chapter_id=14188634 file=Chương 7 Làm sao để truyện được xuất bản công khai trên nền tảng.txt
+  OK decrypted=True written=Chương 7 Làm sao để truyện được xuất bản công khai trên nền tảng.txt
+[7/13] download chapter_id=14188938 file=Chương 8 Thêm ảnh minh họa cho nội dung truyện.txt
+  OK decrypted=True written=Chương 8 Thêm ảnh minh họa cho nội dung truyện.txt
+[8/13] download chapter_id=14188888 file=Chương 9 Xem thống kê.txt
+  OK decrypted=True written=Chương 9 Xem thống kê.txt
+[9/13] download chapter_id=14188505 file=Chương 10 Xử lý báo cáo.txt
+  OK decrypted=True written=Chương 10 Xử lý báo cáo.txt
+[10/13] download chapter_id=14188960 file=Chương 11 Yêu cầu hỗ trợ.txt
+  OK decrypted=True written=Chương 11 Yêu cầu hỗ trợ.txt
+[11/13] download chapter_id=14189133 file=Chương 12 Quảng cáo truyện của bạn trên nền tảng.txt
+  OK decrypted=True written=Chương 12 Quảng cáo truyện của bạn trên nền tảng.txt
+[12/13] download chapter_id=14189184 file=Chương 13 Tìm hiểu về Rank của người đăng truyện.txt
+  OK decrypted=True written=Chương 13 Tìm hiểu về Rank của người đăng truyện.txt
+[13/13] download chapter_id=18131358 file=Chương 14 Giới hạn người có thể bình luận trong truyện.txt
+  OK decrypted=True written=Chương 14 Giới hạn người có thể bình luận trong truyện.txt
+final_ok=13
+final_fail=0
+out=C:\Dev\MTC\Sử Dụng Bookhub
+
+[stderr]

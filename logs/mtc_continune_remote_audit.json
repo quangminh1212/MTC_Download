@@ -1,0 +1,214 @@
+{
+  "folders": 1137,
+  "issues": 10,
+  "api_errors": 0,
+  "issue_folders": [
+    {
+      "folder": "Bắc Minh Phong",
+      "book_id": 153593,
+      "remote_count": 889,
+      "local_count": 884,
+      "missing_count": 5,
+      "missing": [
+        885,
+        886,
+        887,
+        888,
+        889
+      ],
+      "extra_count": 0,
+      "extra": [],
+      "unparsable_count": 0,
+      "unparsable": [],
+      "duplicate_indices": {}
+    },
+    {
+      "folder": "Bắt Đầu Đánh Dấu Chí Tôn Thể Ta Đồ Nhi Đều Là Phản Phái",
+      "book_id": 153619,
+      "remote_count": 6,
+      "local_count": 5,
+      "missing_count": 1,
+      "missing": [
+        6
+      ],
+      "extra_count": 0,
+      "extra": [],
+      "unparsable_count": 0,
+      "unparsable": [],
+      "duplicate_indices": {}
+    },
+    {
+      "folder": "Game Point Cú Đánh Cuối Cùng",
+      "book_id": 153514,
+      "remote_count": 0,
+      "local_count": 10,
+      "missing_count": 0,
+      "missing": [],
+      "extra_count": 10,
+      "extra": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "unparsable_count": 0,
+      "unparsable": [],
+      "duplicate_indices": {}
+    },
+    {
+      "folder": "Là Ai Dạy Hắn Như Thế Luyện Kiếm",
+      "book_id": 153497,
+      "remote_count": 102,
+      "local_count": 91,
+      "missing_count": 11,
+      "missing": [
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102
+      ],
+      "extra_count": 0,
+      "extra": [],
+      "unparsable_count": 0,
+      "unparsable": [],
+      "duplicate_indices": {}
+    },
+    {
+      "folder": "Lâm Thánh",
+      "book_id": 153444,
+      "remote_count": 25,
+      "local_count": 21,
+      "missing_count": 4,
+      "missing": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "extra_count": 0,
+      "extra": [],
+      "unparsable_count": 0,
+      "unparsable": [],
+      "duplicate_indices": {}
+    },
+    {
+      "folder": "Lưỡng Giới Một Mặt Mạt Pháp Một Mặt Tiên Giới",
+      "book_id": 153590,
+      "remote_count": 87,
+      "local_count": 82,
+      "missing_count": 5,
+      "missing": [
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "extra_count": 0,
+      "extra": [],
+      "unparsable_count": 0,
+      "unparsable": [],
+      "duplicate_indices": {}
+    },
+    {
+      "folder": "Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu",
+      "book_id": 153332,
+      "remote_count": 103,
+      "local_count": 95,
+      "missing_count": 8,
+      "missing": [
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103
+      ],
+      "extra_count": 0,
+      "extra": [],
+      "unparsable_count": 0,
+      "unparsable": [],
+      "duplicate_indices": {}
+    },
+    {
+      "folder": "Minh Nhật Chi Thần",
+      "book_id": 153317,
+      "remote_count": 61,
+      "local_count": 56,
+      "missing_count": 5,
+      "missing": [
+        57,
+        58,
+        59,
+        60,
+        61
+      ],
+      "extra_count": 0,
+      "extra": [],
+      "unparsable_count": 0,
+      "unparsable": [],
+      "duplicate_indices": {}
+    },
+    {
+      "folder": "Mỗi Ngày Một Môn Công Pháp Viên Mãn",
+      "book_id": 153556,
+      "remote_count": 94,
+      "local_count": 78,
+      "missing_count": 16,
+      "missing": [
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94
+      ],
+      "extra_count": 0,
+      "extra": [],
+      "unparsable_count": 0,
+      "unparsable": [],
+      "duplicate_indices": {}
+    },
+    {
+      "folder": "Đấu La Khí Vận Chi Nữ Cơ Duyên Tất Cả Là Của Ta",
+      "book_id": 139039,
+      "remote_count": 723,
+      "local_count": 722,
+      "missing_count": 1,
+      "missing": [
+        723
+      ],
+      "extra_count": 0,
+      "extra": [],
+      "unparsable_count": 0,
+      "unparsable": [],
+      "duplicate_indices": {}
+    }
+  ],
+  "api_error_folders": []
+}

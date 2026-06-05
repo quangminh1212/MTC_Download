@@ -1,0 +1,188 @@
+audited=50/1196
+audited=100/1196
+audited=150/1196
+audited=200/1196
+audited=250/1196
+audited=300/1196
+audited=350/1196
+audited=400/1196
+audited=450/1196
+audited=500/1196
+audited=550/1196
+audited=600/1196
+audited=650/1196
+audited=700/1196
+audited=750/1196
+audited=800/1196
+audited=850/1196
+audited=900/1196
+audited=950/1196
+audited=1000/1196
+audited=1050/1196
+audited=1100/1196
+audited=1150/1196
+{
+  "generated_at": "2026-05-27 03:27:32",
+  "root": "C:\\Dev\\MTC_Continune",
+  "folders_scanned": 1196,
+  "unfinished_scanned": 1196,
+  "ok": 1122,
+  "issues": 74,
+  "missing_total": 10,
+  "extra_total": 2152,
+  "small_file_total": 1693,
+  "encrypted_file_total": 0,
+  "empty_body_total": 1563,
+  "issue_folders": [
+    "1854",
+    "Bản Tọa Trần Đại Tiên Thích Thu Nghĩa Nữ",
+    "Bất Diệt Kinh",
+    "Bắc Minh Phong",
+    "Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen",
+    "Chiến Lược Gia Thiên Tài",
+    "Chư Thiên Tiểu Lý Phi Đao Bắt Đầu",
+    "Comic Ta Trưởng Thành Không Có Cực Hạn",
+    "Cứu Vớt Vũ Trụ Từ Một Chiếc Vũ Trụ Phế Thuyền Bắt Đầu",
+    "Cực Đạo Chân Quân",
+    "Game Point Cú Đánh Cuối Cùng",
+    "Game Thực Tế Ảo Người Chơi Trọng Sinh",
+    "Giết Yêu Trướng Tu Vi Đạo Gia Ta Thành",
+    "Khoa Học Kiểu Conan Sōsōnin",
+    "Khúc Độc Hành Trong Đêm Trường Tận Thế",
+    "Kiếm Cốt Của Ta Hàng Năm Gia Tăng Một Tấc",
+    "Kiểm Kê Thiếu Niên Bạch Mã Cảnh Nổi Tiếng Lôi Vô Kiệt Tê",
+    "Lol Thời Đại Quang Vinh",
+    "Long Cơ Chiến Hồn",
+    "Luân Hồi Thương Đế",
+    "Là Ai Dạy Hắn Như Thế Luyện Kiếm",
+    "Lâm Thánh",
+    "Lãng Nhân Mỹ Nữ Mời Tư Vấn",
+    "Lưỡng Giới Một Mặt Mạt Pháp Một Mặt Tiên Giới",
+    "Ma Chủng",
+    "Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu",
+    "Minh Nhật Chi Thần",
+    "Mỗi Ngày Một Môn Công Pháp Viên Mãn",
+    "Mộng Tiên",
+    "Mộng Đạo Trường Sinh",
+    "Mục Thần Ký Vạn Đạo Tiệm Sách Bắt Đầu Hoang Cổ Thánh Thể",
+    "Nam Thiên Chiến Hỏa",
+    "Ngôi Sao Hi Vọng",
+    "Ngự Thú Hệ Thống Tình Báo Như Thế Nào Là Trò Chơi Thông Cáo",
+    "Nhà Ta Trùng Là Rồng",
+    "Nhất Kiếp Tiên Phàm",
+    "Nói Xấu Ta Là Tà Tu Nhưng Có Thể Ta Thật Sự Là Tà Tu",
+    "Sau Khi Sống Lại Hệ Thống Bức Ta Phục Hôn",
+    "Sủng Thú Sư",
+    "Ta Bán Hủ Tiếu Tại Dị Giới",
+    "Ta Có Một Cái Tu Tiên Máy Mô Phỏng",
+    "Ta Hồng Long Muội Muội Muốn Ăn Hết Ta",
+    "Ta Phát Hiện Thế Giới Bug",
+    "Ta Tại Mê Vụ Chế Tạo Hoàn Mỹ Lãnh Địa",
+    "Ta Tại Thế Giới Võ Hiệp Làm Vương Gia",
+    "Ta Tại Tận Thế Trong Kinh Doanh Phòng Ăn Bạo Lửa",
+    "Ta Đứng Đắn Học Sinh Mỗi Ngày Chỉ Ăn Chín Loại Ma Dược",
+    "Tam Quốc Từ Giao Châu Bắt Đầu",
+    "The Noexistencen Of You And Me Nếu Ta Có Ngươi",
+    "Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên",
+    "Thần Ma Kỷ Nguyên Ta Tiến Hóa Thành Cuối Cùng Boss",
+    "Thịnh Thế Diên Ninh",
+    "Thực Tế Ảo Thống Lĩnh Quân Đoàn Hắc Ám",
+    "Tinh Hà Chi Chủ",
+    "Tiến Hóa Tại Vô Hạn Thế Giới",
+    "Tru Tiên Tiên Thiên Nhân Tộc Từ Lớn Trúc Phong Bắt Đầu",
+    "Trở Lại 2009 Ta Làm Lại Cuộc Đời",
+    "Trở Về 1996 Bắt Đầu Từ Chợ Lớn Bán Thịt Heo",
+    "Trở Về Thế Kỉ 14",
+    "Tu Tiên Từ Kế Thừa Gia Sản Bắt Đầu",
+    "Tu Tiên Từ Thanh Trang Bị Bắt Đầu",
+    "Tây Sơn Hành Trình Vượt Thời Gian",
+    "Tổng Mạn The Gamer",
+    "Tổng Võ Người Tại Trong Tuyết Ta Lấy Ma Đạo Chứng Nhận Trường Sinh",
+    "Tổng Võ Trạch Tu Đại Đế Bắt Đầu Yêu Nguyệt Tìm Tới Cửa",
+    "Từ Arknights Bắt Đầu Xây Dựng Thế Lực",
+    "Xuyên Về Thời Lê Làm Quân Phiệt",
+    "Đánh Chính Là Người Mình",
+    "Đưa Lên Quá Khứ Chó Của Ta Thành Thượng Cổ Hắc Hoàng",
+    "Đại Yêu Quái",
+    "Đấu La Võ Hồn La Tam Pháo Hextech Năm Tuyển Ba",
+    "Đế Cuồng",
+    "Đế Quốc Nhật Bản",
+    "Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu"
+  ]
+}
+REPORT=C:\Dev\MTC_Download\logs\unfinished_repo_content_audit.json
+
+=== 2026-05-27 03:25:48 pass_1_audit_before START ===
+CMD: C:\Program Files\Python310\python.exe C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py
+=== pass_1_audit_before END rc=1 ===
+[1/72] repair 1854
+  redownloaded=197 failed=653 commit=committed
+[2/72] repair Bản Tọa Trần Đại Tiên Thích Thu Nghĩa Nữ
+  redownloaded=3 failed=69 commit=committed
+[3/72] repair Bất Diệt Kinh
+  redownloaded=0 failed=0 commit=committed
+[4/72] repair Bắc Minh Phong
+  redownloaded=0 failed=0 commit=committed
+[5/72] repair Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen
+  redownloaded=13 failed=167 commit=commit_failed
+[6/72] repair Chiến Lược Gia Thiên Tài
+  redownloaded=0 failed=0 commit=commit_failed
+[7/72] repair Chư Thiên Tiểu Lý Phi Đao Bắt Đầu
+  redownloaded=0 failed=0 commit=commit_failed
+[8/72] repair Comic Ta Trưởng Thành Không Có Cực Hạn
+  redownloaded=0 failed=0 commit=commit_failed
+[9/72] repair Cứu Vớt Vũ Trụ Từ Một Chiếc Vũ Trụ Phế Thuyền Bắt Đầu
+  redownloaded=0 failed=0 commit=commit_failed
+[10/72] repair Cực Đạo Chân Quân
+  redownloaded=0 failed=0 commit=commit_failed
+[11/72] repair Game Point Cú Đánh Cuối Cùng
+  redownloaded=0 failed=10 commit=nothing_to_commit
+[12/72] repair Game Thực Tế Ảo Người Chơi Trọng Sinh
+❌ Lỗi khi tải chương 20154974: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+❌ Lỗi khi tải chương 20175262: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  redownloaded=45 failed=920 commit=committed
+[13/72] repair Giết Yêu Trướng Tu Vi Đạo Gia Ta Thành
+  redownloaded=0 failed=0 commit=committed
+[14/72] repair Khoa Học Kiểu Conan Sōsōnin
+  redownloaded=0 failed=34 commit=committed
+[15/72] repair Khúc Độc Hành Trong Đêm Trường Tận Thế
+  redownloaded=30 failed=2389 commit=committed
+[16/72] repair Kiếm Cốt Của Ta Hàng Năm Gia Tăng Một Tấc
+  redownloaded=0 failed=0 commit=committed
+[17/72] repair Kiểm Kê Thiếu Niên Bạch Mã Cảnh Nổi Tiếng Lôi Vô Kiệt Tê
+  redownloaded=1 failed=0 commit=committed
+[18/72] repair Lol Thời Đại Quang Vinh
+  redownloaded=41 failed=320 commit=committed
+[19/72] repair Long Cơ Chiến Hồn
+  redownloaded=135 failed=122 commit=add_failed
+[20/72] repair Luân Hồi Thương Đế
+  redownloaded=579 failed=181 commit=committed
+[21/72] repair Là Ai Dạy Hắn Như Thế Luyện Kiếm
+  redownloaded=0 failed=0 commit=committed
+[22/72] repair Lâm Thánh
+  redownloaded=0 failed=0 commit=add_failed
+[23/72] repair Lãng Nhân Mỹ Nữ Mời Tư Vấn
+  redownloaded=267 failed=455 commit=committed
+[24/72] repair Lưỡng Giới Một Mặt Mạt Pháp Một Mặt Tiên Giới
+  redownloaded=0 failed=0 commit=committed
+[25/72] repair Ma Chủng
+  redownloaded=477 failed=836 commit=committed
+[26/72] repair Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu
+  redownloaded=0 failed=0 commit=committed
+[27/72] repair Minh Nhật Chi Thần
+  redownloaded=0 failed=0 commit=committed
+[28/72] repair Mỗi Ngày Một Môn Công Pháp Viên Mãn
+  redownloaded=0 failed=0 commit=committed
+[29/72] repair Mộng Tiên
+  redownloaded=124 failed=1003 commit=committed
+[30/72] repair Mộng Đạo Trường Sinh
+  redownloaded=18 failed=286 commit=committed
+[31/72] repair Mục Thần Ký Vạn Đạo Tiệm Sách Bắt Đầu Hoang Cổ Thánh Thể
+  redownloaded=7 failed=218 commit=committed
+[32/72] repair Nam Thiên Chiến Hỏa
+  redownloaded=427 failed=477 commit=committed
+[33/72] repair Ngôi Sao Hi Vọng
+
+=== 2026-05-27 03:27:32 pass_1_repair START ===
+CMD: C:\Program Files\Python310\python.exe C:\Dev\MTC_DOWNLOAD\scripts\repair\repair_unfinished_repo_issues.py --delay 0.03
+=== pass_1_repair END rc=1073807364 ===

@@ -1,0 +1,25 @@
+{
+  "folders": 1137,
+  "issues": [
+    {
+      "folder": "Game Point Cú Đánh Cuối Cùng",
+      "book_id": 153514,
+      "missing": [],
+      "extra": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "remote_count": 0,
+      "local_count": 10
+    }
+  ],
+  "api_like": []
+}

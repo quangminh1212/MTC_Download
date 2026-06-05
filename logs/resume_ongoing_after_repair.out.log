@@ -1,0 +1,20 @@
+loaded_queue=301 path=C:\Dev\MTC_Download\logs\ongoing_download_to_repo_queue.json
+
+[246/301] book_id=148006 status=Còn tiếp name=Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu
+  progress downloaded=25 skipped=165 failed=0
+  progress downloaded=50 skipped=165 failed=0
+  progress downloaded=75 skipped=165 failed=0
+  => remote=256 downloaded=91 skipped=165 failed=0 missing_after=91 extra_after=0 status=issue commit=committed
+
+[247/301] book_id=121873 status=Còn tiếp name=Xuyên Mộng Giả
+  => remote=257 downloaded=0 skipped=257 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[248/301] book_id=129186 status=Tạm dừng name=Nguyên Thủy
+  => remote=260 downloaded=0 skipped=260 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[249/301] book_id=120219 status=Còn tiếp name=Lê Dung
+  => remote=270 downloaded=0 skipped=270 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[250/301] book_id=138424 status=Còn tiếp name=Bị Bán Sang Cao Miên, Ta Triệu Hồi Tổ Chức Áo Đen!
+  progress downloaded=25 skipped=92 failed=0
+  progress downloaded=50 skipped=92 failed=0

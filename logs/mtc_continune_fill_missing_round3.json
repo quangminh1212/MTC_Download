@@ -1,0 +1,97 @@
+{
+  "books": [
+    {
+      "id": 140643,
+      "folder": "Lãng Nhân Mỹ Nữ Mời Tư Vấn",
+      "missing_before": [],
+      "downloaded": [],
+      "failed": []
+    },
+    {
+      "id": 139039,
+      "folder": "Đấu La Khí Vận Chi Nữ Cơ Duyên Tất Cả Là Của Ta",
+      "missing_before": [],
+      "downloaded": [],
+      "failed": []
+    },
+    {
+      "id": 153347,
+      "folder": "Chiến Lược Gia Thiên Tài",
+      "missing_before": [
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202
+      ],
+      "downloaded": [
+        {
+          "index": 193,
+          "chapter_id": 27294876,
+          "file": "Chương 193 KHÚC CUA TỬ THẦN TẠI THÁNH ĐỊA DRAGÃO.txt"
+        },
+        {
+          "index": 194,
+          "chapter_id": 27294877,
+          "file": "Chương 194 Ác mộng Dragão Sự già rơ của gã khổng lồ.txt"
+        },
+        {
+          "index": 195,
+          "chapter_id": 27294878,
+          "file": "Chương 195 Đứng dậy từ tro tàn.txt"
+        },
+        {
+          "index": 197,
+          "chapter_id": 27299583,
+          "file": "Chương 197 Buông bỏ để sinh tồn Khùng hoảng đầu tháng 4.txt"
+        },
+        {
+          "index": 198,
+          "chapter_id": 27299584,
+          "file": "Chương 198 Chiến thắng danh dự trước hoàng gia Tây Ban Nha.txt"
+        },
+        {
+          "index": 199,
+          "chapter_id": 27299585,
+          "file": "Chương 199 Sức mạnh hủy diệt trút giận lên Rio Ave.txt"
+        },
+        {
+          "index": 200,
+          "chapter_id": 27299586,
+          "file": "Chương 200 Nghệ thuật đóng băng.txt"
+        },
+        {
+          "index": 201,
+          "chapter_id": 27299587,
+          "file": "Chương 201 Sự hồi sinh của kẻ đi săn.txt"
+        },
+        {
+          "index": 202,
+          "chapter_id": 27299588,
+          "file": "Chương 202 Toan tính lạnh lùng bảo vệ tấm vé chung kết.txt"
+        }
+      ],
+      "failed": [
+        {
+          "index": 196,
+          "chapter_id": 27299582,
+          "error": "unable to decode iv"
+        }
+      ]
+    },
+    {
+      "id": 151031,
+      "folder": "Quả Cấm",
+      "missing_before": [],
+      "downloaded": [],
+      "failed": []
+    }
+  ],
+  "downloaded": 9,
+  "failed": 1
+}

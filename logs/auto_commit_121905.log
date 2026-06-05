@@ -1,0 +1,52 @@
+book=Người Rối
+book_id=121905
+out=C:\Dev\MTC\Người Rối
+chapters_total=23 expected=23
+[1/23] download chapter_id=17056943 file=Chương 1 Tin dữ 1.txt
+  OK decrypted=True written=Chương 1 Tin dữ 1.txt
+[2/23] download chapter_id=17294243 file=Chương 2 Tin dữ 2.txt
+  OK decrypted=True written=Chương 2 Tin dữ 2.txt
+[3/23] download chapter_id=17061149 file=Chương 3 Người điên 1.txt
+  OK decrypted=True written=Chương 3 Người điên 1.txt
+[4/23] download chapter_id=17294245 file=Chương 4 Người điên 2.txt
+  OK decrypted=True written=Chương 4 Người điên 2.txt
+[5/23] download chapter_id=17066632 file=Chương 5 Cánh cửa mở ra 1.txt
+  OK decrypted=True written=Chương 5 Cánh cửa mở ra 1.txt
+[6/23] download chapter_id=17294246 file=Chương 6 Cánh cửa mở ra 2.txt
+  RETRYABLE_FAIL attempt=1 chapter_id=17294246: unable to decode iv
+  OK decrypted=True retry=2 written=Chương 6 Cánh cửa mở ra 2.txt
+[7/23] download chapter_id=17070669 file=Chương 7 【Puppeteer】 1.txt
+  OK decrypted=True written=Chương 7 【Puppeteer】 1.txt
+[8/23] download chapter_id=17294249 file=Chương 8 【Puppeteer】 2.txt
+  OK decrypted=True written=Chương 8 【Puppeteer】 2.txt
+[9/23] download chapter_id=17071513 file=Chương 9 Hội 'Không nghe lời thì ăn cốc đầu'. 1.txt
+  OK decrypted=True written=Chương 9 Hội 'Không nghe lời thì ăn cốc đầu'. 1.txt
+[10/23] download chapter_id=17294250 file=Chương 10 'Hội không nghe lời thì ăn cốc đầu.' 2.txt
+  OK decrypted=True written=Chương 10 'Hội không nghe lời thì ăn cốc đầu.' 2.txt
+[11/23] download chapter_id=17083354 file=Chương 11 Giải mã bia đá 1.txt
+  OK decrypted=True written=Chương 11 Giải mã bia đá 1.txt
+[12/23] download chapter_id=17294251 file=Chương 12 GiảI mã bia đá 2.txt
+  OK decrypted=True written=Chương 12 GiảI mã bia đá 2.txt
+[13/23] skip existing file=Chương 13 Giải mã bia đá 3.txt
+[14/23] skip existing file=Chương 14 Giải mã bia đá 4.txt
+[15/23] download chapter_id=17096035 file=Chương 15 Nước có gas và snack. 1.txt
+  OK decrypted=True written=Chương 15 Nước có gas và snack. 1.txt
+[16/23] download chapter_id=17294318 file=Chương 16 Nước có gas và snack 2.txt
+  OK decrypted=True written=Chương 16 Nước có gas và snack 2.txt
+[17/23] skip existing file=Chương 17 Cuộc sống hằng ngày thật bình yên của nhân vật chính.txt
+[18/23] download chapter_id=17117279 file=Chương 18 Hội học sinh VS Đế vương hội 1.txt
+  OK decrypted=True written=Chương 18 Hội học sinh VS Đế vương hội 1.txt
+[19/23] skip existing file=Chương 19 Hội học sinh VS Đế vương hội 2 Và đôi lời gửi gắm.txt
+[20/23] download chapter_id=17137298 file=Chương 20 Cú chốt 1.txt
+  OK decrypted=True written=Chương 20 Cú chốt 1.txt
+[21/23] download chapter_id=17294390 file=Chương 21 Cú chốt 2.txt
+  OK decrypted=True written=Chương 21 Cú chốt 2.txt
+[22/23] download chapter_id=17139987 file=Chương 22 No.3 1.txt
+  OK decrypted=True written=Chương 22 No.3 1.txt
+[23/23] download chapter_id=17294409 file=Chương 23 No.3 2.txt
+  OK decrypted=True written=Chương 23 No.3 2.txt
+final_ok=23
+final_fail=0
+out=C:\Dev\MTC\Người Rối
+
+[stderr]

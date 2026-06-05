@@ -1,0 +1,30 @@
+book=Thẻ Bài Sinh Tử
+book_id=109125
+out=C:\Dev\MTC\Thẻ Bài Sinh Tử
+chapters_total=17 expected=17
+[1/17] skip existing file=Chương 1 Sống Sót.txt
+[2/17] skip existing file=Chương 2 Thu Hoạch.txt
+[3/17] skip existing file=Chương 3 Cô Nàng Kì Lạ.txt
+[4/17] skip existing file=Chương 4 Lần Đầu Giết Người.txt
+[5/17] skip existing file=Chương 5 Hội Sinh Tồn.txt
+[6/17] skip existing file=Chương 6 Nguy Hiểm Cận Kề.txt
+[7/17] skip existing file=Chương 7 Nhiệm Vụ Mới.txt
+[8/17] skip existing file=Chương 8 Bình Yên Trước Cơn Bão.txt
+[9/17] download chapter_id=14412566 file=Chương 9 Ngày Thứ Nhất 1.txt
+  OK decrypted=True written=Chương 9 Ngày Thứ Nhất 1.txt
+[10/17] download chapter_id=14412568 file=Chương 10 Ngày Thứ Nhất 2.txt
+  OK decrypted=True written=Chương 10 Ngày Thứ Nhất 2.txt
+[11/17] skip existing file=Chương 11 Ngày Thứ Nhất 3.txt
+[12/17] skip existing file=Chương 12 Ngày Thứ Nhất 4.txt
+[13/17] skip existing file=Chương 13 Ngày Thứ Nhất 5.txt
+[14/17] download chapter_id=14436962 file=Chương 14 Ngày Thứ Hai 1.txt
+  OK decrypted=True written=Chương 14 Ngày Thứ Hai 1.txt
+[15/17] download chapter_id=14440706 file=Chương 15 Ngày Thứ Hai 2.txt
+  OK decrypted=True written=Chương 15 Ngày Thứ Hai 2.txt
+[16/17] skip existing file=Chương 16 Ngày Thứ Hai 3.txt
+[17/17] skip existing file=Chương 17 Ngày Thứ Hai 4.txt
+final_ok=17
+final_fail=0
+out=C:\Dev\MTC\Thẻ Bài Sinh Tử
+
+[stderr]

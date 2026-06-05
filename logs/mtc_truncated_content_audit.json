@@ -1,0 +1,121 @@
+{
+  "scanned_books": 2212,
+  "issue_count": 3,
+  "decrypt_error_count": 17,
+  "issues": [
+    {
+      "folder": "Bất Diệt Kiếm Quân",
+      "book_id": 101562,
+      "chapter": 100,
+      "file": "Chương 100 Táng Thần ngoài núi.txt",
+      "local_len": 553,
+      "remote_len": 9989,
+      "ratio": 0.055
+    },
+    {
+      "folder": "Tuyệt Thế Thiên Quân",
+      "book_id": 101557,
+      "chapter": 1,
+      "file": "Chương 1 Cực mạnh Hồn.txt",
+      "local_len": 0,
+      "remote_len": 12607,
+      "ratio": 0.0
+    },
+    {
+      "folder": "Tuyệt Thế Thiên Quân",
+      "book_id": 101557,
+      "chapter": 10,
+      "file": "Chương 10 Bạn chơi lúc bé.txt",
+      "local_len": 0,
+      "remote_len": 12407,
+      "ratio": 0.0
+    }
+  ],
+  "decrypt_errors": [
+    {
+      "folder": "Bắt Đầu Ra Ánh Sáng Cổ Nhân Hoàng Công Lao Sự Nghiệp Kinh Ngạc Đến Ngây Người Các Hoàng Đế",
+      "chapter": 1,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Cao Võ Bắt Đầu Từ Ký Danh Thương Long Đoán Thể Thuật",
+      "chapter": 1,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Chiến Thần Chi Vương",
+      "chapter": 10,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Các Nữ Thần Bạch Nguyệt Quang",
+      "chapter": 11,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Cái Này Uchiha Chỉ Muốn Phá Hủy Konoha",
+      "chapter": 10,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Cơn Lốc Đường Biên",
+      "chapter": 1,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Dragon Ball Chi Siêu Vũ Trụ",
+      "chapter": 10,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Hokage Chi Chân Lý Chi Môn",
+      "chapter": 1,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Hồng Hoang Chi Thái Nhất Chứng Đạo Lộ",
+      "chapter": 100,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Long Phi Phách Võ",
+      "chapter": 1,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Ma Chủng",
+      "chapter": 100,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Nghiệp Duyên",
+      "chapter": 10,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Nhường Tiên Minh Lần Nữa Vĩ Đại",
+      "chapter": 11,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Phản Phái Lão Tổ Bắt Đầu Nắm Khí Vận Chi Tử Lão Phùng",
+      "chapter": 1,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Thế Giới Tiến Hóa",
+      "chapter": 1,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Thời Gian Mang Thai Rơi Nước Mắt Đại Lão Ôn Nhu Thấp Hống Làm Càn Sủng",
+      "chapter": 10,
+      "error": "unable to decode iv"
+    },
+    {
+      "folder": "Từ Đầu Bếp Đao Công Bắt Đầu Luyện Đao Pháp",
+      "chapter": 10,
+      "error": "unable to decode iv"
+    }
+  ]
+}

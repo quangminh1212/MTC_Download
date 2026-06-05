@@ -1,0 +1,254 @@
+﻿[
+    {
+        "Folder":  "Từ Arknights Bắt Đầu Xây Dựng Thế Lực",
+        "Expected":  "231",
+        "Have":  "218",
+        "Missing":  "13",
+        "FirstMissing":  "16,17,27,35,37,38,83,117,138,157,179,197,198"
+    },
+    {
+        "Folder":  "Học Đường Rực Cháy",
+        "Expected":  "125",
+        "Have":  "112",
+        "Missing":  "13",
+        "FirstMissing":  "40,64,65,66,67,73,74,81,82,83,84,85,86"
+    },
+    {
+        "Folder":  "Tam Quốc Từ Giao Châu Bắt Đầu",
+        "Expected":  "289",
+        "Have":  "283",
+        "Missing":  "6",
+        "FirstMissing":  "239,249,250,255,270,272"
+    },
+    {
+        "Folder":  "Thiên Hành",
+        "Expected":  "42",
+        "Have":  "36",
+        "Missing":  "6",
+        "FirstMissing":  "1,2,3,4,5,6"
+    },
+    {
+        "Folder":  "Cửu Đế",
+        "Expected":  "57",
+        "Have":  "52",
+        "Missing":  "5",
+        "FirstMissing":  "13,14,15,16,17"
+    },
+    {
+        "Folder":  "Bất Diệt Kinh",
+        "Expected":  "211",
+        "Have":  "207",
+        "Missing":  "4",
+        "FirstMissing":  "4,21,160,161"
+    },
+    {
+        "Folder":  "Hồi Kí Hadidu",
+        "Expected":  "81",
+        "Have":  "77",
+        "Missing":  "4",
+        "FirstMissing":  "19,20,59,76"
+    },
+    {
+        "Folder":  "Đại Việt Quỷ Vương",
+        "Expected":  "357",
+        "Have":  "354",
+        "Missing":  "3",
+        "FirstMissing":  "276,334,346"
+    },
+    {
+        "Folder":  "Ta Phát Hiện Thế Giới Bug",
+        "Expected":  "69",
+        "Have":  "66",
+        "Missing":  "3",
+        "FirstMissing":  "39,40,41"
+    },
+    {
+        "Folder":  "Long Cơ Chiến Hồn",
+        "Expected":  "751",
+        "Have":  "749",
+        "Missing":  "2",
+        "FirstMissing":  "327,623"
+    },
+    {
+        "Folder":  "Muốn Trường Sinh Trước Hết Phải Đồng Vợ Đồng Chồng",
+        "Expected":  "346",
+        "Have":  "344",
+        "Missing":  "2",
+        "FirstMissing":  "232,233"
+    },
+    {
+        "Folder":  "Lan Khuấy Đảo Cổ Sử",
+        "Expected":  "133",
+        "Have":  "131",
+        "Missing":  "2",
+        "FirstMissing":  "19,20"
+    },
+    {
+        "Folder":  "Hắn Chỉ Là Chơi Đùa Không Phải Viết Lên Thần Thoại",
+        "Expected":  "69",
+        "Have":  "67",
+        "Missing":  "2",
+        "FirstMissing":  "35,36"
+    },
+    {
+        "Folder":  "Tả Đạo Tiên Chủ",
+        "Expected":  "48",
+        "Have":  "46",
+        "Missing":  "2",
+        "FirstMissing":  "13,14"
+    },
+    {
+        "Folder":  "Quang Minh Bất Diệt Tín Ngưỡng Vĩnh Hằng",
+        "Expected":  "915",
+        "Have":  "914",
+        "Missing":  "1",
+        "FirstMissing":  "372"
+    },
+    {
+        "Folder":  "Tây Sơn Hành Trình Vượt Thời Gian",
+        "Expected":  "597",
+        "Have":  "596",
+        "Missing":  "1",
+        "FirstMissing":  "441"
+    },
+    {
+        "Folder":  "Đế Quốc Nhật Bản",
+        "Expected":  "405",
+        "Have":  "404",
+        "Missing":  "1",
+        "FirstMissing":  "147"
+    },
+    {
+        "Folder":  "Lê Dung",
+        "Expected":  "271",
+        "Have":  "270",
+        "Missing":  "1",
+        "FirstMissing":  "82"
+    },
+    {
+        "Folder":  "Xuyên Mộng Giả",
+        "Expected":  "258",
+        "Have":  "257",
+        "Missing":  "1",
+        "FirstMissing":  "66"
+    },
+    {
+        "Folder":  "Xuyên Thành Liếm Cẩu Nam Phụ Ta Một Cước Đạp Vỡ Thiên Mệnh",
+        "Expected":  "184",
+        "Have":  "183",
+        "Missing":  "1",
+        "FirstMissing":  "115"
+    },
+    {
+        "Folder":  "Đấu La Võ Hồn La Tam Pháo Hextech Năm Tuyển Ba",
+        "Expected":  "93",
+        "Have":  "92",
+        "Missing":  "1",
+        "FirstMissing":  "34"
+    },
+    {
+        "Folder":  "Bắt Đầu Triệu Hoán Ba Ngàn Đại Đế Dọa Mộng Cửu Thiên Thập Địa",
+        "Expected":  "91",
+        "Have":  "90",
+        "Missing":  "1",
+        "FirstMissing":  "16"
+    },
+    {
+        "Folder":  "Từ Hoàn Mỹ Bắt Đầu Bảo Hồ Lô Thông Thiên",
+        "Expected":  "90",
+        "Have":  "90",
+        "Missing":  "1",
+        "FirstMissing":  "77"
+    },
+    {
+        "Folder":  "Khoa Học Kiểu Conan Sōsōnin",
+        "Expected":  "89",
+        "Have":  "88",
+        "Missing":  "1",
+        "FirstMissing":  "29"
+    },
+    {
+        "Folder":  "Hướng Quỷ Hứa Hẹn",
+        "Expected":  "89",
+        "Have":  "88",
+        "Missing":  "1",
+        "FirstMissing":  "73"
+    },
+    {
+        "Folder":  "Sáng Thế Phá Kiếp",
+        "Expected":  "81",
+        "Have":  "80",
+        "Missing":  "1",
+        "FirstMissing":  "66"
+    },
+    {
+        "Folder":  "Siêu Nhân Diệt Tuyệt Chỉ Nam",
+        "Expected":  "76",
+        "Have":  "75",
+        "Missing":  "1",
+        "FirstMissing":  "46"
+    },
+    {
+        "Folder":  "Tu Tiên Ta Không Phải Quyển Chỉ Là Chăm Chỉ Một Chút Xíu",
+        "Expected":  "75",
+        "Have":  "74",
+        "Missing":  "1",
+        "FirstMissing":  "49"
+    },
+    {
+        "Folder":  "Ta Siêu Thị Máy Tính Gian Thương Khách Hàng Quỳ Cầu Đừng Đóng Cửa",
+        "Expected":  "71",
+        "Have":  "70",
+        "Missing":  "1",
+        "FirstMissing":  "1"
+    },
+    {
+        "Folder":  "Cầm Kiếm Độc Hành Chém Quỷ Thần",
+        "Expected":  "71",
+        "Have":  "70",
+        "Missing":  "1",
+        "FirstMissing":  "70"
+    },
+    {
+        "Folder":  "Thân Là Dũng Giả Ta Bị Lừa Thảm",
+        "Expected":  "58",
+        "Have":  "57",
+        "Missing":  "1",
+        "FirstMissing":  "32"
+    },
+    {
+        "Folder":  "Ngự Thần Lục",
+        "Expected":  "47",
+        "Have":  "46",
+        "Missing":  "1",
+        "FirstMissing":  "44"
+    },
+    {
+        "Folder":  "Tara Tiểu Thế Giới Chư Thiên Kỳ Diệu Mạo Hiểm",
+        "Expected":  "35",
+        "Have":  "34",
+        "Missing":  "1",
+        "FirstMissing":  "17"
+    },
+    {
+        "Folder":  "Bạch Nguyệt Vân Thiên",
+        "Expected":  "31",
+        "Have":  "30",
+        "Missing":  "1",
+        "FirstMissing":  "19"
+    },
+    {
+        "Folder":  "Quán Net Âm Dương",
+        "Expected":  "30",
+        "Have":  "29",
+        "Missing":  "1",
+        "FirstMissing":  "8"
+    },
+    {
+        "Folder":  "Trò Chơi Này Không Thích Hợp Ta Đào Quáng Thành Thần",
+        "Expected":  "26",
+        "Have":  "25",
+        "Missing":  "1",
+        "FirstMissing":  "14"
+    }
+]

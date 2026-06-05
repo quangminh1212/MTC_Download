@@ -1,0 +1,31 @@
+queue=1557 done=6179 chapter_workers=20 shard=2/5
+[1282/1557] start id=146825 chapters=898 name=Gom Tiền Trò Chơi, Nhưng Đại Ca Là Thật Nạp A
+? L?i khi t?i ch??ng 24356529: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 24413001: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 24413025: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 24432336: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 24432329: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 24432319: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 24432335: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 24450261: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 24450860: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 24450859: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 25501823: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 25674837: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 26824201: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 26824198: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 27021935: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 27021929: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 27021947: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 27151786: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[1282/1557] ok id=146825 remote=931 downloaded=931 missing_after=0 failed=0
+[1283/1557] start id=133422 chapters=900 name=Nhà Quyền Thế Quý Gả
+? L?i khi t?i ch??ng 19695009: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 19695024: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 19695026: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 24299495: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[1283/1557] ok id=133422 remote=900 downloaded=900 missing_after=0 failed=0
+processed_this_run=2
+done_total=6181
+failed_total=2339
+report=C:\Dev\MTC_Download\logs\download_unfinished_id_queue_report.json

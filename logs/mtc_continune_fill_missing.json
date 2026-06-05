@@ -1,0 +1,193 @@
+{
+  "books": [
+    {
+      "id": 140643,
+      "name": "Lãng Nhân: Mỹ Nữ, Mời Tư Vấn",
+      "folder": "Lãng Nhân Mỹ Nữ Mời Tư Vấn",
+      "downloaded": [
+        {
+          "index": 834,
+          "chapter_id": 27290730,
+          "file": "Chương 834 Người Qua Đường.txt"
+        },
+        {
+          "index": 835,
+          "chapter_id": 27290731,
+          "file": "Chương 835 Đi.txt"
+        },
+        {
+          "index": 836,
+          "chapter_id": 27292713,
+          "file": "Chương 836 Quy Tắc Tượng Thần.txt"
+        },
+        {
+          "index": 837,
+          "chapter_id": 27294923,
+          "file": "Chương 837 Dần Dần Bộc Lộ.txt"
+        },
+        {
+          "index": 838,
+          "chapter_id": 27294924,
+          "file": "Chương 838 Nhiều Vấn Đề Cần Cân Nhắc.txt"
+        },
+        {
+          "index": 839,
+          "chapter_id": 27299669,
+          "file": "Chương 839 Tân Thiên Đế.txt"
+        },
+        {
+          "index": 840,
+          "chapter_id": 27299670,
+          "file": "Chương 840 Ngôn Nhân Đế.txt"
+        },
+        {
+          "index": 841,
+          "chapter_id": 27302593,
+          "file": "Chương 841 Phàm Trần Đạo Cung.txt"
+        },
+        {
+          "index": 842,
+          "chapter_id": 27302594,
+          "file": "Chương 842 Truy Sát.txt"
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 139039,
+      "name": "Đấu La: Khí Vận Chi Nữ? Cơ Duyên? Tất Cả Là Của Ta!",
+      "folder": "Đấu La Khí Vận Chi Nữ Cơ Duyên Tất Cả Là Của Ta",
+      "downloaded": [
+        {
+          "index": 722,
+          "chapter_id": 27302468,
+          "file": "Chương 722 Bắt rùa trong hũ.txt"
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 153347,
+      "name": "Chiến Lược Gia Thiên Tài",
+      "folder": "Chiến Lược Gia Thiên Tài",
+      "downloaded": [
+        {
+          "index": 173,
+          "chapter_id": 27290692,
+          "file": "Chương 173 Lời sám hối bằng chiến thắng.txt"
+        },
+        {
+          "index": 174,
+          "chapter_id": 27290693,
+          "file": "Chương 174 Cuộc đấu trí với cáo già Jorge Mendes.txt"
+        },
+        {
+          "index": 175,
+          "chapter_id": 27290694,
+          "file": "Chương 175 Chiến thắng thực dụng tại Beira Mar.txt"
+        },
+        {
+          "index": 176,
+          "chapter_id": 27290695,
+          "file": "Chương 176 Toàn cảnh sau tháng 1 dông bão.txt"
+        },
+        {
+          "index": 177,
+          "chapter_id": 27290696,
+          "file": "Chương 177 Sức nóng trước Siêu kinh điển Bồ Đào Nha.txt"
+        },
+        {
+          "index": 178,
+          "chapter_id": 27292714,
+          "file": "Chương 178 Đại chiến Benfica Gọng kìm Gegenpressing.txt"
+        },
+        {
+          "index": 179,
+          "chapter_id": 27292715,
+          "file": "Chương 179 Kết liệu đại địa của quỷ đỏ Lisbon.txt"
+        },
+        {
+          "index": 180,
+          "chapter_id": 27292716,
+          "file": "Chương 180 Toan tính điểm rơi phong độ trước cúp châu Âu.txt"
+        },
+        {
+          "index": 181,
+          "chapter_id": 27292717,
+          "file": "Chương 181 Đòn thực dụng tại hang đá Braga.txt"
+        },
+        {
+          "index": 182,
+          "chapter_id": 27292718,
+          "file": "Chương 182 Hành trình sang phía Đông Cái lạnh Donetsk.txt"
+        },
+        {
+          "index": 183,
+          "chapter_id": 27292719,
+          "file": "Chương 183 Khúc tráng ca giữa băng tuyết Ukraine.txt"
+        },
+        {
+          "index": 184,
+          "chapter_id": 27294867,
+          "file": "Chương 184 Bứt tốc tại giải quốc nội.txt"
+        },
+        {
+          "index": 185,
+          "chapter_id": 27294868,
+          "file": "Chương 185 Vượt ải Marítimo.txt"
+        },
+        {
+          "index": 186,
+          "chapter_id": 27294869,
+          "file": "Chương 186 Bước chạy đà hoàn hảo cho đại chiến C1.txt"
+        },
+        {
+          "index": 187,
+          "chapter_id": 27294870,
+          "file": "Chương 187 Đêm Champions League lịch sử tại Bento Pessoa.txt"
+        },
+        {
+          "index": 188,
+          "chapter_id": 27294871,
+          "file": "Chương 188 Siêu phẩn của Mahrez và bản lĩnh kẻ thách thức.txt"
+        },
+        {
+          "index": 189,
+          "chapter_id": 27294872,
+          "file": "Chương 189 Quả ngọt lịch sử và lá thăm Tứ kết nghiệt ngã.txt"
+        },
+        {
+          "index": 190,
+          "chapter_id": 27294873,
+          "file": "Chương 190 Trút giận lên Olhanense.txt"
+        },
+        {
+          "index": 191,
+          "chapter_id": 27294874,
+          "file": "Chương 191 Cái bẫy phòng ngự chủ động.txt"
+        },
+        {
+          "index": 192,
+          "chapter_id": 27294875,
+          "file": "Chương 192 Kết liễu lạnh lùng.txt"
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 151031,
+      "name": "Quả Cấm",
+      "folder": "Quả Cấm",
+      "downloaded": [
+        {
+          "index": 63,
+          "chapter_id": 26751393,
+          "file": "Chương 63 Untitled.txt"
+        }
+      ],
+      "failed": []
+    }
+  ],
+  "downloaded": 31,
+  "failed": 0
+}

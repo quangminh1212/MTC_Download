@@ -1,0 +1,35 @@
+book=Linh Dị Tiểu Nhân Vật Hung Mãnh
+book_id=110421
+out=C:\Dev\MTC\Linh Dị Tiểu Nhân Vật Hung Mãnh
+chapters_total=15 expected=15
+[1/15] download chapter_id=14295190 file=Chương 1 Dự Tuyển. Vtruyen.txt
+  OK decrypted=True written=Chương 1 Dự Tuyển. Vtruyen.txt
+[2/15] download chapter_id=14295192 file=Chương 2 Hệ Thống Tới. Vtruyen.txt
+  OK decrypted=True written=Chương 2 Hệ Thống Tới. Vtruyen.txt
+[3/15] download chapter_id=14295193 file=Chương 3 Lần Hai Đổi. Vtruyen.txt
+  OK decrypted=True written=Chương 3 Lần Hai Đổi. Vtruyen.txt
+[4/15] download chapter_id=14295195 file=Chương 4 Biến Cố. Vtruyen.txt
+  OK decrypted=True written=Chương 4 Biến Cố. Vtruyen.txt
+[5/15] download chapter_id=14295196 file=Chương 5 Trần Khiêm Chiến Lực. Vtruyen.txt
+  OK decrypted=True written=Chương 5 Trần Khiêm Chiến Lực. Vtruyen.txt
+[6/15] download chapter_id=14295197 file=Chương 6 Thừa Thiếu Khanh Mưu Trí. Vtruyen.txt
+  OK decrypted=True written=Chương 6 Thừa Thiếu Khanh Mưu Trí. Vtruyen.txt
+[7/15] download chapter_id=14295198 file=Chương 7 Tăng Lên Thực Lực. Vtruyen.txt
+  OK decrypted=True written=Chương 7 Tăng Lên Thực Lực. Vtruyen.txt
+[8/15] download chapter_id=14295199 file=Chương 8 Khách Khanh Tần Thi. Vtruyen.txt
+  OK decrypted=True written=Chương 8 Khách Khanh Tần Thi. Vtruyen.txt
+[9/15] download chapter_id=14295201 file=Chương 9 Tần Thanh Ra Tay. Vtruyen.txt
+  OK decrypted=True written=Chương 9 Tần Thanh Ra Tay. Vtruyen.txt
+[10/15] download chapter_id=14295204 file=Chương 10 Ác Ma Tần Thanh. Vtruyen.txt
+  OK decrypted=True written=Chương 10 Ác Ma Tần Thanh. Vtruyen.txt
+[11/15] download chapter_id=14297961 file=Chương 11 Thiết Lôi Thân. Vtruyen.txt
+  OK decrypted=True written=Chương 11 Thiết Lôi Thân. Vtruyen.txt
+[12/15] skip existing file=Chương 12 Hấp Huyết Diệt Địch.txt
+[13/15] skip existing file=Chương 13 Điên Cuồng Sát Nhân.txt
+[14/15] skip existing file=Chương 14 Tử Vong Chiến Đấu.txt
+[15/15] skip existing file=Chương 15 Gian Nan Lần Đầu Va Chạm Sự Thật.txt
+final_ok=15
+final_fail=0
+out=C:\Dev\MTC\Linh Dị Tiểu Nhân Vật Hung Mãnh
+
+[stderr]

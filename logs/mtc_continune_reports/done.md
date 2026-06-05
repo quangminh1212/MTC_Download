@@ -1,0 +1,85 @@
+﻿## Truyện đã hoàn thành
+
+- Architechs
+- Batman Chuyển Vị
+- Biến Thiên
+- Biến Thiên 1 Lol Để Người Già Dạy Cách Chơi Liên Minh
+- Biến Thiên 2 Đế Quốc Nhà Trần Chinh Phục Thế Giới
+- Biển Vô Tận Toàn Chức Vua Câu Cá
+- Bạch Quả Chi Đồng Nhân Thiếu Niên Ca Hành Quyển 1 end
+- Bắt Đầu Cùng Chị Dâu Nương Tựa Lẫn Nhau
+- Bắt Đầu Từ Kiếm Ma
+- Bắt Đầu Từ Lập Trình Viên
+- Chuyện Xưa Ở Hollywood
+- Chú Thạch Sư
+- Công Cuộc Bị 999 Em Gái Chinh Phục
+- Devil S Path Quỷ Giới Và Nhẫn Giới
+- Huyết Mạch Thần Nông Thiên Hồ Xuất Thế
+- Huyền Tiên Vừa Xuyên Qua Ta Thế Nhưng Không Có Hệ Thống
+- Hư Vô Xâm Chiếm
+- Hạt Giống Vũ Trụ
+- Jujutsu Kaisen Mèo Của Gojo Hơi Quái Quái
+- Khống Thiên Ma Công
+- Khởi Động Sức Mạnh Hư Vô Đặc Biệt
+- Kỵ Sĩ Và Ánh Sao
+- Linh Dị Tiểu Nhân Vật Hung Mãnh
+- Mha Jjk Chương Trình Khám Phá Lịch Sử Có Gì Đó Kì Lạ
+- Minecraft Thế Giới Sinh Tồn
+- Người Rối
+- Nhân Tổ
+- Pokemon Thứ Này Nhìn Quen Quen
+- Siêu Dự Bị
+- Stardust Crusaders Tôi Là Kakyoin
+- Sứ Mệnh Giữa Cuộc Chiến Hai Thiên Hà
+- Ta Xuyên Qua Tới Ma Thổi Đèn Thế Giới
+- The Gamer Hệ Thống
+- Thẻ Bài Sinh Tử
+- Tiền Hạo Kiếp Tây Du
+- Toàn Chức Pháp Sư Dị Bản
+- Tro Tàn
+- Trợ Lực Sáng Tác
+- Tận Thế Xuyên Việt Giả
+- Viêm Hoàng
+- Xuyên Về Thời Tự Đức
+- Đưa Nước Việt Vươn Tầm Thế Giới phần 1 Khải Hoàn Nhất Lộ
+- Đại Cồ Việt Nhất Thống Chí
+- Đại La Thiên Tôn
+- Đại Nam Quỷ Kí
+- Bát Long Quy Nguyên Truyện
+- Chiến Kỳ Phương Nam Dũng Khởi
+- Chiến Kỳ Phương Nam Dũng Khởi Phần 2
+- Comic Ác Ma Pháp Sư
+- Cầu Trường Rực Lửa
+- Diệt Nhân
+- Hùng Ca Đại Việt
+- Huyền Lục
+- Hướng Dẫn Cơ Bản
+- Hạnh Phúc Đơn Độc
+- Kẻ Thủ Hộ Vũ Trụ
+- Marvel Ta Là Tiểu Chiến Sỹ Họ Stark
+- Mỹ Thực Gia Tại Tu Tiên Giới
+- Nhất Thống Thiên Hạ
+- Nhị Thứ Nguyên Thần Tượng Âm Nhạc
+- Phong Lưu Chân Tiên
+- Phong Thần Ký
+- Senju Gia Tộc Quật Khởi
+- Sử Dụng Bookhub
+- Tam Giới Lục Cõi Ký
+- Thu Nhập Và Thanh Toán
+- Thú Tu Thành Thần
+- Thương Sinh Giang Đạo
+- Thất Nguyệt Tu Chân Giới
+- Thần Nguyên Kỷ
+- Thế Giới Duy Nhất Pháp Sư
+- Tiêu Dao Lục
+- Tại Đấu Phá Triệu Hoán Nữ Thần
+- Tổng Mạn Cùng Miêu Nương Không Đơn Giản Thường Ngày
+- Tới Dị Giới Làm Tiểu Bạch Kiểm
+- Vô Tận Trùng Sinh
+- Vô Địch Gian Thương
+- Đường Đến Vinh Quang
+- Đế Chế Kinh Tế Mới Tại Nước Việt
+- Đế Chế Đại Việt
+- Đế Vương Tiền Truyện
+- Đỉnh Luyện Thần Ma
+- Định Mệnh

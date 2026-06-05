@@ -1,0 +1,43 @@
+book=Jujutsu Kaisen Mèo Của Gojo Hơi Quái Quái
+book_id=115565
+out=C:\Dev\MTC\Jujutsu Kaisen Mèo Của Gojo Hơi Quái Quái
+chapters_total=17 expected=17
+[1/17] download chapter_id=15567345 file=Chương 1 Untitled.txt
+  OK decrypted=True written=Chương 1 Untitled.txt
+[2/17] download chapter_id=15567363 file=Chương 2 Untitled.txt
+  OK decrypted=True written=Chương 2 Untitled.txt
+[3/17] download chapter_id=15567548 file=Chương 3 Untitled.txt
+  OK decrypted=True written=Chương 3 Untitled.txt
+[4/17] download chapter_id=15567566 file=Chương 4 Untitled.txt
+  OK decrypted=True written=Chương 4 Untitled.txt
+[5/17] download chapter_id=15567571 file=Chương 5 Untitled.txt
+  OK decrypted=True written=Chương 5 Untitled.txt
+[6/17] download chapter_id=15567577 file=Chương 6 Untitled.txt
+  OK decrypted=True written=Chương 6 Untitled.txt
+[7/17] download chapter_id=15567588 file=Chương 7 Untitled.txt
+  OK decrypted=True written=Chương 7 Untitled.txt
+[8/17] download chapter_id=15567630 file=Chương 8 Untitled.txt
+  OK decrypted=True written=Chương 8 Untitled.txt
+[9/17] download chapter_id=15567640 file=Chương 9 Untitled.txt
+  OK decrypted=True written=Chương 9 Untitled.txt
+[10/17] download chapter_id=15576194 file=Chương 10 Untitled.txt
+  OK decrypted=True written=Chương 10 Untitled.txt
+[11/17] download chapter_id=15576221 file=Chương 11 Untitled.txt
+  OK decrypted=True written=Chương 11 Untitled.txt
+[12/17] download chapter_id=15583714 file=Chương 12 Untitled.txt
+  OK decrypted=True written=Chương 12 Untitled.txt
+[13/17] download chapter_id=15595833 file=Chương 13 Untitled.txt
+  OK decrypted=True written=Chương 13 Untitled.txt
+[14/17] download chapter_id=15599197 file=Chương 14 Untitled.txt
+  OK decrypted=True written=Chương 14 Untitled.txt
+[15/17] download chapter_id=15604018 file=Chương 15 Untitled.txt
+  OK decrypted=True written=Chương 15 Untitled.txt
+[16/17] download chapter_id=15604115 file=Chương 16 Untitled.txt
+  OK decrypted=True written=Chương 16 Untitled.txt
+[17/17] download chapter_id=15604247 file=Chương 17 Untitled.txt
+  OK decrypted=True written=Chương 17 Untitled.txt
+final_ok=17
+final_fail=0
+out=C:\Dev\MTC\Jujutsu Kaisen Mèo Của Gojo Hơi Quái Quái
+
+[stderr]

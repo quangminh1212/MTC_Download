@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-05-16T00:00:00.459552",
+  "queue_size": 13,
+  "current": null,
+  "done": [
+    {
+      "id": 121843,
+      "name": "Bắt Đầu Từ Kiếm Ma",
+      "have": 360,
+      "expected": 344
+    },
+    {
+      "id": 102223,
+      "name": "Đại La Thiên Tôn",
+      "have": 669,
+      "expected": 664
+    },
+    {
+      "id": 102461,
+      "name": "Đưa Nước Việt Vươn Tầm Thế Giới (phần 1): Khải Hoàn Nhất Lộ",
+      "have": 650,
+      "expected": 607
+    },
+    {
+      "id": 100738,
+      "name": "The Gamer Hệ Thống",
+      "have": 1038,
+      "expected": 1010
+    },
+    {
+      "id": 100677,
+      "name": "Công Cuộc Bị 999 Em Gái Chinh Phục",
+      "have": 1208,
+      "expected": 1106
+    }
+  ],
+  "skipped": [],
+  "failed": [
+    {
+      "id": 112190,
+      "name": "Biển Vô Tận: Toàn Chức Vua Câu Cá",
+      "have": 180,
+      "expected": 181
+    },
+    {
+      "id": 142470,
+      "name": "Devil'S Path: Quỷ Giới Và Nhẫn Giới",
+      "have": 321,
+      "expected": 322
+    },
+    {
+      "id": 105037,
+      "name": "Tổng Mạn: Cùng Miêu Nương Không Đơn Giản Thường Ngày",
+      "have": 1242,
+      "expected": 1243
+    },
+    {
+      "id": 106124,
+      "name": "Định Mệnh",
+      "have": 64,
+      "expected": 65
+    },
+    {
+      "id": 106815,
+      "name": "Comic Ác Ma Pháp Sư",
+      "have": 24,
+      "expected": 25
+    },
+    {
+      "id": 106431,
+      "name": "Đế Vương Tiền Truyện",
+      "have": 177,
+      "expected": 178
+    },
+    {
+      "id": 109958,
+      "name": "Hạnh Phúc Đơn Độc",
+      "have": 56,
+      "expected": 59
+    },
+    {
+      "id": 114701,
+      "name": "Dị Giới Trọng Sinh Lục",
+      "have": 33,
+      "expected": 34
+    }
+  ]
+}

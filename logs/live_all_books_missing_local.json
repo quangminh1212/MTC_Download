@@ -1,0 +1,2725 @@
+{
+  "all_books": 397,
+  "local_folder_count": 464,
+  "missing_local_count": 302,
+  "missing_local": [
+    {
+      "id": 136576,
+      "name": "Đấu La, Ta Thay Hoắc Vũ Hạo, Làm Thần Vương Trùng Sinh",
+      "chapter_count": 71,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đấu La Ta Thay Hoắc Vũ Hạo Làm Thần Vương Trùng Sinh",
+      "updated_at": "2026-05-16T02:40:05.000000Z"
+    },
+    {
+      "id": 123401,
+      "name": "Hào Khí Anh Hùng",
+      "chapter_count": 154,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hào Khí Anh Hùng",
+      "updated_at": "2026-05-15T23:58:21.000000Z"
+    },
+    {
+      "id": 153347,
+      "name": "Chiến Lược Gia Thiên Tài",
+      "chapter_count": 128,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Chiến Lược Gia Thiên Tài",
+      "updated_at": "2026-05-15T13:20:11.000000Z"
+    },
+    {
+      "id": 140643,
+      "name": "Lãng Nhân: Mỹ Nữ, Mời Tư Vấn",
+      "chapter_count": 824,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Lãng Nhân Mỹ Nữ Mời Tư Vấn",
+      "updated_at": "2026-05-16T03:00:09.000000Z"
+    },
+    {
+      "id": 107764,
+      "name": "Đế Cuồng",
+      "chapter_count": 2066,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đế Cuồng",
+      "updated_at": "2026-05-16T00:18:39.000000Z"
+    },
+    {
+      "id": 140101,
+      "name": "Thiên Địa Lưu Tiên",
+      "chapter_count": 199,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thiên Địa Lưu Tiên",
+      "updated_at": "2026-05-14T16:36:09.000000Z"
+    },
+    {
+      "id": 139039,
+      "name": "Đấu La: Khí Vận Chi Nữ? Cơ Duyên? Tất Cả Là Của Ta!",
+      "chapter_count": 713,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đấu La Khí Vận Chi Nữ Cơ Duyên Tất Cả Là Của Ta",
+      "updated_at": "2026-05-14T18:03:29.000000Z"
+    },
+    {
+      "id": 141518,
+      "name": "Thanh Thu Linh Nguyệt",
+      "chapter_count": 231,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thanh Thu Linh Nguyệt",
+      "updated_at": "2026-05-14T15:07:58.000000Z"
+    },
+    {
+      "id": 153579,
+      "name": "Trước Kia Có Một Toà Linh Kiếm Sơn Trang",
+      "chapter_count": 21,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Trước Kia Có Một Toà Linh Kiếm Sơn Trang",
+      "updated_at": "2026-05-16T01:54:17.000000Z"
+    },
+    {
+      "id": 105732,
+      "name": "Ta Là Hàn Vũ Thiên",
+      "chapter_count": 385,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Là Hàn Vũ Thiên",
+      "updated_at": "2026-05-12T20:56:07.000000Z"
+    },
+    {
+      "id": 153557,
+      "name": "Tại Marvel Lập Hội Ngân Sách",
+      "chapter_count": 1,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tại Marvel Lập Hội Ngân Sách",
+      "updated_at": "2026-05-10T15:24:18.000000Z"
+    },
+    {
+      "id": 141743,
+      "name": "The Vampire’s Bloodbound",
+      "chapter_count": 92,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "The Vampire s Bloodbound",
+      "updated_at": "2026-05-12T02:59:10.000000Z"
+    },
+    {
+      "id": 146629,
+      "name": "May Mắn Xuyên Vào Vũ Trụ Creepypasta",
+      "chapter_count": 106,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "May Mắn Xuyên Vào Vũ Trụ Creepypasta",
+      "updated_at": "2026-05-09T15:17:39.000000Z"
+    },
+    {
+      "id": 153514,
+      "name": "Game Point: Cú Đánh Cuối Cùng",
+      "chapter_count": 10,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Game Point Cú Đánh Cuối Cùng",
+      "updated_at": "2026-05-04T08:10:52.000000Z"
+    },
+    {
+      "id": 140331,
+      "name": "Ghế Số 1: Cùng Nhau Chơi Sập Cái Mạt Thế Này.",
+      "chapter_count": 450,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ghế Số 1 Cùng Nhau Chơi Sập Cái Mạt Thế Này",
+      "updated_at": "2026-05-11T16:35:06.000000Z"
+    },
+    {
+      "id": 109633,
+      "name": "Mộng Đạo Trường Sinh",
+      "chapter_count": 420,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Mộng Đạo Trường Sinh",
+      "updated_at": "2026-05-14T14:11:55.000000Z"
+    },
+    {
+      "id": 138408,
+      "name": "Sword Art Online: Kiếm Sĩ Ánh Trăng.",
+      "chapter_count": 404,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Sword Art Online Kiếm Sĩ Ánh Trăng",
+      "updated_at": "2026-05-15T16:28:12.000000Z"
+    },
+    {
+      "id": 117946,
+      "name": "One Piece: The Gamer Tại South Blue",
+      "chapter_count": 113,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "One Piece The Gamer Tại South Blue",
+      "updated_at": "2026-05-11T07:06:10.000000Z"
+    },
+    {
+      "id": 111422,
+      "name": "Thịnh Thế Diên Ninh",
+      "chapter_count": 1516,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thịnh Thế Diên Ninh",
+      "updated_at": "2026-05-15T08:00:09.000000Z"
+    },
+    {
+      "id": 152567,
+      "name": "Xuất Thẻ Hư Vô",
+      "chapter_count": 17,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Xuất Thẻ Hư Vô",
+      "updated_at": "2026-05-15T23:46:59.000000Z"
+    },
+    {
+      "id": 109099,
+      "name": "Nhất Kiếp Tiên Phàm",
+      "chapter_count": 1698,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nhất Kiếp Tiên Phàm",
+      "updated_at": "2026-05-15T20:00:11.000000Z"
+    },
+    {
+      "id": 149126,
+      "name": "Hắc Ám Ẩn Giả.",
+      "chapter_count": 145,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hắc Ám Ẩn Giả",
+      "updated_at": "2026-05-09T05:50:01.000000Z"
+    },
+    {
+      "id": 151448,
+      "name": "Dạng Thức Tâm Trí",
+      "chapter_count": 111,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Dạng Thức Tâm Trí",
+      "updated_at": "2026-05-09T07:24:53.000000Z"
+    },
+    {
+      "id": 110493,
+      "name": "Ta Bán Hủ Tiếu Tại Dị Giới",
+      "chapter_count": 1050,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Bán Hủ Tiếu Tại Dị Giới",
+      "updated_at": "2026-05-15T23:15:37.000000Z"
+    },
+    {
+      "id": 110466,
+      "name": "Đế Quốc Nhật Bản",
+      "chapter_count": 405,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Đế Quốc Nhật Bản",
+      "updated_at": "2026-05-01T00:27:35.000000Z"
+    },
+    {
+      "id": 108742,
+      "name": "Sắt Thép Ma Pháp",
+      "chapter_count": 972,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Sắt Thép Ma Pháp",
+      "updated_at": "2026-05-13T19:38:37.000000Z"
+    },
+    {
+      "id": 144909,
+      "name": "Sủng Thú Sư",
+      "chapter_count": 285,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Sủng Thú Sư",
+      "updated_at": "2026-05-10T05:04:02.000000Z"
+    },
+    {
+      "id": 143601,
+      "name": "Xuyên Thành Liếm Cẩu Nam Phụ, Ta Một Cước Đạp Vỡ Thiên Mệnh!",
+      "chapter_count": 183,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Xuyên Thành Liếm Cẩu Nam Phụ Ta Một Cước Đạp Vỡ Thiên Mệnh",
+      "updated_at": "2026-05-11T01:54:57.000000Z"
+    },
+    {
+      "id": 138424,
+      "name": "Bị Bán Sang Cao Miên, Ta Triệu Hồi Tổ Chức Áo Đen!",
+      "chapter_count": 272,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen",
+      "updated_at": "2026-05-14T01:59:51.000000Z"
+    },
+    {
+      "id": 126924,
+      "name": "Trở Lại 2009 Ta Làm Lại Cuộc Đời",
+      "chapter_count": 1062,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Trở Lại 2009 Ta Làm Lại Cuộc Đời",
+      "updated_at": "2026-05-14T18:45:25.000000Z"
+    },
+    {
+      "id": 122222,
+      "name": "Thượng Thương Chi Hạ: Tuyên Cổ Đệ Nhất Tiên",
+      "chapter_count": 929,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên",
+      "updated_at": "2026-05-14T20:09:55.000000Z"
+    },
+    {
+      "id": 129139,
+      "name": "Tam Quốc : Từ Giao Châu Bắt Đầu",
+      "chapter_count": 283,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tam Quốc Từ Giao Châu Bắt Đầu",
+      "updated_at": "2026-05-15T12:12:02.000000Z"
+    },
+    {
+      "id": 149581,
+      "name": "1854",
+      "chapter_count": 974,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "1854",
+      "updated_at": "2026-05-03T03:30:46.000000Z"
+    },
+    {
+      "id": 122993,
+      "name": "Ma Chủng",
+      "chapter_count": 1457,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ma Chủng",
+      "updated_at": "2026-05-16T01:38:06.000000Z"
+    },
+    {
+      "id": 115313,
+      "name": "Ngôi Sao Hi Vọng",
+      "chapter_count": 1202,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ngôi Sao Hi Vọng",
+      "updated_at": "2026-05-16T01:53:21.000000Z"
+    },
+    {
+      "id": 136693,
+      "name": "Trở Về 1996 Bắt Đầu Từ Chợ Lớn Bán Thịt Heo",
+      "chapter_count": 1203,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Trở Về 1996 Bắt Đầu Từ Chợ Lớn Bán Thịt Heo",
+      "updated_at": "2026-05-03T16:36:39.000000Z"
+    },
+    {
+      "id": 147066,
+      "name": "Thực Tế Ảo: Thống Lĩnh Quân Đoàn Hắc Ám",
+      "chapter_count": 296,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thực Tế Ảo Thống Lĩnh Quân Đoàn Hắc Ám",
+      "updated_at": "2026-05-01T01:28:39.000000Z"
+    },
+    {
+      "id": 104758,
+      "name": "Khúc Độc Hành Trong Đêm Trường Tận Thế",
+      "chapter_count": 2606,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Khúc Độc Hành Trong Đêm Trường Tận Thế",
+      "updated_at": "2026-05-13T13:06:29.000000Z"
+    },
+    {
+      "id": 119569,
+      "name": "Xuyên Về Thời Lê Làm Quân Phiệt",
+      "chapter_count": 1009,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Xuyên Về Thời Lê Làm Quân Phiệt",
+      "updated_at": "2026-05-15T04:56:37.000000Z"
+    },
+    {
+      "id": 151616,
+      "name": "Trở Về 2013, Bắt Đầu Từ Chứng Khoán Đến Đỉnh Hollywood.",
+      "chapter_count": 88,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Trở Về 2013 Bắt Đầu Từ Chứng Khoán Đến Đỉnh Hollywood",
+      "updated_at": "2026-05-06T06:55:30.000000Z"
+    },
+    {
+      "id": 129298,
+      "name": "Tình Họa Sơn Hà",
+      "chapter_count": 115,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tình Họa Sơn Hà",
+      "updated_at": "2026-04-01T11:58:17.000000Z"
+    },
+    {
+      "id": 151700,
+      "name": "Zombie : Bắt Đầu Đánh Dấu T1000",
+      "chapter_count": 78,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Zombie Bắt Đầu Đánh Dấu T1000",
+      "updated_at": "2026-05-13T17:13:50.000000Z"
+    },
+    {
+      "id": 123508,
+      "name": "Yêu Võ Thần",
+      "chapter_count": 250,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Yêu Võ Thần",
+      "updated_at": "2026-05-04T02:38:00.000000Z"
+    },
+    {
+      "id": 107636,
+      "name": "Khí Vận Chi Tử, Phản Diện Chi Lộ",
+      "chapter_count": 69,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Khí Vận Chi Tử Phản Diện Chi Lộ",
+      "updated_at": "2026-05-01T03:08:11.000000Z"
+    },
+    {
+      "id": 113504,
+      "name": "Bánh Xe Vận Mệnh Tại Hogwarts",
+      "chapter_count": 747,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Bánh Xe Vận Mệnh Tại Hogwarts",
+      "updated_at": "2026-05-11T16:44:43.000000Z"
+    },
+    {
+      "id": 151104,
+      "name": "Võ Hành Chi Nhân",
+      "chapter_count": 33,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Võ Hành Chi Nhân",
+      "updated_at": "2026-04-29T15:21:33.000000Z"
+    },
+    {
+      "id": 152566,
+      "name": "Tam Nguyên Chấn Thế",
+      "chapter_count": 204,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tam Nguyên Chấn Thế",
+      "updated_at": "2026-05-02T23:18:12.000000Z"
+    },
+    {
+      "id": 152760,
+      "name": "Vovinam Tông Sư Tại Akame Ga Kill Bán Mỳ Quảng",
+      "chapter_count": 51,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vovinam Tông Sư Tại Akame Ga Kill Bán Mỳ Quảng",
+      "updated_at": "2026-05-08T09:44:13.000000Z"
+    },
+    {
+      "id": 152403,
+      "name": "Thiên Ngoại Lai: Cấm Khu",
+      "chapter_count": 72,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thiên Ngoại Lai Cấm Khu",
+      "updated_at": "2026-04-29T16:11:16.000000Z"
+    },
+    {
+      "id": 143196,
+      "name": "Klyntar Thôn Phệ",
+      "chapter_count": 3,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Klyntar Thôn Phệ",
+      "updated_at": "2026-04-16T09:05:32.000000Z"
+    },
+    {
+      "id": 131865,
+      "name": "Tung Hoành Dị Giới",
+      "chapter_count": 73,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tung Hoành Dị Giới",
+      "updated_at": "2026-03-05T17:50:18.000000Z"
+    },
+    {
+      "id": 152568,
+      "name": "Đệ Nhất Ngân Hà",
+      "chapter_count": 32,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đệ Nhất Ngân Hà",
+      "updated_at": "2026-05-12T07:09:25.000000Z"
+    },
+    {
+      "id": 149202,
+      "name": "Xuyên Nhanh: Từ Blade Bắt Đầu",
+      "chapter_count": 231,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Xuyên Nhanh Từ Blade Bắt Đầu",
+      "updated_at": "2026-05-13T16:06:57.000000Z"
+    },
+    {
+      "id": 145739,
+      "name": "Thiên La",
+      "chapter_count": 296,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thiên La",
+      "updated_at": "2026-05-02T10:59:39.000000Z"
+    },
+    {
+      "id": 152019,
+      "name": "Nấp Sau Lv 0",
+      "chapter_count": 26,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nấp Sau Lv 0",
+      "updated_at": "2026-05-01T04:48:22.000000Z"
+    },
+    {
+      "id": 115550,
+      "name": "Việt Linh",
+      "chapter_count": 103,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Việt Linh",
+      "updated_at": "2026-05-03T08:47:50.000000Z"
+    },
+    {
+      "id": 152585,
+      "name": "Ma Lộ Độc Tôn",
+      "chapter_count": 26,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ma Lộ Độc Tôn",
+      "updated_at": "2026-05-03T14:22:49.000000Z"
+    },
+    {
+      "id": 120001,
+      "name": "Mộng Tiên",
+      "chapter_count": 2097,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Mộng Tiên",
+      "updated_at": "2026-05-14T00:19:14.000000Z"
+    },
+    {
+      "id": 110825,
+      "name": "Tổng Mạn: The Gamer",
+      "chapter_count": 1331,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tổng Mạn The Gamer",
+      "updated_at": "2026-05-08T12:48:39.000000Z"
+    },
+    {
+      "id": 134351,
+      "name": "Hệ Thống Chuyển Sinh",
+      "chapter_count": 68,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Hệ Thống Chuyển Sinh",
+      "updated_at": "2026-04-01T13:05:25.000000Z"
+    },
+    {
+      "id": 115995,
+      "name": "Cô Thôn Trường Đạo",
+      "chapter_count": 273,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Cô Thôn Trường Đạo",
+      "updated_at": "2026-05-10T11:56:49.000000Z"
+    },
+    {
+      "id": 134683,
+      "name": "Đồng Thời Xuyên Qua: Bắt Đầu Từ Doraemon.",
+      "chapter_count": 228,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Đồng Thời Xuyên Qua Bắt Đầu Từ Doraemon",
+      "updated_at": "2026-05-14T17:28:35.000000Z"
+    },
+    {
+      "id": 151031,
+      "name": "Quả Cấm",
+      "chapter_count": 33,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Quả Cấm",
+      "updated_at": "2026-03-07T18:51:42.000000Z"
+    },
+    {
+      "id": 120335,
+      "name": "Tây Sơn Hành Trình Vượt Thời Gian",
+      "chapter_count": 596,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tây Sơn Hành Trình Vượt Thời Gian",
+      "updated_at": "2026-05-15T10:00:09.000000Z"
+    },
+    {
+      "id": 143709,
+      "name": "Biến Thiên 3 - Từ 1972 Bắt Đầu Làm Trùm Thương Nghiệp",
+      "chapter_count": 213,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Biến Thiên 3 Từ 1972 Bắt Đầu Làm Trùm Thương Nghiệp",
+      "updated_at": "2026-05-02T03:18:34.000000Z"
+    },
+    {
+      "id": 150040,
+      "name": "Pandora Gaia",
+      "chapter_count": 35,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Pandora Gaia",
+      "updated_at": "2026-05-01T04:17:40.000000Z"
+    },
+    {
+      "id": 148760,
+      "name": "Thám Hiểm Ký",
+      "chapter_count": 45,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thám Hiểm Ký",
+      "updated_at": "2026-03-15T17:27:52.000000Z"
+    },
+    {
+      "id": 148886,
+      "name": "Gen Z Tại Tu Tiên Giới",
+      "chapter_count": 52,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Gen Z Tại Tu Tiên Giới",
+      "updated_at": "2026-05-02T14:56:19.000000Z"
+    },
+    {
+      "id": 144110,
+      "name": "Sở Hữu Thần Thụ Quả Tại Dị Giới",
+      "chapter_count": 65,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Sở Hữu Thần Thụ Quả Tại Dị Giới",
+      "updated_at": "2026-04-19T08:54:17.000000Z"
+    },
+    {
+      "id": 130677,
+      "name": "Khải Hoàng Ma Thần",
+      "chapter_count": 124,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Khải Hoàng Ma Thần",
+      "updated_at": "2026-03-01T11:54:36.000000Z"
+    },
+    {
+      "id": 150123,
+      "name": "Tam Giới",
+      "chapter_count": 23,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tam Giới",
+      "updated_at": "2026-04-01T20:03:14.000000Z"
+    },
+    {
+      "id": 152371,
+      "name": "Tận Thế: Dung Hồn Dị Biến",
+      "chapter_count": 22,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tận Thế Dung Hồn Dị Biến",
+      "updated_at": "2026-04-30T10:22:45.000000Z"
+    },
+    {
+      "id": 149160,
+      "name": "One Piece: Dị Giới Đội Tầm Bảo",
+      "chapter_count": 36,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "One Piece Dị Giới Đội Tầm Bảo",
+      "updated_at": "2026-04-01T13:13:11.000000Z"
+    },
+    {
+      "id": 152701,
+      "name": "Liên Minh Huyền Thoại: Con Đường Hoàng Kim",
+      "chapter_count": 31,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Liên Minh Huyền Thoại Con Đường Hoàng Kim",
+      "updated_at": "2026-05-10T16:36:00.000000Z"
+    },
+    {
+      "id": 150707,
+      "name": "Mesatravia",
+      "chapter_count": 18,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Mesatravia",
+      "updated_at": "2026-02-04T15:06:16.000000Z"
+    },
+    {
+      "id": 148793,
+      "name": "Có Chút Viên Mãn",
+      "chapter_count": 21,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Có Chút Viên Mãn",
+      "updated_at": "2026-02-28T20:15:25.000000Z"
+    },
+    {
+      "id": 146565,
+      "name": "Tôi Gặp Phiên Bản Khác Giới Của Chính Mình",
+      "chapter_count": 101,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Tôi Gặp Phiên Bản Khác Giới Của Chính Mình",
+      "updated_at": "2026-05-13T19:42:07.000000Z"
+    },
+    {
+      "id": 146593,
+      "name": "Trọng Sinh Làm Nông Dân",
+      "chapter_count": 189,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Trọng Sinh Làm Nông Dân",
+      "updated_at": "2026-05-02T02:28:59.000000Z"
+    },
+    {
+      "id": 128805,
+      "name": "Tận Thế Xuyên",
+      "chapter_count": 101,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tận Thế Xuyên",
+      "updated_at": "2026-04-01T10:10:05.000000Z"
+    },
+    {
+      "id": 152996,
+      "name": "Tổng Mạn: Từ Onepiece Sở Hữu Exodia",
+      "chapter_count": 10,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tổng Mạn Từ Onepiece Sở Hữu Exodia",
+      "updated_at": "2026-05-14T08:16:43.000000Z"
+    },
+    {
+      "id": 122255,
+      "name": "Vạn Xuân Đế Quốc",
+      "chapter_count": 733,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vạn Xuân Đế Quốc",
+      "updated_at": "2026-05-09T18:02:33.000000Z"
+    },
+    {
+      "id": 151097,
+      "name": "Người Viết Lại Khế Ước",
+      "chapter_count": 54,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Người Viết Lại Khế Ước",
+      "updated_at": "2026-04-27T08:24:12.000000Z"
+    },
+    {
+      "id": 151665,
+      "name": "Pokemon: Khởi Đầu Mười Năm",
+      "chapter_count": 40,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Pokemon Khởi Đầu Mười Năm",
+      "updated_at": "2026-05-03T10:23:18.000000Z"
+    },
+    {
+      "id": 152173,
+      "name": "Mạt Thế Độc Tiên",
+      "chapter_count": 105,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Mạt Thế Độc Tiên",
+      "updated_at": "2026-05-06T05:20:53.000000Z"
+    },
+    {
+      "id": 140641,
+      "name": "Sao Nỡ Làm Muggle Giữa Thế Giới Phép Thuật",
+      "chapter_count": 328,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Sao Nỡ Làm Muggle Giữa Thế Giới Phép Thuật",
+      "updated_at": "2026-05-01T03:58:01.000000Z"
+    },
+    {
+      "id": 139838,
+      "name": "Bói Toán Lấy Mạng Đổi Mệnh Dối Trời Gạt Đất",
+      "chapter_count": 103,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Bói Toán Lấy Mạng Đổi Mệnh Dối Trời Gạt Đất",
+      "updated_at": "2026-05-01T02:27:40.000000Z"
+    },
+    {
+      "id": 135181,
+      "name": "Trở Về Thế Kỉ 14",
+      "chapter_count": 241,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Trở Về Thế Kỉ 14",
+      "updated_at": "2026-05-13T18:36:21.000000Z"
+    },
+    {
+      "id": 152897,
+      "name": "Thợ Săn Tam Giới",
+      "chapter_count": 10,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thợ Săn Tam Giới",
+      "updated_at": "2026-05-10T15:42:22.000000Z"
+    },
+    {
+      "id": 148071,
+      "name": "Sáng Tạo Sinh Mệnh Chơi Hỏng Nhân Loại",
+      "chapter_count": 58,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Sáng Tạo Sinh Mệnh Chơi Hỏng Nhân Loại",
+      "updated_at": "2026-05-01T04:33:51.000000Z"
+    },
+    {
+      "id": 110298,
+      "name": "Luân Hồi Thương Đế",
+      "chapter_count": 1040,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Luân Hồi Thương Đế",
+      "updated_at": "2026-05-01T01:41:21.000000Z"
+    },
+    {
+      "id": 121026,
+      "name": "Lol: Thời Đại Quang Vinh",
+      "chapter_count": 411,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Lol Thời Đại Quang Vinh",
+      "updated_at": "2026-05-15T18:30:09.000000Z"
+    },
+    {
+      "id": 149725,
+      "name": "Đấu La: Huyết Nhân Cuồng Đồ",
+      "chapter_count": 44,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đấu La Huyết Nhân Cuồng Đồ",
+      "updated_at": "2026-05-01T02:48:23.000000Z"
+    },
+    {
+      "id": 109176,
+      "name": "Hệ Thống Thiên Ngoại Chi Ma",
+      "chapter_count": 582,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hệ Thống Thiên Ngoại Chi Ma",
+      "updated_at": "2026-05-12T06:42:48.000000Z"
+    },
+    {
+      "id": 120329,
+      "name": "Nam Thiên Chiến Hỏa",
+      "chapter_count": 1068,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nam Thiên Chiến Hỏa",
+      "updated_at": "2026-05-11T15:21:01.000000Z"
+    },
+    {
+      "id": 151710,
+      "name": "Tận Thế Sinh Tồn, Theo Đội Xe Một Đường Cầu Sinh",
+      "chapter_count": 31,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tận Thế Sinh Tồn Theo Đội Xe Một Đường Cầu Sinh",
+      "updated_at": "2026-05-02T08:06:46.000000Z"
+    },
+    {
+      "id": 121873,
+      "name": "Xuyên Mộng Giả",
+      "chapter_count": 257,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Xuyên Mộng Giả",
+      "updated_at": "2026-03-22T08:02:30.000000Z"
+    },
+    {
+      "id": 129407,
+      "name": "Vạn Đại Việt Song Song",
+      "chapter_count": 72,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vạn Đại Việt Song Song",
+      "updated_at": "2026-05-04T16:05:17.000000Z"
+    },
+    {
+      "id": 152353,
+      "name": "Trong Tuyết Mẫu Đơn, Phượng Minh Tam Quốc",
+      "chapter_count": 16,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Trong Tuyết Mẫu Đơn Phượng Minh Tam Quốc",
+      "updated_at": "2026-04-01T13:40:07.000000Z"
+    },
+    {
+      "id": 152548,
+      "name": "Thống Soái, Uống Nhầm Thuốc Hay Ăn Nhầm Canh?",
+      "chapter_count": 24,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thống Soái Uống Nhầm Thuốc Hay Ăn Nhầm Canh",
+      "updated_at": "2026-05-01T03:35:31.000000Z"
+    },
+    {
+      "id": 105966,
+      "name": "Thiên Ly Vũ",
+      "chapter_count": 132,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thiên Ly Vũ",
+      "updated_at": "2026-03-24T00:05:01.000000Z"
+    },
+    {
+      "id": 149578,
+      "name": "Toàn Dân Lãnh Chúa: Quang Hoàn Gia Thân",
+      "chapter_count": 24,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Toàn Dân Lãnh Chúa Quang Hoàn Gia Thân",
+      "updated_at": "2026-05-03T10:23:36.000000Z"
+    },
+    {
+      "id": 150773,
+      "name": "Vô Giải",
+      "chapter_count": 12,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vô Giải",
+      "updated_at": "2026-03-27T06:01:09.000000Z"
+    },
+    {
+      "id": 148006,
+      "name": "Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu",
+      "chapter_count": 256,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu",
+      "updated_at": "2026-05-15T05:18:13.000000Z"
+    },
+    {
+      "id": 151962,
+      "name": "Võng Du Giáng Lâm: Từ Kế Hoạch Tạo Thần Bắt Đầu",
+      "chapter_count": 21,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Võng Du Giáng Lâm Từ Kế Hoạch Tạo Thần Bắt Đầu",
+      "updated_at": "2026-05-14T16:28:44.000000Z"
+    },
+    {
+      "id": 152023,
+      "name": "Superman Của Mcu",
+      "chapter_count": 34,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Superman Của Mcu",
+      "updated_at": "2026-05-11T04:53:01.000000Z"
+    },
+    {
+      "id": 150712,
+      "name": "Ngự Thần Lục",
+      "chapter_count": 46,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ngự Thần Lục",
+      "updated_at": "2026-05-01T03:12:45.000000Z"
+    },
+    {
+      "id": 131897,
+      "name": "Đại Yêu Quái",
+      "chapter_count": 465,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đại Yêu Quái",
+      "updated_at": "2026-05-15T22:01:26.000000Z"
+    },
+    {
+      "id": 129205,
+      "name": "Từ Sóng Gió Gia Tộc Trở Thành Youtuber",
+      "chapter_count": 19,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Từ Sóng Gió Gia Tộc Trở Thành Youtuber",
+      "updated_at": "2026-03-16T18:07:48.000000Z"
+    },
+    {
+      "id": 147561,
+      "name": "Vô Vọng Tiên Đồ",
+      "chapter_count": 24,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vô Vọng Tiên Đồ",
+      "updated_at": "2026-02-01T13:36:26.000000Z"
+    },
+    {
+      "id": 111111,
+      "name": "Từ Arknights Bắt  Đầu Xây Dựng Thế Lực",
+      "chapter_count": 219,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Từ Arknights Bắt Đầu Xây Dựng Thế Lực",
+      "updated_at": "2026-05-01T04:04:26.000000Z"
+    },
+    {
+      "id": 127250,
+      "name": "Bất Diệt Kinh",
+      "chapter_count": 208,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Bất Diệt Kinh",
+      "updated_at": "2026-05-01T04:37:04.000000Z"
+    },
+    {
+      "id": 144841,
+      "name": "Kh'Alzhei In The Night - Loạn Ức Trong Đêm Tối",
+      "chapter_count": 87,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Kh Alzhei In The Night Loạn Ức Trong Đêm Tối",
+      "updated_at": "2026-03-01T13:06:14.000000Z"
+    },
+    {
+      "id": 151695,
+      "name": "Quỷ Dị Tai Ương",
+      "chapter_count": 11,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Quỷ Dị Tai Ương",
+      "updated_at": "2026-04-13T04:40:07.000000Z"
+    },
+    {
+      "id": 148973,
+      "name": "Đấu La: Tửu Lâu Của Những Kẻ Bị Bỏ Rơi",
+      "chapter_count": 13,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đấu La Tửu Lâu Của Những Kẻ Bị Bỏ Rơi",
+      "updated_at": "2026-05-02T10:58:05.000000Z"
+    },
+    {
+      "id": 143853,
+      "name": "Trục Đạo Nghịch Thiên",
+      "chapter_count": 42,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Trục Đạo Nghịch Thiên",
+      "updated_at": "2026-03-01T12:56:12.000000Z"
+    },
+    {
+      "id": 108844,
+      "name": "Hồi Kí Hadidu",
+      "chapter_count": 77,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Hồi Kí Hadidu",
+      "updated_at": "2026-03-01T13:17:49.000000Z"
+    },
+    {
+      "id": 151238,
+      "name": "Tiếng Vọng Nơi Vực Sâu",
+      "chapter_count": 18,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tiếng Vọng Nơi Vực Sâu",
+      "updated_at": "2026-03-01T12:58:31.000000Z"
+    },
+    {
+      "id": 148554,
+      "name": "Ta Đúng Là Nhân Loại",
+      "chapter_count": 44,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Đúng Là Nhân Loại",
+      "updated_at": "2026-04-01T12:10:50.000000Z"
+    },
+    {
+      "id": 150191,
+      "name": "Vạn Giới Chiến Ca",
+      "chapter_count": 25,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vạn Giới Chiến Ca",
+      "updated_at": "2026-02-01T15:02:28.000000Z"
+    },
+    {
+      "id": 149797,
+      "name": "Dạ Trung Vi Quang",
+      "chapter_count": 91,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Dạ Trung Vi Quang",
+      "updated_at": "2026-04-07T00:08:12.000000Z"
+    },
+    {
+      "id": 138115,
+      "name": "Tôi Chỉ Muốn Sống Yên Ổn!",
+      "chapter_count": 60,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Tôi Chỉ Muốn Sống Yên Ổn",
+      "updated_at": "2026-05-01T04:17:34.000000Z"
+    },
+    {
+      "id": 111567,
+      "name": "Sức Mạnh Đế Vương",
+      "chapter_count": 33,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Sức Mạnh Đế Vương",
+      "updated_at": "2026-03-07T18:51:54.000000Z"
+    },
+    {
+      "id": 151003,
+      "name": "Chép Nhạc: Lại Một Thế Ta Gặp Người",
+      "chapter_count": 12,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Chép Nhạc Lại Một Thế Ta Gặp Người",
+      "updated_at": "2026-03-17T20:31:52.000000Z"
+    },
+    {
+      "id": 129096,
+      "name": "Yu-Gi-Oh: Trở Thành Hack Là Loại Trải Nghiệm Gì",
+      "chapter_count": 280,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Yu Gi Oh Trở Thành Hack Là Loại Trải Nghiệm Gì",
+      "updated_at": "2026-05-11T08:16:27.000000Z"
+    },
+    {
+      "id": 150583,
+      "name": "Nghịch Mệnh",
+      "chapter_count": 14,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nghịch Mệnh",
+      "updated_at": "2026-04-05T02:31:32.000000Z"
+    },
+    {
+      "id": 150834,
+      "name": "Tung Hoành Thiên Hạ",
+      "chapter_count": 10,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tung Hoành Thiên Hạ",
+      "updated_at": "2026-03-01T12:36:24.000000Z"
+    },
+    {
+      "id": 147931,
+      "name": "Tòa Tháp Thần Tọa.",
+      "chapter_count": 59,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tòa Tháp Thần Tọa",
+      "updated_at": "2026-03-01T13:31:52.000000Z"
+    },
+    {
+      "id": 143347,
+      "name": "Vu Sư Ký Sự",
+      "chapter_count": 36,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vu Sư Ký Sự",
+      "updated_at": "2026-04-13T16:31:22.000000Z"
+    },
+    {
+      "id": 135892,
+      "name": "Mạt Thế: Ta Kiến Thiết Tối Cường Căn Cứ Ngầm",
+      "chapter_count": 205,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Mạt Thế Ta Kiến Thiết Tối Cường Căn Cứ Ngầm",
+      "updated_at": "2026-05-09T12:40:53.000000Z"
+    },
+    {
+      "id": 144337,
+      "name": "Kẻ Viết Lại Lịch Sử Esport",
+      "chapter_count": 55,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Kẻ Viết Lại Lịch Sử Esport",
+      "updated_at": "2026-05-01T03:28:40.000000Z"
+    },
+    {
+      "id": 147314,
+      "name": "Cuồng Đồ",
+      "chapter_count": 53,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Cuồng Đồ",
+      "updated_at": "2026-03-07T18:49:31.000000Z"
+    },
+    {
+      "id": 140678,
+      "name": "Bài Trừ Thuộc Tính Xấu Ta Thành Thần",
+      "chapter_count": 35,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Bài Trừ Thuộc Tính Xấu Ta Thành Thần",
+      "updated_at": "2026-05-10T05:32:29.000000Z"
+    },
+    {
+      "id": 131162,
+      "name": "Warhammer 40k: Sứ Giả Của Những Vì Sao",
+      "chapter_count": 99,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Warhammer 40k Sứ Giả Của Những Vì Sao",
+      "updated_at": "2026-04-27T02:23:20.000000Z"
+    },
+    {
+      "id": 138229,
+      "name": "Tru Tiên Nhất Mộng",
+      "chapter_count": 98,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tru Tiên Nhất Mộng",
+      "updated_at": "2026-05-15T15:21:44.000000Z"
+    },
+    {
+      "id": 144266,
+      "name": "Hồng Hoang Biên Niên Sử",
+      "chapter_count": 107,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hồng Hoang Biên Niên Sử",
+      "updated_at": "2026-01-01T13:37:06.000000Z"
+    },
+    {
+      "id": 146741,
+      "name": "Huyễn Kỳ Thư: Trò Chơi Của Thần",
+      "chapter_count": 36,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Huyễn Kỳ Thư Trò Chơi Của Thần",
+      "updated_at": "2026-02-03T01:39:36.000000Z"
+    },
+    {
+      "id": 135214,
+      "name": "Biên Niên Sử Zamecia",
+      "chapter_count": 67,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Biên Niên Sử Zamecia",
+      "updated_at": "2026-01-01T14:27:46.000000Z"
+    },
+    {
+      "id": 147983,
+      "name": "Nguyên Tiên",
+      "chapter_count": 16,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nguyên Tiên",
+      "updated_at": "2026-03-07T18:49:34.000000Z"
+    },
+    {
+      "id": 147292,
+      "name": "Ngũ Lôi Hoành Đỉnh",
+      "chapter_count": 62,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ngũ Lôi Hoành Đỉnh",
+      "updated_at": "2026-02-04T09:39:31.000000Z"
+    },
+    {
+      "id": 148959,
+      "name": "Đưa Đại Việt Trở Thành Siêu Cường",
+      "chapter_count": 33,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đưa Đại Việt Trở Thành Siêu Cường",
+      "updated_at": "2026-04-01T13:13:33.000000Z"
+    },
+    {
+      "id": 149630,
+      "name": "Mạc Hoàng Ký",
+      "chapter_count": 13,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Mạc Hoàng Ký",
+      "updated_at": "2026-01-09T14:15:12.000000Z"
+    },
+    {
+      "id": 134248,
+      "name": "Thám Tử Ngọt",
+      "chapter_count": 15,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thám Tử Ngọt",
+      "updated_at": "2026-01-01T15:08:29.000000Z"
+    },
+    {
+      "id": 148958,
+      "name": "Thân Du Vạn Giới",
+      "chapter_count": 11,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thân Du Vạn Giới",
+      "updated_at": "2026-03-01T12:34:18.000000Z"
+    },
+    {
+      "id": 146225,
+      "name": "Lạc Hồng Trùng Sinh Truyện",
+      "chapter_count": 44,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Lạc Hồng Trùng Sinh Truyện",
+      "updated_at": "2026-02-05T19:58:06.000000Z"
+    },
+    {
+      "id": 141211,
+      "name": "Ngũ Phúc Chi Vạn Lý Thiên",
+      "chapter_count": 18,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ngũ Phúc Chi Vạn Lý Thiên",
+      "updated_at": "2026-04-05T17:02:27.000000Z"
+    },
+    {
+      "id": 130845,
+      "name": "Ta Muốn Tu Tiên, Ta Không Muốn Làm Ông Trùm Truyền Thông Giải Trí",
+      "chapter_count": 151,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Muốn Tu Tiên Ta Không Muốn Làm Ông Trùm Truyền Thông Giải Trí",
+      "updated_at": "2026-05-14T21:08:36.000000Z"
+    },
+    {
+      "id": 147696,
+      "name": "Thế Giới Tiến Hóa",
+      "chapter_count": 60,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Thế Giới Tiến Hóa",
+      "updated_at": "2026-04-11T22:18:49.000000Z"
+    },
+    {
+      "id": 133630,
+      "name": "Nguyên Tổ",
+      "chapter_count": 195,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nguyên Tổ",
+      "updated_at": "2026-05-05T14:58:50.000000Z"
+    },
+    {
+      "id": 139983,
+      "name": "Khi Dòng Sông Ngừng Chảy",
+      "chapter_count": 42,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Khi Dòng Sông Ngừng Chảy",
+      "updated_at": "2026-01-24T13:31:14.000000Z"
+    },
+    {
+      "id": 148605,
+      "name": "Lol: Đường Đến Vinh Quang",
+      "chapter_count": 33,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Lol Đường Đến Vinh Quang",
+      "updated_at": "2026-05-01T03:43:48.000000Z"
+    },
+    {
+      "id": 125072,
+      "name": "Địa Ngục Lĩnh Chủ",
+      "chapter_count": 188,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Địa Ngục Lĩnh Chủ",
+      "updated_at": "2026-05-05T03:02:04.000000Z"
+    },
+    {
+      "id": 149108,
+      "name": "Chấp Niệm Sinh Linh",
+      "chapter_count": 11,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Chấp Niệm Sinh Linh",
+      "updated_at": "2026-01-01T14:46:42.000000Z"
+    },
+    {
+      "id": 149029,
+      "name": "Dota 2: Làm Lại Cuộc Đời",
+      "chapter_count": 18,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Dota 2 Làm Lại Cuộc Đời",
+      "updated_at": "2026-02-01T14:04:32.000000Z"
+    },
+    {
+      "id": 149319,
+      "name": "Mạt Thế: Ta Là Số Mười",
+      "chapter_count": 11,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Mạt Thế Ta Là Số Mười",
+      "updated_at": "2026-02-01T14:52:23.000000Z"
+    },
+    {
+      "id": 129792,
+      "name": "Xuyên Việt Bắt Đầu Thành Luyện Kim Thuật Sư",
+      "chapter_count": 181,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Xuyên Việt Bắt Đầu Thành Luyện Kim Thuật Sư",
+      "updated_at": "2026-05-01T04:10:51.000000Z"
+    },
+    {
+      "id": 148988,
+      "name": "Ma Kiếm Sư",
+      "chapter_count": 16,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ma Kiếm Sư",
+      "updated_at": "2026-01-01T14:26:03.000000Z"
+    },
+    {
+      "id": 148673,
+      "name": "Hành Trình Định Mệnh",
+      "chapter_count": 13,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hành Trình Định Mệnh",
+      "updated_at": "2026-03-17T15:40:45.000000Z"
+    },
+    {
+      "id": 133134,
+      "name": "Tây Du: 81 Kiếp Nạn Bị Chơi Hỏng Rồi",
+      "chapter_count": 158,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tây Du 81 Kiếp Nạn Bị Chơi Hỏng Rồi",
+      "updated_at": "2026-05-07T01:09:26.000000Z"
+    },
+    {
+      "id": 148682,
+      "name": "Ma Pháp Thần Vương",
+      "chapter_count": 16,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ma Pháp Thần Vương",
+      "updated_at": "2025-12-15T18:44:22.000000Z"
+    },
+    {
+      "id": 125122,
+      "name": "Diễn Sinh Du Hí: Vì Sao Năng Lực Của Tôi Là Minecraft?",
+      "chapter_count": 56,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Diễn Sinh Du Hí Vì Sao Năng Lực Của Tôi Là Minecraft",
+      "updated_at": "2026-05-06T03:06:09.000000Z"
+    },
+    {
+      "id": 143054,
+      "name": "Vô Tận Đại Hải, Chiến Hạm Thăng Cấp",
+      "chapter_count": 53,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vô Tận Đại Hải Chiến Hạm Thăng Cấp",
+      "updated_at": "2026-05-01T03:56:36.000000Z"
+    },
+    {
+      "id": 147778,
+      "name": "Gấp! Toàn Tộc Ta Đều Là Bệnh Đau Mắt Đỏ",
+      "chapter_count": 29,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Gấp Toàn Tộc Ta Đều Là Bệnh Đau Mắt Đỏ",
+      "updated_at": "2026-05-01T04:35:33.000000Z"
+    },
+    {
+      "id": 144090,
+      "name": "Tu Tiên Từ Kế Thừa Gia Sản Bắt Đầu",
+      "chapter_count": 39,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tu Tiên Từ Kế Thừa Gia Sản Bắt Đầu",
+      "updated_at": "2026-04-01T13:15:14.000000Z"
+    },
+    {
+      "id": 137149,
+      "name": "Ta Đế Vương : Đem Quốc Gia Thành Thiên Cổ Đệ Nhất",
+      "chapter_count": 80,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Đế Vương Đem Quốc Gia Thành Thiên Cổ Đệ Nhất",
+      "updated_at": "2026-04-14T12:23:07.000000Z"
+    },
+    {
+      "id": 144974,
+      "name": "Cửu Đế",
+      "chapter_count": 52,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Cửu Đế",
+      "updated_at": "2026-03-01T13:33:36.000000Z"
+    },
+    {
+      "id": 113673,
+      "name": "Đấu La Chi Thiên Cơ Phượng Hoàng",
+      "chapter_count": 186,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đấu La Chi Thiên Cơ Phượng Hoàng",
+      "updated_at": "2026-05-15T19:05:20.000000Z"
+    },
+    {
+      "id": 147861,
+      "name": "Vì Sợ Chết Ta Gia Nhập Ma Đạo Lại Không Ngờ Thành Vạn Cổ Ma Đế!",
+      "chapter_count": 20,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vì Sợ Chết Ta Gia Nhập Ma Đạo Lại Không Ngờ Thành Vạn Cổ Ma Đế",
+      "updated_at": "2026-03-17T05:47:14.000000Z"
+    },
+    {
+      "id": 147396,
+      "name": "Anh Hùng Diệt Thế",
+      "chapter_count": 15,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Anh Hùng Diệt Thế",
+      "updated_at": "2026-01-17T14:56:48.000000Z"
+    },
+    {
+      "id": 146774,
+      "name": "Shi Ryougi - Echo Of Nihility",
+      "chapter_count": 12,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Shi Ryougi Echo Of Nihility",
+      "updated_at": "2026-04-26T06:49:14.000000Z"
+    },
+    {
+      "id": 147288,
+      "name": "Nghịch Càn Khôn",
+      "chapter_count": 22,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Nghịch Càn Khôn",
+      "updated_at": "2026-01-01T13:55:35.000000Z"
+    },
+    {
+      "id": 140493,
+      "name": "Tiên Lộ Kỳ Duyên",
+      "chapter_count": 557,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tiên Lộ Kỳ Duyên",
+      "updated_at": "2026-02-26T20:26:28.000000Z"
+    },
+    {
+      "id": 135013,
+      "name": "Vừa Làm Ra App Du Lịch, Ngươi Liền Mang Ta Xuyên Qua Nhị Thứ Nguyên?",
+      "chapter_count": 129,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vừa Làm Ra App Du Lịch Ngươi Liền Mang Ta Xuyên Qua Nhị Thứ Nguyên",
+      "updated_at": "2026-05-13T13:43:09.000000Z"
+    },
+    {
+      "id": 146336,
+      "name": "Ngược Về Hồng Hoang Hỏi Sao Ta Sinh!",
+      "chapter_count": 14,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ngược Về Hồng Hoang Hỏi Sao Ta Sinh",
+      "updated_at": "2026-02-01T14:51:01.000000Z"
+    },
+    {
+      "id": 144228,
+      "name": "114: Cuộc Gọi Khẩn Cấp",
+      "chapter_count": 22,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "114 Cuộc Gọi Khẩn Cấp",
+      "updated_at": "2026-02-01T15:08:40.000000Z"
+    },
+    {
+      "id": 139269,
+      "name": "Lan : Khuấy Đảo Cổ Sử",
+      "chapter_count": 131,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Lan Khuấy Đảo Cổ Sử",
+      "updated_at": "2026-04-01T12:53:04.000000Z"
+    },
+    {
+      "id": 142699,
+      "name": "Thiên Hành",
+      "chapter_count": 36,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Thiên Hành",
+      "updated_at": "2026-01-01T15:37:51.000000Z"
+    },
+    {
+      "id": 117300,
+      "name": "Muốn Trường Sinh Trước Hết Phải Đồng Vợ Đồng Chồng ",
+      "chapter_count": 344,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Muốn Trường Sinh Trước Hết Phải Đồng Vợ Đồng Chồng",
+      "updated_at": "2026-05-01T02:47:31.000000Z"
+    },
+    {
+      "id": 145845,
+      "name": "Ký Ức Thần Vương",
+      "chapter_count": 18,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ký Ức Thần Vương",
+      "updated_at": "2025-09-03T20:47:24.000000Z"
+    },
+    {
+      "id": 142750,
+      "name": "Tiên Lộ",
+      "chapter_count": 182,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Tiên Lộ",
+      "updated_at": "2026-04-01T13:41:34.000000Z"
+    },
+    {
+      "id": 125841,
+      "name": "Game Thực Tế Ảo: Người Chơi Trọng Sinh",
+      "chapter_count": 1164,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Game Thực Tế Ảo Người Chơi Trọng Sinh",
+      "updated_at": "2026-05-07T12:44:59.000000Z"
+    },
+    {
+      "id": 128372,
+      "name": "Sở Thiên Ta Làm Trùm Ngày Tận Thế",
+      "chapter_count": 17,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Sở Thiên Ta Làm Trùm Ngày Tận Thế",
+      "updated_at": "2026-02-15T11:46:24.000000Z"
+    },
+    {
+      "id": 144479,
+      "name": "Tổng Mạn: Từ Kimetsu No Yaiba Bắt Đầu.",
+      "chapter_count": 38,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tổng Mạn Từ Kimetsu No Yaiba Bắt Đầu",
+      "updated_at": "2026-05-02T10:57:59.000000Z"
+    },
+    {
+      "id": 136610,
+      "name": "Vũ Trụ Chi Khuyết",
+      "chapter_count": 217,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Vũ Trụ Chi Khuyết",
+      "updated_at": "2026-04-28T04:14:30.000000Z"
+    },
+    {
+      "id": 128315,
+      "name": "Số Phận : Thời Đại Nguyên Thủy",
+      "chapter_count": 350,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Số Phận Thời Đại Nguyên Thủy",
+      "updated_at": "2026-05-13T19:35:01.000000Z"
+    },
+    {
+      "id": 142281,
+      "name": "Từ Vùng Biên Đến Chiến Trường Liên Sao",
+      "chapter_count": 34,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Từ Vùng Biên Đến Chiến Trường Liên Sao",
+      "updated_at": "2026-05-11T02:19:17.000000Z"
+    },
+    {
+      "id": 146343,
+      "name": "Hội Thánh: Lần Đầu Triệu Hoán Tôn Ngộ Không",
+      "chapter_count": 10,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hội Thánh Lần Đầu Triệu Hoán Tôn Ngộ Không",
+      "updated_at": "2026-02-04T21:34:42.000000Z"
+    },
+    {
+      "id": 137355,
+      "name": "Trở Lại 1986 Ta Làm Lại Cuộc Đời Từ Bán Cá Khô",
+      "chapter_count": 23,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Trở Lại 1986 Ta Làm Lại Cuộc Đời Từ Bán Cá Khô",
+      "updated_at": "2026-05-01T03:38:19.000000Z"
+    },
+    {
+      "id": 110283,
+      "name": "Tiến Hóa Tại Vô Hạn Thế Giới",
+      "chapter_count": 684,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tiến Hóa Tại Vô Hạn Thế Giới",
+      "updated_at": "2026-05-13T17:49:22.000000Z"
+    },
+    {
+      "id": 145137,
+      "name": "Dị Lực Vĩnh Cấm",
+      "chapter_count": 22,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Dị Lực Vĩnh Cấm",
+      "updated_at": "2025-12-14T15:06:23.000000Z"
+    },
+    {
+      "id": 145480,
+      "name": "Nguyệt Chiếu Vô Tâm",
+      "chapter_count": 11,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nguyệt Chiếu Vô Tâm",
+      "updated_at": "2026-01-05T23:03:57.000000Z"
+    },
+    {
+      "id": 116282,
+      "name": "Ta Đông Hoàng Thái Nhất Không Ứng Kiếp",
+      "chapter_count": 197,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Đông Hoàng Thái Nhất Không Ứng Kiếp",
+      "updated_at": "2026-05-01T04:26:49.000000Z"
+    },
+    {
+      "id": 144555,
+      "name": "Thiên Tôn Đế Mạch",
+      "chapter_count": 19,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thiên Tôn Đế Mạch",
+      "updated_at": "2026-05-12T17:31:20.000000Z"
+    },
+    {
+      "id": 144520,
+      "name": "Nhân Gian",
+      "chapter_count": 26,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nhân Gian",
+      "updated_at": "2026-03-01T13:36:45.000000Z"
+    },
+    {
+      "id": 145330,
+      "name": "Dược Linh Sư",
+      "chapter_count": 13,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Dược Linh Sư",
+      "updated_at": "2025-12-01T15:37:54.000000Z"
+    },
+    {
+      "id": 143908,
+      "name": "Vĩnh Sinh – Người Không Tên",
+      "chapter_count": 78,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vĩnh Sinh Người Không Tên",
+      "updated_at": "2026-03-07T18:51:07.000000Z"
+    },
+    {
+      "id": 145168,
+      "name": "Kiếm Tuyết Cuồng Tiên",
+      "chapter_count": 32,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Kiếm Tuyết Cuồng Tiên",
+      "updated_at": "2026-01-01T14:45:54.000000Z"
+    },
+    {
+      "id": 145227,
+      "name": "Cổ Đạo Nghịch Thiên",
+      "chapter_count": 12,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Cổ Đạo Nghịch Thiên",
+      "updated_at": "2026-03-01T13:31:27.000000Z"
+    },
+    {
+      "id": 145258,
+      "name": "Nhất Đạo Chí Tôn",
+      "chapter_count": 14,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nhất Đạo Chí Tôn",
+      "updated_at": "2026-01-01T15:10:44.000000Z"
+    },
+    {
+      "id": 131514,
+      "name": "Loạn Thế Cường Sinh",
+      "chapter_count": 165,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Loạn Thế Cường Sinh",
+      "updated_at": "2026-05-01T04:15:44.000000Z"
+    },
+    {
+      "id": 143446,
+      "name": "Sen Tàn Khi Thu Đến",
+      "chapter_count": 32,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Sen Tàn Khi Thu Đến",
+      "updated_at": "2026-02-19T15:16:14.000000Z"
+    },
+    {
+      "id": 144433,
+      "name": "Cố Mộng",
+      "chapter_count": 29,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Cố Mộng",
+      "updated_at": "2026-02-01T14:46:25.000000Z"
+    },
+    {
+      "id": 144601,
+      "name": "Đi Bộ Vuốt Râu Ở Blue Lock",
+      "chapter_count": 59,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Đi Bộ Vuốt Râu Ở Blue Lock",
+      "updated_at": "2026-03-22T21:38:53.000000Z"
+    },
+    {
+      "id": 121958,
+      "name": "Học Đường Rực Cháy",
+      "chapter_count": 112,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Học Đường Rực Cháy",
+      "updated_at": "2026-04-08T00:33:12.000000Z"
+    },
+    {
+      "id": 143368,
+      "name": "Loại Thẻ Bài Phế Phẩm Này Thực Sự Có Người Mua Sao?",
+      "chapter_count": 60,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Loại Thẻ Bài Phế Phẩm Này Thực Sự Có Người Mua Sao",
+      "updated_at": "2026-05-02T11:22:38.000000Z"
+    },
+    {
+      "id": 140892,
+      "name": "Kẻ Dạo Bước Không Gian: Từ Nô Lệ Thành Bá Chủ",
+      "chapter_count": 15,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Kẻ Dạo Bước Không Gian Từ Nô Lệ Thành Bá Chủ",
+      "updated_at": "2026-02-25T11:23:22.000000Z"
+    },
+    {
+      "id": 141438,
+      "name": "Xuyên Thư Tiên Võ Đế Tôn, Ta Làm Thần Thoại Đế",
+      "chapter_count": 23,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Xuyên Thư Tiên Võ Đế Tôn Ta Làm Thần Thoại Đế",
+      "updated_at": "2026-05-15T15:01:06.000000Z"
+    },
+    {
+      "id": 125974,
+      "name": "Honkai Star Rail: Các Vì Sao Nơi Vũ Trụ",
+      "chapter_count": 103,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Honkai Star Rail Các Vì Sao Nơi Vũ Trụ",
+      "updated_at": "2026-02-24T16:16:04.000000Z"
+    },
+    {
+      "id": 144672,
+      "name": "Cứu Vớt Toàn Nhân Loại, Bắt Đầu Từ Cày Cấp Trong Thế Giới Giả Lập",
+      "chapter_count": 15,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Cứu Vớt Toàn Nhân Loại Bắt Đầu Từ Cày Cấp Trong Thế Giới Giả Lập",
+      "updated_at": "2026-03-07T18:52:18.000000Z"
+    },
+    {
+      "id": 140369,
+      "name": "Ánh Sáng Cuối Trên Bầu Trời Máu",
+      "chapter_count": 48,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ánh Sáng Cuối Trên Bầu Trời Máu",
+      "updated_at": "2026-04-18T13:26:43.000000Z"
+    },
+    {
+      "id": 131253,
+      "name": "Trở Thành Hấp Huyết Chân Tổ Tại Dị Giới",
+      "chapter_count": 60,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Trở Thành Hấp Huyết Chân Tổ Tại Dị Giới",
+      "updated_at": "2026-03-20T19:28:07.000000Z"
+    },
+    {
+      "id": 120219,
+      "name": "Lê Dung",
+      "chapter_count": 270,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Lê Dung",
+      "updated_at": "2026-05-07T17:27:14.000000Z"
+    },
+    {
+      "id": 143846,
+      "name": "Hội Phát Triển Di Sản Cuối Cùng",
+      "chapter_count": 13,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hội Phát Triển Di Sản Cuối Cùng",
+      "updated_at": "2025-11-19T21:59:56.000000Z"
+    },
+    {
+      "id": 141444,
+      "name": "Bạch Nguyệt Vân Thiên",
+      "chapter_count": 30,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Bạch Nguyệt Vân Thiên",
+      "updated_at": "2026-01-01T15:33:42.000000Z"
+    },
+    {
+      "id": 122515,
+      "name": "Nhật Ký Pokemon: Hoenn Ta Đến Đây",
+      "chapter_count": 45,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nhật Ký Pokemon Hoenn Ta Đến Đây",
+      "updated_at": "2026-04-19T21:15:21.000000Z"
+    },
+    {
+      "id": 142369,
+      "name": "Sinh Tồn: Ta Mang Theo Không Gian Vô Hạn Xe Cắm Trại",
+      "chapter_count": 64,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Sinh Tồn Ta Mang Theo Không Gian Vô Hạn Xe Cắm Trại",
+      "updated_at": "2026-05-12T15:17:40.000000Z"
+    },
+    {
+      "id": 140514,
+      "name": "Võ Động: Bắt Đầu Một Quyển Hư Không Kinh",
+      "chapter_count": 17,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Võ Động Bắt Đầu Một Quyển Hư Không Kinh",
+      "updated_at": "2026-05-01T04:06:44.000000Z"
+    },
+    {
+      "id": 140577,
+      "name": "Nhân Gian Thiếu Niên Hành",
+      "chapter_count": 39,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nhân Gian Thiếu Niên Hành",
+      "updated_at": "2026-04-01T10:40:19.000000Z"
+    },
+    {
+      "id": 143569,
+      "name": "Mộng Tận Hư Không",
+      "chapter_count": 38,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Mộng Tận Hư Không",
+      "updated_at": "2026-03-01T13:24:16.000000Z"
+    },
+    {
+      "id": 109768,
+      "name": "Ta Mạnh Lên Nhờ Group Chat • Vô Hạn Kĩ Năng ",
+      "chapter_count": 200,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Mạnh Lên Nhờ Group Chat Vô Hạn Kĩ Năng",
+      "updated_at": "2026-05-14T09:57:52.000000Z"
+    },
+    {
+      "id": 141880,
+      "name": "Đạo Ma Trường Đồ",
+      "chapter_count": 75,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Đạo Ma Trường Đồ",
+      "updated_at": "2026-01-01T15:03:26.000000Z"
+    },
+    {
+      "id": 119345,
+      "name": "Game Mới Cập Nhật, Ta Đem Sư Phụ Đi Gặp Người Yêu Cũ !?",
+      "chapter_count": 490,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Game Mới Cập Nhật Ta Đem Sư Phụ Đi Gặp Người Yêu Cũ",
+      "updated_at": "2026-05-01T04:54:58.000000Z"
+    },
+    {
+      "id": 143509,
+      "name": "Hắc Ảnh Thần Hành",
+      "chapter_count": 18,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hắc Ảnh Thần Hành",
+      "updated_at": "2026-03-01T13:24:45.000000Z"
+    },
+    {
+      "id": 138675,
+      "name": "Nhật Ký Sát Nhân",
+      "chapter_count": 47,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nhật Ký Sát Nhân",
+      "updated_at": "2026-04-01T13:04:14.000000Z"
+    },
+    {
+      "id": 130903,
+      "name": "Dị Giới Rubik Cube",
+      "chapter_count": 19,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Dị Giới Rubik Cube",
+      "updated_at": "2026-02-01T13:52:13.000000Z"
+    },
+    {
+      "id": 119844,
+      "name": "Long Cơ Chiến Hồn",
+      "chapter_count": 750,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Long Cơ Chiến Hồn",
+      "updated_at": "2026-03-18T19:54:34.000000Z"
+    },
+    {
+      "id": 139592,
+      "name": "Ta Có Đánh Dấu Hệ Thống, Nhưng Đây Là Vua Trò Chơi Thế Giới!",
+      "chapter_count": 25,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Có Đánh Dấu Hệ Thống Nhưng Đây Là Vua Trò Chơi Thế Giới",
+      "updated_at": "2026-05-09T08:15:23.000000Z"
+    },
+    {
+      "id": 130795,
+      "name": "Tu Tiên Chi Thượng",
+      "chapter_count": 14,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tu Tiên Chi Thượng",
+      "updated_at": "2026-02-01T14:51:02.000000Z"
+    },
+    {
+      "id": 138991,
+      "name": "Tiến Hóa Kỷ Nguyên",
+      "chapter_count": 88,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tiến Hóa Kỷ Nguyên",
+      "updated_at": "2026-02-24T20:27:43.000000Z"
+    },
+    {
+      "id": 142679,
+      "name": "Ma Chủng Truyền Thừa",
+      "chapter_count": 15,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ma Chủng Truyền Thừa",
+      "updated_at": "2026-02-28T20:35:28.000000Z"
+    },
+    {
+      "id": 113509,
+      "name": "Hắc Ám Trở Lại",
+      "chapter_count": 91,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hắc Ám Trở Lại",
+      "updated_at": "2026-03-01T12:47:47.000000Z"
+    },
+    {
+      "id": 140454,
+      "name": "Hắc Bạch Chi Đạo",
+      "chapter_count": 10,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hắc Bạch Chi Đạo",
+      "updated_at": "2026-01-18T20:03:00.000000Z"
+    },
+    {
+      "id": 124471,
+      "name": "Khuấy Động Đa Nguyên Campione",
+      "chapter_count": 32,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Khuấy Động Đa Nguyên Campione",
+      "updated_at": "2026-03-21T17:59:23.000000Z"
+    },
+    {
+      "id": 143258,
+      "name": "Tiên Lộ Ngự Ảnh",
+      "chapter_count": 10,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Tiên Lộ Ngự Ảnh",
+      "updated_at": "2025-11-01T14:54:49.000000Z"
+    },
+    {
+      "id": 132721,
+      "name": "Cản Bước Thiên Mệnh Chi Tử Tại Pháp Trị Thế Giới",
+      "chapter_count": 91,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Cản Bước Thiên Mệnh Chi Tử Tại Pháp Trị Thế Giới",
+      "updated_at": "2026-03-01T13:07:01.000000Z"
+    },
+    {
+      "id": 141466,
+      "name": "Đưa Nước Việt Vươn Tầm Thế Giới (phần 2): Vạn Biến Hư Ảo",
+      "chapter_count": 381,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đưa Nước Việt Vươn Tầm Thế Giới phần 2 Vạn Biến Hư Ảo",
+      "updated_at": "2026-05-03T09:43:00.000000Z"
+    },
+    {
+      "id": 115229,
+      "name": "Nghiệp Duyên",
+      "chapter_count": 68,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nghiệp Duyên",
+      "updated_at": "2025-11-09T20:40:41.000000Z"
+    },
+    {
+      "id": 143112,
+      "name": "Hệ Thống Bản Ngã Thức Tỉnh",
+      "chapter_count": 30,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hệ Thống Bản Ngã Thức Tỉnh",
+      "updated_at": "2026-05-06T18:45:39.000000Z"
+    },
+    {
+      "id": 138696,
+      "name": "Khắc Nhập Khắc Nhập - Khắc Xuất Khắc Xuất",
+      "chapter_count": 88,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Khắc Nhập Khắc Nhập Khắc Xuất Khắc Xuất",
+      "updated_at": "2026-04-02T00:31:40.000000Z"
+    },
+    {
+      "id": 141464,
+      "name": "Livestream Tu Tiên: Donate Là Tăng Lực",
+      "chapter_count": 35,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Livestream Tu Tiên Donate Là Tăng Lực",
+      "updated_at": "2026-03-03T01:25:53.000000Z"
+    },
+    {
+      "id": 141177,
+      "name": "Mạt Thế: Hệ Thống Tới Sớm 3 Năm, Đây Là Cơ Hội Của Ta",
+      "chapter_count": 45,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Mạt Thế Hệ Thống Tới Sớm 3 Năm Đây Là Cơ Hội Của Ta",
+      "updated_at": "2026-04-28T18:19:08.000000Z"
+    },
+    {
+      "id": 141170,
+      "name": "Marvel: Lão Cha Ta Là Tony Stark",
+      "chapter_count": 298,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Marvel Lão Cha Ta Là Tony Stark",
+      "updated_at": "2026-05-01T04:06:23.000000Z"
+    },
+    {
+      "id": 129186,
+      "name": "Nguyên Thủy",
+      "chapter_count": 260,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Nguyên Thủy",
+      "updated_at": "2026-03-21T22:34:14.000000Z"
+    },
+    {
+      "id": 142638,
+      "name": "Mộng Tiêu Dao",
+      "chapter_count": 10,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Mộng Tiêu Dao",
+      "updated_at": "2025-10-26T02:36:00.000000Z"
+    },
+    {
+      "id": 118545,
+      "name": "Đại Việt Quỷ Vương",
+      "chapter_count": 354,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Đại Việt Quỷ Vương",
+      "updated_at": "2026-05-13T19:40:16.000000Z"
+    },
+    {
+      "id": 140240,
+      "name": "Đại Sư Huynh",
+      "chapter_count": 17,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Đại Sư Huynh",
+      "updated_at": "2026-04-26T08:19:20.000000Z"
+    },
+    {
+      "id": 140712,
+      "name": "Khí Vận",
+      "chapter_count": 39,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Khí Vận",
+      "updated_at": "2026-01-22T23:10:34.000000Z"
+    },
+    {
+      "id": 140829,
+      "name": "Lũng Tây Trần Thị",
+      "chapter_count": 48,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Lũng Tây Trần Thị",
+      "updated_at": "2026-04-02T01:20:16.000000Z"
+    },
+    {
+      "id": 136247,
+      "name": "Ta Tại Tu Tiên Giới Làm Du Thương",
+      "chapter_count": 122,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Tại Tu Tiên Giới Làm Du Thương",
+      "updated_at": "2026-05-13T08:22:36.000000Z"
+    },
+    {
+      "id": 141473,
+      "name": "Kẻ Si Tình",
+      "chapter_count": 13,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Kẻ Si Tình",
+      "updated_at": "2026-04-07T01:23:31.000000Z"
+    },
+    {
+      "id": 140464,
+      "name": "Ta Hối Hận Rồi, Trùng Sinh Sửa Sai Được Không?",
+      "chapter_count": 45,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Hối Hận Rồi Trùng Sinh Sửa Sai Được Không",
+      "updated_at": "2026-01-27T23:05:00.000000Z"
+    },
+    {
+      "id": 124023,
+      "name": "Hệ Thống Khoa Kỹ: Từ Ngày Đó Ta Thay Đổi Thế Giới Này",
+      "chapter_count": 16,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Hệ Thống Khoa Kỹ Từ Ngày Đó Ta Thay Đổi Thế Giới Này",
+      "updated_at": "2026-03-07T18:51:38.000000Z"
+    },
+    {
+      "id": 141380,
+      "name": "Tôi Có Gunny Hệ Thống",
+      "chapter_count": 17,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tôi Có Gunny Hệ Thống",
+      "updated_at": "2025-09-15T12:42:35.000000Z"
+    },
+    {
+      "id": 129003,
+      "name": "Tự Tại Tiêu Dao",
+      "chapter_count": 42,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tự Tại Tiêu Dao",
+      "updated_at": "2026-04-04T22:33:30.000000Z"
+    },
+    {
+      "id": 141132,
+      "name": "Sanctuary",
+      "chapter_count": 19,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Sanctuary",
+      "updated_at": "2025-12-01T16:08:01.000000Z"
+    },
+    {
+      "id": 140512,
+      "name": "Tiêu Dao Tiên Truyện",
+      "chapter_count": 13,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Tiêu Dao Tiên Truyện",
+      "updated_at": "2026-01-01T14:53:04.000000Z"
+    },
+    {
+      "id": 141348,
+      "name": "Ta Muôn Vạn Kiếp Đều Không Thể Yêu Người",
+      "chapter_count": 10,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Muôn Vạn Kiếp Đều Không Thể Yêu Người",
+      "updated_at": "2025-12-01T15:51:19.000000Z"
+    },
+    {
+      "id": 114029,
+      "name": "Nhất Nhân Chấn Thiên",
+      "chapter_count": 34,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Nhất Nhân Chấn Thiên",
+      "updated_at": "2026-01-15T10:50:19.000000Z"
+    },
+    {
+      "id": 141108,
+      "name": "Giáo Sư Vĩnh Hằng",
+      "chapter_count": 11,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Giáo Sư Vĩnh Hằng",
+      "updated_at": "2026-01-06T19:52:56.000000Z"
+    },
+    {
+      "id": 140020,
+      "name": "Tồn Tại Bất Diệt",
+      "chapter_count": 17,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tồn Tại Bất Diệt",
+      "updated_at": "2025-12-01T14:49:32.000000Z"
+    },
+    {
+      "id": 139802,
+      "name": "Bắt Đầu Xuất Sinh, Ta Cố Gắng Đến Vô Địch",
+      "chapter_count": 41,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Bắt Đầu Xuất Sinh Ta Cố Gắng Đến Vô Địch",
+      "updated_at": "2026-03-27T20:50:00.000000Z"
+    },
+    {
+      "id": 140896,
+      "name": "Hệ Thống Khởi Nghiệp Tông Môn",
+      "chapter_count": 19,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hệ Thống Khởi Nghiệp Tông Môn",
+      "updated_at": "2026-03-11T22:44:09.000000Z"
+    },
+    {
+      "id": 129143,
+      "name": "Kẻ Ngoại Lai Gian Lận Để Trở Thành Kamenrider",
+      "chapter_count": 85,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Kẻ Ngoại Lai Gian Lận Để Trở Thành Kamenrider",
+      "updated_at": "2026-05-09T15:04:13.000000Z"
+    },
+    {
+      "id": 112249,
+      "name": "Xuyên Toa",
+      "chapter_count": 621,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Xuyên Toa",
+      "updated_at": "2026-05-01T04:15:29.000000Z"
+    },
+    {
+      "id": 127746,
+      "name": "Thực Mộng",
+      "chapter_count": 13,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thực Mộng",
+      "updated_at": "2025-08-22T10:58:35.000000Z"
+    },
+    {
+      "id": 123498,
+      "name": "Linh Dị Người Ghi Chép",
+      "chapter_count": 41,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Linh Dị Người Ghi Chép",
+      "updated_at": "2026-04-01T13:17:05.000000Z"
+    },
+    {
+      "id": 140251,
+      "name": "Quỷ Thực Nhân: Biệt Đội Báo Thủ Bắt Đầu",
+      "chapter_count": 11,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Quỷ Thực Nhân Biệt Đội Báo Thủ Bắt Đầu",
+      "updated_at": "2026-05-07T16:20:46.000000Z"
+    },
+    {
+      "id": 125914,
+      "name": "Tu Tiên: Ta Có Sharingan",
+      "chapter_count": 11,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tu Tiên Ta Có Sharingan",
+      "updated_at": "2026-03-27T17:45:13.000000Z"
+    },
+    {
+      "id": 139888,
+      "name": "Chư Thiên : Bắt Đầu Hành Trình Trở Thành Kẻ Thu Thập",
+      "chapter_count": 130,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Chư Thiên Bắt Đầu Hành Trình Trở Thành Kẻ Thu Thập",
+      "updated_at": "2026-05-02T10:57:53.000000Z"
+    },
+    {
+      "id": 140115,
+      "name": "Nam Thiên Trấn Hồn Ký",
+      "chapter_count": 18,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Nam Thiên Trấn Hồn Ký",
+      "updated_at": "2026-04-23T02:48:48.000000Z"
+    },
+    {
+      "id": 138873,
+      "name": "Hắc Hoạ",
+      "chapter_count": 18,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hắc Hoạ",
+      "updated_at": "2025-11-01T15:21:43.000000Z"
+    },
+    {
+      "id": 137123,
+      "name": "Học Đường: Vũ Trụ Mô Phỏng",
+      "chapter_count": 46,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Học Đường Vũ Trụ Mô Phỏng",
+      "updated_at": "2026-04-11T16:55:22.000000Z"
+    },
+    {
+      "id": 124035,
+      "name": "Đánh Dấu Thành Đế, Ta Chỉ Muốn Diệt Thế",
+      "chapter_count": 5,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đánh Dấu Thành Đế Ta Chỉ Muốn Diệt Thế",
+      "updated_at": "2026-03-03T23:58:05.000000Z"
+    },
+    {
+      "id": 132003,
+      "name": "Cơn Lốc Đường Biên",
+      "chapter_count": 31,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Cơn Lốc Đường Biên",
+      "updated_at": "2026-03-21T17:09:38.000000Z"
+    },
+    {
+      "id": 106705,
+      "name": "Vệ Thần - Mạt Thế Xác Sống",
+      "chapter_count": 30,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vệ Thần Mạt Thế Xác Sống",
+      "updated_at": "2025-12-01T16:09:11.000000Z"
+    },
+    {
+      "id": 139787,
+      "name": "Hỗn Loạn Chi Lưu",
+      "chapter_count": 18,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Hỗn Loạn Chi Lưu",
+      "updated_at": "2026-03-01T13:02:40.000000Z"
+    },
+    {
+      "id": 139601,
+      "name": "Từ Hạ Nhẫn Bắt Đầu",
+      "chapter_count": 34,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Từ Hạ Nhẫn Bắt Đầu",
+      "updated_at": "2026-02-03T06:20:36.000000Z"
+    },
+    {
+      "id": 135859,
+      "name": "Súc Sinh Ký I - Huyết Đàm",
+      "chapter_count": 26,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Súc Sinh Ký I Huyết Đàm",
+      "updated_at": "2025-10-27T10:54:14.000000Z"
+    },
+    {
+      "id": 133297,
+      "name": "Ta Dùng Lôi Pháp Chứng Đạo Thành Tiên",
+      "chapter_count": 3,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Dùng Lôi Pháp Chứng Đạo Thành Tiên",
+      "updated_at": "2026-01-01T15:06:19.000000Z"
+    },
+    {
+      "id": 111503,
+      "name": "Đồng Nhân Sword Art Online : Tân Thế Giới.",
+      "chapter_count": 25,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đồng Nhân Sword Art Online Tân Thế Giới",
+      "updated_at": "2026-04-02T09:15:34.000000Z"
+    },
+    {
+      "id": 119734,
+      "name": "Siêu Năng Lập Phương",
+      "chapter_count": 116,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Siêu Năng Lập Phương",
+      "updated_at": "2026-05-01T04:53:38.000000Z"
+    },
+    {
+      "id": 138123,
+      "name": "Năm 2000 : Từ Chạy Án Bắt Đầu.",
+      "chapter_count": 56,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Năm 2000 Từ Chạy Án Bắt Đầu",
+      "updated_at": "2026-05-03T06:56:36.000000Z"
+    },
+    {
+      "id": 101516,
+      "name": "Quang Minh Bất Diệt, Tín Ngưỡng Vĩnh Hằng",
+      "chapter_count": 914,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Quang Minh Bất Diệt Tín Ngưỡng Vĩnh Hằng",
+      "updated_at": "2026-05-11T07:53:16.000000Z"
+    },
+    {
+      "id": 139247,
+      "name": "Ta Tại Di Giới Henshin",
+      "chapter_count": 14,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ta Tại Di Giới Henshin",
+      "updated_at": "2026-03-20T21:34:05.000000Z"
+    },
+    {
+      "id": 139195,
+      "name": "Lê Triều Huyền Sử",
+      "chapter_count": 10,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Lê Triều Huyền Sử",
+      "updated_at": "2026-04-22T16:51:52.000000Z"
+    },
+    {
+      "id": 138446,
+      "name": "Tận Thế : Kí Ức Lãng Quên",
+      "chapter_count": 28,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Tận Thế Kí Ức Lãng Quên",
+      "updated_at": "2026-01-11T22:40:29.000000Z"
+    },
+    {
+      "id": 131130,
+      "name": "Mộng Đế",
+      "chapter_count": 43,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Mộng Đế",
+      "updated_at": "2026-04-22T23:30:37.000000Z"
+    },
+    {
+      "id": 138186,
+      "name": "Nguyên Thủy Thế Giới",
+      "chapter_count": 100,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Nguyên Thủy Thế Giới",
+      "updated_at": "2026-05-01T01:58:23.000000Z"
+    },
+    {
+      "id": 136756,
+      "name": "One Piece: Ngai Vàng Sụp Đổ",
+      "chapter_count": 38,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "One Piece Ngai Vàng Sụp Đổ",
+      "updated_at": "2026-05-15T13:44:13.000000Z"
+    },
+    {
+      "id": 135087,
+      "name": "Tiên Vực : Ngự Linh Chí Tôn",
+      "chapter_count": 59,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tiên Vực Ngự Linh Chí Tôn",
+      "updated_at": "2026-02-28T00:47:19.000000Z"
+    },
+    {
+      "id": 123127,
+      "name": "Vĩnh Hằng Vị Lai",
+      "chapter_count": 15,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Vĩnh Hằng Vị Lai",
+      "updated_at": "2026-02-06T21:57:15.000000Z"
+    },
+    {
+      "id": 138363,
+      "name": "Dị Trùng Chủng",
+      "chapter_count": 23,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Dị Trùng Chủng",
+      "updated_at": "2026-03-15T18:17:56.000000Z"
+    },
+    {
+      "id": 138006,
+      "name": "Người Kể Chuyện",
+      "chapter_count": 21,
+      "status": 3,
+      "status_name": "Tạm dừng",
+      "clean_name": "Người Kể Chuyện",
+      "updated_at": "2026-04-11T02:57:56.000000Z"
+    },
+    {
+      "id": 133538,
+      "name": "Honkai Star Rail: Hành Tẩu Giữa Những Vì Sao",
+      "chapter_count": 46,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Honkai Star Rail Hành Tẩu Giữa Những Vì Sao",
+      "updated_at": "2026-05-08T14:10:16.000000Z"
+    },
+    {
+      "id": 128383,
+      "name": "Ảnh Giới",
+      "chapter_count": 311,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Ảnh Giới",
+      "updated_at": "2026-02-27T13:26:28.000000Z"
+    },
+    {
+      "id": 133328,
+      "name": "Đoạ Ma",
+      "chapter_count": 87,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đoạ Ma",
+      "updated_at": "2026-02-01T14:56:03.000000Z"
+    },
+    {
+      "id": 132226,
+      "name": "Môn Thần",
+      "chapter_count": 293,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Môn Thần",
+      "updated_at": "2026-03-31T20:52:24.000000Z"
+    },
+    {
+      "id": 134867,
+      "name": "Bản Tọa Trần Đại Tiên, Thích Thu Nghĩa Nữ!",
+      "chapter_count": 173,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Bản Tọa Trần Đại Tiên Thích Thu Nghĩa Nữ",
+      "updated_at": "2026-05-01T03:16:57.000000Z"
+    },
+    {
+      "id": 133435,
+      "name": "Dị Giới Là Quá Dễ",
+      "chapter_count": 23,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Dị Giới Là Quá Dễ",
+      "updated_at": "2026-01-01T15:45:44.000000Z"
+    },
+    {
+      "id": 133257,
+      "name": "Dị Giới Thương Nhân",
+      "chapter_count": 100,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Dị Giới Thương Nhân",
+      "updated_at": "2026-05-09T18:27:05.000000Z"
+    },
+    {
+      "id": 132877,
+      "name": "Đông A Tái Khởi",
+      "chapter_count": 0,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Đông A Tái Khởi",
+      "updated_at": "2026-04-01T13:18:49.000000Z"
+    },
+    {
+      "id": 151784,
+      "name": "Tội Ác Thứ N: Toạ Độ Chết",
+      "chapter_count": 0,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Tội Ác Thứ N Toạ Độ Chết",
+      "updated_at": "2026-05-04T09:50:06.000000Z"
+    },
+    {
+      "id": 153588,
+      "name": "Thế Kỷ Của Máu",
+      "chapter_count": 0,
+      "status": 1,
+      "status_name": "Còn tiếp",
+      "clean_name": "Thế Kỷ Của Máu",
+      "updated_at": "2026-05-13T17:15:48.000000Z"
+    }
+  ]
+}

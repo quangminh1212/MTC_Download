@@ -1,0 +1,4599 @@
+{
+  "started_at": "2026-05-27 02:19:30",
+  "root": "C:\\Dev\\MTC_Continune",
+  "done_books": 249,
+  "ok_books": 179,
+  "issue_books": 70,
+  "skipped_books": 0,
+  "books": [
+    {
+      "id": 153637,
+      "name": "Tận Thế Ta Cầu Sinh Tại Sinh Mệnh Cấm Khu",
+      "status_name": "Còn tiếp",
+      "folder": "Tận Thế Ta Cầu Sinh Tại Sinh Mệnh Cấm Khu",
+      "remote_count": 1,
+      "missing_before": 1,
+      "downloaded": 1,
+      "skipped": 0,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 2,
+        "output": "[main 9be91cf95ad] Tận Thế Ta Cầu Sinh Tại Sinh Mệnh Cấm Khu\n 2 files changed, 147 insertions(+)\n create mode 100644 Tận Thế Ta Cầu Sinh Tại Sinh Mệnh Cấm Khu/Chương 1 Quy tắc sinh tồn.txt\n create mode 100644 Tận Thế Ta Cầu Sinh Tại Sinh Mệnh Cấm Khu/info.json\nwarning: in the working copy of 'Tận Thế Ta Cầu Sinh Tại Sinh Mệnh Cấm Khu/info.json', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Tận Thế Ta Cầu Sinh Tại Sinh Mệnh Cấm Khu/Chương 1 Quy tắc sinh tồn.txt', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Tận Thế Ta Cầu Sinh Tại Sinh Mệnh Cấm Khu/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 153557,
+      "name": "Tại Marvel Lập Hội Ngân Sách",
+      "status_name": "Còn tiếp",
+      "folder": "Tại Marvel Lập Hội Ngân Sách",
+      "remote_count": 2,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 2,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main bfe68024798] Tại Marvel Lập Hội Ngân Sách\n 1 file changed, 1 insertion(+), 1 deletion(-)\nwarning: in the working copy of 'Tại Marvel Lập Hội Ngân Sách/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 133297,
+      "name": "Ta Dùng Lôi Pháp Chứng Đạo Thành Tiên",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Dùng Lôi Pháp Chứng Đạo Thành Tiên",
+      "remote_count": 3,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 3,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 143196,
+      "name": "Klyntar Thôn Phệ",
+      "status_name": "Còn tiếp",
+      "folder": "Klyntar Thôn Phệ",
+      "remote_count": 3,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 3,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 153622,
+      "name": "Quỷ Bí Chi Chủ",
+      "status_name": "Còn tiếp",
+      "folder": "Quỷ Bí Chi Chủ",
+      "remote_count": 3,
+      "missing_before": 3,
+      "downloaded": 3,
+      "skipped": 0,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1415,
+        "output": "[main 6be4fd4ba12] Quỷ Bí Chi Chủ\n 1415 files changed, 381 insertions(+), 253970 deletions(-)\n create mode 100644 Quỷ Bí Chi Chủ/Chương 1 Đỏ rực.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 1 ửng đỏ.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 10 Thái độ bình thường.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 100 Giải đọc biểu tượng.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 1000 Đổ thần Dawn.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 1001 thành lập liên hệ.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 1002 Xúi giục.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 1003 Nhạc dạo.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 1004 Thứ nhất nhạc chương.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 1005 Đệ nhị chương nhạc.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 1006 Nhạc dạo.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 1007 Đệ tam chương nhạc.txt\n delete mode 100644 Quỷ Bí Chi Chủ/Chương 1008 Đệ tứ chương nhạc thứ hai cầu phiếu đề cử nguyệt phiếu.txt\n delete mode 100644 Quỷ Bí"
+      }
+    },
+    {
+      "id": 124035,
+      "name": "Đánh Dấu Thành Đế, Ta Chỉ Muốn Diệt Thế",
+      "status_name": "Còn tiếp",
+      "folder": "Đánh Dấu Thành Đế Ta Chỉ Muốn Diệt Thế",
+      "remote_count": 5,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 5,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 153619,
+      "name": "Bắt Đầu Đánh Dấu Chí Tôn Thể, Ta Đồ Nhi Đều Là Phản Phái",
+      "status_name": "Còn tiếp",
+      "folder": "Bắt Đầu Đánh Dấu Chí Tôn Thể Ta Đồ Nhi Đều Là Phản Phái",
+      "remote_count": 5,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 5,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 139195,
+      "name": "Lê Triều Huyền Sử",
+      "status_name": "Còn tiếp",
+      "folder": "Lê Triều Huyền Sử",
+      "remote_count": 10,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 10,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 140454,
+      "name": "Hắc Bạch Chi Đạo",
+      "status_name": "Còn tiếp",
+      "folder": "Hắc Bạch Chi Đạo",
+      "remote_count": 10,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 10,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 141348,
+      "name": "Ta Muôn Vạn Kiếp Đều Không Thể Yêu Người",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Muôn Vạn Kiếp Đều Không Thể Yêu Người",
+      "remote_count": 10,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 10,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 142638,
+      "name": "Mộng Tiêu Dao",
+      "status_name": "Còn tiếp",
+      "folder": "Mộng Tiêu Dao",
+      "remote_count": 10,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 10,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 143258,
+      "name": "Tiên Lộ Ngự Ảnh",
+      "status_name": "Tạm dừng",
+      "folder": "Tiên Lộ Ngự Ảnh",
+      "remote_count": 10,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 10,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 146343,
+      "name": "Hội Thánh: Lần Đầu Triệu Hoán Tôn Ngộ Không",
+      "status_name": "Còn tiếp",
+      "folder": "Hội Thánh Lần Đầu Triệu Hoán Tôn Ngộ Không",
+      "remote_count": 10,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 10,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 150834,
+      "name": "Tung Hoành Thiên Hạ",
+      "status_name": "Còn tiếp",
+      "folder": "Tung Hoành Thiên Hạ",
+      "remote_count": 10,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 10,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 152897,
+      "name": "Thợ Săn Tam Giới",
+      "status_name": "Còn tiếp",
+      "folder": "Thợ Săn Tam Giới",
+      "remote_count": 10,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 10,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 152996,
+      "name": "Tổng Mạn: Từ Onepiece Sở Hữu Exodia",
+      "status_name": "Còn tiếp",
+      "folder": "Tổng Mạn Từ Onepiece Sở Hữu Exodia",
+      "remote_count": 10,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 10,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main 819fcf11fc3] Tổng Mạn Từ Onepiece Sở Hữu Exodia\n 1 file changed, 2 insertions(+), 2 deletions(-)\nwarning: in the working copy of 'Tổng Mạn Từ Onepiece Sở Hữu Exodia/info.json', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Tổng Mạn Từ Onepiece Sở Hữu Exodia/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 125914,
+      "name": "Tu Tiên: Ta Có Sharingan",
+      "status_name": "Còn tiếp",
+      "folder": "Tu Tiên Ta Có Sharingan",
+      "remote_count": 11,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 11,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 140251,
+      "name": "Quỷ Thực Nhân: Biệt Đội Báo Thủ Bắt Đầu",
+      "status_name": "Còn tiếp",
+      "folder": "Quỷ Thực Nhân Biệt Đội Báo Thủ Bắt Đầu",
+      "remote_count": 11,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 11,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 141108,
+      "name": "Giáo Sư Vĩnh Hằng",
+      "status_name": "Tạm dừng",
+      "folder": "Giáo Sư Vĩnh Hằng",
+      "remote_count": 11,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 11,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 145480,
+      "name": "Nguyệt Chiếu Vô Tâm",
+      "status_name": "Còn tiếp",
+      "folder": "Nguyệt Chiếu Vô Tâm",
+      "remote_count": 11,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 11,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 148958,
+      "name": "Thân Du Vạn Giới",
+      "status_name": "Còn tiếp",
+      "folder": "Thân Du Vạn Giới",
+      "remote_count": 11,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 11,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 149108,
+      "name": "Chấp Niệm Sinh Linh",
+      "status_name": "Còn tiếp",
+      "folder": "Chấp Niệm Sinh Linh",
+      "remote_count": 11,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 11,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 149319,
+      "name": "Mạt Thế: Ta Là Số Mười",
+      "status_name": "Còn tiếp",
+      "folder": "Mạt Thế Ta Là Số Mười",
+      "remote_count": 11,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 11,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 151695,
+      "name": "Quỷ Dị Tai Ương",
+      "status_name": "Còn tiếp",
+      "folder": "Quỷ Dị Tai Ương",
+      "remote_count": 11,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 11,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 145227,
+      "name": "Cổ Đạo Nghịch Thiên",
+      "status_name": "Còn tiếp",
+      "folder": "Cổ Đạo Nghịch Thiên",
+      "remote_count": 12,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 12,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 146774,
+      "name": "Shi Ryougi - Echo Of Nihility",
+      "status_name": "Còn tiếp",
+      "folder": "Shi Ryougi Echo Of Nihility",
+      "remote_count": 12,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 12,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 150773,
+      "name": "Vô Giải",
+      "status_name": "Còn tiếp",
+      "folder": "Vô Giải",
+      "remote_count": 12,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 12,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 151003,
+      "name": "Chép Nhạc: Lại Một Thế Ta Gặp Người",
+      "status_name": "Còn tiếp",
+      "folder": "Chép Nhạc Lại Một Thế Ta Gặp Người",
+      "remote_count": 12,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 12,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 127746,
+      "name": "Thực Mộng",
+      "status_name": "Còn tiếp",
+      "folder": "Thực Mộng",
+      "remote_count": 13,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 13,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 140512,
+      "name": "Tiêu Dao Tiên Truyện",
+      "status_name": "Tạm dừng",
+      "folder": "Tiêu Dao Tiên Truyện",
+      "remote_count": 13,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 13,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 141473,
+      "name": "Kẻ Si Tình",
+      "status_name": "Còn tiếp",
+      "folder": "Kẻ Si Tình",
+      "remote_count": 13,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 13,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 143846,
+      "name": "Hội Phát Triển Di Sản Cuối Cùng",
+      "status_name": "Còn tiếp",
+      "folder": "Hội Phát Triển Di Sản Cuối Cùng",
+      "remote_count": 13,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 13,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 145330,
+      "name": "Dược Linh Sư",
+      "status_name": "Tạm dừng",
+      "folder": "Dược Linh Sư",
+      "remote_count": 13,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 13,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 148673,
+      "name": "Hành Trình Định Mệnh",
+      "status_name": "Còn tiếp",
+      "folder": "Hành Trình Định Mệnh",
+      "remote_count": 13,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 13,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 148973,
+      "name": "Đấu La: Tửu Lâu Của Những Kẻ Bị Bỏ Rơi",
+      "status_name": "Còn tiếp",
+      "folder": "Đấu La Tửu Lâu Của Những Kẻ Bị Bỏ Rơi",
+      "remote_count": 13,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 13,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 149630,
+      "name": "Mạc Hoàng Ký",
+      "status_name": "Còn tiếp",
+      "folder": "Mạc Hoàng Ký",
+      "remote_count": 13,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 13,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 130795,
+      "name": "Tu Tiên Chi Thượng",
+      "status_name": "Còn tiếp",
+      "folder": "Tu Tiên Chi Thượng",
+      "remote_count": 14,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 14,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 139247,
+      "name": "Ta Tại Di Giới Henshin",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Tại Di Giới Henshin",
+      "remote_count": 14,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 14,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 145258,
+      "name": "Nhất Đạo Chí Tôn",
+      "status_name": "Còn tiếp",
+      "folder": "Nhất Đạo Chí Tôn",
+      "remote_count": 14,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 14,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 146336,
+      "name": "Ngược Về Hồng Hoang Hỏi Sao Ta Sinh!",
+      "status_name": "Còn tiếp",
+      "folder": "Ngược Về Hồng Hoang Hỏi Sao Ta Sinh",
+      "remote_count": 14,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 14,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 150583,
+      "name": "Nghịch Mệnh",
+      "status_name": "Còn tiếp",
+      "folder": "Nghịch Mệnh",
+      "remote_count": 14,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 14,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 123127,
+      "name": "Vĩnh Hằng Vị Lai",
+      "status_name": "Còn tiếp",
+      "folder": "Vĩnh Hằng Vị Lai",
+      "remote_count": 15,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 15,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 134248,
+      "name": "Thám Tử Ngọt",
+      "status_name": "Còn tiếp",
+      "folder": "Thám Tử Ngọt",
+      "remote_count": 15,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 15,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 140892,
+      "name": "Kẻ Dạo Bước Không Gian: Từ Nô Lệ Thành Bá Chủ",
+      "status_name": "Còn tiếp",
+      "folder": "Kẻ Dạo Bước Không Gian Từ Nô Lệ Thành Bá Chủ",
+      "remote_count": 15,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 15,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 142679,
+      "name": "Ma Chủng Truyền Thừa",
+      "status_name": "Còn tiếp",
+      "folder": "Ma Chủng Truyền Thừa",
+      "remote_count": 15,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 15,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 144672,
+      "name": "Cứu Vớt Toàn Nhân Loại, Bắt Đầu Từ Cày Cấp Trong Thế Giới Giả Lập",
+      "status_name": "Còn tiếp",
+      "folder": "Cứu Vớt Toàn Nhân Loại Bắt Đầu Từ Cày Cấp Trong Thế Giới Giả Lập",
+      "remote_count": 15,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 15,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 147396,
+      "name": "Anh Hùng Diệt Thế",
+      "status_name": "Còn tiếp",
+      "folder": "Anh Hùng Diệt Thế",
+      "remote_count": 15,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 15,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 124023,
+      "name": "Hệ Thống Khoa Kỹ: Từ Ngày Đó Ta Thay Đổi Thế Giới Này",
+      "status_name": "Tạm dừng",
+      "folder": "Hệ Thống Khoa Kỹ Từ Ngày Đó Ta Thay Đổi Thế Giới Này",
+      "remote_count": 16,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 16,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 147983,
+      "name": "Nguyên Tiên",
+      "status_name": "Còn tiếp",
+      "folder": "Nguyên Tiên",
+      "remote_count": 16,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 16,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 148682,
+      "name": "Ma Pháp Thần Vương",
+      "status_name": "Còn tiếp",
+      "folder": "Ma Pháp Thần Vương",
+      "remote_count": 16,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 16,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 148988,
+      "name": "Ma Kiếm Sư",
+      "status_name": "Còn tiếp",
+      "folder": "Ma Kiếm Sư",
+      "remote_count": 16,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 16,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 152353,
+      "name": "Trong Tuyết Mẫu Đơn, Phượng Minh Tam Quốc",
+      "status_name": "Còn tiếp",
+      "folder": "Trong Tuyết Mẫu Đơn Phượng Minh Tam Quốc",
+      "remote_count": 16,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 16,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 128372,
+      "name": "Sở Thiên Ta Làm Trùm Ngày Tận Thế",
+      "status_name": "Còn tiếp",
+      "folder": "Sở Thiên Ta Làm Trùm Ngày Tận Thế",
+      "remote_count": 17,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 17,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 140020,
+      "name": "Tồn Tại Bất Diệt",
+      "status_name": "Còn tiếp",
+      "folder": "Tồn Tại Bất Diệt",
+      "remote_count": 17,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 17,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 140240,
+      "name": "Đại Sư Huynh",
+      "status_name": "Tạm dừng",
+      "folder": "Đại Sư Huynh",
+      "remote_count": 17,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 17,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 140514,
+      "name": "Võ Động: Bắt Đầu Một Quyển Hư Không Kinh",
+      "status_name": "Còn tiếp",
+      "folder": "Võ Động Bắt Đầu Một Quyển Hư Không Kinh",
+      "remote_count": 17,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 17,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 141380,
+      "name": "Tôi Có Gunny Hệ Thống",
+      "status_name": "Còn tiếp",
+      "folder": "Tôi Có Gunny Hệ Thống",
+      "remote_count": 17,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 17,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 138873,
+      "name": "Hắc Hoạ",
+      "status_name": "Còn tiếp",
+      "folder": "Hắc Hoạ",
+      "remote_count": 18,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 18,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 139787,
+      "name": "Hỗn Loạn Chi Lưu",
+      "status_name": "Còn tiếp",
+      "folder": "Hỗn Loạn Chi Lưu",
+      "remote_count": 18,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 18,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 140115,
+      "name": "Nam Thiên Trấn Hồn Ký",
+      "status_name": "Tạm dừng",
+      "folder": "Nam Thiên Trấn Hồn Ký",
+      "remote_count": 18,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 18,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 141211,
+      "name": "Ngũ Phúc Chi Vạn Lý Thiên",
+      "status_name": "Còn tiếp",
+      "folder": "Ngũ Phúc Chi Vạn Lý Thiên",
+      "remote_count": 18,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 18,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 143509,
+      "name": "Hắc Ảnh Thần Hành",
+      "status_name": "Còn tiếp",
+      "folder": "Hắc Ảnh Thần Hành",
+      "remote_count": 18,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 18,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 145845,
+      "name": "Ký Ức Thần Vương",
+      "status_name": "Còn tiếp",
+      "folder": "Ký Ức Thần Vương",
+      "remote_count": 18,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 18,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 149029,
+      "name": "Dota 2: Làm Lại Cuộc Đời",
+      "status_name": "Tạm dừng",
+      "folder": "Dota 2 Làm Lại Cuộc Đời",
+      "remote_count": 18,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 18,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 150707,
+      "name": "Mesatravia",
+      "status_name": "Còn tiếp",
+      "folder": "Mesatravia",
+      "remote_count": 18,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 18,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 151238,
+      "name": "Tiếng Vọng Nơi Vực Sâu",
+      "status_name": "Còn tiếp",
+      "folder": "Tiếng Vọng Nơi Vực Sâu",
+      "remote_count": 18,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 18,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 129205,
+      "name": "Từ Sóng Gió Gia Tộc Trở Thành Youtuber",
+      "status_name": "Còn tiếp",
+      "folder": "Từ Sóng Gió Gia Tộc Trở Thành Youtuber",
+      "remote_count": 19,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 19,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 130903,
+      "name": "Dị Giới Rubik Cube",
+      "status_name": "Còn tiếp",
+      "folder": "Dị Giới Rubik Cube",
+      "remote_count": 19,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 19,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 140896,
+      "name": "Hệ Thống Khởi Nghiệp Tông Môn",
+      "status_name": "Còn tiếp",
+      "folder": "Hệ Thống Khởi Nghiệp Tông Môn",
+      "remote_count": 19,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 19,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 141132,
+      "name": "Sanctuary",
+      "status_name": "Còn tiếp",
+      "folder": "Sanctuary",
+      "remote_count": 19,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 19,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 144555,
+      "name": "Thiên Tôn Đế Mạch",
+      "status_name": "Còn tiếp",
+      "folder": "Thiên Tôn Đế Mạch",
+      "remote_count": 19,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 19,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 152567,
+      "name": "Xuất Thẻ Hư Vô",
+      "status_name": "Còn tiếp",
+      "folder": "Xuất Thẻ Hư Vô",
+      "remote_count": 19,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 19,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main c58799d1f47] Xuất Thẻ Hư Vô\n 1 file changed, 35 insertions(+), 9 deletions(-)\nwarning: in the working copy of 'Xuất Thẻ Hư Vô/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 147861,
+      "name": "Vì Sợ Chết Ta Gia Nhập Ma Đạo Lại Không Ngờ Thành Vạn Cổ Ma Đế!",
+      "status_name": "Còn tiếp",
+      "folder": "Vì Sợ Chết Ta Gia Nhập Ma Đạo Lại Không Ngờ Thành Vạn Cổ Ma Đế",
+      "remote_count": 20,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 20,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 138006,
+      "name": "Người Kể Chuyện",
+      "status_name": "Tạm dừng",
+      "folder": "Người Kể Chuyện",
+      "remote_count": 21,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 21,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 148793,
+      "name": "Có Chút Viên Mãn",
+      "status_name": "Còn tiếp",
+      "folder": "Có Chút Viên Mãn",
+      "remote_count": 21,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 21,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 151962,
+      "name": "Võng Du Giáng Lâm: Từ Kế Hoạch Tạo Thần Bắt Đầu",
+      "status_name": "Còn tiếp",
+      "folder": "Võng Du Giáng Lâm Từ Kế Hoạch Tạo Thần Bắt Đầu",
+      "remote_count": 21,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 21,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 153579,
+      "name": "Trước Kia Có Một Toà Linh Kiếm Sơn Trang",
+      "status_name": "Còn tiếp",
+      "folder": "Trước Kia Có Một Toà Linh Kiếm Sơn Trang",
+      "remote_count": 21,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 21,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main 7bbdaa21525] Trước Kia Có Một Toà Linh Kiếm Sơn Trang\n 1 file changed, 11 insertions(+), 11 deletions(-)\nwarning: in the working copy of 'Trước Kia Có Một Toà Linh Kiếm Sơn Trang/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 144228,
+      "name": "114: Cuộc Gọi Khẩn Cấp",
+      "status_name": "Còn tiếp",
+      "folder": "114 Cuộc Gọi Khẩn Cấp",
+      "remote_count": 22,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 22,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 145137,
+      "name": "Dị Lực Vĩnh Cấm",
+      "status_name": "Tạm dừng",
+      "folder": "Dị Lực Vĩnh Cấm",
+      "remote_count": 22,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 22,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 147288,
+      "name": "Nghịch Càn Khôn",
+      "status_name": "Tạm dừng",
+      "folder": "Nghịch Càn Khôn",
+      "remote_count": 22,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 22,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 152371,
+      "name": "Tận Thế: Dung Hồn Dị Biến",
+      "status_name": "Còn tiếp",
+      "folder": "Tận Thế Dung Hồn Dị Biến",
+      "remote_count": 22,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 22,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 133435,
+      "name": "Dị Giới Là Quá Dễ",
+      "status_name": "Còn tiếp",
+      "folder": "Dị Giới Là Quá Dễ",
+      "remote_count": 23,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 23,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 137355,
+      "name": "Trở Lại 1986 Ta Làm Lại Cuộc Đời Từ Bán Cá Khô",
+      "status_name": "Còn tiếp",
+      "folder": "Trở Lại 1986 Ta Làm Lại Cuộc Đời Từ Bán Cá Khô",
+      "remote_count": 23,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 23,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 138363,
+      "name": "Dị Trùng Chủng",
+      "status_name": "Còn tiếp",
+      "folder": "Dị Trùng Chủng",
+      "remote_count": 23,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 23,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 141438,
+      "name": "Xuyên Thư Tiên Võ Đế Tôn, Ta Làm Thần Thoại Đế",
+      "status_name": "Còn tiếp",
+      "folder": "Xuyên Thư Tiên Võ Đế Tôn Ta Làm Thần Thoại Đế",
+      "remote_count": 23,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 23,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main ffa11659e01] Xuyên Thư Tiên Võ Đế Tôn Ta Làm Thần Thoại Đế\n 1 file changed, 1 insertion(+), 1 deletion(-)\nwarning: in the working copy of 'Xuyên Thư Tiên Võ Đế Tôn Ta Làm Thần Thoại Đế/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 150123,
+      "name": "Tam Giới",
+      "status_name": "Còn tiếp",
+      "folder": "Tam Giới",
+      "remote_count": 23,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 23,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 147561,
+      "name": "Vô Vọng Tiên Đồ",
+      "status_name": "Còn tiếp",
+      "folder": "Vô Vọng Tiên Đồ",
+      "remote_count": 24,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 24,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 149578,
+      "name": "Toàn Dân Lãnh Chúa: Quang Hoàn Gia Thân",
+      "status_name": "Tạm dừng",
+      "folder": "Toàn Dân Lãnh Chúa Quang Hoàn Gia Thân",
+      "remote_count": 24,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 24,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 152548,
+      "name": "Thống Soái, Uống Nhầm Thuốc Hay Ăn Nhầm Canh?",
+      "status_name": "Còn tiếp",
+      "folder": "Thống Soái Uống Nhầm Thuốc Hay Ăn Nhầm Canh",
+      "remote_count": 24,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 24,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 111503,
+      "name": "Đồng Nhân Sword Art Online : Tân Thế Giới.",
+      "status_name": "Còn tiếp",
+      "folder": "Đồng Nhân Sword Art Online Tân Thế Giới",
+      "remote_count": 25,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 25,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 139592,
+      "name": "Ta Có Đánh Dấu Hệ Thống, Nhưng Đây Là Vua Trò Chơi Thế Giới!",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Có Đánh Dấu Hệ Thống Nhưng Đây Là Vua Trò Chơi Thế Giới",
+      "remote_count": 25,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 25,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 150191,
+      "name": "Vạn Giới Chiến Ca",
+      "status_name": "Còn tiếp",
+      "folder": "Vạn Giới Chiến Ca",
+      "remote_count": 25,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 25,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 135859,
+      "name": "Súc Sinh Ký I - Huyết Đàm",
+      "status_name": "Còn tiếp",
+      "folder": "Súc Sinh Ký I Huyết Đàm",
+      "remote_count": 26,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 26,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 144520,
+      "name": "Nhân Gian",
+      "status_name": "Còn tiếp",
+      "folder": "Nhân Gian",
+      "remote_count": 26,
+      "missing_before": 1,
+      "downloaded": 1,
+      "skipped": 25,
+      "failed": 0,
+      "missing_after": 1,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main df2c6f6b3c6] Nhân Gian\n 1 file changed, 2 deletions(-)\nwarning: in the working copy of 'Nhân Gian/Chương 1 Văn Án.txt', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 152019,
+      "name": "Nấp Sau Lv 0",
+      "status_name": "Còn tiếp",
+      "folder": "Nấp Sau Lv 0",
+      "remote_count": 26,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 26,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "commit_failed",
+        "staged_count": 1,
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 152585,
+      "name": "Ma Lộ Độc Tôn",
+      "status_name": "Còn tiếp",
+      "folder": "Ma Lộ Độc Tôn",
+      "remote_count": 26,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 26,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 138446,
+      "name": "Tận Thế : Kí Ức Lãng Quên",
+      "status_name": "Tạm dừng",
+      "folder": "Tận Thế Kí Ức Lãng Quên",
+      "remote_count": 28,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 28,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 144433,
+      "name": "Cố Mộng",
+      "status_name": "Tạm dừng",
+      "folder": "Cố Mộng",
+      "remote_count": 29,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 29,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 147778,
+      "name": "Gấp! Toàn Tộc Ta Đều Là Bệnh Đau Mắt Đỏ",
+      "status_name": "Còn tiếp",
+      "folder": "Gấp Toàn Tộc Ta Đều Là Bệnh Đau Mắt Đỏ",
+      "remote_count": 29,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 29,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 106705,
+      "name": "Vệ Thần - Mạt Thế Xác Sống",
+      "status_name": "Còn tiếp",
+      "folder": "Vệ Thần Mạt Thế Xác Sống",
+      "remote_count": 30,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 30,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 141444,
+      "name": "Bạch Nguyệt Vân Thiên",
+      "status_name": "Tạm dừng",
+      "folder": "Bạch Nguyệt Vân Thiên",
+      "remote_count": 30,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 30,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 143112,
+      "name": "Hệ Thống Bản Ngã Thức Tỉnh",
+      "status_name": "Còn tiếp",
+      "folder": "Hệ Thống Bản Ngã Thức Tỉnh",
+      "remote_count": 30,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 30,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 132003,
+      "name": "Cơn Lốc Đường Biên",
+      "status_name": "Còn tiếp",
+      "folder": "Cơn Lốc Đường Biên",
+      "remote_count": 31,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 31,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 151710,
+      "name": "Tận Thế Sinh Tồn, Theo Đội Xe Một Đường Cầu Sinh",
+      "status_name": "Còn tiếp",
+      "folder": "Tận Thế Sinh Tồn Theo Đội Xe Một Đường Cầu Sinh",
+      "remote_count": 31,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 31,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 152701,
+      "name": "Liên Minh Huyền Thoại: Con Đường Hoàng Kim",
+      "status_name": "Còn tiếp",
+      "folder": "Liên Minh Huyền Thoại Con Đường Hoàng Kim",
+      "remote_count": 31,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 31,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 124471,
+      "name": "Khuấy Động Đa Nguyên Campione",
+      "status_name": "Còn tiếp",
+      "folder": "Khuấy Động Đa Nguyên Campione",
+      "remote_count": 32,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 32,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 143446,
+      "name": "Sen Tàn Khi Thu Đến",
+      "status_name": "Còn tiếp",
+      "folder": "Sen Tàn Khi Thu Đến",
+      "remote_count": 32,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 32,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 145168,
+      "name": "Kiếm Tuyết Cuồng Tiên",
+      "status_name": "Còn tiếp",
+      "folder": "Kiếm Tuyết Cuồng Tiên",
+      "remote_count": 32,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 32,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 152568,
+      "name": "Đệ Nhất Ngân Hà",
+      "status_name": "Còn tiếp",
+      "folder": "Đệ Nhất Ngân Hà",
+      "remote_count": 32,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 32,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 111567,
+      "name": "Sức Mạnh Đế Vương",
+      "status_name": "Còn tiếp",
+      "folder": "Sức Mạnh Đế Vương",
+      "remote_count": 33,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 33,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 148605,
+      "name": "Lol: Đường Đến Vinh Quang",
+      "status_name": "Còn tiếp",
+      "folder": "Lol Đường Đến Vinh Quang",
+      "remote_count": 33,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 33,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 148959,
+      "name": "Đưa Đại Việt Trở Thành Siêu Cường",
+      "status_name": "Còn tiếp",
+      "folder": "Đưa Đại Việt Trở Thành Siêu Cường",
+      "remote_count": 33,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 33,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 151031,
+      "name": "Quả Cấm",
+      "status_name": "Còn tiếp",
+      "folder": "Quả Cấm",
+      "remote_count": 63,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 63,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 2,
+        "output": "[main c878848ba02] Quả Cấm\n 2 files changed, 86 insertions(+), 3 deletions(-)\n create mode 100644 Quả Cấm/Chương 63 Untitled.txt\nwarning: in the working copy of 'Quả Cấm/Chương 63 Untitled.txt', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Quả Cấm/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 151104,
+      "name": "Võ Hành Chi Nhân",
+      "status_name": "Còn tiếp",
+      "folder": "Võ Hành Chi Nhân",
+      "remote_count": 33,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 33,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main d5280dd3af3] Võ Hành Chi Nhân\n 1 file changed, 1 insertion(+), 1 deletion(-)\nwarning: in the working copy of 'Võ Hành Chi Nhân/info.json', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Võ Hành Chi Nhân/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 114029,
+      "name": "Nhất Nhân Chấn Thiên",
+      "status_name": "Còn tiếp",
+      "folder": "Nhất Nhân Chấn Thiên",
+      "remote_count": 34,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 34,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 139601,
+      "name": "Từ Hạ Nhẫn Bắt Đầu",
+      "status_name": "Còn tiếp",
+      "folder": "Từ Hạ Nhẫn Bắt Đầu",
+      "remote_count": 34,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 34,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 142281,
+      "name": "Từ Vùng Biên Đến Chiến Trường Liên Sao",
+      "status_name": "Tạm dừng",
+      "folder": "Từ Vùng Biên Đến Chiến Trường Liên Sao",
+      "remote_count": 34,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 34,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 152023,
+      "name": "Superman Của Mcu",
+      "status_name": "Còn tiếp",
+      "folder": "Superman Của Mcu",
+      "remote_count": 34,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 34,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main 76e04d5b6d5] Superman Của Mcu\n 1 file changed, 2 insertions(+), 2 deletions(-)\nwarning: in the working copy of 'Superman Của Mcu/info.json', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Superman Của Mcu/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 140678,
+      "name": "Bài Trừ Thuộc Tính Xấu Ta Thành Thần",
+      "status_name": "Còn tiếp",
+      "folder": "Bài Trừ Thuộc Tính Xấu Ta Thành Thần",
+      "remote_count": 35,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 35,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 141464,
+      "name": "Livestream Tu Tiên: Donate Là Tăng Lực",
+      "status_name": "Còn tiếp",
+      "folder": "Livestream Tu Tiên Donate Là Tăng Lực",
+      "remote_count": 35,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 35,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 150040,
+      "name": "Pandora Gaia",
+      "status_name": "Còn tiếp",
+      "folder": "Pandora Gaia",
+      "remote_count": 35,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 35,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 142699,
+      "name": "Thiên Hành",
+      "status_name": "Tạm dừng",
+      "folder": "Thiên Hành",
+      "remote_count": 36,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 36,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 143347,
+      "name": "Vu Sư Ký Sự",
+      "status_name": "Còn tiếp",
+      "folder": "Vu Sư Ký Sự",
+      "remote_count": 36,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 36,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 146741,
+      "name": "Huyễn Kỳ Thư: Trò Chơi Của Thần",
+      "status_name": "Còn tiếp",
+      "folder": "Huyễn Kỳ Thư Trò Chơi Của Thần",
+      "remote_count": 36,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 36,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 149160,
+      "name": "One Piece: Dị Giới Đội Tầm Bảo",
+      "status_name": "Còn tiếp",
+      "folder": "One Piece Dị Giới Đội Tầm Bảo",
+      "remote_count": 36,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 36,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 136756,
+      "name": "One Piece: Ngai Vàng Sụp Đổ",
+      "status_name": "Còn tiếp",
+      "folder": "One Piece Ngai Vàng Sụp Đổ",
+      "remote_count": 38,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 38,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 143569,
+      "name": "Mộng Tận Hư Không",
+      "status_name": "Còn tiếp",
+      "folder": "Mộng Tận Hư Không",
+      "remote_count": 38,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 38,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 144479,
+      "name": "Tổng Mạn: Từ Kimetsu No Yaiba Bắt Đầu.",
+      "status_name": "Còn tiếp",
+      "folder": "Tổng Mạn Từ Kimetsu No Yaiba Bắt Đầu",
+      "remote_count": 38,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 38,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "commit_failed",
+        "staged_count": 1,
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 140577,
+      "name": "Nhân Gian Thiếu Niên Hành",
+      "status_name": "Còn tiếp",
+      "folder": "Nhân Gian Thiếu Niên Hành",
+      "remote_count": 39,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 39,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 140712,
+      "name": "Khí Vận",
+      "status_name": "Còn tiếp",
+      "folder": "Khí Vận",
+      "remote_count": 39,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 39,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 144090,
+      "name": "Tu Tiên Từ Kế Thừa Gia Sản Bắt Đầu",
+      "status_name": "Còn tiếp",
+      "folder": "Tu Tiên Từ Kế Thừa Gia Sản Bắt Đầu",
+      "remote_count": 39,
+      "missing_before": 1,
+      "downloaded": 1,
+      "skipped": 38,
+      "failed": 0,
+      "missing_after": 1,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 151665,
+      "name": "Pokemon: Khởi Đầu Mười Năm",
+      "status_name": "Còn tiếp",
+      "folder": "Pokemon Khởi Đầu Mười Năm",
+      "remote_count": 40,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 40,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 123498,
+      "name": "Linh Dị Người Ghi Chép",
+      "status_name": "Còn tiếp",
+      "folder": "Linh Dị Người Ghi Chép",
+      "remote_count": 41,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 41,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 139802,
+      "name": "Bắt Đầu Xuất Sinh, Ta Cố Gắng Đến Vô Địch",
+      "status_name": "Còn tiếp",
+      "folder": "Bắt Đầu Xuất Sinh Ta Cố Gắng Đến Vô Địch",
+      "remote_count": 41,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 41,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 129003,
+      "name": "Tự Tại Tiêu Dao",
+      "status_name": "Còn tiếp",
+      "folder": "Tự Tại Tiêu Dao",
+      "remote_count": 42,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 42,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 139983,
+      "name": "Khi Dòng Sông Ngừng Chảy",
+      "status_name": "Còn tiếp",
+      "folder": "Khi Dòng Sông Ngừng Chảy",
+      "remote_count": 42,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 42,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 143853,
+      "name": "Trục Đạo Nghịch Thiên",
+      "status_name": "Còn tiếp",
+      "folder": "Trục Đạo Nghịch Thiên",
+      "remote_count": 42,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 42,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 131130,
+      "name": "Mộng Đế",
+      "status_name": "Còn tiếp",
+      "folder": "Mộng Đế",
+      "remote_count": 43,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 43,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 146225,
+      "name": "Lạc Hồng Trùng Sinh Truyện",
+      "status_name": "Còn tiếp",
+      "folder": "Lạc Hồng Trùng Sinh Truyện",
+      "remote_count": 44,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 44,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 148554,
+      "name": "Ta Đúng Là Nhân Loại",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Đúng Là Nhân Loại",
+      "remote_count": 44,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 44,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 149725,
+      "name": "Đấu La: Huyết Nhân Cuồng Đồ",
+      "status_name": "Còn tiếp",
+      "folder": "Đấu La Huyết Nhân Cuồng Đồ",
+      "remote_count": 44,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 44,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 122515,
+      "name": "Nhật Ký Pokemon: Hoenn Ta Đến Đây",
+      "status_name": "Còn tiếp",
+      "folder": "Nhật Ký Pokemon Hoenn Ta Đến Đây",
+      "remote_count": 45,
+      "missing_before": 1,
+      "downloaded": 1,
+      "skipped": 44,
+      "failed": 0,
+      "missing_after": 1,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main d1e4e330b24] Nhật Ký Pokemon Hoenn Ta Đến Đây\n 1 file changed, 2 insertions(+), 2 deletions(-)\nwarning: in the working copy of 'Nhật Ký Pokemon Hoenn Ta Đến Đây/Chương 41 5 thông tin thêm Hồ Sơ Của Ace Tại Liên Minh Pokemon Cùng Giải Thích.txt', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 140464,
+      "name": "Ta Hối Hận Rồi, Trùng Sinh Sửa Sai Được Không?",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Hối Hận Rồi Trùng Sinh Sửa Sai Được Không",
+      "remote_count": 45,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 45,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 141177,
+      "name": "Mạt Thế: Hệ Thống Tới Sớm 3 Năm, Đây Là Cơ Hội Của Ta",
+      "status_name": "Còn tiếp",
+      "folder": "Mạt Thế Hệ Thống Tới Sớm 3 Năm Đây Là Cơ Hội Của Ta",
+      "remote_count": 45,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 45,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 148760,
+      "name": "Thám Hiểm Ký",
+      "status_name": "Còn tiếp",
+      "folder": "Thám Hiểm Ký",
+      "remote_count": 45,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 45,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 133538,
+      "name": "Honkai Star Rail: Hành Tẩu Giữa Những Vì Sao",
+      "status_name": "Còn tiếp",
+      "folder": "Honkai Star Rail Hành Tẩu Giữa Những Vì Sao",
+      "remote_count": 46,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 46,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 137123,
+      "name": "Học Đường: Vũ Trụ Mô Phỏng",
+      "status_name": "Còn tiếp",
+      "folder": "Học Đường Vũ Trụ Mô Phỏng",
+      "remote_count": 46,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 46,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 150712,
+      "name": "Ngự Thần Lục",
+      "status_name": "Còn tiếp",
+      "folder": "Ngự Thần Lục",
+      "remote_count": 46,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 46,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 138675,
+      "name": "Nhật Ký Sát Nhân",
+      "status_name": "Còn tiếp",
+      "folder": "Nhật Ký Sát Nhân",
+      "remote_count": 47,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 47,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 140369,
+      "name": "Ánh Sáng Cuối Trên Bầu Trời Máu",
+      "status_name": "Còn tiếp",
+      "folder": "Ánh Sáng Cuối Trên Bầu Trời Máu",
+      "remote_count": 48,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 48,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 140829,
+      "name": "Lũng Tây Trần Thị",
+      "status_name": "Còn tiếp",
+      "folder": "Lũng Tây Trần Thị",
+      "remote_count": 48,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 48,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 152760,
+      "name": "Vovinam Tông Sư Tại Akame Ga Kill Bán Mỳ Quảng",
+      "status_name": "Còn tiếp",
+      "folder": "Vovinam Tông Sư Tại Akame Ga Kill Bán Mỳ Quảng",
+      "remote_count": 51,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 51,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 144974,
+      "name": "Cửu Đế",
+      "status_name": "Còn tiếp",
+      "folder": "Cửu Đế",
+      "remote_count": 52,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 52,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 148886,
+      "name": "Gen Z Tại Tu Tiên Giới",
+      "status_name": "Còn tiếp",
+      "folder": "Gen Z Tại Tu Tiên Giới",
+      "remote_count": 52,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 52,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 143054,
+      "name": "Vô Tận Đại Hải, Chiến Hạm Thăng Cấp",
+      "status_name": "Còn tiếp",
+      "folder": "Vô Tận Đại Hải Chiến Hạm Thăng Cấp",
+      "remote_count": 53,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 53,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 147314,
+      "name": "Cuồng Đồ",
+      "status_name": "Còn tiếp",
+      "folder": "Cuồng Đồ",
+      "remote_count": 53,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 53,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 151097,
+      "name": "Người Viết Lại Khế Ước",
+      "status_name": "Còn tiếp",
+      "folder": "Người Viết Lại Khế Ước",
+      "remote_count": 54,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 54,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 144337,
+      "name": "Kẻ Viết Lại Lịch Sử Esport",
+      "status_name": "Còn tiếp",
+      "folder": "Kẻ Viết Lại Lịch Sử Esport",
+      "remote_count": 55,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 55,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 125122,
+      "name": "Diễn Sinh Du Hí: Vì Sao Năng Lực Của Tôi Là Minecraft?",
+      "status_name": "Còn tiếp",
+      "folder": "Diễn Sinh Du Hí Vì Sao Năng Lực Của Tôi Là Minecraft",
+      "remote_count": 56,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 56,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 138123,
+      "name": "Năm 2000 : Từ Chạy Án Bắt Đầu.",
+      "status_name": "Còn tiếp",
+      "folder": "Năm 2000 Từ Chạy Án Bắt Đầu",
+      "remote_count": 56,
+      "missing_before": 1,
+      "downloaded": 1,
+      "skipped": 55,
+      "failed": 0,
+      "missing_after": 1,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 148071,
+      "name": "Sáng Tạo Sinh Mệnh Chơi Hỏng Nhân Loại",
+      "status_name": "Còn tiếp",
+      "folder": "Sáng Tạo Sinh Mệnh Chơi Hỏng Nhân Loại",
+      "remote_count": 58,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 58,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 135087,
+      "name": "Tiên Vực : Ngự Linh Chí Tôn",
+      "status_name": "Còn tiếp",
+      "folder": "Tiên Vực Ngự Linh Chí Tôn",
+      "remote_count": 59,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 59,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 144601,
+      "name": "Đi Bộ Vuốt Râu Ở Blue Lock",
+      "status_name": "Tạm dừng",
+      "folder": "Đi Bộ Vuốt Râu Ở Blue Lock",
+      "remote_count": 59,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 59,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 147931,
+      "name": "Tòa Tháp Thần Tọa.",
+      "status_name": "Còn tiếp",
+      "folder": "Tòa Tháp Thần Tọa",
+      "remote_count": 59,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 59,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 131253,
+      "name": "Trở Thành Hấp Huyết Chân Tổ Tại Dị Giới",
+      "status_name": "Còn tiếp",
+      "folder": "Trở Thành Hấp Huyết Chân Tổ Tại Dị Giới",
+      "remote_count": 60,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 60,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 138115,
+      "name": "Tôi Chỉ Muốn Sống Yên Ổn!",
+      "status_name": "Tạm dừng",
+      "folder": "Tôi Chỉ Muốn Sống Yên Ổn",
+      "remote_count": 60,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 60,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 143368,
+      "name": "Loại Thẻ Bài Phế Phẩm Này Thực Sự Có Người Mua Sao?",
+      "status_name": "Còn tiếp",
+      "folder": "Loại Thẻ Bài Phế Phẩm Này Thực Sự Có Người Mua Sao",
+      "remote_count": 60,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 60,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 147696,
+      "name": "Thế Giới Tiến Hóa",
+      "status_name": "Tạm dừng",
+      "folder": "Thế Giới Tiến Hóa",
+      "remote_count": 60,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 60,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 147292,
+      "name": "Ngũ Lôi Hoành Đỉnh",
+      "status_name": "Còn tiếp",
+      "folder": "Ngũ Lôi Hoành Đỉnh",
+      "remote_count": 62,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 62,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 142369,
+      "name": "Sinh Tồn: Ta Mang Theo Không Gian Vô Hạn Xe Cắm Trại",
+      "status_name": "Còn tiếp",
+      "folder": "Sinh Tồn Ta Mang Theo Không Gian Vô Hạn Xe Cắm Trại",
+      "remote_count": 64,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 64,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 144110,
+      "name": "Sở Hữu Thần Thụ Quả Tại Dị Giới",
+      "status_name": "Còn tiếp",
+      "folder": "Sở Hữu Thần Thụ Quả Tại Dị Giới",
+      "remote_count": 65,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 65,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main 1900c211ae5] Sở Hữu Thần Thụ Quả Tại Dị Giới\n 1 file changed, 10 insertions(+), 10 deletions(-)\nwarning: in the working copy of 'Sở Hữu Thần Thụ Quả Tại Dị Giới/info.json', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Sở Hữu Thần Thụ Quả Tại Dị Giới/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 135214,
+      "name": "Biên Niên Sử Zamecia",
+      "status_name": "Còn tiếp",
+      "folder": "Biên Niên Sử Zamecia",
+      "remote_count": 67,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 67,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 115229,
+      "name": "Nghiệp Duyên",
+      "status_name": "Còn tiếp",
+      "folder": "Nghiệp Duyên",
+      "remote_count": 68,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 68,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 134351,
+      "name": "Hệ Thống Chuyển Sinh",
+      "status_name": "Tạm dừng",
+      "folder": "Hệ Thống Chuyển Sinh",
+      "remote_count": 68,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 68,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 107636,
+      "name": "Khí Vận Chi Tử, Phản Diện Chi Lộ",
+      "status_name": "Còn tiếp",
+      "folder": "Khí Vận Chi Tử Phản Diện Chi Lộ",
+      "remote_count": 69,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 69,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 129407,
+      "name": "Vạn Đại Việt Song Song",
+      "status_name": "Còn tiếp",
+      "folder": "Vạn Đại Việt Song Song",
+      "remote_count": 72,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 72,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 152403,
+      "name": "Thiên Ngoại Lai: Cấm Khu",
+      "status_name": "Còn tiếp",
+      "folder": "Thiên Ngoại Lai Cấm Khu",
+      "remote_count": 72,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 72,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 131865,
+      "name": "Tung Hoành Dị Giới",
+      "status_name": "Còn tiếp",
+      "folder": "Tung Hoành Dị Giới",
+      "remote_count": 73,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 73,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 141880,
+      "name": "Đạo Ma Trường Đồ",
+      "status_name": "Tạm dừng",
+      "folder": "Đạo Ma Trường Đồ",
+      "remote_count": 75,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 75,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 108844,
+      "name": "Hồi Kí Hadidu",
+      "status_name": "Tạm dừng",
+      "folder": "Hồi Kí Hadidu",
+      "remote_count": 77,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 77,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 143908,
+      "name": "Vĩnh Sinh – Người Không Tên",
+      "status_name": "Còn tiếp",
+      "folder": "Vĩnh Sinh Người Không Tên",
+      "remote_count": 78,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 78,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 151700,
+      "name": "Zombie : Bắt Đầu Đánh Dấu T1000",
+      "status_name": "Còn tiếp",
+      "folder": "Zombie Bắt Đầu Đánh Dấu T1000",
+      "remote_count": 78,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 78,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main 875f01c61e8] Zombie Bắt Đầu Đánh Dấu T1000\n 1 file changed, 28 insertions(+), 28 deletions(-)\nwarning: in the working copy of 'Zombie Bắt Đầu Đánh Dấu T1000/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 136576,
+      "name": "Đấu La, Ta Thay Hoắc Vũ Hạo, Làm Thần Vương Trùng Sinh",
+      "status_name": "Còn tiếp",
+      "folder": "Đấu La Ta Thay Hoắc Vũ Hạo Làm Thần Vương Trùng Sinh",
+      "remote_count": 79,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 79,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 137149,
+      "name": "Ta Đế Vương : Đem Quốc Gia Thành Thiên Cổ Đệ Nhất",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Đế Vương Đem Quốc Gia Thành Thiên Cổ Đệ Nhất",
+      "remote_count": 80,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 80,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 129143,
+      "name": "Kẻ Ngoại Lai Gian Lận Để Trở Thành Kamenrider",
+      "status_name": "Tạm dừng",
+      "folder": "Kẻ Ngoại Lai Gian Lận Để Trở Thành Kamenrider",
+      "remote_count": 85,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 85,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 133328,
+      "name": "Đoạ Ma",
+      "status_name": "Còn tiếp",
+      "folder": "Đoạ Ma",
+      "remote_count": 87,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 87,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 144841,
+      "name": "Kh'Alzhei In The Night - Loạn Ức Trong Đêm Tối",
+      "status_name": "Tạm dừng",
+      "folder": "Kh Alzhei In The Night Loạn Ức Trong Đêm Tối",
+      "remote_count": 87,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 87,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 138696,
+      "name": "Khắc Nhập Khắc Nhập - Khắc Xuất Khắc Xuất",
+      "status_name": "Còn tiếp",
+      "folder": "Khắc Nhập Khắc Nhập Khắc Xuất Khắc Xuất",
+      "remote_count": 88,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 88,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 138991,
+      "name": "Tiến Hóa Kỷ Nguyên",
+      "status_name": "Còn tiếp",
+      "folder": "Tiến Hóa Kỷ Nguyên",
+      "remote_count": 88,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 88,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 151616,
+      "name": "Trở Về 2013, Bắt Đầu Từ Chứng Khoán Đến Đỉnh Hollywood.",
+      "status_name": "Còn tiếp",
+      "folder": "Trở Về 2013 Bắt Đầu Từ Chứng Khoán Đến Đỉnh Hollywood",
+      "remote_count": 88,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 88,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 113509,
+      "name": "Hắc Ám Trở Lại",
+      "status_name": "Còn tiếp",
+      "folder": "Hắc Ám Trở Lại",
+      "remote_count": 91,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 91,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 132721,
+      "name": "Cản Bước Thiên Mệnh Chi Tử Tại Pháp Trị Thế Giới",
+      "status_name": "Còn tiếp",
+      "folder": "Cản Bước Thiên Mệnh Chi Tử Tại Pháp Trị Thế Giới",
+      "remote_count": 91,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 91,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 149797,
+      "name": "Dạ Trung Vi Quang",
+      "status_name": "Còn tiếp",
+      "folder": "Dạ Trung Vi Quang",
+      "remote_count": 91,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 91,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 141743,
+      "name": "The Vampire’s Bloodbound",
+      "status_name": "Còn tiếp",
+      "folder": "The Vampire s Bloodbound",
+      "remote_count": 93,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 93,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main bc0f8a69669] The Vampire s Bloodbound\n 1 file changed, 20 insertions(+), 7 deletions(-)\nwarning: in the working copy of 'The Vampire s Bloodbound/info.json', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'The Vampire s Bloodbound/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 138229,
+      "name": "Tru Tiên Nhất Mộng",
+      "status_name": "Còn tiếp",
+      "folder": "Tru Tiên Nhất Mộng",
+      "remote_count": 98,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 98,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 131162,
+      "name": "Warhammer 40k: Sứ Giả Của Những Vì Sao",
+      "status_name": "Còn tiếp",
+      "folder": "Warhammer 40k Sứ Giả Của Những Vì Sao",
+      "remote_count": 99,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 99,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 133257,
+      "name": "Dị Giới Thương Nhân",
+      "status_name": "Còn tiếp",
+      "folder": "Dị Giới Thương Nhân",
+      "remote_count": 100,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 100,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main 96c6107e604] Dị Giới Thương Nhân\n 1 file changed, 39 insertions(+), 39 deletions(-)\nwarning: in the working copy of 'Dị Giới Thương Nhân/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 138186,
+      "name": "Nguyên Thủy Thế Giới",
+      "status_name": "Tạm dừng",
+      "folder": "Nguyên Thủy Thế Giới",
+      "remote_count": 100,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 100,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 128805,
+      "name": "Tận Thế Xuyên",
+      "status_name": "Còn tiếp",
+      "folder": "Tận Thế Xuyên",
+      "remote_count": 101,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 101,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 146565,
+      "name": "Tôi Gặp Phiên Bản Khác Giới Của Chính Mình",
+      "status_name": "Tạm dừng",
+      "folder": "Tôi Gặp Phiên Bản Khác Giới Của Chính Mình",
+      "remote_count": 101,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 101,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 115550,
+      "name": "Việt Linh",
+      "status_name": "Còn tiếp",
+      "folder": "Việt Linh",
+      "remote_count": 103,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 103,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 125974,
+      "name": "Honkai Star Rail: Các Vì Sao Nơi Vũ Trụ",
+      "status_name": "Còn tiếp",
+      "folder": "Honkai Star Rail Các Vì Sao Nơi Vũ Trụ",
+      "remote_count": 103,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 103,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 139838,
+      "name": "Bói Toán Lấy Mạng Đổi Mệnh Dối Trời Gạt Đất",
+      "status_name": "Còn tiếp",
+      "folder": "Bói Toán Lấy Mạng Đổi Mệnh Dối Trời Gạt Đất",
+      "remote_count": 103,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 103,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "commit_failed",
+        "staged_count": 1,
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 152173,
+      "name": "Mạt Thế Độc Tiên",
+      "status_name": "Còn tiếp",
+      "folder": "Mạt Thế Độc Tiên",
+      "remote_count": 105,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 105,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main ad1a86083ef] Mạt Thế Độc Tiên\n 1 file changed, 3 insertions(+), 3 deletions(-)\nwarning: in the working copy of 'Mạt Thế Độc Tiên/info.json', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Mạt Thế Độc Tiên/info.json', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 144266,
+      "name": "Hồng Hoang Biên Niên Sử",
+      "status_name": "Còn tiếp",
+      "folder": "Hồng Hoang Biên Niên Sử",
+      "remote_count": 107,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 107,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 146629,
+      "name": "May Mắn Xuyên Vào Vũ Trụ Creepypasta",
+      "status_name": "Còn tiếp",
+      "folder": "May Mắn Xuyên Vào Vũ Trụ Creepypasta",
+      "remote_count": 108,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 108,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 151448,
+      "name": "Dạng Thức Tâm Trí",
+      "status_name": "Còn tiếp",
+      "folder": "Dạng Thức Tâm Trí",
+      "remote_count": 111,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 111,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 121958,
+      "name": "Học Đường Rực Cháy",
+      "status_name": "Tạm dừng",
+      "folder": "Học Đường Rực Cháy",
+      "remote_count": 112,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 112,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 117946,
+      "name": "One Piece: The Gamer Tại South Blue",
+      "status_name": "Còn tiếp",
+      "folder": "One Piece The Gamer Tại South Blue",
+      "remote_count": 113,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 113,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 129298,
+      "name": "Tình Họa Sơn Hà",
+      "status_name": "Còn tiếp",
+      "folder": "Tình Họa Sơn Hà",
+      "remote_count": 115,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 115,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 119734,
+      "name": "Siêu Năng Lập Phương",
+      "status_name": "Tạm dừng",
+      "folder": "Siêu Năng Lập Phương",
+      "remote_count": 116,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 116,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 136247,
+      "name": "Ta Tại Tu Tiên Giới Làm Du Thương",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Tại Tu Tiên Giới Làm Du Thương",
+      "remote_count": 122,
+      "missing_before": 1,
+      "downloaded": 1,
+      "skipped": 121,
+      "failed": 0,
+      "missing_after": 1,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 130677,
+      "name": "Khải Hoàng Ma Thần",
+      "status_name": "Còn tiếp",
+      "folder": "Khải Hoàng Ma Thần",
+      "remote_count": 124,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 124,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 135013,
+      "name": "Vừa Làm Ra App Du Lịch, Ngươi Liền Mang Ta Xuyên Qua Nhị Thứ Nguyên?",
+      "status_name": "Còn tiếp",
+      "folder": "Vừa Làm Ra App Du Lịch Ngươi Liền Mang Ta Xuyên Qua Nhị Thứ Nguyên",
+      "remote_count": 129,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 129,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 139888,
+      "name": "Chư Thiên : Bắt Đầu Hành Trình Trở Thành Kẻ Thu Thập",
+      "status_name": "Tạm dừng",
+      "folder": "Chư Thiên Bắt Đầu Hành Trình Trở Thành Kẻ Thu Thập",
+      "remote_count": 130,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 130,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 139269,
+      "name": "Lan : Khuấy Đảo Cổ Sử",
+      "status_name": "Còn tiếp",
+      "folder": "Lan Khuấy Đảo Cổ Sử",
+      "remote_count": 131,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 131,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 105966,
+      "name": "Thiên Ly Vũ",
+      "status_name": "Còn tiếp",
+      "folder": "Thiên Ly Vũ",
+      "remote_count": 132,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 132,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 149126,
+      "name": "Hắc Ám Ẩn Giả.",
+      "status_name": "Còn tiếp",
+      "folder": "Hắc Ám Ẩn Giả",
+      "remote_count": 145,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 145,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 130845,
+      "name": "Ta Muốn Tu Tiên, Ta Không Muốn Làm Ông Trùm Truyền Thông Giải Trí",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Muốn Tu Tiên Ta Không Muốn Làm Ông Trùm Truyền Thông Giải Trí",
+      "remote_count": 151,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 151,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 133134,
+      "name": "Tây Du: 81 Kiếp Nạn Bị Chơi Hỏng Rồi",
+      "status_name": "Còn tiếp",
+      "folder": "Tây Du 81 Kiếp Nạn Bị Chơi Hỏng Rồi",
+      "remote_count": 158,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 158,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 123401,
+      "name": "Hào Khí Anh Hùng",
+      "status_name": "Còn tiếp",
+      "folder": "Hào Khí Anh Hùng",
+      "remote_count": 160,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 160,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 131514,
+      "name": "Loạn Thế Cường Sinh",
+      "status_name": "Còn tiếp",
+      "folder": "Loạn Thế Cường Sinh",
+      "remote_count": 165,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 165,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 134867,
+      "name": "Bản Tọa Trần Đại Tiên, Thích Thu Nghĩa Nữ!",
+      "status_name": "Còn tiếp",
+      "folder": "Bản Tọa Trần Đại Tiên Thích Thu Nghĩa Nữ",
+      "remote_count": 173,
+      "missing_before": 72,
+      "downloaded": 72,
+      "skipped": 101,
+      "failed": 0,
+      "missing_after": 72,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "committed",
+        "staged_count": 9,
+        "output": "[main 9a62d4d0e58] Bản Tọa Trần Đại Tiên Thích Thu Nghĩa Nữ\n 9 files changed, 13 insertions(+), 5 deletions(-)\nwarning: in the working copy of 'Bản Tọa Trần Đại Tiên Thích Thu Nghĩa Nữ/info.json', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Bản Tọa Trần Đại Tiên Thích Thu Nghĩa Nữ/Chương 159 Tào gia khốn cảnh cừu nhân gặp nhau.txt', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Bản Tọa Trần Đại Tiên Thích Thu Nghĩa Nữ/Chương 163 Khác thường Trần Lục muốn đánh đường chủ.txt', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Bản Tọa Trần Đại Tiên Thích Thu Nghĩa Nữ/Chương 164 Lên đường Phi Long Thành.txt', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Bản Tọa Trần Đại Tiên Thích Thu Nghĩa Nữ/Chương 165 Hắc Lân Chân Nhân Đào Sơn.txt', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working co"
+      }
+    },
+    {
+      "id": 129792,
+      "name": "Xuyên Việt Bắt Đầu Thành Luyện Kim Thuật Sư",
+      "status_name": "Còn tiếp",
+      "folder": "Xuyên Việt Bắt Đầu Thành Luyện Kim Thuật Sư",
+      "remote_count": 181,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 181,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 142750,
+      "name": "Tiên Lộ",
+      "status_name": "Tạm dừng",
+      "folder": "Tiên Lộ",
+      "remote_count": 182,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 182,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 143601,
+      "name": "Xuyên Thành Liếm Cẩu Nam Phụ, Ta Một Cước Đạp Vỡ Thiên Mệnh!",
+      "status_name": "Còn tiếp",
+      "folder": "Xuyên Thành Liếm Cẩu Nam Phụ Ta Một Cước Đạp Vỡ Thiên Mệnh",
+      "remote_count": 183,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 183,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 113673,
+      "name": "Đấu La Chi Thiên Cơ Phượng Hoàng",
+      "status_name": "Còn tiếp",
+      "folder": "Đấu La Chi Thiên Cơ Phượng Hoàng",
+      "remote_count": 186,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 186,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 125072,
+      "name": "Địa Ngục Lĩnh Chủ",
+      "status_name": "Còn tiếp",
+      "folder": "Địa Ngục Lĩnh Chủ",
+      "remote_count": 188,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 188,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 146593,
+      "name": "Trọng Sinh Làm Nông Dân",
+      "status_name": "Còn tiếp",
+      "folder": "Trọng Sinh Làm Nông Dân",
+      "remote_count": 189,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 189,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 133630,
+      "name": "Nguyên Tổ",
+      "status_name": "Còn tiếp",
+      "folder": "Nguyên Tổ",
+      "remote_count": 195,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 195,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 116282,
+      "name": "Ta Đông Hoàng Thái Nhất Không Ứng Kiếp",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Đông Hoàng Thái Nhất Không Ứng Kiếp",
+      "remote_count": 197,
+      "missing_before": 1,
+      "downloaded": 1,
+      "skipped": 196,
+      "failed": 0,
+      "missing_after": 1,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main 108367c1f54] Ta Đông Hoàng Thái Nhất Không Ứng Kiếp\n 1 file changed, 2 insertions(+)\nwarning: in the working copy of 'Ta Đông Hoàng Thái Nhất Không Ứng Kiếp/Chương 154 GIỚI THIỆU CỐT TRUYỆN.txt', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 109768,
+      "name": "Ta Mạnh Lên Nhờ Group Chat • Vô Hạn Kĩ Năng ",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Mạnh Lên Nhờ Group Chat Vô Hạn Kĩ Năng",
+      "remote_count": 200,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 200,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 140101,
+      "name": "Thiên Địa Lưu Tiên",
+      "status_name": "Còn tiếp",
+      "folder": "Thiên Địa Lưu Tiên",
+      "remote_count": 200,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 200,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 152566,
+      "name": "Tam Nguyên Chấn Thế",
+      "status_name": "Còn tiếp",
+      "folder": "Tam Nguyên Chấn Thế",
+      "remote_count": 217,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 217,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_staged"
+      }
+    },
+    {
+      "id": 135892,
+      "name": "Mạt Thế: Ta Kiến Thiết Tối Cường Căn Cứ Ngầm",
+      "status_name": "Còn tiếp",
+      "folder": "Mạt Thế Ta Kiến Thiết Tối Cường Căn Cứ Ngầm",
+      "remote_count": 205,
+      "missing_before": 1,
+      "downloaded": 1,
+      "skipped": 204,
+      "failed": 0,
+      "missing_after": 1,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "committed",
+        "staged_count": 1,
+        "output": "[main 2c028f8718b] Mạt Thế Ta Kiến Thiết Tối Cường Căn Cứ Ngầm\n 1 file changed, 2 deletions(-)\nwarning: in the working copy of 'Mạt Thế Ta Kiến Thiết Tối Cường Căn Cứ Ngầm/Chương 88 5 Chúc Mừng Năm Mới.txt', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Mạt Thế Ta Kiến Thiết Tối Cường Căn Cứ Ngầm/info.json', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Mạt Thế Ta Kiến Thiết Tối Cường Căn Cứ Ngầm/Chương 88 5 Chúc Mừng Năm Mới.txt', CRLF will be replaced by LF the next time Git touches it"
+      }
+    },
+    {
+      "id": 127250,
+      "name": "Bất Diệt Kinh",
+      "status_name": "Còn tiếp",
+      "folder": "Bất Diệt Kinh",
+      "remote_count": 207,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 207,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 143709,
+      "name": "Biến Thiên 3 - Từ 1972 Bắt Đầu Làm Trùm Thương Nghiệp",
+      "status_name": "Còn tiếp",
+      "folder": "Biến Thiên 3 Từ 1972 Bắt Đầu Làm Trùm Thương Nghiệp",
+      "remote_count": 213,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 213,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 153347,
+      "name": "Chiến Lược Gia Thiên Tài",
+      "status_name": "Còn tiếp",
+      "folder": "Chiến Lược Gia Thiên Tài",
+      "remote_count": 214,
+      "missing_before": 12,
+      "downloaded": 12,
+      "skipped": 202,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "commit_failed",
+        "staged_count": 13,
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 136610,
+      "name": "Vũ Trụ Chi Khuyết",
+      "status_name": "Tạm dừng",
+      "folder": "Vũ Trụ Chi Khuyết",
+      "remote_count": 217,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 217,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 111111,
+      "name": "Từ Arknights Bắt  Đầu Xây Dựng Thế Lực",
+      "status_name": "Còn tiếp",
+      "folder": "Từ Arknights Bắt Đầu Xây Dựng Thế Lực",
+      "remote_count": 218,
+      "missing_before": 6,
+      "downloaded": 6,
+      "skipped": 212,
+      "failed": 0,
+      "missing_after": 6,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 134683,
+      "name": "Đồng Thời Xuyên Qua: Bắt Đầu Từ Doraemon.",
+      "status_name": "Tạm dừng",
+      "folder": "Đồng Thời Xuyên Qua Bắt Đầu Từ Doraemon",
+      "remote_count": 228,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 228,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 141518,
+      "name": "Thanh Thu Linh Nguyệt",
+      "status_name": "Còn tiếp",
+      "folder": "Thanh Thu Linh Nguyệt",
+      "remote_count": 231,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 231,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 149202,
+      "name": "Xuyên Nhanh: Từ Blade Bắt Đầu",
+      "status_name": "Còn tiếp",
+      "folder": "Xuyên Nhanh Từ Blade Bắt Đầu",
+      "remote_count": 231,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 231,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 135181,
+      "name": "Trở Về Thế Kỉ 14",
+      "status_name": "Còn tiếp",
+      "folder": "Trở Về Thế Kỉ 14",
+      "remote_count": 241,
+      "missing_before": 2,
+      "downloaded": 2,
+      "skipped": 239,
+      "failed": 0,
+      "missing_after": 2,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 123508,
+      "name": "Yêu Võ Thần",
+      "status_name": "Còn tiếp",
+      "folder": "Yêu Võ Thần",
+      "remote_count": 250,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 250,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'C:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 148006,
+      "name": "Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu",
+      "status_name": "Còn tiếp",
+      "folder": "Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu",
+      "remote_count": 256,
+      "missing_before": 91,
+      "downloaded": 91,
+      "skipped": 165,
+      "failed": 0,
+      "missing_after": 91,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "committed",
+        "staged_count": 38,
+        "output": "[main 16e8e34ed32] Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu\n 38 files changed, 50 insertions(+), 33 deletions(-)\nwarning: in the working copy of 'Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu/info.json', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu/Chương 166 Đàm Phán Cấp Cao.txt', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu/Chương 168 Hội Nghị Bắt Đầu.txt', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu/Chương 169 Chất Vấn Vòng Một.txt', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu/Chương 171 Bỏ Phiếu.txt', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu/Chương 174 Gió Đổi Chiều.txt', "
+      }
+    },
+    {
+      "id": 121873,
+      "name": "Xuyên Mộng Giả",
+      "status_name": "Còn tiếp",
+      "folder": "Xuyên Mộng Giả",
+      "remote_count": 257,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 257,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 129186,
+      "name": "Nguyên Thủy",
+      "status_name": "Tạm dừng",
+      "folder": "Nguyên Thủy",
+      "remote_count": 260,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 260,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 120219,
+      "name": "Lê Dung",
+      "status_name": "Còn tiếp",
+      "folder": "Lê Dung",
+      "remote_count": 270,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 270,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "ok",
+      "commit": {
+        "status": "nothing_to_commit"
+      }
+    }
+  ]
+}
