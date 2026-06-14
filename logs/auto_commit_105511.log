@@ -1,0 +1,38 @@
+book=Pokemon Thứ Này Nhìn Quen Quen
+book_id=105511
+out=C:\Dev\MTC\Pokemon Thứ Này Nhìn Quen Quen
+chapters_total=27 expected=27
+[1/27] skip existing file=Chương 1 Bối rối khởi đầu.txt
+[2/27] skip existing file=Chương 2 Kịch bản tiến trình Viridian.txt
+[3/27] download chapter_id=13097972 file=Chương 3 Kịch bản tiến trình Pewter và Mt. Moon.txt
+  OK decrypted=True written=Chương 3 Kịch bản tiến trình Pewter và Mt. Moon.txt
+[4/27] download chapter_id=13097995 file=Chương 4 Kịch bản tiến trình Cerulean Bill S.S. Anne Vermilion.txt
+  OK decrypted=True written=Chương 4 Kịch bản tiến trình Cerulean Bill S.S. Anne Vermilion.txt
+[5/27] skip existing file=Chương 5 Kịch bản tiến trình Đẩy Green ra chắn đòn.txt
+[6/27] skip existing file=Chương 6 Kịch bản tiến trình Ông chú đẹp trai tại sòng bài.txt
+[7/27] skip existing file=Chương 7 Kịch bản tiến trình Phương pháp trừ tà chính xác.txt
+[8/27] skip existing file=Chương 8 Kịch bản tiến trình Một không cẩn thận liền trở thành anh hùng cứu người.txt
+[9/27] skip existing file=Chương 9 Kịch bản tiến trình Không đáng tin cậy phương pháp giáo dục.txt
+[10/27] skip existing file=Chương 10 Kịch bản tiến trình Tuy trẻ em ở thế giới này rất có khả năng nhưng rươu vẫn là đừng uống bậy.txt
+[11/27] skip existing file=Chương 11 Kịch bản tiến trình Chạy nhanh hoàn thành kịch bản.txt
+[12/27] skip existing file=Chương 12 Người tự xưng là kẻ thù của ta đang ở khen ta đẹp trai.txt
+[13/27] skip existing file=Chương 13 Tà ác trang web khúc dạo đầu Muốn nhìn Red giả gái đi du lịch Rất tiếc tác giả sẽ không viết.txt
+[14/27] skip existing file=Chương 14 Tà ác trang web Thức tỉnh.txt
+[15/27] skip existing file=Chương 15 Thấy Silver.txt
+[16/27] skip existing file=Chương 16 Tà ác trang web Các kiểu thế giới muôn màu muôn vẻ.txt
+[17/27] skip existing file=Chương 17 Đáng yêu người bạn nhỏ.txt
+[18/27] skip existing file=Chương 18 Tà ác trang web Team Rocket đoạn ngắn.txt
+[19/27] skip existing file=Chương 19 Rời núi.txt
+[20/27] skip existing file=Chương 20 Tà ác trang web Không đáng tin cậy kết luận.txt
+[21/27] skip existing file=Chương 21 Tà ác trang web Clair đã đọc cái gì.txt
+[22/27] skip existing file=Chương 22 Dụ dỗ người bạn nhỏ cùng đi xuống con đường đen tối.txt
+[23/27] skip existing file=Chương 23 Tà ác trang web Đừng gõ tên người quen vào công cụ tìm kiếm.txt
+[24/27] skip existing file=Chương 24 Tà ác trang web ki ngươi không rút ra bài học về việc dùng công cụ tìm kiếm.txt
+[25/27] skip existing file=Chương 25 Tà ác trang web Ném đồ tầm bậy dẫn phát hậu quả.txt
+[26/27] skip existing file=Chương 26 Tà ác trang web khi cơ bắp mãnh nam cầm phải ốm yếu tiểu bạch hoa kịch bản.txt
+[27/27] skip existing file=Chương 27 Ngày tàn.txt
+final_ok=27
+final_fail=0
+out=C:\Dev\MTC\Pokemon Thứ Này Nhìn Quen Quen
+
+[stderr]

@@ -1,0 +1,64 @@
+{
+  "summary": {
+    "folders": 5,
+    "ok": 0,
+    "partial": 5,
+    "remote_empty": 0,
+    "downloaded_chapters": 3002
+  },
+  "results": [
+    {
+      "folder": "Cho Ta Một Trang Giấy Ta Có Thể Giết Xuyên Toàn Bộ Tận Thế",
+      "book_id": 145475,
+      "remote_total": 610,
+      "status": "partial",
+      "downloaded": 609,
+      "errors": [
+        "77: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Chó Giữ Nhà Đều Là Đế Cảnh Ngươi Quản Cái Này Gọi Nghèo Túng Tông Môn",
+      "book_id": 143858,
+      "remote_total": 481,
+      "status": "partial",
+      "downloaded": 480,
+      "errors": [
+        "307: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Chấn Kinh Bắt Đầu Một Mảnh Dị Biến Xuất Kỳ Tích",
+      "book_id": 152136,
+      "remote_total": 689,
+      "status": "partial",
+      "downloaded": 687,
+      "errors": [
+        "184: unable to decode iv",
+        "335: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Chế Tạo Hồn Hệ Thành Dưới Đất Chỉ Muốn Ngược Khóc Tất Cả Mọi Người",
+      "book_id": 151069,
+      "remote_total": 460,
+      "status": "partial",
+      "downloaded": 458,
+      "errors": [
+        "253: unable to decode iv",
+        "439: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Chỉ Muốn Chạy Trốn Ta Bị Nhân Hoàng Nghe Lén",
+      "book_id": 144937,
+      "remote_total": 770,
+      "status": "partial",
+      "downloaded": 768,
+      "errors": [
+        "647: unable to decode iv",
+        "731: unable to decode iv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "folders": 2197,
+  "issues": 3,
+  "items": [
+    {
+      "folder": "Game Point Cú Đánh Cuối Cùng",
+      "book_id": 153514,
+      "status": "api_error",
+      "error": "none"
+    },
+    {
+      "folder": "Trọng Sinh Ma Tu Bắt Đầu Nhặt Được Một Khỏa Zombie Tinh Cầu",
+      "book_id": 119026,
+      "status": "issue",
+      "missing_count": 1,
+      "extra_count": 0,
+      "dup_count": 0,
+      "missing_sample": [
+        2236
+      ],
+      "extra_sample": []
+    },
+    {
+      "folder": "Tu Tiên Từ Thanh Trang Bị Bắt Đầu",
+      "book_id": 153598,
+      "status": "issue",
+      "missing_count": 2,
+      "extra_count": 0,
+      "dup_count": 0,
+      "missing_sample": [
+        684,
+        685
+      ],
+      "extra_sample": []
+    }
+  ]
+}

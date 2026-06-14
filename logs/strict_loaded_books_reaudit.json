@@ -1,0 +1,65 @@
+{
+  "folders": 2197,
+  "issues": 5,
+  "items": [
+    {
+      "folder": "Bắc Minh Phong",
+      "book_id": 153593,
+      "status": "issue",
+      "missing_count": 1,
+      "extra_count": 0,
+      "dup_count": 0,
+      "missing_sample": [
+        557
+      ],
+      "extra_sample": []
+    },
+    {
+      "folder": "Game Point Cú Đánh Cuối Cùng",
+      "book_id": 153514,
+      "status": "api_error",
+      "error": "none"
+    },
+    {
+      "folder": "Nói Xấu Ta Là Tà Tu Nhưng Có Thể Ta Thật Sự Là Tà Tu",
+      "book_id": 153589,
+      "status": "issue",
+      "missing_count": 2,
+      "extra_count": 0,
+      "dup_count": 0,
+      "missing_sample": [
+        63,
+        64
+      ],
+      "extra_sample": []
+    },
+    {
+      "folder": "Nạn Đói Năm Trong Làng Thời Gian Thật Khoái Hoạt",
+      "book_id": 146140,
+      "status": "issue",
+      "missing_count": 2,
+      "extra_count": 0,
+      "dup_count": 0,
+      "missing_sample": [
+        749,
+        750
+      ],
+      "extra_sample": []
+    },
+    {
+      "folder": "Tu Tiên Từ Thanh Trang Bị Bắt Đầu",
+      "book_id": 153598,
+      "status": "issue",
+      "missing_count": 4,
+      "extra_count": 0,
+      "dup_count": 0,
+      "missing_sample": [
+        548,
+        681,
+        682,
+        683
+      ],
+      "extra_sample": []
+    }
+  ]
+}

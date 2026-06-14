@@ -1,0 +1,118 @@
+[
+  {
+    "folder": "1854",
+    "status": "ok",
+    "stdout": "[main f524921302b] update: 1854\n 1 file changed, 19 insertions(+), 27 deletions(-)\n",
+    "stderr": ""
+  },
+  {
+    "folder": "B?t Di?t Kinh",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'B?t Di?t Kinh' did not match any files\n"
+  },
+  {
+    "folder": "B?t ??u Xu?t Sinh Ta C? G?ng ??n V? ??ch",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'B?t ??u Xu?t Sinh Ta C? G?ng ??n V? ??ch' did not match any files\n"
+  },
+  {
+    "folder": "D?o Ch?i Ch? Thi?n ??o S?",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'D?o Ch?i Ch? Thi?n ??o S?' did not match any files\n"
+  },
+  {
+    "folder": "Frieren B?t ??u B?i S? Serie",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Frieren B?t ??u B?i S? Serie' did not match any files\n"
+  },
+  {
+    "folder": "Game M?i C?p Nh?t Ta ?em S? Ph? ?i G?p Ng??i Y?u C?",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Game M?i C?p Nh?t Ta ?em S? Ph? ?i G?p Ng??i Y?u C?' did not match any files\n"
+  },
+  {
+    "folder": "Game Point C? ??nh Cu?i C?ng",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Game Point C? ??nh Cu?i C?ng' did not match any files\n"
+  },
+  {
+    "folder": "Game Th?c T? ?o Ng??i Ch?i Tr?ng Sinh",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Game Th?c T? ?o Ng??i Ch?i Tr?ng Sinh' did not match any files\n"
+  },
+  {
+    "folder": "H?i T?c H? Th?ng S?m ??n C??p M?t Linlin",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'H?i T?c H? Th?ng S?m ??n C??p M?t Linlin' did not match any files\n"
+  },
+  {
+    "folder": "H?c ?m ?n Gi?",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'H?c ?m ?n Gi?' did not match any files\n"
+  },
+  {
+    "folder": "Khoa H?c Ki?u Conan S?s?nin",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Khoa H?c Ki?u Conan S?s?nin' did not match any files\n"
+  },
+  {
+    "folder": "Kh?ng Th? Tr??ng Sinh Ta Kh?ng Th? L?m G? Kh?c Ngo?i V? H?n Chuy?n Th?",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Kh?ng Th? Tr??ng Sinh Ta Kh?ng Th? L?m G? Kh?c Ngo?i V? H?n Chuy?n Th?' did not match any files\n"
+  },
+  {
+    "folder": "Kh?c ??c H?nh Trong ??m Tr??ng T?n Th?",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Kh?c ??c H?nh Trong ??m Tr??ng T?n Th?' did not match any files\n"
+  },
+  {
+    "folder": "Kh?c M?nh Tu H?nh T? C?m Y V? B?t ??u Tr??ng Sinh",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Kh?c M?nh Tu H?nh T? C?m Y V? B?t ??u Tr??ng Sinh' did not match any files\n"
+  },
+  {
+    "folder": "Kim B?ng Hi?n Th? Tr?m Ho?ng H?u D? Nhi?n L? V? T?c Thi?n",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Kim B?ng Hi?n Th? Tr?m Ho?ng H?u D? Nhi?n L? V? T?c Thi?n' did not match any files\n"
+  },
+  {
+    "folder": "Kinh Ng?c C?a Ta Hoa Qu? To?n B? L? Thi?n T?i ??a B?o",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Kinh Ng?c C?a Ta Hoa Qu? To?n B? L? Thi?n T?i ??a B?o' did not match any files\n"
+  },
+  {
+    "folder": "Ki?m C?t C?a Ta H?ng N?m Gia T?ng M?t T?c",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Ki?m C?t C?a Ta H?ng N?m Gia T?ng M?t T?c' did not match any files\n"
+  },
+  {
+    "folder": "K? T?c X? C?u Sinh Ta B? M?c ??nh C?a H? Th?ng To?n Tuy?n D",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'K? T?c X? C?u Sinh Ta B? M?c ??nh C?a H? Th?ng To?n Tuy?n D' did not match any files\n"
+  },
+  {
+    "folder": "Long C? Chi?n H?n",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Long C? Chi?n H?n' did not match any files\n"
+  },
+  {
+    "folder": "Mc C?m Nang Giao D?ch Honkai C?a Wandering Trader",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Mc C?m Nang Giao D?ch Honkai C?a Wandering Trader' did not match any files\n"
+  },
+  {
+    "folder": "Qu?n Net ?m D??ng",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'Qu?n Net ?m D??ng' did not match any files\n"
+  },
+  {
+    "folder": "S?t Th?p Ma Ph?p",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'S?t Th?p Ma Ph?p' did not match any files\n"
+  },
+  {
+    "folder": "T? Arknights B?t ??u X?y D?ng Th? L?c",
+    "status": "add_failed",
+    "stderr": "fatal: pathspec 'T? Arknights B?t ??u X?y D?ng Th? L?c' did not match any files\n"
+  }
+]

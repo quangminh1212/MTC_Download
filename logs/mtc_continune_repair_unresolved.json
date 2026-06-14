@@ -1,0 +1,128 @@
+{
+  "results": [
+    {
+      "folder": "1854",
+      "book_id": 149581,
+      "status": "ok",
+      "remote_total": 974,
+      "downloaded_count": 0,
+      "deleted_count": 0,
+      "remaining_missing": [],
+      "remaining_dupes": [],
+      "errors": []
+    },
+    {
+      "folder": "Bánh Xe Vận Mệnh Tại Hogwarts",
+      "book_id": 113504,
+      "status": "ok",
+      "remote_total": 950,
+      "downloaded_count": 11,
+      "deleted_count": 3,
+      "remaining_missing": [],
+      "remaining_dupes": [],
+      "errors": []
+    },
+    {
+      "folder": "Bạch Quả Chi Đồng Nhân Thiếu Niên Ca Hành Quyển 1 end",
+      "book_id": null,
+      "status": "unresolved_id"
+    },
+    {
+      "folder": "Bắt Đầu Xuất Sinh Ta Cố Gắng Đến Vô Địch",
+      "book_id": 139802,
+      "status": "ok",
+      "remote_total": 41,
+      "downloaded_count": 0,
+      "deleted_count": 0,
+      "remaining_missing": [],
+      "remaining_dupes": [],
+      "errors": []
+    },
+    {
+      "folder": "Dị Giới Trọng Sinh Lục",
+      "book_id": null,
+      "status": "unresolved_id"
+    },
+    {
+      "folder": "Game Mới Cập Nhật Ta Đem Sư Phụ Đi Gặp Người Yêu Cũ",
+      "book_id": 119345,
+      "status": "ok",
+      "remote_total": 490,
+      "downloaded_count": 0,
+      "deleted_count": 0,
+      "remaining_missing": [],
+      "remaining_dupes": [],
+      "errors": []
+    },
+    {
+      "folder": "Game Thực Tế Ảo Người Chơi Trọng Sinh",
+      "book_id": 125841,
+      "status": "ok",
+      "remote_total": 1164,
+      "downloaded_count": 0,
+      "deleted_count": 0,
+      "remaining_missing": [],
+      "remaining_dupes": [],
+      "errors": []
+    },
+    {
+      "folder": "Giả Vương Bình Thiên Hạ",
+      "book_id": null,
+      "status": "unresolved_id"
+    },
+    {
+      "folder": "Hắc Ám Ẩn Giả",
+      "book_id": 149126,
+      "status": "ok",
+      "remote_total": 145,
+      "downloaded_count": 0,
+      "deleted_count": 0,
+      "remaining_missing": [],
+      "remaining_dupes": [],
+      "errors": []
+    },
+    {
+      "folder": "Khúc Độc Hành Trong Đêm Trường Tận Thế",
+      "book_id": 104758,
+      "status": "ok",
+      "remote_total": 2606,
+      "downloaded_count": 0,
+      "deleted_count": 0,
+      "remaining_missing": [],
+      "remaining_dupes": [],
+      "errors": []
+    },
+    {
+      "folder": "Quỷ Bí Chi Chủ",
+      "book_id": 153617,
+      "status": "ok",
+      "remote_total": 0,
+      "downloaded_count": 0,
+      "deleted_count": 1412,
+      "remaining_missing": [],
+      "remaining_dupes": [],
+      "errors": []
+    },
+    {
+      "folder": "Sắt Thép Ma Pháp",
+      "book_id": 108742,
+      "status": "ok",
+      "remote_total": 972,
+      "downloaded_count": 0,
+      "deleted_count": 0,
+      "remaining_missing": [],
+      "remaining_dupes": [],
+      "errors": []
+    },
+    {
+      "folder": "Tuyệt Thế Nguyên Tôn",
+      "book_id": null,
+      "status": "unresolved_id"
+    },
+    {
+      "folder": "Tuyệt Thế Thiên Quân",
+      "book_id": null,
+      "status": "unresolved_id"
+    }
+  ]
+}

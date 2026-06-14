@@ -1,0 +1,74 @@
+[
+  {
+    "id": 118404,
+    "folder": "Chiến Kỳ Phương Nam Dũng Khởi Phần 2",
+    "expected": 313,
+    "returncode": 0,
+    "elapsed": 108.2,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_118404.log"
+  },
+  {
+    "id": 142470,
+    "folder": "Devil'S Path Quỷ Giới Và Nhẫn Giới",
+    "expected": 322,
+    "returncode": 0,
+    "elapsed": 165.1,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_142470.log"
+  },
+  {
+    "id": 107498,
+    "folder": "Thất Nguyệt Tu Chân Giới",
+    "expected": 328,
+    "returncode": 0,
+    "elapsed": 124.2,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_107498.log"
+  },
+  {
+    "id": 117179,
+    "folder": "Cầu Trường Rực Lửa",
+    "expected": 332,
+    "returncode": 0,
+    "elapsed": 115.2,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_117179.log"
+  },
+  {
+    "id": 112951,
+    "folder": "Thần Nguyên Kỷ",
+    "expected": 362,
+    "returncode": 0,
+    "elapsed": 129.2,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_112951.log"
+  },
+  {
+    "id": 107569,
+    "folder": "Senju Gia Tộc Quật Khởi",
+    "expected": 366,
+    "returncode": 0,
+    "elapsed": 129.9,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_107569.log"
+  },
+  {
+    "id": 102973,
+    "folder": "Nhị Thứ Nguyên Thần Tượng Âm Nhạc",
+    "expected": 376,
+    "returncode": 0,
+    "elapsed": 202.2,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_102973.log"
+  },
+  {
+    "id": 104292,
+    "folder": "Đế Chế Kinh Tế Mới Tại Nước Việt",
+    "expected": 379,
+    "returncode": 0,
+    "elapsed": 183.9,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_104292.log"
+  },
+  {
+    "id": 117008,
+    "folder": "Chiến Kỳ Phương Nam Dũng Khởi",
+    "expected": 388,
+    "returncode": 0,
+    "elapsed": 130.2,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_117008.log"
+  }
+]

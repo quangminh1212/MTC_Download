@@ -1,0 +1,90 @@
+{
+  "api_books": 397,
+  "completed": 95,
+  "matched_folders": 91,
+  "unmatched_completed": 4,
+  "quick_exact_count": 88,
+  "quick_incomplete": 3,
+  "folder_collisions": [
+    [
+      "C:\\Dev\\MTC\\Bắt Đầu Phát Tức Phụ Ta Biết Có Hơi Nhiều",
+      "C:\\Dev\\MTC\\Bắt Đầu Phát Tức Phụ, Ta Biết Có Hơi Nhiều"
+    ],
+    [
+      "C:\\Dev\\MTC\\Mạt Thế Bắt Đầu Một Quyển Sách Dị Năng Toàn Dựa Vào Đọc",
+      "C:\\Dev\\MTC\\Mạt Thế Bắt Đầu Một Quyển Sách, Dị Năng Toàn Dựa Vào Đọc"
+    ],
+    [
+      "C:\\Dev\\MTC\\Phế Phẩm Trao Đổi Chỗ Tránh Nạn Ta Tận Thế Đắc Ý",
+      "C:\\Dev\\MTC\\Phế Phẩm Trao Đổi Chỗ Tránh Nạn, Ta Tận Thế Đắc Ý"
+    ],
+    [
+      "C:\\Dev\\MTC\\Ta Cổ Đại Quái Thai Tại Đương Đại Vô Địch",
+      "C:\\Dev\\MTC\\Ta, Cổ Đại Quái Thai, Tại Đương Đại Vô Địch"
+    ],
+    [
+      "C:\\Dev\\MTC\\Toàn Dân Chạy Nạn Vật Phẩm Của Ta Có Thể Thăng Cấp",
+      "C:\\Dev\\MTC\\Toàn Dân Chạy Nạn, Vật Phẩm Của Ta Có Thể Thăng Cấp"
+    ],
+    [
+      "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Hối Hôn Ta Thành Thi Tiên Ngươi Khóc Cái Gì",
+      "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Hối Hôn, Ta Thành Thi Tiên Ngươi Khóc Cái Gì"
+    ],
+    [
+      "C:\\Dev\\MTC\\Đại Đường Đều Xuyên Qua Rồi Ai Còn Biết Điều A",
+      "C:\\Dev\\MTC\\Đại Đường Đều Xuyên Qua Rồi, Ai Còn Biết Điều A"
+    ]
+  ],
+  "unmatched": [
+    {
+      "id": 105233,
+      "name": "Sử Dụng Bookhub",
+      "folder": "Sử Dụng Bookhub",
+      "expected_meta": 13
+    },
+    {
+      "id": 112147,
+      "name": "Nhặt Được Sức Mạnh Của Thần",
+      "folder": "Nhặt Được Sức Mạnh Của Thần",
+      "expected_meta": 0
+    },
+    {
+      "id": 117866,
+      "name": "Lãnh Chúa: Mắt Thứ Ba Siêu Thần",
+      "folder": "Lãnh Chúa Mắt Thứ Ba Siêu Thần",
+      "expected_meta": 0
+    },
+    {
+      "id": 122695,
+      "name": "Beyond",
+      "folder": "Beyond",
+      "expected_meta": 0
+    }
+  ],
+  "incomplete": [
+    {
+      "id": 142470,
+      "name": "Devil'S Path: Quỷ Giới Và Nhẫn Giới",
+      "folder": "Devil'S Path Quỷ Giới Và Nhẫn Giới",
+      "expected_meta": 322,
+      "local_count": 321,
+      "local_folder": "Devil S Path Quỷ Giới Và Nhẫn Giới"
+    },
+    {
+      "id": 105999,
+      "name": "Hùng Ca Đại Việt",
+      "folder": "Hùng Ca Đại Việt",
+      "expected_meta": 1396,
+      "local_count": 1395,
+      "local_folder": "Hùng Ca Đại Việt"
+    },
+    {
+      "id": 104911,
+      "name": "Dòng Máu Lạc Hồng",
+      "folder": "Dòng Máu Lạc Hồng",
+      "expected_meta": 805,
+      "local_count": 804,
+      "local_folder": "Dòng Máu Lạc Hồng"
+    }
+  ]
+}

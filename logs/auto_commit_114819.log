@@ -1,0 +1,49 @@
+book=Mha Jjk Chương Trình Khám Phá Lịch Sử Có Gì Đó Kì Lạ
+book_id=114819
+out=C:\Dev\MTC\Mha Jjk Chương Trình Khám Phá Lịch Sử Có Gì Đó Kì Lạ
+chapters_total=31 expected=31
+[1/31] skip existing file=Chương 1 Chuẩn bị Livestream.txt
+[2/31] skip existing file=Chương 2 Một thế giới khác.txt
+[3/31] skip existing file=Chương 3 Nghỉ giữa giờ.txt
+[4/31] skip existing file=Chương 4 Chú Thuật Sư.txt
+[5/31] skip existing file=Chương 5 Đảo ngược.txt
+[6/31] skip existing file=Chương 6 Xã hội chuyển biến kết thúc khung cảnh bên MHA để chuyển về JJK.txt
+[7/31] skip existing file=Chương 7 Bên chú thuật giới.txt
+[8/31] skip existing file=Chương 8 Mở cửa.txt
+[9/31] skip existing file=Chương 9 Điên cuồng nha.txt
+[10/31] skip existing file=Chương 10 Suýt diệt thế.txt
+[11/31] download chapter_id=15406914 file=Chương 11 Hội giao lưu 1.txt
+  OK decrypted=True written=Chương 11 Hội giao lưu 1.txt
+[12/31] download chapter_id=15410986 file=Chương 12 Hội giao lưu 2.txt
+  OK decrypted=True written=Chương 12 Hội giao lưu 2.txt
+[13/31] download chapter_id=15413195 file=Chương 13 Biến cố Shibuya 1.txt
+  OK decrypted=True written=Chương 13 Biến cố Shibuya 1.txt
+[14/31] download chapter_id=15414529 file=Chương 14 Hoài Ngọc 1.txt
+  OK decrypted=True written=Chương 14 Hoài Ngọc 1.txt
+[15/31] download chapter_id=15416541 file=Chương 15 Hoài Ngọc 2.txt
+  OK decrypted=True written=Chương 15 Hoài Ngọc 2.txt
+[16/31] skip existing file=Chương 16 Ngọc nát.txt
+[17/31] skip existing file=Chương 17 Kenjaku.txt
+[18/31] download chapter_id=15422196 file=Chương 18 Còn nhớ năm đó ta….txt
+  OK decrypted=True written=Chương 18 Còn nhớ năm đó ta….txt
+[19/31] skip existing file=Chương 19 Ta có một đứa con trai cực kỳ đáng yêu.txt
+[20/31] skip existing file=Chương 20 Hình như hơi thuận lợi quá.txt
+[21/31] download chapter_id=15427427 file=Chương 21 Thần tử 1.txt
+  OK decrypted=True written=Chương 21 Thần tử 1.txt
+[22/31] download chapter_id=15429357 file=Chương 22 Thần tử 2.txt
+  OK decrypted=True written=Chương 22 Thần tử 2.txt
+[23/31] skip existing file=Chương 23 Thân là mẫu mực Thần Tử.txt
+[24/31] skip existing file=Chương 24 Cải trang vi hành.txt
+[25/31] download chapter_id=15448430 file=Chương 25 ; Hạ phàm.txt
+  OK decrypted=True written=Chương 25 ; Hạ phàm.txt
+[26/31] skip existing file=Chương 26 Văng ra.txt
+[27/31] skip existing file=Chương 27 Đốn ngộ.txt
+[28/31] skip existing file=Chương 28 Chào buổi tối.txt
+[29/31] skip existing file=Chương 29 Nghe lừa đảo cho vui đời.txt
+[30/31] skip existing file=Chương 30 Ra tù.txt
+[31/31] skip existing file=Chương 31 Mọi người hình như biến kì quái.txt
+final_ok=31
+final_fail=0
+out=C:\Dev\MTC\Mha Jjk Chương Trình Khám Phá Lịch Sử Có Gì Đó Kì Lạ
+
+[stderr]

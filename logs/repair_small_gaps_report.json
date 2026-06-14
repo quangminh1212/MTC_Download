@@ -1,0 +1,310 @@
+[
+  {
+    "id": 107764,
+    "name": "Đế Cuồng",
+    "folder": "Đế Cuồng",
+    "missing_before": [
+      80,
+      987
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 80 Tham lam ngu dốt.txt",
+      "Chương 987 Đều là chúng sinh.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 111422,
+    "name": "Thịnh Thế Diên Ninh",
+    "folder": "Thịnh Thế Diên Ninh",
+    "missing_before": [
+      553
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 553 Tìm chết.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 109099,
+    "name": "Nhất Kiếp Tiên Phàm",
+    "folder": "Nhất Kiếp Tiên Phàm",
+    "missing_before": [
+      588
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 588 Cung gia có tang 2.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 110466,
+    "name": "Đế Quốc Nhật Bản",
+    "folder": "Đế Quốc Nhật Bản",
+    "missing_before": [],
+    "extra_before": [
+      147
+    ],
+    "downloaded": [],
+    "deleted": [
+      "Chương 147 Aki 3.txt"
+    ],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 122993,
+    "name": "Ma Chủng",
+    "folder": "Ma Chủng",
+    "missing_before": [
+      1064
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 1064 Thương thảo.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 115313,
+    "name": "Ngôi Sao Hi Vọng",
+    "folder": "Ngôi Sao Hi Vọng",
+    "missing_before": [
+      109
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 109 Cải Thiện Mũi Tiến Công.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 104758,
+    "name": "Khúc Độc Hành Trong Đêm Trường Tận Thế",
+    "folder": "Khúc Độc Hành Trong Đêm Trường Tận Thế",
+    "missing_before": [
+      117
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 117 Những Người Đàn Ông Chân Chính.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 119569,
+    "name": "Xuyên Về Thời Lê Làm Quân Phiệt",
+    "folder": "Xuyên Về Thời Lê Làm Quân Phiệt",
+    "missing_before": [
+      358,
+      739,
+      755,
+      826,
+      827
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 358 Tính Chính Danh.txt",
+      "Chương 739 Mở màn.txt",
+      "Chương 755 Thắng thắng rồi.txt",
+      "Chương 826 Hạt mầm dân chủ.txt",
+      "Chương 827 Diều Hâu Bồ Câu.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 120335,
+    "name": "Tây Sơn Hành Trình Vượt Thời Gian",
+    "folder": "Tây Sơn Hành Trình Vượt Thời Gian",
+    "missing_before": [
+      220
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 220 Không khí tết.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 122255,
+    "name": "Vạn Xuân Đế Quốc",
+    "folder": "Vạn Xuân Đế Quốc",
+    "missing_before": [
+      200,
+      347,
+      348
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 200 Bản danh sách quý giá.txt",
+      "Chương 347 Thiết quyền tướng quân.txt",
+      "Chương 348 Vỡ trận.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 110298,
+    "name": "Luân Hồi Thương Đế",
+    "folder": "Luân Hồi Thương Đế",
+    "missing_before": [
+      314
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 314 Chém giết Tà Huyết Khôi Tổ chức thần bí.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 120329,
+    "name": "Nam Thiên Chiến Hỏa",
+    "folder": "Nam Thiên Chiến Hỏa",
+    "missing_before": [
+      42,
+      225,
+      313,
+      533,
+      540
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 42 Vinh Quang Hay Địa Ngục.txt",
+      "Chương 225 Chạy Qua Philippines.txt",
+      "Chương 313 Thu Thập Con Ma.txt"
+    ],
+    "deleted": [],
+    "errors": [
+      "download idx 533: encrypted marker remains after decrypt/clean",
+      "download idx 540: encrypted marker remains after decrypt/clean"
+    ],
+    "missing_after": [
+      533,
+      540
+    ],
+    "extra_after": [],
+    "status": "issue"
+  },
+  {
+    "id": 140493,
+    "name": "Tiên Lộ Kỳ Duyên",
+    "folder": "Tiên Lộ Kỳ Duyên",
+    "missing_before": [
+      205
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 205 Ma Ảnh Tông Nơi Không Có Ánh Sáng.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 125841,
+    "name": "Game Thực Tế Ảo: Người Chơi Trọng Sinh",
+    "folder": "Game Thực Tế Ảo Người Chơi Trọng Sinh",
+    "missing_before": [
+      24,
+      44,
+      513,
+      699,
+      701
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 24 Cuối cùng Boss.txt",
+      "Chương 44 Rèn kiếm sắt.txt",
+      "Chương 513 Nghi vấn giữa giải đấu.txt",
+      "Chương 699 Dính chùm.txt",
+      "Chương 701 Thời gian đếm ngược.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 119844,
+    "name": "Long Cơ Chiến Hồn",
+    "folder": "Long Cơ Chiến Hồn",
+    "missing_before": [
+      98,
+      127
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 98 Nguy nan cực độ.txt",
+      "Chương 127 Thành công đột phá.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  },
+  {
+    "id": 101516,
+    "name": "Quang Minh Bất Diệt, Tín Ngưỡng Vĩnh Hằng",
+    "folder": "Quang Minh Bất Diệt Tín Ngưỡng Vĩnh Hằng",
+    "missing_before": [
+      12
+    ],
+    "extra_before": [],
+    "downloaded": [
+      "Chương 12 Cuộc tấn công bất ngờ.txt"
+    ],
+    "deleted": [],
+    "errors": [],
+    "missing_after": [],
+    "extra_after": [],
+    "status": "ok"
+  }
+]

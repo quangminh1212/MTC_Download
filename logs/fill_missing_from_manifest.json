@@ -1,0 +1,2737 @@
+{
+  "targets": [
+    {
+      "id": 134396,
+      "name": "Bắt Đầu Bị Đày Đi Sung Quân, Ta Từ Max Cấp Tiễn Thuật Bắt Đầu",
+      "folder": "C:\\Dev\\MTC\\Bắt Đầu Bị Đày Đi Sung Quân Ta Từ Max Cấp Tiễn Thuật Bắt Đầu",
+      "chapter_count": 559,
+      "latest_index": 570,
+      "missing_indexes": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570
+      ],
+      "downloaded": [
+        {
+          "index": 560,
+          "chapter_id": 23304896
+        },
+        {
+          "index": 561,
+          "chapter_id": 23318376
+        },
+        {
+          "index": 562,
+          "chapter_id": 23318384
+        },
+        {
+          "index": 563,
+          "chapter_id": 23338466
+        },
+        {
+          "index": 564,
+          "chapter_id": 23338476
+        },
+        {
+          "index": 565,
+          "chapter_id": 23363758
+        },
+        {
+          "index": 566,
+          "chapter_id": 23363762
+        },
+        {
+          "index": 567,
+          "chapter_id": 23363768
+        },
+        {
+          "index": 568,
+          "chapter_id": 23363770
+        },
+        {
+          "index": 569,
+          "chapter_id": 23445030
+        },
+        {
+          "index": 570,
+          "chapter_id": 23445031
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 119717,
+      "name": "Cao Võ: Vô Hạn Phân Thân, Bắt Đầu Cho Ăn Bể Bụng S Dị Thú",
+      "folder": "C:\\Dev\\MTC\\Cao Võ Vô Hạn Phân Thân Bắt Đầu Cho Ăn Bể Bụng S Dị Thú",
+      "chapter_count": 1220,
+      "latest_index": 1221,
+      "missing_indexes": [
+        1221
+      ],
+      "downloaded": [
+        {
+          "index": 1221,
+          "chapter_id": 21504667
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 112656,
+      "name": "Chiêu Hắc Thể Chất Bắt Đầu Tu Hành Tại Phế Thổ",
+      "folder": "C:\\Dev\\MTC\\Chiêu Hắc Thể Chất Bắt Đầu Tu Hành Tại Phế Thổ",
+      "chapter_count": 2981,
+      "latest_index": 2986,
+      "missing_indexes": [
+        2982,
+        2983,
+        2984,
+        2985,
+        2986
+      ],
+      "downloaded": [
+        {
+          "index": 2982,
+          "chapter_id": 27151488
+        },
+        {
+          "index": 2983,
+          "chapter_id": 27151489
+        },
+        {
+          "index": 2984,
+          "chapter_id": 27151490
+        },
+        {
+          "index": 2985,
+          "chapter_id": 27151491
+        },
+        {
+          "index": 2986,
+          "chapter_id": 27151492
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 143858,
+      "name": "Chó Giữ Nhà Đều Là Đế Cảnh, Ngươi Quản Cái Này Gọi Nghèo Túng Tông Môn",
+      "folder": "C:\\Dev\\MTC\\Chó Giữ Nhà Đều Là Đế Cảnh Ngươi Quản Cái Này Gọi Nghèo Túng Tông Môn",
+      "chapter_count": 481,
+      "latest_index": 482,
+      "missing_indexes": [
+        482
+      ],
+      "downloaded": [
+        {
+          "index": 482,
+          "chapter_id": 25921484
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 120366,
+      "name": "Cái Này Giang Hồ Bởi Vì Ta Mà Trở Nên Kỳ Quái",
+      "folder": "C:\\Dev\\MTC\\Cái Này Giang Hồ Bởi Vì Ta Mà Trở Nên Kỳ Quái",
+      "chapter_count": 615,
+      "latest_index": 616,
+      "missing_indexes": [
+        616
+      ],
+      "downloaded": [
+        {
+          "index": 616,
+          "chapter_id": 18289243
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 141832,
+      "name": "Cẩu Tại Tạp Dịch, Lặng Lẽ Tu Hành",
+      "folder": "C:\\Dev\\MTC\\Cẩu Tại Tạp Dịch Lặng Lẽ Tu Hành",
+      "chapter_count": 478,
+      "latest_index": 479,
+      "missing_indexes": [
+        479
+      ],
+      "downloaded": [
+        {
+          "index": 479,
+          "chapter_id": 25247470
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 143071,
+      "name": "Cực Phẩm Tiên Nông",
+      "folder": "C:\\Dev\\MTC\\Cực Phẩm Tiên Nông",
+      "chapter_count": 863,
+      "latest_index": 864,
+      "missing_indexes": [
+        864
+      ],
+      "downloaded": [
+        {
+          "index": 864,
+          "chapter_id": 23967004
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 123608,
+      "name": "Ghế Số 12: Ta Tu Luyện Thành Một Cái Cây, Ngươi Nói Ta Nguy Hiểm?",
+      "folder": "C:\\Dev\\MTC\\Ghế Số 12 Ta Tu Luyện Thành Một Cái Cây Ngươi Nói Ta Nguy Hiểm",
+      "chapter_count": 630,
+      "latest_index": 631,
+      "missing_indexes": [
+        631
+      ],
+      "downloaded": [
+        {
+          "index": 631,
+          "chapter_id": 21548243
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 124988,
+      "name": "Gia Tộc Quật Khởi: Từ Làm Gia Gia Bắt Đầu",
+      "folder": "C:\\Dev\\MTC\\Gia Tộc Quật Khởi Từ Làm Gia Gia Bắt Đầu",
+      "chapter_count": 1677,
+      "latest_index": 1689,
+      "missing_indexes": [
+        1678,
+        1679,
+        1680,
+        1681,
+        1682,
+        1683,
+        1684,
+        1685,
+        1686,
+        1687,
+        1688,
+        1689
+      ],
+      "downloaded": [
+        {
+          "index": 1678,
+          "chapter_id": 25717054
+        },
+        {
+          "index": 1679,
+          "chapter_id": 25731965
+        },
+        {
+          "index": 1680,
+          "chapter_id": 25731966
+        },
+        {
+          "index": 1681,
+          "chapter_id": 25779384
+        },
+        {
+          "index": 1682,
+          "chapter_id": 25779385
+        },
+        {
+          "index": 1683,
+          "chapter_id": 25802311
+        },
+        {
+          "index": 1684,
+          "chapter_id": 25802312
+        },
+        {
+          "index": 1685,
+          "chapter_id": 25849930
+        },
+        {
+          "index": 1686,
+          "chapter_id": 25849931
+        },
+        {
+          "index": 1687,
+          "chapter_id": 25926107
+        },
+        {
+          "index": 1688,
+          "chapter_id": 25926108
+        },
+        {
+          "index": 1689,
+          "chapter_id": 25926109
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 116594,
+      "name": "Gọi Ngươi Đi Chịu Chết, Không Có Để Ngươi Vô Địch",
+      "folder": "C:\\Dev\\MTC\\Gọi Ngươi Đi Chịu Chết Không Có Để Ngươi Vô Địch",
+      "chapter_count": 1750,
+      "latest_index": 1753,
+      "missing_indexes": [
+        1752,
+        1753,
+        1754
+      ],
+      "downloaded": [
+        {
+          "index": 1752,
+          "chapter_id": 27044153
+        },
+        {
+          "index": 1753,
+          "chapter_id": 27044154
+        },
+        {
+          "index": 1754,
+          "chapter_id": 27044155
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 107396,
+      "name": "Huyền Huyễn: Nguyên Lai Ta Là Tuyệt Thế Võ Thần",
+      "folder": "C:\\Dev\\MTC\\Huyền Huyễn Nguyên Lai Ta Là Tuyệt Thế Võ Thần",
+      "chapter_count": 1563,
+      "latest_index": 1566,
+      "missing_indexes": [
+        1564,
+        1565,
+        1566
+      ],
+      "downloaded": [
+        {
+          "index": 1564,
+          "chapter_id": 16264028
+        },
+        {
+          "index": 1565,
+          "chapter_id": 16264029
+        },
+        {
+          "index": 1566,
+          "chapter_id": 16264030
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 145729,
+      "name": "Hồng Lâu Xuân",
+      "folder": "C:\\Dev\\MTC\\Hồng Lâu Xuân",
+      "chapter_count": 1107,
+      "latest_index": 1108,
+      "missing_indexes": [
+        1108
+      ],
+      "downloaded": [
+        {
+          "index": 1108,
+          "chapter_id": 23991523
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 135223,
+      "name": "Kỹ Năng Của Ta Lại Biến Dị!",
+      "folder": "C:\\Dev\\MTC\\Kỹ Năng Của Ta Lại Biến Dị",
+      "chapter_count": 744,
+      "latest_index": 747,
+      "missing_indexes": [
+        745,
+        746,
+        747
+      ],
+      "downloaded": [
+        {
+          "index": 745,
+          "chapter_id": 26106751
+        },
+        {
+          "index": 746,
+          "chapter_id": 26106752
+        },
+        {
+          "index": 747,
+          "chapter_id": 26106754
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 142863,
+      "name": "Kỹ Năng Đổi Một Chữ, Bọn Hắn Bị Ta Chơi Hỏng",
+      "folder": "C:\\Dev\\MTC\\Kỹ Năng Đổi Một Chữ Bọn Hắn Bị Ta Chơi Hỏng",
+      "chapter_count": 480,
+      "latest_index": 481,
+      "missing_indexes": [
+        481
+      ],
+      "downloaded": [
+        {
+          "index": 481,
+          "chapter_id": 25542864
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 109884,
+      "name": "Lý Trị Ngươi Chớ Kinh Sợ",
+      "folder": "C:\\Dev\\MTC\\Lý Trị Ngươi Chớ Kinh Sợ",
+      "chapter_count": 1434,
+      "latest_index": 1441,
+      "missing_indexes": [
+        1435,
+        1436,
+        1437,
+        1438,
+        1439,
+        1440,
+        1441
+      ],
+      "downloaded": [
+        {
+          "index": 1435,
+          "chapter_id": 17075304
+        },
+        {
+          "index": 1436,
+          "chapter_id": 17083348
+        },
+        {
+          "index": 1437,
+          "chapter_id": 17083349
+        },
+        {
+          "index": 1438,
+          "chapter_id": 17087180
+        },
+        {
+          "index": 1439,
+          "chapter_id": 17087181
+        },
+        {
+          "index": 1440,
+          "chapter_id": 17087182
+        },
+        {
+          "index": 1441,
+          "chapter_id": 17087183
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 145769,
+      "name": "Lừa Dối 600 Năm Từ Xuyên Qua Bắt Đầu",
+      "folder": "C:\\Dev\\MTC\\Lừa Dối 600 Năm Từ Xuyên Qua Bắt Đầu",
+      "chapter_count": 215,
+      "latest_index": 216,
+      "missing_indexes": [
+        216
+      ],
+      "downloaded": [
+        {
+          "index": 216,
+          "chapter_id": 23993872
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 114308,
+      "name": "Mạt Thế: Ta Có Một Tòa Phù Không Đảo",
+      "folder": "C:\\Dev\\MTC\\Mạt Thế Ta Có Một Tòa Phù Không Đảo",
+      "chapter_count": 675,
+      "latest_index": 680,
+      "missing_indexes": [
+        676,
+        677,
+        678,
+        679,
+        680
+      ],
+      "downloaded": [
+        {
+          "index": 676,
+          "chapter_id": 18714940
+        },
+        {
+          "index": 677,
+          "chapter_id": 18714941
+        },
+        {
+          "index": 678,
+          "chapter_id": 18714942
+        },
+        {
+          "index": 679,
+          "chapter_id": 18714943
+        },
+        {
+          "index": 680,
+          "chapter_id": 18714944
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 101655,
+      "name": "Người Nguyên Thủy Đều Sợ Ngây Người",
+      "folder": "C:\\Dev\\MTC\\Người Nguyên Thủy Đều Sợ Ngây Người",
+      "chapter_count": 780,
+      "latest_index": 790,
+      "missing_indexes": [
+        781,
+        782,
+        783,
+        784,
+        785,
+        786,
+        787,
+        788,
+        789,
+        790
+      ],
+      "downloaded": [
+        {
+          "index": 781,
+          "chapter_id": 11601899
+        },
+        {
+          "index": 782,
+          "chapter_id": 11601900
+        },
+        {
+          "index": 783,
+          "chapter_id": 11601901
+        },
+        {
+          "index": 784,
+          "chapter_id": 11601902
+        },
+        {
+          "index": 785,
+          "chapter_id": 11601903
+        },
+        {
+          "index": 786,
+          "chapter_id": 11601904
+        },
+        {
+          "index": 787,
+          "chapter_id": 11601905
+        },
+        {
+          "index": 788,
+          "chapter_id": 11601906
+        },
+        {
+          "index": 789,
+          "chapter_id": 11601907
+        },
+        {
+          "index": 790,
+          "chapter_id": 11601908
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 142380,
+      "name": "Người Tại Võ Đang, Một Điểm Cày Cấy Gấp Trăm Lần Thu Hoạch",
+      "folder": "C:\\Dev\\MTC\\Người Tại Võ Đang Một Điểm Cày Cấy Gấp Trăm Lần Thu Hoạch",
+      "chapter_count": 670,
+      "latest_index": 672,
+      "missing_indexes": [
+        671,
+        672
+      ],
+      "downloaded": [
+        {
+          "index": 671,
+          "chapter_id": 26212946
+        },
+        {
+          "index": 672,
+          "chapter_id": 26212947
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 107365,
+      "name": "Người Tại Đại Đường Bị Buộc Thôi Học",
+      "folder": "C:\\Dev\\MTC\\Người Tại Đại Đường Bị Buộc Thôi Học",
+      "chapter_count": 1237,
+      "latest_index": 1238,
+      "missing_indexes": [
+        1238
+      ],
+      "downloaded": [
+        {
+          "index": 1238,
+          "chapter_id": 15463103
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 142405,
+      "name": "Nông Gia Tử Xông Khoa Cử",
+      "folder": "C:\\Dev\\MTC\\Nông Gia Tử Xông Khoa Cử",
+      "chapter_count": 635,
+      "latest_index": 636,
+      "missing_indexes": [
+        636
+      ],
+      "downloaded": [
+        {
+          "index": 636,
+          "chapter_id": 25528473
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 128925,
+      "name": "Phía Sau Màn, Quét Ngang Hết Thảy",
+      "folder": "C:\\Dev\\MTC\\Phía Sau Màn Quét Ngang Hết Thảy",
+      "chapter_count": 850,
+      "latest_index": 851,
+      "missing_indexes": [
+        851
+      ],
+      "downloaded": [
+        {
+          "index": 851,
+          "chapter_id": 26910861
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 107913,
+      "name": "Ta Chỉ Muốn An Tĩnh Làm Cẩu Đạo Bên Trong Người",
+      "folder": "C:\\Dev\\MTC\\Ta Chỉ Muốn An Tĩnh Làm Cẩu Đạo Bên Trong Người",
+      "chapter_count": 2068,
+      "latest_index": 2073,
+      "missing_indexes": [
+        2069,
+        2070,
+        2071,
+        2072,
+        2073
+      ],
+      "downloaded": [
+        {
+          "index": 2069,
+          "chapter_id": 16082410
+        },
+        {
+          "index": 2070,
+          "chapter_id": 16082411
+        },
+        {
+          "index": 2071,
+          "chapter_id": 16082412
+        },
+        {
+          "index": 2072,
+          "chapter_id": 16082413
+        },
+        {
+          "index": 2073,
+          "chapter_id": 16100192
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 105638,
+      "name": "Ta Có Một Tòa Thành Phố Ngày Tận Thế",
+      "folder": "C:\\Dev\\MTC\\Ta Có Một Tòa Thành Phố Ngày Tận Thế",
+      "chapter_count": 1749,
+      "latest_index": 1751,
+      "missing_indexes": [
+        1750,
+        1751
+      ],
+      "downloaded": [
+        {
+          "index": 1750,
+          "chapter_id": 13526671
+        },
+        {
+          "index": 1751,
+          "chapter_id": 13529304
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 108205,
+      "name": "Ta Dùng Nhàn Thư Thành Thánh Nhân",
+      "folder": "C:\\Dev\\MTC\\Ta Dùng Nhàn Thư Thành Thánh Nhân",
+      "chapter_count": 1366,
+      "latest_index": 1486,
+      "missing_indexes": [
+        1367,
+        1368,
+        1369,
+        1370,
+        1371,
+        1372,
+        1373,
+        1374,
+        1375,
+        1376,
+        1377,
+        1378,
+        1379,
+        1380,
+        1381,
+        1382,
+        1383,
+        1384,
+        1385,
+        1386,
+        1387,
+        1388,
+        1389,
+        1390,
+        1391,
+        1392,
+        1393,
+        1394,
+        1395,
+        1396,
+        1397,
+        1398,
+        1399,
+        1400,
+        1401,
+        1402,
+        1403,
+        1404,
+        1405,
+        1406,
+        1407,
+        1408,
+        1409,
+        1410,
+        1411,
+        1412,
+        1413,
+        1414,
+        1415,
+        1416,
+        1417,
+        1418,
+        1419,
+        1420,
+        1421,
+        1422,
+        1423,
+        1424,
+        1425,
+        1426,
+        1427,
+        1428,
+        1429,
+        1430,
+        1431,
+        1432,
+        1433,
+        1434,
+        1435,
+        1436,
+        1437,
+        1438,
+        1439,
+        1440,
+        1441,
+        1442,
+        1443,
+        1444,
+        1445,
+        1446,
+        1447,
+        1448,
+        1449,
+        1450,
+        1451,
+        1452,
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458,
+        1459,
+        1460,
+        1461,
+        1462,
+        1463,
+        1464,
+        1465,
+        1466,
+        1467,
+        1468,
+        1469,
+        1470,
+        1471,
+        1472,
+        1473,
+        1474,
+        1475,
+        1476,
+        1477,
+        1478,
+        1479,
+        1480,
+        1481,
+        1482,
+        1483,
+        1484,
+        1485,
+        1486
+      ],
+      "downloaded": [
+        {
+          "index": 1367,
+          "chapter_id": 25727393
+        },
+        {
+          "index": 1368,
+          "chapter_id": 25727394
+        },
+        {
+          "index": 1369,
+          "chapter_id": 25727395
+        },
+        {
+          "index": 1370,
+          "chapter_id": 25727396
+        },
+        {
+          "index": 1371,
+          "chapter_id": 25727397
+        },
+        {
+          "index": 1372,
+          "chapter_id": 25739273
+        },
+        {
+          "index": 1373,
+          "chapter_id": 25739274
+        },
+        {
+          "index": 1374,
+          "chapter_id": 25739275
+        },
+        {
+          "index": 1375,
+          "chapter_id": 25739276
+        },
+        {
+          "index": 1376,
+          "chapter_id": 25739277
+        },
+        {
+          "index": 1377,
+          "chapter_id": 25752419
+        },
+        {
+          "index": 1378,
+          "chapter_id": 25752420
+        },
+        {
+          "index": 1379,
+          "chapter_id": 25752421
+        },
+        {
+          "index": 1380,
+          "chapter_id": 25752422
+        },
+        {
+          "index": 1381,
+          "chapter_id": 25752423
+        },
+        {
+          "index": 1382,
+          "chapter_id": 25768031
+        },
+        {
+          "index": 1383,
+          "chapter_id": 25768032
+        },
+        {
+          "index": 1384,
+          "chapter_id": 25768033
+        },
+        {
+          "index": 1385,
+          "chapter_id": 25768034
+        },
+        {
+          "index": 1386,
+          "chapter_id": 25768035
+        },
+        {
+          "index": 1387,
+          "chapter_id": 25785444
+        },
+        {
+          "index": 1388,
+          "chapter_id": 25785445
+        },
+        {
+          "index": 1389,
+          "chapter_id": 25785446
+        },
+        {
+          "index": 1390,
+          "chapter_id": 25785447
+        },
+        {
+          "index": 1391,
+          "chapter_id": 25785448
+        },
+        {
+          "index": 1392,
+          "chapter_id": 25799941
+        },
+        {
+          "index": 1393,
+          "chapter_id": 25799942
+        },
+        {
+          "index": 1394,
+          "chapter_id": 25799943
+        },
+        {
+          "index": 1395,
+          "chapter_id": 25799944
+        },
+        {
+          "index": 1396,
+          "chapter_id": 25799945
+        },
+        {
+          "index": 1397,
+          "chapter_id": 25812682
+        },
+        {
+          "index": 1398,
+          "chapter_id": 25812683
+        },
+        {
+          "index": 1399,
+          "chapter_id": 25812684
+        },
+        {
+          "index": 1400,
+          "chapter_id": 25812685
+        },
+        {
+          "index": 1401,
+          "chapter_id": 25812686
+        },
+        {
+          "index": 1402,
+          "chapter_id": 25830497
+        },
+        {
+          "index": 1403,
+          "chapter_id": 25830498
+        },
+        {
+          "index": 1404,
+          "chapter_id": 25830499
+        },
+        {
+          "index": 1405,
+          "chapter_id": 25830500
+        },
+        {
+          "index": 1406,
+          "chapter_id": 25830501
+        },
+        {
+          "index": 1407,
+          "chapter_id": 25848543
+        },
+        {
+          "index": 1408,
+          "chapter_id": 25848544
+        },
+        {
+          "index": 1409,
+          "chapter_id": 25848545
+        },
+        {
+          "index": 1410,
+          "chapter_id": 25848546
+        },
+        {
+          "index": 1411,
+          "chapter_id": 25848547
+        },
+        {
+          "index": 1412,
+          "chapter_id": 25858757
+        },
+        {
+          "index": 1413,
+          "chapter_id": 25858758
+        },
+        {
+          "index": 1414,
+          "chapter_id": 25858759
+        },
+        {
+          "index": 1415,
+          "chapter_id": 25858760
+        },
+        {
+          "index": 1416,
+          "chapter_id": 25858761
+        },
+        {
+          "index": 1417,
+          "chapter_id": 25872924
+        },
+        {
+          "index": 1418,
+          "chapter_id": 25872925
+        },
+        {
+          "index": 1419,
+          "chapter_id": 25872926
+        },
+        {
+          "index": 1420,
+          "chapter_id": 25872927
+        },
+        {
+          "index": 1421,
+          "chapter_id": 25872928
+        },
+        {
+          "index": 1422,
+          "chapter_id": 25889013
+        },
+        {
+          "index": 1423,
+          "chapter_id": 25889014
+        },
+        {
+          "index": 1424,
+          "chapter_id": 25889015
+        },
+        {
+          "index": 1425,
+          "chapter_id": 25889016
+        },
+        {
+          "index": 1426,
+          "chapter_id": 25889017
+        },
+        {
+          "index": 1427,
+          "chapter_id": 25903785
+        },
+        {
+          "index": 1428,
+          "chapter_id": 25903786
+        },
+        {
+          "index": 1429,
+          "chapter_id": 25903787
+        },
+        {
+          "index": 1430,
+          "chapter_id": 25903788
+        },
+        {
+          "index": 1431,
+          "chapter_id": 25903789
+        },
+        {
+          "index": 1432,
+          "chapter_id": 25922389
+        },
+        {
+          "index": 1433,
+          "chapter_id": 25922390
+        },
+        {
+          "index": 1434,
+          "chapter_id": 25922391
+        },
+        {
+          "index": 1435,
+          "chapter_id": 25922392
+        },
+        {
+          "index": 1436,
+          "chapter_id": 25922393
+        },
+        {
+          "index": 1437,
+          "chapter_id": 25938436
+        },
+        {
+          "index": 1438,
+          "chapter_id": 25938437
+        },
+        {
+          "index": 1439,
+          "chapter_id": 25938438
+        },
+        {
+          "index": 1440,
+          "chapter_id": 25938439
+        },
+        {
+          "index": 1441,
+          "chapter_id": 25938440
+        },
+        {
+          "index": 1442,
+          "chapter_id": 25953859
+        },
+        {
+          "index": 1443,
+          "chapter_id": 25953860
+        },
+        {
+          "index": 1444,
+          "chapter_id": 25953861
+        },
+        {
+          "index": 1445,
+          "chapter_id": 25953863
+        },
+        {
+          "index": 1446,
+          "chapter_id": 25953864
+        },
+        {
+          "index": 1447,
+          "chapter_id": 25978138
+        },
+        {
+          "index": 1448,
+          "chapter_id": 25978139
+        },
+        {
+          "index": 1449,
+          "chapter_id": 25978140
+        },
+        {
+          "index": 1450,
+          "chapter_id": 25978141
+        },
+        {
+          "index": 1451,
+          "chapter_id": 25978142
+        },
+        {
+          "index": 1452,
+          "chapter_id": 25999251
+        },
+        {
+          "index": 1453,
+          "chapter_id": 25999252
+        },
+        {
+          "index": 1454,
+          "chapter_id": 25999253
+        },
+        {
+          "index": 1455,
+          "chapter_id": 25999254
+        },
+        {
+          "index": 1456,
+          "chapter_id": 25999255
+        },
+        {
+          "index": 1457,
+          "chapter_id": 26017487
+        },
+        {
+          "index": 1458,
+          "chapter_id": 26017488
+        },
+        {
+          "index": 1459,
+          "chapter_id": 26017489
+        },
+        {
+          "index": 1460,
+          "chapter_id": 26017490
+        },
+        {
+          "index": 1461,
+          "chapter_id": 26017491
+        },
+        {
+          "index": 1462,
+          "chapter_id": 26028635
+        },
+        {
+          "index": 1463,
+          "chapter_id": 26028636
+        },
+        {
+          "index": 1464,
+          "chapter_id": 26028637
+        },
+        {
+          "index": 1465,
+          "chapter_id": 26028638
+        },
+        {
+          "index": 1466,
+          "chapter_id": 26028639
+        },
+        {
+          "index": 1467,
+          "chapter_id": 26050539
+        },
+        {
+          "index": 1468,
+          "chapter_id": 26050540
+        },
+        {
+          "index": 1469,
+          "chapter_id": 26050541
+        },
+        {
+          "index": 1470,
+          "chapter_id": 26050542
+        },
+        {
+          "index": 1471,
+          "chapter_id": 26050543
+        },
+        {
+          "index": 1472,
+          "chapter_id": 26068395
+        },
+        {
+          "index": 1473,
+          "chapter_id": 26068397
+        },
+        {
+          "index": 1474,
+          "chapter_id": 26068398
+        },
+        {
+          "index": 1475,
+          "chapter_id": 26068399
+        },
+        {
+          "index": 1476,
+          "chapter_id": 26068400
+        },
+        {
+          "index": 1477,
+          "chapter_id": 26088072
+        },
+        {
+          "index": 1478,
+          "chapter_id": 26088073
+        },
+        {
+          "index": 1479,
+          "chapter_id": 26088074
+        },
+        {
+          "index": 1480,
+          "chapter_id": 26088075
+        },
+        {
+          "index": 1481,
+          "chapter_id": 26088076
+        },
+        {
+          "index": 1482,
+          "chapter_id": 26106336
+        },
+        {
+          "index": 1483,
+          "chapter_id": 26106337
+        },
+        {
+          "index": 1484,
+          "chapter_id": 26106338
+        },
+        {
+          "index": 1485,
+          "chapter_id": 26106339
+        },
+        {
+          "index": 1486,
+          "chapter_id": 26106340
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 115552,
+      "name": "Ta Là Tham Quan, Các Nàng Lại Nói Ta Là Trung Thần!",
+      "folder": "C:\\Dev\\MTC\\Ta Là Tham Quan Các Nàng Lại Nói Ta Là Trung Thần",
+      "chapter_count": 467,
+      "latest_index": 485,
+      "missing_indexes": [
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479,
+        480,
+        481,
+        482,
+        483,
+        484,
+        485
+      ],
+      "downloaded": [
+        {
+          "index": 468,
+          "chapter_id": 15581452
+        },
+        {
+          "index": 469,
+          "chapter_id": 15581453
+        },
+        {
+          "index": 470,
+          "chapter_id": 15581454
+        },
+        {
+          "index": 471,
+          "chapter_id": 15581455
+        },
+        {
+          "index": 472,
+          "chapter_id": 15581456
+        },
+        {
+          "index": 473,
+          "chapter_id": 15581457
+        },
+        {
+          "index": 474,
+          "chapter_id": 15581458
+        },
+        {
+          "index": 475,
+          "chapter_id": 15581459
+        },
+        {
+          "index": 476,
+          "chapter_id": 15581460
+        },
+        {
+          "index": 477,
+          "chapter_id": 15581461
+        },
+        {
+          "index": 478,
+          "chapter_id": 15581462
+        },
+        {
+          "index": 479,
+          "chapter_id": 15581463
+        },
+        {
+          "index": 480,
+          "chapter_id": 15581464
+        },
+        {
+          "index": 481,
+          "chapter_id": 15581465
+        },
+        {
+          "index": 482,
+          "chapter_id": 15581466
+        },
+        {
+          "index": 483,
+          "chapter_id": 15581467
+        },
+        {
+          "index": 484,
+          "chapter_id": 15581468
+        },
+        {
+          "index": 485,
+          "chapter_id": 15581469
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 125669,
+      "name": "Ta Mở Thật Sự Là Cô Nhi Viện, Không Phải Sát Thủ Đường",
+      "folder": "C:\\Dev\\MTC\\Ta Mở Thật Sự Là Cô Nhi Viện Không Phải Sát Thủ Đường",
+      "chapter_count": 1433,
+      "latest_index": 1435,
+      "missing_indexes": [
+        1434,
+        1435
+      ],
+      "downloaded": [
+        {
+          "index": 1434,
+          "chapter_id": 27061549
+        },
+        {
+          "index": 1435,
+          "chapter_id": 27061550
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 144782,
+      "name": "Ta, Thần Cấp Phụ Trợ, Kỹ Năng Thăng Cấp Không Hạn Chế!",
+      "folder": "C:\\Dev\\MTC\\Ta Thần Cấp Phụ Trợ Kỹ Năng Thăng Cấp Không Hạn Chế",
+      "chapter_count": 535,
+      "latest_index": 536,
+      "missing_indexes": [
+        536
+      ],
+      "downloaded": [
+        {
+          "index": 536,
+          "chapter_id": 24363069
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 144796,
+      "name": "Ta Thật Không Muốn Làm Gian Thần",
+      "folder": "C:\\Dev\\MTC\\Ta Thật Không Muốn Làm Gian Thần",
+      "chapter_count": 717,
+      "latest_index": 718,
+      "missing_indexes": [
+        718
+      ],
+      "downloaded": [
+        {
+          "index": 718,
+          "chapter_id": 24330677
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 106024,
+      "name": "Ta Tại Phàm Nhân Khoa Học Tu Tiên",
+      "folder": "C:\\Dev\\MTC\\Ta Tại Phàm Nhân Khoa Học Tu Tiên",
+      "chapter_count": 2595,
+      "latest_index": 2602,
+      "missing_indexes": [
+        2596,
+        2597,
+        2598,
+        2599,
+        2600,
+        2601,
+        2602
+      ],
+      "downloaded": [
+        {
+          "index": 2596,
+          "chapter_id": 25227498
+        },
+        {
+          "index": 2597,
+          "chapter_id": 25240187
+        },
+        {
+          "index": 2598,
+          "chapter_id": 25249461
+        },
+        {
+          "index": 2599,
+          "chapter_id": 25249462
+        },
+        {
+          "index": 2600,
+          "chapter_id": 25260591
+        },
+        {
+          "index": 2601,
+          "chapter_id": 25260592
+        },
+        {
+          "index": 2602,
+          "chapter_id": 25260598
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 107676,
+      "name": "Ta Tại Trấn Yêu Ti Bên Trong Ăn Yêu Quái",
+      "folder": "C:\\Dev\\MTC\\Ta Tại Trấn Yêu Ti Bên Trong Ăn Yêu Quái",
+      "chapter_count": 1586,
+      "latest_index": 1593,
+      "missing_indexes": [
+        1587,
+        1588,
+        1589,
+        1590,
+        1591,
+        1592,
+        1593
+      ],
+      "downloaded": [
+        {
+          "index": 1587,
+          "chapter_id": 17172681
+        },
+        {
+          "index": 1588,
+          "chapter_id": 17177002
+        },
+        {
+          "index": 1589,
+          "chapter_id": 17181836
+        },
+        {
+          "index": 1590,
+          "chapter_id": 17185948
+        },
+        {
+          "index": 1591,
+          "chapter_id": 17190042
+        },
+        {
+          "index": 1592,
+          "chapter_id": 17195193
+        },
+        {
+          "index": 1593,
+          "chapter_id": 17199147
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 144977,
+      "name": "Ta Tận Thế Chỗ Tránh Nạn Hệ Thống",
+      "folder": "C:\\Dev\\MTC\\Ta Tận Thế Chỗ Tránh Nạn Hệ Thống",
+      "chapter_count": 850,
+      "latest_index": 851,
+      "missing_indexes": [
+        851
+      ],
+      "downloaded": [
+        {
+          "index": 851,
+          "chapter_id": 24031546
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 143487,
+      "name": "Ta Đều Vô Địch Thiên Hạ, Mới Bắt Đầu Đoạt Đích?",
+      "folder": "C:\\Dev\\MTC\\Ta Đều Vô Địch Thiên Hạ Mới Bắt Đầu Đoạt Đích",
+      "chapter_count": 480,
+      "latest_index": 481,
+      "missing_indexes": [
+        481
+      ],
+      "downloaded": [
+        {
+          "index": 481,
+          "chapter_id": 26675700
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 109443,
+      "name": "Ta Ở Chư Thiên Rất Điệu Thấp",
+      "folder": "C:\\Dev\\MTC\\Ta Ở Chư Thiên Rất Điệu Thấp",
+      "chapter_count": 1622,
+      "latest_index": 1644,
+      "missing_indexes": [
+        1623,
+        1624,
+        1625,
+        1626,
+        1627,
+        1628,
+        1629,
+        1630,
+        1631,
+        1632,
+        1633,
+        1634,
+        1635,
+        1636,
+        1637,
+        1638,
+        1639,
+        1640,
+        1641,
+        1642,
+        1643,
+        1644
+      ],
+      "downloaded": [
+        {
+          "index": 1623,
+          "chapter_id": 20676421
+        },
+        {
+          "index": 1624,
+          "chapter_id": 20676422
+        },
+        {
+          "index": 1625,
+          "chapter_id": 20676423
+        },
+        {
+          "index": 1626,
+          "chapter_id": 20676424
+        },
+        {
+          "index": 1627,
+          "chapter_id": 20897236
+        },
+        {
+          "index": 1628,
+          "chapter_id": 20897237
+        },
+        {
+          "index": 1629,
+          "chapter_id": 20897238
+        },
+        {
+          "index": 1630,
+          "chapter_id": 20897239
+        },
+        {
+          "index": 1631,
+          "chapter_id": 20897240
+        },
+        {
+          "index": 1632,
+          "chapter_id": 20897241
+        },
+        {
+          "index": 1633,
+          "chapter_id": 20897242
+        },
+        {
+          "index": 1634,
+          "chapter_id": 20897243
+        },
+        {
+          "index": 1635,
+          "chapter_id": 20897244
+        },
+        {
+          "index": 1636,
+          "chapter_id": 20897245
+        },
+        {
+          "index": 1637,
+          "chapter_id": 20897246
+        },
+        {
+          "index": 1638,
+          "chapter_id": 20897247
+        },
+        {
+          "index": 1639,
+          "chapter_id": 20897248
+        },
+        {
+          "index": 1640,
+          "chapter_id": 20929942
+        },
+        {
+          "index": 1641,
+          "chapter_id": 20929943
+        },
+        {
+          "index": 1642,
+          "chapter_id": 20929944
+        },
+        {
+          "index": 1643,
+          "chapter_id": 20929945
+        },
+        {
+          "index": 1644,
+          "chapter_id": 20929946
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 105493,
+      "name": "Ta Ở Đại Đường Mở Siêu Thị",
+      "folder": "C:\\Dev\\MTC\\Ta Ở Đại Đường Mở Siêu Thị",
+      "chapter_count": 529,
+      "latest_index": 532,
+      "missing_indexes": [
+        530,
+        531,
+        532
+      ],
+      "downloaded": [
+        {
+          "index": 530,
+          "chapter_id": 13099133
+        },
+        {
+          "index": 531,
+          "chapter_id": 13099134
+        },
+        {
+          "index": 532,
+          "chapter_id": 13099135
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 133647,
+      "name": "Theo Một Con Gà Bắt Đầu Chế Tạo Tiên Thôn",
+      "folder": "C:\\Dev\\MTC\\Theo Một Con Gà Bắt Đầu Chế Tạo Tiên Thôn",
+      "chapter_count": 934,
+      "latest_index": 935,
+      "missing_indexes": [
+        935
+      ],
+      "downloaded": [
+        {
+          "index": 935,
+          "chapter_id": 25648433
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 119539,
+      "name": "Thiên Sư, Ta Có Một Thế Giới Khác",
+      "folder": "C:\\Dev\\MTC\\Thiên Sư Ta Có Một Thế Giới Khác",
+      "chapter_count": 538,
+      "latest_index": 542,
+      "missing_indexes": [
+        541,
+        542
+      ],
+      "downloaded": [
+        {
+          "index": 541,
+          "chapter_id": 17344798
+        },
+        {
+          "index": 542,
+          "chapter_id": 17344799
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 132696,
+      "name": "Thọ Nguyên Có Thể Đổi Bảo? Vô Hạn Thọ Nguyên Ta Vô Địch",
+      "folder": "C:\\Dev\\MTC\\Thọ Nguyên Có Thể Đổi Bảo Vô Hạn Thọ Nguyên Ta Vô Địch",
+      "chapter_count": 807,
+      "latest_index": 809,
+      "missing_indexes": [
+        808,
+        809
+      ],
+      "downloaded": [
+        {
+          "index": 808,
+          "chapter_id": 25554446
+        },
+        {
+          "index": 809,
+          "chapter_id": 25554447
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 107557,
+      "name": "Tiên Thiên Dị Năng Giả Ta Đây, Cư Nhiên Có Thể Tự Động Tu Luyện!",
+      "folder": "C:\\Dev\\MTC\\Tiên Thiên Dị Năng Giả Ta Đây Cư Nhiên Có Thể Tự Động Tu Luyện",
+      "chapter_count": 858,
+      "latest_index": 860,
+      "missing_indexes": [
+        859,
+        860
+      ],
+      "downloaded": [
+        {
+          "index": 859,
+          "chapter_id": 25487095
+        },
+        {
+          "index": 860,
+          "chapter_id": 25487107
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 100708,
+      "name": "Tiêu Dao Tiểu Thư Sinh",
+      "folder": "C:\\Dev\\MTC\\Tiêu Dao Tiểu Thư Sinh",
+      "chapter_count": 1192,
+      "latest_index": 1202,
+      "missing_indexes": [
+        1193,
+        1194,
+        1195,
+        1196,
+        1197,
+        1198,
+        1199,
+        1200,
+        1201,
+        1202
+      ],
+      "downloaded": [
+        {
+          "index": 1193,
+          "chapter_id": 10634715
+        },
+        {
+          "index": 1194,
+          "chapter_id": 10634716
+        },
+        {
+          "index": 1195,
+          "chapter_id": 10634717
+        },
+        {
+          "index": 1196,
+          "chapter_id": 10634718
+        },
+        {
+          "index": 1197,
+          "chapter_id": 10634719
+        },
+        {
+          "index": 1198,
+          "chapter_id": 10634720
+        },
+        {
+          "index": 1199,
+          "chapter_id": 10634721
+        },
+        {
+          "index": 1200,
+          "chapter_id": 10634722
+        },
+        {
+          "index": 1201,
+          "chapter_id": 10634723
+        },
+        {
+          "index": 1202,
+          "chapter_id": 10634724
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 113194,
+      "name": "Toàn Cầu Phế Thổ: Ta Khai Rương Ra Đỉnh Cấp Chỗ Tránh Nạn",
+      "folder": "C:\\Dev\\MTC\\Toàn Cầu Phế Thổ Ta Khai Rương Ra Đỉnh Cấp Chỗ Tránh Nạn",
+      "chapter_count": 785,
+      "latest_index": 792,
+      "missing_indexes": [
+        786,
+        787,
+        788,
+        789,
+        790,
+        791,
+        792
+      ],
+      "downloaded": [
+        {
+          "index": 786,
+          "chapter_id": 15975794
+        },
+        {
+          "index": 787,
+          "chapter_id": 15979268
+        },
+        {
+          "index": 788,
+          "chapter_id": 15987443
+        },
+        {
+          "index": 789,
+          "chapter_id": 15987444
+        },
+        {
+          "index": 790,
+          "chapter_id": 16010846
+        },
+        {
+          "index": 791,
+          "chapter_id": 16010847
+        },
+        {
+          "index": 792,
+          "chapter_id": 16010848
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 131692,
+      "name": "Toàn Dân Chuyển Chức: Ta Bị Động Mạnh Vô Địch",
+      "folder": "C:\\Dev\\MTC\\Toàn Dân Chuyển Chức Ta Bị Động Mạnh Vô Địch",
+      "chapter_count": 1403,
+      "latest_index": 1404,
+      "missing_indexes": [
+        1404
+      ],
+      "downloaded": [
+        {
+          "index": 1404,
+          "chapter_id": 19924308
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 137551,
+      "name": "Toàn Dân Cầu Sinh: Ta Có Thể Tăng Thêm Vật Phẩm Số Lượng",
+      "folder": "C:\\Dev\\MTC\\Toàn Dân Cầu Sinh Ta Có Thể Tăng Thêm Vật Phẩm Số Lượng",
+      "chapter_count": 1212,
+      "latest_index": 1215,
+      "missing_indexes": [
+        1213,
+        1214,
+        1215
+      ],
+      "downloaded": [
+        {
+          "index": 1213,
+          "chapter_id": 26435957
+        },
+        {
+          "index": 1214,
+          "chapter_id": 26660817
+        },
+        {
+          "index": 1215,
+          "chapter_id": 26712029
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 123827,
+      "name": "Trong Rương Đại Minh",
+      "folder": "C:\\Dev\\MTC\\Trong Rương Đại Minh",
+      "chapter_count": 1453,
+      "latest_index": 1454,
+      "missing_indexes": [
+        1454
+      ],
+      "downloaded": [
+        {
+          "index": 1454,
+          "chapter_id": 18458885
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 129734,
+      "name": "Trù Thần: Một Bát Cơm Chiên, Dẫn Tới Chư Thiên Đại Loạn!",
+      "folder": "C:\\Dev\\MTC\\Trù Thần Một Bát Cơm Chiên Dẫn Tới Chư Thiên Đại Loạn",
+      "chapter_count": 266,
+      "latest_index": 267,
+      "missing_indexes": [
+        267
+      ],
+      "downloaded": [
+        {
+          "index": 267,
+          "chapter_id": 20709657
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 122084,
+      "name": "Trường Sinh: Bắt Đầu Cùng Tẩu Tẩu Sống Nương Tựa Lẫn Nhau",
+      "folder": "C:\\Dev\\MTC\\Trường Sinh Bắt Đầu Cùng Tẩu Tẩu Sống Nương Tựa Lẫn Nhau",
+      "chapter_count": 496,
+      "latest_index": 500,
+      "missing_indexes": [
+        497,
+        498,
+        499,
+        500
+      ],
+      "downloaded": [
+        {
+          "index": 497,
+          "chapter_id": 17804734
+        },
+        {
+          "index": 498,
+          "chapter_id": 17813347
+        },
+        {
+          "index": 499,
+          "chapter_id": 17813348
+        },
+        {
+          "index": 500,
+          "chapter_id": 17813349
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 137561,
+      "name": "Trường Sinh Từ Đọc Sách Bắt Đầu",
+      "folder": "C:\\Dev\\MTC\\Trường Sinh Từ Đọc Sách Bắt Đầu",
+      "chapter_count": 552,
+      "latest_index": 553,
+      "missing_indexes": [
+        553
+      ],
+      "downloaded": [
+        {
+          "index": 553,
+          "chapter_id": 26348461
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 147152,
+      "name": "Tu Chân Chi Thiên Mạng Lớn Phế Vật",
+      "folder": "C:\\Dev\\MTC\\Tu Chân Chi Thiên Mạng Lớn Phế Vật",
+      "chapter_count": 665,
+      "latest_index": 669,
+      "missing_indexes": [
+        666,
+        667,
+        668,
+        669
+      ],
+      "downloaded": [
+        {
+          "index": 666,
+          "chapter_id": 26141891
+        },
+        {
+          "index": 667,
+          "chapter_id": 26141892
+        },
+        {
+          "index": 668,
+          "chapter_id": 26141893
+        },
+        {
+          "index": 669,
+          "chapter_id": 26141894
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 116644,
+      "name": "Tận Thế: Cô Nương Đừng Hoảng Sợ, Ta Vật Tư Đủ Trăm Năm",
+      "folder": "C:\\Dev\\MTC\\Tận Thế Cô Nương Đừng Hoảng Sợ Ta Vật Tư Đủ Trăm Năm",
+      "chapter_count": 1193,
+      "latest_index": 1195,
+      "missing_indexes": [
+        1194,
+        1195
+      ],
+      "downloaded": [
+        {
+          "index": 1194,
+          "chapter_id": 17395467
+        },
+        {
+          "index": 1195,
+          "chapter_id": 17395468
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 134969,
+      "name": "Tận Thế: Ta Chế Tạo Vô Hạn Đoàn Tàu",
+      "folder": "C:\\Dev\\MTC\\Tận Thế Ta Chế Tạo Vô Hạn Đoàn Tàu",
+      "chapter_count": 1084,
+      "latest_index": 1086,
+      "missing_indexes": [
+        1085,
+        1086
+      ],
+      "downloaded": [
+        {
+          "index": 1085,
+          "chapter_id": 25852512
+        },
+        {
+          "index": 1086,
+          "chapter_id": 25852513
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 145912,
+      "name": "Tận Thế: Ta Có Một Cái Thanh Trang Bị?",
+      "folder": "C:\\Dev\\MTC\\Tận Thế Ta Có Một Cái Thanh Trang Bị",
+      "chapter_count": 583,
+      "latest_index": 584,
+      "missing_indexes": [
+        584
+      ],
+      "downloaded": [
+        {
+          "index": 584,
+          "chapter_id": 24446923
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 115673,
+      "name": "Tận Thế: Ta Thức Tỉnh Vô Hạn Nhặt Dị Năng",
+      "folder": "C:\\Dev\\MTC\\Tận Thế Ta Thức Tỉnh Vô Hạn Nhặt Dị Năng",
+      "chapter_count": 198,
+      "latest_index": 199,
+      "missing_indexes": [
+        199
+      ],
+      "downloaded": [
+        {
+          "index": 199,
+          "chapter_id": 20484378
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 117561,
+      "name": "Tận Thế: Ta Từ Mấu Chốt So Người Khác Thêm Một Cái",
+      "folder": "C:\\Dev\\MTC\\Tận Thế Ta Từ Mấu Chốt So Người Khác Thêm Một Cái",
+      "chapter_count": 702,
+      "latest_index": 703,
+      "missing_indexes": [
+        703
+      ],
+      "downloaded": [
+        {
+          "index": 703,
+          "chapter_id": 18131600
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 120135,
+      "name": "Tận Thế: Từ Thêm Điểm Bắt Đầu Vô Hạn Tiến Hóa",
+      "folder": "C:\\Dev\\MTC\\Tận Thế Từ Thêm Điểm Bắt Đầu Vô Hạn Tiến Hóa",
+      "chapter_count": 2082,
+      "latest_index": 2083,
+      "missing_indexes": [
+        2083
+      ],
+      "downloaded": [
+        {
+          "index": 2083,
+          "chapter_id": 23804118
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 135253,
+      "name": "Tọa Khán Tiên Khuynh",
+      "folder": "C:\\Dev\\MTC\\Tọa Khán Tiên Khuynh",
+      "chapter_count": 831,
+      "latest_index": 835,
+      "missing_indexes": [
+        832,
+        833,
+        834,
+        835
+      ],
+      "downloaded": [
+        {
+          "index": 832,
+          "chapter_id": 25918575
+        },
+        {
+          "index": 833,
+          "chapter_id": 25918696
+        },
+        {
+          "index": 834,
+          "chapter_id": 25918697
+        },
+        {
+          "index": 835,
+          "chapter_id": 25919131
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 145433,
+      "name": "Tứ Hợp Viện Chi Lạnh Nhạt Đời Sống",
+      "folder": "C:\\Dev\\MTC\\Tứ Hợp Viện Chi Lạnh Nhạt Đời Sống",
+      "chapter_count": 1016,
+      "latest_index": 1019,
+      "missing_indexes": [
+        1017,
+        1019
+      ],
+      "downloaded": [
+        {
+          "index": 1017,
+          "chapter_id": 23888709
+        },
+        {
+          "index": 1019,
+          "chapter_id": 24951645
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 123459,
+      "name": "Vô Hạn Lượng Cháo Trắng Cải Muối, Ta Lại Khoác Hoàng Bào",
+      "folder": "C:\\Dev\\MTC\\Vô Hạn Lượng Cháo Trắng Cải Muối Ta Lại Khoác Hoàng Bào",
+      "chapter_count": 655,
+      "latest_index": 674,
+      "missing_indexes": [
+        656,
+        657,
+        658,
+        659,
+        660,
+        661,
+        662,
+        663,
+        664,
+        665,
+        666,
+        667,
+        668,
+        669,
+        670,
+        671,
+        672,
+        673,
+        674
+      ],
+      "downloaded": [
+        {
+          "index": 656,
+          "chapter_id": 18270060
+        },
+        {
+          "index": 657,
+          "chapter_id": 18270061
+        },
+        {
+          "index": 658,
+          "chapter_id": 18270062
+        },
+        {
+          "index": 659,
+          "chapter_id": 18270063
+        },
+        {
+          "index": 660,
+          "chapter_id": 18270064
+        },
+        {
+          "index": 661,
+          "chapter_id": 18270065
+        },
+        {
+          "index": 662,
+          "chapter_id": 18270066
+        },
+        {
+          "index": 663,
+          "chapter_id": 18270067
+        },
+        {
+          "index": 664,
+          "chapter_id": 18270068
+        },
+        {
+          "index": 665,
+          "chapter_id": 18270069
+        },
+        {
+          "index": 666,
+          "chapter_id": 18270070
+        },
+        {
+          "index": 667,
+          "chapter_id": 18270071
+        },
+        {
+          "index": 668,
+          "chapter_id": 18270072
+        },
+        {
+          "index": 669,
+          "chapter_id": 18270073
+        },
+        {
+          "index": 670,
+          "chapter_id": 18270074
+        },
+        {
+          "index": 671,
+          "chapter_id": 18270075
+        },
+        {
+          "index": 672,
+          "chapter_id": 18270076
+        },
+        {
+          "index": 673,
+          "chapter_id": 18270077
+        },
+        {
+          "index": 674,
+          "chapter_id": 18270078
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 125449,
+      "name": "Vũ Trụ Vô Hạn Thực Đường",
+      "folder": "C:\\Dev\\MTC\\Vũ Trụ Vô Hạn Thực Đường",
+      "chapter_count": 805,
+      "latest_index": 807,
+      "missing_indexes": [
+        806,
+        807
+      ],
+      "downloaded": [
+        {
+          "index": 806,
+          "chapter_id": 22570783
+        },
+        {
+          "index": 807,
+          "chapter_id": 22570792
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 137088,
+      "name": "Xuyên Nhanh: Ta Tại Công Đức Hiệu Cầm Đồ Đương Chưởng Quỹ",
+      "folder": "C:\\Dev\\MTC\\Xuyên Nhanh Ta Tại Công Đức Hiệu Cầm Đồ Đương Chưởng Quỹ",
+      "chapter_count": 1557,
+      "latest_index": 1558,
+      "missing_indexes": [
+        1558
+      ],
+      "downloaded": [
+        {
+          "index": 1558,
+          "chapter_id": 27093673
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 137716,
+      "name": "Zombie Vương: Bắt Đầu Nhặt Cái Hài Nhi Là Nữ Đế Trọng Sinh",
+      "folder": "C:\\Dev\\MTC\\Zombie Vương Bắt Đầu Nhặt Cái Hài Nhi Là Nữ Đế Trọng Sinh",
+      "chapter_count": 552,
+      "latest_index": 553,
+      "missing_indexes": [
+        553
+      ],
+      "downloaded": [
+        {
+          "index": 553,
+          "chapter_id": 23819003
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 108217,
+      "name": "Đại Càn Trường Sinh",
+      "folder": "C:\\Dev\\MTC\\Đại Càn Trường Sinh",
+      "chapter_count": 1872,
+      "latest_index": 1876,
+      "missing_indexes": [
+        1873,
+        1874,
+        1875,
+        1876
+      ],
+      "downloaded": [
+        {
+          "index": 1873,
+          "chapter_id": 16670967
+        },
+        {
+          "index": 1874,
+          "chapter_id": 16670968
+        },
+        {
+          "index": 1875,
+          "chapter_id": 16675076
+        },
+        {
+          "index": 1876,
+          "chapter_id": 16675077
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 124705,
+      "name": "Đại Minh: Như Thế Tham Phò Mã, Trẫm Giết Không Được?",
+      "folder": "C:\\Dev\\MTC\\Đại Minh Như Thế Tham Phò Mã Trẫm Giết Không Được",
+      "chapter_count": 1072,
+      "latest_index": 1073,
+      "missing_indexes": [
+        1073
+      ],
+      "downloaded": [
+        {
+          "index": 1073,
+          "chapter_id": 23855966
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 148333,
+      "name": "Đại Minh: Yểu Thọ, Vừa Thành Tiên Liền Bị Phơi Sáng",
+      "folder": "C:\\Dev\\MTC\\Đại Minh Yểu Thọ Vừa Thành Tiên Liền Bị Phơi Sáng",
+      "chapter_count": 1812,
+      "latest_index": 1830,
+      "missing_indexes": [
+        1813,
+        1814,
+        1815,
+        1816,
+        1817,
+        1818,
+        1819,
+        1820,
+        1821,
+        1822,
+        1823,
+        1824,
+        1825,
+        1826,
+        1827,
+        1828,
+        1829,
+        1830
+      ],
+      "downloaded": [
+        {
+          "index": 1813,
+          "chapter_id": 24959998
+        },
+        {
+          "index": 1814,
+          "chapter_id": 24959999
+        },
+        {
+          "index": 1815,
+          "chapter_id": 24960000
+        },
+        {
+          "index": 1816,
+          "chapter_id": 24960001
+        },
+        {
+          "index": 1817,
+          "chapter_id": 24960002
+        },
+        {
+          "index": 1818,
+          "chapter_id": 24960003
+        },
+        {
+          "index": 1819,
+          "chapter_id": 24960004
+        },
+        {
+          "index": 1820,
+          "chapter_id": 24960005
+        },
+        {
+          "index": 1821,
+          "chapter_id": 24960006
+        },
+        {
+          "index": 1822,
+          "chapter_id": 24960007
+        },
+        {
+          "index": 1823,
+          "chapter_id": 24960008
+        },
+        {
+          "index": 1824,
+          "chapter_id": 24960009
+        },
+        {
+          "index": 1825,
+          "chapter_id": 24960010
+        },
+        {
+          "index": 1826,
+          "chapter_id": 24960011
+        },
+        {
+          "index": 1827,
+          "chapter_id": 24960012
+        },
+        {
+          "index": 1828,
+          "chapter_id": 24960013
+        },
+        {
+          "index": 1829,
+          "chapter_id": 24960014
+        },
+        {
+          "index": 1830,
+          "chapter_id": 24960015
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 109640,
+      "name": "Đại Tần: Chính Xác , Cha Ngươi Chính Là Tần Thủy Hoàng",
+      "folder": "C:\\Dev\\MTC\\Đại Tần Chính Xác Cha Ngươi Chính Là Tần Thủy Hoàng",
+      "chapter_count": 1331,
+      "latest_index": 1332,
+      "missing_indexes": [
+        1332
+      ],
+      "downloaded": [
+        {
+          "index": 1332,
+          "chapter_id": 19209857
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 134842,
+      "name": "Đại Đường: Bắt Đầu Hối Hôn, Ta Thành Thi Tiên Ngươi Khóc Cái Gì",
+      "folder": "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Hối Hôn Ta Thành Thi Tiên Ngươi Khóc Cái Gì",
+      "chapter_count": 641,
+      "latest_index": 642,
+      "missing_indexes": [
+        642
+      ],
+      "downloaded": [
+        {
+          "index": 642,
+          "chapter_id": 24046442
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 134842,
+      "name": "Đại Đường: Bắt Đầu Hối Hôn, Ta Thành Thi Tiên Ngươi Khóc Cái Gì",
+      "folder": "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Hối Hôn, Ta Thành Thi Tiên Ngươi Khóc Cái Gì",
+      "chapter_count": 641,
+      "latest_index": 642,
+      "missing_indexes": [
+        642
+      ],
+      "downloaded": [
+        {
+          "index": 642,
+          "chapter_id": 24046442
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 107243,
+      "name": "Đại Đường Bắt Đầu Từ Làm Lý Thế Dân Khiếp Sợ",
+      "folder": "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Từ Làm Lý Thế Dân Khiếp Sợ",
+      "chapter_count": 787,
+      "latest_index": 788,
+      "missing_indexes": [
+        788
+      ],
+      "downloaded": [
+        {
+          "index": 788,
+          "chapter_id": 25139110
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 101740,
+      "name": "Đại Đường Phong Lưu Tiểu Địa Chủ",
+      "folder": "C:\\Dev\\MTC\\Đại Đường Phong Lưu Tiểu Địa Chủ",
+      "chapter_count": 1061,
+      "latest_index": 1063,
+      "missing_indexes": [
+        1062,
+        1063
+      ],
+      "downloaded": [
+        {
+          "index": 1062,
+          "chapter_id": 13107320
+        },
+        {
+          "index": 1063,
+          "chapter_id": 13114634
+        }
+      ],
+      "failed": []
+    },
+    {
+      "id": 113207,
+      "name": "Đế Quốc Đệ Nhất Phò Mã",
+      "folder": "C:\\Dev\\MTC\\Đế Quốc Đệ Nhất Phò Mã",
+      "chapter_count": 2213,
+      "latest_index": 2225,
+      "missing_indexes": [
+        2214,
+        2215,
+        2216,
+        2217,
+        2218,
+        2219,
+        2220,
+        2221,
+        2222,
+        2223,
+        2224,
+        2225
+      ],
+      "downloaded": [
+        {
+          "index": 2214,
+          "chapter_id": 20437577
+        },
+        {
+          "index": 2215,
+          "chapter_id": 20437578
+        },
+        {
+          "index": 2216,
+          "chapter_id": 20437579
+        },
+        {
+          "index": 2217,
+          "chapter_id": 20437580
+        },
+        {
+          "index": 2218,
+          "chapter_id": 20437581
+        },
+        {
+          "index": 2219,
+          "chapter_id": 20437582
+        },
+        {
+          "index": 2220,
+          "chapter_id": 20437583
+        },
+        {
+          "index": 2221,
+          "chapter_id": 20437584
+        },
+        {
+          "index": 2222,
+          "chapter_id": 20437585
+        },
+        {
+          "index": 2223,
+          "chapter_id": 20437586
+        },
+        {
+          "index": 2224,
+          "chapter_id": 20437587
+        },
+        {
+          "index": 2225,
+          "chapter_id": 20437588
+        }
+      ],
+      "failed": []
+    }
+  ],
+  "summary": {
+    "books": 69,
+    "downloaded": 380,
+    "failed": 0
+  }
+}

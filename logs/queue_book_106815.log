@@ -1,0 +1,35 @@
+book=Comic Ác Ma Pháp Sư
+book_id=106815
+out=C:\Dev\MTC\Comic Ác Ma Pháp Sư
+chapters_total=25 expected=25
+[1/25] skip existing file=Chương 1 Mới xuyên qua.txt
+[2/25] skip existing file=Chương 2 Đại Vũ Trụ và Tiểu Vũ Trụ.txt
+[3/25] skip existing file=Chương 3 Chính nghĩa của Mordo.txt
+[4/25] skip existing file=Chương 4 Themyscira.txt
+[5/25] skip existing file=Chương 5 Mười sáu tuổi.txt
+[6/25] skip existing file=Chương 6 Bắt đầu thám hiểm.txt
+[7/25] skip existing file=Chương 7 Sir Crocodile.txt
+[8/25] skip existing file=Chương 8 Hải quân Lục thức.txt
+[9/25] skip existing file=Chương 9 Gặp gỡ Howard.txt
+[10/25] skip existing file=Chương 10 Tìm kiếm Steve Rogers.txt
+[11/25] skip existing file=Chương 11 Brotherhood of the Shield.txt
+[12/25] skip existing file=Chương 12 Steve.txt
+[13/25] skip existing file=Chương 13 Ares.txt
+[14/25] skip existing file=Chương 14 Logan.txt
+[15/25] skip existing file=Chương 15 Tyrant.txt
+[16/25] skip existing file=Chương 16 Tiến sĩ Erskine.txt
+[17/25] skip existing file=Chương 17 Quay trở lại căn cứ.txt
+[18/25] skip existing file=Chương 18 Đến Rome.txt
+[19/25] skip existing file=Chương 19 Nathaniel Richards.txt
+[20/25] skip existing file=Chương 20 Ta vậy mà bị giết.txt
+[21/25] skip existing file=Chương 21 Căn cứ Hydra.txt
+[22/25] skip existing file=Chương 22 Vương tử.txt
+[23/25] skip existing file=Chương 23 Chém giết Vương tử.txt
+[24/25] skip existing file=Chương 24 Anna Valerious.txt
+[25/25] download chapter_id=17515937 file=Chương 25 Lời cuối sách.txt
+  OK decrypted=True written=Chương 25 Lời cuối sách.txt
+final_ok=25
+final_fail=0
+out=C:\Dev\MTC\Comic Ác Ma Pháp Sư
+
+[stderr]

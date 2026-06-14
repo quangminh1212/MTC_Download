@@ -1,0 +1,57 @@
+targets=16
+[1/16] 1854 id=149581 local=974 old_latest=975
+  remote=974 latest=975 missing=0
+  final=974/975
+[2/16] Sắt Thép Ma Pháp id=108742 local=972 old_latest=973
+  remote=972 latest=973 missing=0
+  final=972/973
+[3/16] Đế Quốc Nhật Bản id=110466 local=404 old_latest=405
+  remote=405 latest=405 missing=0
+  final=404/405
+[4/16] Bám Thân Mạnh Nhất Songoku id=101777 local=283 old_latest=288
+  remote=287 latest=288 missing=4
+    OK index=119 id=11685218 decrypted=True
+    OK index=121 id=11685220 decrypted=True
+    OK index=122 id=11685221 decrypted=True
+    OK index=123 id=11685222 decrypted=True
+  final=287/288
+[5/16] Dị Thế Mạnh Nhất Chiến Tiên Hệ Thống id=100487 local=313 old_latest=315
+  remote=315 latest=315 missing=2
+    OK index=203 id=10476791 decrypted=True
+    OK index=207 id=10476795 decrypted=True
+  final=315/315
+[6/16] Hồng Hoang Chi Hồ Lô Đằng Hệ Thống id=100268 local=399 old_latest=400
+  remote=399 latest=400 missing=0
+  final=399/400
+[7/16] Kuroko No Basket Một Cái Khác Kỳ Tích id=101751 local=409 old_latest=411
+  remote=410 latest=411 missing=1
+    OK index=70 id=11666473 decrypted=True
+  final=410/411
+[8/16] Lão Bà Ta Là Nữ Tông Chủ id=101189 local=387 old_latest=390
+  remote=387 latest=390 missing=0
+  final=387/390
+[9/16] Người Nguyên Thủy Ta Đến Từ Trái Đất id=100930 local=415 old_latest=420
+  remote=415 latest=420 missing=0
+  final=415/420
+[10/16] Prince Of Tennis Break Serve Ngủ Thần id=101763 local=439 old_latest=441
+  remote=439 latest=441 missing=0
+  final=439/441
+[11/16] Thằng Hề Trò Chơi id=101450 local=419 old_latest=430
+  remote=419 latest=430 missing=0
+  final=419/430
+[12/16] Trộm Món Ăn Hệ Thống id=101339 local=245 old_latest=246
+  remote=246 latest=246 missing=1
+    OK index=132 id=11446210 decrypted=True
+  final=246/246
+[13/16] Tuyệt Thế Tiêu Viêm id=100463 local=437 old_latest=438
+  remote=437 latest=438 missing=0
+  final=437/438
+[14/16] Võng Du Chi Siêu Thần Áo Giáp Đại Sư id=100232 local=399 old_latest=420
+  remote=399 latest=420 missing=0
+  final=399/420
+[15/16] Vạn Giới Qidian id=100956 local=433 old_latest=434
+  remote=433 latest=434 missing=0
+  final=433/434
+[16/16] Đô Thị Tối Cường Tiện Nhân Chủ Bá id=101729 local=390 old_latest=393
+  remote=390 latest=393 missing=0
+  final=390/393

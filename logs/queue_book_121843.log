@@ -1,0 +1,371 @@
+book=Bắt Đầu Từ Kiếm Ma
+book_id=121843
+out=C:\Dev\MTC\Bắt Đầu Từ Kiếm Ma
+chapters_total=344 expected=344
+[1/344] skip existing file=Chương 1 Kiếm Ma.txt
+[2/344] skip existing file=Chương 2 Sự thật.txt
+[3/344] skip existing file=Chương 3 Mục tiêu.txt
+[4/344] skip existing file=Chương 4 Khôi phục.txt
+[5/344] skip existing file=Chương 5 Mở đường.txt
+[6/344] skip existing file=Chương 6 Tổng quát.txt
+[7/344] skip existing file=Chương 7 Án diệt môn.txt
+[8/344] skip existing file=Chương 8 Nhất Thần.txt
+[9/344] skip existing file=Chương 9 Không gần.txt
+[10/344] skip existing file=Chương 10 Bắc tiến.txt
+[11/344] skip existing file=Chương 11 Gặp được.txt
+[12/344] skip existing file=Chương 12 Thỉnh cầu.txt
+[13/344] skip existing file=Chương 13 Sơn trại.txt
+[14/344] skip existing file=Chương 14 Biện pháp thô bạo.txt
+[15/344] skip existing file=Chương 15 Tường khí.txt
+[16/344] skip existing file=Chương 16 Ao máu.txt
+[17/344] skip existing file=Chương 17 Không còn trẻ.txt
+[18/344] skip existing file=Chương 18 Long Biến.txt
+[19/344] skip existing file=Chương 19 Lý Thiên Hành.txt
+[20/344] skip existing file=Chương 20 Tranh đạo.txt
+[21/344] skip existing file=Chương 21 Truyền thừa.txt
+[22/344] skip existing file=Chương 22 Hậu sự.txt
+[23/344] skip existing file=Chương 23 Tự vấn.txt
+[24/344] skip existing file=Chương 24 Tính toán.txt
+[25/344] skip existing file=Chương 25 Sát ý dần lên.txt
+[26/344] skip existing file=Chương 26 Chuẩn bị.txt
+[27/344] skip existing file=Chương 27 Thị nữ.txt
+[28/344] skip existing file=Chương 28 Bắt đầu.txt
+[29/344] skip existing file=Chương 29 Lên Cực Đạo Sơn.txt
+[30/344] skip existing file=Chương 30 Từ Hồng Hà.txt
+[31/344] skip existing file=Chương 31 Đại môn phái lên núi.txt
+[32/344] skip existing file=Chương 32 Sở cầu.txt
+[33/344] skip existing file=Chương 33 Nhập trận.txt
+[34/344] skip existing file=Chương 34 Mệnh như sâu kiến.txt
+[35/344] skip existing file=Chương 35 Giáng lâm Đạo Đỉnh Phong.txt
+[36/344] skip existing file=Chương 36 Trương Vô Cực.txt
+[37/344] skip existing file=Chương 37 Là nữ.txt
+[38/344] skip existing file=Chương 38 Vũ Nhu kỳ quái.txt
+[39/344] skip existing file=Chương 39 Truyền pháp.txt
+[40/344] skip existing file=Chương 40 Dễ dàng trấn áp.txt
+[41/344] skip existing file=Chương 41 Tàng Kiếm Phong.txt
+[42/344] skip existing file=Chương 42 Bạch Tiên.txt
+[43/344] skip existing file=Chương 43 Cảnh cáo.txt
+[44/344] skip existing file=Chương 44 Sóng chuyển.txt
+[45/344] skip existing file=Chương 45 Linh khí.txt
+[46/344] skip existing file=Chương 46 Sư tỷ.txt
+[47/344] skip existing file=Chương 47 Hóa Long.txt
+[48/344] skip existing file=Chương 48 Tẩu thủy.txt
+[49/344] skip existing file=Chương 49 Không có gì ghê gớm.txt
+[50/344] skip existing file=Chương 50 Nghìn dặm trợ lực.txt
+[51/344] skip existing file=Chương 51 Từ Trường Khanh đấu Mạc Thần Võ.txt
+[52/344] skip existing file=Chương 52 Dục Hoan Đô.txt
+[53/344] skip existing file=Chương 53 Tường Vi.txt
+[54/344] skip existing file=Chương 54 Va chạm.txt
+[55/344] skip existing file=Chương 55 Dục Hỏa Hồng Liên.txt
+[56/344] skip existing file=Chương 56 Hoan Mị Cực Lạc Công.txt
+[57/344] skip existing file=Chương 57 Vọng Thiên Cảnh.txt
+[58/344] skip existing file=Chương 58 Dung hợp.txt
+[59/344] skip existing file=Chương 59 Độc trăm năm.txt
+[60/344] skip existing file=Chương 60 Sắc dục.txt
+[61/344] skip existing file=Chương 61 Tỉnh.txt
+[62/344] skip existing file=Chương 62 Tướng công.txt
+[63/344] skip existing file=Chương 63 Hướng Thiên Cảnh.txt
+[64/344] skip existing file=Chương 64 Thần quang.txt
+[65/344] skip existing file=Chương 65 Bến Lục Thường.txt
+[66/344] skip existing file=Chương 66 Diệt Ma.txt
+[67/344] skip existing file=Chương 67 Kết quả.txt
+[68/344] skip existing file=Chương 68 Lên Tàng Kiếm Phong.txt
+[69/344] skip existing file=Chương 69 Sông kiếm.txt
+[70/344] skip existing file=Chương 70 Vây giết.txt
+[71/344] download chapter_id=17304369 file=Chương 71 Vây giết 2.txt
+  OK decrypted=True written=Chương 71 Vây giết 2.txt
+[72/344] skip existing file=Chương 72 Giết ra.txt
+[73/344] skip existing file=Chương 73 Giết lùi.txt
+[74/344] skip existing file=Chương 74 Tuyệt sát.txt
+[75/344] skip existing file=Chương 75 Giết sợ.txt
+[76/344] skip existing file=Chương 76 Trọng thương.txt
+[77/344] skip existing file=Chương 77 Huyết nhiễm thiên.txt
+[78/344] skip existing file=Chương 78 Hậu chiến.txt
+[79/344] skip existing file=Chương 79 Người kể chuyện.txt
+[80/344] skip existing file=Chương 80 Hẹn gặp.txt
+[81/344] skip existing file=Chương 81 Hộ Thiên Thuẫn.txt
+[82/344] skip existing file=Chương 82 Tu luyện.txt
+[83/344] skip existing file=Chương 83 Lăng Triều Âm.txt
+[84/344] skip existing file=Chương 84 Thần Quang Đại Lục.txt
+[85/344] skip existing file=Chương 85 Bảy màu.txt
+[86/344] skip existing file=Chương 86 Mạc gia.txt
+[87/344] skip existing file=Chương 87 Suy đoán.txt
+[88/344] skip existing file=Chương 88 Tả Thiên Sơn.txt
+[89/344] skip existing file=Chương 89 Nhập đạo.txt
+[90/344] skip existing file=Chương 90 Thử nghiệm.txt
+[91/344] skip existing file=Chương 91 Bích Nhãn Cự Giao.txt
+[92/344] skip existing file=Chương 92 Ác đấu.txt
+[93/344] skip existing file=Chương 93 Bất tử.txt
+[94/344] skip existing file=Chương 94 Lục phủ.txt
+[95/344] skip existing file=Chương 95 Tam tiêu.txt
+[96/344] skip existing file=Chương 96 Cửu U.txt
+[97/344] skip existing file=Chương 97 Thần Tàng.txt
+[98/344] skip existing file=Chương 98 Ngũ Kiếm.txt
+[99/344] skip existing file=Chương 99 Hợp nhất.txt
+[100/344] skip existing file=Chương 100 Thoát thai hoán cốt.txt
+[101/344] skip existing file=Chương 101 Bảo Thể.txt
+[102/344] skip existing file=Chương 102 Thần Thể.txt
+[103/344] skip existing file=Chương 103 Tiến vào.txt
+[104/344] skip existing file=Chương 104 Bản nguyên.txt
+[105/344] skip existing file=Chương 105 Hồ Ngọc Thấu.txt
+[106/344] skip existing file=Chương 106 Lục vĩ.txt
+[107/344] skip existing file=Chương 107 Đồng Ngưu.txt
+[108/344] skip existing file=Chương 108 Thất Hung.txt
+[109/344] skip existing file=Chương 109 Ánh sáng.txt
+[110/344] skip existing file=Chương 110 Bất Diệt Thần Quang.txt
+[111/344] skip existing file=Chương 111 Quang minh.txt
+[112/344] skip existing file=Chương 112 Va chạm.txt
+[113/344] skip existing file=Chương 113 Váy.txt
+[114/344] skip existing file=Chương 114 Quang Minh Thần Điện.txt
+[115/344] skip existing file=Chương 115 Quang Minh Thánh Chủ.txt
+[116/344] skip existing file=Chương 116 Không gian bản nguyên.txt
+[117/344] skip existing file=Chương 117 Tranh đoạt bản nguyên.txt
+[118/344] skip existing file=Chương 118 Tắm.txt
+[119/344] skip existing file=Chương 119 Ngũ Chuyển.txt
+[120/344] skip existing file=Chương 120 Tức giận.txt
+[121/344] skip existing file=Chương 121 Trấn áp thô bạo.txt
+[122/344] skip existing file=Chương 122 Mây đỏ.txt
+[123/344] skip existing file=Chương 123 Giết loạn.txt
+[124/344] skip existing file=Chương 124 Trời trong.txt
+[125/344] skip existing file=Chương 125 Sinh nở.txt
+[126/344] skip existing file=Chương 126 Hồi sinh.txt
+[127/344] skip existing file=Chương 127 Thiên Loan Điện.txt
+[128/344] skip existing file=Chương 128 Mở rộng tầm mắt.txt
+[129/344] skip existing file=Chương 129 Hướng Thiên.txt
+[130/344] skip existing file=Chương 130 Đoạt Linh.txt
+[131/344] skip existing file=Chương 131 Xuất quan.txt
+[132/344] skip existing file=Chương 132 Thanh Loan.txt
+[133/344] skip existing file=Chương 133 Nghỉ ngơi.txt
+[134/344] skip existing file=Chương 134 Giới thú.txt
+[135/344] skip existing file=Chương 135 Động thủ.txt
+[136/344] skip existing file=Chương 136 Luyện linh sư.txt
+[137/344] skip existing file=Chương 137 Vô Giới Trụy.txt
+[138/344] skip existing file=Chương 138 Chờ.txt
+[139/344] skip existing file=Chương 139 Hải thị thận lâu.txt
+[140/344] skip existing file=Chương 140 Sắc Dục Đọa Linh Thiên.txt
+[141/344] skip existing file=Chương 141 Trần Chi Mai.txt
+[142/344] skip existing file=Chương 142 Vạn Thú Quyết.txt
+[143/344] skip existing file=Chương 143 Nhất kiếm đoạn hải.txt
+[144/344] skip existing file=Chương 144 Không thể tranh phong.txt
+[145/344] skip existing file=Chương 145 Dị Tượng.txt
+[146/344] skip existing file=Chương 146 Lý Thanh Thanh vào biển.txt
+[147/344] skip existing file=Chương 147 Đánh cược một lần cuối cùng.txt
+[148/344] skip existing file=Chương 148 Xem xét Thiên Linh Môn.txt
+[149/344] skip existing file=Chương 149 Linh Pháp Cảnh.txt
+[150/344] skip existing file=Chương 150 Sơn Hải Lưu Tinh Vũ.txt
+[151/344] skip existing file=Chương 151 Sắc lệnh.txt
+[152/344] skip existing file=Chương 152 Hợp Đạo.txt
+[153/344] skip existing file=Chương 153 Hủy thiên diệt địa.txt
+[154/344] skip existing file=Chương 154 Dị Tượng viên mãn.txt
+[155/344] skip existing file=Chương 155 Về nhà.txt
+[156/344] skip existing file=Chương 156 Uống trà.txt
+[157/344] skip existing file=Chương 157 Thăng cấp Thiên Môn Đạo.txt
+[158/344] skip existing file=Chương 158 Ấn ký không gian.txt
+[159/344] skip existing file=Chương 159 Đinh Linh Linh.txt
+[160/344] skip existing file=Chương 160 Vấn Tâm Thức.txt
+[161/344] skip existing file=Chương 161 Hồng Trần U Nguyệt Hương.txt
+[162/344] skip existing file=Chương 162 Sao băng rơi.txt
+[163/344] skip existing file=Chương 163 Thế hệ trẻ tuổi.txt
+[164/344] skip existing file=Chương 164 Tha hương ngộ cố tri.txt
+[165/344] skip existing file=Chương 165 Ta không biết phải nói gì.txt
+[166/344] skip existing file=Chương 166 Kế hoạch hồi hương.txt
+[167/344] skip existing file=Chương 167 Linh vực.txt
+[168/344] skip existing file=Chương 168 Bị lột sạch.txt
+[169/344] skip existing file=Chương 169 Người thụ thương chỉ có hắn.txt
+[170/344] skip existing file=Chương 170 Linh cùng Linh Vật.txt
+[171/344] skip existing file=Chương 171 Thủ đoạn của Đinh Thắng.txt
+[172/344] skip existing file=Chương 172 Tiên Nhân Kiếm.txt
+[173/344] skip existing file=Chương 173 Luyện tay.txt
+[174/344] skip existing file=Chương 174 Hà Tiên.txt
+[175/344] skip existing file=Chương 175 Bắc cực kỳ bí.txt
+[176/344] skip existing file=Chương 176 Sơn Cảnh.txt
+[177/344] skip existing file=Chương 177 Lấy giả làm thật thì thật cũng giả.txt
+[178/344] skip existing file=Chương 178 Tiên nhân mộng.txt
+[179/344] skip existing file=Chương 179 Đạo Thiên Cảnh.txt
+[180/344] skip existing file=Chương 180 Mộng ảo.txt
+[181/344] skip existing file=Chương 181 Thần thể đại thành.txt
+[182/344] skip existing file=Chương 182 Có thể cho ngươi.txt
+[183/344] skip existing file=Chương 183 Tròn hai năm.txt
+[184/344] skip existing file=Chương 184 Chính sự.txt
+[185/344] skip existing file=Chương 185 Thiên Mộng Huyền Công.txt
+[186/344] skip existing file=Chương 186 Ma Hê Thủ La.txt
+[187/344] skip existing file=Chương 187 Bát trưởng lão.txt
+[188/344] skip existing file=Chương 188 Có thể thay váy.txt
+[189/344] skip existing file=Chương 189 Bị từ hôn.txt
+[190/344] skip existing file=Chương 190 Dọc theo quy tắc tìm hiểu bản nguyên.txt
+[191/344] skip existing file=Chương 191 Táng Đế Liên.txt
+[192/344] skip existing file=Chương 192 Nàng.txt
+[193/344] skip existing file=Chương 193 Mười bước Đạo Thiên.txt
+[194/344] skip existing file=Chương 194 Võ Đạo.txt
+[195/344] skip existing file=Chương 195 Thiên Đạo.txt
+[196/344] skip existing file=Chương 196 Đồ ăn.txt
+[197/344] skip existing file=Chương 197 Cửu Âm Phiến.txt
+[198/344] skip existing file=Chương 198 Từ không sinh có.txt
+[199/344] skip existing file=Chương 199 Tâm tính.txt
+[200/344] skip existing file=Chương 200 Xa xôi.txt
+[201/344] skip existing file=Chương 201 Thần thông.txt
+[202/344] skip existing file=Chương 202 Thiên Linh Đại Lục.txt
+[203/344] skip existing file=Chương 203 Tuyết Thần.txt
+[204/344] skip existing file=Chương 204 Kiếm áp chư thần.txt
+[205/344] skip existing file=Chương 205 Thủy.txt
+[206/344] skip existing file=Chương 206 Ta thua.txt
+[207/344] skip existing file=Chương 207 Chìm xuống.txt
+[208/344] skip existing file=Chương 208 Nguyệt sự.txt
+[209/344] skip existing file=Chương 209 Quy Khư.txt
+[210/344] skip existing file=Chương 210 Đại Xích Thiên.txt
+[211/344] skip existing file=Chương 211 Chứng đạo.txt
+[212/344] skip existing file=Chương 212 Võ Thiên Cảnh.txt
+[213/344] skip existing file=Chương 213 Đàm Thanh Chương.txt
+[214/344] skip existing file=Chương 214 Nhân vật chính.txt
+[215/344] skip existing file=Chương 215 Đếm kiến.txt
+[216/344] skip existing file=Chương 216 Mới tới Long Vũ Môn.txt
+[217/344] skip existing file=Chương 217 May mắn.txt
+[218/344] skip existing file=Chương 218 Phản phệ.txt
+[219/344] skip existing file=Chương 219 Giải thoát.txt
+[220/344] skip existing file=Chương 220 Nhìn thấy.txt
+[221/344] skip existing file=Chương 221 Trấn áp.txt
+[222/344] download chapter_id=18440009 file=Chương 222 Untitled.txt
+  OK decrypted=True written=Chương 222 Untitled.txt
+[223/344] skip existing file=Chương 223 Tám năm.txt
+[224/344] skip existing file=Chương 224 Đạo tràng.txt
+[225/344] skip existing file=Chương 225 Rất nghiêm trọng.txt
+[226/344] download chapter_id=18473330 file=Chương 226 Untitled.txt
+  OK decrypted=True written=Chương 226 Untitled.txt
+[227/344] skip existing file=Chương 227 Thái Sư.txt
+[228/344] skip existing file=Chương 228 Đế binh.txt
+[229/344] skip existing file=Chương 229 Thiên Mệnh Đại Đế.txt
+[230/344] skip existing file=Chương 230 Toàn lực.txt
+[231/344] skip existing file=Chương 231 A Cửu.txt
+[232/344] skip existing file=Chương 232 Tận lực.txt
+[233/344] skip existing file=Chương 233 Buổi sáng.txt
+[234/344] skip existing file=Chương 234 Kiếp.txt
+[235/344] skip existing file=Chương 235 Quy tắc xâm lấn.txt
+[236/344] skip existing file=Chương 236 Cảo Nương.txt
+[237/344] skip existing file=Chương 237 Tính toán.txt
+[238/344] skip existing file=Chương 238 Thiên Cực Thái Hậu.txt
+[239/344] skip existing file=Chương 239 Dao Quang Tướng Quân.txt
+[240/344] skip existing file=Chương 240 Nhị Thế Tử.txt
+[241/344] skip existing file=Chương 241 Bắt.txt
+[242/344] skip existing file=Chương 242 Giáp quân.txt
+[243/344] skip existing file=Chương 243 Một người áp một quân.txt
+[244/344] skip existing file=Chương 244 Diệt Ma.txt
+[245/344] skip existing file=Chương 245 Hung.txt
+[246/344] download chapter_id=18681509 file=Chương 246 Untitled.txt
+  OK decrypted=True written=Chương 246 Untitled.txt
+[247/344] skip existing file=Chương 247 Kiến cùng Nấm.txt
+[248/344] skip existing file=Chương 248 Thí Thiên Nghĩ.txt
+[249/344] skip existing file=Chương 249 Cấm kỵ.txt
+[250/344] skip existing file=Chương 250 Thánh chỉ.txt
+[251/344] download chapter_id=18730238 file=Chương 251 Untitled.txt
+  OK decrypted=True written=Chương 251 Untitled.txt
+[252/344] skip existing file=Chương 252 Đông Hải Thần Hoàng.txt
+[253/344] skip existing file=Chương 253 Long Nhân Hóa.txt
+[254/344] skip existing file=Chương 254 Đông Hải Vương.txt
+[255/344] skip existing file=Chương 255 Chỉ đâu đánh đó.txt
+[256/344] skip existing file=Chương 256 Chạy.txt
+[257/344] skip existing file=Chương 257 La Châu.txt
+[258/344] skip existing file=Chương 258 Phùng Tá Chu.txt
+[259/344] skip existing file=Chương 259 Lượng Thiên Thước.txt
+[260/344] skip existing file=Chương 260 Chuông.txt
+[261/344] skip existing file=Chương 261 Lạc Hiền Vương.txt
+[262/344] skip existing file=Chương 262 Bí mật của Vương giả.txt
+[263/344] skip existing file=Chương 263 Vương giả vẫn lạc.txt
+[264/344] skip existing file=Chương 264 Hội họp.txt
+[265/344] skip existing file=Chương 265 Thiên Mệnh.txt
+[266/344] skip existing file=Chương 266 Liên quân phạt Võ.txt
+[267/344] skip existing file=Chương 267 Phá trận.txt
+[268/344] skip existing file=Chương 268 Vây công.txt
+[269/344] skip existing file=Chương 269 Hỗn chiến.txt
+[270/344] skip existing file=Chương 270 Tà Thiên Cấm Nhãn.txt
+[271/344] skip existing file=Chương 271 Lại chìm.txt
+[272/344] skip existing file=Chương 272 Thời gian.txt
+[273/344] skip existing file=Chương 273 Kiếm Đạo Vô Tướng.txt
+[274/344] skip existing file=Chương 274 Cắt đứt.txt
+[275/344] download chapter_id=19000732 file=Chương 275 Untitled.txt
+  OK decrypted=True written=Chương 275 Untitled.txt
+[276/344] download chapter_id=19009553 file=Chương 276 Untitled.txt
+  OK decrypted=True written=Chương 276 Untitled.txt
+[277/344] download chapter_id=19022107 file=Chương 277 Untitled.txt
+  OK decrypted=True written=Chương 277 Untitled.txt
+[278/344] download chapter_id=19030507 file=Chương 278 Untitled.txt
+  OK decrypted=True written=Chương 278 Untitled.txt
+[279/344] download chapter_id=19040482 file=Chương 279 Untitled.txt
+  OK decrypted=True written=Chương 279 Untitled.txt
+[280/344] skip existing file=Chương 280 Thiên đạo hóa thân.txt
+[281/344] skip existing file=Chương 281 Căn cơ.txt
+[282/344] skip existing file=Chương 282 Mạnh như vậy.txt
+[283/344] skip existing file=Chương 283 Lại thêm một chút.txt
+[284/344] skip existing file=Chương 284 Thiên Dung.txt
+[285/344] skip existing file=Chương 285 Kỳ kỳ quái quái.txt
+[286/344] skip existing file=Chương 286 Ngâm.txt
+[287/344] skip existing file=Chương 287 Mê thất.txt
+[288/344] skip existing file=Chương 288 Vô hạn khả năng.txt
+[289/344] skip existing file=Chương 289 Xuôi nam.txt
+[290/344] skip existing file=Chương 290 Vào Đại Xích Thiên.txt
+[291/344] skip existing file=Chương 291 Bia đá vỡ.txt
+[292/344] skip existing file=Chương 292 Hồng bào.txt
+[293/344] download chapter_id=19175265 file=Chương 293 Untitled.txt
+  OK decrypted=True written=Chương 293 Untitled.txt
+[294/344] download chapter_id=19186281 file=Chương 294 Untitled.txt
+  OK decrypted=True written=Chương 294 Untitled.txt
+[295/344] skip existing file=Chương 295 Thất Tình Thất Sát Trảm.txt
+[296/344] download chapter_id=19209692 file=Chương 296 Untitled.txt
+  OK decrypted=True written=Chương 296 Untitled.txt
+[297/344] skip existing file=Chương 297 Vạn Yêu Tâm.txt
+[298/344] skip existing file=Chương 298 Thần thông mới.txt
+[299/344] skip existing file=Chương 299 Tam Thiên Đại Thế Giới.txt
+[300/344] download chapter_id=19256708 file=Chương 300 Untitled.txt
+  OK decrypted=True written=Chương 300 Untitled.txt
+[301/344] skip existing file=Chương 301 Thần Long.txt
+[302/344] skip existing file=Chương 302 Chờ mong.txt
+[303/344] skip existing file=Chương 303 Điều chỉnh.txt
+[304/344] skip existing file=Chương 304 Ký ức.txt
+[305/344] skip existing file=Chương 305 Chuyển thế.txt
+[306/344] skip existing file=Chương 306 Hiển hóa.txt
+[307/344] skip existing file=Chương 307 Long Dạ Thần Hi.txt
+[308/344] skip existing file=Chương 308 Gặp Thanh Thanh.txt
+[309/344] skip existing file=Chương 309 Hồng Ngưu.txt
+[310/344] skip existing file=Chương 310 Kiểm tra.txt
+[311/344] skip existing file=Chương 311 Mộc Linh.txt
+[312/344] skip existing file=Chương 312 Rời đi.txt
+[313/344] skip existing file=Chương 313 Luận đạo.txt
+[314/344] skip existing file=Chương 314 Gặp lại A Cửu.txt
+[315/344] skip existing file=Chương 315 Bước cuối cùng.txt
+[316/344] skip existing file=Chương 316 Vô căn vô thủy.txt
+[317/344] skip existing file=Chương 317 Vượt qua thời không.txt
+[318/344] download chapter_id=19502570 file=Chương 318 Untitled.txt
+  OK decrypted=True written=Chương 318 Untitled.txt
+[319/344] skip existing file=Chương 319 Trầm Thì Ấn.txt
+[320/344] skip existing file=Chương 320 Bị đùa bỡn.txt
+[321/344] skip existing file=Chương 321 Thần Tộc.txt
+[322/344] skip existing file=Chương 322 Cự kình.txt
+[323/344] skip existing file=Chương 323 Cửu Mệnh Ngao.txt
+[324/344] skip existing file=Chương 324 Về quá khứ.txt
+[325/344] skip existing file=Chương 325 Hù dọa.txt
+[326/344] download chapter_id=19638217 file=Chương 326 Untitled.txt
+  OK decrypted=True written=Chương 326 Untitled.txt
+[327/344] skip existing file=Chương 327 Thần thông Quy Khư.txt
+[328/344] skip existing file=Chương 328 Thiên Đạo vô thủy.txt
+[329/344] skip existing file=Chương 329 Long Quân cùng Tiên Nương.txt
+[330/344] skip existing file=Chương 330 Nóng nảy.txt
+[331/344] skip existing file=Chương 331 Tinh không vạn lý.txt
+[332/344] skip existing file=Chương 332 Xáo trộn.txt
+[333/344] skip existing file=Chương 333 Bóc ra.txt
+[334/344] skip existing file=Chương 334 Phạt thiên.txt
+[335/344] download chapter_id=19762925 file=Chương 335 Untitled.txt
+  OK decrypted=True written=Chương 335 Untitled.txt
+[336/344] skip existing file=Chương 336 Vô thủy.txt
+[337/344] skip existing file=Chương 337 Siêu thoát.txt
+[338/344] skip existing file=Chương 338 Quen thuộc.txt
+[339/344] skip existing file=Chương 339 Vô địch.txt
+[340/344] skip existing file=Chương 340 Vô chung.txt
+[341/344] skip existing file=Chương 341 Không phải nàng.txt
+[342/344] skip existing file=Chương 342 Lý Khuynh Nguyệt Đại kết cục.txt
+[343/344] skip existing file=Chương 343 Phiên ngoại Đại Mộng Tiêu Dao.txt
+[344/344] download chapter_id=22430543 file=Chương 344 Thông báo sách mới.txt
+  OK decrypted=True written=Chương 344 Thông báo sách mới.txt
+final_ok=344
+final_fail=0
+out=C:\Dev\MTC\Bắt Đầu Từ Kiếm Ma
+
+[stderr]

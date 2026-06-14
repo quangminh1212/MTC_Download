@@ -1,0 +1,294 @@
+{
+  "found": {
+    "111111": {},
+    "121958": {},
+    "129139": {},
+    "142699": {},
+    "144974": {},
+    "127250": {},
+    "108844": {},
+    "118545": {},
+    "153591": {},
+    "119844": {},
+    "117300": {},
+    "139269": {},
+    "149724": {},
+    "151054": {},
+    "101516": {},
+    "120335": {},
+    "110466": {},
+    "120219": {},
+    "121873": {},
+    "143601": {},
+    "153510": {},
+    "139388": {},
+    "142086": {},
+    "147555": {},
+    "148683": {},
+    "137546": {},
+    "153284": {},
+    "144450": {},
+    "142799": {},
+    "134366": {},
+    "141364": {},
+    "150712": {},
+    "128089": {},
+    "141444": {},
+    "141683": {},
+    "153215": {}
+  },
+  "summary": [
+    {
+      "folder": "Bạch Nguyệt Vân Thiên",
+      "book_id": 141444,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Bất Diệt Kinh",
+      "book_id": 127250,
+      "wanted": 4,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Bắt Đầu Triệu Hoán Ba Ngàn Đại Đế Dọa Mộng Cửu Thiên Thập Địa",
+      "book_id": 139388,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Cầm Kiếm Độc Hành Chém Quỷ Thần",
+      "book_id": 134366,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Cửu Đế",
+      "book_id": 144974,
+      "wanted": 5,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Hướng Quỷ Hứa Hẹn",
+      "book_id": 148683,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Hắn Chỉ Là Chơi Đùa Không Phải Viết Lên Thần Thoại",
+      "book_id": 149724,
+      "wanted": 2,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Học Đường Rực Cháy",
+      "book_id": 121958,
+      "wanted": 13,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Hồi Kí Hadidu",
+      "book_id": 108844,
+      "wanted": 4,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Khoa Học Kiểu Conan Sōsōnin",
+      "book_id": 147555,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Lan Khuấy Đảo Cổ Sử",
+      "book_id": 139269,
+      "wanted": 2,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Long Cơ Chiến Hồn",
+      "book_id": 119844,
+      "wanted": 2,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Lê Dung",
+      "book_id": 120219,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Muốn Trường Sinh Trước Hết Phải Đồng Vợ Đồng Chồng",
+      "book_id": 117300,
+      "wanted": 2,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Ngự Thần Lục",
+      "book_id": 150712,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Quang Minh Bất Diệt Tín Ngưỡng Vĩnh Hằng",
+      "book_id": 101516,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Quán Net Âm Dương",
+      "book_id": 141683,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Siêu Nhân Diệt Tuyệt Chỉ Nam",
+      "book_id": 153284,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Sáng Thế Phá Kiếp",
+      "book_id": 137546,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Ta Phát Hiện Thế Giới Bug",
+      "book_id": 153591,
+      "wanted": 3,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Ta Siêu Thị Máy Tính Gian Thương Khách Hàng Quỳ Cầu Đừng Đóng Cửa",
+      "book_id": 142799,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Tam Quốc Từ Giao Châu Bắt Đầu",
+      "book_id": 129139,
+      "wanted": 6,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Tara Tiểu Thế Giới Chư Thiên Kỳ Diệu Mạo Hiểm",
+      "book_id": 128089,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Thiên Hành",
+      "book_id": 142699,
+      "wanted": 6,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Thân Là Dũng Giả Ta Bị Lừa Thảm",
+      "book_id": 141364,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Trò Chơi Này Không Thích Hợp Ta Đào Quáng Thành Thần",
+      "book_id": 153215,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Tu Tiên Ta Không Phải Quyển Chỉ Là Chăm Chỉ Một Chút Xíu",
+      "book_id": 144450,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Tây Sơn Hành Trình Vượt Thời Gian",
+      "book_id": 120335,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Tả Đạo Tiên Chủ",
+      "book_id": 151054,
+      "wanted": 2,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Từ Arknights Bắt Đầu Xây Dựng Thế Lực",
+      "book_id": 111111,
+      "wanted": 13,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Từ Hoàn Mỹ Bắt Đầu Bảo Hồ Lô Thông Thiên",
+      "book_id": 142086,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Xuyên Mộng Giả",
+      "book_id": 121873,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Xuyên Thành Liếm Cẩu Nam Phụ Ta Một Cước Đạp Vỡ Thiên Mệnh",
+      "book_id": 143601,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Đại Việt Quỷ Vương",
+      "book_id": 118545,
+      "wanted": 3,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Đấu La Võ Hồn La Tam Pháo Hextech Năm Tuyển Ba",
+      "book_id": 153510,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    },
+    {
+      "folder": "Đế Quốc Nhật Bản",
+      "book_id": 110466,
+      "wanted": 1,
+      "resolved": 0,
+      "resolved_indexes": []
+    }
+  ]
+}

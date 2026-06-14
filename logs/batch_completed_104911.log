@@ -1,0 +1,908 @@
+book=Dòng Máu Lạc Hồng
+book_id=104911
+out=C:\Dev\MTC\Dòng Máu Lạc Hồng
+chapters_total=805 expected=805
+workers=6 batch_size=12
+BATCH 1-12 / 805
+❌ Lỗi khi tải chương 13326879: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 1/805 decrypted=True file=Chương 1 Tiền truyện 01 Phiến ngữ toàn tam tinh.txt
+  OK 2/805 decrypted=True file=Chương 2 Tiền truyện 02 Lê Duy Vỹ.txt
+  OK 3/805 decrypted=True file=Chương 3 Tiền truyện 03 Trịnh Sâm 1.txt
+  OK 4/805 decrypted=True retry=2 file=Chương 4 Tiền truyện 04 Trịnh Sâm 2.txt
+  OK 5/805 decrypted=True file=Chương 5 Tiền truyện 05 Trương Thúc Loan 1.txt
+  OK 6/805 decrypted=True file=Chương 6 Tiền truyện 06 Trương Thúc Loan 2.txt
+  OK 7/805 decrypted=True file=Chương 7 Tiền truyện 07 Thời Loạn.txt
+  OK 8/805 decrypted=True file=Chương 8 Tiền truyện 08 Địa thế Quy Nhơn.txt
+  OK 9/805 decrypted=True file=Chương 9 Tiền truyện 09 Dấy Binh.txt
+  OK 10/805 decrypted=True file=Chương 10 Tiền truyện 10 Võ Văn Dũng.txt
+  OK 11/805 decrypted=True file=Chương 11 Tiền truyện 11 Nguyễn Văn Tuyết.txt
+  OK 12/805 decrypted=True file=Chương 12 Tiền truyện 12 Bùi Thị Xuân.txt
+BATCH 13-24 / 805
+  OK 13/805 decrypted=True file=Chương 13 Tiền truyện 13 Trần Quang Diệu và mối tình.txt
+  OK 14/805 decrypted=True file=Chương 14 Tiền truyện 14 Võ Đình Tú.txt
+  OK 15/805 decrypted=True file=Chương 16 Tiền truyện 15 Nguyễn Văn Lộc.txt
+  OK 16/805 decrypted=True file=Chương 17 Tiền truyện 16 Lý Văn Bưu.txt
+  OK 17/805 decrypted=True file=Chương 18 Tiền truyện 17 Lê Văn Hưng.txt
+  OK 18/805 decrypted=True file=Chương 19 Tiền truyện 18 Trần Văn Kỷ.txt
+  OK 19/805 decrypted=True file=Chương 20 Tiền truyện 19 Ngô Thì Nhậm.txt
+  OK 20/805 decrypted=True file=Chương 21 Tiền truyện 20 Một số tướng tài khác.txt
+  OK 21/805 decrypted=True file=Chương 22 Tiền truyện 21 Hạ thành Quy Nhơn.txt
+  OK 22/805 decrypted=True file=Chương 23 Tiền truyện 22 Trận Thạch Tân.txt
+  OK 23/805 decrypted=True file=Chương 24 Tiền truyện 23 Tam nhân tranh nhất thủy 1.txt
+  OK 24/805 decrypted=True file=Chương 25 Tiền truyện 24 Tam nhân tranh nhất thủy 2.txt
+BATCH 25-36 / 805
+❌ Lỗi khi tải chương 13326906: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 25/805 decrypted=True file=Chương 26 Tiền truyện 25 Xuôi Nam đánh Xiêm.txt
+  OK 26/805 decrypted=True file=Chương 27 Tiền truyện 26 Con diều biển và hành trình ra Bắc 1.txt
+  OK 27/805 decrypted=True file=Chương 28 Tiền truyện 27 Con diều biển và hành trình ra 2.txt
+  OK 28/805 decrypted=True file=Chương 29 Tiền truyện 28 Con diều biển và hành trình ra bắc 3.txt
+  OK 29/805 decrypted=True file=Chương 30 Tiền truyện 29 Trần Công Xán.txt
+  OK 30/805 decrypted=True file=Chương 31 Tiền truyện 30 Cái Chết công thần.txt
+  OK 31/805 decrypted=True file=Chương 32 Tiền truyện 31 Chiến thanh.txt
+  OK 32/805 decrypted=True file=Chương 33 Tiền truyện 32 Just for fun 1.txt
+  OK 33/805 decrypted=True file=Chương 34 Tiền truyện 33 Just for fun 2.txt
+  OK 34/805 decrypted=True file=Chương 35 Tiền truyện 34 Just for fun 3.txt
+  OK 35/805 decrypted=True retry=2 file=Chương 36 Tiền truyện 35 Just for fun 4.txt
+  OK 36/805 decrypted=True file=Chương 37 Đêm Muộn Hà Đô.txt
+BATCH 37-48 / 805
+  OK 37/805 decrypted=True file=Chương 38 Khởi Đầu.txt
+  OK 38/805 decrypted=True file=Chương 39 Món Tiền Đầu.txt
+  OK 39/805 decrypted=True file=Chương 40 Vô Đề.txt
+  OK 40/805 decrypted=True file=Chương 41 Thuận Thiên Kiếm.txt
+  OK 41/805 decrypted=True file=Chương 42 Rừng Pắc Ban.txt
+  OK 42/805 decrypted=True file=Chương 43 Trận Chiến Kết Thúc.txt
+  OK 43/805 decrypted=True file=Chương 44 1789.txt
+  OK 44/805 decrypted=True file=Chương 45 Xã Cô Ba.txt
+  OK 45/805 decrypted=True file=Chương 46 Sơ Gặp Nguyễn Huệ.txt
+  OK 46/805 decrypted=True file=Chương 47 Mưu Tính.txt
+  OK 47/805 decrypted=True file=Chương 48 Mưu Tính 2.txt
+  OK 48/805 decrypted=True file=Chương 49 Chúa Bầu.txt
+BATCH 49-60 / 805
+❌ Lỗi khi tải chương 12963817: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 49/805 decrypted=True file=Chương 50 Tản Mạn.txt
+  OK 50/805 decrypted=True file=Chương 51 Gặp Cornwallis.txt
+  OK 51/805 decrypted=True file=Chương 52 Charles Cornwallis.txt
+  OK 52/805 decrypted=True file=Chương 53 Kì Lạ Trường An Tứ Tài.txt
+  OK 53/805 decrypted=True file=Chương 54 Đoàn Thị Điểm.txt
+  OK 54/805 decrypted=True file=Chương 55 Đêm Khuya.txt
+  OK 55/805 decrypted=True retry=2 file=Chương 56 Ám Muội 1.txt
+  OK 56/805 decrypted=True file=Chương 57 Ám Muội 2.txt
+  OK 57/805 decrypted=True file=Chương 58 Nguyễn Ánh 1.txt
+  OK 58/805 decrypted=True file=Chương 59 Nguyễn Ánh 2.txt
+  OK 59/805 decrypted=True file=Chương 60 Thăng Long.txt
+  OK 60/805 decrypted=True file=Chương 61 Niềm Vui Bất Ngờ.txt
+BATCH 61-72 / 805
+  OK 61/805 decrypted=True file=Chương 62 Tôn Tẫn Bàng Quyên.txt
+  OK 62/805 decrypted=True file=Chương 63 Tử Cấm Thành.txt
+  OK 63/805 decrypted=True file=Chương 64 Gặp Nguyễn Huệ.txt
+  OK 64/805 decrypted=True file=Chương 65 Gặp Nguyễn Huệ 2.txt
+  OK 65/805 decrypted=True file=Chương 66 Mượn Rượu.txt
+  OK 66/805 decrypted=True file=Chương 67 Đêm Dậy Thăng Long.txt
+  OK 67/805 decrypted=True file=Chương 68 Loạn.txt
+  OK 68/805 decrypted=True file=Chương 69 Cờ Thế Thế Cờ.txt
+  OK 69/805 decrypted=True file=Chương 70 Trang Viên Ma.txt
+  OK 70/805 decrypted=True file=Chương 71 Sơn Nam Thượng.txt
+  OK 71/805 decrypted=True file=Chương 72 Hội Ngộ.txt
+  OK 72/805 decrypted=True file=Chương 73 Thảm Án Hàng Đào.txt
+BATCH 73-84 / 805
+  OK 73/805 decrypted=True file=Chương 74 Nguyên Nhân.txt
+  OK 74/805 decrypted=True file=Chương 75 Chuẩn Bị Thu Lưới.txt
+  OK 75/805 decrypted=True file=Chương 76 Thu Lưới 1.txt
+  OK 76/805 decrypted=True file=Chương 77 Thu Lưới 2.txt
+  OK 77/805 decrypted=True file=Chương 78 Gặp Lại.txt
+  OK 78/805 decrypted=True file=Chương 79 Đến.txt
+  OK 79/805 decrypted=True file=Chương 80 Làng Đại.txt
+  OK 80/805 decrypted=True file=Chương 81 Làng Đại 2.txt
+  OK 81/805 decrypted=True file=Chương 82 Đêm.txt
+  OK 82/805 decrypted=True file=Chương 83 Máy In Vn.txt
+  OK 83/805 decrypted=True file=Chương 84 Gặp Lại.txt
+  OK 84/805 decrypted=True file=Chương 85 Mời Chào.txt
+BATCH 85-96 / 805
+  OK 85/805 decrypted=True file=Chương 86 Khoai Tây.txt
+  OK 86/805 decrypted=True file=Chương 87 Khó Khăn.txt
+  OK 87/805 decrypted=True file=Chương 88 Chuẩn Bị 1.txt
+  OK 88/805 decrypted=True file=Chương 89 Chuẩn Bị 2.txt
+  OK 89/805 decrypted=True file=Chương 90 Chóng Vánh.txt
+  OK 90/805 decrypted=True file=Chương 91 Kết Thúc 1.txt
+  OK 91/805 decrypted=True file=Chương 92 Kết Thúc 2.txt
+  OK 92/805 decrypted=True file=Chương 93 Đại Đoàn Kết.txt
+  OK 93/805 decrypted=True file=Chương 94 Đổi Mới.txt
+  OK 94/805 decrypted=True file=Chương 95 Sáng Sớm.txt
+  OK 95/805 decrypted=True file=Chương 96 Gặp Lại.txt
+  OK 96/805 decrypted=True file=Chương 97 Đêm.txt
+BATCH 97-108 / 805
+❌ Lỗi khi tải chương 12963880: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 97/805 decrypted=True file=Chương 98 Nghi Ngờ.txt
+  OK 98/805 decrypted=True file=Chương 99 Wellington.txt
+  OK 99/805 decrypted=True file=Chương 100 Ngổn Ngang.txt
+  OK 100/805 decrypted=True file=Chương 101 Cãi Vã.txt
+  OK 101/805 decrypted=True file=Chương 102 Ngả Bài.txt
+  OK 102/805 decrypted=True file=Chương 103 Suy Nghĩ.txt
+  OK 103/805 decrypted=True file=Chương 104 Đêm.txt
+  OK 104/805 decrypted=True file=Chương 105 Bàn Bạc.txt
+  OK 105/805 decrypted=True file=Chương 106 Bị Gõ.txt
+  OK 106/805 decrypted=True retry=2 file=Chương 107 Hội Thi 1.txt
+  OK 107/805 decrypted=True file=Chương 108 Hội Thi 2.txt
+  OK 108/805 decrypted=True file=Chương 109 Cháy.txt
+BATCH 109-120 / 805
+  OK 109/805 decrypted=True file=Chương 110 Đến.txt
+  OK 110/805 decrypted=True file=Chương 111 Kết.txt
+  OK 111/805 decrypted=True file=Chương 112 Rời Đi.txt
+  OK 112/805 decrypted=True file=Chương 113 Phối Hợp.txt
+  OK 113/805 decrypted=True file=Chương 114 Về Làng.txt
+  OK 114/805 decrypted=True file=Chương 115 Thương Thảo.txt
+  OK 115/805 decrypted=True file=Chương 116 Giải Quyết.txt
+  OK 116/805 decrypted=True file=Chương 117 Tiễn Biệt.txt
+  OK 117/805 decrypted=True file=Chương 118 Trường Học.txt
+  OK 118/805 decrypted=True file=Chương 119 Lên Đường.txt
+  OK 119/805 decrypted=True file=Chương 120 Ngoài Cung.txt
+  OK 120/805 decrypted=True file=Chương 121 Gia Định.txt
+BATCH 121-132 / 805
+  OK 121/805 decrypted=True file=Chương 122 Xã Cô Ba.txt
+  OK 122/805 decrypted=True file=Chương 123 Vô Đề.txt
+  OK 123/805 decrypted=True file=Chương 124 Diễn.txt
+  OK 124/805 decrypted=True file=Chương 125 Phú Xuân.txt
+  OK 125/805 decrypted=True file=Chương 126 Gặp Mặt.txt
+  OK 126/805 decrypted=True file=Chương 127 Cầu Hiền Các.txt
+  OK 127/805 decrypted=True file=Chương 128 Chữ Quốc Ngữ.txt
+  OK 128/805 decrypted=True file=Chương 129 Ăn Đánh.txt
+  OK 129/805 decrypted=True file=Chương 130 Kế Hoạch A 1.txt
+  OK 130/805 decrypted=True file=Chương 131 Kế Hoạch A 2.txt
+  OK 131/805 decrypted=True file=Chương 132 Kế Hoạch A 3.txt
+  OK 132/805 decrypted=True file=Chương 133 Kế Hoạch A 4.txt
+BATCH 133-144 / 805
+  OK 133/805 decrypted=True file=Chương 134 Kế Hoạch A 5.txt
+  OK 134/805 decrypted=True file=Chương 135 Kế Hoạch A 6.txt
+  OK 135/805 decrypted=True file=Chương 136 Kế Hoạch A 7.txt
+  OK 136/805 decrypted=True file=Chương 137 Kế Hoạch 8.txt
+  OK 137/805 decrypted=True file=Chương 138 Kế Hoạch A 9.txt
+  OK 138/805 decrypted=True file=Chương 139 Kế Hoạch B Kế Hoạch Lưỡng Quảng.txt
+  OK 139/805 decrypted=True file=Chương 140 Thăng Long.txt
+  OK 140/805 decrypted=True file=Chương 141 Bàn Bạc.txt
+  OK 141/805 decrypted=True file=Chương 142 Vũ Khí Sinh Học.txt
+  OK 142/805 decrypted=True file=Chương 143 Kế Hoạch Cam Ranh Sơ Lược.txt
+  OK 143/805 decrypted=True file=Chương 144 Kế Hoạch Cam Ranh Sơ Lược 2.txt
+  OK 144/805 decrypted=True file=Chương 145 Kế Hoạch Cam Ranh Sơ Lược 3.txt
+BATCH 145-156 / 805
+  OK 145/805 decrypted=True file=Chương 146 Kẻ Nào Dám Giết Dân Tao 1.txt
+  OK 146/805 decrypted=True file=Chương 147 Kẻ Nào Dám Giết Dân Tao 2.txt
+  OK 147/805 decrypted=True file=Chương 148 Kẻ Nào Dám Giết Dân Tao 3.txt
+  OK 148/805 decrypted=True file=Chương 149 Chiếm Nhai Châu Đồ Sát.txt
+  OK 149/805 decrypted=True file=Chương 150 Hoàn Thiện Kế Hoạch.txt
+  OK 150/805 decrypted=True file=Chương 151 Truyền Võ.txt
+  OK 151/805 decrypted=True file=Chương 152 Chiến Dịch 1.txt
+  OK 152/805 decrypted=True file=Chương 153 Chiến Dịch 2.txt
+  OK 153/805 decrypted=True file=Chương 154 Chiến Dịch 3.txt
+  OK 154/805 decrypted=True file=Chương 155 Hải Chiến 1.txt
+  OK 155/805 decrypted=True file=Chương 156 Hải Chiến 2.txt
+  OK 156/805 decrypted=True file=Chương 157 Hải Chiến 3.txt
+BATCH 157-168 / 805
+❌ Lỗi khi tải chương 12963943: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+❌ Lỗi khi tải chương 12963942: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 157/805 decrypted=True file=Chương 158 Hải Chiến 4.txt
+  OK 158/805 decrypted=True file=Chương 159 Mối Hoạ Ngầm.txt
+  OK 159/805 decrypted=True file=Chương 160 Võ Tánh 1.txt
+  OK 160/805 decrypted=True file=Chương 161 Võ Tánh 2.txt
+  OK 161/805 decrypted=True file=Chương 162 Nguyễn Ánh.txt
+  OK 162/805 decrypted=True file=Chương 163 Di quan.txt
+  OK 163/805 decrypted=True file=Chương 164 Rời Đi.txt
+  OK 164/805 decrypted=True file=Chương 165 Tam Hội Hồng Môn Hội Bào Ca Hội Và Thanh Bang.txt
+  OK 165/805 decrypted=True retry=2 file=Chương 166 Núi Ngọc Linh.txt
+  OK 166/805 decrypted=True retry=2 file=Chương 167 Núi Ngọc Linh 2.txt
+  OK 167/805 decrypted=True file=Chương 168 Núi Ngọc Linh 3.txt
+  OK 168/805 decrypted=True file=Chương 169 Phản Ứng.txt
+BATCH 169-180 / 805
+  OK 169/805 decrypted=True file=Chương 170 Hoà Thân Thiên Tước.txt
+  OK 170/805 decrypted=True file=Chương 171 Đến Tân An.txt
+  OK 171/805 decrypted=True file=Chương 172 Bị Thương.txt
+  OK 172/805 decrypted=True file=Chương 173 Thiên Tước 1.txt
+  OK 173/805 decrypted=True file=Chương 174 Thiên Tước 2.txt
+  OK 174/805 decrypted=True file=Chương 175 Chữa Bệnh.txt
+  OK 175/805 decrypted=True file=Chương 176 Đi Giang Nam.txt
+  OK 176/805 decrypted=True file=Chương 177 Đi Giang Nam 2.txt
+  OK 177/805 decrypted=True file=Chương 178 Đi Giang Nam 3.txt
+  OK 178/805 decrypted=True file=Chương 179 Đi Giang Nam 4.txt
+  OK 179/805 decrypted=True file=Chương 180 Đi Giang Nam 5.txt
+  OK 180/805 decrypted=True file=Chương 181 Đi Giang Nam 6.txt
+BATCH 181-192 / 805
+  OK 181/805 decrypted=True file=Chương 182 Đi Giang Nam 7.txt
+  OK 182/805 decrypted=True file=Chương 183 Hàng Châu.txt
+  OK 183/805 decrypted=True file=Chương 184 Hàng Châu 2.txt
+  OK 184/805 decrypted=True file=Chương 185 Hàng Châu 3.txt
+  OK 185/805 decrypted=True file=Chương 186 Hàng Châu Hoa Sơn.txt
+  OK 186/805 decrypted=True file=Chương 187 Hoa Sơn.txt
+  OK 187/805 decrypted=True file=Chương 188 Hoa Sơn 2.txt
+  OK 188/805 decrypted=True file=Chương 189 Tô Châu.txt
+  OK 189/805 decrypted=True file=Chương 190 Tô Châu 1.txt
+  OK 190/805 decrypted=True file=Chương 191 Tô Châu 3.txt
+  OK 191/805 decrypted=True file=Chương 192 Tô Châu 4.txt
+  OK 192/805 decrypted=True file=Chương 193 Tô Châu 5.txt
+BATCH 193-204 / 805
+  OK 193/805 decrypted=True file=Chương 194 Thảm Sát.txt
+  OK 194/805 decrypted=True file=Chương 195 Loạn.txt
+  OK 195/805 decrypted=True file=Chương 196 Loạn 1.txt
+  OK 196/805 decrypted=True file=Chương 197 Kết Thúc.txt
+  OK 197/805 decrypted=True file=Chương 198 Trở Về.txt
+  OK 198/805 decrypted=True file=Chương 199 Xã Cô Ba.txt
+  OK 199/805 decrypted=True file=Chương 200 Xã Cô Ba 2.txt
+  OK 200/805 decrypted=True file=Chương 201 Về Làng.txt
+  OK 201/805 decrypted=True file=Chương 202 Tốt Nghiệp.txt
+  OK 202/805 decrypted=True file=Chương 203 Trên Lằn Ranh.txt
+  OK 203/805 decrypted=True file=Chương 204 Vào Kinh.txt
+  OK 204/805 decrypted=True file=Chương 205 Vào Kinh 1.txt
+BATCH 205-216 / 805
+  OK 205/805 decrypted=True file=Chương 206 Bắc Thành 1.txt
+  OK 206/805 decrypted=True file=Chương 207 Bắc Thành 2.txt
+  OK 207/805 decrypted=True file=Chương 208 Bắc Thành 3.txt
+  OK 208/805 decrypted=True file=Chương 209 Bắc Thành 4.txt
+  OK 209/805 decrypted=True file=Chương 210 Về Kinh 1.txt
+  OK 210/805 decrypted=True file=Chương 211 Về Kinh 2.txt
+  OK 211/805 decrypted=True file=Chương 212 Tết.txt
+  OK 212/805 decrypted=True file=Chương 213 Tết 2.txt
+  OK 213/805 decrypted=True file=Chương 214 Giả Tượng.txt
+  OK 214/805 decrypted=True file=Chương 215 Nguyễn Huệ Ngồi Tù 1.txt
+  OK 215/805 decrypted=True file=Chương 216 Nguyễn Huệ ngồi tù 2.txt
+  OK 216/805 decrypted=True file=Chương 217 Nguyễn Toản giết Nguyễn Huệ.txt
+BATCH 217-228 / 805
+  OK 217/805 decrypted=True file=Chương 218 Lịch sử khó xoay vần.txt
+  OK 218/805 decrypted=True file=Chương 219 Thoát nạn.txt
+  OK 219/805 decrypted=True file=Chương 220 Kế hoạch lớn 1.txt
+  OK 220/805 decrypted=True file=Chương 221 Kế hoạch lớn 2.txt
+  OK 221/805 decrypted=True file=Chương 222 Đánh Ai Lao 1.txt
+  OK 222/805 decrypted=True file=Chương 223 Đánh Ai Lao 2.txt
+  OK 223/805 decrypted=True file=Chương 224 Đánh Ai Lao 3.txt
+  OK 224/805 decrypted=True file=Chương 225 Đánh Ai Lao 4.txt
+  OK 225/805 decrypted=True file=Chương 226 Đánh Ai Lao 5.txt
+  OK 226/805 decrypted=True file=Chương 227 Hiệp ước kí kết.txt
+  OK 227/805 decrypted=True file=Chương 228 Chuẩn bị rời đi.txt
+  OK 228/805 decrypted=True file=Chương 229 Lực lượng.txt
+BATCH 229-240 / 805
+  OK 229/805 decrypted=True file=Chương 230 Tam giác vàng.txt
+  OK 230/805 decrypted=True file=Chương 231 Đại kết cục.txt
+  OK 231/805 decrypted=True file=Chương 233 Đối đầu quân Đông Ấn Anh.txt
+  OK 232/805 decrypted=True file=Chương 234 Đánh quân Đông Ấn Anh 2.txt
+  OK 233/805 decrypted=True file=Chương 235 Đánh quân Đông Ấn Anh 3.txt
+  OK 234/805 decrypted=True file=Chương 236 Nghỉ ngơi.txt
+  OK 235/805 decrypted=True file=Chương 237 Toan tính.txt
+  OK 236/805 decrypted=True file=Chương 238 Bước đầu.txt
+  OK 237/805 decrypted=True file=Chương 239 Gặp mặt.txt
+  OK 238/805 decrypted=True file=Chương 240 Bàn bạc.txt
+  OK 239/805 decrypted=True file=Chương 241 Đến Tak.txt
+  OK 240/805 decrypted=True file=Chương 242 Chiếm Tak.txt
+BATCH 241-252 / 805
+  OK 241/805 decrypted=True file=Chương 243 Giao dịch.txt
+  OK 242/805 decrypted=True file=Chương 244 “ Con cờ” Chất Tri.txt
+  OK 243/805 decrypted=True file=Chương 245 Calcutta.txt
+  OK 244/805 decrypted=True file=Chương 246 Những nước cờ ở vùng Đông Bắc Ấn.txt
+  OK 245/805 decrypted=True file=Chương 247 Cacutta ‘ lại yên bình’.txt
+  OK 246/805 decrypted=True file=Chương 248 Rời đi.txt
+  OK 247/805 decrypted=True file=Chương 249 Hành trình Manipur 1.txt
+  OK 248/805 decrypted=True file=Chương 250 Hành trình Manipur 3.txt
+  OK 249/805 decrypted=True file=Chương 251 Hành trình Manipur 3.txt
+  OK 250/805 decrypted=True file=Chương 252 Hành trình Manipur 4.txt
+  OK 251/805 decrypted=True file=Chương 253 Hành trình Manipur 5 phần cuối.txt
+  OK 252/805 decrypted=True file=Chương 254 Chiếm đảo Shapuri.txt
+BATCH 253-264 / 805
+  OK 253/805 decrypted=True file=Chương 255 Bước chuẩn bị cuối 1.txt
+  OK 254/805 decrypted=True file=Chương 256 Bước chuẩn bị cuối 2.txt
+  OK 255/805 decrypted=True file=Chương 257 Chiếm Yangon 1.txt
+  OK 256/805 decrypted=True file=Chương 258 Chiếm Yangon 2.txt
+  OK 257/805 decrypted=True file=Chương 259 Gia Định.txt
+  OK 258/805 decrypted=True file=Chương 260 Giải quyết 1.txt
+  OK 259/805 decrypted=True file=Chương 261 Giải quyết 2.txt
+  OK 260/805 decrypted=True file=Chương 262 Mẻ cá lớn 1.txt
+  OK 261/805 decrypted=True file=Chương 263 Mẻ cá lớn 2.txt
+  OK 262/805 decrypted=True file=Chương 264 Chạm trán VOC.txt
+  OK 263/805 decrypted=True file=Chương 265 Vùng biển Malacca.txt
+  OK 264/805 decrypted=True file=Chương 266 Tới Phượng Hoàng Trung Đô.txt
+BATCH 265-276 / 805
+❌ Lỗi khi tải chương 13248122: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 265/805 decrypted=True file=Chương 267 Phạm Đình Hổ.txt
+  OK 266/805 decrypted=True file=Chương 268 Trần Công Xán.txt
+  OK 267/805 decrypted=True file=Chương 269 Thành Quy Nhơn.txt
+  OK 268/805 decrypted=True file=Chương 270 Bùi Đắc Tuyên 1.txt
+  OK 269/805 decrypted=True file=Chương 271 Bùi Đắc Tuyên 2.txt
+  OK 270/805 decrypted=True file=Chương 272 Bùi Đắc Tuyên 3.txt
+  OK 271/805 decrypted=True file=Chương 273 Bắt cá 1.txt
+  OK 272/805 decrypted=True file=Chương 274 Bắt cá 2.txt
+  OK 273/805 decrypted=True file=Chương 275 Kế hoạch vỡ quân Nguyễn đánh Quy Nhơn 1.txt
+  OK 274/805 decrypted=True file=Chương 276 Kế hoạch vỡ quân Nguyễn đánh Quy Nhơn 2.txt
+  OK 275/805 decrypted=True retry=2 file=Chương 277 Nữ hùng Tây Sơn ôm con giết giặc 1.txt
+  OK 276/805 decrypted=True file=Chương 278 Nữ hùng Tây Sơn ôm con giết giặc 2.txt
+BATCH 277-288 / 805
+  OK 277/805 decrypted=True file=Chương 279 Báo chí phát hỏa 1.txt
+  OK 278/805 decrypted=True file=Chương 280 Báo chí phát hỏa 2.txt
+  OK 279/805 decrypted=True file=Chương 281 Nguyễn Ánh lo lắng 1.txt
+  OK 280/805 decrypted=True file=Chương 282 Nguyễn Ánh lo lắng 2.txt
+  OK 281/805 decrypted=True file=Chương 283 Tương kế tựu kế 1.txt
+  OK 282/805 decrypted=True file=Chương 284 Tương kế tựu kế 2.txt
+  OK 283/805 decrypted=True file=Chương 285 Nam tiến 1.txt
+  OK 284/805 decrypted=True file=Chương 286 Nam Tiến 2.txt
+  OK 285/805 decrypted=True file=Chương 287 Hèn hạ quân Nguyễn.txt
+  OK 286/805 decrypted=True file=Chương 288 Lê Trung 'quy hàng'.txt
+  OK 287/805 decrypted=True file=Chương 289 Bốn phía bao vây 1.txt
+  OK 288/805 decrypted=True file=Chương 290 Bốn phía bao vây 2.txt
+BATCH 289-300 / 805
+  OK 289/805 decrypted=True file=Chương 291 Nam Vang tử chiến 1.txt
+  OK 290/805 decrypted=True file=Chương 292 Nam Vang tử chiến 2.txt
+  OK 291/805 decrypted=True file=Chương 293 Taksin hành động.txt
+  OK 292/805 decrypted=True file=Chương 294 Chiến thắng Nam Vang.txt
+  OK 293/805 decrypted=True file=Chương 295 Giăng bẫy.txt
+  OK 294/805 decrypted=True file=Chương 296 Thống nhất giang sơn 1.txt
+  OK 295/805 decrypted=True file=Chương 297 ; Thống nhất Giang sơn 2.txt
+  OK 296/805 decrypted=True file=Chương 298 Thống nhất Giang Sơn 3.txt
+  OK 297/805 decrypted=True file=Chương 299 Giết Nguyễn Ánh muôn nẻo reo ca Hết map 1.txt
+  OK 298/805 decrypted=True file=Chương 301 Tóm lược lại phần I.txt
+  OK 299/805 decrypted=True file=Chương 302 Toàn cảnh thế giới cuối thế kỉ XVIII.txt
+  OK 300/805 decrypted=True file=Chương 303 Quy ước phần II.txt
+BATCH 301-312 / 805
+  OK 301/805 decrypted=True file=Chương 304 Sắp xếp.txt
+  OK 302/805 decrypted=True file=Chương 305 Tiệc cưới.txt
+  OK 303/805 decrypted=True file=Chương 306 02 09 Ngày độc lập.txt
+  OK 304/805 decrypted=True file=Chương 307 Khẳng định chủ quyền Hoàng Sa Trường Sa.txt
+  OK 305/805 decrypted=True file=Chương 308 Bước đầu ở Ma Cao.txt
+  OK 306/805 decrypted=True file=Chương 309 Mua nô lệ.txt
+  OK 307/805 decrypted=True file=Chương 310 Quân tử trả thù cách năm chưa muộn 1.txt
+  OK 308/805 decrypted=True file=Chương 311 Quân tử trả thù cách năm chưa muộn 2.txt
+  OK 309/805 decrypted=True file=Chương 312 Lựa chọn Macao hay Manila.txt
+  OK 310/805 decrypted=True file=Chương 313 Đảo Cabra.txt
+  OK 311/805 decrypted=True file=Chương 314 TIền giả.txt
+  OK 312/805 decrypted=True file=Chương 315 Hiệp ước cùng KKK.txt
+BATCH 313-324 / 805
+  OK 313/805 decrypted=True file=Chương 316 Hải chiến 1.txt
+  OK 314/805 decrypted=True file=Chương 317 Hải chiến 2.txt
+  OK 315/805 decrypted=True file=Chương 318 Tránh bão.txt
+  OK 316/805 decrypted=True file=Chương 319 Mindanao.txt
+  OK 317/805 decrypted=True file=Chương 320 Công chiếm Davao 1.txt
+  OK 318/805 decrypted=True file=Chương 321 Công chiếm Davao 2.txt
+  OK 319/805 decrypted=True file=Chương 322 Công chiếm Davao 3.txt
+  OK 320/805 decrypted=True file=Chương 323 Công chiếm Davao 4.txt
+  OK 321/805 decrypted=True file=Chương 324 Công chiếm Davao 5.txt
+  OK 322/805 decrypted=True file=Chương 325 Công chiếm Davao 6.txt
+  OK 323/805 decrypted=True file=Chương 326 Công chiếm Davao 7.txt
+  OK 324/805 decrypted=True file=Chương 327 Công chiếm Davao 8.txt
+BATCH 325-336 / 805
+  OK 325/805 decrypted=True file=Chương 328 Công chiếm Davao 9 phần cuối.txt
+  OK 326/805 decrypted=True file=Chương 329 Phân chia Mindanao.txt
+  OK 327/805 decrypted=True file=Chương 330 Hải chiến Manila 1.txt
+  OK 328/805 decrypted=True file=Chương 331 Hải chiến Manila 2.txt
+  OK 329/805 decrypted=True file=Chương 332 Thế lực vùng phía Nam biển Đông.txt
+  OK 330/805 decrypted=True file=Chương 333 Hải chiến VOC 1.txt
+  OK 331/805 decrypted=True file=Chương 334 Hải chiến VOC 2.txt
+  OK 332/805 decrypted=True file=Chương 335 SEI VOC liên minh 1.txt
+  OK 333/805 decrypted=True file=Chương 336 SEI VOC liên minh 2.txt
+  OK 334/805 decrypted=True file=Chương 337 SEI VOC liên minh 3.txt
+  OK 335/805 decrypted=True file=Chương 338 Hải chiến 1.txt
+  OK 336/805 decrypted=True file=Chương 339 Hải chiến 2.txt
+BATCH 337-348 / 805
+❌ Lỗi khi tải chương 13405710: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 337/805 decrypted=True file=Chương 340 Hải chiến 3.txt
+  OK 338/805 decrypted=True file=Chương 341 Hiệp ước 1.txt
+  OK 339/805 decrypted=True file=Chương 342 Hiệp ước 2.txt
+  OK 340/805 decrypted=True file=Chương 343 Vô sỉ VOC.txt
+  OK 341/805 decrypted=True file=Chương 344 Đánh Batavia 1.txt
+  OK 342/805 decrypted=True file=Chương 345 Đánh Batavia 2.txt
+  OK 343/805 decrypted=True file=Chương 346 Ý định lập quốc.txt
+  OK 344/805 decrypted=True file=Chương 347 Rời đô.txt
+  OK 345/805 decrypted=True retry=2 file=Chương 348 Liên Bang Việt Nam.txt
+  OK 346/805 decrypted=True file=Chương 349 Vấn đề nô lệ.txt
+  OK 347/805 decrypted=True file=Chương 350 Kế hoạch Việt đánh Việt.txt
+  OK 348/805 decrypted=True file=Chương 351 Quốc gia Đại Việt.txt
+BATCH 349-360 / 805
+❌ Lỗi khi tải chương 13420020: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 349/805 decrypted=True file=Chương 352 Xét xử tù binh.txt
+  OK 350/805 decrypted=True file=Chương 353 Kế hoạch 5 năm.txt
+  OK 351/805 decrypted=True file=Chương 354 Đám nô lệ đầu.txt
+  OK 352/805 decrypted=True retry=2 file=Chương 355 Lại đến Batavia.txt
+  OK 353/805 decrypted=True file=Chương 356 Hợp tác cùng Aceh.txt
+  OK 354/805 decrypted=True file=Chương 357 Cảnh cáo EIC.txt
+  OK 355/805 decrypted=True file=Chương 358 Mua Thiên Bảo công ty 1.txt
+  OK 356/805 decrypted=True file=Chương 359 Mua Thiên Bảo công ty 2.txt
+  OK 357/805 decrypted=True file=Chương 360 Căn cứ Lôi Châu.txt
+  OK 358/805 decrypted=True file=Chương 361 Gặp lại cố nhân.txt
+  OK 359/805 decrypted=True file=Chương 362 Hệ thống đổi mới.txt
+  OK 360/805 decrypted=True file=Chương 363 Đa cấp 1.txt
+BATCH 361-372 / 805
+  OK 361/805 decrypted=True file=Chương 364 Đa cấp 2.txt
+  OK 362/805 decrypted=True file=Chương 365 Đa cấp 3.txt
+  OK 363/805 decrypted=True file=Chương 366 Đa cấp 4.txt
+  OK 364/805 decrypted=True file=Chương 367 Đa cấp 5.txt
+  OK 365/805 decrypted=True file=Chương 368 Đa cấp 6 phần cuối.txt
+  OK 366/805 decrypted=True file=Chương 369 Bong bóng lá trà 1.txt
+  OK 367/805 decrypted=True file=Chương 370 Bong bóng lá trà 2.txt
+  OK 368/805 decrypted=True file=Chương 371 Bong bóng là trà 3.txt
+  OK 369/805 decrypted=True file=Chương 372 Bong bóng lá trà 4.txt
+  OK 370/805 decrypted=True file=Chương 373 Bong bóng lá trà 5.txt
+  OK 371/805 decrypted=True file=Chương 374 Bong bóng lá trà 6 phần cuối.txt
+  OK 372/805 decrypted=True file=Chương 375 Bắc Kinh 1.txt
+BATCH 373-384 / 805
+❌ Lỗi khi tải chương 13495706: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+❌ Lỗi khi tải chương 13501223: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+❌ Lỗi khi tải chương 13506228: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 373/805 decrypted=True file=Chương 376 Bắc Kinh 2.txt
+  OK 374/805 decrypted=True file=Chương 377 Bắc Kinh 3.txt
+  OK 375/805 decrypted=True file=Chương 378 Bắc Kinh 4.txt
+  OK 376/805 decrypted=True file=Chương 379 Bắc Kinh 5.txt
+  OK 377/805 decrypted=True retry=2 file=Chương 380 Bắc Kinh 6 phần cuối.txt
+  OK 378/805 decrypted=True file=Chương 381 Tình cảnh nước Pháp.txt
+  OK 379/805 decrypted=True file=Chương 382 Cuộc chiến ở Nam Mỹ.txt
+  OK 380/805 decrypted=True file=Chương 383 Đến Pháp.txt
+  OK 381/805 decrypted=True file=Chương 384 Cảng Calasi.txt
+  OK 382/805 decrypted=True retry=2 file=Chương 385 Paris 1.txt
+  OK 383/805 decrypted=True file=Chương 386 Paris 2.txt
+  OK 384/805 decrypted=True retry=2 file=Chương 387 Paris 3 phần cuối.txt
+BATCH 385-396 / 805
+  OK 385/805 decrypted=True file=Chương 388 Câu lạc bộ Bretagne 1.txt
+  OK 386/805 decrypted=True file=Chương 389 Câu lạc bộ Bretagne 2.txt
+  OK 387/805 decrypted=True file=Chương 390 Câu lạc bộ Bretagne 3 phần cuối.txt
+  OK 388/805 decrypted=True file=Chương 391 Trước giờ G 1.txt
+  OK 389/805 decrypted=True file=Chương 392 Trước giờ G 2.txt
+  OK 390/805 decrypted=True file=Chương 393 Cách mạng bắt đầu.txt
+  OK 391/805 decrypted=True file=Chương 394 Napoleon.txt
+  OK 392/805 decrypted=True file=Chương 395 Vệ binh quốc gia Pháp.txt
+  OK 393/805 decrypted=True file=Chương 396 Pháo đài Bastille 1.txt
+  OK 394/805 decrypted=True file=Chương 397 Pháo đài Bastille 2.txt
+  OK 395/805 decrypted=True file=Chương 398 Pháo đài Bastille 3 phần cuối.txt
+  OK 396/805 decrypted=True file=Chương 399 Bố cục.txt
+BATCH 397-408 / 805
+  OK 397/805 decrypted=True file=Chương 400 Trùng trùng điệp điệp.txt
+  OK 398/805 decrypted=True file=Chương 401 Hoàng hôn Paris.txt
+  OK 399/805 decrypted=True file=Chương 402 Kelvin con trai thần Zeus.txt
+  OK 400/805 decrypted=True file=Chương 403 Những đứa con ‘ hiếu thảo’ của Đức Chúa.txt
+  OK 401/805 decrypted=True file=Chương 404 Vây cung điện Versailles.txt
+  OK 402/805 decrypted=True file=Chương 405 Cách mạng kết thúc.txt
+  OK 403/805 decrypted=True file=Chương 406 Nguyễn Huệ đến Châu Âu.txt
+  OK 404/805 decrypted=True file=Chương 407 Hội ngộ ở Lisbon.txt
+  OK 405/805 decrypted=True file=Chương 408 Khắp nơi toan tính 1.txt
+  OK 406/805 decrypted=True file=Chương 409 Khắp nơi toan tính 2.txt
+  OK 407/805 decrypted=True file=Chương 410 Hợp tác với Phổ 1.txt
+  OK 408/805 decrypted=True file=Chương 411 Hợp tác với Phổ 2.txt
+BATCH 409-420 / 805
+  OK 409/805 decrypted=True file=Chương 412 Hợp tác với Phổ 3.txt
+  OK 410/805 decrypted=True file=Chương 413 Trộm Long Tráo Phụng 1.txt
+  OK 411/805 decrypted=True file=Chương 414 Trộm Long Tráo Phụng 2.txt
+  OK 412/805 decrypted=True file=Chương 415 Trộm long tráo phụng 3.txt
+  OK 413/805 decrypted=True file=Chương 416 Trộm long tráo phụng 4.txt
+  OK 414/805 decrypted=True file=Chương 417 Trộm long tráo phụng 5.txt
+  OK 415/805 decrypted=True file=Chương 418 Trộm Long Tráo Phụng 6 phần cuối.txt
+  OK 416/805 decrypted=True file=Chương 419 Nghi ngờ.txt
+  OK 417/805 decrypted=True file=Chương 420 Trung tá Quang Thuỳ.txt
+  OK 418/805 decrypted=True file=Chương 421 Nghét quá hoá yêu.txt
+  OK 419/805 decrypted=True file=Chương 422 Tết xa quê.txt
+  OK 420/805 decrypted=True file=Chương 423 Cháu ta là Napoleon 1.txt
+BATCH 421-432 / 805
+  OK 421/805 decrypted=True file=Chương 424 Cháu ta là Napoleon 2.txt
+  OK 422/805 decrypted=True file=Chương 425 Louisiana.txt
+  OK 423/805 decrypted=True file=Chương 426 Napoleon thảm bại.txt
+  OK 424/805 decrypted=True file=Chương 427 Vệ tinh thứ 6 của Đại Việt.txt
+  OK 425/805 decrypted=True file=Chương 428 Niểm vui.txt
+  OK 426/805 decrypted=True file=Chương 429 London.txt
+  OK 427/805 decrypted=True file=Chương 430 Gia tộc Oppenheim và gia tộc Rothschild.txt
+  OK 428/805 decrypted=True file=Chương 431 Món lời lớn.txt
+  OK 429/805 decrypted=True file=Chương 432 Gặp Augustus.txt
+  OK 430/805 decrypted=True file=Chương 433 Golf.txt
+  OK 431/805 decrypted=True file=Chương 434 Gặp Geogre III.txt
+  OK 432/805 decrypted=True file=Chương 435 Tháp Big Ben.txt
+BATCH 433-444 / 805
+❌ Lỗi khi tải chương 13611816: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 433/805 decrypted=True file=Chương 436 Vũ hội Crocus Vernus.txt
+  OK 434/805 decrypted=True file=Chương 437 Hành trình trở về 1.txt
+  OK 435/805 decrypted=True file=Chương 438 Hành trình trở về 2.txt
+  OK 436/805 decrypted=True file=Chương 439 Hành trình trở về 3.txt
+  OK 437/805 decrypted=True file=Chương 440 Hành trình trở về 4.txt
+  OK 438/805 decrypted=True file=Chương 441 Hành trình trở về 4.txt
+  OK 439/805 decrypted=True file=Chương 442 Cape Colony.txt
+  OK 440/805 decrypted=True file=Chương 443 Isle de France.txt
+  OK 441/805 decrypted=True file=Chương 444 Khoảng lặng trước cuộc chiến.txt
+  OK 442/805 decrypted=True file=Chương 445 Trận chiến trong đêm.txt
+  OK 443/805 decrypted=True retry=2 file=Chương 446 Chiếm Isle de France.txt
+  OK 444/805 decrypted=True file=Chương 447 Cuộc chiến mới.txt
+BATCH 445-456 / 805
+  OK 445/805 decrypted=True file=Chương 448 Thảm bại.txt
+  OK 446/805 decrypted=True file=Chương 449 Gặp Shaka.txt
+  OK 447/805 decrypted=True file=Chương 450 Thắng lợi Muizenberg.txt
+  OK 448/805 decrypted=True file=Chương 451 Kim cương.txt
+  OK 449/805 decrypted=True file=Chương 452 Chiếm Cape Town.txt
+  OK 450/805 decrypted=True file=Chương 453 Một thế cờ.txt
+  OK 451/805 decrypted=True file=Chương 454 Vương quốc Zulu.txt
+  OK 452/805 decrypted=True file=Chương 455 Làng Đại.txt
+  OK 453/805 decrypted=True file=Chương 456 Dòng máu Lạc Hồng.txt
+  OK 454/805 decrypted=True file=Chương 457 Không quân Liên Bang thành lập.txt
+  OK 455/805 decrypted=True file=Chương 458 Nguyễn Du.txt
+  OK 456/805 decrypted=True file=Chương 459 Xã Cô Ba.txt
+BATCH 457-468 / 805
+❌ Lỗi khi tải chương 13660571: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 457/805 decrypted=True file=Chương 460 Phương hướng.txt
+  OK 458/805 decrypted=True file=Chương 461 Vũ Văn Nhậm.txt
+  OK 459/805 decrypted=True file=Chương 462 Gặp lại Thiên Tước.txt
+  OK 460/805 decrypted=True file=Chương 463 Đại Việt EIC.txt
+  OK 461/805 decrypted=True file=Chương 464 Kế hoạch bước đầu.txt
+  OK 462/805 decrypted=True file=Chương 465 Đại Việt Tây Sơn.txt
+  OK 463/805 decrypted=True file=Chương 466 Đại Việt 4 Vương quốc Hồi giáo IS.txt
+  OK 464/805 decrypted=True file=Chương 467 Ván cờ Bắc Kinh.txt
+  OK 465/805 decrypted=True retry=2 file=Chương 468 Cấm nha phiến.txt
+  OK 466/805 decrypted=True file=Chương 469 Giết A Quế.txt
+  OK 467/805 decrypted=True file=Chương 470 Một mũi tên trúng ba đích.txt
+  OK 468/805 decrypted=True file=Chương 471 Bí mật Tử Cấm Thành.txt
+BATCH 469-480 / 805
+  OK 469/805 decrypted=True file=Chương 472 Phong ba nổi.txt
+  OK 470/805 decrypted=True file=Chương 473 Tạo phản.txt
+  OK 471/805 decrypted=True file=Chương 474 Vây Tây Quan.txt
+  OK 472/805 decrypted=True file=Chương 475 Nhượng bộ.txt
+  OK 473/805 decrypted=True file=Chương 476 Mưu đối mưu.txt
+  OK 474/805 decrypted=True file=Chương 477 Thuyết phục.txt
+  OK 475/805 decrypted=True file=Chương 478 Ngũ gia.txt
+  OK 476/805 decrypted=True file=Chương 479 ‘Mập mờ đánh lận con đen’.txt
+  OK 477/805 decrypted=True file=Chương 480 Thanh tẩy Quảng Đông 1.txt
+  OK 478/805 decrypted=True file=Chương 481 Thanh tẩy Quảng Đông 2.txt
+  OK 479/805 decrypted=True file=Chương 482 Bạo loạn 1.txt
+  OK 480/805 decrypted=True file=Chương 483 Bạo loạn 2.txt
+BATCH 481-492 / 805
+  OK 481/805 decrypted=True file=Chương 484 Bi tráng 1.txt
+  OK 482/805 decrypted=True file=Chương 485 Bi tráng 2.txt
+  OK 483/805 decrypted=True file=Chương 486 Thành Dương Giang.txt
+  OK 484/805 decrypted=True file=Chương 487 Chiếm Triệu Khánh.txt
+  OK 485/805 decrypted=True file=Chương 488 Trận chiến Triệu Khánh.txt
+  OK 486/805 decrypted=True file=Chương 489 Tử chiến đến cùng.txt
+  OK 487/805 decrypted=True file=Chương 490 Liên Bang loạn.txt
+  OK 488/805 decrypted=True file=Chương 491 Nội đối.txt
+  OK 489/805 decrypted=True file=Chương 492 Hoà Thân phế.txt
+  OK 490/805 decrypted=True file=Chương 493 Càn Long băng hà.txt
+  OK 491/805 decrypted=True file=Chương 494 Thả hổ về rừng.txt
+  OK 492/805 decrypted=True file=Chương 495 Duyệt binh.txt
+BATCH 493-504 / 805
+❌ Lỗi khi tải chương 13761975: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+❌ Lỗi khi tải chương 13751632: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 493/805 decrypted=True file=Chương 496 Đêm trước trận chiến.txt
+  OK 494/805 decrypted=True file=Chương 497 Chiến Hổ Môn.txt
+  OK 495/805 decrypted=True file=Chương 498 Hoả công.txt
+  OK 496/805 decrypted=True file=Chương 498 Kỵ binh Bát Kỳ.txt
+  OK 497/805 decrypted=True file=Chương 499 Hạ Thuận Đức.txt
+  OK 498/805 decrypted=True file=Chương 501 Trận chiến quyết định.txt
+  OK 499/805 decrypted=True file=Chương 502 Kỵ binh xuất kích.txt
+  OK 500/805 decrypted=True file=Chương 503 Kỵ binh đại bại.txt
+  OK 501/805 decrypted=True retry=2 file=Chương 504 Hoà đàm 1.txt
+  OK 502/805 decrypted=True file=Chương 505 Hòa đàm 2.txt
+  OK 503/805 decrypted=True file=Chương 506 Thành Quảng Châu.txt
+  OK 504/805 decrypted=True retry=2 file=Chương 507 Làm phản.txt
+BATCH 505-516 / 805
+  OK 505/805 decrypted=True file=Chương 508 Chiếm Quảng Châu.txt
+  OK 506/805 decrypted=True file=Chương 509 Lời hứa Non Sông.txt
+  OK 507/805 decrypted=True file=Chương 510 Thu phục dân tâm.txt
+  OK 508/805 decrypted=True file=Chương 511 Đối sách với người Hán Mãn.txt
+  OK 509/805 decrypted=True file=Chương 512 Chiếm Ma Cao 1.txt
+  OK 510/805 decrypted=True file=Chương 513 Chiếm Ma Cao 2.txt
+  OK 511/805 decrypted=True file=Chương 514 Toàn thắng.txt
+  OK 512/805 decrypted=True file=Chương 515 Ai là Kỳ Thủ Ai là con cờ.txt
+  OK 513/805 decrypted=True file=Chương 516 Cung thủ Mông Cổ.txt
+  OK 514/805 decrypted=True file=Chương 517 Vườn không nhà trống.txt
+  OK 515/805 decrypted=True file=Chương 518 Doạ ma quân Thanh.txt
+  OK 516/805 decrypted=True file=Chương 519 Tuyết rơi.txt
+BATCH 517-528 / 805
+  OK 517/805 decrypted=True file=Chương 520 Do 1 bạn đặt viết.txt
+  OK 518/805 decrypted=True file=Chương 521 Ải Nam Quan.txt
+  OK 519/805 decrypted=True file=Chương 522 Kế sách đánh thành Nam Ninh.txt
+  OK 520/805 decrypted=True file=Chương 523 Hạ Sùng Tả.txt
+  OK 521/805 decrypted=True file=Chương 524 Khâm Châu.txt
+  OK 522/805 decrypted=True file=Chương 525 Đêm trước trận chiến.txt
+  OK 523/805 decrypted=True file=Chương 526 Trận chiến Khâm Châu.txt
+  OK 524/805 decrypted=True file=Chương 527 1 Một số vũ khí nhà Tây Sơn dùng trong trận chiến.txt
+  OK 525/805 decrypted=True file=Chương 528 Trận chiến Khâm Châu 2.txt
+  OK 526/805 decrypted=True file=Chương 529 Trận chiến Khâm Châu 3.txt
+  OK 527/805 decrypted=True file=Chương 530 Hạ Khâm Châu.txt
+  OK 528/805 decrypted=True file=Chương 531 Ayahito.txt
+BATCH 529-540 / 805
+  OK 529/805 decrypted=True file=Chương 532 Khâm Bắc.txt
+  OK 530/805 decrypted=True file=Chương 533 Hạ Lâm Châu.txt
+  OK 531/805 decrypted=True file=Chương 534 Chiến hoả thành Hưng Yên.txt
+  OK 532/805 decrypted=True file=Chương 535 Chiến hoả thành Hưng Yên 2.txt
+  OK 533/805 decrypted=True file=Chương 536 ASEAN.txt
+  OK 534/805 decrypted=True file=Chương 537 Cacultta luân hãm.txt
+  OK 535/805 decrypted=True file=Chương 538 Trận Tam Kiều 1.txt
+  OK 536/805 decrypted=True file=Chương 539 Trận Tam Kiều 2.txt
+  OK 537/805 decrypted=True file=Chương 540 Trận Tam Kiều 3.txt
+  OK 538/805 decrypted=True file=Chương 541 Kỵ binh xuất chiến.txt
+  OK 539/805 decrypted=True file=Chương 542 Khinh Kỵ binh.txt
+  OK 540/805 decrypted=True file=Chương 543 Đối sách.txt
+BATCH 541-552 / 805
+❌ Lỗi khi tải chương 13878307: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 541/805 decrypted=True file=Chương 544 Dạ tập.txt
+  OK 542/805 decrypted=True file=Chương 545 Trở lại Hưng Yên.txt
+  OK 543/805 decrypted=True file=Chương 546 Luận Nữ Nhân Thâm độc người Hán.txt
+  OK 544/805 decrypted=True file=Chương 547 Hiệp ước Thiên Tân 1.txt
+  OK 545/805 decrypted=True file=Chương 548 Hiệp ước Thiên Tân 2.txt
+  OK 546/805 decrypted=True file=Chương 549 Hiệp ước Thiên Tân 3.txt
+  OK 547/805 decrypted=True file=Chương 550 Ayahito ‘ Phan Bội Châu Nhật Bản’.txt
+  OK 548/805 decrypted=True retry=2 file=Chương 551 Lĩnh Nam.txt
+  OK 549/805 decrypted=True file=Chương 552 Xử trí.txt
+  OK 550/805 decrypted=True file=Chương 553 Yên lặng trước cơn giông.txt
+  OK 551/805 decrypted=True file=Chương 554 Tạo phản 1.txt
+  OK 552/805 decrypted=True file=Chương 555 Tạo phản 2.txt
+BATCH 553-564 / 805
+❌ Lỗi khi tải chương 13895233: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 553/805 decrypted=True file=Chương 556 Thay đổi kế sách.txt
+  OK 554/805 decrypted=True file=Chương 557 Xuất phát.txt
+  OK 555/805 decrypted=True file=Chương 558 Trước cuộc chiến 1.txt
+  OK 556/805 decrypted=True retry=2 file=Chương 559 Trước cuộc chiến 2.txt
+  OK 557/805 decrypted=True file=Chương 560 Súng phun lửa.txt
+  OK 558/805 decrypted=True file=Chương 561 Chiếu Cần Vương.txt
+  OK 559/805 decrypted=True file=Chương 562 Song Hoả công.txt
+  OK 560/805 decrypted=True file=Chương 563 Các phương toan tính.txt
+  OK 561/805 decrypted=True file=Chương 564 Hồng nhan hoạ thuỷ.txt
+  OK 562/805 decrypted=True file=Chương 565 Cải cách triệt để 1.txt
+  OK 563/805 decrypted=True file=Chương 566 Cải cách triệt để 2.txt
+  OK 564/805 decrypted=True file=Chương 567 Cải cách triệt để 3.txt
+BATCH 565-576 / 805
+❌ Lỗi khi tải chương 13918598: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 565/805 decrypted=True retry=3 file=Chương 568 Gia Khánh giận dữ.txt
+  OK 566/805 decrypted=True file=Chương 569 Khoa trương thanh thế.txt
+  OK 567/805 decrypted=True file=Chương 570 Gậy ông đập lưng ông.txt
+  OK 568/805 decrypted=True file=Chương 571 Mị dân 1.txt
+  OK 569/805 decrypted=True file=Chương 572 Mị dân 2.txt
+  OK 570/805 decrypted=True file=Chương 573 Phát vợ.txt
+  OK 571/805 decrypted=True file=Chương 574 Thu phục Kỷ Hiểu Lam.txt
+  OK 572/805 decrypted=True file=Chương 575 Đàm phán thất bại.txt
+  OK 573/805 decrypted=True file=Chương 576 Hạ Nam Ninh.txt
+  OK 574/805 decrypted=True file=Chương 577 Lọc quân.txt
+  OK 575/805 decrypted=True file=Chương 578 Chiến dịch ‘Biên giới đỏ’.txt
+  OK 576/805 decrypted=True file=Chương 579 Kế trong kế.txt
+BATCH 577-588 / 805
+  OK 577/805 decrypted=True file=Chương 580 Chiếm Đài Loan.txt
+  OK 578/805 decrypted=True file=Chương 581 Trận Thanh Viễn 1.txt
+  OK 579/805 decrypted=True file=Chương 582 Trận Thanh Viễn 2.txt
+  OK 580/805 decrypted=True file=Chương 583 Tên lửa.txt
+  OK 581/805 decrypted=True file=Chương 584 Ba lậy trước đền Hùng.txt
+  OK 582/805 decrypted=True file=Chương 585 Trận chiến mở màn 1.txt
+  OK 583/805 decrypted=True file=Chương 586 Trận chiến mở màn 2.txt
+  OK 584/805 decrypted=True file=Chương 587 Lễ cưới tập thể.txt
+  OK 585/805 decrypted=True file=Chương 588 Trào lưu đốt sách.txt
+  OK 586/805 decrypted=True file=Chương 589 Những cú đấm choáng váng.txt
+  OK 587/805 decrypted=True file=Chương 590 Người Thanh cũng yêu nước.txt
+  OK 588/805 decrypted=True file=Chương 591 Hiệp ước Quảng Châu.txt
+BATCH 589-600 / 805
+  OK 589/805 decrypted=True file=Chương 592 Đánh Thiên Tân mượn đường.txt
+  OK 590/805 decrypted=True file=Chương 593 Dạ tập Bắc Kinh 1.txt
+  OK 591/805 decrypted=True file=Chương 594 Dạ tập Bắc Kinh 2.txt
+  OK 592/805 decrypted=True file=Chương 595 Ngọc tỷ.txt
+  OK 593/805 decrypted=True file=Chương 596 Nam Kinh.txt
+  OK 594/805 decrypted=True file=Chương 597 Vào Nam Kinh.txt
+  OK 595/805 decrypted=True file=Chương 598 ; Hiệp ước Nam Kinh.txt
+  OK 596/805 decrypted=True file=Chương 599 Romeo và Juliet dị bản.txt
+  OK 597/805 decrypted=True file=Chương 600 Nhật Bản.txt
+  OK 598/805 decrypted=True file=Chương 601 Cuộc hành quân đầu tiên.txt
+  OK 599/805 decrypted=True file=Chương 602 Ai bảo Nhật Bản nghèo tài nguyên 1.txt
+  OK 600/805 decrypted=True file=Chương 603 Ai bảo người Nhật nghèo tài nguyên 2.txt
+BATCH 601-612 / 805
+  OK 601/805 decrypted=True file=Chương 604 Triều Tiên.txt
+  OK 602/805 decrypted=True file=Chương 605 Chủ nghĩa Mác.txt
+  OK 603/805 decrypted=True file=Chương 606 Lạc Việt giáo.txt
+  OK 604/805 decrypted=True file=Chương 607 Bóng đá.txt
+  OK 605/805 decrypted=True file=Chương 608 Augustus đến.txt
+  OK 606/805 decrypted=True file=Chương 609 Trận giao hữu Rồng đối đầu Sư tử.txt
+  OK 607/805 decrypted=True file=Chương 610 Anh với Thanh mập mờ.txt
+  OK 608/805 decrypted=True file=Chương 611 Huân Chương.txt
+  OK 609/805 decrypted=True file=Chương 612 Ngân hàng Liên Bang Việt Nam.txt
+  OK 610/805 decrypted=True file=Chương 613 Bán đảo Mã Lai 1.txt
+  OK 611/805 decrypted=True file=Chương 614 Bán đảo Mã Lai 2.txt
+  OK 612/805 decrypted=True file=Chương 615 Chọi trâu.txt
+BATCH 613-624 / 805
+  OK 613/805 decrypted=True file=Chương 616 Châu Úc.txt
+  OK 614/805 decrypted=True file=Chương 617 Khai sáng Châu Úc.txt
+  OK 615/805 decrypted=True file=Chương 618 Nhạc Kịch 1.txt
+  OK 616/805 decrypted=True file=Chương 619 Nhạc Kịch 2.txt
+  OK 617/805 decrypted=True file=Chương 620 Vị thế mới.txt
+  OK 618/805 decrypted=True file=Chương 621 Rắc rối.txt
+  OK 619/805 decrypted=True file=Chương 622 Rời đi.txt
+  OK 620/805 decrypted=True file=Chương 623 Paris lại loạn.txt
+  OK 621/805 decrypted=True file=Chương 624 Vùng Silesia.txt
+  OK 622/805 decrypted=True file=Chương 625 Mời chào.txt
+  OK 623/805 decrypted=True file=Chương 626 Bị nhằm vào.txt
+  OK 624/805 decrypted=True file=Chương 627 Nước Áo.txt
+BATCH 625-636 / 805
+  OK 625/805 decrypted=True file=Chương 628 Hiệp ước Queens.txt
+  OK 626/805 decrypted=True file=Chương 629 Hải quân Áo.txt
+  OK 627/805 decrypted=True file=Chương 630 Đà Lạt.txt
+  OK 628/805 decrypted=True retry=2 file=Chương 631 Hổ phụ sinh hổ tử.txt
+  OK 629/805 decrypted=True file=Chương 632 Kiềng ba chân.txt
+  OK 630/805 decrypted=True file=Chương 633 Tam giác đỏ.txt
+  OK 631/805 decrypted=True file=Chương 634 Thống nhất chế độ.txt
+  OK 632/805 decrypted=True file=Chương 635 Náo loạn London.txt
+  OK 633/805 decrypted=True file=Chương 636 Cướp ngân hàng.txt
+  OK 634/805 decrypted=True file=Chương 637 Thuốc lá Thăng Long.txt
+  OK 635/805 decrypted=True file=Chương 638 Công ty Bảo vệ Thuận Thiên.txt
+  OK 636/805 decrypted=True file=Chương 639 Thuyết Tiến Hoá.txt
+BATCH 637-648 / 805
+  OK 637/805 decrypted=True file=Chương 640 Vở kịch hạ màn.txt
+  OK 638/805 decrypted=True file=Chương 641 Chèn ép.txt
+  OK 639/805 decrypted=True file=Chương 642 Chạy trốn.txt
+  OK 640/805 decrypted=True file=Chương 643 Bắt về Vương hậu.txt
+  OK 641/805 decrypted=True file=Chương 644 Bạo loạn.txt
+  OK 642/805 decrypted=True file=Chương 645 Khói đã nổi.txt
+  OK 643/805 decrypted=True file=Chương 646 Món ăn khai vị.txt
+  OK 644/805 decrypted=True file=Chương 647 Món chính lên bàn.txt
+  OK 645/805 decrypted=True file=Chương 648 Tuyên chiến 1.txt
+  OK 646/805 decrypted=True file=Chương 649 Tuyên chiến 2.txt
+  OK 647/805 decrypted=True file=Chương 650 Thảm bại.txt
+  OK 648/805 decrypted=True file=Chương 651 Mua Louisiana.txt
+BATCH 649-660 / 805
+  OK 649/805 decrypted=True file=Chương 652 Chính phủ mới.txt
+  OK 650/805 decrypted=True file=Chương 653 Hạ Verdun.txt
+  OK 651/805 decrypted=True file=Chương 654 Thảm sát tháng 9.txt
+  OK 652/805 decrypted=True file=Chương 655 Valmy 1.txt
+  OK 653/805 decrypted=True file=Chương 656 Valmy 2.txt
+  OK 654/805 decrypted=True file=Chương 657 Trận chiến Jemappes.txt
+  OK 655/805 decrypted=True file=Chương 658 Hạ Mainz.txt
+  OK 656/805 decrypted=True file=Chương 659 Napoleon ‘phản bội’.txt
+  OK 657/805 decrypted=True file=Chương 660 La mort.txt
+  OK 658/805 decrypted=True file=Chương 661 Liên minh thứ nhất.txt
+  OK 659/805 decrypted=True file=Chương 662 Giết người cướp của.txt
+  OK 660/805 decrypted=True file=Chương 663 Binh biến.txt
+BATCH 661-672 / 805
+  OK 661/805 decrypted=True file=Chương 664 Vendée.txt
+  OK 662/805 decrypted=True file=Chương 665 La Mans.txt
+  OK 663/805 decrypted=True file=Chương 666 Dạ tập.txt
+  OK 664/805 decrypted=True file=Chương 667 Máu và nước mắt.txt
+  OK 665/805 decrypted=True file=Chương 668 Augustus trở về.txt
+  OK 666/805 decrypted=True file=Chương 669 Napoleon đầu nhập Nga.txt
+  OK 667/805 decrypted=True file=Chương 670 Trước trận chiến.txt
+  OK 668/805 decrypted=True file=Chương 671 Nguyễn Toản và Nguyễn Huệ so tài Trận chiến Toulon 1.txt
+  OK 669/805 decrypted=True file=Chương 672 Nguyễn Toản và Nguyễn Huệ so tài Trận Toulon 2.txt
+  OK 670/805 decrypted=True file=Chương 673 Nguyễn Toản và Nguyễn Huệ so tài Trận Toulon 3.txt
+  OK 671/805 decrypted=True file=Chương 674 Kế hoạch Hải Chiến.txt
+  OK 672/805 decrypted=True file=Chương 675 Mèo “ Liên Bang” vờn chuột “ Anh “.txt
+BATCH 673-684 / 805
+  OK 673/805 decrypted=True file=Chương 676 Napoleon “ Tiểu Nguyễn Ánh”.txt
+  OK 674/805 decrypted=True file=Chương 677 Hải chiến Trafalgar.txt
+  OK 675/805 decrypted=True file=Chương 678 Nổ tung.txt
+  OK 676/805 decrypted=True file=Chương 679 Quang Thuỳ Đại tướng Thống chế quân đội Pháp.txt
+  OK 677/805 decrypted=True file=Chương 680 Liên Minh tan vỡ.txt
+  OK 678/805 decrypted=True file=Chương 681 Trận chiến Selisia lần thứ tư.txt
+  OK 679/805 decrypted=True file=Chương 682 Kế hoạch tương lai.txt
+  OK 680/805 decrypted=True file=Chương 683 Mỹ Nam Kế.txt
+  OK 681/805 decrypted=True file=Chương 684 ; Cu Ba.txt
+  OK 682/805 decrypted=True file=Chương 685 Lần đầu đến Mỹ.txt
+  OK 683/805 decrypted=True file=Chương 686 Trận chiến với chim Emu.txt
+  OK 684/805 decrypted=True file=Chương 687 Ai yếu.txt
+BATCH 685-696 / 805
+  OK 685/805 decrypted=True file=Chương 688 Thịnh quá tất suy.txt
+  OK 686/805 decrypted=True file=Chương 689 Ngày Đại Đoàn Kết Thống nhất chế độ.txt
+  OK 687/805 decrypted=True file=Chương 690 Tổng tuyển cử Toàn Quốc.txt
+  OK 688/805 decrypted=True file=Chương 691 Kế hoạch “ Trung Hoa”.txt
+  OK 689/805 decrypted=True file=Chương 692 Bất ngờ xuất phát.txt
+  OK 690/805 decrypted=True file=Chương 693 Bàn tay nước Mỹ.txt
+  OK 691/805 decrypted=True file=Chương 694 Tầu ngầm.txt
+  OK 692/805 decrypted=True file=Chương 695 Cách mạng Màu.txt
+  OK 693/805 decrypted=True file=Chương 696 Thái tử giả ngu.txt
+  OK 694/805 decrypted=True file=Chương 697 Kế hoạch thành.txt
+  OK 695/805 decrypted=True file=Chương 698 Bang thứ tám.txt
+  OK 696/805 decrypted=True file=Chương 699 Đường sắt.txt
+BATCH 697-708 / 805
+  OK 697/805 decrypted=True file=Chương 700 Tuyên chiến với Nga.txt
+  OK 698/805 decrypted=True file=Chương 701 Thất bại trước người Nga.txt
+  OK 699/805 decrypted=True file=Chương 702 Dập đầu đến chết.txt
+  OK 700/805 decrypted=True file=Chương 703 Mượn sức trời diệt quân Nga.txt
+  OK 701/805 decrypted=True file=Chương 704 Đạo quân Quan Đông.txt
+  OK 702/805 decrypted=True file=Chương 705 Thắng lợi trước người Nga.txt
+  OK 703/805 decrypted=True file=Chương 706 Xiếc Gấu Nga.txt
+  OK 704/805 decrypted=True file=Chương 707 Rét lạnh nhân tâm.txt
+  OK 705/805 decrypted=True file=Chương 708 Thảm sát Nam Kinh.txt
+  OK 706/805 decrypted=True file=Chương 709 Trừng phạt.txt
+  OK 707/805 decrypted=True file=Chương 710 Kế hoạch thất bại.txt
+  OK 708/805 decrypted=True file=Chương 711 Phòng tuyến sông Amur.txt
+BATCH 709-720 / 805
+❌ Lỗi khi tải chương 14365687: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 709/805 decrypted=True file=Chương 712 Đè xuống đánh.txt
+  OK 710/805 decrypted=True file=Chương 713 Chim Lạc săn mồi.txt
+  OK 711/805 decrypted=True file=Chương 714 Hiệp ước với Nga.txt
+  OK 712/805 decrypted=True file=Chương 715 Ám sát.txt
+  OK 713/805 decrypted=True file=Chương 716 Untitled.txt
+  OK 714/805 decrypted=True file=Chương 717 Nhà vua trở lại.txt
+  OK 715/805 decrypted=True file=Chương 718 Cuộc gặp bốn bên Liên Bang Pháp Phổ và Zulu.txt
+  OK 716/805 decrypted=True file=Chương 719 Hiệp ước Đà Lạt 1798.txt
+  OK 717/805 decrypted=True file=Chương 720 Untitled.txt
+  OK 718/805 decrypted=True file=Chương 721 Chiến dịch Ai Cập.txt
+  OK 719/805 decrypted=True file=Chương 722 World Cup bóng đá.txt
+  OK 720/805 decrypted=True retry=2 file=Chương 723 Hoà Thân tái xuất.txt
+BATCH 721-732 / 805
+❌ Lỗi khi tải chương 14394266: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+❌ Lỗi khi tải chương 14394266: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 721/805 decrypted=True file=Chương 724 Hải chiến Alexandria.txt
+  OK 722/805 decrypted=True file=Chương 725 Tuyên chiến với Thổ.txt
+  OK 723/805 decrypted=True file=Chương 726 Thất bại thảm hại của Liên Bang.txt
+  OK 724/805 decrypted=True file=Chương 727 Ăn miếng trả miếng.txt
+  OK 725/805 decrypted=True file=Chương 728 Tấn công đồi A1.txt
+  OK 726/805 decrypted=True file=Chương 729 Al Qaeda.txt
+  OK 727/805 decrypted=True file=Chương 730 Biển Đỏ rực lửa.txt
+  OK 728/805 decrypted=True file=Chương 731 Bao vây Cairo.txt
+  OK 729/805 decrypted=True file=Chương 732 Dân tộc nào cũng yêu nước.txt
+  OK 730/805 decrypted=True file=Chương 733 Chiến tranh Thành thị.txt
+  OK 731/805 decrypted=True retry=3 file=Chương 734 Phải lấy được người Việt.txt
+  OK 732/805 decrypted=True file=Chương 735 John Adams.txt
+BATCH 733-744 / 805
+❌ Lỗi khi tải chương 14422289: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 733/805 decrypted=True file=Chương 736 Tham vọng bành trướng.txt
+  OK 734/805 decrypted=True file=Chương 737 Chuyến thăm Châu Mỹ.txt
+  OK 735/805 decrypted=True file=Chương 738 Cái Chết Đen.txt
+  OK 736/805 decrypted=True file=Chương 739 Bùng dịch.txt
+  OK 737/805 decrypted=True file=Chương 740 Dập dịch.txt
+  OK 738/805 decrypted=True file=Chương 741 Quốc Khánh.txt
+  OK 739/805 decrypted=True file=Chương 742 Diễu binh.txt
+  OK 740/805 decrypted=True retry=2 file=Chương 743 Thánh Kỵ Sĩ.txt
+  OK 741/805 decrypted=True file=Chương 744 Untitled.txt
+  OK 742/805 decrypted=True file=Chương 745 Xe tăng.txt
+  OK 743/805 decrypted=True file=Chương 746 Chiến tranh bùng nổ.txt
+  OK 744/805 decrypted=True file=Chương 747 Máu và nước mắt.txt
+BATCH 745-756 / 805
+❌ Lỗi khi tải chương 14457676: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 745/805 decrypted=True file=Chương 748 Phe Đồng Minh Phe Hiệp Ước.txt
+  OK 746/805 decrypted=True file=Chương 749 Tị nạn.txt
+  OK 747/805 decrypted=True file=Chương 750 Cứu tù binh.txt
+  OK 748/805 decrypted=True retry=2 file=Chương 751 ‘Nướng dân đen trên ngọn lửa hung tàn’.txt
+  OK 749/805 decrypted=True file=Chương 752 Hải chiến.txt
+  OK 750/805 decrypted=True file=Chương 753 Hải chiến 2.txt
+  OK 751/805 decrypted=True file=Chương 754 Trận mở màn.txt
+  OK 752/805 decrypted=True file=Chương 755 Pháo Cối.txt
+  OK 753/805 decrypted=True file=Chương 756 Tank xuất chiến.txt
+  OK 754/805 decrypted=True file=Chương 757 Bom Ba Càng.txt
+  OK 755/805 decrypted=True file=Chương 758 Thắng lợi vang dội.txt
+  OK 756/805 decrypted=True file=Chương 759 Istanbul.txt
+BATCH 757-768 / 805
+  OK 757/805 decrypted=True file=Chương 760 Dạ Tập.txt
+  OK 758/805 decrypted=True file=Chương 761 Đem người dân đương lá chắn.txt
+  OK 759/805 decrypted=True file=Chương 762 Chiến dịch Balkans.txt
+  OK 760/805 decrypted=True file=Chương 763 Bí mật tham chiến.txt
+  OK 761/805 decrypted=True retry=2 file=Chương 764 Nở tuyết.txt
+  OK 762/805 decrypted=True file=Chương 765 Thảm bại.txt
+  OK 763/805 decrypted=True file=Chương 766 Mật lệnh duy nhất ‘Chết ’.txt
+  OK 764/805 decrypted=True file=Chương 767 Waffen SS.txt
+  OK 765/805 decrypted=True file=Chương 768 Mặt trận phía Tây.txt
+  OK 766/805 decrypted=True file=Chương 769 ; Đàm phán.txt
+  OK 767/805 decrypted=True file=Chương 770 Mở màn chiến dịch 1.txt
+  OK 768/805 decrypted=True file=Chương 771 Mở màn chiến dịch 2.txt
+BATCH 769-780 / 805
+  OK 769/805 decrypted=True file=Chương 772 Không kích trong đêm.txt
+  OK 770/805 decrypted=True file=Chương 773 Giằng co.txt
+  OK 771/805 decrypted=True file=Chương 774 Chất độc màu da cam.txt
+  OK 772/805 decrypted=True file=Chương 775 Thắng lợi khó nhọc.txt
+  OK 773/805 decrypted=True file=Chương 776 Trận chiến Istanbul.txt
+  OK 774/805 decrypted=True file=Chương 777 Gậy ông đập lưng ông.txt
+  OK 775/805 decrypted=True file=Chương 778 Không tặc.txt
+  OK 776/805 decrypted=True file=Chương 779 Giải phóng Istanbul.txt
+  OK 777/805 decrypted=True file=Chương 780 Giải phóng Thổ.txt
+  OK 778/805 decrypted=True file=Chương 781 ‘Vinh quang Istanbul’.txt
+  OK 779/805 decrypted=True file=Chương 782 WTO.txt
+  OK 780/805 decrypted=True file=Chương 783 Trận chiến Tết Kỷ Mùi 1799.txt
+BATCH 781-792 / 805
+  OK 781/805 decrypted=True file=Chương 784 Nước Nga.txt
+  OK 782/805 decrypted=True file=Chương 785 Gấu Wojtek.txt
+  OK 783/805 decrypted=True file=Chương 786 Thú binh đối thú binh.txt
+  OK 784/805 decrypted=True file=Chương 787 Hạ Odessa.txt
+  OK 785/805 decrypted=True file=Chương 788 Graz.txt
+  OK 786/805 decrypted=True file=Chương 789 Lockdown.txt
+  OK 787/805 decrypted=True file=Chương 790 ‘Di chứng’ Graz.txt
+  OK 788/805 decrypted=True file=Chương 791 Bazooka.txt
+  OK 789/805 decrypted=True file=Chương 792 Căng thẳng.txt
+  OK 790/805 decrypted=True file=Chương 793 Gibraltar.txt
+  OK 791/805 decrypted=True file=Chương 794 Tự do hàng hải.txt
+  OK 792/805 decrypted=True file=Chương 795 Ai len.txt
+BATCH 793-804 / 805
+❌ Lỗi khi tải chương 14693923: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 793/805 decrypted=True file=Chương 796 Phòng tuyến số 2.txt
+  OK 794/805 decrypted=True file=Chương 797 Toàn thắng.txt
+  OK 795/805 decrypted=True file=Chương 798 Chia bánh.txt
+  OK 796/805 decrypted=True file=Chương 799 Hiệp ước.txt
+  OK 797/805 decrypted=True file=Chương 800 Liên Hợp Quốc.txt
+  OK 798/805 decrypted=True file=Chương 801 Rửa tiền.txt
+  OK 799/805 decrypted=True file=Chương 802 Dung Hà Năm Cam.txt
+  OK 800/805 decrypted=True file=Chương 803 Tâm sự với con.txt
+  OK 801/805 decrypted=True file=Chương 804 Đại hội đại biểu toàn quốc lần thứ III.txt
+  OK 802/805 decrypted=True file=Chương 805 Ba vấn đề tồn đọng.txt
+  OK 803/805 decrypted=True file=Chương 806 Kế hoạch từ bên ngoài.txt
+  OK 804/805 decrypted=True retry=2 file=Chương 807 Quyết FLC.txt
+BATCH 805-805 / 805
+  OK 805/805 decrypted=True file=Chương 808 Happy Ending và Lời tác giả.txt
+final_ok=805
+final_fail=0
+out=C:\Dev\MTC\Dòng Máu Lạc Hồng
+
+[stderr]

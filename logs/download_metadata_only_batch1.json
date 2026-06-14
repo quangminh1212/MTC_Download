@@ -1,0 +1,265 @@
+{
+  "summary": {
+    "folders": 25,
+    "ok": 8,
+    "partial": 17,
+    "remote_empty": 0,
+    "downloaded_chapters": 17686
+  },
+  "results": [
+    {
+      "folder": "Bắt Đầu Kiếm Đạo Max Cấp Thiên Phú",
+      "book_id": 135061,
+      "remote_total": 963,
+      "status": "partial",
+      "downloaded": 961,
+      "errors": [
+        "421: unable to decode iv",
+        "747: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Bắt Đầu Một Toà Hoang Đảo tận Thế",
+      "book_id": 122496,
+      "remote_total": 272,
+      "status": "ok",
+      "downloaded": 272,
+      "errors": []
+    },
+    {
+      "folder": "Bắt Đầu Phát Tức Phụ Ta Biết Có Hơi Nhiều",
+      "book_id": 133381,
+      "remote_total": 301,
+      "status": "ok",
+      "downloaded": 301,
+      "errors": []
+    },
+    {
+      "folder": "Bắt Đầu Thức Tỉnh Hệ Thống Chụp Ảnh Ta Sao Chép 98 Triệu Quả Dưa Hấu",
+      "book_id": 149418,
+      "remote_total": 232,
+      "status": "ok",
+      "downloaded": 232,
+      "errors": []
+    },
+    {
+      "folder": "Bắt Đầu Trường Sinh Bất Tử Vô Hạn Thôi Diễn Võ Học",
+      "book_id": 114176,
+      "remote_total": 333,
+      "status": "partial",
+      "downloaded": 332,
+      "errors": [
+        "193: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Bắt Đầu Vô Địch Ma Giới Chi Chủ",
+      "book_id": 146287,
+      "remote_total": 109,
+      "status": "ok",
+      "downloaded": 109,
+      "errors": []
+    },
+    {
+      "folder": "Bắt Đầu Đoạt Nhân Vật Chính Cơ Duyên",
+      "book_id": 140433,
+      "remote_total": 920,
+      "status": "partial",
+      "downloaded": 917,
+      "errors": [
+        "208: unable to decode iv",
+        "488: unable to decode iv",
+        "794: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Bị Cả Nhà Hút Máu Sau Ta Tại Cổ Đại Bật Hack Làm Ruộng",
+      "book_id": 145596,
+      "remote_total": 484,
+      "status": "partial",
+      "downloaded": 482,
+      "errors": [
+        "388: unable to decode iv",
+        "431: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Bộ Lạc Cầu Sinh Bộ Lạc Của Ta Có Thể Vô Hạn Cường Hóa",
+      "book_id": 135249,
+      "remote_total": 586,
+      "status": "partial",
+      "downloaded": 585,
+      "errors": [
+        "265: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Cao Võ Vô Hạn Phân Thân Bắt Đầu Cho Ăn Bể Bụng S Dị Thú",
+      "book_id": 119717,
+      "remote_total": 1220,
+      "status": "partial",
+      "downloaded": 1217,
+      "errors": [
+        "136: unable to decode iv",
+        "605: unable to decode iv",
+        "1219: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Cha Ngươi Xuyên Qua Minh Mạt",
+      "book_id": 138880,
+      "remote_total": 979,
+      "status": "partial",
+      "downloaded": 978,
+      "errors": [
+        "702: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Chiêu Hắc Thể Chất Bắt Đầu Tu Hành Tại Phế Thổ",
+      "book_id": 112656,
+      "remote_total": 2981,
+      "status": "partial",
+      "downloaded": 2977,
+      "errors": [
+        "83: unable to decode iv",
+        "179: unable to decode iv",
+        "2454: unable to decode iv",
+        "2668: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Cho Ta Một Trang Giấy Ta Có Thể Giết Xuyên Toàn Bộ Tận Thế",
+      "book_id": 145475,
+      "remote_total": 610,
+      "status": "partial",
+      "downloaded": 609,
+      "errors": [
+        "309: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Chó Giữ Nhà Đều Là Đế Cảnh Ngươi Quản Cái Này Gọi Nghèo Túng Tông Môn",
+      "book_id": 143858,
+      "remote_total": 481,
+      "status": "partial",
+      "downloaded": 480,
+      "errors": [
+        "426: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Chấn Kinh Bắt Đầu Một Mảnh Dị Biến Xuất Kỳ Tích",
+      "book_id": 152136,
+      "remote_total": 689,
+      "status": "partial",
+      "downloaded": 688,
+      "errors": [
+        "424: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Chế Tạo Hồn Hệ Thành Dưới Đất Chỉ Muốn Ngược Khóc Tất Cả Mọi Người",
+      "book_id": 151069,
+      "remote_total": 460,
+      "status": "ok",
+      "downloaded": 460,
+      "errors": []
+    },
+    {
+      "folder": "Chỉ Muốn Chạy Trốn Ta Bị Nhân Hoàng Nghe Lén",
+      "book_id": 144937,
+      "remote_total": 770,
+      "status": "ok",
+      "downloaded": 770,
+      "errors": []
+    },
+    {
+      "folder": "Cá Ướp Muối Hoàng Tử Hoàng Đế Cẩu Đều Không Làm",
+      "book_id": 130361,
+      "remote_total": 450,
+      "status": "partial",
+      "downloaded": 448,
+      "errors": [
+        "296: unable to decode iv",
+        "380: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Cái Này Giang Hồ Bởi Vì Ta Mà Trở Nên Kỳ Quái",
+      "book_id": 120366,
+      "remote_total": 615,
+      "status": "partial",
+      "downloaded": 612,
+      "errors": [
+        "285: unable to decode iv",
+        "497: unable to decode iv",
+        "609: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Cái Này Rất Tận Thế",
+      "book_id": 129973,
+      "remote_total": 280,
+      "status": "ok",
+      "downloaded": 280,
+      "errors": []
+    },
+    {
+      "folder": "Có Được Bất Tử Kỹ Ta Có Thể Vô Hạn Load",
+      "book_id": 107193,
+      "remote_total": 338,
+      "status": "ok",
+      "downloaded": 338,
+      "errors": []
+    },
+    {
+      "folder": "Công Tử Hung Mãnh",
+      "book_id": 108963,
+      "remote_total": 1392,
+      "status": "partial",
+      "downloaded": 1391,
+      "errors": [
+        "498: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Công Đức Kim Tiên Từ Trảm Gian Trừ Ác Bắt Đầu",
+      "book_id": 124015,
+      "remote_total": 837,
+      "status": "partial",
+      "downloaded": 832,
+      "errors": [
+        "21: unable to decode iv",
+        "68: unable to decode iv",
+        "305: unable to decode iv",
+        "377: unable to decode iv",
+        "738: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Cầu Sinh Chi Bắt Đầu Một Nhà Cây Nhỏ",
+      "book_id": 112932,
+      "remote_total": 1018,
+      "status": "partial",
+      "downloaded": 1013,
+      "errors": [
+        "68: unable to decode iv",
+        "291: unable to decode iv",
+        "676: chapter 15678820 has no content",
+        "677: chapter 15678821 has no content",
+        "703: unable to decode iv"
+      ]
+    },
+    {
+      "folder": "Cầu Sinh Theo Phá Nhà Cỏ Bắt Đầu Chống Cự Thiên Tai",
+      "book_id": 139587,
+      "remote_total": 403,
+      "status": "partial",
+      "downloaded": 402,
+      "errors": [
+        "154: unable to decode iv"
+      ]
+    }
+  ]
+}

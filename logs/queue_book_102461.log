@@ -1,0 +1,661 @@
+book=Đưa Nước Việt Vươn Tầm Thế Giới phần 1 Khải Hoàn Nhất Lộ
+book_id=102461
+out=C:\Dev\MTC\Đưa Nước Việt Vươn Tầm Thế Giới phần 1 Khải Hoàn Nhất Lộ
+chapters_total=607 expected=607
+[1/607] skip existing file=Chương 1 Thảm họa máy bay.txt
+[2/607] skip existing file=Chương 2 Cô gái nhỏ Lâm Nhược Khê.txt
+[3/607] skip existing file=Chương 3 Lời hứa hẹn.txt
+[4/607] skip existing file=Chương 4 Sống lại.txt
+[5/607] download chapter_id=11954883 file=Chương 5 Cha mẹ. Em gái.txt
+  OK decrypted=True written=Chương 5 Cha mẹ. Em gái.txt
+[6/607] skip existing file=Chương 6 Lên kế hoạch thay đổi bản thân.txt
+[7/607] skip existing file=Chương 7 Mỹ nhân họa thủy Diệp Minh Châu.txt
+[8/607] download chapter_id=11954886 file=Chương 8 Khâm phục. Bắt đầu tập luyện.txt
+  OK decrypted=True written=Chương 8 Khâm phục. Bắt đầu tập luyện.txt
+[9/607] skip existing file=Chương 9 Điệu múa Hoa Cổ Đăng.txt
+[10/607] skip existing file=Chương 10 Nản lòng thoái chí.txt
+[11/607] download chapter_id=11954889 file=Chương 11 HipHop Break Dance. Sự Cố Bất Ngờ.txt
+  OK decrypted=True written=Chương 11 HipHop Break Dance. Sự Cố Bất Ngờ.txt
+[12/607] download chapter_id=11954890 file=Chương 12 Em Là Công Chúa Hay Nàng Tiên. Lên Sân Khấu.txt
+  OK decrypted=True written=Chương 12 Em Là Công Chúa Hay Nàng Tiên. Lên Sân Khấu.txt
+[13/607] skip existing file=Chương 13 Romeo và Juliet.txt
+[14/607] skip existing file=Chương 14 Nghi Ngờ Của Dương Tuấn Vũ.txt
+[15/607] skip existing file=Chương 15 Trao Giải.txt
+[16/607] download chapter_id=11954894 file=Chương 16 Giải Nhất. Tình Cảm Thiêng Liêng Nhất Gia Đình.txt
+  OK decrypted=True written=Chương 16 Giải Nhất. Tình Cảm Thiêng Liêng Nhất Gia Đình.txt
+[17/607] skip existing file=Chương 17 Bí Mật Của Đế Chế Cổ Đại Babylon.txt
+[18/607] download chapter_id=11954896 file=Chương 18 Danh Tính Viên Đá Babylon. Gặp Gỡ Triệu Tử Long.txt
+  OK decrypted=True written=Chương 18 Danh Tính Viên Đá Babylon. Gặp Gỡ Triệu Tử Long.txt
+[19/607] skip existing file=Chương 19 Triệu Cơ.txt
+[20/607] skip existing file=Chương 20 Lên Lịch Rèn Luyện.txt
+[21/607] skip existing file=Chương 21 Iphone Và Kế Hoạch Kinh Doanh.txt
+[22/607] skip existing file=Chương 22 Đến Nhà Chu Mập.txt
+[23/607] download chapter_id=11954901 file=Chương 23 Chuhandsome9x@gmail.com.txt
+  OK decrypted=True written=Chương 23 Chuhandsome9x@gmail.com.txt
+[24/607] skip existing file=Chương 24 Một trăm hai lăm triệu.txt
+[25/607] skip existing file=Chương 25 Ký Hợp Đồng.txt
+[26/607] skip existing file=Chương 26 Kế Hoạch Đen Tối.txt
+[27/607] skip existing file=Chương 27 Con Ruồi.txt
+[28/607] skip existing file=Chương 28 Những Đồng Tiền Đầu Tiên.txt
+[29/607] skip existing file=Chương 29 Rắc Rối Vì Điểm Số.txt
+[30/607] skip existing file=Chương 30 Chứng Minh Bản Thân.txt
+[31/607] skip existing file=Chương 31 Sale và Tâm Lý Người Tiêu Dùng.txt
+[32/607] skip existing file=Chương 32 Tòa nhà Ánh Sáng.txt
+[33/607] skip existing file=Chương 33 Em Gái nhỏ.txt
+[34/607] skip existing file=Chương 34 Phỏng Vấn.txt
+[35/607] skip existing file=Chương 35 Quyết Tâm Giảm Béo của Chu mập.txt
+[36/607] skip existing file=Chương 36 Cô bé ngây thơ Lâm Tiểu Di.txt
+[37/607] skip existing file=Chương 37 Lê Khôi Quản Lý Marketing.txt
+[38/607] skip existing file=Chương 38 Phân Công Công Việc.txt
+[39/607] skip existing file=Chương 39 Thành lập mạng xã hội Visonet.txt
+[40/607] skip existing file=Chương 40 Con gái không nên thức khuya.txt
+[41/607] skip existing file=Chương 41 Ôn thi Học Sinh Giỏi.txt
+[42/607] skip existing file=Chương 42 Phiền Phức.txt
+[43/607] skip existing file=Chương 43 Nhu Đạo Judo Jiu Jitsu và Karate Do.txt
+[44/607] skip existing file=Chương 44 Dõi theo trong thầm lặng.txt
+[45/607] skip existing file=Chương 45 Lan Tuyết Vũ.txt
+[46/607] skip existing file=Chương 46 Cô gái tinh tế.txt
+[47/607] skip existing file=Chương 47 Bóng rổ đường phố.txt
+[48/607] skip existing file=Chương 48 Em muốn chơi vị trí PF Power Forward.txt
+[49/607] skip existing file=Chương 49 Thi đấu.txt
+[50/607] skip existing file=Chương 50 Diệp Minh Châu khóc.txt
+[51/607] skip existing file=Chương 51 Tâm sự của Diệp Minh Châu p1.txt
+[52/607] skip existing file=Chương 52 Tâm sự của Diệp Minh Châu p2.txt
+[53/607] skip existing file=Chương 53 Họp công ty p1.txt
+[54/607] skip existing file=Chương 54 Họp công ty p2.txt
+[55/607] skip existing file=Chương 55 Kế Hoạch Mở Nhà Hàng.txt
+[56/607] skip existing file=Chương 56 Mắc Lừa.txt
+[57/607] skip existing file=Chương 57 Ép giá.txt
+[58/607] skip existing file=Chương 58 Khai mạc bắt đầu.txt
+[59/607] skip existing file=Chương 59 Khai mạc p2.txt
+[60/607] skip existing file=Chương 60 Ngu ngốc.txt
+[61/607] skip existing file=Chương 61 Đừng tưởng một mình ngươi biết diễn trò.txt
+[62/607] skip existing file=Chương 62 Chiến Đấu.txt
+[63/607] skip existing file=Chương 63 Hắn định làm gì.txt
+[64/607] skip existing file=Chương 64 Lời mời.txt
+[65/607] skip existing file=Chương 65 Cao tay.txt
+[66/607] skip existing file=Chương 66 Sự Thật.txt
+[67/607] skip existing file=Chương 67 Anh sẽ bảo vệ em suốt đời.txt
+[68/607] skip existing file=Chương 68 Bác sĩ Vũ Tuấn Phong p1.txt
+[69/607] skip existing file=Chương 69 Bác Sĩ Vũ Tuấn Phong p2.txt
+[70/607] skip existing file=Chương 70 Bác sĩ Vũ Tuấn Phong p3.txt
+[71/607] skip existing file=Chương 71 Kết Quả Phẫu Thuật.txt
+[72/607] skip existing file=Chương 72 Thịnh Thế Transporter.txt
+[73/607] skip existing file=Chương 73 Tiệt Quyền Đạo.txt
+[74/607] skip existing file=Chương 74 Hỏa Hoạn.txt
+[75/607] skip existing file=Chương 75 Diệp Minh Châu gặp nạn.txt
+[76/607] skip existing file=Chương 76 Diệp Minh Châu gặp nạn p2.txt
+[77/607] skip existing file=Chương 77 Xử lý.txt
+[78/607] skip existing file=Chương 78 Nỗi lòng của Dương Tuấn Vũ.txt
+[79/607] skip existing file=Chương 79 Sự phát triển mạnh mẽ của Thịnh Thế Group.txt
+[80/607] download chapter_id=11954958 file=Chương 80 Tổ chức Dragon's Eye.txt
+  OK decrypted=True written=Chương 80 Tổ chức Dragon's Eye.txt
+[81/607] download chapter_id=11954959 file=Chương 81 Tổ chức Dragon's Eye.txt
+  OK decrypted=True written=Chương 81 Tổ chức Dragon's Eye.txt
+[82/607] download chapter_id=11954960 file=Chương 82 Thiết bị căn cứ ngầm. Cấp bậc sức mạnh mới.txt
+  OK decrypted=True written=Chương 82 Thiết bị căn cứ ngầm. Cấp bậc sức mạnh mới.txt
+[83/607] download chapter_id=11954961 file=Chương 83 Phân chia cấp bậc Sức Mạnh mới. Căn cứ ban đầu.txt
+  OK decrypted=True written=Chương 83 Phân chia cấp bậc Sức Mạnh mới. Căn cứ ban đầu.txt
+[84/607] skip existing file=Chương 84 Nhền Nhện Elise.txt
+[85/607] download chapter_id=11954963 file=Chương 85 Thành tích một năm của Dương Tuấn Vũ. Hẹn gặp mặt.txt
+  OK decrypted=True written=Chương 85 Thành tích một năm của Dương Tuấn Vũ. Hẹn gặp mặt.txt
+[86/607] skip existing file=Chương 86 Nhà hàng Tuyết Yên.txt
+[87/607] skip existing file=Chương 87 Kế hoạch của Triệu Cơ.txt
+[88/607] skip existing file=Chương 88 Sự cố bất ngờ.txt
+[89/607] skip existing file=Chương 89 Người nhà làm quản lý công ty con của Thịnh Thế.txt
+[90/607] skip existing file=Chương 90 Thịnh Thế Tourism and Marine Company Công ty Du lịch và Hàng hải Thịnh Thế.txt
+[91/607] skip existing file=Chương 91 Trang bị mới của Dương Tuấn Vũ và Elise.txt
+[92/607] skip existing file=Chương 92 Du lịch ở Phú Quan.txt
+[93/607] skip existing file=Chương 93 Âm mưu bẩn thỉu.txt
+[94/607] skip existing file=Chương 94 Khóa huấn luyện dưới nước.txt
+[95/607] skip existing file=Chương 95 Thần thoại Olympus.txt
+[96/607] skip existing file=Chương 96 Kế hoạch âm hiểm.txt
+[97/607] skip existing file=Chương 97 Ký ức phong ấn.txt
+[98/607] skip existing file=Chương 98 Người anh hùng Apollo.txt
+[99/607] skip existing file=Chương 99 Biến cố trong cuộc họp.txt
+[100/607] skip existing file=Chương 100 Truy tìm hung thủ.txt
+[101/607] skip existing file=Chương 101 Uy hiếp.txt
+[102/607] skip existing file=Chương 102 Nhiệm Vụ Đầu Tiên Của Elise.txt
+[103/607] download chapter_id=11954981 file=Chương 103 Bị Phát Hiện. Chiến Đấu Nguy Hiểm.txt
+  OK decrypted=True written=Chương 103 Bị Phát Hiện. Chiến Đấu Nguy Hiểm.txt
+[104/607] skip existing file=Chương 104 Nguy Kịch.txt
+[105/607] skip existing file=Chương 105 Vân Tú tỉnh lại.txt
+[106/607] skip existing file=Chương 106 Hẹn Hò.txt
+[107/607] skip existing file=Chương 107 Những vị khách không mời mà đến.txt
+[108/607] skip existing file=Chương 108 Gia Nhập.txt
+[109/607] skip existing file=Chương 109 Tình yêu lớn dần.txt
+[110/607] skip existing file=Chương 110 Kẻ khát máu Bloodthirsty.txt
+[111/607] skip existing file=Chương 111 Diễn biến bất ngờ.txt
+[112/607] skip existing file=Chương 112 Kết thúc.txt
+[113/607] skip existing file=Chương 113 Hai người con gái.txt
+[114/607] skip existing file=Chương 114 Tôn Trọng.txt
+[115/607] skip existing file=Chương 115 Siêu Tụ Điện.txt
+[116/607] skip existing file=Chương 116 Họp báo công bố sản phẩm.txt
+[117/607] skip existing file=Chương 117 Tổng kết thành quả.txt
+[118/607] skip existing file=Chương 118 Spider Girl.txt
+[119/607] skip existing file=Chương 119 Paris và viên đá thất tinh.txt
+[120/607] skip existing file=Chương 120 Triển lãm công nghệ Paris.txt
+[121/607] skip existing file=Chương 121 Tình cảm gia đình.txt
+[122/607] skip existing file=Chương 122 Mở quà.txt
+[123/607] skip existing file=Chương 123 Thiết bị nâng cấp giác quan.txt
+[124/607] skip existing file=Chương 124 Thật sự có ma.txt
+[125/607] skip existing file=Chương 125 Gấp Gáp.txt
+[126/607] skip existing file=Chương 126 Nguy Kịch.txt
+[127/607] skip existing file=Chương 127 Có cách rồi.txt
+[128/607] skip existing file=Chương 128 Sóng gió bắt đầu.txt
+[129/607] skip existing file=Chương 129 Xông vào đồn cảnh sát.txt
+[130/607] skip existing file=Chương 130 Lon RedBull và Kẻ Đứng Sau.txt
+[131/607] skip existing file=Chương 131 Ba con cương thi.txt
+[132/607] skip existing file=Chương 132 Cuộc thi Hacker.txt
+[133/607] skip existing file=Chương 133 Những ý kiến trái chiều.txt
+[134/607] skip existing file=Chương 134 Kế hoạch của Dương Tuấn Vũ.txt
+[135/607] skip existing file=Chương 135 Kế hoạch của Dương Tuấn Vũ và con quái vật khổng lồ.txt
+[136/607] download chapter_id=11955014 file=Chương 136 Cuộc đàm phán hợp tác phần 1.txt
+  OK decrypted=True written=Chương 136 Cuộc đàm phán hợp tác phần 1.txt
+[137/607] skip existing file=Chương 137 Cuộc đàm phán hợp tác và Người phụ nữ Katherine chủ tịch tập đoàn Volkswagen.txt
+[138/607] skip existing file=Chương 138 Cuộc đàm phán hợp tác hồi kết.txt
+[139/607] skip existing file=Chương 139 Nghiên cứu thuốc.txt
+[140/607] skip existing file=Chương 140 Đề Xuất Ý Kiến.txt
+[141/607] skip existing file=Chương 141 Đóng góp cho nhà trường.txt
+[142/607] skip existing file=Chương 142 Gặp mặt Giám đốc Du lịch Viễn Đông.txt
+[143/607] skip existing file=Chương 143 Gặp mặt Justin Phó tổng chi nhánh Châu Á của tập đoàn xây dựng Thames.txt
+[144/607] skip existing file=Chương 144 Gặp tập kích.txt
+[145/607] skip existing file=Chương 145 Giăng lưới.txt
+[146/607] skip existing file=Chương 146 Vũ khí tiện tay.txt
+[147/607] download chapter_id=11955025 file=Chương 147 Tình hình nguy cấp. Biến cố bất ngờ.txt
+  OK decrypted=True written=Chương 147 Tình hình nguy cấp. Biến cố bất ngờ.txt
+[148/607] skip existing file=Chương 148 Xâm nhập cứu người.txt
+[149/607] skip existing file=Chương 149 Đau đớn tột cùng.txt
+[150/607] skip existing file=Chương 150 Bệnh viện.txt
+[151/607] skip existing file=Chương 151 Đi Bar giải sầu.txt
+[152/607] skip existing file=Chương 152 Trong đồn cảnh sát.txt
+[153/607] skip existing file=Chương 153 Luật sư Tống Thần.txt
+[154/607] skip existing file=Chương 154 Lên kế hoạch.txt
+[155/607] skip existing file=Chương 155 Đốt công ty.txt
+[156/607] skip existing file=Chương 156 Cuộc họp đầu tiên sau nửa năm.txt
+[157/607] skip existing file=Chương 157 Tin vui liên tiếp.txt
+[158/607] skip existing file=Chương 158 Suy nghĩ của Tùng Khôi Kỳ.txt
+[159/607] skip existing file=Chương 159 Sự sắc xảo của Katherine.txt
+[160/607] skip existing file=Chương 160 Cuộc họp chính thức đầu tiên giữa hai tập đoàn.txt
+[161/607] skip existing file=Chương 161 Buổi tiệc nhỏ.txt
+[162/607] skip existing file=Chương 162 Buông Thả.txt
+[163/607] skip existing file=Chương 163 Bắt đầu buổi lễ ra mắt Bentley T1.txt
+[164/607] skip existing file=Chương 164 Bài phát biểu của Dương Tuấn Vũ.txt
+[165/607] skip existing file=Chương 165 Bài phát biểu tuyệt vời.txt
+[166/607] skip existing file=Chương 166 Đến hòa thượng cũng phải hoàn tục.txt
+[167/607] skip existing file=Chương 167 Quyết định mạo hiểm của Katherine.txt
+[168/607] skip existing file=Chương 168 The Night Team.txt
+[169/607] download chapter_id=11955047 file=Chương 169 The Night Team 2.txt
+  OK decrypted=True written=Chương 169 The Night Team 2.txt
+[170/607] skip existing file=Chương 170 Sự Xuất Hiện Bất Ngờ.txt
+[171/607] skip existing file=Chương 171 Sức mạnh kinh khủng.txt
+[172/607] skip existing file=Chương 172 Sự thật bất ngờ.txt
+[173/607] skip existing file=Chương 173 Chuyển nhượng cổ phần.txt
+[174/607] skip existing file=Chương 174 Thiết bị giao hàng bay Delivery Flight.txt
+[175/607] skip existing file=Chương 175 Đề bạt Tùng Khôi Kỳ.txt
+[176/607] skip existing file=Chương 176 Thông báo thành viên mới.txt
+[177/607] skip existing file=Chương 177 Lên Kế hoạch.txt
+[178/607] skip existing file=Chương 178 Lão Nhất và Hòn Đảo kỳ lạ.txt
+[179/607] skip existing file=Chương 179 Lần Theo Manh Mối.txt
+[180/607] skip existing file=Chương 180 Sai lầm.txt
+[181/607] skip existing file=Chương 181 Bùi Khả Hân.txt
+[182/607] skip existing file=Chương 182 Thịnh Thế Hospital.txt
+[183/607] skip existing file=Chương 183 Chuẩn bị đám cưới.txt
+[184/607] skip existing file=Chương 184 Tổ chức Hôn Lễ.txt
+[185/607] skip existing file=Chương 185 Happy Wedding.txt
+[186/607] skip existing file=Chương 186 Mở Quà.txt
+[187/607] skip existing file=Chương 187 Sống Không Bằng Chết.txt
+[188/607] skip existing file=Chương 188 Ra Khơi.txt
+[189/607] skip existing file=Chương 189 Công cuộc đào quặng.txt
+[190/607] skip existing file=Chương 190 Phát hiện bất ngờ.txt
+[191/607] skip existing file=Chương 191 Ki.txt
+[192/607] skip existing file=Chương 192 Đổng Quán và Hoành Viễn.txt
+[193/607] skip existing file=Chương 193 Thị sát.txt
+[194/607] skip existing file=Chương 194 MasterChef.txt
+[195/607] skip existing file=Chương 195 Ôn thi Đại Học làm sao cho đúng.txt
+[196/607] skip existing file=Chương 196 Thuyết Phục.txt
+[197/607] skip existing file=Chương 197 MasterChef và Buổi Tọa Đàm.txt
+[198/607] skip existing file=Chương 198 Tòa nhà Poseidon.txt
+[199/607] skip existing file=Chương 199 Vị chủ tịch thần bí.txt
+[200/607] skip existing file=Chương 200 Vân Tú và Dương Tuấn Vũ.txt
+[201/607] skip existing file=Chương 201 Những ngày tháng cuối cùng.txt
+[202/607] skip existing file=Chương 202 Tình bạn đáng quý và những phút giây chia ly.txt
+[203/607] skip existing file=Chương 203 Kỳ thi Đại Học.txt
+[204/607] skip existing file=Chương 204 Oan Gia Ngõ Hẹp.txt
+[205/607] skip existing file=Chương 205 Một năm nhiều sóng gió.txt
+[206/607] skip existing file=Chương 206 Đột phá.txt
+[207/607] skip existing file=Chương 207 Xem điểm.txt
+[208/607] skip existing file=Chương 208 Zombie tái xuất.txt
+[209/607] skip existing file=Chương 209 Thương lượng.txt
+[210/607] skip existing file=Chương 210 Cuộc hẹn lúc 12h.txt
+[211/607] skip existing file=Chương 211 Trêu Đùa.txt
+[212/607] skip existing file=Chương 212 Ý Định Của Dương Tuấn Vũ.txt
+[213/607] skip existing file=Chương 213 Làm quen bạn mới.txt
+[214/607] skip existing file=Chương 214 Tập làm Thám tử.txt
+[215/607] skip existing file=Chương 215 Cô chị họ giàu có.txt
+[216/607] skip existing file=Chương 216 Barett M99 và Vụ cá cược.txt
+[217/607] skip existing file=Chương 217 Chơi lớn.txt
+[218/607] skip existing file=Chương 218 Hạ Minh Nguyệt.txt
+[219/607] download chapter_id=11955097 file=Chương 219 Theo dòng phân tích. Phán đoán của Hạ Minh Nguyệt.txt
+  OK decrypted=True written=Chương 219 Theo dòng phân tích. Phán đoán của Hạ Minh Nguyệt.txt
+[220/607] skip existing file=Chương 220 Nguy hiểm.txt
+[221/607] skip existing file=Chương 221 Không cần báo đáp.txt
+[222/607] skip existing file=Chương 222 Máy thế hệ số ba.txt
+[223/607] skip existing file=Chương 223 Bao vây.txt
+[224/607] skip existing file=Chương 224 Chiến đấu.txt
+[225/607] skip existing file=Chương 225 Tấn công chớp nhoáng.txt
+[226/607] skip existing file=Chương 226 Kiếp trước.txt
+[227/607] skip existing file=Chương 227 Nghe lén âm mưu bẩn thỉu.txt
+[228/607] skip existing file=Chương 228 Cứu người.txt
+[229/607] skip existing file=Chương 229 Chơi đùa.txt
+[230/607] skip existing file=Chương 230 Trong chán ngoài thèm.txt
+[231/607] skip existing file=Chương 231 Mất tích.txt
+[232/607] skip existing file=Chương 232 Chơi xấu.txt
+[233/607] skip existing file=Chương 233 Gặp mặt lãnh đạo.txt
+[234/607] skip existing file=Chương 234 Cuộc nói chuyện.txt
+[235/607] skip existing file=Chương 235 Mở Phong Ấn.txt
+[236/607] skip existing file=Chương 236 Sức mạnh mới.txt
+[237/607] skip existing file=Chương 237 Thập Long Thương Pháp.txt
+[238/607] skip existing file=Chương 238 Không thể nào.txt
+[239/607] skip existing file=Chương 239 Ra mắt.txt
+[240/607] skip existing file=Chương 240 Gia đình Vân Tú.txt
+[241/607] skip existing file=Chương 241 Thịnh Thế Telecom Company và Thịnh Thế God of The Sky Company.txt
+[242/607] skip existing file=Chương 242 Xét xử.txt
+[243/607] skip existing file=Chương 243 Cuộc họp đại gia tộc Lý gia.txt
+[244/607] skip existing file=Chương 244 Quậy tung cả Trái Đất.txt
+[245/607] download chapter_id=11955123 file=Chương 245 Bổ mắt. Bàn bạc hợp tác.txt
+  OK decrypted=True written=Chương 245 Bổ mắt. Bàn bạc hợp tác.txt
+[246/607] skip existing file=Chương 246 Trêu Hoa Ghẹo Nguyệt.txt
+[247/607] skip existing file=Chương 247 Mochi.txt
+[248/607] skip existing file=Chương 248 Gặp lại nhóm The Night Thành viên cuối cùng Mystic lộ diện.txt
+[249/607] skip existing file=Chương 249 Cậu là Mystic.txt
+[250/607] skip existing file=Chương 250 Đánh giá và sự chọn lựa.txt
+[251/607] skip existing file=Chương 251 Màn ra mắt Delivery Fly và cuộc họp quyết định.txt
+[252/607] skip existing file=Chương 252 Quyết định.txt
+[253/607] skip existing file=Chương 253 Đồ Handmade.txt
+[254/607] download chapter_id=11955132 file=Chương 254 Cuộc chiến bắt đầu Phần 1.txt
+  OK decrypted=True written=Chương 254 Cuộc chiến bắt đầu Phần 1.txt
+[255/607] skip existing file=Chương 255 Cuộc chiến bắt đầu phần 2 Biến cố Bruckly.txt
+[256/607] skip existing file=Chương 256 Cuộc chiến tiếp diễn phần 3 Con quỷ xảo quyệt.txt
+[257/607] skip existing file=Chương 257 Chiến đấu tiếp tục Con mồi Giăng bẫy.txt
+[258/607] skip existing file=Chương 258 Cuộc chiến kết thúc.txt
+[259/607] skip existing file=Chương 259 Chia chác chiến lợi phẩm.txt
+[260/607] skip existing file=Chương 260 Quân tử báo thù mười năm chưa muộn.txt
+[261/607] skip existing file=Chương 261 Ước mơ.txt
+[262/607] download chapter_id=11955140 file=Chương 262 Dự án 5G và vệ tinh GoS 1.txt
+  OK decrypted=True written=Chương 262 Dự án 5G và vệ tinh GoS 1.txt
+[263/607] skip existing file=Chương 263 Ra mắt xe thương hiệu Spirit.txt
+[264/607] skip existing file=Chương 264 Thương hiệu xe Sprit phần tiếp.txt
+[265/607] skip existing file=Chương 265 Phân tích thị trường.txt
+[266/607] skip existing file=Chương 266 Nguy cơ xuất hiện.txt
+[267/607] download chapter_id=11955145 file=Chương 267 Thiết bị Trinh sát số 1.txt
+  OK decrypted=True written=Chương 267 Thiết bị Trinh sát số 1.txt
+[268/607] skip existing file=Chương 268 Một ngày nóng.txt
+[269/607] skip existing file=Chương 269 Thống Kinh.txt
+[270/607] skip existing file=Chương 270 Không khả quan.txt
+[271/607] skip existing file=Chương 271 Cậu có mục đích gì.txt
+[272/607] skip existing file=Chương 272 Lộ diện.txt
+[273/607] skip existing file=Chương 273 Mọi chuyện không đơn giản như vẻ bề ngoài.txt
+[274/607] skip existing file=Chương 274 Sắp xếp.txt
+[275/607] download chapter_id=11955153 file=Chương 275 Dự án mới Thủy sản phần 1.txt
+  OK decrypted=True written=Chương 275 Dự án mới Thủy sản phần 1.txt
+[276/607] download chapter_id=11955154 file=Chương 276 Dự án Thủy sản phần 2.txt
+  OK decrypted=True written=Chương 276 Dự án Thủy sản phần 2.txt
+[277/607] skip existing file=Chương 277 Hỏi Cưới.txt
+[278/607] download chapter_id=11955156 file=Chương 278 Bước ngoặt phần 1.txt
+  OK decrypted=True written=Chương 278 Bước ngoặt phần 1.txt
+[279/607] download chapter_id=11955157 file=Chương 279 Bước ngoặt phần 2.txt
+  OK decrypted=True written=Chương 279 Bước ngoặt phần 2.txt
+[280/607] skip existing file=Chương 280 Thành Phố Thông Minh.txt
+[281/607] download chapter_id=11955159 file=Chương 281 Gặp mặt lần 2.txt
+  OK decrypted=True written=Chương 281 Gặp mặt lần 2.txt
+[282/607] skip existing file=Chương 282 Shock.txt
+[283/607] skip existing file=Chương 283 Quân Đoàn Tối Mật.txt
+[284/607] download chapter_id=11955162 file=Chương 284 Cách thức cuộc sát hạch phần 1.txt
+  OK decrypted=True written=Chương 284 Cách thức cuộc sát hạch phần 1.txt
+[285/607] download chapter_id=11955163 file=Chương 285 Cách thức cuộc sát hạch phần 2.txt
+  OK decrypted=True written=Chương 285 Cách thức cuộc sát hạch phần 2.txt
+[286/607] skip existing file=Chương 286 Bữa tiệc chia tay.txt
+[287/607] skip existing file=Chương 287 Diễn biến tâm trạng Mai Tuyết Yên.txt
+[288/607] skip existing file=Chương 288 Lời hứa.txt
+[289/607] skip existing file=Chương 289 Hỗn hợp bom mini kiểu mới.txt
+[290/607] skip existing file=Chương 290 Tình hình căn cứ Cải tiến thuốc DB 05.txt
+[291/607] skip existing file=Chương 291 An bài.txt
+[292/607] skip existing file=Chương 292 Không để vào mắt.txt
+[293/607] skip existing file=Chương 293 Tranh cãi.txt
+[294/607] skip existing file=Chương 294 Hãy đợi đấy.txt
+[295/607] skip existing file=Chương 295 Cuộc gặp mặt bất ngờ.txt
+[296/607] skip existing file=Chương 296 Ngăn cản.txt
+[297/607] skip existing file=Chương 297 Quyết định của Hồng Vân.txt
+[298/607] skip existing file=Chương 298 Tổ đội Zero Binh đoàn khét tiếng Delta Force.txt
+[299/607] skip existing file=Chương 299 Zed Cỗ máy sát thủ.txt
+[300/607] skip existing file=Chương 300 Dấu mốc lịch sử GoS 1 phóng thành công.txt
+[301/607] skip existing file=Chương 301 Sự thật về ngôi sao Michelin.txt
+[302/607] skip existing file=Chương 302 Hope Trí tuệ nhân tạo mới.txt
+[303/607] skip existing file=Chương 303 Nguồn nguyên liệu mới Hydro.txt
+[304/607] skip existing file=Chương 304 Yêu anh trọn đời.txt
+[305/607] skip existing file=Chương 305 Động cơ phản lực mini.txt
+[306/607] skip existing file=Chương 306 Ngũ Khí.txt
+[307/607] skip existing file=Chương 307 Kẻ Tiểu Nhân.txt
+[308/607] skip existing file=Chương 308 Sudan Vật liệu mới.txt
+[309/607] skip existing file=Chương 309 Rất giống.txt
+[310/607] skip existing file=Chương 310 Cái bẫy.txt
+[311/607] skip existing file=Chương 311 Showbiz Đằng sau vẻ hào nhoáng.txt
+[312/607] skip existing file=Chương 312 Kinh tởm.txt
+[313/607] skip existing file=Chương 313 Ngôi Sao Mới.txt
+[314/607] skip existing file=Chương 314 Phụ nữ luôn ích kỷ.txt
+[315/607] skip existing file=Chương 315 Quyết Định của Tuyết Yên.txt
+[316/607] skip existing file=Chương 316 Sắc xảo.txt
+[317/607] skip existing file=Chương 317 Quy trình hiện đại bậc nhất.txt
+[318/607] skip existing file=Chương 318 Có phải là ý trời.txt
+[319/607] skip existing file=Chương 319 Hẹn gặp.txt
+[320/607] skip existing file=Chương 320 Song vương tử The Flames.txt
+[321/607] skip existing file=Chương 321 Quyết định điên rồ.txt
+[322/607] skip existing file=Chương 322 Chu Văn Tuệ.txt
+[323/607] skip existing file=Chương 323 Bỏ Học.txt
+[324/607] skip existing file=Chương 324 Từ Chối.txt
+[325/607] skip existing file=Chương 325 Hiến Kế Ca Sĩ.txt
+[326/607] skip existing file=Chương 326 Khó Khăn Đã Qua.txt
+[327/607] skip existing file=Chương 327 Giết.txt
+[328/607] skip existing file=Chương 328 Chơi Ngu Rồi.txt
+[329/607] skip existing file=Chương 329 Ơn Cứu Mạng.txt
+[330/607] skip existing file=Chương 330 Nguy Hiểm Chết Người.txt
+[331/607] skip existing file=Chương 331 Kiếm Chút Lợi Tức.txt
+[332/607] skip existing file=Chương 332 Lời Thề.txt
+[333/607] skip existing file=Chương 333 Kiếm Một Con Về Cưỡi Thì Ngầu Phải Biết.txt
+[334/607] skip existing file=Chương 334 Chạy Trối Chết.txt
+[335/607] skip existing file=Chương 335 Quái Vật Moorwen.txt
+[336/607] skip existing file=Chương 336 Thu Phục.txt
+[337/607] skip existing file=Chương 337 Rốt Cuộc Đây Là Đâu.txt
+[338/607] skip existing file=Chương 338 Cung Điện Của một Vị Thần.txt
+[339/607] download chapter_id=11955217 file=Chương 339 Lời nhắn phần 1.txt
+  OK decrypted=True written=Chương 339 Lời nhắn phần 1.txt
+[340/607] download chapter_id=11955218 file=Chương 340 Lời nhắn phần 2.txt
+  OK decrypted=True written=Chương 340 Lời nhắn phần 2.txt
+[341/607] skip existing file=Chương 341 Kế Hoạch của Tiểu Ngân.txt
+[342/607] download chapter_id=11955220 file=Chương 342 Foxwoods Resort Casino. Black vs Zero.txt
+  OK decrypted=True written=Chương 342 Foxwoods Resort Casino. Black vs Zero.txt
+[343/607] skip existing file=Chương 343 Chơi Bẩn.txt
+[344/607] skip existing file=Chương 344 Ý Trời.txt
+[345/607] download chapter_id=11955223 file=Chương 345 Nhiệm Vụ Mới. Lên Đường.txt
+  OK decrypted=True written=Chương 345 Nhiệm Vụ Mới. Lên Đường.txt
+[346/607] skip existing file=Chương 346 Xuất sắc.txt
+[347/607] skip existing file=Chương 347 Vì anh em sẵn sàng hi sinh tất cả.txt
+[348/607] skip existing file=Chương 348 Tại sao lại là anh.txt
+[349/607] skip existing file=Chương 349 Hỗn Loạn.txt
+[350/607] skip existing file=Chương 350 Nham Hiểm.txt
+[351/607] skip existing file=Chương 351 Quán Bar 29 4.txt
+[352/607] skip existing file=Chương 352 Đàn Ông Mấy Người Đều Là Lũ Khốn.txt
+[353/607] skip existing file=Chương 353 Tên Ngu Ngốc.txt
+[354/607] download chapter_id=11955232 file=Chương 354 Phát Sinh Biến Cố phần 1.txt
+  OK decrypted=True written=Chương 354 Phát Sinh Biến Cố phần 1.txt
+[355/607] download chapter_id=11955233 file=Chương 355 Phát Sinh Biến Cố Phần 2.txt
+  OK decrypted=True written=Chương 355 Phát Sinh Biến Cố Phần 2.txt
+[356/607] skip existing file=Chương 356 Không Được.txt
+[357/607] skip existing file=Chương 357 Nhờ Giúp Đỡ.txt
+[358/607] skip existing file=Chương 358 Lựa Chọn Đau Khổ.txt
+[359/607] skip existing file=Chương 359 Công ty mới.txt
+[360/607] skip existing file=Chương 360 Tự Hào Dân Tộc.txt
+[361/607] skip existing file=Chương 361 Các Bạn Phải Ngước Mắt Lên Nhìn Chúng Tôi.txt
+[362/607] skip existing file=Chương 362 Đồi Bại.txt
+[363/607] skip existing file=Chương 363 Đau Khổ.txt
+[364/607] skip existing file=Chương 364 Hoảng Loạn.txt
+[365/607] skip existing file=Chương 365 Làm Gì Nên Tội.txt
+[366/607] skip existing file=Chương 366 Chia Tay.txt
+[367/607] skip existing file=Chương 367 Độc Ác.txt
+[368/607] download chapter_id=11955246 file=Chương 368 Cuộc Chiến Cuối Cùng. Bí Mật Của Âu Chí Quốc.txt
+  OK decrypted=True written=Chương 368 Cuộc Chiến Cuối Cùng. Bí Mật Của Âu Chí Quốc.txt
+[369/607] skip existing file=Chương 369 Đối Lập.txt
+[370/607] skip existing file=Chương 370 Trúng Chiêu.txt
+[371/607] skip existing file=Chương 371 Thắng Bại.txt
+[372/607] skip existing file=Chương 372 Đồ Khốn.txt
+[373/607] skip existing file=Chương 373 Ngại.txt
+[374/607] skip existing file=Chương 374 Lũ Khốn.txt
+[375/607] skip existing file=Chương 375 Đê Tiện.txt
+[376/607] skip existing file=Chương 376 Thay Thế.txt
+[377/607] skip existing file=Chương 377 Trao Giải.txt
+[378/607] skip existing file=Chương 378 Phần Thưởng Bất Ngờ.txt
+[379/607] skip existing file=Chương 379 Cái Bẫy.txt
+[380/607] skip existing file=Chương 380 Trao Đổi.txt
+[381/607] skip existing file=Chương 381 Cuộc Gặp Bất Đắc Dĩ.txt
+[382/607] skip existing file=Chương 382 Hợp Tác.txt
+[383/607] skip existing file=Chương 383 Tôi Có Thể Tin Cô Chứ.txt
+[384/607] download chapter_id=11955262 file=Chương 384 Gừng Tỏi Ớt và ... Máu Chó.txt
+  OK decrypted=True written=Chương 384 Gừng Tỏi Ớt và ... Máu Chó.txt
+[385/607] skip existing file=Chương 385 Hủy Bỏ Kế Hoạch.txt
+[386/607] skip existing file=Chương 386 Lỗ Hổng Lớn.txt
+[387/607] skip existing file=Chương 387 Triển Khai Hành Động.txt
+[388/607] skip existing file=Chương 388 Ấm Áp.txt
+[389/607] skip existing file=Chương 389 Xe Bus Kiểu Mới.txt
+[390/607] skip existing file=Chương 390 Đen.txt
+[391/607] skip existing file=Chương 391 Kịch Hay.txt
+[392/607] skip existing file=Chương 392 Tha Thứ Còn Lâu.txt
+[393/607] skip existing file=Chương 393 Quá Đáng.txt
+[394/607] skip existing file=Chương 394 Fly Car.txt
+[395/607] skip existing file=Chương 395 Bất Ngờ.txt
+[396/607] skip existing file=Chương 396 Phân Tách.txt
+[397/607] skip existing file=Chương 397 Tuyển Chọn.txt
+[398/607] skip existing file=Chương 398 Công ty mới.txt
+[399/607] skip existing file=Chương 399 Độc Ác.txt
+[400/607] skip existing file=Chương 400 Thâu Tóm.txt
+[401/607] skip existing file=Chương 401 Sản xuất VR.txt
+[402/607] skip existing file=Chương 402 Chỉ Là Một Mắt Xích.txt
+[403/607] skip existing file=Chương 403 Yêu Thích.txt
+[404/607] skip existing file=Chương 404 Bữa Cơm Vui Vẻ.txt
+[405/607] skip existing file=Chương 405 Thu Hoạch Bất Ngờ.txt
+[406/607] skip existing file=Chương 406 Vân Tú.txt
+[407/607] skip existing file=Chương 407 Chơi Ác.txt
+[408/607] skip existing file=Chương 408 Mọi Thứ Đều Có Nguyên Nhân Của Nó.txt
+[409/607] skip existing file=Chương 409 Thức Tỉnh.txt
+[410/607] download chapter_id=11955288 file=Chương 410 Sự Lựa Chọn phần 1.txt
+  OK decrypted=True written=Chương 410 Sự Lựa Chọn phần 1.txt
+[411/607] download chapter_id=11955289 file=Chương 411 Sự Lựa Chọn Phần 2.txt
+  OK decrypted=True written=Chương 411 Sự Lựa Chọn Phần 2.txt
+[412/607] skip existing file=Chương 412 Gặp Lại Người Quen.txt
+[413/607] skip existing file=Chương 413 Đấu Trường.txt
+[414/607] skip existing file=Chương 414 Chiến.txt
+[415/607] skip existing file=Chương 415 Kết Quả.txt
+[416/607] skip existing file=Chương 416 Sợ Hãi.txt
+[417/607] skip existing file=Chương 417 Khiếp Sợ.txt
+[418/607] skip existing file=Chương 418 Bảo Vật.txt
+[419/607] skip existing file=Chương 419 Cụm Trường Học.txt
+[420/607] skip existing file=Chương 420 Hành Động.txt
+[421/607] skip existing file=Chương 421 Grey Alien.txt
+[422/607] skip existing file=Chương 422 Chủng Grey.txt
+[423/607] skip existing file=Chương 423 Hủy Diệt.txt
+[424/607] skip existing file=Chương 424 Khao Khát Sức Mạnh.txt
+[425/607] skip existing file=Chương 425 Gài Bẫy.txt
+[426/607] skip existing file=Chương 426 Nhục Nhã.txt
+[427/607] skip existing file=Chương 427 Tan Tành.txt
+[428/607] skip existing file=Chương 428 Ngày Hạnh Phúc Nhất.txt
+[429/607] skip existing file=Chương 429 Xây Dựng Căn Cứ.txt
+[430/607] skip existing file=Chương 430 Ăn Tham Không Sợ Nghẹn.txt
+[431/607] skip existing file=Chương 431 Khó Xử.txt
+[432/607] skip existing file=Chương 432 Bàng Hoàng.txt
+[433/607] skip existing file=Chương 433 Dị Nhân.txt
+[434/607] skip existing file=Chương 434 Gieo Mầm Thứ Khiến Hắn Trở Nên Đặc Biệt.txt
+[435/607] skip existing file=Chương 435 Hối Hận Hay Không.txt
+[436/607] skip existing file=Chương 436 Nếu.txt
+[437/607] skip existing file=Chương 437 Đúng Hay Sai Liệu Có Quá Quan Trọng.txt
+[438/607] skip existing file=Chương 438 Đúng hay Sai.txt
+[439/607] skip existing file=Chương 439 Hai Kẻ Điên.txt
+[440/607] skip existing file=Chương 440 Đâu Chỉ Là Kinh Diễm.txt
+[441/607] skip existing file=Chương 441 Mãn Nguyện.txt
+[442/607] skip existing file=Chương 442 Quyết Định của Vân Tú.txt
+[443/607] skip existing file=Chương 443 Tự Đeo Gông Lên Cổ.txt
+[444/607] download chapter_id=11955322 file=Chương 444 Sát Thủ Nguy Hiểm. Muốn Trở Lên Mạnh Mẽ.txt
+  OK decrypted=True written=Chương 444 Sát Thủ Nguy Hiểm. Muốn Trở Lên Mạnh Mẽ.txt
+[445/607] skip existing file=Chương 445 Khí Phách.txt
+[446/607] skip existing file=Chương 446 Bảy Ngọn Núi.txt
+[447/607] skip existing file=Chương 447 Đắc Ý Những Kẻ Được Chọn.txt
+[448/607] skip existing file=Chương 448 Lựa Chọn của Dương Tuấn Vũ.txt
+[449/607] skip existing file=Chương 449 Đây Không Phải Là Người.txt
+[450/607] skip existing file=Chương 450 Người Quen.txt
+[451/607] skip existing file=Chương 451 Quy Tắc.txt
+[452/607] skip existing file=Chương 452 Bắt Đầu Rèn Luyện.txt
+[453/607] skip existing file=Chương 453 Phàm Binh Thần Binh.txt
+[454/607] skip existing file=Chương 454 Chuẩn Bị.txt
+[455/607] skip existing file=Chương 455 Cuồng Long Chuy Pháp Siêu Giáp Su.txt
+[456/607] skip existing file=Chương 456 Bị Nẫng Tay Trên.txt
+[457/607] skip existing file=Chương 457 Muốn Chết.txt
+[458/607] skip existing file=Chương 458 Huyết Tế.txt
+[459/607] skip existing file=Chương 459 Đáng Tiếc.txt
+[460/607] skip existing file=Chương 460 Rung Động.txt
+[461/607] skip existing file=Chương 461 Rốt Cuộc Hắn Là Ai.txt
+[462/607] skip existing file=Chương 462 Nguy Hiểm Cận Kề.txt
+[463/607] skip existing file=Chương 463 Phá Bỏ Phong Ấn.txt
+[464/607] skip existing file=Chương 464 Muốn Chết.txt
+[465/607] skip existing file=Chương 465 Thân Phận Được Tiết Lộ.txt
+[466/607] skip existing file=Chương 466 Phẫn Nộ.txt
+[467/607] skip existing file=Chương 467 Sức Mạnh Mới.txt
+[468/607] skip existing file=Chương 468 Gặp Nạn Nguy Cấp.txt
+[469/607] skip existing file=Chương 469 Phân Chia Cấp Độ.txt
+[470/607] skip existing file=Chương 470 Bại Lộ.txt
+[471/607] skip existing file=Chương 471 Tàu Ngầm TT 01.txt
+[472/607] skip existing file=Chương 472 Thuê Rèn.txt
+[473/607] skip existing file=Chương 473 Hạ Phẩm Thần Khí.txt
+[474/607] skip existing file=Chương 474 Kinh Hỷ Liên Tiếp.txt
+[475/607] skip existing file=Chương 475 Gặp Thông Thiên Phong Chủ.txt
+[476/607] skip existing file=Chương 476 Có Ơn Tất Báo.txt
+[477/607] skip existing file=Chương 477 Thiêu Đốt Linh Hồn Sinh Mệnh.txt
+[478/607] skip existing file=Chương 478 Công Pháp Kỳ Diệu.txt
+[479/607] skip existing file=Chương 479 Kinh Hoàng Lọt Vào Ngục Quỷ.txt
+[480/607] download chapter_id=11955358 file=Chương 480 Quá Khứ của Flora. Cuộc gặp gỡ định mệnh.txt
+  OK decrypted=True written=Chương 480 Quá Khứ của Flora. Cuộc gặp gỡ định mệnh.txt
+[481/607] skip existing file=Chương 481 Mạnh Tới Mức Biến Thái.txt
+[482/607] skip existing file=Chương 482 Mộc Linh.txt
+[483/607] skip existing file=Chương 483 Hạnh Phúc Đôi Khi Thật Đơn Giản.txt
+[484/607] skip existing file=Chương 484 Hoảng Sợ.txt
+[485/607] skip existing file=Chương 485 Chỉ Còn Một Cách.txt
+[486/607] skip existing file=Chương 486 Âm Mưu Nham Hiểm.txt
+[487/607] skip existing file=Chương 487 Cứu Nguy.txt
+[488/607] download chapter_id=11955366 file=Chương 488 Yên Tâm. Mọi Thứ Đã Có Anh Lo.txt
+  OK decrypted=True written=Chương 488 Yên Tâm. Mọi Thứ Đã Có Anh Lo.txt
+[489/607] skip existing file=Chương 489 Cung Và Thương.txt
+[490/607] skip existing file=Chương 490 Chiếc Huy Hiệu.txt
+[491/607] skip existing file=Chương 491 Tin Tức Về Mộc Linh.txt
+[492/607] skip existing file=Chương 492 Quá Trình Hoàn Tất.txt
+[493/607] skip existing file=Chương 493 Giới Hạn Chịu Đựng.txt
+[494/607] skip existing file=Chương 494 Người Con Gái Quan Trọng Nhất.txt
+[495/607] skip existing file=Chương 495 Thịnh Thế Hùng Mạnh.txt
+[496/607] skip existing file=Chương 496 Khinh Người Quá Đáng.txt
+[497/607] skip existing file=Chương 497 Chó Cắn Áo Rách.txt
+[498/607] skip existing file=Chương 498 Thiên Tài.txt
+[499/607] skip existing file=Chương 499 Thời Trang Armani.txt
+[500/607] skip existing file=Chương 500 Quyết Đoán.txt
+[501/607] skip existing file=Chương 501 Cuộc Họp Bí Mật.txt
+[502/607] skip existing file=Chương 502 Con Khỉ Ngu Ngốc.txt
+[503/607] skip existing file=Chương 503 Ngông Cuồng Bá Đạo.txt
+[504/607] skip existing file=Chương 504 Ăn Xin.txt
+[505/607] skip existing file=Chương 505 Victor Huy Vũ.txt
+[506/607] skip existing file=Chương 506 Tôi Thấy Hoa Vàng Trên Cỏ Xanh.txt
+[507/607] skip existing file=Chương 507 Thiên Tài và Phế Vật.txt
+[508/607] skip existing file=Chương 508 Buổi Lễ Ra Mắt Của Thịnh Thế.txt
+[509/607] skip existing file=Chương 509 Sự Hấp Dẫn Khó Cưỡng.txt
+[510/607] skip existing file=Chương 510 Áp Đảo Toàn Diện.txt
+[511/607] skip existing file=Chương 511 Kiểm Tra.txt
+[512/607] skip existing file=Chương 512 Nguy Hiểm Thường Trực.txt
+[513/607] skip existing file=Chương 513 Liên Tiếp Gặp Khó.txt
+[514/607] skip existing file=Chương 514 Con Báo Kì Lạ.txt
+[515/607] skip existing file=Chương 515 Im Lặng Rời Đi.txt
+[516/607] skip existing file=Chương 516 Mạng Sống Bị Đe Dọa.txt
+[517/607] skip existing file=Chương 517 Vượt Qua Ranh Giới.txt
+[518/607] skip existing file=Chương 518 Đêm Nguyện Cầu.txt
+[519/607] skip existing file=Chương 519 Ghê Tởm.txt
+[520/607] skip existing file=Chương 520 Rivi.txt
+[521/607] skip existing file=Chương 521 Đánh Thức.txt
+[522/607] skip existing file=Chương 522 Truyền Thuyết Bộ Lạc Wauja.txt
+[523/607] skip existing file=Chương 523 Quyết Định.txt
+[524/607] skip existing file=Chương 524 Quyết Định của Rivi.txt
+[525/607] skip existing file=Chương 525 Một Lớn Một Nhỏ.txt
+[526/607] skip existing file=Chương 526 Bạn.txt
+[527/607] skip existing file=Chương 527 Hi Vọng Tan Biến.txt
+[528/607] skip existing file=Chương 528 Nhớ Nhung.txt
+[529/607] skip existing file=Chương 529 Sức Ảnh Hưởng.txt
+[530/607] skip existing file=Chương 530 Phát Hiện Kinh Hoàng.txt
+[531/607] skip existing file=Chương 531 Có Ơn Tất Báo.txt
+[532/607] skip existing file=Chương 532 Diễn Biến Một Năm.txt
+[533/607] skip existing file=Chương 533 Ấu Trĩ.txt
+[534/607] skip existing file=Chương 534 Muốn Chết.txt
+[535/607] skip existing file=Chương 535 Vấn Đề Nghiêm Trọng.txt
+[536/607] download chapter_id=11955414 file=Chương 536 Nổi Cơn Thịnh Nộ Phần 1.txt
+  OK decrypted=True written=Chương 536 Nổi Cơn Thịnh Nộ Phần 1.txt
+[537/607] download chapter_id=11955415 file=Chương 537 Nổi Cơn Thịnh Nộ Phần 2.txt
+  OK decrypted=True written=Chương 537 Nổi Cơn Thịnh Nộ Phần 2.txt
+[538/607] skip existing file=Chương 538 Nổi Cơn Thịnh Nộ Phần 3.txt
+[539/607] skip existing file=Chương 539 Mối Mọt.txt
+[540/607] skip existing file=Chương 540 Thịnh Thế Super Power Cell Ra Đời.txt
+[541/607] skip existing file=Chương 541 Cảng Nước Sâu Cam Ranh.txt
+[542/607] skip existing file=Chương 542 Tàu Ngầm Thịnh Thế 01 TT 01 Quái Vật Biển Sâu.txt
+[543/607] skip existing file=Chương 543 Bí Mật Bất Ngờ.txt
+[544/607] skip existing file=Chương 544 Hồi Hộp Chờ Đợi.txt
+[545/607] skip existing file=Chương 545 Ba Cô Gái Gặp Nhau.txt
+[546/607] skip existing file=Chương 546 Bạn Cũ.txt
+[547/607] skip existing file=Chương 547 Dự Án Tiếp Theo.txt
+[548/607] skip existing file=Chương 548 Tháp Nhu Cầu Của Maslow.txt
+[549/607] skip existing file=Chương 549 Hai Đường Chéo.txt
+[550/607] skip existing file=Chương 550 86 Ngàn 500 Đồng.txt
+[551/607] skip existing file=Chương 551 Không Thể Hiểu Nổi.txt
+[552/607] skip existing file=Chương 552 Cảm ơn.txt
+[553/607] skip existing file=Chương 553 Người Hàng Xóm Bất Đắc Dĩ.txt
+[554/607] skip existing file=Chương 554 Vùng Đất Thần Bí.txt
+[555/607] download chapter_id=11955433 file=Chương 555 1 Đôi lời của Tác giả.txt
+  OK decrypted=True written=Chương 555 1 Đôi lời của Tác giả.txt
+[556/607] skip existing file=Chương 556 Zero Zone.txt
+[557/607] skip existing file=Chương 557 Đời Thường.txt
+[558/607] skip existing file=Chương 558 Sự Phát Hiện Muộn Màng.txt
+[559/607] skip existing file=Chương 559 Bá Đạo.txt
+[560/607] skip existing file=Chương 560 Giúp Đỡ.txt
+[561/607] skip existing file=Chương 561 Thiên Tài.txt
+[562/607] skip existing file=Chương 562 Xin Việc.txt
+[563/607] skip existing file=Chương 563 Phần Quan Trọng Nhất.txt
+[564/607] skip existing file=Chương 564 Chế Tạo Lightsaber.txt
+[565/607] skip existing file=Chương 565 Đổ Thạch.txt
+[566/607] skip existing file=Chương 566 Ngọc phỉ Thúy.txt
+[567/607] skip existing file=Chương 567 Chơi Lớn.txt
+[568/607] skip existing file=Chương 568 Tiêu Tiền Như Rác.txt
+[569/607] skip existing file=Chương 569 Cái Hố Đủ Lớn.txt
+[570/607] skip existing file=Chương 570 Sợ Hãi.txt
+[571/607] skip existing file=Chương 571 Cú Sốc Liên Tiếp.txt
+[572/607] skip existing file=Chương 572 Tin Tức Quan Trọng.txt
+[573/607] skip existing file=Chương 573 Quyết Định Của Dương Tuấn Vũ.txt
+[574/607] skip existing file=Chương 574 Tò Mò Dâng Cao.txt
+[575/607] skip existing file=Chương 575 Con Chim Kì Lạ.txt
+[576/607] skip existing file=Chương 576 Xung Đột.txt
+[577/607] skip existing file=Chương 577 Thử Nghiệm.txt
+[578/607] skip existing file=Chương 578 Buồn Ngủ Gặp Chiếu Manh.txt
+[579/607] skip existing file=Chương 579 Phân Chia Thế Lực Zero Zone.txt
+[580/607] skip existing file=Chương 580 Thời Khắc Lịch Sử.txt
+[581/607] skip existing file=Chương 581 Lời Tuyên Bố Đanh Thép.txt
+[582/607] skip existing file=Chương 582 Bước Đi Tiếp Theo.txt
+[583/607] skip existing file=Chương 583 Start Up.txt
+[584/607] skip existing file=Chương 584 Trùng Hợp.txt
+[585/607] skip existing file=Chương 585 Kích Thích.txt
+[586/607] skip existing file=Chương 586 Chiến Lược Phát Triển.txt
+[587/607] skip existing file=Chương 587 Khách Hàng Đầu Tiên.txt
+[588/607] skip existing file=Chương 588 Quá Xúc Động.txt
+[589/607] skip existing file=Chương 589 Chuẩn Bị Ra Mắt Hai Trụ Sở Mới.txt
+[590/607] skip existing file=Chương 590 Chiến Thần Uy Vũ Nữ Thần Tinh Khôi.txt
+[591/607] skip existing file=Chương 591 Đơn Hàng Của Bộ Quốc Phòng.txt
+[592/607] download chapter_id=12074135 file=Chương 592 Hệ Thống Sàn Đấu Mới Của Eye's Dragon.txt
+  OK decrypted=True written=Chương 592 Hệ Thống Sàn Đấu Mới Của Eye's Dragon.txt
+[593/607] skip existing file=Chương 593 Trận Chiến Kịch Tính.txt
+[594/607] skip existing file=Chương 594 Kịch Chiến.txt
+[595/607] skip existing file=Chương 595 Mở Mang Tầm Mắt Sức Mạnh Đáng Sợ.txt
+[596/607] skip existing file=Chương 596 Siêu Tốc Độ.txt
+[597/607] skip existing file=Chương 597 Những Món Quà Từ Boss.txt
+[598/607] skip existing file=Chương 598 Kẻ Không Mời Mà Đến Là Bạn Hay Thù.txt
+[599/607] skip existing file=Chương 599 Mạo Danh Diễn Biến Bất Ngờ.txt
+[600/607] skip existing file=Chương 600 Xé Rách Thời Không.txt
+[601/607] skip existing file=Chương 601 Chân Thần Lộ Diện.txt
+[602/607] skip existing file=Chương 602 Đau Đớn.txt
+[603/607] skip existing file=Chương 603 Tỉnh Lại.txt
+[604/607] skip existing file=Chương 604 Nhân Họa Đắc Phúc.txt
+[605/607] skip existing file=Chương 605 Tiểu Tuyết.txt
+[606/607] skip existing file=Chương 606 Hiểm Họa Bất Ngờ.txt
+[607/607] skip existing file=Chương 607 Tương Lai Khó Lường Khởi Đầu Mới.txt
+final_ok=607
+final_fail=0
+out=C:\Dev\MTC\Đưa Nước Việt Vươn Tầm Thế Giới phần 1 Khải Hoàn Nhất Lộ
+
+[stderr]

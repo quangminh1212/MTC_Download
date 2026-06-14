@@ -1,0 +1,695 @@
+{
+  "count": 46,
+  "report": [
+    {
+      "id": 106104,
+      "name": "Ta Từ Tận Thế Bắt Đầu Vô Địch",
+      "folder": "C:\\Dev\\MTC\\Ta Từ Tận Thế Bắt Đầu Vô Địch",
+      "txt_count": 1607,
+      "file_max_chapter": null,
+      "manifest_count": 1449,
+      "manifest_max_index": 1449,
+      "manifest_missing_first_100": [],
+      "latest_index": 1449,
+      "reasons": [
+        "txt_vs_manifest 1607 != 1449"
+      ]
+    },
+    {
+      "id": 143452,
+      "name": "Từ Đội Sản Xuất Đuổi Đại Xa Bắt Đầu",
+      "folder": "C:\\Dev\\MTC\\Từ Đội Sản Xuất Đuổi Đại Xa Bắt Đầu",
+      "txt_count": 2100,
+      "file_max_chapter": null,
+      "manifest_count": 1767,
+      "manifest_max_index": 1767,
+      "manifest_missing_first_100": [],
+      "latest_index": 1767,
+      "reasons": [
+        "txt_vs_manifest 2100 != 1767"
+      ]
+    },
+    {
+      "id": 132696,
+      "name": "Thọ Nguyên Có Thể Đổi Bảo? Vô Hạn Thọ Nguyên Ta Vô Địch",
+      "folder": "C:\\Dev\\MTC\\Thọ Nguyên Có Thể Đổi Bảo Vô Hạn Thọ Nguyên Ta Vô Địch",
+      "txt_count": 991,
+      "file_max_chapter": null,
+      "manifest_count": 807,
+      "manifest_max_index": 809,
+      "manifest_missing_first_100": [
+        690,
+        691
+      ],
+      "latest_index": 809,
+      "reasons": [
+        "txt_vs_manifest 991 != 807",
+        "api_index_gaps 2"
+      ]
+    },
+    {
+      "id": 142863,
+      "name": "Kỹ Năng Đổi Một Chữ, Bọn Hắn Bị Ta Chơi Hỏng",
+      "folder": "C:\\Dev\\MTC\\Kỹ Năng Đổi Một Chữ Bọn Hắn Bị Ta Chơi Hỏng",
+      "txt_count": 774,
+      "file_max_chapter": null,
+      "manifest_count": 480,
+      "manifest_max_index": 481,
+      "manifest_missing_first_100": [
+        415
+      ],
+      "latest_index": 481,
+      "reasons": [
+        "txt_vs_manifest 774 != 480",
+        "api_index_gaps 1"
+      ]
+    },
+    {
+      "id": 108111,
+      "name": "Tận Thế: Toàn Thế Giới Chỉ Có Ta Có Được Dị Năng",
+      "folder": "C:\\Dev\\MTC\\Tận Thế Toàn Thế Giới Chỉ Có Ta Có Được Dị Năng",
+      "txt_count": 421,
+      "file_max_chapter": null,
+      "manifest_count": 309,
+      "manifest_max_index": 309,
+      "manifest_missing_first_100": [],
+      "latest_index": 309,
+      "reasons": [
+        "txt_vs_manifest 421 != 309"
+      ]
+    },
+    {
+      "id": 105879,
+      "name": "Ta Có Thể Thăng Cấp Chỗ Tránh Nạn",
+      "folder": "C:\\Dev\\MTC\\Ta Có Thể Thăng Cấp Chỗ Tránh Nạn",
+      "txt_count": 857,
+      "file_max_chapter": null,
+      "manifest_count": 842,
+      "manifest_max_index": 842,
+      "manifest_missing_first_100": [],
+      "latest_index": 842,
+      "reasons": [
+        "txt_vs_manifest 857 != 842"
+      ]
+    },
+    {
+      "id": 113194,
+      "name": "Toàn Cầu Phế Thổ: Ta Khai Rương Ra Đỉnh Cấp Chỗ Tránh Nạn",
+      "folder": "C:\\Dev\\MTC\\Toàn Cầu Phế Thổ Ta Khai Rương Ra Đỉnh Cấp Chỗ Tránh Nạn",
+      "txt_count": 1357,
+      "file_max_chapter": null,
+      "manifest_count": 785,
+      "manifest_max_index": 792,
+      "manifest_missing_first_100": [
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414
+      ],
+      "latest_index": 792,
+      "reasons": [
+        "txt_vs_manifest 1357 != 785",
+        "api_index_gaps 7"
+      ]
+    },
+    {
+      "id": 108129,
+      "name": "Toàn Cầu Phế Thổ: Chỗ Tránh Nạn Vô Hạn Thăng Cấp",
+      "folder": "C:\\Dev\\MTC\\Toàn Cầu Phế Thổ Chỗ Tránh Nạn Vô Hạn Thăng Cấp",
+      "txt_count": 1844,
+      "file_max_chapter": null,
+      "manifest_count": 1456,
+      "manifest_max_index": 1456,
+      "manifest_missing_first_100": [],
+      "latest_index": 1456,
+      "reasons": [
+        "txt_vs_manifest 1844 != 1456"
+      ]
+    },
+    {
+      "id": 144977,
+      "name": "Ta Tận Thế Chỗ Tránh Nạn Hệ Thống",
+      "folder": "C:\\Dev\\MTC\\Ta Tận Thế Chỗ Tránh Nạn Hệ Thống",
+      "txt_count": 1284,
+      "file_max_chapter": null,
+      "manifest_count": 850,
+      "manifest_max_index": 851,
+      "manifest_missing_first_100": [
+        437
+      ],
+      "latest_index": 851,
+      "reasons": [
+        "txt_vs_manifest 1284 != 850",
+        "api_index_gaps 1"
+      ]
+    },
+    {
+      "id": 148426,
+      "name": "Toàn Cầu Chạy Nạn: Vật Phẩm Của Ta Có Thể Tự Động Thăng Cấp",
+      "folder": "C:\\Dev\\MTC\\Toàn Cầu Chạy Nạn Vật Phẩm Của Ta Có Thể Tự Động Thăng Cấp",
+      "txt_count": 634,
+      "file_max_chapter": null,
+      "manifest_count": 602,
+      "manifest_max_index": 602,
+      "manifest_missing_first_100": [],
+      "latest_index": 602,
+      "reasons": [
+        "txt_vs_manifest 634 != 602"
+      ]
+    },
+    {
+      "id": 131589,
+      "name": "Nạn Đói, Vật Phẩm Của Ta Có Thể Thăng Cấp",
+      "folder": "C:\\Dev\\MTC\\Nạn Đói Vật Phẩm Của Ta Có Thể Thăng Cấp",
+      "txt_count": 328,
+      "file_max_chapter": null,
+      "manifest_count": 327,
+      "manifest_max_index": 327,
+      "manifest_missing_first_100": [],
+      "latest_index": 327,
+      "reasons": [
+        "txt_vs_manifest 328 != 327"
+      ]
+    },
+    {
+      "id": 136584,
+      "name": "Nạn Đói, Ta Cuốc Chim Có Thể Thăng Cấp",
+      "folder": "C:\\Dev\\MTC\\Nạn Đói Ta Cuốc Chim Có Thể Thăng Cấp",
+      "txt_count": 344,
+      "file_max_chapter": null,
+      "manifest_count": 272,
+      "manifest_max_index": 272,
+      "manifest_missing_first_100": [],
+      "latest_index": 272,
+      "reasons": [
+        "txt_vs_manifest 344 != 272"
+      ]
+    },
+    {
+      "id": 106572,
+      "name": "Đại Đường Bắt Đầu Từ Làm Cá Mặn",
+      "folder": "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Từ Làm Cá Mặn",
+      "txt_count": 843,
+      "file_max_chapter": null,
+      "manifest_count": 804,
+      "manifest_max_index": 804,
+      "manifest_missing_first_100": [],
+      "latest_index": 804,
+      "reasons": [
+        "txt_vs_manifest 843 != 804"
+      ]
+    },
+    {
+      "id": 111207,
+      "name": "Nhất Phẩm Huyện Lệnh : Bắt Đầu Từ Vô Địch Bắt Đầu",
+      "folder": "C:\\Dev\\MTC\\Nhất Phẩm Huyện Lệnh Bắt Đầu Từ Vô Địch Bắt Đầu",
+      "txt_count": 1253,
+      "file_max_chapter": null,
+      "manifest_count": 1040,
+      "manifest_max_index": 1040,
+      "manifest_missing_first_100": [],
+      "latest_index": 1040,
+      "reasons": [
+        "txt_vs_manifest 1253 != 1040"
+      ]
+    },
+    {
+      "id": 112819,
+      "name": "Đại Đường: Thần Cấp Phò Mã Gia, Cá Ướp Muối Liền Mạnh Lên",
+      "folder": "C:\\Dev\\MTC\\Đại Đường Thần Cấp Phò Mã Gia Cá Ướp Muối Liền Mạnh Lên",
+      "txt_count": 1568,
+      "file_max_chapter": null,
+      "manifest_count": 1482,
+      "manifest_max_index": 1482,
+      "manifest_missing_first_100": [],
+      "latest_index": 1482,
+      "reasons": [
+        "txt_vs_manifest 1568 != 1482"
+      ]
+    },
+    {
+      "id": 101002,
+      "name": "Vô Song Con Thứ",
+      "folder": "C:\\Dev\\MTC\\Vô Song Con Thứ",
+      "txt_count": 1351,
+      "file_max_chapter": null,
+      "manifest_count": 1182,
+      "manifest_max_index": 1182,
+      "manifest_missing_first_100": [],
+      "latest_index": 1182,
+      "reasons": [
+        "txt_vs_manifest 1351 != 1182"
+      ]
+    },
+    {
+      "id": 138121,
+      "name": "Ta Tại Đại Minh Buôn Bán Canh Gà",
+      "folder": "C:\\Dev\\MTC\\Ta Tại Đại Minh Buôn Bán Canh Gà",
+      "txt_count": 504,
+      "file_max_chapter": null,
+      "manifest_count": 491,
+      "manifest_max_index": 491,
+      "manifest_missing_first_100": [],
+      "latest_index": 491,
+      "reasons": [
+        "txt_vs_manifest 504 != 491"
+      ]
+    },
+    {
+      "id": 141218,
+      "name": "Xuyên Qua Từ Khai Hoang Bắt Đầu",
+      "folder": "C:\\Dev\\MTC\\Xuyên Qua Từ Khai Hoang Bắt Đầu",
+      "txt_count": 1882,
+      "file_max_chapter": null,
+      "manifest_count": 1149,
+      "manifest_max_index": 1149,
+      "manifest_missing_first_100": [],
+      "latest_index": 1149,
+      "reasons": [
+        "txt_vs_manifest 1882 != 1149"
+      ]
+    },
+    {
+      "id": 130141,
+      "name": "Hàn Môn Kiêu Sĩ",
+      "folder": "C:\\Dev\\MTC\\Hàn Môn Kiêu Sĩ",
+      "txt_count": 2315,
+      "file_max_chapter": null,
+      "manifest_count": 2138,
+      "manifest_max_index": 2138,
+      "manifest_missing_first_100": [],
+      "latest_index": 2138,
+      "reasons": [
+        "txt_vs_manifest 2315 != 2138"
+      ]
+    },
+    {
+      "id": 143912,
+      "name": "Ta Ở Đại Đường Làm Phò Mã",
+      "folder": "C:\\Dev\\MTC\\Ta Ở Đại Đường Làm Phò Mã",
+      "txt_count": 951,
+      "file_max_chapter": null,
+      "manifest_count": 494,
+      "manifest_max_index": 494,
+      "manifest_missing_first_100": [],
+      "latest_index": 494,
+      "reasons": [
+        "txt_vs_manifest 951 != 494"
+      ]
+    },
+    {
+      "id": 133122,
+      "name": "Nạn Đói Lớn, Ta Nhà Kho Nuôi Cổ Đại Nữ Đế",
+      "folder": "C:\\Dev\\MTC\\Nạn Đói Lớn Ta Nhà Kho Nuôi Cổ Đại Nữ Đế",
+      "txt_count": 420,
+      "file_max_chapter": null,
+      "manifest_count": 340,
+      "manifest_max_index": 340,
+      "manifest_missing_first_100": [],
+      "latest_index": 340,
+      "reasons": [
+        "txt_vs_manifest 420 != 340"
+      ]
+    },
+    {
+      "id": 134842,
+      "name": "Đại Đường: Bắt Đầu Hối Hôn, Ta Thành Thi Tiên Ngươi Khóc Cái Gì",
+      "folder": "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Hối Hôn Ta Thành Thi Tiên Ngươi Khóc Cái Gì",
+      "txt_count": 641,
+      "file_max_chapter": null,
+      "manifest_count": 641,
+      "manifest_max_index": 642,
+      "manifest_missing_first_100": [
+        388
+      ],
+      "latest_index": 642,
+      "reasons": [
+        "api_index_gaps 1"
+      ]
+    },
+    {
+      "id": 144796,
+      "name": "Ta Thật Không Muốn Làm Gian Thần",
+      "folder": "C:\\Dev\\MTC\\Ta Thật Không Muốn Làm Gian Thần",
+      "txt_count": 949,
+      "file_max_chapter": null,
+      "manifest_count": 717,
+      "manifest_max_index": 718,
+      "manifest_missing_first_100": [
+        717
+      ],
+      "latest_index": 718,
+      "reasons": [
+        "txt_vs_manifest 949 != 717",
+        "api_index_gaps 1"
+      ]
+    },
+    {
+      "id": 124705,
+      "name": "Đại Minh: Như Thế Tham Phò Mã, Trẫm Giết Không Được?",
+      "folder": "C:\\Dev\\MTC\\Đại Minh Như Thế Tham Phò Mã Trẫm Giết Không Được",
+      "txt_count": 1814,
+      "file_max_chapter": null,
+      "manifest_count": 1072,
+      "manifest_max_index": 1073,
+      "manifest_missing_first_100": [
+        329
+      ],
+      "latest_index": 1073,
+      "reasons": [
+        "txt_vs_manifest 1814 != 1072",
+        "api_index_gaps 1"
+      ]
+    },
+    {
+      "id": 148390,
+      "name": "Năm Mất Mùa Toàn Thôn Gặm Vỏ Cây, Ta Có Không Gian Cuồng Huyễn Thịt",
+      "folder": "C:\\Dev\\MTC\\Năm Mất Mùa Toàn Thôn Gặm Vỏ Cây Ta Có Không Gian Cuồng Huyễn Thịt",
+      "txt_count": 346,
+      "file_max_chapter": null,
+      "manifest_count": 324,
+      "manifest_max_index": 324,
+      "manifest_missing_first_100": [],
+      "latest_index": 324,
+      "reasons": [
+        "txt_vs_manifest 346 != 324"
+      ]
+    },
+    {
+      "id": 136312,
+      "name": "Lý Thế Dân Giả Chết? Cái Kia Trẫm Liền Uy Phục Tứ Hải !",
+      "folder": "C:\\Dev\\MTC\\Lý Thế Dân Giả Chết Cái Kia Trẫm Liền Uy Phục Tứ Hải",
+      "txt_count": 945,
+      "file_max_chapter": null,
+      "manifest_count": 941,
+      "manifest_max_index": 941,
+      "manifest_missing_first_100": [],
+      "latest_index": 941,
+      "reasons": [
+        "txt_vs_manifest 945 != 941"
+      ]
+    },
+    {
+      "id": 134288,
+      "name": "Đại Phụng Bại Gia Tử",
+      "folder": "C:\\Dev\\MTC\\Đại Phụng Bại Gia Tử",
+      "txt_count": 1506,
+      "file_max_chapter": null,
+      "manifest_count": 1293,
+      "manifest_max_index": 1293,
+      "manifest_missing_first_100": [],
+      "latest_index": 1293,
+      "reasons": [
+        "txt_vs_manifest 1506 != 1293"
+      ]
+    },
+    {
+      "id": 144517,
+      "name": "Toàn Tộc! Cung Cấp Ta Khoa Cử",
+      "folder": "C:\\Dev\\MTC\\Toàn Tộc Cung Cấp Ta Khoa Cử",
+      "txt_count": 607,
+      "file_max_chapter": null,
+      "manifest_count": 540,
+      "manifest_max_index": 540,
+      "manifest_missing_first_100": [],
+      "latest_index": 540,
+      "reasons": [
+        "txt_vs_manifest 607 != 540"
+      ]
+    },
+    {
+      "id": 137088,
+      "name": "Xuyên Nhanh: Ta Tại Công Đức Hiệu Cầm Đồ Đương Chưởng Quỹ",
+      "folder": "C:\\Dev\\MTC\\Xuyên Nhanh Ta Tại Công Đức Hiệu Cầm Đồ Đương Chưởng Quỹ",
+      "txt_count": 2078,
+      "file_max_chapter": null,
+      "manifest_count": 1557,
+      "manifest_max_index": 1558,
+      "manifest_missing_first_100": [
+        1008
+      ],
+      "latest_index": 1558,
+      "reasons": [
+        "txt_vs_manifest 2078 != 1557",
+        "api_index_gaps 1"
+      ]
+    },
+    {
+      "id": 142220,
+      "name": "Trùng Sinh Sáu Số Không: Ta Mang Đệ Đệ Muội Muội Chạy Thường Thường Bậc Trung",
+      "folder": "C:\\Dev\\MTC\\Trùng Sinh Sáu Số Không Ta Mang Đệ Đệ Muội Muội Chạy Thường Thường Bậc Trung",
+      "txt_count": 1240,
+      "file_max_chapter": null,
+      "manifest_count": 1108,
+      "manifest_max_index": 1108,
+      "manifest_missing_first_100": [],
+      "latest_index": 1108,
+      "reasons": [
+        "txt_vs_manifest 1240 != 1108"
+      ]
+    },
+    {
+      "id": 152110,
+      "name": "Sau Khi Bị Vứt Bỏ, Ta Vào Hàn Môn Khoa Cử Thành Trạng Nguyên",
+      "folder": "C:\\Dev\\MTC\\Sau Khi Bị Vứt Bỏ Ta Vào Hàn Môn Khoa Cử Thành Trạng Nguyên",
+      "txt_count": 884,
+      "file_max_chapter": null,
+      "manifest_count": 861,
+      "manifest_max_index": 861,
+      "manifest_missing_first_100": [],
+      "latest_index": 811,
+      "reasons": [
+        "txt_vs_manifest 884 != 861"
+      ]
+    },
+    {
+      "id": 112656,
+      "name": "Chiêu Hắc Thể Chất Bắt Đầu Tu Hành Tại Phế Thổ",
+      "folder": "C:\\Dev\\MTC\\Chiêu Hắc Thể Chất Bắt Đầu Tu Hành Tại Phế Thổ",
+      "txt_count": 4940,
+      "file_max_chapter": null,
+      "manifest_count": 2981,
+      "manifest_max_index": 2986,
+      "manifest_missing_first_100": [
+        1020,
+        1967,
+        2266,
+        2601,
+        2866
+      ],
+      "latest_index": 2986,
+      "reasons": [
+        "txt_vs_manifest 4940 != 2981",
+        "api_index_gaps 5"
+      ]
+    },
+    {
+      "id": 146716,
+      "name": "Người Tại Lớp Mười Hai, Hệ Thống Nói Ta Cùng Thanh Mai Ra Mắt",
+      "folder": "C:\\Dev\\MTC\\Người Tại Lớp Mười Hai Hệ Thống Nói Ta Cùng Thanh Mai Ra Mắt",
+      "txt_count": 1224,
+      "file_max_chapter": null,
+      "manifest_count": 844,
+      "manifest_max_index": 844,
+      "manifest_missing_first_100": [],
+      "latest_index": 844,
+      "reasons": [
+        "txt_vs_manifest 1224 != 844"
+      ]
+    },
+    {
+      "id": 146689,
+      "name": "Người Tu Tiên Hiểu Được Tiếng Muông Thú",
+      "folder": "C:\\Dev\\MTC\\Người Tu Tiên Hiểu Được Tiếng Muông Thú",
+      "txt_count": 1801,
+      "file_max_chapter": null,
+      "manifest_count": 1489,
+      "manifest_max_index": 1489,
+      "manifest_missing_first_100": [],
+      "latest_index": 1489,
+      "reasons": [
+        "txt_vs_manifest 1801 != 1489"
+      ]
+    },
+    {
+      "id": 153266,
+      "name": "Trùng Sinh 1978, Thâm Sơn Đi Săn Trở Thành Vạn Nguyên Hộ",
+      "folder": "C:\\Dev\\MTC\\Trùng Sinh 1978 Thâm Sơn Đi Săn Trở Thành Vạn Nguyên Hộ",
+      "txt_count": 1100,
+      "file_max_chapter": null,
+      "manifest_count": 1096,
+      "manifest_max_index": 1096,
+      "manifest_missing_first_100": [],
+      "latest_index": 1096,
+      "reasons": [
+        "txt_vs_manifest 1100 != 1096"
+      ]
+    },
+    {
+      "id": 148026,
+      "name": "Hải Dương Tai Biến: Bắt Đầu Thức Tỉnh Sss Cấp Thiên Phú",
+      "folder": "C:\\Dev\\MTC\\Hải Dương Tai Biến Bắt Đầu Thức Tỉnh Sss Cấp Thiên Phú",
+      "txt_count": 725,
+      "file_max_chapter": null,
+      "manifest_count": 540,
+      "manifest_max_index": 540,
+      "manifest_missing_first_100": [],
+      "latest_index": 526,
+      "reasons": [
+        "txt_vs_manifest 725 != 540"
+      ]
+    },
+    {
+      "id": 153192,
+      "name": "Ta Mỗi Ngày Thức Tỉnh Một Cái Thiên Tai Cấp Dị Năng",
+      "folder": "C:\\Dev\\MTC\\Ta Mỗi Ngày Thức Tỉnh Một Cái Thiên Tai Cấp Dị Năng",
+      "txt_count": 578,
+      "file_max_chapter": null,
+      "manifest_count": 316,
+      "manifest_max_index": 316,
+      "manifest_missing_first_100": [],
+      "latest_index": 316,
+      "reasons": [
+        "txt_vs_manifest 578 != 316"
+      ]
+    },
+    {
+      "id": 150500,
+      "name": "Thi Pháp Vĩnh Cửu Thêm Sinh Mệnh, Ngươi Quản Cái Này Gọi Pháp Sư?",
+      "folder": "C:\\Dev\\MTC\\Thi Pháp Vĩnh Cửu Thêm Sinh Mệnh Ngươi Quản Cái Này Gọi Pháp Sư",
+      "txt_count": 919,
+      "file_max_chapter": null,
+      "manifest_count": 653,
+      "manifest_max_index": 653,
+      "manifest_missing_first_100": [
+        113
+      ],
+      "latest_index": 653,
+      "reasons": [
+        "txt_vs_manifest 919 != 653",
+        "api_index_gaps 1"
+      ]
+    },
+    {
+      "id": 132534,
+      "name": "Bên Trong Mộng Ta Có Đại Lão",
+      "folder": "C:\\Dev\\MTC\\Bên Trong Mộng Ta Có Đại Lão",
+      "txt_count": 991,
+      "file_max_chapter": null,
+      "manifest_count": 990,
+      "manifest_max_index": 990,
+      "manifest_missing_first_100": [],
+      "latest_index": 990,
+      "reasons": [
+        "txt_vs_manifest 991 != 990"
+      ]
+    },
+    {
+      "id": 141175,
+      "name": "Phiên Bản Cổ Đại Nạn Dân Sinh Tồn Chỉ Nam",
+      "folder": "C:\\Dev\\MTC\\Phiên Bản Cổ Đại Nạn Dân Sinh Tồn Chỉ Nam",
+      "txt_count": 330,
+      "file_max_chapter": null,
+      "manifest_count": 329,
+      "manifest_max_index": 329,
+      "manifest_missing_first_100": [],
+      "latest_index": 329,
+      "reasons": [
+        "txt_vs_manifest 330 != 329"
+      ]
+    },
+    {
+      "id": 144380,
+      "name": "Kinh Ngạc, Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo",
+      "folder": "C:\\Dev\\MTC\\Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo",
+      "txt_count": 717,
+      "file_max_chapter": null,
+      "manifest_count": 709,
+      "manifest_max_index": 709,
+      "manifest_missing_first_100": [],
+      "latest_index": 709,
+      "reasons": [
+        "txt_vs_manifest 717 != 709"
+      ]
+    },
+    {
+      "id": 111603,
+      "name": "Đại Đường: Bắt Đầu Bắt Trưởng Tôn Hoàng Hậu",
+      "folder": "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Bắt Trưởng Tôn Hoàng Hậu",
+      "txt_count": 964,
+      "file_max_chapter": null,
+      "manifest_count": 963,
+      "manifest_max_index": 963,
+      "manifest_missing_first_100": [],
+      "latest_index": 963,
+      "reasons": [
+        "txt_vs_manifest 964 != 963"
+      ]
+    },
+    {
+      "id": 111966,
+      "name": "Đại Thanh Đệ Nhất Thái Tử",
+      "folder": "C:\\Dev\\MTC\\Đại Thanh Đệ Nhất Thái Tử",
+      "txt_count": 199,
+      "file_max_chapter": null,
+      "manifest_count": 178,
+      "manifest_max_index": 178,
+      "manifest_missing_first_100": [],
+      "latest_index": 178,
+      "reasons": [
+        "txt_vs_manifest 199 != 178"
+      ]
+    },
+    {
+      "id": 129734,
+      "name": "Trù Thần: Một Bát Cơm Chiên, Dẫn Tới Chư Thiên Đại Loạn!",
+      "folder": "C:\\Dev\\MTC\\Trù Thần Một Bát Cơm Chiên Dẫn Tới Chư Thiên Đại Loạn",
+      "txt_count": 266,
+      "file_max_chapter": null,
+      "manifest_count": 266,
+      "manifest_max_index": 267,
+      "manifest_missing_first_100": [
+        173
+      ],
+      "latest_index": 267,
+      "reasons": [
+        "api_index_gaps 1"
+      ]
+    },
+    {
+      "id": 145433,
+      "name": "Tứ Hợp Viện Chi Lạnh Nhạt Đời Sống",
+      "folder": "C:\\Dev\\MTC\\Tứ Hợp Viện Chi Lạnh Nhạt Đời Sống",
+      "txt_count": 1016,
+      "file_max_chapter": null,
+      "manifest_count": 1016,
+      "manifest_max_index": 1019,
+      "manifest_missing_first_100": [
+        20,
+        125,
+        1018
+      ],
+      "latest_index": 1019,
+      "reasons": [
+        "api_index_gaps 3"
+      ]
+    },
+    {
+      "id": 148564,
+      "name": "Toàn Dân Võng Du Bắt Đầu Gấp Trăm Lần Phản Thương!",
+      "folder": "C:\\Dev\\MTC\\Toàn Dân Võng Du Bắt Đầu Gấp Trăm Lần Phản Thương",
+      "txt_count": 524,
+      "file_max_chapter": null,
+      "manifest_count": 527,
+      "manifest_max_index": 527,
+      "manifest_missing_first_100": [],
+      "latest_index": 527,
+      "reasons": [
+        "txt_vs_manifest 524 != 527"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1436 @@
+queue=1428 book_workers=4 chapter_workers=4 state_done=1412 state_failed=24
+[1/1428] SKIP 100480 Tỳ Nhan
+[2/1428] SKIP 101141 Tam Giới Thánh Sư
+[3/1428] SKIP 153594 The Noexistencen Of You And Me: Nếu Ta Có Ngươi
+[4/1428] SKIP 101441 Tam Thể
+[5/1428] SKIP 101399 Toàn Dân Tu Võ
+[6/1428] SKIP 100401 Đại Chúa Tể Tiền Truyện
+[7/1428] SKIP 101711 Thập Tông Tội 3
+[8/1428] SKIP 101710 Thập Tông Tội 2
+[9/1428] SKIP 100475 Vạn Giới Ra Mắt Hệ Thống
+[10/1428] SKIP 101419 Nỗ Lực Thực Hữu Dụng
+[11/1428] SKIP 101708 Thập Tông Tội 1
+[12/1428] SKIP 101722 Triều Nội 81 Hào
+[13/1428] SKIP 100970 Lục Tích Chi Đại Hoang Tế
+[14/1428] SKIP 101066 Lục Tích Chi Mộng Yểm Cung
+[15/1428] SKIP 101255 Ta Có Thể Hút Ngươi Tạo Hóa
+[16/1428] SKIP 100484 Vạn Năng Cố Vấn
+[17/1428] SKIP 100486 Hệ Thống Cung Hóa Thương
+[18/1428] SKIP 101376 Nguyên Thế Giới Chi Thiên Diễn
+[19/1428] SKIP 101072 Nguyện Vọng Thiên Thư
+[20/1428] SKIP 101393 Đấu La Đại Lục Chi Đường Môn Anh Hùng
+[21/1428] SKIP 100693 Hàng Long Giác Tỉnh
+[22/1428] SKIP 101836 Lão Tử Là Thiên Đế
+[23/1428] SKIP 101632 Đô Thị Âm Dương Thiên Sư
+[24/1428] SKIP 101133 Nghịch Phạt Tinh Hà
+[25/1428] SKIP 100807 Nhất Niệm Sâm La
+[26/1428] SKIP 101445 Hắn Đến Từ Địa Ngục
+[27/1428] SKIP 100450 Ta Thật Chỉ Là Muốn Tìm Chết
+[28/1428] SKIP 100495 Ta Đoạt Quỷ Vương Nữ Nhân
+[29/1428] SKIP 101091 Toàn Chức Y Thánh
+[30/1428] SKIP 101157 Quỷ Bí Thần Thám
+[31/1428] SKIP 100482 Muội Muội Ta Là Thiếu Tư Mệnh
+[32/1428] SKIP 100357 Cổ Kiếm Đồ Ma Lục
+[33/1428] SKIP 100491 Vạn Năng Liên Tiếp Khí
+[34/1428] SKIP 101395 Tu La Giác Tỉnh
+[35/1428] SKIP 100534 Ác Ma Pháp Điển
+[36/1428] SKIP 100707 Marvel Vô Song
+[37/1428] SKIP 100608 Mệnh Vận Du Hí Chi Đế Quốc Quật Khởi
+[38/1428] SKIP 100428 Thần Lan Kỳ Vực Vô Song Châu
+[39/1428] SKIP 101478 Thôn Phệ Tinh Không Hậu Truyện
+[40/1428] SKIP 100620 Ta Muốn Làm Người Tốt
+[41/1428] SKIP 100312 Tiểu Long Nữ: Ta Sư Huynh Thật Cứng
+[42/1428] SKIP 101640 Tiêu Diêu Túy Thế Lục
+[43/1428] SKIP 101082 Tuyệt Đối Hư Cấu
+[44/1428] SKIP 101565 Yêu Nghiệt Quật Khởi Lục
+[45/1428] SKIP 100624 Vô Địch Tiên Tôn Đô Thị Tung Hoành
+[46/1428] SKIP 101129 Thần Cấp Y Viện
+[47/1428] SKIP 100924 Ta Nữ Phù Thuỷ Các Muội Muội
+[48/1428] SKIP 100752 Hỏa Ảnh Chi Cái Hệ Thống Bất Lương
+[49/1428] SKIP 101262 Ta Thành Huyền Huyễn Thế Giới Tổ Sư Gia
+[50/1428] SKIP 101690 Quỷ Thần Quán Net
+[51/1428] SKIP 100755 Tối Cường Yêu Nghiệt Đường Tăng
+[52/1428] SKIP 101824 Tối Cường Thổ Hào Đả Kiểm Hệ Thống
+[53/1428] SKIP 101346 Hokage Chi Vô Tận Trang Độn
+[54/1428] SKIP 101070 Trọng Sinh Chi Đế Bá Tinh Không
+[55/1428] SKIP 100521 Ta Có Vô Hạn Thanh Trang Bị
+[56/1428] SKIP 101421 Đại Đạo Từ Tâm
+[57/1428] SKIP 101786 Kuroko Mạnh Nhất Cầu Thần
+[58/1428] SKIP 101750 Long Chau Chi Người Saiya Bản Năng
+[59/1428] SKIP 101340 Siêu Năng Lực Gien Cải Tạo
+[60/1428] SKIP 101846 Thần Cấp Diệp Lương Thần
+[61/1428] SKIP 100125 Vương Triêu Trọng Hiện
+[62/1428] SKIP 101370 Dragon Ball Chi Siêu Cấp Tiên Đậu
+[63/1428] SKIP 100754 Wifi Tu Tiên
+[64/1428] SKIP 101440 Hứa Tiên Bá Đồ
+[65/1428] SKIP 101073 Võ Đạo Tiên Nông
+[66/1428] SKIP 101828 Cộng Sinh Giới Chỉ
+[67/1428] SKIP 101148 Đại Đường Đệ Nhất Hùng Hài Tử
+[68/1428] SKIP 101600 Hokage Giới Ninja Trùm Phản Diện
+[69/1428] SKIP 101080 Tương Lai 100 Triệu Năm
+[70/1428] SKIP 101339 Trộm Món Ăn Hệ Thống
+[71/1428] SKIP 101060 Siêu Cấp Quang Não Hệ Thống
+[72/1428] SKIP 101842 Hổ Chi Dực
+[73/1428] SKIP 100848 Làm Thần Linh Tại Nhật Bản
+[74/1428] SKIP 101392 Phục Thiên Kiếm Tôn
+[75/1428] SKIP 101854 Hokage Chi Giãy Giụa Vận Mệnh
+[76/1428] SKIP 101864 Hải Tặc Chi Vương Giả Lộ
+[77/1428] SKIP 100462 Tiên Môn Oai Đạo
+[78/1428] SKIP 101135 Hokage Chi Ảnh Hoàng
+[79/1428] SKIP 101394 Đại Sư Cứu Mạng
+[80/1428] SKIP 101221 Marvel Thương Lôi Chi Ảnh
+[81/1428] SKIP 101645 Đô Thị Chi Tối Ngưu Tu Tiên
+[82/1428] SKIP 101764 Thám Tử Conan Chi Đại Thúc
+[83/1428] SKIP 100870 Phu Nhân, Ta Yêu Mến Các Người A
+[84/1428] SKIP 101477 Phật Bản Thị Đạo
+[85/1428] SKIP 100858 Pokemon Tối Cường Giải Trí Quán Quân
+[86/1428] SKIP 100485 Tam Quốc Chi Ưu Hóa Hệ Thống
+[87/1428] SKIP 101681 Vô Hạn Cắn Nuốt Cự Thú
+[88/1428] SKIP 101773 Detective Conan Chủ Tiệm Cà Phê
+[89/1428] SKIP 101423 Nghịch Võ Chi Tôn
+[90/1428] SKIP 101058 Trọng Sinh Ngộ Không Tu Yêu Lục
+[91/1428] SKIP 101848 Fairy Tail Chi Huyễn Tưởng Tạo Hình Sư
+[92/1428] SKIP 100209 Hokage Ninja Chi Tenseigan
+[93/1428] SKIP 100719 Bạn Ngồi Cùng Bàn Hung Mãnh
+[94/1428] SKIP 100711 Sử Thượng Mạnh Nhất Thánh Tử
+[95/1428] SKIP 101859 Hải Tặc Chi Mạnh Nhất Hải Vương
+[96/1428] SKIP 100489 Xuyên Việt Chi Vạn Năng Giả
+[97/1428] SKIP 101098 Ngẫu Nhiên Trừng Phạt Khán Giả May Mắn
+[98/1428] SKIP 101366 Đấu Phá Chi Phương Xa Uchiha
+[99/1428] SKIP 101805 Slamdunk Chi Ikegami Ryoji
+[100/1428] SKIP 100447 Vân Thiên Đế
+[101/1428] SKIP 100445 Học Tỷ Của Ta Biết Ma Pháp
+[102/1428] SKIP 100950 Hòa Vũ Không Nhất Khởi Du Long Châu
+[103/1428] SKIP 101871 Hải Tặc Chi Ta Có Thể Đánh Quái
+[104/1428] SKIP 100801 Ta Có Thể Khống Chế Đan Điền
+[105/1428] SKIP 101759 Long Châu Cực Hạn Đột Phá
+[106/1428] SKIP 101749 Kuroko No Basket Tống Mạn Hệ Thống
+[107/1428] SKIP 100446 Tạo Hóa Đồ
+[108/1428] SKIP 100647 Ai Lĩnh Khen Thưởng Của Ta
+[109/1428] SKIP 101777 Bám Thân Mạnh Nhất Songoku
+[110/1428] SKIP 101401 Siêu Thần Cảm Ứng
+[111/1428] SKIP 100968 Loạn Tiên
+[112/1428] SKIP 100115 Trọng Sinh Chi Mộng Huyễn Xạ Thủ
+[113/1428] SKIP 100871 Kỵ Sĩ Vương, Ta Bạn Gái Trước
+[114/1428] SKIP 100873 Trái Ác Quỷ Thành Tinh Rồi
+[115/1428] SKIP 100183 Pokemon Chi Ta Chính Thê Là Cynthia
+[116/1428] SKIP 100467 Âm Ti Thăng Chức
+[117/1428] SKIP 100957 Somalia Đại Lãnh Chúa
+[118/1428] SKIP 100346 Vạn Giới Trực Bá Chi Quân Lâm Thiên Hạ
+[119/1428] SKIP 101087 Cực Đạo Chủ
+[120/1428] SKIP 101833 Hải Tặc Vương Chi Tối Cường Chi Đồng
+[121/1428] SKIP 101858 Hokage Chi Đại Triệu Hoán Sư
+[122/1428] SKIP 101146 Ta Có Chín Cái Nữ Đế Tỷ Tỷ
+[123/1428] SKIP 101699 Ngẫu Nhiên Từ Hải Tặc Bắt Đầu
+[124/1428] SKIP 100969 Nhân Giới Thứ Nhất Tiên
+[125/1428] SKIP 100433 Bắt Đầu Trăm Vạn Linh Thạch
+[126/1428] SKIP 100919 Ta Có Chư Thiên Vạn Giới Đồ
+[127/1428] SKIP 101588 One Piece Ta Có 999 Trái Ác Quỷ
+[128/1428] SKIP 101731 Những Năm Đó Ta Bán Hung Trạch
+[129/1428] SKIP 100612 Đại Chế Dược Sư Hệ Thống
+[130/1428] SKIP 100340 Siêu Thứ Nguyên Trừu Tưởng
+[131/1428] SKIP 101211 Sống Lại Làm Anime Đế Quốc
+[132/1428] SKIP 101212 Đại Tần Thần Cấp Lỗ Ban
+[133/1428] SKIP 100487 Dị Thế Mạnh Nhất Chiến Tiên Hệ Thống
+[134/1428] SKIP 100179 Phá Vỡ Hokage
+[135/1428] SKIP 100216 One Piece Chi La Lỵ Dưỡng Thành Hệ Thống
+[136/1428] SKIP 100814 Bắt Đầu Từ Max Cấp Thuộc Tính
+[137/1428] SKIP 101260 Nhà Ta Bạn Gái Là Siêu Sao
+[138/1428] SKIP 101784 Em Gái Của Ta Là Umaru
+[139/1428] SKIP 101844 Thiên Giới Gian Thương
+[140/1428] SKIP 101263 Marvel: Vô Hạn Dị Năng
+[141/1428] SKIP 100494 Trọng Sinh Chi Mạnh Nhất Linh Kiếm
+[142/1428] SKIP 100496 Mị Hoặc Đế Vương Tâm: Đệ Nhất Sủng Phi
+[143/1428] SKIP 101693 Ta Wechat Group Nối Liền Tam Giới
+[144/1428] SKIP 100123 Sân Bóng Libero
+[145/1428] SKIP 100137 Comic Chi Anh Hùng Guyver
+[146/1428] SKIP 101860 Đại Hải Tặc Doflamingo
+[147/1428] SKIP 100334 Đồng Thuật Trong Thế Giới Marvel
+[148/1428] SKIP 100819 Đô Thị Chi Hệ Thống Đại Trừu Tưởng
+[149/1428] SKIP 101074 Tín Ngưỡng Vạn Tuế
+[150/1428] SKIP 100141 Bắt Đầu Từ Hôm Nay Làm Đại Phản Phái
+[151/1428] SKIP 101149 Vạn Kiếm Chúa Tể
+[152/1428] SKIP 101402 Vấn Đạo Chương
+[153/1428] SKIP 100809 Ta Chỉ Nghĩ Ăn Lợi Tức
+[154/1428] SKIP 101843 Trọng Sinh Chi Hương Thôn Dưỡng Trư
+[155/1428] SKIP 100477 Binh Vương Chi Siêu Cấp Thấu Thị
+[156/1428] SKIP 101496 Sủng Vật Của Ta Là Boss
+[157/1428] SKIP 101850 Ta Tại Tiên Phàm Lưỡng Giới Tăng Tốc Độ
+[158/1428] SKIP 100507 Ma Pháp Thợ Săn Thần Chi Truyền Thuyết
+[159/1428] SKIP 101005 Nho Nhã Hiền Hoà Ta Không Phải Ma Đầu
+[160/1428] SKIP 101106 Ta Có Một Cái Tiến Hóa Điểm
+[161/1428] SKIP 100184 Hokage Chi Ma Vương Tiến Hóa Luận
+[162/1428] SKIP 101284 Hokage Chi Uy Chấn Thiên Hạ
+[163/1428] SKIP 101442 Hỏa Ảnh Chi Lăng Thiên Kiếm Đạo
+[164/1428] SKIP 101446 Thôn Phệ Vạn Giới
+[165/1428] SKIP 100337 Phần Tịch Tinh Không
+[166/1428] SKIP 101721 Bắt Đầu Giết Chóc
+[167/1428] SKIP 101762 Long Châu Chi Tối Cường Sharingan
+[168/1428] SKIP 101801 Đấu La Chi Băng Hoàng
+[169/1428] SKIP 101201 Hướng Về Làng Giải Trí Nã Pháo
+[170/1428] SKIP 101849 Dưỡng Một Con Mèo
+[171/1428] SKIP 100186 Dragon Ball Chi Hành Trình Về Nhà
+[172/1428] SKIP 101706 Một Quyền Nháy Mắt Hạ Gục Hệ Thống
+[173/1428] SKIP 100843 Trùng Sinh Tiểu Thuyết Phản Phái Công Tử
+[174/1428] SKIP 100493 Hắc Khoa Kỹ Cung Ứng Thương
+[175/1428] SKIP 101466 Từ Giờ Phút Này Bắt Đầu Khiến Cho Thế Giới Cảm Thụ Thống Khổ
+[176/1428] SKIP 101103 Xuyên Qua Đại Tần Làm Bạo Quân
+[177/1428] SKIP 100504 Tận Thế Cực Hạn Tìm Đường Chết
+[178/1428] SKIP 100514 Cửu Giai Hacker
+[179/1428] SKIP 101868 Hunter X Hunter Vương Tọa
+[180/1428] SKIP 100505 Chung Cực Vạn Năng Thăng Cấp Hệ Thống
+[181/1428] SKIP 100685 Ta Có Thể Thăng Cấp Thiên Phú A!
+[182/1428] SKIP 100764 Thiên Đạo Tàng Kinh Các
+[183/1428] SKIP 101344 Bán Ra Tương Lai
+[184/1428] SKIP 101501 Siêu Thần Tinh Thẻ Sư
+[185/1428] SKIP 101413 Hải Tặc Chi Thành Tựu Hệ Thống
+[186/1428] SKIP 100513 Ta Là Nội Y Cuồng
+[187/1428] SKIP 101200 Tối Cường Nông Dân Trang Bức Hệ Thống
+[188/1428] SKIP 101547 Ma Pháp Sư
+[189/1428] SKIP 100187 Hokage Chi Vũ Thần Hệ Thống
+[190/1428] SKIP 101865 Hokage Tù Binh
+[191/1428] SKIP 100784 Tuyệt Thế Yêu Đế
+[192/1428] SKIP 100215 Võng Du Chi Tiến Hóa
+[193/1428] SKIP 101248 Du Nhàn Đại Địa Chủ
+[194/1428] SKIP 100818 Tối Cường Internet Thần Hào
+[195/1428] SKIP 101756 Vạn Năng Sửa Chữa Phô
+[196/1428] SKIP 100218 Hokage Chi Gensokyo Đại Đệ Tử
+[197/1428] SKIP 101352 Trường Đạo Tạo Thần Tiên Chức Nghiệp
+[198/1428] SKIP 100595 Tối Cường Hố Hàng Học Sinh
+[199/1428] SKIP 100522 Kêu Gọi Ta A
+[200/1428] SKIP 100686 Onepiece Chi Loạn Nhập Hệ Thống
+[201/1428] SKIP 100789 Tê Thiên Kỷ
+[202/1428] SKIP 101679 Thần Cấp Trò Chơi Ở Cổ Đại
+[203/1428] SKIP 101296 Mạnh Nhất Siêu Cấp Anh Hùng
+[204/1428] SKIP 100188 Vô Hạn Hộ Hoa
+[205/1428] SKIP 100112 Lục Nhân Tuệ Tinh
+[206/1428] SKIP 100656 Ta Có Một Bộ Đại Đế Phân Thân
+[207/1428] SKIP 100811 Hồng Hoang Chi Ta Ở Tây Du Đánh Dấu
+[208/1428] SKIP 101144 Phàm Nhân Tru Tiên Duyên
+[209/1428] SKIP 101553 Đại Chưởng Môn Hệ Thống
+[210/1428] SKIP 100509 Dị Giới Chi Ác Ma Thợ Săn
+[211/1428] SKIP 100618 Thính Linh Sư
+[212/1428] SKIP 100519 Giống Như Cao Thủ Ở Dị Giới
+[213/1428] SKIP 101377 Đấu La Đại Lục Chi Rinnegan
+[214/1428] SKIP 100448 Sử Thượng Đệ Nhất Mật Thám
+[215/1428] SKIP 100455 Cựu Nhật Chúa Tể
+[216/1428] SKIP 100501 Ta Cung Hóa Thương Là Chủ Thần
+[217/1428] SKIP 101791 Slytherin Ma Chú Vương Tử
+[218/1428] SKIP 101249 Thần Sủng Hàng Lâm
+[219/1428] SKIP 100980 Tu Tiên Chúa Tể Ở Đô Thị
+[220/1428] SKIP 100854 Pokemon Tùy Thân Mang Theo Master Ball
+[221/1428] SKIP 101189 Lão Bà Ta Là Nữ Tông Chủ
+[222/1428] SKIP 100348 Trọng Sinh Chi Boxing Sát Thủ
+[223/1428] SKIP 100839 Ta Xem Bói Bằng Wechat
+[224/1428] SKIP 100675 Võng Du Chi Thần Cấp Virus Sư
+[225/1428] SKIP 101646 Trọng Sinh Chi Tán Tài Hệ Thống
+[226/1428] SKIP 101729 Đô Thị Tối Cường Tiện Nhân Chủ Bá
+[227/1428] SKIP 101856 Hải Tặc Vương Chi Đại Thần Buggy
+[228/1428] SKIP 100530 Siêu Phàm Người Chơi
+[229/1428] SKIP 101838 Vô Địch Thôn Phệ Hệ Thống
+[230/1428] SKIP 100981 Vi Khuẩn Tu Tiên
+[231/1428] SKIP 101767 Long Châu Tối Cường Krillin
+[232/1428] SKIP 101874 Hải Tặc Mạnh Nhất Người Buôn Bán
+[233/1428] SKIP 100232 Võng Du Chi Siêu Thần Áo Giáp Đại Sư
+[234/1428] SKIP 100268 Hồng Hoang Chi Hồ Lô Đằng Hệ Thống
+[235/1428] SKIP 101001 Ta Có Thể Vô Hạn Cường Hóa
+[236/1428] SKIP 101798 Konoha Shiranui Genma
+[237/1428] SKIP 101365 Yêu Hầu Ngộ Không
+[238/1428] SKIP 101360 Cực Phẩm Phụ Trợ Hệ Thống
+[239/1428] SKIP 101713 Quyền Hoàng Chi Mộng
+[240/1428] SKIP 101294 Vô Hạn Chi Zombie
+[241/1428] SKIP 101714 Hắc Ám Chấp Pháp Quan
+[242/1428] SKIP 100525 Cự Long Chiến Kỷ
+[243/1428] SKIP 100583 Tri Thức Của Ta Có Thể Bán Ra Tiền
+[244/1428] SKIP 100652 Ta Có Thể Tùy Cơ Hội Lựa Chọn
+[245/1428] SKIP 101751 Kuroko No Basket Một Cái Khác Kỳ Tích
+[246/1428] SKIP 100699 Hogwarts Độc Trứng Gà
+[247/1428] SKIP 101772 Tử Thần Chi Cuồng Đồ
+[248/1428] SKIP 100124 Gôn Thần
+[249/1428] SKIP 100769 Hồng Hoang Hỗn Độn Ma Viên
+[250/1428] SKIP 101797 Harry Potter Chi Ta Là Truyền Kỳ
+[251/1428] SKIP 101126 Vạn Cổ Đệ Nhất Cường Giả
+[252/1428] SKIP 101774 Thiên Đình Đọc Truyện App
+[253/1428] SKIP 100837 Trong Đầu Ta Có Vạn Giới
+[254/1428] SKIP 100930 Người Nguyên Thủy Ta Đến Từ Trái Đất
+[255/1428] SKIP 101252 Yêu Hoàng Thần Sủng Tiến Hóa Hệ Thống
+[256/1428] SKIP 101506 Siêu Thời Không Bình Trắc
+[257/1428] SKIP 100532 Khởi Động Lại Trò Chơi Thời Đại
+[258/1428] SKIP 100537 Làm Bộ Là Cái Boss
+[259/1428] SKIP 100672 Đấu La Chi Ngạo Thế
+[260/1428] SKIP 101450 Thằng Hề Trò Chơi
+[261/1428] SKIP 101717 Tà Phái Chưởng Môn Nhân
+[262/1428] SKIP 101718 Pubg Rơi Xuống Đất Thành Thần
+[263/1428] SKIP 100282 Võng Du: Ta Skill Bị Động Nhiều Lắm
+[264/1428] SKIP 100526 Võng Du Chi Long Kỵ Vô Song
+[265/1428] SKIP 101319 Thảm Cỏ Xanh Thánh Phụ
+[266/1428] SKIP 101404 Tối Cường Phản Phái Kiếm Thần
+[267/1428] SKIP 100759 Siêu Thần Học Viện Chi Hư Không Kim Dực
+[268/1428] SKIP 101323 Cốt Vương Vạn Năng Tiệm Tạp Hóa
+[269/1428] SKIP 101593 Đô Thị Thần Hào Tầm Mỹ Hệ Thống
+[270/1428] SKIP 100231 Võng Du Chi Luân Hồi Tam Quốc
+[271/1428] SKIP 101881 Hỏa Ảnh Chi Siêu Cấp Quang Hoàn Hệ Thống
+[272/1428] SKIP 100498 Cuồng Bạo Công Lược Hệ Thống
+[273/1428] SKIP 101753 Harry Potter Thiên Sinh Phan Phái
+[274/1428] SKIP 100108 Siêu Cấp Cầu Thủ Chạy Cánh
+[275/1428] SKIP 100143 Giới Bóng Đá Tiểu Tướng
+[276/1428] SKIP 101741 Tối Cường Vô Địch Tông Môn
+[277/1428] SKIP 101832 Hải Tặc Vương Chi Cực Ác Thời Đại
+[278/1428] SKIP 101594 Tận Thế Chi Bạo Lực Triệu Hoán Sư
+[279/1428] SKIP 101683 Hải Tặc Chi Ninja Hào
+[280/1428] SKIP 100928 Ta Mang Cửa Hàng Chuyển Kiếp
+[281/1428] SKIP 101739 Hư Không Chi Chủ
+[282/1428] SKIP 101409 Dáng Dấp Quá Hung Làm Sao Bây Giờ
+[283/1428] SKIP 100956 Vạn Giới Qidian
+[284/1428] SKIP 101765 Hải Tặc Vương Chi Thích Khách U Ảnh
+[285/1428] SKIP 100591 Từ Rút Đao Bắt Đầu Hokage Thế Giới
+[286/1428] SKIP 100463 Tuyệt Thế Tiêu Viêm
+[287/1428] SKIP 101763 Prince Of Tennis Break Serve Ngủ Thần
+[288/1428] SKIP 101840 Sử Thượng Tối Cường Cửa Hàng
+[289/1428] SKIP 101649 Từ Lúc Bắt Đầu Liền Vô Địch
+[290/1428] SKIP 100751 Thì Không Thương Nhân Vị Diện Túng Hoành
+[291/1428] SKIP 101338 Gian Phòng Ta Có Cái Tinh Tế Chiến Trường
+[292/1428] SKIP 100106 Tất Sát Túc Cầu
+[293/1428] SKIP 100713 Chiến Thần Tiểu Nông Dân
+[294/1428] SKIP 100666 Ta Tu Luyện Trò Chơi
+[295/1428] SKIP 100290 Hải Tặc: Ta Ăn Ma Bư Quả Thực
+[296/1428] SKIP 101738 Trò Chơi Trao Đổi Nhân Sinh
+[297/1428] SKIP 101847 Bàn Tay Vàng Buôn Bán Thương
+[298/1428] SKIP 100113 Vương Tử Tao Nhã
+[299/1428] SKIP 101685 Dị Giới Văn Hoá Đại Xâm Lấn
+[300/1428] SKIP 100180 Đại Xà Kabuto Nghịch Tập
+[301/1428] SKIP 100518 Dị Giới Vị Diện Thương Nhân
+[302/1428] SKIP 101456 Ma Vật Tế Đàn
+[303/1428] SKIP 100219 Điên Cuồng Nữ Nhi Quốc
+[304/1428] SKIP 100820 Cửu Tử Tiên Tôn
+[305/1428] SKIP 101156 Tây Du: Thần Cấp Sơn Trại Đại Sư
+[306/1428] SKIP 100916 Phố Wall Truyền Kỳ
+[307/1428] SKIP 101216 Nữ Trang Hằng Ngày
+[308/1428] SKIP 100470 Trọng Sinh Chi Người Ngoài Hành Tinh Phụ Thân
+[309/1428] SKIP 100869 Tuyệt Đối Một Lần
+[310/1428] SKIP 101776 Thần Kỳ Cửa Hàng Rèn
+[311/1428] SKIP 100842 Mỹ Mạn Chi Dota Tiệm Tạp Hóa
+[312/1428] SKIP 100761 Hồng Hoang Hỏa Đa
+[313/1428] SKIP 100684 Chí Cao Học Viện
+[314/1428] SKIP 100338 Trọng Sinh Tuyệt Thế Thiên Kiêu
+[315/1428] SKIP 101841 Hải Tặc Chi Lôi Thần Hàng Lâm
+[316/1428] SKIP 100640 Trên Người Mang Theo Một Cái Thế Giới
+[317/1428] SKIP 101486 Vô Tận Ma Diễm
+[318/1428] SKIP 101766 Conan Chi Khai Môn Ta Là Cảnh Sát
+[319/1428] SKIP 101110 Thiên Địa Long Hồn
+[320/1428] SKIP 100205 Trọng Sinh Chi Giả Thuyết Thiên Đế
+[321/1428] SKIP 100269 Hokage Chi Tối Cường Phú Nhị Đại
+[322/1428] SKIP 100356 Từ Tay Bút Đến Siêu Sao
+[323/1428] SKIP 100979 Hải Tặc Chi Thiên Phú Hệ Thống
+[324/1428] SKIP 100822 Vô Hạn Khế Ước Hệ Thống
+[325/1428] SKIP 101222 Đêm Tẫn Phu Quân Về
+[326/1428] SKIP 101317 Trong Marvel Thế Giới Ghost
+[327/1428] SKIP 100347 Đô Thị Chi Thần Cấp Ngoạn Gia
+[328/1428] SKIP 101007 Quét Ngang Ba Ngàn Thế Giới
+[329/1428] SKIP 101150 Địa Cầu Kỷ Nguyên
+[330/1428] SKIP 101092 Đại Sư Chế Tạo Kỹ Năng
+[331/1428] SKIP 101270 Đả Quái Thăng Cấp Tại Đô Thị
+[332/1428] SKIP 101359 Thiên Cửu Vương
+[333/1428] SKIP 101363 Vạn Thánh Kỷ
+[334/1428] SKIP 100536 Ta Không Muốn Làm Yêu Hoàng Thời Gian
+[335/1428] SKIP 100989 Chí Tôn Vô Địch Đế Hoàng
+[336/1428] SKIP 100643 Ta Có Hàng Tỉ Thần Thoại Gien
+[337/1428] SKIP 100710 Đại Đường Tiểu Tướng Công
+[338/1428] SKIP 100792 Nghe Nói Ta Sau Khi Chết Siêu Hung
+[339/1428] SKIP 101180 Thiên Đạo Kiếm Thần
+[340/1428] SKIP 100182 Võ Hiệp Thế Giới Bên Trong Vương Gia
+[341/1428] SKIP 100192 Tống Mạn Chi Thoát Tuyến Nhân Vật Nam Chính
+[342/1428] SKIP 101367 Inuyasha Chi Dạ Phong Đô
+[343/1428] SKIP 101397 Sư Thúc Vô Địch
+[344/1428] SKIP 100105 Bóng Đá Chi Siêu Cấp Huấn Luyện Bản
+[345/1428] SKIP 101795 Hero Academia Mạnh Nhất Kousei
+[346/1428] SKIP 101809 Shokugeki Ta Có Vạn Giới Nguyên Liệu Nấu Ăn
+[347/1428] SKIP 101444 Hokage Trung Học Tập Đại Sư
+[348/1428] SKIP 101837 Tàn Phá Hỏa Ảnh
+[349/1428] SKIP 100227 Võ Hiệp Thành Thần
+[350/1428] SKIP 101862 Chí Tôn Thần Mộ Hệ Thống
+[351/1428] SKIP 100109 Trọng Pháo Chi Vương
+[352/1428] SKIP 100197 Chúa Tể Nhị Thứ Nguyên
+[353/1428] SKIP 100330 Võ Hiệp Tiên Hiệp Thế Giới Trù Thần
+[354/1428] SKIP 100912 Khoa Học Kỹ Thuật Rút Thăm Trúng Thưởng
+[355/1428] SKIP 100982 Phim Ma Thế Giới
+[356/1428] SKIP 100991 Từ Con Kiến Đến Vực Sâu Ma Thần
+[357/1428] SKIP 100490 Vạn Vực Đạo Tâm
+[358/1428] SKIP 100874 One Piece: Thế Giới Chi Vương
+[359/1428] SKIP 100163 Xuyên Qua Trở Thành Bardock
+[360/1428] SKIP 100926 Ta Thành Chu U Vương
+[361/1428] SKIP 101295 Quỷ Dị Tái Sinh Chi Địa Ngục Trò Chơi
+[362/1428] SKIP 101704 Ta Ấu Thuần Nhiễm Mới Không Phải Nữ Thần
+[363/1428] SKIP 100580 Nhẫn Giới Của Ta Có Luân Hồi
+[364/1428] SKIP 100825 Tối Cường Cướp Đoạt Tu Tiên
+[365/1428] SKIP 101573 Ta Muốn Vĩnh Sinh
+[366/1428] SKIP 100502 Vương Bài Đại Lừa Dối
+[367/1428] SKIP 100865 Ta! Thiên Long Nhân! Vô Địch!
+[368/1428] SKIP 100946 Vị Diện Đảo Đản Vương
+[369/1428] SKIP 101648 Clash Of Clans Chi Lĩnh Chủ Hệ Thống
+[370/1428] SKIP 100271 Hokage Thân Thể Thuật Chi Thần
+[371/1428] SKIP 100661 Đấu La Chi Chung Kết Đấu La
+[372/1428] SKIP 100341 Ta Bạn Gái Là Một Mỹ Nhân Ngư
+[373/1428] SKIP 100907 Tối Cường Long Thần Tiến Hóa Hệ Thống
+[374/1428] SKIP 101077 Cực Đạo Cổ Ma
+[375/1428] SKIP 100476 Vạn Cổ Đệ Nhất Tông Môn
+[376/1428] SKIP 100815 Ta Tiểu Thuyết Cộng Đồng Đại Phản Phái
+[377/1428] SKIP 100650 Ta Sủng Thú Dung Hợp Hệ Thống
+[378/1428] SKIP 101806 Hải Tặc Chi Quỵt Cơm Quỷ Đói
+[379/1428] SKIP 100212 Dragon Ball Chi Siêu Vũ Trụ
+[380/1428] SKIP 101034 Vô Địch Thánh Đế
+[381/1428] SKIP 101458 Tổ Tông Trên Cao
+[382/1428] SKIP 100204 Siêu Vị Diện Chinh Phục Hệ Thống
+[383/1428] SKIP 100646 Đại Đường Đệ Nhất Hố Cha Hoàng Tử
+[384/1428] SKIP 101872 Thái Cổ Võ Thần
+[385/1428] SKIP 100248 Hải Tặc Chi Tối Cường Zanpakuto
+[386/1428] SKIP 101375 Tù Trưởng Đừng Đánh Mặt
+[387/1428] SKIP 101702 Hải Tặc Vương Chi Đấm Phát Chết Luôn
+[388/1428] SKIP 101425 Vạn Thiên Chi Tâm
+[389/1428] SKIP 100155 Siêu Cấp Võ Hiệp Phó Bản Hệ Thống
+[390/1428] SKIP 100914 Thần Cấp Nhận Thầu Thương
+[391/1428] SKIP 101563 Hỗn Độn Thần Linh Quyết
+[392/1428] SKIP 100594 Vạn Năng Số Liệu
+[393/1428] SKIP 101469 Luân Hồi Đại Kiếp Chủ
+[394/1428] SKIP 100256 Hồng Hoang Chi Vận Mệnh Ma Thần
+[395/1428] SKIP 100499 Trọng Sinh Tây Du Chi Tam Giới Độc Tôn
+[396/1428] SKIP 101602 Pokemon Siêu Cấp Hệ Thống
+[397/1428] SKIP 100778 Siêu Cấp Vị Diện Giao Dịch Võng
+[398/1428] SKIP 100943 Tiên Đoán
+[399/1428] SKIP 100506 Trên Núi Sủng Thê: Nhặt Được Nàng Dâu
+[400/1428] SKIP 100586 Nhất Nhân Chi Lực
+[401/1428] SKIP 100951 Trọng Sinh Nhật Bản Tố Giam Đốc
+[402/1428] SKIP 101808 Vô Hạn Thôn Phệ Chi Trọng Sinh Lão Hổ
+[403/1428] SKIP 100224 Hokage Chi Thần Chi Uchiha
+[404/1428] SKIP 100531 Vô Địch Tiểu Hoàng Thúc
+[405/1428] SKIP 100851 Vô Hạn Điện Ảnh Sát Lục
+[406/1428] SKIP 101353 Hồn Chiến Thánh Đế
+[407/1428] SKIP 100659 Từ Đấu La Bắt Đầu Vạn Giới Vô Địch
+[408/1428] SKIP 101219 Biến Thân Khuynh Thành Nữ Thần
+[409/1428] SKIP 101735 Siêu Cấp Vô Hạn Nạp Tiền Hệ Thống
+[410/1428] SKIP 100687 Marvel Chi Loạn Nhập Luân Bàn
+[411/1428] SKIP 100952 Hải Tặc Vương Chi Chung Cực Phân Thân
+[412/1428] SKIP 101325 Đại Hiệp Tiêu Kim Diễn
+[413/1428] SKIP 100746 Vô Hạn Chi Tối Cường Chủ Thần
+[414/1428] SKIP 101439 Nhất Quyền Trù Thần
+[415/1428] SKIP 101705 Ta Mỹ Nữ Đại Tiểu Thư
+[416/1428] SKIP 101010 Vô Địch Từ Thiết Bố Sam Bắt Đầu
+[417/1428] SKIP 101610 Từ Đấu Phá Bắt Đầu Làm Cá Mặn
+[418/1428] SKIP 100270 Hokage Chi Siêu Thần Uchiha
+[419/1428] SKIP 101134 Cuồng Bạo Lôi Thần
+[420/1428] SKIP 101627 Tinh Ngục Tù Võ
+[421/1428] SKIP 100682 Vạn Cổ Thánh Vương
+[422/1428] SKIP 100802 Vô Địch Từ Max Cấp Thiên Phú Bắt Đầu
+[423/1428] SKIP 101145 Ta Vô Địch Mười Vạn Năm
+[424/1428] SKIP 101692 Khủng Bố Lệnh Truy Nã
+[425/1428] SKIP 100195 Hokage Chi Siêu Cấp Phụ Trợ
+[426/1428] SKIP 100327 Marvel Thế Giới Cá Ướp Muối
+[427/1428] SKIP 100404 Nhị Thứ Nguyên Chi Phiến Dực Hàng Lâm
+[428/1428] SKIP 100488 Ta Cho Thần Tiên Làm Dẫn Chương Trình
+[429/1428] SKIP 100740 Kiếm Đạo Sát Đồ
+[430/1428] SKIP 101546 Ác Ma Đảo
+[431/1428] SKIP 101678 Khoa Học Thần Giáo
+[432/1428] SKIP 100853 Hokage Thứ Nguyên Lừa Dối Đại Sư
+[433/1428] SKIP 100971 Tu Chân Tù Trưởng
+[434/1428] SKIP 100130 Nhất Đại Cầu Thần Trương Thiết Hán
+[435/1428] SKIP 101160 Siêu Cấp Thương Nghiệp Đế Quốc
+[436/1428] SKIP 101652 Marvel Chi Hokage Ninjia Phiêu Lưu Ký
+[437/1428] SKIP 101803 Hải Tặc Chi Đại Tướng Akainu
+[438/1428] SKIP 100709 Hồng Mông Đại Đế Hệ Thống
+[439/1428] SKIP 100339 Đông Phương Thần Thoại Hệ Thống
+[440/1428] SKIP 100768 Hokage Sống Ngàn Năm
+[441/1428] SKIP 101522 Hải Tặc Chi Người Chết Ngục Giam
+[442/1428] SKIP 100121 Bóng Rổ Giải Trí Thiên Vương
+[443/1428] SKIP 101815 Nhị Thứ Nguyên Người Sáng Lập
+[444/1428] SKIP 100239 Akame Ga Kill Chi Thiên Tài Hệ Thống
+[445/1428] SKIP 100466 Thiên Cực Luân Hồi
+[446/1428] SKIP 100528 Cuối Cùng Hạo Kiếp
+[447/1428] SKIP 101684 Văn Ngu Đại Lão Tự Mình Dưỡng Thành
+[448/1428] SKIP 100511 Ta Cương Thi Quân Đoàn
+[449/1428] SKIP 101130 Triệu Hoán Thiên Kiêu
+[450/1428] SKIP 101603 Ta Tại Tận Thế Nhặt Bảo Rương
+[451/1428] SKIP 101064 Thần Khí Trồng Trọt Không Gian
+[452/1428] SKIP 100604 Võng Du Chi Kiếm Lý Sơn Hà
+[453/1428] SKIP 101408 Vô Địch Từ Thức Tỉnh Bắt Đầu
+[454/1428] SKIP 101583 Vô Địch Tiên Vương
+[455/1428] SKIP 100200 Xuyên Việt Giả Sát Thủ
+[456/1428] SKIP 101647 Mua Căn Biệt Thự Thu Phế Liệu
+[457/1428] SKIP 100995 Đẩy Xuống Cái Này Tòa Tháp
+[458/1428] SKIP 101104 Tam Giới Cục Cải Tạo Lao Động
+[459/1428] SKIP 101053 Ngộ Không Xem Chat Riêng
+[460/1428] SKIP 101125 Vạn Giới Thánh Sư
+[461/1428] SKIP 101253 Ta Tuyệt Sắc Nữ Hoàng
+[462/1428] SKIP 101368 Hoan Nghênh Đi Vào Boss Đội
+[463/1428] SKIP 100210 Dragon Ball Chi Lực Lượng Chí Thượng
+[464/1428] SKIP 100598 Siêu Cấp Chủ Bá Khen Thưởng Hệ Thống
+[465/1428] SKIP 101236 Cửu Ấn Thần Hoàng
+[466/1428] SKIP 101867 Dị Giới Sảng Nhất Hệ Thống
+[467/1428] SKIP 101835 Vô Địch Chi Du Nhàn
+[468/1428] SKIP 101855 Ta Võ Hồn Là Ác Ma Quả Thực
+[469/1428] SKIP 100756 Vui Chơi Giải Trí Cao Thủ
+[470/1428] SKIP 100790 Ta Đến Dị Giới Phóng Vệ Tinh
+[471/1428] SKIP 100293 Võng Du Tam Quốc: Phó Chức Nghiệp Tông Sư
+[472/1428] SKIP 100849 Vô Hạn Valoran
+[473/1428] SKIP 101732 Đại Đường Hảo Đại Ca
+[474/1428] SKIP 100285 Võng Du Toàn Vũ Trụ : Vô Địch Thiên Phú
+[475/1428] SKIP 100481 Dạ Hoàn
+[476/1428] SKIP 100103 Hư Trúc Truyền Nhân Bóng Đá Lữ Trình
+[477/1428] SKIP 101768 Vô Hạn Anime Lữ Tục
+[478/1428] SKIP 101830 Manga Anime Anh Hùng Vs Tu Tiên Liên Minh
+[479/1428] SKIP 101882 Tống Mạn Trọng Sinh Sôn Gô Han
+[480/1428] SKIP 100325 Vô Hạn Chi Thần Thoại Trọng Sinh
+[481/1428] SKIP 100117 Trọng Sinh Định Tam Quốc
+[482/1428] SKIP 100512 Anh Hùng Liên Minh Chi Mạnh Nhất Ái Muội
+[483/1428] SKIP 101725 Câu Lạc Bộ Ác Quỷ
+[484/1428] SKIP 101607 Huyền Huyễn Chi Bản Tôn Đạo Huyền
+[485/1428] SKIP 100474 Hệ Thống Mang Ta Xuyên Vạn Giới
+[486/1428] SKIP 100135 Ta Là Quaresma
+[487/1428] SKIP 100226 Mạt Thế Sân Đấu
+[488/1428] SKIP 101289 S.h.i.e.l.d Tân Tấn Nhân Viên
+[489/1428] SKIP 101374 Pokemon Chi Bất Tử Điểu
+[490/1428] SKIP 101251 Vô Thượng
+[491/1428] SKIP 101310 Huyết Sát Thiên Ma
+[492/1428] SKIP 100948 Trọng Sinh Chi Cửu Vĩ Hung Miêu
+[493/1428] SKIP 101628 Thiên Cổ Đế Hoàng
+[494/1428] SKIP 101866 Cực Phẩm Đấu Tôn
+[495/1428] SKIP 100351 Võ Hiệp Chi Trang Bức Đả Kiểm Hệ Thống
+[496/1428] SKIP 100763 Hỗn Nguyên Võ Tông
+[497/1428] SKIP 100238 Nhị Thứ Nguyên Chi Bước Lên Đỉnh Phong
+[498/1428] SKIP 100975 Cực Đạo Kỵ Sĩ
+[499/1428] SKIP 100206 Võng Du Tam Quốc Chi Thiên Hạ Anh Hào
+[500/1428] SKIP 100533 Vô Địch Thiên Tử
+[501/1428] SKIP 101055 Nhật Ký Kiếm Linh Cùng Ở Chung
+[502/1428] SKIP 101127 Tặc Cảnh
+[503/1428] SKIP 101424 Thông U Đại Thánh
+[504/1428] SKIP 100847 Đế Quốc Chi Tâm
+[505/1428] SKIP 100942 Siêu Cấp Đường Tăng Xông Tây Du
+[506/1428] SKIP 100395 Vạn Pháp Độc Tôn
+[507/1428] SKIP 100758 Vĩnh Chưởng Thần Quyền
+[508/1428] SKIP 100864 One Piece Cách Mạng Đạo Sư
+[509/1428] SKIP 100164 Ta Muốn Ăn Vĩ Thú
+[510/1428] SKIP 101208 Ta Ba Ngàn Năm Luyện Khí
+[511/1428] SKIP 101778 Long Châu Chi Tiến Công Raditz
+[512/1428] SKIP 100841 Đảo Hoang Cầu Sinh Trùng Sinh Mãng Xà
+[513/1428] SKIP 101698 Ma Diễm Thương Khung
+[514/1428] SKIP 101892 Mạnh Nhất Tôn Ngộ Không
+[515/1428] SKIP 100500 Trọng Phản Mạt Thế Thi Địa
+[516/1428] SKIP 101449 Siêu Thần Thiên Tài Hệ Thống
+[517/1428] SKIP 101656 Trạch Nam Quật Khởi
+[518/1428] SKIP 100783 Võ Hiệp Thế Giới Đại Minh Tinh
+[519/1428] SKIP 100947 Ngã Đích Nữ Nhi Thị Hấp Huyết Quỷ
+[520/1428] SKIP 101205 Tân Thủ Thôn Thôn Trưởng
+[521/1428] SKIP 101257 Đi Lệch Đường Ma Pháp Sư
+[522/1428] SKIP 100587 Ta Không Muốn Làm Ảnh Đế
+[523/1428] SKIP 100929 Ta Có Một Cái Thế Giới Vong Linh
+[524/1428] SKIP 100782 Vị Diện Quest Thưởng Hệ Thống
+[525/1428] SKIP 100431 Hokage Chi Hoshikage Thiên Hạ
+[526/1428] SKIP 101663 Đô Thị Huyết Thần
+[527/1428] SKIP 100253 Hokage Chi Hắc Ám Naruto
+[528/1428] SKIP 100517 Chủ Kí Sinh Xin Dừng Bước
+[529/1428] SKIP 100597 Toàn Năng Khoa Kỹ Cự Đầu
+[530/1428] SKIP 100944 Tối Cường Vị Diện Lộ Nhân
+[531/1428] SKIP 101341 Ta Có Thể Biến Thành Cá
+[532/1428] SKIP 100236 Hokage Chi Vô Sỉ Giáo Sư
+[533/1428] SKIP 100715 Long Hồn Chiến Đế
+[534/1428] SKIP 101782 Tận Thế Chi Siêu Thị Hệ Thống
+[535/1428] SKIP 100520 Tịch Diệt Thiên Kiêu
+[536/1428] SKIP 100791 Trọng Sinh Đại Phản Phái
+[537/1428] SKIP 101123 Tửu Thần Trang Viên
+[538/1428] SKIP 101390 Đô Thị Tối Cường Nghịch Thiên Chúa Tể
+[539/1428] SKIP 100181 Xuyên Việt Võ Hiệp Thế Giới
+[540/1428] SKIP 100244 Võ Hiệp Chi Siêu Thần Chưởng Khống Giả
+[541/1428] SKIP 100760 Đô Thị Võ Hiệp Thế Giới Đại Khảo Sát
+[542/1428] SKIP 101003 Kiếm Thánh Liền Nên Ra Tank
+[543/1428] SKIP 100551 Siêu Cấp Vô Địch Ký Sinh
+[544/1428] SKIP 101229 Mạnh Nhất Long Ngạo Thiên
+[545/1428] SKIP 101100 Đại Ma Vương Không Hợp Cách
+[546/1428] SKIP 101651 Siêu Cấp Buôn Lậu Hệ Thống
+[547/1428] SKIP 100191 Loli Cướp Đoạt Chi Thư
+[548/1428] SKIP 100272 Ta Dị Năng Là Toàn Thế Giới Nữ Nhi
+[549/1428] SKIP 100398 Vô Hạn Vĩnh Sinh Lục
+[550/1428] SKIP 100605 Sáng Tạo Du Hí Thế Giới
+[551/1428] SKIP 101097 Thần Cấp Văn Minh
+[552/1428] SKIP 101131 Comic Chi Amazo Khải Giáp
+[553/1428] SKIP 101631 Hồng Hoang Chi Minh Hoàng
+[554/1428] SKIP 100670 Đấu La Chi Chư Thiên Thăng Cấp
+[555/1428] SKIP 100208 Võng Du Chi Linh Bảo
+[556/1428] SKIP 101760 Mang Theo Mộng Ảo Hệ Thống Xông Hỏa Ảnh
+[557/1428] SKIP 101470 Ngự Cửu Thiên
+[558/1428] SKIP 101373 Đấu Phá Chi Dược Phong
+[559/1428] SKIP 101298 Ta Là Thế Giới Thụ
+[560/1428] SKIP 100234 Trọng Sinh Tây Du Chi Nghịch Thiên Hệ Thống
+[561/1428] SKIP 100529 Colorfast Pháp Thần
+[562/1428] SKIP 100876 Cao Sơn Mục Trường
+[563/1428] SKIP 101140 Gia Miện Vi Vương
+[564/1428] SKIP 101852 Ta Tiên Nữ Đại Lão Bà
+[565/1428] SKIP 100359 Tối Cường Đường Tăng Chiến Tây Du
+[566/1428] SKIP 100901 Đô Thị Tu Chân Truyện
+[567/1428] SKIP 101857 Cửu Chuyển Thần Ma
+[568/1428] SKIP 100945 Vu Sư Ký
+[569/1428] SKIP 101137 Hồng Hoang Chi Thái Nhất Chứng Đạo Lộ
+[570/1428] SKIP 100645 Ta Bảy Tuổi Liền Thành Tổ Sư Gia
+[571/1428] SKIP 101644 Vô Địch Tu Tiên Thăng Cấp Hệ Thống
+[572/1428] SKIP 101834 Hỏa Ảnh Mạnh Nhất Dung Độn
+[573/1428] SKIP 101682 Hải Tặc Chi Khống Chế Vector
+[574/1428] SKIP 101755 Hokage Chi Choutetsu Senmei
+[575/1428] SKIP 101793 Red Ribbon Army Hành Trình
+[576/1428] SKIP 100101 Vị Diện Pháo Hôi Cấp Cứu Trạm
+[577/1428] SKIP 101309 Nghịch Loạn Thiên Cổ
+[578/1428] SKIP 101707 Thiên Đình Quán Net
+[579/1428] SKIP 101605 Là Nam Nhân Phải Sống Qua 999 Ngày
+[580/1428] SKIP 101326 Cùng Ronaldo Đồng Thời Đá Bóng Thời Gian
+[581/1428] SKIP 100795 Không Cẩn Thận Đem Địa Cầu Lộng Tạc
+[582/1428] SKIP 100910 Đế Võ Đại Hệ Thống
+[583/1428] SKIP 101870 Long Phi Phách Võ
+[584/1428] SKIP 101787 Ta Không Phải Đại Minh Tinh A
+[585/1428] SKIP 101030 Vô Giới Tiên Hoàng
+[586/1428] SKIP 100198 Hokage Chi Linh Vương Naruto
+[587/1428] SKIP 100994 Hiệp Khí Bức Người
+[588/1428] SKIP 101543 Dịch Đỉnh
+[589/1428] SKIP 100213 Hokage Chi Daiguren Hyourinmaru
+[590/1428] SKIP 101285 Giáng Lâm 1994
+[591/1428] SKIP 101876 Huyền Huyễn Chi Thái Hư Thần Đế
+[592/1428] SKIP 100255 Huyền Huyễn Chi Ta Sở Hữu Bàn Cổ Huyết
+[593/1428] SKIP 101217 Biến Thân Xuyên Qua Cửu Vĩ Hồ Tiên
+[594/1428] SKIP 100407 Toàn Năng Tu Luyện Chí Tôn
+[595/1428] SKIP 100816 Chăm Chỉ Nỗ Lực Ta Không Tính Bật Hack
+[596/1428] SKIP 101861 Hokage Chi Gory Ryujiri
+[597/1428] SKIP 101322 Siêu Cấp Tiên Đoán Đại Sư
+[598/1428] SKIP 101306 Manh Manh Cô Vợ Nhỏ
+[599/1428] SKIP 101488 Trọng Sinh Thương Nghiệp Ông Trùm
+[600/1428] SKIP 101827 Phẫn Nộ Thi Huynh
+[601/1428] SKIP 100453 Ta Thật Không Phải Đại Lão
+[602/1428] SKIP 100780 Sử Thượng Mạnh Nhất Thiêu Đốt Hệ Thống
+[603/1428] SKIP 101291 Tham Thiên
+[604/1428] SKIP 100344 Tối Cường Vạn Năng Học Sinh
+[605/1428] SKIP 100742 Kinh Thiên Vũ Tổ
+[606/1428] SKIP 101293 Của Ta Thần Cấp Alipay
+[607/1428] SKIP 101754 Hokage Ác Ma Pháp Tắc
+[608/1428] SKIP 100554 Mạt Thế Chi Cô Thành
+[609/1428] SKIP 101491 Lục Tích Chi Tinh Hà Sáng Thế
+[610/1428] SKIP 100193 Pokemon Chi Vân Phong
+[611/1428] SKIP 101414 Chế Tạo Siêu Huyền Huyễn Thế Giới
+[612/1428] SKIP 101700 Hải Tặc Chi Hóa Thân Vì Lôi
+[613/1428] SKIP 100451 Từ Bệnh Viện Tâm Thần Đi Ra Cường Giả
+[614/1428] SKIP 101873 High School Dxd Chi Vô Tận Cướp Đoạt
+[615/1428] SKIP 100240 Tống Mạn Chi Thứ Nguyên Giao Dịch
+[616/1428] SKIP 100963 Tây Du Chi Xuyên Việt Chư Thiên
+[617/1428] SKIP 100230 Võ Hiệp Huyền Huyễn Chi Vạn Giới Tà Đế
+[618/1428] SKIP 101745 Từ Kẻ Chép Văn Đến Toàn Đại Lục Siêu Sao
+[619/1428] SKIP 100859 Tại Pokemon Thế Giới Kẽ Hở Cầu Sinh
+[620/1428] SKIP 101292 Hokage Họa Hại
+[621/1428] SKIP 101642 Hoàn Mỹ Cơ Giáp Kiếm Thần
+[622/1428] SKIP 101792 Vũ Trụ Tối Cường Tạo Thần Hệ Thống
+[623/1428] SKIP 100473 Cực Phẩm Toàn Năng Học Phách
+[624/1428] SKIP 100573 Tối Chung Liệp Sát
+[625/1428] SKIP 100748 Thôn Phệ Cuồng Đế
+[626/1428] SKIP 100432 Hải Tặc Chi Dị Thứ Nguyên Tạp Tổ
+[627/1428] SKIP 101096 Điên Cuồng Kiến Thôn Lệnh
+[628/1428] SKIP 100722 Võ Nghịch Cửu Thiên
+[629/1428] SKIP 101664 Dị Giới Phong Thần Hệ Thống
+[630/1428] SKIP 101800 Các Ngươi Nhị Thứ Nguyên Thật Biết Chơi
+[631/1428] SKIP 100565 Trọng Sinh Chi Võ Thần Đạo
+[632/1428] SKIP 100838 Tại Tu Tiên Giới Chơi Game Online
+[633/1428] SKIP 101247 Siêu Thần Đại Quản Gia
+[634/1428] SKIP 100461 Ta Mạt Thế Căn Cứ Xe
+[635/1428] SKIP 100638 Cực Vũ Huyền Đế
+[636/1428] SKIP 101139 Cực Quyền Bạo Quân
+[637/1428] SKIP 101238 Mở Cái Hồng Bao Này
+[638/1428] SKIP 100120 Trọng Sinh 1994 Chi Giới Bóng Đá Phong Vân 2
+[639/1428] SKIP 101204 Mạnh Nhất Trong Lịch Sử Giao Lưu Nhóm
+[640/1428] SKIP 101334 Đại Phù Triện Sư
+[641/1428] SKIP 101411 Chư Thần Du Hí
+[642/1428] SKIP 101343 Ta Là Đại Người Chơi
+[643/1428] SKIP 101372 Trù Đạo Tiên Đồ
+[644/1428] SKIP 101585 Hải Tặc Chi Vô Hạn Điểm Kỹ Năng
+[645/1428] SKIP 100540 Đan Võ Cửu Trọng Thiên
+[646/1428] SKIP 100119 Truyền Kỳ Cò Môi Giới
+[647/1428] SKIP 101554 Vạn Giới Cộng Hưởng Hệ Thống
+[648/1428] SKIP 100627 Dị Giới Đại Thôn Trưởng
+[649/1428] SKIP 100673 Võng Du Chi Ta Có Thể Dung Hợp Hài Cốt
+[650/1428] SKIP 100766 Siêu Cường Tùy Cơ Hệ Thống
+[651/1428] SKIP 101596 Pokemon Nhà Thám Hiểm
+[652/1428] SKIP 100588 Nhà Ta Có Cái Tiên Hiệp Thế Giới
+[653/1428] SKIP 100440 Ta Là Vạn Cổ Chúa Tể
+[654/1428] SKIP 101261 Võng Du Tận Thế Toàn Chức Đại Sư
+[655/1428] SKIP 100949 Thần Cấp Kiếm Hồn Hệ Thống
+[656/1428] SKIP 100990 Gấu Sinh Từ Vượt Ngục Bắt Đầu
+[657/1428] SKIP 101826 Tối Cường Cuồng Bạo Chiến Đế
+[658/1428] SKIP 100800 Nương Tử Là Tuyệt Thế Cao Thủ
+[659/1428] SKIP 100803 Hắn! Tới Từ Luyện Ngục
+[660/1428] SKIP 101779 Ta Ở Tiên Hiệp Có Gian Khách Sạn
+[661/1428] SKIP 101020 Ngũ Hành Thiên
+[662/1428] SKIP 100767 Đao Kiếm Tẩy Tàn Dương
+[663/1428] SKIP 101625 Võ Hiệp Thế Giới Luân Hồi Giả
+[664/1428] SKIP 100128 Ta Họ Ferguson
+[665/1428] SKIP 101674 Tối Cường Khủng Bố Hệ Thống
+[666/1428] SKIP 101014 Hồng Mông Thánh Chủ
+[667/1428] SKIP 101032 Thiên Ảnh
+[668/1428] SKIP 100579 Như Lai Nhất Định Phải Bại
+[669/1428] SKIP 100840 Nhị Thứ Nguyên Vương Tọa
+[670/1428] SKIP 101485 Hồng Hoang Thần Tôn
+[671/1428] SKIP 100998 Tùy Thân Mang Cái Rút Thưởng Bảng
+[672/1428] SKIP 100582 Thôn Phệ Tinh Không Hắc Long Truyền Thuyết
+[673/1428] SKIP 100967 Tỷ Tỷ Của Ta Là Đại Minh Tinh
+[674/1428] SKIP 101825 Siêu Cấp Yêu Hầu Xông Tây Du
+[675/1428] SKIP 101560 Từ Tiên Giới Trở Về Trù Thần
+[676/1428] SKIP 100960 Đại Sát Lục Hệ Thống
+[677/1428] SKIP 100744 Cửu Giới Tuyệt Thần
+[678/1428] SKIP 101051 Sư Nương, Đừng Đùa Lửa
+[679/1428] SKIP 100207 Mạt Thế Một Giây Đồng Hồ
+[680/1428] SKIP 101789 Điện Ảnh Học Tập Hệ Thống
+[681/1428] SKIP 101008 Dị Thế Giới Đạo Môn
+[682/1428] SKIP 101041 Huyền Môn Bại Gia Tử
+[683/1428] SKIP 100584 Trăm Vạn Khả Năng
+[684/1428] SKIP 101385 Thiên Hạ Đệ Nhất Kiếm Đạo
+[685/1428] SKIP 101512 Thứ Tộc Vô Danh
+[686/1428] SKIP 101799 Ta Giả Vờ Có Dị Năng
+[687/1428] SKIP 100414 Phi Kiếm Vấn Đạo
+[688/1428] SKIP 101555 Tối Cường Vạn Giới Đại Xuyên Việt
+[689/1428] SKIP 100110 Hoàn Mỹ Giữa Sân
+[690/1428] SKIP 100846 Thời Gian Ta Tại Làng Chài Nhật Bản
+[691/1428] SKIP 100201 Võ Đạo Chi Vô Tận Luân Hồi
+[692/1428] SKIP 100603 Ta Có Thể Nhìn Thấy Điểm Kinh Nghiệm
+[693/1428] SKIP 101102 Càn Khôn Thiên Cơ Đồ
+[694/1428] SKIP 101037 Võ Đạo Tông Sư
+[695/1428] SKIP 101061 Tiểu Tu Hành
+[696/1428] SKIP 101086 Máy Sửa Chữa Công Pháp
+[697/1428] SKIP 100688 Negary Chi Hồn
+[698/1428] SKIP 101199 Làng Giải Trí Hỏa Bạo Thiên Vương
+[699/1428] SKIP 100471 Khoan Thai Sơn Trang
+[700/1428] SKIP 101297 Thất Giới Sát Thần
+[701/1428] SKIP 101090 Ta Đoạt Xá Ma Hoàng
+[702/1428] SKIP 100262 Huyền Huyễn Chi Vô Song Rút Thưởng
+[703/1428] SKIP 100885 Linh Hồ Không Gian
+[704/1428] SKIP 100336 Đô Thị Thần Tài
+[705/1428] SKIP 101730 Ba Nghìn Kiếm Giới
+[706/1428] SKIP 100492 Mạnh Nhất Lịch Sử Hố Cha Hệ Thống
+[707/1428] SKIP 100781 Vô Địch Miểu Sát Thăng Cấp
+[708/1428] SKIP 101497 Thành Thần Từ Nguyên Thủy Bộ Lạc Bắt Đầu
+[709/1428] SKIP 101658 Vô Thượng Thánh Thiên
+[710/1428] SKIP 100438 Tiền Nhiệm Vô Song
+[711/1428] SKIP 100823 Nữ Thần Cướp Đoạt Hệ Thống
+[712/1428] SKIP 101242 Toàn Năng Danh Sư Hệ Thống
+[713/1428] SKIP 100439 Thương Nguyên Đồ
+[714/1428] SKIP 100984 Hoàng Đình Đạo Chủ
+[715/1428] SKIP 100966 Tại Tiên Giới Đương Mangaka
+[716/1428] SKIP 100469 Võng Du Trọng Sinh Chi Thiên Diện Lang Quân
+[717/1428] SKIP 100430 Hokage Chi Thần Thâu Hệ Thống
+[718/1428] SKIP 101342 Nhất Đao Phách Khai Sinh Tử Lộ
+[719/1428] SKIP 100622 Vô Hạn Thăng Cấp Chi Ác Ma Hoàng Đế
+[720/1428] SKIP 101230 Võng Du Chi Thiên Trận
+[721/1428] SKIP 101680 Sử Thượng Tối Cường Miệng Thối
+[722/1428] SKIP 100199 Mạt Thế Chi Thẻ Bài Đại Sư
+[723/1428] SKIP 100877 Siêu Cấp Đào Bảo
+[724/1428] SKIP 100378 Có Tiền Liền Biến Cường
+[725/1428] SKIP 101147 Marvel Chi Thanos Tiểu Đệ Đệ
+[726/1428] SKIP 100835 Lại Đi Kiêu Hùng Đường
+[727/1428] SKIP 101672 Tối Cường Chưởng Môn Hối Đoái Hệ Thống
+[728/1428] SKIP 101796 Học Bá Cũng Mở Hack
+[729/1428] SKIP 101094 Chư Thiên Nhất Hiệt
+[730/1428] SKIP 100233 Võ Hiệp Chi Đơn Đấu Các Thế Giới
+[731/1428] SKIP 100122 Bóng Đá Máy Sửa Chữa
+[732/1428] SKIP 100918 Tự Tại Nước Mỹ Cuộc Sống Điền Viên
+[733/1428] SKIP 101355 Ngược Dòng Hồn Nhiên Những Năm Tháng
+[734/1428] SKIP 101083 Thần Cấp Thẻ Bài
+[735/1428] SKIP 101481 Siêu Thần Chế Tạp Sư
+[736/1428] SKIP 100437 Cửu Thiên
+[737/1428] SKIP 100845 Quân Lâm Chư Thiên
+[738/1428] SKIP 101863 Nhẫn Giả Chiêu Mộ Đại Sư
+[739/1428] SKIP 101894 Tống Mạn Chi Ái Sát Hồng Nhan
+[740/1428] SKIP 101357 Biến Thân Người Qua Đường Nữ Chính
+[741/1428] SKIP 100632 Võng Du Chi Thần Cấp Thôn Trưởng
+[742/1428] SKIP 101321 Sơn Hải Vũ Hoàng Ký
+[743/1428] SKIP 100895 Nhà Ta Cửa Sau Thông Mạt Thế
+[744/1428] SKIP 100578 Thời Không Lữ Xá Của Ta
+[745/1428] SKIP 100606 Trở Lại 2006
+[746/1428] SKIP 100941 Siêu Cấp Thánh Thụ
+[747/1428] SKIP 101484 Mộng Tưởng Là Vua
+[748/1428] SKIP 100639 Lão Bà Của Ta Là Đại Boss
+[749/1428] SKIP 101122 Võng Hóa Cung Ứng Thương Nghiệp
+[750/1428] SKIP 100249 Pokemon Chi Pkm Của Ta Đều Là Truyền Thuyết
+[751/1428] SKIP 100757 Hồng Hoang Chi Thần Hoàng Kỷ Nguyên
+[752/1428] SKIP 101437 Ma Pháp Nông Phu
+[753/1428] SKIP 100927 Huyết Tinh Linh Quật Khởi
+[754/1428] SKIP 100159 Mạt Thế Chi Đấu Loại Trò Chơi
+[755/1428] SKIP 100468 Tinh Hải Tranh Bá Làm Trùng Tộc Hoàng Đế
+[756/1428] SKIP 100850 Tại Liêu Trai Làm Hiền Giả
+[757/1428] SKIP 101701 Vô Tội Mưu Sát
+[758/1428] SKIP 101389 Tạo Mộng Thiên Sư
+[759/1428] SKIP 101112 Hồi Sinh 2003
+[760/1428] SKIP 101571 Tu Chân Trở Về
+[761/1428] SKIP 100280 Trẫm Con Dân Thật Không Phải Là Npc
+[762/1428] SKIP 100472 Nông Thôn Nông Dân Thấu Thị Y
+[763/1428] SKIP 100374 Siêu Cấp Ăn Hàng Hệ Thống
+[764/1428] SKIP 100343 Thần Giới Bá Phóng Khí
+[765/1428] SKIP 100510 Võng Du Chi Tối Cường Đế Linh
+[766/1428] SKIP 101015 Thế Giới Tiên Hiệp
+[767/1428] SKIP 101350 Ta Là Vardy
+[768/1428] SKIP 101223 Hàn Ngu Chi Mộng
+[769/1428] SKIP 101720 Ta Phá Án Ở Địa Phủ
+[770/1428] SKIP 100868 Ta Chính Là Hellscream
+[771/1428] SKIP 100202 Liên Minh Anh Hùng Chi Vô Địch Thăng Cấp
+[772/1428] SKIP 100663 Đô Thị Chi Vô Hạn Lựa Chọn Hệ Thống
+[773/1428] SKIP 100917 Mạt Thế Chi Vô Tận Thương Điếm
+[774/1428] SKIP 100932 Đô Thị Tối Cường Thái Tử Gia
+[775/1428] SKIP 101785 Toàn Năng Siêu Sao Vú Em
+[776/1428] SKIP 100515 Võng Du Chi Tiêu Cục
+[777/1428] SKIP 101000 Từ Đại Lão Đến Võ Lâm Minh Chủ
+[778/1428] SKIP 100844 Cực Phẩm Xuyên Việt Hệ Thống
+[779/1428] SKIP 101101 Thái Thượng Chấp Phù
+[780/1428] SKIP 101723 Ta Thừa Kế Ác Quỷ Phòng
+[781/1428] SKIP 100625 Võ Hồn Rút Thăm Trúng Thưởng Hệ Thống
+[782/1428] SKIP 100211 Hokage Nhẫn Thuật Đại Tông Sư
+[783/1428] SKIP 101283 Siêu Cấp Thẻ Bài Hệ Thống
+[784/1428] SKIP 101369 Ta Là Tiên Phàm
+[785/1428] SKIP 101839 Vạn Vực Tà Đế
+[786/1428] SKIP 101329 Ta Là Phía Sau Màn Lão Đại
+[787/1428] SKIP 100156 U Minh Chi Chủ
+[788/1428] SKIP 101884 Hải Tặc Vương Chi Làm Theo Ý Mình
+[789/1428] SKIP 100102 Red Rebels
+[790/1428] SKIP 100189 Tần Thời Minh Nguyệt Chi Chưởng Môn Nhân
+[791/1428] SKIP 100987 Chế Bá Nữ Quyền Thế Giới
+[792/1428] SKIP 101697 Trời Sinh Xui Xẻo Trứng
+[793/1428] SKIP 100824 Ta Tuyệt Mỹ Tổng Tài Lão Bà
+[794/1428] SKIP 101483 Thần Hào Không Cực Hạn
+[795/1428] SKIP 100355 Đô Thị Tối Cường Tu Tiên
+[796/1428] SKIP 101383 Thiên Kiếm Thần Đế
+[797/1428] SKIP 100660 Vô Địch Chí Tôn Thái Tử Gia
+[798/1428] SKIP 101245 Thần Sủng Tiến Hóa
+[799/1428] SKIP 101040 Chủ Thần Quật Khởi
+[800/1428] SKIP 100508 Quỷ Vợ
+[801/1428] SKIP 100657 Ta Đoạt Xá Đế Vương
+[802/1428] SKIP 101462 Siêu Thần Cơ Giới Quân Đoàn
+[803/1428] SKIP 100986 Tiên Võ Chi Vô Hạn Tiểu Binh
+[804/1428] SKIP 101196 Sống Lại Làm Tiểu Người Chơi
+[805/1428] SKIP 100405 Anime Nhị Thứ Nguyên
+[806/1428] SKIP 101412 Siêu Phàm Bình Minh
+[807/1428] SKIP 100332 Từ Hokage Bắt Đầu Chưởng Khống Thời Gian
+[808/1428] SKIP 100229 Onepiece Chi Yếm Thế Chi Ca
+[809/1428] SKIP 100568 Chư Thiên Tiên Võ
+[810/1428] SKIP 100575 Từ Từ Chư Thiên
+[811/1428] SKIP 101079 Dị Thế Chi Triệu Hoán Ức Vạn Thần Ma
+[812/1428] SKIP 101851 Thần Tiên Đào Bảo Điếm
+[813/1428] SKIP 100996 Siêu Thần Đạo Thuật
+[814/1428] SKIP 100786 Tử Giới Du Hí Thành
+[815/1428] SKIP 100872 Hokage Tối Cường Quan Nhị Đại
+[816/1428] SKIP 100321 Quật Khởi Chư Thiên
+[817/1428] SKIP 101811 Chư Thiên Mạnh Nhất Đại Boss
+[818/1428] SKIP 100683 Già Thiên Chi Vạn Cổ Độc Tôn
+[819/1428] SKIP 101348 Gien Tối Cường
+[820/1428] SKIP 101691 Ta Cơ Hữu Biến Thành Muội
+[821/1428] SKIP 100132 Pokemon Chi Phàm Đồ
+[822/1428] SKIP 100965 Hokage Chi Tối Cường Kakashi
+[823/1428] SKIP 100836 Siêu Cấp Toàn Năng Hệ Thống
+[824/1428] SKIP 101567 Tuyệt Thế Hồn Tôn
+[825/1428] SKIP 101780 Du Nhàn Long Sinh
+[826/1428] SKIP 101282 Vạn Giới Live Stream  Chi Đại Thổ Hào
+[827/1428] SKIP 100977 Trợ Quỷ Làm Vui Hệ Thống
+[828/1428] SKIP 101657 Tương Lai Nói Chuyện Phiếm Quần
+[829/1428] SKIP 100127 Siêu Cấp Vua Bóng Đá
+[830/1428] SKIP 100893 Siêu Phàm Quý Tộc
+[831/1428] SKIP 100118 Lục Nhân Phong Thần
+[832/1428] SKIP 100668 Chơi Hỏng Thế Giới Thả Câu Giả
+[833/1428] SKIP 100114 Ta Là Jose
+[834/1428] SKIP 100549 Vô Tận Siêu Duy Xâm Lấn
+[835/1428] SKIP 100985 Hệ Thống Để Ta Đi Đoán Mệnh
+[836/1428] SKIP 101071 Daddy Khoa Kỹ Võ Đạo Quán
+[837/1428] SKIP 100542 Khoa Kỹ Truyện Thừa
+[838/1428] SKIP 101193 Đan Điền Của Ta Là Địa Cầu
+[839/1428] SKIP 101254 Văn Ngu Đế Quốc
+[840/1428] SKIP 101561 Tu Tiên Ở Địa Cầu
+[841/1428] SKIP 100104 Ngao Du Tiên Võ
+[842/1428] SKIP 101379 Thần Thoại Cấm Khu
+[843/1428] SKIP 101386 Vạn Yêu Đế Chủ
+[844/1428] SKIP 100628 Cuồng Bạo Thăng Cấp Hệ Thống
+[845/1428] SKIP 100860 Tổng Mạn Chi Ngưu Ma Vương
+[846/1428] SKIP 101724 Nhật Ký Phát Sóng Trực Tiếp Làm Quỷ Sai
+[847/1428] SKIP 100681 Thần Hoang Long Đế
+[848/1428] SKIP 101324 Lui Về Phía Sau Để Vi Sư Tới
+[849/1428] SKIP 101499 Hàng Lâm Chư Thiên
+[850/1428] SKIP 100354 Lộc Đỉnh Hùng Phong
+[851/1428] SKIP 100799 Đây Chính Là Vô Địch
+[852/1428] SKIP 101737 Sử Thượng Tối Ngưu Tông Môn
+[853/1428] SKIP 100225 Lão Bà Của Ta Là Đông Phương Bất Bại
+[854/1428] SKIP 100852 Tiên Kiếm Hệ Thống Tại Tru Tiên
+[855/1428] SKIP 101241 Thần Nguyên Thiên Hạ
+[856/1428] SKIP 101660 Tiên Nữ Rút Thưởng Hệ Thống
+[857/1428] SKIP 101804 Mang Theo Hokage Trọng Sinh Nhật Bản Tokyo
+[858/1428] SKIP 100415 Độc Bộ Tiêu Dao
+[859/1428] SKIP 101207 Ta Là Great Old One
+[860/1428] SKIP 100223 Vô Hạn Thứ Nguyên Phồn Hoa
+[861/1428] SKIP 100973 Siêu Cấp Triệu Hoán Không Gian
+[862/1428] SKIP 100887 Lợi Hại Ta Người Nguyên Thủy
+[863/1428] SKIP 100237 Hokage Chi Tối Cường Chakra
+[864/1428] SKIP 101694 Tiên Hiệp Thế Giới Internet
+[865/1428] SKIP 100371 Tuyệt Thế Nguyên Tôn
+[866/1428] SKIP 101378 Điểm Đạo Vi Chỉ
+[867/1428] SKIP 100478 Dưỡng Chỉ Nữ Quỷ Làm Lão Bà
+[868/1428] SKIP 101177 Cuồng Kiếm Vũ Thần
+[869/1428] SKIP 100862 Pokemon Long Hệ Chưởng Môn Nhân
+[870/1428] SKIP 101771 Không Làm Tiểu Minh Tinh
+[871/1428] SKIP 100701 Thần Cấp Hộ Mỹ Sát Thủ
+[872/1428] SKIP 100570 Văn Ngu Vạn Tuế
+[873/1428] SKIP 101667 Trọng Sinh Tối Cường Trang Bức Hệ Thống
+[874/1428] SKIP 100449 Lâm Uyên Hành
+[875/1428] SKIP 100111 Lục Nhân Yêu Vương
+[876/1428] SKIP 101669 Pokemon Chi Ta Có Thể Nhặt Điểm Kinh Nghiệm
+[877/1428] SKIP 101802 Hải Tặc Chi Hải Quân Lôi Thần
+[878/1428] SKIP 101089 Ta Có Một Tấm Thẻ Dính Dính
+[879/1428] SKIP 101183 Bại Gia Đặc Chủng Binh
+[880/1428] SKIP 100619 Chí Cường Chưởng Môn
+[881/1428] SKIP 101138 Siêu Phẩm Vu Sư
+[882/1428] SKIP 101426 Vạn Tộc Chi Kiếp
+[883/1428] SKIP 100131 Thắt Lưng
+[884/1428] SKIP 100345 Tối Cường Chi Cuồng Bạo Thăng Cấp
+[885/1428] SKIP 100550 Long Kiếm Thiên Tôn
+[886/1428] SKIP 101354 Huyền Giới Công Ty Du Lịch
+[887/1428] SKIP 101726 Họa Thánh
+[888/1428] SKIP 101781 Mộng Du Chư Giới
+[889/1428] SKIP 100585 Từ 1983 Bắt Đầu
+[890/1428] SKIP 100214 Long Châu Chi Siêu Cấp Tông Sư
+[891/1428] SKIP 100798 Trọng Sinh Chi Bá Đạo Hoàng Đế
+[892/1428] SKIP 101493 Chúng Thần Hàng Lâm
+[893/1428] SKIP 100617 Ta Bạo Ngược Tỷ Tỷ
+[894/1428] SKIP 101198 Đại Tiểu Thư Mạnh Nhất Bảo Tiêu
+[895/1428] SKIP 101069 Kiếm Khấu Thiên Môn
+[896/1428] SKIP 100427 Như Ý Tiểu Lang Quân
+[897/1428] SKIP 100935 Thanh Mai Tiên Đạo
+[898/1428] SKIP 101831 Hải Tặc Vương Chi Công Phu Chi Vương
+[899/1428] SKIP 100615 Tối Cường Siêu Thần Cuồng Bạo Hệ Thống
+[900/1428] SKIP 101059 Hỗn Nguyên Kiếm Đế
+[901/1428] SKIP 100203 Võng Du Chi Mộng Tưởng Tinh Thần
+[902/1428] SKIP 100362 Chí Cao Thần Đế
+[903/1428] SKIP 101277 Tuyết Trung Hãn Đao Hành
+[904/1428] SKIP 100883 Nông Trường Qq Ta Có Thể Rút Tiền
+[905/1428] SKIP 101065 Thái Cổ Long Đế Quyết
+[906/1428] SKIP 101686 Ở Tu Chân Thế Giới Viết Tiểu Thuyết
+[907/1428] SKIP 100420 Đại Kiếp Chủ
+[908/1428] SKIP 101482 Ta Thật Không Phải Là Tiên Nhị Đại
+[909/1428] SKIP 100653 Vạn Giới Mạnh Nhất Ông Chủ
+[910/1428] SKIP 100370 Huyết Mạch Vô Địch
+[911/1428] SKIP 101035 Phong Thần Chi Nghịch Thiên Thành Thánh
+[912/1428] SKIP 101078 Cực Đạo Phi Thăng
+[913/1428] SKIP 101748 Tiên Dược Cung Ứng Thương
+[914/1428] SKIP 100126 Quán Quân Giáo Phụ
+[915/1428] SKIP 101752 Diamond No Ace Mạnh Nhất Batter
+[916/1428] SKIP 101049 Man Hoang Tiên Giới
+[917/1428] SKIP 101143 Nữ Nhân Của Ta Ngươi Không Chọc Nổi
+[918/1428] SKIP 101197 Siêu Cấp Vi Tín
+[919/1428] SKIP 101816 Hogwarts Huyết Mạch Vu Sư
+[920/1428] SKIP 100190 Mạt Thế Trọng Sinh Chi Phân Thân
+[921/1428] SKIP 100749 Sử Thượng Tối Ngưu Bạo Quân
+[922/1428] SKIP 100630 Vô Địch Bại Gia Tử Hệ Thống
+[923/1428] SKIP 100416 Đại Đạo Triều Thiên
+[924/1428] SKIP 100243 Đại Hải Tặc Chi Tối Cường Lão Sư
+[925/1428] SKIP 100220 Võng Du Chi Võ Lâm Thần Thoại
+[926/1428] SKIP 100266 Hokage Chi Vô Địch Hùng Hài Tử
+[927/1428] SKIP 101505 Khoa Học Kỹ Thuật Toàn Cầu Lũng Đoạn
+[928/1428] SKIP 101823 Tuyệt Thế Chúa Tể
+[929/1428] SKIP 100564 Xuyên Việt Đương Hoàng Đế
+[930/1428] SKIP 101734 Võng Du Chi Gấp Trăm Lần Sát Thương
+[931/1428] SKIP 100589 Ma Lâm
+[932/1428] SKIP 101689 Buông Ra Cái Kia Người Nguyên Thủy
+[933/1428] SKIP 100572 Siêu Cấp Thần Cướp Đoạt
+[934/1428] SKIP 101662 Của Ta Cực Phẩm Nữ Thôn Trưởng
+[935/1428] SKIP 100544 Vô Tận Thần Vực
+[936/1428] SKIP 101761 Thiên Đình Đào Bảo Điểm
+[937/1428] SKIP 101231 Ác Ma Trận Doanh
+[938/1428] SKIP 101235 Võng Du Chi Thần Cấp Luyện Yêu Sư
+[939/1428] SKIP 101075 Trong Hạch Bạo Đi Ra Cường Giả
+[940/1428] SKIP 100983 Ethan Kỳ Huyễn Phiêu Lưu
+[941/1428] SKIP 101250 Văn Ngu Bất Hủ
+[942/1428] SKIP 101659 Vạn Thế Trinh Đế
+[943/1428] SKIP 101807 Trái Ác Quỷ Nhà Cung Cấp
+[944/1428] SKIP 100857 Tống Mạn Làm Cha Các Nữ Chính
+[945/1428] SKIP 101829 Vô Địch Bắt Quỷ Hệ Thống
+[946/1428] SKIP 100577 Cùng Manh Oa Văn Nghệ Sinh Hoạt
+[947/1428] SKIP 101232 Diệu Thủ Tiểu Tiên Y
+[948/1428] SKIP 100323 Vô Tướng Tiến Hóa
+[949/1428] SKIP 101422 Võ Đạo Độc Tôn
+[950/1428] SKIP 100552 Long Cốt Chiến Đế
+[951/1428] SKIP 100777 Yêu Long Đô Thị
+[952/1428] SKIP 100636 Tối Cường Bạo Thần Hệ Thống
+[953/1428] SKIP 101570 Tuyệt Thế Võ Đế
+[954/1428] SKIP 101712 Siêu Cấp Ăn Cướp Sấm Tiên Giới
+[955/1428] SKIP 100958 Tín Ngưỡng Chư Thiên
+[956/1428] SKIP 100900 Mang Cái Vị Diện Xông Phi Châu
+[957/1428] SKIP 101474 Thái Thượng Chương
+[958/1428] SKIP 100562 Văn Ngu Giáo Phụ
+[959/1428] SKIP 101743 Tối Cường Vận Đen Thăng Cấp Hệ Thống
+[960/1428] SKIP 101476 Phong Ấn Tiên Tôn
+[961/1428] SKIP 100167 Hạnh Phúc Võ Hiệp
+[962/1428] SKIP 101556 Trọng Sinh Chi Độc Bộ Giang Hồ
+[963/1428] SKIP 100915 Vạn Năng Mã Qr
+[964/1428] SKIP 101572 Cửu Hồn Long Đế
+[965/1428] SKIP 101687 Cực Cụ Khủng Bố
+[966/1428] SKIP 100173 One Piece Chi Tu La Zoro
+[967/1428] SKIP 101190 Sát Thần Chi Thần
+[968/1428] SKIP 101810 Ta Thật Không Muốn Trọng Sinh A
+[969/1428] SKIP 101215 Biến Thân Ở Dc Thế Giới
+[970/1428] SKIP 100318 Thôn Thiên Võ Thần
+[971/1428] SKIP 100377 Chung Cực Thế Giới: Tối Cường Chiến Thần
+[972/1428] SKIP 101817 Tối Cường Đại Thần Chủ Hệ Thống
+[973/1428] SKIP 101562 Bất Diệt Kiếm Quân
+[974/1428] SKIP 100745 Vô Địch Giẫm Người Hệ Thống
+[975/1428] SKIP 101438 Mạt Thế Chi Toàn Năng Đại Sư
+[976/1428] SKIP 100178 Khế Ước Mỹ Nữ Chi Vô Địch Thăng Cấp
+[977/1428] SKIP 101405 Trường Sinh Chủng
+[978/1428] SKIP 101327 Thảm Cỏ Xanh Người Biểu Diễn
+[979/1428] SKIP 101675 Cuộc Xâm Lược Văn Hóa Ở Thế Giới Khác
+[980/1428] SKIP 101758 Slamdunk Chi Kiên Kết Trục Mộng
+[981/1428] SKIP 101218 Tokisaki Kurumi Vị Diện Chi Lữ
+[982/1428] SKIP 101234 Tận Thế Chi Vô Thượng Vương Tọa
+[983/1428] SKIP 101661 Chí Tôn Võ Thần Hệ Thống
+[984/1428] SKIP 100634 Ta Thực Sự Chính Là Game Đại Thần
+[985/1428] SKIP 101688 Luyện Cấp Cuồng Ma
+[986/1428] SKIP 100953 Trọng Sinh Chi Nghịch Chiến Tây Du
+[987/1428] SKIP 100165 Mỹ Nữ Tập Hợp Chi Vô Hạn Luân Hồi
+[988/1428] SKIP 100535 Thiếu Hiệp Mời Khai Ân
+[989/1428] SKIP 100375 Comic: Tối Cường Phản Phái
+[990/1428] SKIP 101025 Huyền Giới Chi Môn
+[991/1428] SKIP 101209 Siêu Thần May Mắn Thăng Cấp Hệ Thống
+[992/1428] SKIP 101311 Vạn Cổ Võ Quân
+[993/1428] SKIP 101117 Thần Môn
+[994/1428] SKIP 101514 Vạn Giới Giải Mộng Sư
+[995/1428] SKIP 101187 Băng Cực Thần Hoàng
+[996/1428] SKIP 101362 Chẳng Lẽ Ta Là Thần
+[997/1428] SKIP 100379 Ta Nguyên Thần Có Thể Ký Thác Thiên Đạo
+[998/1428] SKIP 100993 Tây Du Chi Đại Giải Trí Gia
+[999/1428] SKIP 101416 Tên Đầu Trọc Này Rất Nguy Hiểm
+[1000/1428] SKIP 100157 Thiên Đạo Chi Tể
+[1001/1428] SKIP 100765 Quân Lâm Tam Thiên Thế Giới
+[1002/1428] SKIP 101728 Văn Ngu Tân Quý
+[1003/1428] SKIP 101006 Từ Hokage Bắt Đầu Bán Bình
+[1004/1428] SKIP 101790 Đấu Phá Chi Truyền Kỳ Tái Khởi
+[1005/1428] SKIP 101549 Cực Phẩm Toàn Năng Y Tiên
+[1006/1428] SKIP 100571 Tiên Đình Phong Đạo Truyện
+[1007/1428] SKIP 101757 Diamond No Ace Toàn Năng Tuyển Thủ
+[1008/1428] SKIP 101088 Thiên Đạo Phạt Ác Lệnh
+[1009/1428] SKIP 100581 Tốt Nhất Ngu Nhạc Thời Đại
+[1010/1428] SKIP 101337 Minh Mạt Kỹ Sư
+[1011/1428] SKIP 100897 Võng Du Chi Mạt Nhật Kiếm Tiên
+[1012/1428] SKIP 100959 Dị Thế Triệu Hoán Văn Thần Mãnh Tướng
+[1013/1428] SKIP 100978 Đô Thị Tối Cường Chúa Tể
+[1014/1428] SKIP 101345 Đại Tống Tướng Môn
+[1015/1428] SKIP 100705 Dị Năng Giáo Sư
+[1016/1428] SKIP 100920 Nguyên Thủy Văn Minh Thành Trường Ký
+[1017/1428] SKIP 101429 Ta Thật Không Phải Đại Ma Vương
+[1018/1428] SKIP 100961 Võ Cực Tông Sư
+[1019/1428] SKIP 100669 Ta Man Hoang Bộ Lạc
+[1020/1428] SKIP 101361 Quán Quân Chi Tâm
+[1021/1428] SKIP 101026 Long Phù
+[1022/1428] SKIP 101047 Nguyên Huyết Thần Tọa
+[1023/1428] SKIP 100419 Strike The Blood Chi Đệ Ngũ Chân Tổ
+[1024/1428] SKIP 101036 Tối Cường Hệ Thống
+[1025/1428] SKIP 101307 Hồn Võ Đấu Hoàng
+[1026/1428] SKIP 100328 Đô Thị Chi Vô Địch Tu Thần
+[1027/1428] SKIP 100418 Vô Địch Thật Tịch Mịch
+[1028/1428] SKIP 100560 Ma Thần Nhạc Viên
+[1029/1428] SKIP 100593 Phòng Sách Đêm Khuya
+[1030/1428] SKIP 100922 Đế Quốc La Mã Thần Thánh
+[1031/1428] SKIP 100523 Ta Bị Hệ Thống Uỷ Thác Quản Lý
+[1032/1428] SKIP 101788 Hắc Khoa Học Kỹ Thuật Trung Tâm Nghiên Cứu
+[1033/1428] SKIP 101349 Vô Cương
+[1034/1428] SKIP 100793 Sử Thượng Tối Cường Người Ở Rể
+[1035/1428] SKIP 101188 Cầu Ma Diệt Thần
+[1036/1428] SKIP 100631 Mạnh Nhất Vô Địch Hệ Thống
+[1037/1428] SKIP 101099 Chỉ Xích Chi Gian Nhân Tận Địch Quốc
+[1038/1428] SKIP 101371 Vạn Cổ Đệ Nhất Đế
+[1039/1428] SKIP 100678 Trạch Thiên Ký
+[1040/1428] SKIP 100921 Diệu Thủ Tâm Y
+[1041/1428] SKIP 101356 Tiêu Diêu Mộng Lộ
+[1042/1428] SKIP 101580 Lôi Đình Chi Chủ
+[1043/1428] SKIP 100892 Ta Cùng Đại Thánh Là Huynh Đệ
+[1044/1428] SKIP 100169 Hồi Sinh One Piece Chi Phó Thuyền Trưởng
+[1045/1428] SKIP 100516 Toàn Năng Trò Chơi Nhà Thiết Kế
+[1046/1428] SKIP 100609 Trọng Sinh Làm Internet Tranh Bá
+[1047/1428] SKIP 100621 Cực Phẩm Diêm La Hệ Thống
+[1048/1428] SKIP 101557 Tuyệt Thế Thiên Quân
+[1049/1428] SKIP 101206 Giải Trí Chí Tôn Vú Em
+[1050/1428] SKIP 101305 Bình Thiên Sách
+[1051/1428] SKIP 100703 Hàn Ngu Thám Tử Lừng Danh
+[1052/1428] SKIP 101052 Cực Đạo Thiên Ma
+[1053/1428] SKIP 101821 Tinh Túc Đại Sư Huynh
+[1054/1428] SKIP 101281 Ta Có Nhà Tại Dị Giới
+[1055/1428] SKIP 101320 Millwall Thiếu Soái
+[1056/1428] SKIP 101665 Đô Thị Cực Phẩm Cao Thủ
+[1057/1428] SKIP 100503 Võng Du Chi Thần Cấp Cường Hào
+[1058/1428] SKIP 101256 Tận Thế Vi Vương
+[1059/1428] SKIP 101643 Hoàn Khố Khí Thiếu
+[1060/1428] SKIP 101358 Cơ Thể Ta Có Bug
+[1061/1428] SKIP 101578 Thanh Thiên Yêu
+[1062/1428] SKIP 100158 Thần Cấp Liệp Sát Giả
+[1063/1428] SKIP 100376 Cương Ước: Tối Cường Tử Thần
+[1064/1428] SKIP 100399 Bất Hủ Phàm Nhân
+[1065/1428] SKIP 101004 Superman Chi Ta Chỉ Muốn Sống Bình Thường
+[1066/1428] SKIP 101093 Ánh Chiếu Vạn Giới
+[1067/1428] SKIP 101492 Bất Động Sản Đại Ngoạn Gia
+[1068/1428] SKIP 100170 Vô Hạn Làm Công
+[1069/1428] SKIP 100171 Thiếu Nữ Khế Ước Chi Thư
+[1070/1428] SKIP 100175 Hokage Chi Tu La Hàng Thế
+[1071/1428] SKIP 100217 Lol Chi Duy Ngã Độc Tôn
+[1072/1428] SKIP 101381 Đô Thị Chi Tiên Tôn Trọng Sinh
+[1073/1428] SKIP 101054 Nhân Sinh Hung Hãn
+[1074/1428] SKIP 100561 Tiên Cuồng
+[1075/1428] SKIP 100629 Tối Ngưu Chí Tôn Đế Hoàng Hệ Thống
+[1076/1428] SKIP 100655 Võ Hiệp Phản Phái Boss Chi Lộ
+[1077/1428] SKIP 101280 Phù Trấn Khung Thương
+[1078/1428] SKIP 100962 Thần Ma Cung Ứng Thương
+[1079/1428] SKIP 100905 Diệu Thủ Hồi Thôn
+[1080/1428] SKIP 100642 Ta Vô Địch 1 Tỷ Năm
+[1081/1428] SKIP 100250 Tống Mạn Chi Siêu Thần Rút Thưởng
+[1082/1428] SKIP 101396 Quật Khởi Thức Tỉnh Thời Đại
+[1083/1428] SKIP 101853 Hàn Ngu Chi Khác Loại Đại Minh Tinh
+[1084/1428] SKIP 101210 Thần Cấp Phản Phái Hệ Thống
+[1085/1428] SKIP 100235 Pokemon Chi Niary
+[1086/1428] SKIP 101228 Cửu Tôn Thần Ấn
+[1087/1428] SKIP 100559 Trọng Sinh Chi Thần Cấp Minh Tinh
+[1088/1428] SKIP 101559 Chiến Thần Chi Vương
+[1089/1428] SKIP 100409 Lão Bà Của Ta Là Hải Tặc Nữ Đế
+[1090/1428] SKIP 101769 Nãi Ba Văn Nghệ Nhân Sinh
+[1091/1428] SKIP 101240 Vạn Cổ Long Đế
+[1092/1428] SKIP 101508 Ta Làm Sao Lên Làm Hoàng Đế
+[1093/1428] SKIP 101136 Thiên Thần Học Viện
+[1094/1428] SKIP 101435 Tiên Phệ
+[1095/1428] SKIP 100717 Đại Quản Gia Là Ma Hoàng
+[1096/1428] SKIP 101696 Nghịch Thiên Thần Tôn
+[1097/1428] SKIP 100396 Nhất Niệm Vĩnh Hằng
+[1098/1428] SKIP 101120 Cửu Vực Tiên Vương
+[1099/1428] SKIP 100644 Ta Có Thể Vô Hạn Phóng Thích Đại Chiêu
+[1100/1428] SKIP 100863 Pokemon Hệ Thống Thành Tựu Đại Sư
+[1101/1428] SKIP 100909 Hắc Dạ Tiến Hóa
+[1102/1428] SKIP 100955 Ta Xuyên Qua Thời Không Điện Thoại
+[1103/1428] SKIP 101822 Tây Du Chi Bát Giới Toàn Năng Hệ Thống
+[1104/1428] SKIP 101333 Siêu Phàm David
+[1105/1428] SKIP 100972 Điện Ảnh Thế Giới Xuyên Toa Môn
+[1106/1428] SKIP 100925 Ta Là Một Cái Người Nguyên Thủy
+[1107/1428] SKIP 100988 Tùy Thân Mang Cái Săn Thú Không Gian
+[1108/1428] SKIP 101308 Đại Vương Tha Mạng
+[1109/1428] SKIP 101654 Lưỡng Giới Người Vận Chuyển
+[1110/1428] SKIP 101880 Hokage Cuồng Nhân
+[1111/1428] SKIP 100394 Chư Thiên Chí Tôn
+[1112/1428] SKIP 100527 Tuyệt Thế Võ Hiệp Hệ Thống
+[1113/1428] SKIP 101736 Đại Đường Chi Thần Cấp Phò Mã Gia
+[1114/1428] SKIP 101328 Qủy Đỏ Người Kế Thừa
+[1115/1428] SKIP 100426 Thiên Hạ Đệ Cửu
+[1116/1428] SKIP 100614 Tối Cường Vai Chính Hệ Thống
+[1117/1428] SKIP 100762 Xích Long Thiên Tôn
+[1118/1428] SKIP 101043 Thông Thiên Tiên Lộ
+[1119/1428] SKIP 100392 Vô Thủy Thiên Đế
+[1120/1428] SKIP 101315 Âm Dương Sách
+[1121/1428] SKIP 101351 Thắng Giả Vi Vương
+[1122/1428] SKIP 100566 Yêu Đao
+[1123/1428] SKIP 100797 Đệ Nhất Đế
+[1124/1428] SKIP 101653 Trọng Sinh Tối Cường Yêu Thú
+[1125/1428] SKIP 101076 Trên Người Ta Có Con Rồng
+[1126/1428] SKIP 100483 Phòng Ta Có Cánh Cửa Như Ý
+[1127/1428] SKIP 100458 Tam Quốc Chi Anh Linh Triệu Hoán
+[1128/1428] SKIP 101495 Chiến Chùy Thần Tọa
+[1129/1428] SKIP 101068 Xuyên Qua Từ Đấu Phá Bắt Đầu
+[1130/1428] SKIP 100676 Đấu La Chi Mạnh Nhất Người Ở Rể
+[1131/1428] SKIP 100196 Mỹ Nữ Sủng Vật Quân Đoàn
+[1132/1428] SKIP 100805 Vũ Nghịch Cửu Thiên
+[1133/1428] SKIP 101813 Giới Bóng Rổ Chi Khắc Kim Vô Địch
+[1134/1428] SKIP 101287 Vô Hạn Chi Hắc Ám Thế Lực Quật Khởi
+[1135/1428] SKIP 100342 Siêu Cấp Hồng Bao Thần Tiên Quần
+[1136/1428] SKIP 101018 Tiên Toái Hư Không
+[1137/1428] SKIP 100856 Trực Tiếp Thiết Kế Tử Vong
+[1138/1428] SKIP 101380 Quỷ Bí Chi Chủ
+[1139/1428] SKIP 101550 Mạt Thế Lưu Lạc Cẩu
+[1140/1428] SKIP 101302 Sát Võ Kiếm Đế
+[1141/1428] SKIP 101564 Vô Hạn Thăng Cấp Tối Cường Vũ Hồn
+[1142/1428] SKIP 100107 Cầu Vương Dưỡng Thành Khí
+[1143/1428] SKIP 100116 Firenze Thời Đại
+[1144/1428] SKIP 101118 Cực Phẩm Đế Vương
+[1145/1428] SKIP 101452 Siêu Thần Sủng Thú Cửa Hàng
+[1146/1428] SKIP 100913 Titan Cùng Long Chi Vương
+[1147/1428] SKIP 101202 Sinh Tồn: Tuyển Vương Trò Chơi
+[1148/1428] SKIP 101239 Võng Du Chi Thiên Hạ Đệ Nhất
+[1149/1428] SKIP 100616 Thánh Long Đồ Đằng
+[1150/1428] SKIP 100576 Toàn Cầu Cao Võ
+[1151/1428] SKIP 101124 Hắc Tạp
+[1152/1428] SKIP 100774 Tiên Giới Trở Về
+[1153/1428] SKIP 100335 Chung Cực Đại Ma Thần
+[1154/1428] SKIP 100390 Vĩnh Hằng Chi Tâm
+[1155/1428] SKIP 101709 Những Năm Đó Ta Làm Đạo Sĩ
+[1156/1428] SKIP 101498 Ta Một Ngày Có 48 Giờ
+[1157/1428] SKIP 100866 Pokemon Hắc Ám Quật Khởi
+[1158/1428] SKIP 100352 Đô Thị Chí Tôn Bá Chủ
+[1159/1428] SKIP 100641 Vạn Giới Mạnh Nhất Lão Công
+[1160/1428] SKIP 101336 Chăn Nuôi Toàn Nhân Loại
+[1161/1428] SKIP 100750 Tam Quốc Chi Dong Binh Thiên Hạ
+[1162/1428] SKIP 100524 Trọng Sinh Làm Ma Giáo Giáo Chủ
+[1163/1428] SKIP 101179 Long Vũ Kiếm Thần
+[1164/1428] SKIP 101233 Em Gái Của Ta Là Idol
+[1165/1428] SKIP 101819 Trọng Sinh Nhật Bản Làm Thần Quan
+[1166/1428] SKIP 101220 Biến Thân Ở Marvel Thế Giới
+[1167/1428] SKIP 100411 Ta Là Chí Tôn
+[1168/1428] SKIP 100397 Pokemon Chi Phú Nhị Đại Nghịch Tập
+[1169/1428] SKIP 101630 Đúng Là Ta Mạnh Như Vậy
+[1170/1428] SKIP 100387 Nhân Đạo Chí Tôn
+[1171/1428] SKIP 101551 Tiên Mệnh Trường Sinh
+[1172/1428] SKIP 100459 Cẩm Y Xuân Thu
+[1173/1428] SKIP 100456 Quốc Sắc Sinh Kiêu
+[1174/1428] SKIP 100413 Nguyên Tôn
+[1175/1428] SKIP 101303 Thiên Khung Yêu Tổ
+[1176/1428] SKIP 100553 Mao Sơn Chung Cực Tróc Quỷ Nhân
+[1177/1428] SKIP 100954 Lão Nạp Phải Hoàn Tục
+[1178/1428] SKIP 100964 Vu Sư Abe
+[1179/1428] SKIP 101715 Thục Sơn Kiếm Tông Hệ Thống
+[1180/1428] SKIP 100779 Thiên Tài Tà Thiếu
+[1181/1428] SKIP 100940 Siêu Não Thái Giám
+[1182/1428] SKIP 100222 Toaru Majutsu No Index Copy Năng Lực Giả
+[1183/1428] SKIP 100773 Thần Thú Quản Lý Viên
+[1184/1428] SKIP 100460 Cực Phẩm Khoác Lác Hệ Thống
+[1185/1428] SKIP 100633 Ta Tùy Thân Thăng Cấp Đánh Quái Hệ Thống
+[1186/1428] SKIP 101192 Vô Địch Từ Max Cấp Thuộc Tính Bắt Đầu
+[1187/1428] SKIP 101400 Tu La Thiên Đế Quyết
+[1188/1428] SKIP 100454 Mục Long Sư
+[1189/1428] SKIP 101185 Thái Thượng Kiếm Tôn
+[1190/1428] SKIP 100166 Hokage Chi Chân Lý Chi Môn
+[1191/1428] SKIP 101084 Cửu Huyền Thiên Đế
+[1192/1428] SKIP 101044 Hệ Thống Cung Ứng Thương
+[1193/1428] SKIP 100787 Bá Thiên Đại Đế
+[1194/1428] SKIP 101161 Nghịch Loạn Càn Khôn
+[1195/1428] SKIP 101364 Cấm Khu Chi Hùng
+[1196/1428] SKIP 101301 Thiên Hình Kỷ
+[1197/1428] SKIP 100880 Thùy Điếu Chư Thiên
+[1198/1428] SKIP 100689 Khoa Kỹ Vu Sư
+[1199/1428] SKIP 100361 Chí Tôn Thần Đế
+[1200/1428] SKIP 100548 Bạch Thạch Chủ Thần
+[1201/1428] SKIP 100360 Cửu Âm Tà Đế
+[1202/1428] SKIP 100894 Tiên Viên Trang Nông
+[1203/1428] SKIP 100382 Đại Chúa Tể
+[1204/1428] SKIP 100884 Đạo Tàng Mỹ Lợi Kiên
+[1205/1428] SKIP 101132 Lăng Tiêu Chi Thượng
+[1206/1428] SKIP 100228 Thần Cấp Đoạt Xá Không Gian
+[1207/1428] SKIP 101783 Toàn Năng Trang Viên
+[1208/1428] SKIP 101347 Vạn Giới Thiên Tôn
+[1209/1428] SKIP 100160 Hắc Ám Vô Hạn
+[1210/1428] SKIP 100421 Vạn Cổ Chi Vương
+[1211/1428] SKIP 100406 Đạo Quân
+[1212/1428] SKIP 100623 Tối Cường Cuồng Bạo Hoàng Đế Hệ Thống
+[1213/1428] SKIP 101382 Bình Minh Chi Kiếm
+[1214/1428] SKIP 101081 Khủng Bố Sống Lại
+[1215/1428] SKIP 100174 Thứ Nguyên Đại Loạn Đấu
+[1216/1428] SKIP 101314 Vạn Tiên Vương Tọa
+[1217/1428] SKIP 101062 Toàn Năng Chiếu Yêu Kính
+[1218/1428] SKIP 100363 Nguyên Thủy Bất Diệt Quyết
+[1219/1428] SKIP 100607 Trảm Nguyệt
+[1220/1428] SKIP 101304 Kiếm Đến
+[1221/1428] SKIP 100664 Buông Ra Con Yêu Sủng Kia
+[1222/1428] SKIP 100875 Nông Gia Tiên Điền
+[1223/1428] SKIP 101487 Đạo Môn Pháp Tắc
+[1224/1428] SKIP 101673 Ác Linh Quốc Gia
+[1225/1428] SKIP 101288 Ky Phá Tinh Hà
+[1226/1428] SKIP 101650 Hào Môn Ẩn Hôn: Phúc Hắc Tổng Tài Nuông Chiều Bà Xã
+[1227/1428] SKIP 100556 Mao Sơn Chung Cực Cương Thi Vương
+[1228/1428] SKIP 100185 Vô Hạn Thế Giới Lữ Hành Giả
+[1229/1428] SKIP 100429 Tu La Đế Tôn
+[1230/1428] SKIP 101154 Hồng Hoang Chi Nguyên Thủy Cổ Xà
+[1231/1428] SKIP 101063 Thánh Võ Tinh Thần
+[1232/1428] SKIP 100320 Hồng Mông Thần Vương
+[1233/1428] SKIP 100402 Thánh Khư
+[1234/1428] SKIP 101812 Thua Lỗ Thành Thủ Phủ Từ Trò Chơi
+[1235/1428] SKIP 100194 Võng Du Chi Chí Tôn May Mắn
+[1236/1428] SKIP 101500 Ta Đế Quốc
+[1237/1428] SKIP 100129 Tống Mạn Chí Tôn Chiến Thần
+[1238/1428] SKIP 101019 Chân Võ Thế Giới
+[1239/1428] SKIP 100888 Siêu Cấp Cổ Võ
+[1240/1428] SKIP 101191 Thiên Phú Võ Thần
+[1241/1428] SKIP 100808 Đồ Đệ Của Ta Đều Là Trùm Phản Diện
+[1242/1428] SKIP 100369 Tiên Võ Độc Tôn
+[1243/1428] SKIP 100879 Tuyệt Thế Vũ Thần Ii
+[1244/1428] SKIP 101175 Võ Cực Thần Vương
+[1245/1428] SKIP 100373 Vô Hạn Thăng Cấp Chi Xuyên Qua Chư Thiên
+[1246/1428] SKIP 100436 Cực Đạo Đan Hoàng
+[1247/1428] SKIP 100861 One Piece Sát Lục Thôn Phệ
+[1248/1428] SKIP 100479 Thứ Ba Đế Quốc
+[1249/1428] SKIP 100331 Ta Có Trăm Vạn Điểm Kỹ Năng
+[1250/1428] SKIP 101403 Đấu La Đại Lục Iv Chung Cực Đấu La
+[1251/1428] SKIP 100896 Siêu Cấp Chế Tạo Thương
+[1252/1428] SKIP 101727 Đạo Thánh
+[1253/1428] SKIP 100329 Dược Môn Tiên Y
+[1254/1428] SKIP 101227 Lược Thiên Ký
+[1255/1428] SKIP 100743 Sử Thượng Tối Cường Lão Bản
+[1256/1428] SKIP 101582 Yêu Nghiệt Tiên Hoàng Tại Đô Thị
+[1257/1428] SKIP 101558 Chí Tôn Long Thần Hệ Thống
+[1258/1428] SKIP 101417 Vô Thượng Đế Tôn
+[1259/1428] SKIP 100408 Ta Là Bá Vương
+[1260/1428] SKIP 101574 Trọng Sinh Chi Sát Lục Tung Hoành
+[1261/1428] SKIP 101577 Trọng Sinh Đô Thị Chí Tôn
+[1262/1428] SKIP 100412 Mục Thần Ký
+[1263/1428] SKIP 101121 Dị Thế Giới Mỹ Thực Gia
+[1264/1428] SKIP 101278 Ác Ma Lồng Giam
+[1265/1428] SKIP 101067 Tiến Hóa Chi Nhãn
+[1266/1428] SKIP 100400 Tiên Đạo Tà Quân
+[1267/1428] SKIP 100889 Trở Lại Địa Cầu Làm Thần Côn
+[1268/1428] SKIP 101312 Mỹ Nữ Tổng Tài Thiếp Thân Cao Thủ
+[1269/1428] SKIP 100671 Từ Đấu La Bắt Đầu Đánh Tạp
+[1270/1428] SKIP 100933 Trò Chơi Thợ Săn Quái Vật
+[1271/1428] SKIP 101085 Trùm Đồ Cổ
+[1272/1428] SKIP 101576 Bất Diệt Tinh Chủ
+[1273/1428] SKIP 101624 Tối Cường Trang Bức Đả Kiểm Hệ Thống
+[1274/1428] SKIP 100637 Vú Em Chí Tôn
+[1275/1428] SKIP 101410 Ta Chỉ Muốn An Tĩnh Chơi Game
+[1276/1428] SKIP 100753 Tối Cường Thần Thoại Đế Hoàng
+[1277/1428] SKIP 100776 Nhất Ngôn Thông Thiên
+[1278/1428] SKIP 101237 Tận Thế Biên Giới
+[1279/1428] SKIP 101244 Thần Cấp Mỹ Thực Chủ Bá
+[1280/1428] SKIP 101031 Thần Hoàng Cửu Thiên
+[1281/1428] SKIP 100425 Vua Hải Tặc Chi Bảo Rương Hệ Thống
+[1282/1428] SKIP 101637 Kiếm Tiên Ở Đây
+[1283/1428] SKIP 101116 Tuyệt Đỉnh Đan Tôn
+[1284/1428] SKIP 100796 Đô Thị Chi Bất Tử Thiên Tôn
+[1285/1428] SKIP 100410 Gen Võ Đạo
+[1286/1428] SKIP 100934 Ta Có Một Ngọn Núi
+[1287/1428] SKIP 100680 Thí Thiên Nhận
+[1288/1428] SKIP 100393 Tịch Diệt Thiên Tôn
+[1289/1428] SKIP 101629 Thần Y Như Khuynh
+[1290/1428] SKIP 101677 Sát Thần Vĩnh Sinh
+[1291/1428] SKIP 100716 Vạn Cổ Đệ Nhất Tông
+[1292/1428] SKIP 100679 Thiên Vực Thương Khung
+[1293/1428] SKIP 100161 Vô Hạn Dị Hỏa Lục
+[1294/1428] SKIP 101845 Võ Hồn Thí Thiên
+[1295/1428] SKIP 101274 Thái Cổ Thần Vương
+[1296/1428] SKIP 101770 Đô Thị Kiêu Hùng Hệ Thống
+[1297/1428] SKIP 101330 Tử Vong Đoàn Tàu
+[1298/1428] SKIP 101184 Cưa Đổ Thượng Thần Băng Lãnh
+[1299/1428] SKIP 101703 Chư Thiên Ký
+[1300/1428] SKIP 100349 Tối Cường Cuồng Bạo Yêu Nghiệt Hệ Thống
+[1301/1428] SKIP 101794 Óng Ánh Ace
+[1302/1428] SKIP 100423 Nghịch Thiên Võ Thần
+[1303/1428] SKIP 101536 Ta Có Một Đám Địa Cầu Người Chơi
+[1304/1428] SKIP 100326 Đô Thị Linh Kiếm Tiên
+[1305/1428] SKIP 101447 Chư Giới Tận Thế Online
+[1306/1428] SKIP 100574 Đế Đạo Độc Tôn
+[1307/1428] SKIP 100403 Tuyệt Thế Tà Tôn
+[1308/1428] SKIP 100785 Đế Võ Đan Tôn
+[1309/1428] SKIP 101473 Phần Thiên Chi Nộ
+[1310/1428] SKIP 101113 Thất Giới Võ Thần
+[1311/1428] SKIP 100389 Ma Thiên Chí Tôn
+[1312/1428] SKIP 101021 Vũ Khí Đại Sư
+[1313/1428] SKIP 101299 Sát Phật Thánh Tổ
+[1314/1428] SKIP 101716 Bạo Sủng Cuồng Thê: Thần Y Ngũ Tiểu Thư
+[1315/1428] SKIP 101039 Vĩnh Hằng Quốc Độ
+[1316/1428] SKIP 100172 Liên Minh Huyền Thoại Chi Tuyệt Thế Vô Song
+[1317/1428] SKIP 101566 Đế Quân Tử Vong
+[1318/1428] SKIP 101471 Đại Đạo Tranh Phong
+[1319/1428] SKIP 101057 Nhất Phẩm Đạo Môn
+[1320/1428] SKIP 101775 Diamond No Ace Chi Pitcher Trở Về
+[1321/1428] SKIP 101095 Tiên Cung
+[1322/1428] SKIP 101634 Chúa Tể Tinh Hà
+[1323/1428] SKIP 101016 Thân Công Báo Truyền Thừa
+[1324/1428] SKIP 100563 Trực Tử Vô Hạn
+[1325/1428] SKIP 101676 Ta Tu Có Thể Là Giả Tiên
+[1326/1428] SKIP 101046 Nhân Hoàng Kỷ
+[1327/1428] SKIP 101633 Quỷ Chú
+[1328/1428] SKIP 100741 Tu La Thiên Tôn
+[1329/1428] SKIP 101454 Ban Sơ Tiến Hóa
+[1330/1428] SKIP 101490 Thiên Hạ Kiếm Tông
+[1331/1428] SKIP 101115 Thập Phương Thần Vương
+[1332/1428] SKIP 100976 Vú Em Chi Dị Giới Phòng Ăn
+[1333/1428] SKIP 100906 Sống Lại Thập Niên 80 Làm Nông Dân Mới
+[1334/1428] SKIP 100891 Thần Võ Chí Tôn
+[1335/1428] SKIP 101029 Tu Luyện Cuồng Triều
+[1336/1428] SKIP 101695 Thái Cổ Chí Tôn Thần
+[1337/1428] SKIP 100903 Cực Phẩm Hộ Hoa Tiểu Thôn Y
+[1338/1428] SKIP 100367 Chí Tôn Đặc Công
+[1339/1428] SKIP 100821 Tối Cường Thiếp Thân Hệ Thống
+[1340/1428] SKIP 100567 Thần Võ Bá Đế
+[1341/1428] SKIP 100424 Tử Kinh Lệnh
+[1342/1428] SKIP 100324 Đô Thị Y Tiên
+[1343/1428] SKIP 101391 Kỳ Tích Triệu Hoán Sư
+[1344/1428] SKIP 100464 Ta Tuyệt Mỹ Ngự Tỷ Lão Bà
+[1345/1428] SKIP 100168 Type-Moon Gensōkyō Siêu Việt Giả
+[1346/1428] SKIP 101332 Ma Thiên
+[1347/1428] SKIP 100497 Nguyền Rủa Chi Long
+[1348/1428] SKIP 101318 Vương Giả Phong Bạo
+[1349/1428] SKIP 100444 Đan Hoàng Võ Đế
+[1350/1428] SKIP 101641 Lmht Vô Địch Rút Thưởng Hệ Thống
+[1351/1428] SKIP 101022 Tôn Thượng
+[1352/1428] SKIP 101300 Vạn Long Thần Tôn
+[1353/1428] SKIP 100902 Đại Đường Tướng Công Tốt
+[1354/1428] SKIP 100706 Siêu Thần Yêu Nghiệt
+[1355/1428] SKIP 100547 Sinh Tử Đan Tôn
+[1356/1428] SKIP 100772 Vô Địch Kiếm Vực
+[1357/1428] SKIP 100539 Chí Tôn Kiếm Hoàng
+[1358/1428] SKIP 101114 Cửu Tiên Đồ
+[1359/1428] SKIP 101568 Vạn Giới Võ Thần
+[1360/1428] SKIP 101203 Running Man Khôi Hài Cao Phú Soái
+[1361/1428] SKIP 100569 Kiếm Trung Tiên
+[1362/1428] SKIP 101128 Thần Cấp Đại Ma Đầu
+[1363/1428] SKIP 100422 Phục Thiên Thị
+[1364/1428] SKIP 100908 Livestream Giải Phẫu
+[1365/1428] START 100931 Đô Thị Vô Thượng Y Thần chapters=2980 status=Hoàn thành
+[1366/1428] SKIP 100890 Hương Thôn Thấu Thị Thần Y
+[1367/1428] SKIP 100747 Điên Cuồng Hệ Thống Tăng Cấp
+[1368/1428] SKIP 101271 Vũ Thần Thiên Hạ
+[1369/1428] SKIP 101398 Nhất Kiếm Độc Tôn
+[1370/1428] SKIP 101050 Thiên Tài Cao Thủ
+[1371/1428] SKIP 100538 Cuồng Võ Chiến Đế
+[1372/1428] SKIP 101176 Tuyệt Thế Dược Thần
+[1373/1428] SKIP 100555 Đế Phi Lâm Thiên
+[1374/1428] SKIP 100364 Thôn Thiên Long Vương
+[1375/1428] SKIP 101387 Tối Cường Hệ Thống Đế Hoàng
+[1376/1428] SKIP 101313 Nghịch Thiên
+[1377/1428] SKIP 100702 Võ Đạo Bá Chủ
+[1378/1428] SKIP 101048 Thần Võ Thiên Đế
+[1379/1428] SKIP 100368 Chung Cực Toàn Năng Học Sinh
+[1380/1428] SKIP 101286 Vĩnh Hằng Thánh Vương
+[1381/1428] SKIP 101111 Tạo Hóa Chi Vương
+[1382/1428] SKIP 100601 Trọng Sinh Cửu Linh Lạt Thê Liêu Phu
+[1383/1428] SKIP 101436 Siêu Cấp Thần Cơ Nhân
+[1384/1428] SKIP 101042 Vạn Cổ Đại Đế
+[1385/1428] SKIP 101475 Thông Thiên Vũ Tôn
+[1386/1428] SKIP 101038 Thiên Thần Quyết
+[1387/1428] SKIP 100545 Đế Diệt Thương Khung
+[1388/1428] SKIP 101181 Mao Sơn Tróc Quỷ Nhân
+[1389/1428] SKIP 101455 Ngự Thú Tiến Hóa Thương
+[1390/1428] SKIP 101432 Kiếm Đạo Đệ Nhất Tiên
+[1391/1428] SKIP 101472 Võ Đạo Chí Tôn
+[1392/1428] SKIP 100443 Võ Ánh Tam Thiên Đạo
+[1393/1428] SKIP 100384 Vô Địch Thiên Hạ
+[1394/1428] SKIP 101024 Tu Sĩ Này Rất Nguy Hiểm.
+[1395/1428] SKIP 101033 Tối Cường Y Thánh
+[1396/1428] START 100775 Cực Phẩm Tiên Đế Tại Đô Thị chapters=3911 status=Hoàn thành
+[1397/1428] SKIP 100319 Cửu Chuyển Đạo Kinh
+[1398/1428] SKIP 100350 Cuồng Võ Thần Đế
+[1399/1428] SKIP 100366 Linh Võ Đế Tôn
+[1400/1428] SKIP 101013 Vô Thượng Thần Vương
+[1401/1428] SKIP 101213 Từ Đại Thụ Bắt Đầu Tiến Hóa
+[1402/1428] SKIP 100898 Tiêu Diêu Tiểu Thần Côn
+[1403/1428] SKIP 100558 Cái Thế Đế Tôn
+[1404/1428] SKIP 101119 Ta Mỹ Nữ Băng Sơn Lão Bà
+[1405/1428] SKIP 100557 Mao Sơn Quỷ Vương
+[1406/1428] SKIP 101028 Thần Võ Chiến Vương
+[1407/1428] SKIP 100878 Đô Thị Tu Chân Y Thánh
+[1408/1428] SKIP 101023 Thần Hồn Chí Tôn
+[1409/1428] SKIP 100804 Ta Y Độc Mạnh Vô Địch
+[1410/1428] SKIP 100771 Thần Đạo Đan Tôn
+[1411/1428] SKIP 100635 Văn Minh Chi Vạn Giới Lĩnh Chủ
+[1412/1428] SKIP 100317 Thiên Y Phượng Cửu
+[1413/1428] SKIP 101017 Võ Thần Huyết Mạch
+[1414/1428] SKIP 101273 Long Huyết Vũ Đế
+[1415/1428] SKIP 100613 Linh Kiếm Tôn
+[1416/1428] SKIP 101056 Thần Long Chiến
+[1417/1428] SKIP 100358 Vô Thượng Sát Thần
+[1418/1428] SKIP 100441 Hồng Mông Thiên Đế
+[1419/1428] SKIP 100383 Vũ Luyện Điên Phong
+[1420/1428] SKIP 100365 Vạn Đạo Long Hoàng
+[1421/1428] SKIP 101279 Bất Diệt Chiến Thần
+[1422/1428] SKIP 101276 Vũ Phá Cửu Hoang
+[1423/1428] SKIP 101178 Vạn Đạo Kiếm Tôn
+[1424/1428] SKIP 100882 Dị Năng Tiểu Thần Nông
+[1425/1428] SKIP 100386 Đế Bá
+[1426/1428] SKIP 100541 Phế Vật Nghịch Thiên Tiểu Thư
+[1427/1428] SKIP 101384 Yêu Long Cổ Đế
+[1428/1428] SKIP 100543 Siêu Cấp Binh Vương
+[1365/1428] DONE 100931 rc=0 elapsed=1093.39s name=Đô Thị Vô Thượng Y Thần
+[1396/1428] DONE 100775 rc=0 elapsed=1320.59s name=Cực Phẩm Tiên Đế Tại Đô Thị
+{
+  "processed_this_run": 1414,
+  "failed_total": 25,
+  "state": "C:\\Dev\\MTC_Download\\logs\\download_hidden_discovered_state.json"
+}

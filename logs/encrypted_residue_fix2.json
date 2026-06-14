@@ -1,0 +1,45 @@
+{
+  "fixed": [],
+  "skipped": [
+    {
+      "path": "C:\\Dev\\MTC\\Bắt Đầu Phát Tức Phụ, Ta Biết Có Hơi Nhiều\\Chương 224 Học đường từ đường.txt",
+      "reason": "unable to decode iv"
+    },
+    {
+      "path": "C:\\Dev\\MTC\\Chiêu Hắc Thể Chất Bắt Đầu Tu Hành Tại Phế Thổ\\Chương 1277 Địa ngoại nhà kho.txt",
+      "reason": "unable to decode iv"
+    },
+    {
+      "path": "C:\\Dev\\MTC\\Chiêu Hắc Thể Chất Bắt Đầu Tu Hành Tại Phế Thổ\\Chương 2227 Cái gì xuất thân.txt",
+      "reason": "unable to decode iv"
+    },
+    {
+      "path": "C:\\Dev\\MTC\\Ta Có Thể Thăng Cấp Chỗ Tránh Nạn\\Chương 194 Bạo tạc tạo thành ảnh hưởng.txt",
+      "reason": "unable to decode iv"
+    },
+    {
+      "path": "C:\\Dev\\MTC\\Toàn Cầu Phế Thổ Ta Khai Rương Ra Đỉnh Cấp Chỗ Tránh Nạn\\Chương 491 Ưu tú thiết kế tận thế thành lũy.txt",
+      "reason": "unable to decode iv"
+    },
+    {
+      "path": "C:\\Dev\\MTC\\Toàn Cầu Phế Thổ Ta Khai Rương Ra Đỉnh Cấp Chỗ Tránh Nạn\\Chương 664 Đánh chết con thứ hai thần thoại cự thú 2.txt",
+      "reason": "unable to decode iv"
+    },
+    {
+      "path": "C:\\Dev\\MTC\\Đại Minh Như Thế Tham Phò Mã Trẫm Giết Không Được\\Chương 615 cái này Lam Ngọc thật sự là hỗn trướng （ Cầu đặt mua ）.txt",
+      "reason": "unable to decode iv"
+    },
+    {
+      "path": "C:\\Dev\\MTC\\Đại Minh Như Thế Tham Phò Mã Trẫm Giết Không Được\\Chương 886 Chu Nguyên Chương liên sát hai mươi bảy đem Cầu đặt mua 1 1.txt",
+      "reason": "unable to decode iv"
+    },
+    {
+      "path": "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Từ Làm Cá Mặn\\Chương 114 tiếng Hán ghép vần cùng từ điển.txt",
+      "reason": "unable to decode iv"
+    },
+    {
+      "path": "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Từ Làm Cá Mặn\\Chương 470 An bình cùng ôn hòa.txt",
+      "reason": "unable to decode iv"
+    }
+  ]
+}

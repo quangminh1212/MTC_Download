@@ -1,0 +1,193 @@
+[
+  {
+    "folder": "Bắc Minh Phong",
+    "book_id": 153593,
+    "missing_before": 5,
+    "repaired": [
+      885,
+      886,
+      887,
+      888,
+      889
+    ],
+    "failed": [],
+    "complete_after": true,
+    "commit": {
+      "code": 0,
+      "stdout": "[main c4db530b861] add missing chapters for Bắc Minh Phong\n 6 files changed, 730 insertions(+), 222 deletions(-)\n create mode 100644 Bắc Minh Phong/Chương 885 Đông Phương Vũ mẹ vợ tới.txt\n create mode 100644 Bắc Minh Phong/Chương 886 Mộ Dung Vi Vi chào hỏi phương thức.txt\n create mode 100644 Bắc Minh Phong/Chương 887 Trong thôn có thể qua cái tốt năm.txt\n create mode 100644 Bắc Minh Phong/Chương 888 Mộ Dung Vi Vi nấu cơm.txt\n create mode 100644 Bắc Minh Phong/Chương 889 Phùng Tố Nga đối bọn nhỏ tràn đầy tán thưởng.txt\n",
+      "stderr": "",
+      "message": "add missing chapters for Bắc Minh Phong"
+    }
+  },
+  {
+    "folder": "Bắt Đầu Đánh Dấu Chí Tôn Thể Ta Đồ Nhi Đều Là Phản Phái",
+    "book_id": 153619,
+    "missing_before": 1,
+    "repaired": [
+      6
+    ],
+    "failed": [],
+    "complete_after": true,
+    "commit": {
+      "code": 0,
+      "stdout": "[main 51551bb66f4] add missing chapters for Bắt Đầu Đánh Dấu Chí Tôn Thể Ta Đồ Nhi Đều Là Phản Phái\n 2 files changed, 232 insertions(+)\n create mode 100644 Bắt Đầu Đánh Dấu Chí Tôn Thể Ta Đồ Nhi Đều Là Phản Phái/Chương 6 Thần Ma Lạc Ấn Từ Hôn Kế Hoạch.txt\n",
+      "stderr": "",
+      "message": "add missing chapters for Bắt Đầu Đánh Dấu Chí Tôn Thể Ta Đồ Nhi Đều Là Phản Phái"
+    }
+  },
+  {
+    "folder": "Là Ai Dạy Hắn Như Thế Luyện Kiếm",
+    "book_id": 153497,
+    "missing_before": 11,
+    "repaired": [
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102
+    ],
+    "failed": [],
+    "complete_after": true,
+    "commit": {
+      "code": 0,
+      "stdout": "[main f3900cd65bd] add missing chapters for Là Ai Dạy Hắn Như Thế Luyện Kiếm\n 12 files changed, 1784 insertions(+), 9 deletions(-)\n create mode 100644 Là Ai Dạy Hắn Như Thế Luyện Kiếm/Chương 100 Hậu đức tái vật.txt\n create mode 100644 Là Ai Dạy Hắn Như Thế Luyện Kiếm/Chương 101 Một hạng trách nhiệm.txt\n create mode 100644 Là Ai Dạy Hắn Như Thế Luyện Kiếm/Chương 102 Uẩn linh dưỡng thần.txt\n create mode 100644 Là Ai Dạy Hắn Như Thế Luyện Kiếm/Chương 92 Đối thủ bên trong cũng có cảm giác quen thuộc.txt\n create mode 100644 Là Ai Dạy Hắn Như Thế Luyện Kiếm/Chương 93 Các lão tổ tông ranh giới cuối cùng.txt\n create mode 100644 Là Ai Dạy Hắn Như Thế Luyện Kiếm/Chương 94 Yếu đất nguyên nhân tìm được.txt\n create mode 100644 Là Ai Dạy Hắn Như Thế Luyện Kiếm/Chương 95 Hậu Thổ Uẩn Linh Dưỡng Thần Quyết.txt\n create mode 100644 Là Ai Dạy Hắn Như Thế Luyện Kiếm/Chương 96 Lại luyện sai lệch.txt\n create mode 100644 Là Ai Dạy Hắn Như Thế Luyện Kiếm/Chương 97 Nam Sơn mưa bụi.txt\n create mode 100644 Là Ai Dạy Hắn Như Thế Luyện Kiếm/Chương 98 Nam Sơn bất diệt diễm.txt\n create mode 100644 Là Ai Dạy Hắn Như Thế Luyện Kiếm/Chương 99 Tìm kiếm nơi thích hợp.txt\n",
+      "stderr": "",
+      "message": "add missing chapters for Là Ai Dạy Hắn Như Thế Luyện Kiếm"
+    }
+  },
+  {
+    "folder": "Lâm Thánh",
+    "book_id": 153444,
+    "missing_before": 4,
+    "repaired": [
+      22,
+      23,
+      24,
+      25
+    ],
+    "failed": [],
+    "complete_after": true,
+    "commit": {
+      "code": 0,
+      "stdout": "[main a4722c11fba] add missing chapters for Lâm Thánh\n 5 files changed, 1026 insertions(+), 20 deletions(-)\n create mode 100644 Lâm Thánh/Chương 22 Đêm tối thăm dò sùng thật.txt\n create mode 100644 Lâm Thánh/Chương 23 Giao phong.txt\n create mode 100644 Lâm Thánh/Chương 24 Cầu cứu.txt\n create mode 100644 Lâm Thánh/Chương 25 Chắp đầu.txt\n",
+      "stderr": "",
+      "message": "add missing chapters for Lâm Thánh"
+    }
+  },
+  {
+    "folder": "Lưỡng Giới Một Mặt Mạt Pháp Một Mặt Tiên Giới",
+    "book_id": 153590,
+    "missing_before": 5,
+    "repaired": [
+      83,
+      84,
+      85,
+      86,
+      87
+    ],
+    "failed": [],
+    "complete_after": true,
+    "commit": {
+      "code": 0,
+      "stdout": "[main b1742206279] add missing chapters for Lưỡng Giới Một Mặt Mạt Pháp Một Mặt Tiên Giới\n 6 files changed, 904 insertions(+), 82 deletions(-)\n create mode 100644 Lưỡng Giới Một Mặt Mạt Pháp Một Mặt Tiên Giới/Chương 83 Vận mệnh.txt\n create mode 100644 Lưỡng Giới Một Mặt Mạt Pháp Một Mặt Tiên Giới/Chương 84 Thế cục.txt\n create mode 100644 Lưỡng Giới Một Mặt Mạt Pháp Một Mặt Tiên Giới/Chương 85 Kinh sư khốn cục.txt\n create mode 100644 Lưỡng Giới Một Mặt Mạt Pháp Một Mặt Tiên Giới/Chương 86 Thiên yêu thể.txt\n create mode 100644 Lưỡng Giới Một Mặt Mạt Pháp Một Mặt Tiên Giới/Chương 87 Quyết ra.txt\n",
+      "stderr": "",
+      "message": "add missing chapters for Lưỡng Giới Một Mặt Mạt Pháp Một Mặt Tiên Giới"
+    }
+  },
+  {
+    "folder": "Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu",
+    "book_id": 153332,
+    "missing_before": 8,
+    "repaired": [
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "failed": [],
+    "complete_after": true,
+    "commit": {
+      "code": 0,
+      "stdout": "[main 5e7e164976d] add missing chapters for Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu\n 9 files changed, 2570 insertions(+), 95 deletions(-)\n create mode 100644 Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu/Chương 100 Dị tượng lại xuất hiện đột phá ám kình 1 2.txt\n create mode 100644 Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu/Chương 101 Dị tượng lại xuất hiện đột phá ám kình 2 2.txt\n create mode 100644 Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu/Chương 102 Hai lần dị tượng lộ ra ánh sáng đây là thiên kiêu hạt giống a 1 2.txt\n create mode 100644 Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu/Chương 103 Hai lần dị tượng lộ ra ánh sáng đây là thiên kiêu hạt giống a 2 2.txt\n create mode 100644 Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu/Chương 96 Tài năng xuất chúng kiếm pháp thần ý 1 2.txt\n create mode 100644 Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu/Chương 97 Tài năng xuất chúng kiếm pháp thần ý 2 2.txt\n create mode 100644 Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu/Chương 98 Thần ý hiện trảm Khương Thái Chân Ai dám nói Trương Túc không phải kiếm pháp thiên kiêu 1 2.txt\n create mode 100644 Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu/Chương 99 Thần ý hiện trảm Khương Thái Chân Ai dám nói Trương Túc không phải kiếm pháp thiên kiêu 2 2.txt\n",
+      "stderr": "",
+      "message": "add missing chapters for Max Cấp Võ Thánh Từ Tuyệt Thế Thần Công Bắt Đầu"
+    }
+  },
+  {
+    "folder": "Minh Nhật Chi Thần",
+    "book_id": 153317,
+    "missing_before": 5,
+    "repaired": [
+      57,
+      58,
+      59,
+      60,
+      61
+    ],
+    "failed": [],
+    "complete_after": true,
+    "commit": {
+      "code": 0,
+      "stdout": "[main 13197e48244] add missing chapters for Minh Nhật Chi Thần\n 6 files changed, 1308 insertions(+), 6 deletions(-)\n create mode 100644 Minh Nhật Chi Thần/Chương 57 Năm đó mười tám Minh giới đứng như lâu la.txt\n create mode 100644 Minh Nhật Chi Thần/Chương 58 Có đôi khi kẻ có tiền phẩm vị rất khó nói cầu thủ đặt trước cầu nguyệt phiếu.txt\n create mode 100644 Minh Nhật Chi Thần/Chương 59 Nhướng mày bắt đầu miệng thối cầu thủ đặt trước cầu nguyệt phiếu.txt\n create mode 100644 Minh Nhật Chi Thần/Chương 60 Ức chút vấn đề nhỏ không có trôi qua rồi.txt\n create mode 100644 Minh Nhật Chi Thần/Chương 61 Năm giết.txt\n",
+      "stderr": "",
+      "message": "add missing chapters for Minh Nhật Chi Thần"
+    }
+  },
+  {
+    "folder": "Mỗi Ngày Một Môn Công Pháp Viên Mãn",
+    "book_id": 153556,
+    "missing_before": 16,
+    "repaired": [
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94
+    ],
+    "failed": [],
+    "complete_after": true,
+    "commit": {
+      "code": 0,
+      "stdout": "[main 9f369f67917] add missing chapters for Mỗi Ngày Một Môn Công Pháp Viên Mãn\n 17 files changed, 3090 insertions(+), 78 deletions(-)\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 79 Bá đạo hùng hồn.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 80 Giả thần giả quỷ.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 81 Không muốn nói Vậy liền đừng nói nữa canh thứ nhất.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 82 Kim Cương Trấn Ma canh thứ hai.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 83 Tồi khô lạp hủ Canh 3.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 84 Thiên Cẩu Thực Nhật canh thứ tư.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 85 Tay trói gà không chặt Canh 5.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 86 Thập tử vô sinh tuyệt cảnh canh thứ sáu.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 87 Không biết sống chết.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 88 Khinh người quá đáng.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 89 Chỉ bằng mấy cái này phế vật.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 90 Thâm Uyên Chi Môn canh thứ tư.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 91 Thông Huyền linh binh.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 92 Thu hoạch khổng lồ.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 93 Khí thôn ngàn dặm.txt\n create mode 100644 Mỗi Ngày Một Môn Công Pháp Viên Mãn/Chương 94 Thiên Ma Giải Thể canh thứ tư.txt\n",
+      "stderr": "",
+      "message": "add missing chapters for Mỗi Ngày Một Môn Công Pháp Viên Mãn"
+    }
+  },
+  {
+    "folder": "Đấu La Khí Vận Chi Nữ Cơ Duyên Tất Cả Là Của Ta",
+    "book_id": 139039,
+    "missing_before": 1,
+    "repaired": [
+      723
+    ],
+    "failed": [],
+    "complete_after": true,
+    "commit": {
+      "code": 0,
+      "stdout": "[main 0970a0a585e] add missing chapters for Đấu La Khí Vận Chi Nữ Cơ Duyên Tất Cả Là Của Ta\n 2 files changed, 269 insertions(+), 39 deletions(-)\n create mode 100644 Đấu La Khí Vận Chi Nữ Cơ Duyên Tất Cả Là Của Ta/Chương 723 Đột phá.txt\n",
+      "stderr": "",
+      "message": "add missing chapters for Đấu La Khí Vận Chi Nữ Cơ Duyên Tất Cả Là Của Ta"
+    }
+  }
+]

@@ -1,0 +1,372 @@
+[
+  {
+    "folder": "Từ Arknights Bắt Đầu Xây Dựng Thế Lực",
+    "expected": 231,
+    "have_before": 218,
+    "missing_before": 13,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 13,
+    "failed": []
+  },
+  {
+    "folder": "Học Đường Rực Cháy",
+    "expected": 125,
+    "have_before": 112,
+    "missing_before": 13,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 13,
+    "failed": []
+  },
+  {
+    "folder": "Game Point Cú Đánh Cuối Cùng",
+    "expected": 10,
+    "have_before": 0,
+    "missing_before": 10,
+    "direct_ids": 10,
+    "wrote": 10,
+    "remaining": 0,
+    "failed": []
+  },
+  {
+    "folder": "Tam Quốc Từ Giao Châu Bắt Đầu",
+    "expected": 289,
+    "have_before": 283,
+    "missing_before": 6,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 6,
+    "failed": []
+  },
+  {
+    "folder": "Thiên Hành",
+    "expected": 42,
+    "have_before": 36,
+    "missing_before": 6,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 6,
+    "failed": []
+  },
+  {
+    "folder": "Cửu Đế",
+    "expected": 57,
+    "have_before": 52,
+    "missing_before": 5,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 5,
+    "failed": []
+  },
+  {
+    "folder": "Bất Diệt Kinh",
+    "expected": 211,
+    "have_before": 207,
+    "missing_before": 4,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 4,
+    "failed": []
+  },
+  {
+    "folder": "Hồi Kí Hadidu",
+    "expected": 81,
+    "have_before": 77,
+    "missing_before": 4,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 4,
+    "failed": []
+  },
+  {
+    "folder": "Đại Việt Quỷ Vương",
+    "expected": 357,
+    "have_before": 354,
+    "missing_before": 3,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 3,
+    "failed": []
+  },
+  {
+    "folder": "Ta Phát Hiện Thế Giới Bug",
+    "expected": 69,
+    "have_before": 66,
+    "missing_before": 3,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 3,
+    "failed": []
+  },
+  {
+    "folder": "Long Cơ Chiến Hồn",
+    "expected": 751,
+    "have_before": 749,
+    "missing_before": 2,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 2,
+    "failed": []
+  },
+  {
+    "folder": "Muốn Trường Sinh Trước Hết Phải Đồng Vợ Đồng Chồng",
+    "expected": 346,
+    "have_before": 344,
+    "missing_before": 2,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 2,
+    "failed": []
+  },
+  {
+    "folder": "Lan Khuấy Đảo Cổ Sử",
+    "expected": 133,
+    "have_before": 131,
+    "missing_before": 2,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 2,
+    "failed": []
+  },
+  {
+    "folder": "Hắn Chỉ Là Chơi Đùa Không Phải Viết Lên Thần Thoại",
+    "expected": 69,
+    "have_before": 67,
+    "missing_before": 2,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 2,
+    "failed": []
+  },
+  {
+    "folder": "Tả Đạo Tiên Chủ",
+    "expected": 48,
+    "have_before": 46,
+    "missing_before": 2,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 2,
+    "failed": []
+  },
+  {
+    "folder": "Quang Minh Bất Diệt Tín Ngưỡng Vĩnh Hằng",
+    "expected": 915,
+    "have_before": 914,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Tây Sơn Hành Trình Vượt Thời Gian",
+    "expected": 597,
+    "have_before": 596,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Đế Quốc Nhật Bản",
+    "expected": 405,
+    "have_before": 404,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Lê Dung",
+    "expected": 271,
+    "have_before": 270,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Xuyên Mộng Giả",
+    "expected": 258,
+    "have_before": 257,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Xuyên Thành Liếm Cẩu Nam Phụ Ta Một Cước Đạp Vỡ Thiên Mệnh",
+    "expected": 184,
+    "have_before": 183,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Đấu La Võ Hồn La Tam Pháo Hextech Năm Tuyển Ba",
+    "expected": 93,
+    "have_before": 92,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Bắt Đầu Triệu Hoán Ba Ngàn Đại Đế Dọa Mộng Cửu Thiên Thập Địa",
+    "expected": 91,
+    "have_before": 90,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Từ Hoàn Mỹ Bắt Đầu Bảo Hồ Lô Thông Thiên",
+    "expected": 90,
+    "have_before": 90,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Hướng Quỷ Hứa Hẹn",
+    "expected": 89,
+    "have_before": 88,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Khoa Học Kiểu Conan Sōsōnin",
+    "expected": 89,
+    "have_before": 88,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Sáng Thế Phá Kiếp",
+    "expected": 81,
+    "have_before": 80,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Siêu Nhân Diệt Tuyệt Chỉ Nam",
+    "expected": 76,
+    "have_before": 75,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Tu Tiên Ta Không Phải Quyển Chỉ Là Chăm Chỉ Một Chút Xíu",
+    "expected": 75,
+    "have_before": 74,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Cầm Kiếm Độc Hành Chém Quỷ Thần",
+    "expected": 71,
+    "have_before": 70,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Ta Siêu Thị Máy Tính Gian Thương Khách Hàng Quỳ Cầu Đừng Đóng Cửa",
+    "expected": 71,
+    "have_before": 70,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Thân Là Dũng Giả Ta Bị Lừa Thảm",
+    "expected": 58,
+    "have_before": 57,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Ngự Thần Lục",
+    "expected": 47,
+    "have_before": 46,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Tara Tiểu Thế Giới Chư Thiên Kỳ Diệu Mạo Hiểm",
+    "expected": 35,
+    "have_before": 34,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Bạch Nguyệt Vân Thiên",
+    "expected": 31,
+    "have_before": 30,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Quán Net Âm Dương",
+    "expected": 30,
+    "have_before": 29,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  },
+  {
+    "folder": "Trò Chơi Này Không Thích Hợp Ta Đào Quáng Thành Thần",
+    "expected": 26,
+    "have_before": 25,
+    "missing_before": 1,
+    "direct_ids": 0,
+    "wrote": 0,
+    "remaining": 1,
+    "failed": []
+  }
+]

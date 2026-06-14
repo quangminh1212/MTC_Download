@@ -19,6 +19,8 @@ from pathlib import Path
 from typing import List, Dict, Optional
 
 class MTCDownloader:
+    DONE_FILE = Path(r"C:\Dev\MTC\done.md")
+
     def __init__(self):
         self.base_url = "https://android.lonoapp.net/api"
         self.headers = {
@@ -169,15 +171,34 @@ class MTCDownloader:
         print(f"📊 Thành công: {success_count}/{len(all_chapters)} chương")
 
         if failed_chapters:
-            print(f"❌ Thất bại: {len(failed_chapters)} chương")
-            print("\nDanh sách chương lỗi:")
+            print(f"? Th?t b?i: {len(failed_chapters)} ch??ng")
+            print("\nDanh s?ch ch??ng l?i:")
             for idx, name, cid in failed_chapters:
-                print(f"  - Chương {idx}: {name} (ID: {cid})")
+                print(f"  - Ch??ng {idx}: {name} (ID: {cid})")
+        elif success_count == len(all_chapters):
+            self.mark_book_done(book_name)
 
-        print(f"💾 Đã lưu vào: {book_dir}")
+        print(f"?? ?? l?u v?o: {book_dir}")
         print(f"{'='*60}\n")
 
         return success_count > 0
+
+    def mark_book_done(self, book_name: str):
+        """L?u t?n truy?n ?? ho?n th?nh v?o done.md"""
+        done_file = self.DONE_FILE
+        done_file.touch(exist_ok=True)
+
+        existing_books = {
+            line[2:].strip()
+            for line in done_file.read_text(encoding="utf-8").splitlines()
+            if line.startswith("- ")
+        }
+
+        if book_name in existing_books:
+            return
+
+        with open(done_file, "a", encoding="utf-8") as f:
+            f.write(f"- {book_name}\n")
 
     def download_multiple_books(self, book_ids: List[int], output_dir="downloads", delay=1.0):
         """Tải nhiều truyện"""

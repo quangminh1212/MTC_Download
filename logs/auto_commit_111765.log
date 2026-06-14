@@ -1,0 +1,45 @@
+book=Minecraft Thế Giới Sinh Tồn
+book_id=111765
+out=C:\Dev\MTC\Minecraft Thế Giới Sinh Tồn
+chapters_total=31 expected=31
+[1/31] skip existing file=Chương 1 giáng lâm.txt
+[2/31] skip existing file=Chương 2 chết.txt
+[3/31] skip existing file=Chương 3 Học cách sinh tồn.txt
+[4/31] skip existing file=Chương 4 Tìm kiếm sự sống.txt
+[5/31] skip existing file=Chương 5 thuần hóa ngựa.txt
+[6/31] skip existing file=Chương 6 làng.txt
+[7/31] download chapter_id=14649791 file=Chương 7 làng 2.txt
+  OK decrypted=True written=Chương 7 làng 2.txt
+[8/31] skip existing file=Chương 8 làng.txt
+[9/31] skip existing file=Chương 9 làng bị tấn công.txt
+[10/31] download chapter_id=14649807 file=Chương 10 làng bị tấn công 2.txt
+  OK decrypted=True written=Chương 10 làng bị tấn công 2.txt
+[11/31] skip existing file=Chương 11 Làng Bị Tấn Công 3.txt
+[12/31] skip existing file=Chương 12 Làng bị tất công 4.txt
+[13/31] skip existing file=Chương 13 đợt tấn công cuối cùng.txt
+[14/31] skip existing file=Chương 14 trở về bình thường sinh hoạt.txt
+[15/31] download chapter_id=14679441 file=Chương 15 trở về bình thường sinh hoạt 2.txt
+  OK decrypted=True written=Chương 15 trở về bình thường sinh hoạt 2.txt
+[16/31] skip existing file=Chương 16 đào khoáng.txt
+[17/31] download chapter_id=14693989 file=Chương 17 đào khoáng 2.txt
+  OK decrypted=True written=Chương 17 đào khoáng 2.txt
+[18/31] skip existing file=Chương 18 đào khoáng 3.txt
+[19/31] skip existing file=Chương 19 ngoại truyện.txt
+[20/31] skip existing file=Chương 20 hầm mỏ.txt
+[21/31] skip existing file=Chương 21 xây nhà.txt
+[22/31] skip existing file=Chương 22 không đề nghị làm theo.txt
+[23/31] skip existing file=Chương 23 hai tấm bản đồ.txt
+[24/31] skip existing file=Chương 24 tàn tích dưới đại dương.txt
+[25/31] skip existing file=Chương 25 tàu đắm.txt
+[26/31] skip existing file=Chương 26 đền cổ.txt
+[27/31] download chapter_id=14748358 file=Chương 27 đền cổ 2.txt
+  OK decrypted=True written=Chương 27 đền cổ 2.txt
+[28/31] skip existing file=Chương 28 bí mật chôn sâu.txt
+[29/31] skip existing file=Chương 29 rồng ender mặt ngu.txt
+[30/31] skip existing file=Chương 30 ngươi biết ta là ai sao.txt
+[31/31] skip existing file=Chương 31 giao dịch.txt
+final_ok=31
+final_fail=0
+out=C:\Dev\MTC\Minecraft Thế Giới Sinh Tồn
+
+[stderr]

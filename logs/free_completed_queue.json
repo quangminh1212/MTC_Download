@@ -1,0 +1,405 @@
+[
+  {
+    "id": 112190,
+    "name": "Biển Vô Tận: Toàn Chức Vua Câu Cá",
+    "chapter_count": 181,
+    "updated_at": "2026-05-11T06:58:21.000000Z",
+    "new_chap_at": "2025-11-02T06:11:56.000000Z",
+    "published_at": "2022-10-22T23:38:58.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 15410850,
+        "is_locked": 0,
+        "word_count": 2098,
+        "content_len": 23256
+      },
+      {
+        "index": 91,
+        "id": 16564685,
+        "is_locked": 0,
+        "word_count": 1784,
+        "content_len": 19672
+      },
+      {
+        "index": 181,
+        "id": 25352272,
+        "is_locked": 0,
+        "word_count": 3245,
+        "content_len": 35315
+      }
+    ]
+  },
+  {
+    "id": 121843,
+    "name": "Bắt Đầu Từ Kiếm Ma",
+    "chapter_count": 344,
+    "updated_at": "2026-05-08T12:24:44.000000Z",
+    "new_chap_at": "2025-04-28T18:11:25.000000Z",
+    "published_at": "2023-11-12T19:05:45.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 17032047,
+        "is_locked": 0,
+        "word_count": 2589,
+        "content_len": 28344
+      },
+      {
+        "index": 173,
+        "id": 17852351,
+        "is_locked": 0,
+        "word_count": 2259,
+        "content_len": 24504
+      },
+      {
+        "index": 344,
+        "id": 22430543,
+        "is_locked": 0,
+        "word_count": 334,
+        "content_len": 3912
+      }
+    ]
+  },
+  {
+    "id": 102223,
+    "name": "Đại La Thiên Tôn",
+    "chapter_count": 664,
+    "updated_at": "2026-05-03T21:23:44.000000Z",
+    "new_chap_at": "2018-07-13T19:07:27.000000Z",
+    "published_at": "2020-06-11T17:24:42.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 11883600,
+        "is_locked": 0,
+        "word_count": 1280,
+        "content_len": 9006
+      },
+      {
+        "index": 333,
+        "id": 11883932,
+        "is_locked": 0,
+        "word_count": 3103,
+        "content_len": 21774
+      },
+      {
+        "index": 664,
+        "id": 11884263,
+        "is_locked": 0,
+        "word_count": 3044,
+        "content_len": 33267
+      }
+    ]
+  },
+  {
+    "id": 142470,
+    "name": "Devil'S Path: Quỷ Giới Và Nhẫn Giới",
+    "chapter_count": 322,
+    "updated_at": "2026-05-03T13:47:57.000000Z",
+    "new_chap_at": "2025-11-11T21:08:22.000000Z",
+    "published_at": "2025-05-20T13:30:46.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 22763310,
+        "is_locked": 0,
+        "word_count": 2003,
+        "content_len": 21976
+      },
+      {
+        "index": 162,
+        "id": 23346414,
+        "is_locked": 0,
+        "word_count": 2130,
+        "content_len": 24563
+      },
+      {
+        "index": 322,
+        "id": 25481529,
+        "is_locked": 0,
+        "word_count": 267,
+        "content_len": 3203
+      }
+    ]
+  },
+  {
+    "id": 102461,
+    "name": "Đưa Nước Việt Vươn Tầm Thế Giới (phần 1): Khải Hoàn Nhất Lộ",
+    "chapter_count": 607,
+    "updated_at": "2026-05-03T09:42:54.000000Z",
+    "new_chap_at": "2019-07-25T22:07:47.000000Z",
+    "published_at": "2020-06-11T17:26:35.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 11954879,
+        "is_locked": 0,
+        "word_count": 1980,
+        "content_len": 20979
+      },
+      {
+        "index": 304,
+        "id": 11955182,
+        "is_locked": 0,
+        "word_count": 3205,
+        "content_len": 22115
+      },
+      {
+        "index": 607,
+        "id": 12074150,
+        "is_locked": 0,
+        "word_count": 2043,
+        "content_len": 21944
+      }
+    ]
+  },
+  {
+    "id": 100738,
+    "name": "The Gamer Hệ Thống",
+    "chapter_count": 1010,
+    "updated_at": "2026-05-02T02:12:27.000000Z",
+    "new_chap_at": "2019-07-08T16:07:48.000000Z",
+    "published_at": "2020-06-13T23:02:16.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 10647453,
+        "is_locked": 0,
+        "word_count": 511,
+        "content_len": 3768
+      },
+      {
+        "index": 506,
+        "id": 10647958,
+        "is_locked": 0,
+        "word_count": 2425,
+        "content_len": 16856
+      },
+      {
+        "index": 1010,
+        "id": 10648462,
+        "is_locked": 0,
+        "word_count": 3527,
+        "content_len": 24280
+      }
+    ]
+  },
+  {
+    "id": 100677,
+    "name": "Công Cuộc Bị 999 Em Gái Chinh Phục",
+    "chapter_count": 1106,
+    "updated_at": "2026-05-01T04:53:50.000000Z",
+    "new_chap_at": "2020-03-21T17:03:28.000000Z",
+    "published_at": "2020-06-13T20:55:25.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 10614324,
+        "is_locked": 0,
+        "word_count": 3284,
+        "content_len": 23454
+      },
+      {
+        "index": 554,
+        "id": 10614877,
+        "is_locked": 0,
+        "word_count": 2372,
+        "content_len": 16515
+      },
+      {
+        "index": 1106,
+        "id": 12067615,
+        "is_locked": 0,
+        "word_count": 626,
+        "content_len": 4707
+      }
+    ]
+  },
+  {
+    "id": 105037,
+    "name": "Tổng Mạn: Cùng Miêu Nương Không Đơn Giản Thường Ngày",
+    "chapter_count": 1243,
+    "updated_at": "2026-04-30T23:52:05.000000Z",
+    "new_chap_at": "2022-02-07T22:29:20.000000Z",
+    "published_at": "2020-09-05T22:55:57.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 12991055,
+        "is_locked": 0,
+        "word_count": 1071,
+        "content_len": 11619
+      },
+      {
+        "index": 622,
+        "id": 13878513,
+        "is_locked": 0,
+        "word_count": 1190,
+        "content_len": 12958
+      },
+      {
+        "index": 1243,
+        "id": 14439714,
+        "is_locked": 0,
+        "word_count": 1313,
+        "content_len": 14382
+      }
+    ]
+  },
+  {
+    "id": 106124,
+    "name": "Định Mệnh",
+    "chapter_count": 65,
+    "updated_at": "2026-04-01T13:36:10.000000Z",
+    "new_chap_at": "2021-06-07T16:52:23.000000Z",
+    "published_at": "2020-12-27T08:49:56.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 13250966,
+        "is_locked": 0,
+        "word_count": 1550,
+        "content_len": 17080
+      },
+      {
+        "index": 33,
+        "id": 13308355,
+        "is_locked": 0,
+        "word_count": 2172,
+        "content_len": 23395
+      },
+      {
+        "index": 65,
+        "id": 13703554,
+        "is_locked": 0,
+        "word_count": 4495,
+        "content_len": 47832
+      }
+    ]
+  },
+  {
+    "id": 106815,
+    "name": "Comic Ác Ma Pháp Sư",
+    "chapter_count": 25,
+    "updated_at": "2026-04-01T12:24:42.000000Z",
+    "new_chap_at": "2024-03-03T12:33:12.000000Z",
+    "published_at": "2021-03-07T14:01:05.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 13451708,
+        "is_locked": 0,
+        "word_count": 1650,
+        "content_len": 17507
+      },
+      {
+        "index": 13,
+        "id": 13457073,
+        "is_locked": 0,
+        "word_count": 2108,
+        "content_len": 23342
+      },
+      {
+        "index": 25,
+        "id": 17515937,
+        "is_locked": 0,
+        "word_count": 249,
+        "content_len": 2974
+      }
+    ]
+  },
+  {
+    "id": 106431,
+    "name": "Đế Vương Tiền Truyện",
+    "chapter_count": 178,
+    "updated_at": "2026-03-01T13:46:45.000000Z",
+    "new_chap_at": "2021-05-28T12:32:13.000000Z",
+    "published_at": "2021-01-30T16:49:49.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 13455616,
+        "is_locked": 0,
+        "word_count": 1758,
+        "content_len": 18590
+      },
+      {
+        "index": 90,
+        "id": 13498853,
+        "is_locked": 0,
+        "word_count": 1729,
+        "content_len": 18307
+      },
+      {
+        "index": 178,
+        "id": 13667080,
+        "is_locked": 0,
+        "word_count": 1519,
+        "content_len": 16312
+      }
+    ]
+  },
+  {
+    "id": 109958,
+    "name": "Hạnh Phúc Đơn Độc",
+    "chapter_count": 59,
+    "updated_at": "2026-02-04T15:45:53.000000Z",
+    "new_chap_at": "2022-02-16T21:52:00.000000Z",
+    "published_at": "2021-11-29T10:12:58.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 14208059,
+        "is_locked": 0,
+        "word_count": 1632,
+        "content_len": 17651
+      },
+      {
+        "index": 30,
+        "id": 14234375,
+        "is_locked": 0,
+        "word_count": 1733,
+        "content_len": 18051
+      },
+      {
+        "index": 59,
+        "id": 14468829,
+        "is_locked": 0,
+        "word_count": 898,
+        "content_len": 9603
+      }
+    ]
+  },
+  {
+    "id": 114701,
+    "name": "Dị Giới Trọng Sinh Lục",
+    "chapter_count": 34,
+    "updated_at": "2026-01-01T13:53:49.000000Z",
+    "new_chap_at": "2022-11-22T10:22:12.000000Z",
+    "published_at": "2022-10-07T20:11:50.000000Z",
+    "samples": [
+      {
+        "index": 1,
+        "id": 15353300,
+        "is_locked": 0,
+        "word_count": 2058,
+        "content_len": 21891
+      },
+      {
+        "index": 18,
+        "id": 15381086,
+        "is_locked": 0,
+        "word_count": 2189,
+        "content_len": 23795
+      },
+      {
+        "index": 34,
+        "id": 15520345,
+        "is_locked": 0,
+        "word_count": 2028,
+        "content_len": 22286
+      }
+    ]
+  }
+]

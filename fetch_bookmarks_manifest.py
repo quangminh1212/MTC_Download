@@ -61,7 +61,12 @@ for it in all_items:
             'chapter_id': it.get('chapter_id'),
             'created_at': it.get('created_at')
         }
-manifest={'count_bookmarks':len(all_items),'count_books':len(books),'books':list(books.values())}
+ordered_books = sorted(
+    books.values(),
+    key=lambda item: str(item.get('created_at') or ''),
+    reverse=True,
+)
+manifest={'count_bookmarks':len(all_items),'count_books':len(books),'books':ordered_books}
 path=OUT/'bookmarked_books_manifest.json'
 path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
 print('saved', path)

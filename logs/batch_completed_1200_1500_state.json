@@ -1,0 +1,74 @@
+[
+  {
+    "id": 103888,
+    "folder": "Tiêu Dao Lục",
+    "expected": 1204,
+    "returncode": 0,
+    "elapsed": 413.9,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_103888.log"
+  },
+  {
+    "id": 100316,
+    "folder": "Tới Dị Giới Làm Tiểu Bạch Kiểm",
+    "expected": 1214,
+    "returncode": 0,
+    "elapsed": 404.9,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_100316.log"
+  },
+  {
+    "id": 105037,
+    "folder": "Tổng Mạn Cùng Miêu Nương Không Đơn Giản Thường Ngày",
+    "expected": 1243,
+    "returncode": 0,
+    "elapsed": 409.7,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_105037.log"
+  },
+  {
+    "id": 104343,
+    "folder": "Vô Tận Trùng Sinh",
+    "expected": 1322,
+    "returncode": 0,
+    "elapsed": 297.5,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_104343.log"
+  },
+  {
+    "id": 101109,
+    "folder": "Tam Giới Lục Cõi Ký",
+    "expected": 1343,
+    "returncode": 0,
+    "elapsed": 369.4,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_101109.log"
+  },
+  {
+    "id": 105999,
+    "folder": "Hùng Ca Đại Việt",
+    "expected": 1396,
+    "returncode": 0,
+    "elapsed": 329.6,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_105999.log"
+  },
+  {
+    "id": 110512,
+    "folder": "Thương Sinh Giang Đạo",
+    "expected": 1405,
+    "returncode": 0,
+    "elapsed": 342.6,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_110512.log"
+  },
+  {
+    "id": 100381,
+    "folder": "Đế Chế Đại Việt",
+    "expected": 1470,
+    "returncode": 0,
+    "elapsed": 426.7,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_100381.log"
+  },
+  {
+    "id": 102139,
+    "folder": "Thú Tu Thành Thần",
+    "expected": 1483,
+    "returncode": 0,
+    "elapsed": 492.3,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_102139.log"
+  }
+]
