@@ -85,7 +85,8 @@ def chapter_filename(chapter: dict, fallback_index: int) -> str:
         idx_int = fallback_index
     raw_name = chapter.get("name") or chapter.get("title") or ""
     title = CHAPTER_PREFIX_RE.sub("", str(raw_name)).strip(" :.\u2013\u2014-")
-    title = clean_filename(title, max_len=130)
+    if title:
+        title = clean_filename(title, max_len=130)
     return f"Chương {idx_int} {title}.txt" if title else f"Chương {idx_int}.txt"
 
 

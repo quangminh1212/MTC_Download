@@ -124,8 +124,14 @@ def clean_text(value: Any) -> str:
 
 
 def normalize_chapter_title(name: str, index: int) -> str:
-    s = html.unescape(str(name or f'Chương {index}')).strip()
-    s = re.sub(r'^\s*(?:chương|chuong)\s*(\d+)\s*[:.\-–—]?\s*', lambda m: f'Chương {m.group(1)} ', s, flags=re.I)
+    s = html.unescape(str(name or '')).strip()
+    m = re.match(r'^\s*(?:chương|chuong)\s*0*(\d+)\s*[:.\-–—]?\s*(.*)$', s, flags=re.I)
+    if m:
+        idx = int(m.group(1))
+        suffix = (m.group(2) or '').strip(' .')
+        return f'Chương {idx} {suffix}'.strip()
+    if not s:
+        return f'Chương {index}'
     if not re.match(r'^Chương\s+\d+', s, re.I):
         s = f'Chương {index} {s}'
     return re.sub(r'\s+', ' ', s).strip(' .')
