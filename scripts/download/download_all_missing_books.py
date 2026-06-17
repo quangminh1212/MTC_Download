@@ -15,6 +15,7 @@ import html
 import json
 import re
 import sys
+import threading
 import time
 import unicodedata
 from pathlib import Path
@@ -43,6 +44,15 @@ LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 IGNORE_DIRS = {".git", ".githooks", ".vscode", "__pycache__"}
 CHAPTER_RE = re.compile(r"(?i)(?:ch\u01b0\u01a1ng|chuong)\s*(\d+)")
+_THREAD_LOCAL = threading.local()
+
+
+def thread_downloader() -> MTCDownloader:
+    downloader = getattr(_THREAD_LOCAL, "downloader", None)
+    if downloader is None:
+        downloader = MTCDownloader()
+        _THREAD_LOCAL.downloader = downloader
+    return downloader
 
 
 # ---------------------------------------------------------------------------
@@ -145,7 +155,7 @@ def download_one_chapter(book_id: int, folder_name: str, chapter: dict, seq: int
     idx = int(chapter.get("index") or chapter.get("number") or seq)
     for attempt in range(1, 4):
         try:
-            downloader = MTCDownloader()
+            downloader = thread_downloader()
             detail = downloader.get_chapter_content(chapter_id)
             data = (detail or {}).get("data") or {}
             content = data.get("content") or data.get("body") or ""
