@@ -29,6 +29,11 @@ PAYLOAD_RE = re.compile(r'^[A-Za-z0-9+/=]+$')
 # Hard encrypted residue markers (should never remain after successful decrypt)
 MARKER_RE = re.compile(r'eyJpdiI6|"iv":"|"value":"')
 CONTROL_RE = re.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f]')
+EMBEDDED_PAYLOAD_RE = re.compile(r'eyJpdiI6[^\s\u0000-\u001f]+')
+
+
+def _only_b64(token: str) -> str:
+    return ''.join(ch for ch in token if ch in 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=')
 
 
 def b64d(data):
@@ -90,15 +95,36 @@ def decrypt_content_field(content_b64: str) -> str:
 
 def maybe_decrypt(content: str) -> tuple[str, bool]:
     s = str(content or '').strip()
-    # Usually content is one long base64 string containing JSON iv/value/mac.
-    if len(s) > 100 and PAYLOAD_RE.fullmatch(s):
-        try:
-            raw = b64d(s)
+    decrypted_any = False
+    for _ in range(4):
+        candidate = s.strip()
+        # Case 1: the whole string is one Laravel payload.
+        if len(candidate) > 100 and (PAYLOAD_RE.fullmatch(candidate) or candidate.startswith('eyJpdiI6')):
+            token = candidate if PAYLOAD_RE.fullmatch(candidate) else _only_b64(candidate)
+            try:
+                raw = b64d(token)
+            except Exception:
+                raw = b''
             if b'"iv":"' in raw and b'"value":"' in raw:
-                return decrypt_content_field(s), True
-        except Exception:
-            raise
-    return s, False
+                s = decrypt_content_field(token).strip()
+                decrypted_any = True
+                continue
+        # Case 2: a Laravel payload is embedded inside otherwise-decrypted text
+        # (nested encryption). Decrypt the embedded payload and splice it back in.
+        match = EMBEDDED_PAYLOAD_RE.search(s)
+        if match:
+            token = _only_b64(match.group(0))
+            try:
+                raw = b64d(token)
+            except Exception:
+                raw = b''
+            if b'"iv":"' in raw and b'"value":"' in raw:
+                inner = decrypt_content_field(token).strip()
+                s = (s[:match.start()] + inner + s[match.end():]).strip()
+                decrypted_any = True
+                continue
+        break
+    return s, decrypted_any
 
 
 def clean_text(value: Any) -> str:
@@ -150,24 +176,27 @@ def write_plain_chapter(path: Path, title: str, body: str):
     lines = body.splitlines()
     while lines and not lines[0].strip():
         lines.pop(0)
-    if lines:
+    for _ in range(3):
+        if not lines:
+            break
         first = lines[0].strip()
         # Drop duplicate/garbled title fragments before the real prose starts.
         looks_like_broken_title = False
         if first == title or MARKER_RE.search(first) or '�' in first:
             looks_like_broken_title = True
         elif len(first) < 160:
-            # short non-prose line at top that resembles a damaged title
             alpha = sum(ch.isalpha() for ch in first)
             weird = sum((ord(ch) < 32) or (ch == '�') for ch in first)
             if weird > 0 or alpha < max(8, len(first) // 3):
                 looks_like_broken_title = True
-            if 'tác giả:' in first.lower() or 'chuong' in first.lower() or 'chư' in first.lower() or 'chương' in first.lower():
+            lowered = first.lower()
+            if 'tác giả:' in lowered or 'chuong' in lowered or 'chư' in lowered or 'chương' in lowered:
                 looks_like_broken_title = True
-        if looks_like_broken_title:
+        if not looks_like_broken_title:
+            break
+        lines.pop(0)
+        while lines and not lines[0].strip():
             lines.pop(0)
-            while lines and not lines[0].strip():
-                lines.pop(0)
     body = '\n'.join(lines).strip()
     # Remove residual replacement/control chars to keep chapter readable and filename-safe commits clean.
     body = body.replace('�', '')
