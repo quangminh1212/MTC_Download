@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -29,6 +30,7 @@ TARGET_ROOT = Path(r"D:\Dev\MTC_Done")
 LOG_DIR = Path(r"C:\Dev\MTC_Download\logs")
 MISSING_PATH = LOG_DIR / "mtc_done_missing_books.json"
 STATE_PATH = LOG_DIR / "download_missing_to_done_state.json"
+STATE_LOCK = LOG_DIR / "download_missing_to_done_state.lock"
 
 # Re-target every helper inside download_all_missing_books to MTC_Done.
 dam.ROOT = TARGET_ROOT
@@ -46,6 +48,48 @@ def load_state() -> dict:
 def save_state(state: dict) -> None:
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def _acquire_lock(timeout: float = 30.0) -> None:
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
+    deadline = time.time() + timeout
+    while True:
+        try:
+            fd = os.open(str(STATE_LOCK), os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            os.close(fd)
+            return
+        except FileExistsError:
+            if time.time() > deadline:
+                try:
+                    STATE_LOCK.unlink()
+                except FileNotFoundError:
+                    pass
+                continue
+            time.sleep(0.05)
+
+
+def _release_lock() -> None:
+    try:
+        STATE_LOCK.unlink()
+    except FileNotFoundError:
+        pass
+
+
+def merge_state_record(record: dict, *, kind: str) -> None:
+    """Append a record under a coarse file lock so multiple shards don't clobber each other."""
+    _acquire_lock()
+    try:
+        state = load_state()
+        bucket = state.setdefault(kind, [])
+        rid = int(record.get("id") or 0)
+        if rid:
+            existing = {int(r.get("id") or 0) for r in bucket}
+            if rid in existing:
+                return
+        bucket.append(record)
+        save_state(state)
+    finally:
+        _release_lock()
 
 
 def build_queue() -> list[dict]:
@@ -80,6 +124,10 @@ def main() -> int:
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--batch-size", type=int, default=24)
     parser.add_argument("--book-id", type=int, default=None)
+    parser.add_argument("--shard", type=int, default=0,
+                        help="this shard index (0-based)")
+    parser.add_argument("--shard-count", type=int, default=1,
+                        help="number of parallel shards")
     args = parser.parse_args()
 
     TARGET_ROOT.mkdir(parents=True, exist_ok=True)
@@ -101,6 +149,9 @@ def main() -> int:
         }]
     else:
         queue = build_queue()
+
+    if args.shard_count and args.shard_count > 1:
+        queue = [b for b in queue if (int(b["id"]) % args.shard_count) == args.shard]
 
     if args.min_chapters is not None:
         queue = [b for b in queue if b["chapter_count"] >= args.min_chapters]
@@ -124,9 +175,8 @@ def main() -> int:
             continue
         if dam.alnum_norm(book["clean_name"]) in folder_norms:
             print(f"[{seq}/{total}] SKIP local exists {book_id} {book['name']}", flush=True)
-            state.setdefault("done", []).append({"id": book_id, "name": book["name"], "status": "exists"})
+            merge_state_record({"id": book_id, "name": book["name"], "status": "exists"}, kind="done")
             done_ids.add(book_id)
-            save_state(state)
             continue
 
         print(
@@ -145,12 +195,11 @@ def main() -> int:
             flush=True,
         )
         if result.get("status") in ("ok", "no_chapters", "exists"):
-            state.setdefault("done", []).append(result)
+            merge_state_record(result, kind="done")
             done_ids.add(book_id)
             folder_norms.add(dam.alnum_norm(book["clean_name"]))
         else:
-            state.setdefault("errors", []).append(result)
-        save_state(state)
+            merge_state_record(result, kind="errors")
         time.sleep(0.2)
 
     errors = len(state.get("errors", []))
