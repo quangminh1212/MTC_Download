@@ -214,6 +214,7 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--start-after", default=None)
     parser.add_argument("--push-every", type=int, default=50)
+    parser.add_argument("--no-push", action="store_true")
     args = parser.parse_args()
 
     branch = get_current_branch()
@@ -242,7 +243,7 @@ def main() -> int:
                 since_push += 1
                 elapsed = max(time.time() - t0, 0.001)
                 print(f"ok {index}/{len(todo)} rate={ok/elapsed:.2f}/s {folder}", flush=True)
-                if args.push_every > 0 and since_push >= args.push_every:
+                if not args.no_push and args.push_every > 0 and since_push >= args.push_every:
                     push_current_main()
                     since_push = 0
                     print(f"push ok after {ok} commits", flush=True)
@@ -251,7 +252,7 @@ def main() -> int:
         except Exception as exc:
             errors += 1
             print(f"fail {index}/{len(todo)} {folder}: {exc}", flush=True)
-    if args.push_every > 0 and since_push > 0 and errors == 0:
+    if not args.no_push and args.push_every > 0 and since_push > 0 and errors == 0:
         push_current_main()
         print(f"final push ok after {ok} commits", flush=True)
     print(f"done ok={ok} skipped={skipped} errors={errors} total_done={len(done)}")
@@ -260,3 +261,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
