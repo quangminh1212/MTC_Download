@@ -189,7 +189,7 @@ def get_ref(ref: str) -> str | None:
     return proc.stdout.strip()
 
 
-def push_current_main() -> None:
+def push_current_main(target_ref: str | None = None) -> None:
     fetch = run(["git", "fetch", "origin", "--prune"], timeout=1800)
     if fetch.returncode != 0:
         raise RuntimeError(f"fetch failed: {fetch.stderr[:300]}")
@@ -200,10 +200,11 @@ def push_current_main() -> None:
     ts = time.strftime("%Y%m%d-%H%M%S")
     run(["git", "update-ref", f"refs/backup/pre-batch-push-local-{ts}", local_sha], timeout=60)
     run(["git", "update-ref", f"refs/backup/pre-batch-push-origin-{ts}", remote_sha], timeout=60)
+    destination = target_ref or "main"
     push = run([
         "git", "push",
         f"--force-with-lease=refs/heads/main:{remote_sha}",
-        "origin", "main",
+        "origin", f"main:{destination}",
     ], timeout=3600)
     if push.returncode != 0:
         raise RuntimeError(f"push failed: {push.stderr[:500]}")
@@ -215,6 +216,7 @@ def main() -> int:
     parser.add_argument("--start-after", default=None)
     parser.add_argument("--push-every", type=int, default=50)
     parser.add_argument("--no-push", action="store_true")
+    parser.add_argument("--push-target", default=None)
     args = parser.parse_args()
 
     branch = get_current_branch()
@@ -244,7 +246,7 @@ def main() -> int:
                 elapsed = max(time.time() - t0, 0.001)
                 print(f"ok {index}/{len(todo)} rate={ok/elapsed:.2f}/s {folder}", flush=True)
                 if not args.no_push and args.push_every > 0 and since_push >= args.push_every:
-                    push_current_main()
+                    push_current_main(args.push_target)
                     since_push = 0
                     print(f"push ok after {ok} commits", flush=True)
             else:
@@ -253,7 +255,7 @@ def main() -> int:
             errors += 1
             print(f"fail {index}/{len(todo)} {folder}: {exc}", flush=True)
     if not args.no_push and args.push_every > 0 and since_push > 0 and errors == 0:
-        push_current_main()
+        push_current_main(args.push_target)
         print(f"final push ok after {ok} commits", flush=True)
     print(f"done ok={ok} skipped={skipped} errors={errors} total_done={len(done)}")
     return 0 if errors == 0 else 1
