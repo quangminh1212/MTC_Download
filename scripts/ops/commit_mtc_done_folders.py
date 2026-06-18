@@ -190,22 +190,23 @@ def get_ref(ref: str) -> str | None:
 
 
 def push_current_main(target_ref: str | None = None) -> None:
-    fetch = run(["git", "fetch", "origin", "--prune"], timeout=1800)
-    if fetch.returncode != 0:
-        raise RuntimeError(f"fetch failed: {fetch.stderr[:300]}")
-    remote_sha = get_ref("origin/main")
     local_sha = get_ref("main")
-    if not remote_sha or not local_sha:
-        raise RuntimeError("cannot resolve main/origin/main before push")
-    ts = time.strftime("%Y%m%d-%H%M%S")
-    run(["git", "update-ref", f"refs/backup/pre-batch-push-local-{ts}", local_sha], timeout=60)
-    run(["git", "update-ref", f"refs/backup/pre-batch-push-origin-{ts}", remote_sha], timeout=60)
+    remote_sha = get_ref("origin/main")
+    if not local_sha:
+        raise RuntimeError("cannot resolve local main before push")
     destination = target_ref or "main"
-    push = run([
-        "git", "push",
-        f"--force-with-lease=refs/heads/main:{remote_sha}",
-        "origin", f"main:{destination}",
-    ], timeout=3600)
+    args = [
+        "git",
+        "-c", "gc.auto=0",
+        "-c", "maintenance.auto=false",
+        "-c", "core.compression=1",
+        "-c", "pack.threads=1",
+        "push",
+    ]
+    if destination == "main" and remote_sha:
+        args.append(f"--force-with-lease=refs/heads/main:{remote_sha}")
+    args.extend(["origin", f"main:{destination}"])
+    push = run(args, timeout=3600)
     if push.returncode != 0:
         raise RuntimeError(f"push failed: {push.stderr[:500]}")
 
