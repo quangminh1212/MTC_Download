@@ -30,6 +30,7 @@ TARGET_ROOT = Path(r"D:\Dev\MTC_Done")
 LOG_DIR = Path(r"C:\Dev\MTC_Download\logs")
 MISSING_PATH = LOG_DIR / "mtc_done_missing_books.json"
 STATE_PATH = LOG_DIR / "download_missing_to_done_state.json"
+STATE_BACKUP = LOG_DIR / "download_missing_to_done_state.json.bak"
 STATE_LOCK = LOG_DIR / "download_missing_to_done_state.lock"
 
 # Re-target every helper inside download_all_missing_books to MTC_Done.
@@ -37,17 +38,27 @@ dam.ROOT = TARGET_ROOT
 
 
 def load_state() -> dict:
-    if STATE_PATH.exists():
+    for path in (STATE_PATH, STATE_BACKUP):
+        if not path.exists():
+            continue
         try:
-            return json.loads(STATE_PATH.read_text(encoding="utf-8"))
+            return json.loads(path.read_text(encoding="utf-8"))
         except Exception:
-            pass
+            continue
     return {"done": [], "errors": []}
 
 
 def save_state(state: dict) -> None:
     LOG_DIR.mkdir(parents=True, exist_ok=True)
-    STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+    payload = json.dumps(state, ensure_ascii=False, indent=2)
+    tmp_path = STATE_PATH.with_suffix(STATE_PATH.suffix + f".{os.getpid()}.tmp")
+    tmp_path.write_text(payload, encoding="utf-8")
+    if STATE_PATH.exists():
+        try:
+            os.replace(STATE_PATH, STATE_BACKUP)
+        except OSError:
+            pass
+    os.replace(tmp_path, STATE_PATH)
 
 
 def _acquire_lock(timeout: float = 30.0) -> None:
