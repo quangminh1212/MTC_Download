@@ -32,6 +32,18 @@ CONTROL_RE = re.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f]')
 EMBEDDED_PAYLOAD_RE = re.compile(r'eyJpdiI6[^\s\u0000-\u001f]+')
 
 
+MOJIBAKE_FIXES = {
+    'Ch\u00c6\u00b0\u00c6\u00a1ng': 'Ch\u01b0\u01a1ng',
+    'ch\u00c6\u00b0\u00c6\u00a1ng': 'ch\u01b0\u01a1ng',
+    'Ch????ng': 'Ch\u01b0\u01a1ng',
+    'ch????ng': 'ch\u01b0\u01a1ng',
+    'Ch??ng': 'Ch\u01b0\u01a1ng',
+    'ch??ng': 'ch\u01b0\u01a1ng',
+    '\u00e2\u20ac\u201c': '\u2013',
+    '\u00e2\u20ac\u201d': '\u2014',
+}
+
+
 def _only_b64(token: str) -> str:
     return ''.join(ch for ch in token if ch in 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=')
 
@@ -127,6 +139,31 @@ def maybe_decrypt(content: str) -> tuple[str, bool]:
     return s, decrypted_any
 
 
+
+def repair_common_mojibake(value: Any) -> str:
+    text = html.unescape(str(value or '')).strip()
+    for bad, good in MOJIBAKE_FIXES.items():
+        text = text.replace(bad, good)
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def chapter_title_candidate(data: dict | None, chapter: dict | None, index: int) -> str:
+    candidates = []
+    for source in (data or {}, chapter or {}):
+        for key in ('name', 'title', 'chapter_name', 'chapter_title', 'full_name'):
+            value = source.get(key)
+            if value:
+                candidates.append(value)
+        slug = source.get('slug')
+        if slug and not re.fullmatch(r'chuong-?0*%s' % int(index), str(slug).strip(), flags=re.I):
+            candidates.append(str(slug).replace('-', ' '))
+    for candidate in candidates:
+        repaired = repair_common_mojibake(candidate)
+        if repaired:
+            return repaired
+    return f'Ch\u01b0\u01a1ng {index}'
+
+
 def clean_text(value: Any) -> str:
     text = html.unescape(str(value or ''))
     text = text.replace('<br />', '\n').replace('<br/>', '\n').replace('<br>', '\n')
@@ -150,16 +187,16 @@ def clean_text(value: Any) -> str:
 
 
 def normalize_chapter_title(name: str, index: int) -> str:
-    s = html.unescape(str(name or '')).strip()
-    m = re.match(r'^\s*(?:chương|chuong)\s*0*(\d+)\s*[:.\-–—]?\s*(.*)$', s, flags=re.I)
+    s = repair_common_mojibake(name)
+    m = re.match(r'^\s*(?:ch\u01b0\u01a1ng|chuong|ch[?]{2,4}ng)\s*0*(\d+)\s*[:.\-\u2013\u2014]?\s*(.*)$', s, flags=re.I)
     if m:
         idx = int(m.group(1))
-        suffix = (m.group(2) or '').strip(' .')
-        return f'Chương {idx} {suffix}'.strip()
+        suffix = repair_common_mojibake(m.group(2) or '').strip(' .')
+        return f'Ch\u01b0\u01a1ng {idx} {suffix}'.strip()
     if not s:
-        return f'Chương {index}'
-    if not re.match(r'^Chương\s+\d+', s, re.I):
-        s = f'Chương {index} {s}'
+        return f'Ch\u01b0\u01a1ng {index}'
+    if not re.match(r'^Ch\u01b0\u01a1ng\s+\d+', s, re.I):
+        s = f'Ch\u01b0\u01a1ng {index} {s}'
     return re.sub(r'\s+', ' ', s).strip(' .')
 
 def sanitize_path_component(s: str) -> str:

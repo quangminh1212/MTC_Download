@@ -23,6 +23,7 @@ from pathlib import Path
 from mtc_downloader import MTCDownloader
 from download_completed_to_mtc import clean_filename, chapter_filename
 from download_one_completed_live_decrypt import (
+    chapter_title_candidate,
     get_chapters_once_safe,
     maybe_decrypt,
     normalize_chapter_title,
