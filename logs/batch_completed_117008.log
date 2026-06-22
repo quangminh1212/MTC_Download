@@ -1,0 +1,786 @@
+book=Chiến Kỳ Phương Nam Dũng Khởi
+book_id=117008
+out=C:\Dev\MTC\Chiến Kỳ Phương Nam Dũng Khởi
+chapters_total=388 expected=388
+[1/388] download chapter_id=16669677 file=Chương 1 khởi đầu.txt
+  OK decrypted=True written=Chương 1 khởi đầu.txt
+[2/388] download chapter_id=16669813 file=Chương 2 Khởi đầu 2.txt
+  OK decrypted=True written=Chương 2 Khởi đầu 2.txt
+[3/388] download chapter_id=16670072 file=Chương 3 Ninh Khải ta đến đây.txt
+  OK decrypted=True written=Chương 3 Ninh Khải ta đến đây.txt
+[4/388] download chapter_id=16672819 file=Chương 4 bước chân đầu tiên.txt
+  OK decrypted=True written=Chương 4 bước chân đầu tiên.txt
+[5/388] download chapter_id=16672839 file=Chương 5 kế hoạch bắt đầu.txt
+  OK decrypted=True written=Chương 5 kế hoạch bắt đầu.txt
+[6/388] download chapter_id=16676572 file=Chương 6 bước một lừa gạt.txt
+  OK decrypted=True written=Chương 6 bước một lừa gạt.txt
+[7/388] download chapter_id=16676577 file=Chương 7 Máu nhuộm Ninh khải.txt
+  OK decrypted=True written=Chương 7 Máu nhuộm Ninh khải.txt
+[8/388] download chapter_id=16676604 file=Chương 8 Đại chiến phỉ tặc.txt
+  OK decrypted=True written=Chương 8 Đại chiến phỉ tặc.txt
+[9/388] download chapter_id=16676681 file=Chương 9 đại chiến phỉ tặc 2.txt
+  OK decrypted=True written=Chương 9 đại chiến phỉ tặc 2.txt
+[10/388] download chapter_id=16677393 file=Chương 10 đại chiến phỉ tặc 3.txt
+  OK decrypted=True written=Chương 10 đại chiến phỉ tặc 3.txt
+[11/388] download chapter_id=16677436 file=Chương 11 Ninh Khải quy nhất.txt
+  OK decrypted=True written=Chương 11 Ninh Khải quy nhất.txt
+[12/388] download chapter_id=16681495 file=Chương 12 Ninh khải quy nhất 2.txt
+  OK decrypted=True written=Chương 12 Ninh khải quy nhất 2.txt
+[13/388] download chapter_id=16681501 file=Chương 13 tái thiết.txt
+  OK decrypted=True written=Chương 13 tái thiết.txt
+[14/388] download chapter_id=16681504 file=Chương 14 Khó khăn và trắc trở.txt
+  OK decrypted=True written=Chương 14 Khó khăn và trắc trở.txt
+[15/388] download chapter_id=16681520 file=Chương 15 Khó khăn và trắc trở 2.txt
+  OK decrypted=True written=Chương 15 Khó khăn và trắc trở 2.txt
+[16/388] download chapter_id=16681527 file=Chương 16 Phát triển.txt
+  OK decrypted=True written=Chương 16 Phát triển.txt
+[17/388] download chapter_id=16943357 file=Chương 17 kinh thành sóng ngầm.txt
+  OK decrypted=True written=Chương 17 kinh thành sóng ngầm.txt
+[18/388] download chapter_id=16943462 file=Chương 18 kinh thành sóng ngầm 2.txt
+  OK decrypted=True written=Chương 18 kinh thành sóng ngầm 2.txt
+[19/388] download chapter_id=16943463 file=Chương 19 Ninh khải bị quên lãng.txt
+  OK decrypted=True written=Chương 19 Ninh khải bị quên lãng.txt
+[20/388] download chapter_id=16943464 file=Chương 20 kết minh.txt
+  OK decrypted=True written=Chương 20 kết minh.txt
+[21/388] download chapter_id=16945059 file=Chương 21 Kết minh 2.txt
+  OK decrypted=True written=Chương 21 Kết minh 2.txt
+[22/388] download chapter_id=16945060 file=Chương 22 Kết minh 3.txt
+  OK decrypted=True written=Chương 22 Kết minh 3.txt
+[23/388] download chapter_id=16945061 file=Chương 23 kết minh 4.txt
+  OK decrypted=True written=Chương 23 kết minh 4.txt
+[24/388] download chapter_id=16948069 file=Chương 24 tình hình phát triển của ninh Khải.txt
+  OK decrypted=True written=Chương 24 tình hình phát triển của ninh Khải.txt
+[25/388] download chapter_id=16948071 file=Chương 25 một bước tiến mới.txt
+  OK decrypted=True written=Chương 25 một bước tiến mới.txt
+[26/388] download chapter_id=16948076 file=Chương 26 Ninh khải đón tết.txt
+  OK decrypted=True written=Chương 26 Ninh khải đón tết.txt
+[27/388] download chapter_id=16948078 file=Chương 27 Ninh khải đón tết 2.txt
+  OK decrypted=True written=Chương 27 Ninh khải đón tết 2.txt
+[28/388] download chapter_id=16948081 file=Chương 28 ninh khải đón tết 3.txt
+  OK decrypted=True written=Chương 28 ninh khải đón tết 3.txt
+[29/388] download chapter_id=16959118 file=Chương 29 Ninh Khải đón tết 4.txt
+  OK decrypted=True written=Chương 29 Ninh Khải đón tết 4.txt
+[30/388] download chapter_id=16959121 file=Chương 30 nội gián thanh lọc.txt
+  OK decrypted=True written=Chương 30 nội gián thanh lọc.txt
+[31/388] download chapter_id=16959142 file=Chương 31 nội gián thanh lọc 2.txt
+  OK decrypted=True written=Chương 31 nội gián thanh lọc 2.txt
+[32/388] download chapter_id=16959175 file=Chương 32 Chuẩn bị cho chiến tranh.txt
+  OK decrypted=True written=Chương 32 Chuẩn bị cho chiến tranh.txt
+[33/388] download chapter_id=17243474 file=Chương 33 Chuẩn bị cho chiến tranh 2.txt
+  OK decrypted=True written=Chương 33 Chuẩn bị cho chiến tranh 2.txt
+[34/388] download chapter_id=17243475 file=Chương 34 chạm trán trên biển.txt
+  OK decrypted=True written=Chương 34 chạm trán trên biển.txt
+[35/388] download chapter_id=17243476 file=Chương 35 Trạm chán trên biển 2.txt
+  OK decrypted=True written=Chương 35 Trạm chán trên biển 2.txt
+[36/388] download chapter_id=17243477 file=Chương 36 Hoan Châu ta đến đây.txt
+  OK decrypted=True written=Chương 36 Hoan Châu ta đến đây.txt
+[37/388] download chapter_id=15961344 file=Chương 37 Chiến hoan Châu.txt
+  OK decrypted=True written=Chương 37 Chiến hoan Châu.txt
+[38/388] download chapter_id=15963094 file=Chương 38 Chiến hoan Châu 2.txt
+  OK decrypted=True written=Chương 38 Chiến hoan Châu 2.txt
+[39/388] download chapter_id=15964792 file=Chương 39 Chiến hoan Châu 3.txt
+  OK decrypted=True written=Chương 39 Chiến hoan Châu 3.txt
+[40/388] download chapter_id=15965103 file=Chương 40 Âm mưu.txt
+  OK decrypted=True written=Chương 40 Âm mưu.txt
+[41/388] download chapter_id=15968530 file=Chương 41 Âm mưu 2.txt
+  OK decrypted=True written=Chương 41 Âm mưu 2.txt
+[42/388] download chapter_id=15969151 file=Chương 42 Triều đình tranh cãi.txt
+  OK decrypted=True written=Chương 42 Triều đình tranh cãi.txt
+[43/388] download chapter_id=15969626 file=Chương 43 Rắc rối đến.txt
+  OK decrypted=True written=Chương 43 Rắc rối đến.txt
+[44/388] download chapter_id=15969694 file=Chương 44 Rắc rồi đến 2.txt
+  OK decrypted=True written=Chương 44 Rắc rồi đến 2.txt
+[45/388] download chapter_id=15969757 file=Chương 45 Rắc rối đến 3.txt
+  OK decrypted=True written=Chương 45 Rắc rối đến 3.txt
+[46/388] download chapter_id=15971063 file=Chương 46 Chiến tranh bắt đầu.txt
+  OK decrypted=True written=Chương 46 Chiến tranh bắt đầu.txt
+[47/388] download chapter_id=15972943 file=Chương 47 Chuớng 47 Chiến tranh bắt đầu 2.txt
+  OK decrypted=True written=Chương 47 Chuớng 47 Chiến tranh bắt đầu 2.txt
+[48/388] download chapter_id=15973367 file=Chương 48 Chiến tranh bắt đầu 3.txt
+  OK decrypted=True written=Chương 48 Chiến tranh bắt đầu 3.txt
+[49/388] download chapter_id=15973494 file=Chương 49 Chiến tranh kết thúc.txt
+  OK decrypted=True written=Chương 49 Chiến tranh kết thúc.txt
+[50/388] download chapter_id=15973511 file=Chương 50 Chiến hậu.txt
+  OK decrypted=True written=Chương 50 Chiến hậu.txt
+[51/388] download chapter_id=15977721 file=Chương 51 Chưởng 51 Đại Việt xuất quân.txt
+  OK decrypted=True written=Chương 51 Chưởng 51 Đại Việt xuất quân.txt
+[52/388] download chapter_id=15977720 file=Chương 52 Đại Việt xuất quân 2.txt
+  OK decrypted=True written=Chương 52 Đại Việt xuất quân 2.txt
+[53/388] download chapter_id=15977841 file=Chương 53 Rắc rối.txt
+  OK decrypted=True written=Chương 53 Rắc rối.txt
+[54/388] download chapter_id=15980718 file=Chương 54 Kế hoạch mới.txt
+  OK decrypted=True written=Chương 54 Kế hoạch mới.txt
+[55/388] download chapter_id=15981708 file=Chương 55 Chưởng 55 Chiến tranh Việt Tống bắt đầu.txt
+  OK decrypted=True written=Chương 55 Chưởng 55 Chiến tranh Việt Tống bắt đầu.txt
+[56/388] download chapter_id=15981847 file=Chương 56 Trần Thiên Ân Lại tính âm người.txt
+  OK decrypted=True written=Chương 56 Trần Thiên Ân Lại tính âm người.txt
+[57/388] download chapter_id=15985342 file=Chương 57 Đại Tống khó khăn.txt
+  OK decrypted=True written=Chương 57 Đại Tống khó khăn.txt
+[58/388] download chapter_id=15985343 file=Chương 58 Đại Tống khó khăn 2.txt
+  OK decrypted=True written=Chương 58 Đại Tống khó khăn 2.txt
+[59/388] download chapter_id=15985481 file=Chương 59 Cuộc chiến thành Tương Dương.txt
+  OK decrypted=True written=Chương 59 Cuộc chiến thành Tương Dương.txt
+[60/388] download chapter_id=15988961 file=Chương 60 Cuộc chiến thành tương dương 2.txt
+  OK decrypted=True written=Chương 60 Cuộc chiến thành tương dương 2.txt
+[61/388] download chapter_id=15989133 file=Chương 61 Cuộc chiến thành tương dương 3.txt
+  OK decrypted=True written=Chương 61 Cuộc chiến thành tương dương 3.txt
+[62/388] download chapter_id=15990689 file=Chương 62 Cuộc chiến thành tương Dương 4.txt
+  OK decrypted=True written=Chương 62 Cuộc chiến thành tương Dương 4.txt
+[63/388] download chapter_id=15994413 file=Chương 63 Cuộc Chiến thành Tương Dương 5.txt
+  OK decrypted=True written=Chương 63 Cuộc Chiến thành Tương Dương 5.txt
+[64/388] download chapter_id=15994642 file=Chương 64 Cuộc chiến thành tương dương 6.txt
+  OK decrypted=True written=Chương 64 Cuộc chiến thành tương dương 6.txt
+[65/388] download chapter_id=15998750 file=Chương 65 Cuộc chiến thành tương dương 7.txt
+  OK decrypted=True written=Chương 65 Cuộc chiến thành tương dương 7.txt
+[66/388] download chapter_id=16016819 file=Chương 66 Chiến hậu.txt
+  OK decrypted=True written=Chương 66 Chiến hậu.txt
+[67/388] download chapter_id=16016820 file=Chương 67 Phản ứng của các nhà.txt
+  OK decrypted=True written=Chương 67 Phản ứng của các nhà.txt
+[68/388] download chapter_id=16016821 file=Chương 68 Phản ứng của các nhà 2.txt
+  OK decrypted=True written=Chương 68 Phản ứng của các nhà 2.txt
+[69/388] download chapter_id=16016822 file=Chương 69 Phát triển.txt
+  OK decrypted=True written=Chương 69 Phát triển.txt
+[70/388] download chapter_id=16016823 file=Chương 70 Phát triển.txt
+  OK decrypted=True written=Chương 70 Phát triển.txt
+[71/388] download chapter_id=16016824 file=Chương 71 Nguy cơ lại xuất hiện.txt
+  OK decrypted=True written=Chương 71 Nguy cơ lại xuất hiện.txt
+[72/388] download chapter_id=16016825 file=Chương 72 Nguy cơ lại xuất hiện 2.txt
+  OK decrypted=True written=Chương 72 Nguy cơ lại xuất hiện 2.txt
+[73/388] download chapter_id=16016826 file=Chương 73 Nguy hiểm tới 2.txt
+  OK decrypted=True written=Chương 73 Nguy hiểm tới 2.txt
+[74/388] download chapter_id=16016827 file=Chương 74 Gặp mặt.txt
+  OK decrypted=True written=Chương 74 Gặp mặt.txt
+[75/388] download chapter_id=16016828 file=Chương 75 Sắp sếp công việc.txt
+  OK decrypted=True written=Chương 75 Sắp sếp công việc.txt
+[76/388] download chapter_id=16016829 file=Chương 76 Bị thương.txt
+  OK decrypted=True written=Chương 76 Bị thương.txt
+[77/388] download chapter_id=16016830 file=Chương 77 Rắc rối.txt
+  OK decrypted=True written=Chương 77 Rắc rối.txt
+[78/388] download chapter_id=16016831 file=Chương 78 Sóng ngầm kinh thành.txt
+  OK decrypted=True written=Chương 78 Sóng ngầm kinh thành.txt
+[79/388] download chapter_id=16016832 file=Chương 79 Sóng ngầm kinh thành 2.txt
+  OK decrypted=True written=Chương 79 Sóng ngầm kinh thành 2.txt
+[80/388] download chapter_id=16016833 file=Chương 80 Diệt phỉ.txt
+  OK decrypted=True written=Chương 80 Diệt phỉ.txt
+[81/388] download chapter_id=16008632 file=Chương 81 Chưởng 81 Đại hôn.txt
+  OK decrypted=True written=Chương 81 Chưởng 81 Đại hôn.txt
+[82/388] download chapter_id=16008671 file=Chương 82 Đại hôn 2.txt
+  OK decrypted=True written=Chương 82 Đại hôn 2.txt
+[83/388] download chapter_id=16008812 file=Chương 83 Đại hôn 3.txt
+  OK decrypted=True written=Chương 83 Đại hôn 3.txt
+[84/388] download chapter_id=16008813 file=Chương 84 Đại hôn 4.txt
+  OK decrypted=True written=Chương 84 Đại hôn 4.txt
+[85/388] download chapter_id=16011511 file=Chương 85 Kế hoạch mới.txt
+  OK decrypted=True written=Chương 85 Kế hoạch mới.txt
+[86/388] download chapter_id=16011636 file=Chương 86 Kế hoạch mới 2.txt
+  OK decrypted=True written=Chương 86 Kế hoạch mới 2.txt
+[87/388] download chapter_id=16012678 file=Chương 87 Đẹp loạn.txt
+  OK decrypted=True written=Chương 87 Đẹp loạn.txt
+[88/388] download chapter_id=16012679 file=Chương 88 Đẹp loạn 2.txt
+  OK decrypted=True written=Chương 88 Đẹp loạn 2.txt
+[89/388] download chapter_id=16012827 file=Chương 89 Đàm phán.txt
+  OK decrypted=True written=Chương 89 Đàm phán.txt
+[90/388] download chapter_id=16012952 file=Chương 90 Đàm phán 2.txt
+  OK decrypted=True written=Chương 90 Đàm phán 2.txt
+[91/388] download chapter_id=16013057 file=Chương 91 Chuẩn bị chiến tranh.txt
+  OK decrypted=True written=Chương 91 Chuẩn bị chiến tranh.txt
+[92/388] download chapter_id=16013062 file=Chương 92 Chuẩn bị chiến tranh 2.txt
+  OK decrypted=True written=Chương 92 Chuẩn bị chiến tranh 2.txt
+[93/388] download chapter_id=16015336 file=Chương 93 Chuẩn bị chiến tranh 3.txt
+  OK decrypted=True written=Chương 93 Chuẩn bị chiến tranh 3.txt
+[94/388] download chapter_id=16016120 file=Chương 94 Khó khăn mới.txt
+  OK decrypted=True written=Chương 94 Khó khăn mới.txt
+[95/388] download chapter_id=16016449 file=Chương 95 Khó khăn mới 2.txt
+  OK decrypted=True written=Chương 95 Khó khăn mới 2.txt
+[96/388] download chapter_id=16016687 file=Chương 96 Khó khăn mới 3.txt
+  OK decrypted=True written=Chương 96 Khó khăn mới 3.txt
+[97/388] download chapter_id=16016792 file=Chương 97 Khó khăn mới 4.txt
+  OK decrypted=True written=Chương 97 Khó khăn mới 4.txt
+[98/388] download chapter_id=16017014 file=Chương 98 Chiến tranh bắt đầu.txt
+  OK decrypted=True written=Chương 98 Chiến tranh bắt đầu.txt
+[99/388] download chapter_id=16019546 file=Chương 99 Chiến tranh bắt đầu 2.txt
+  OK decrypted=True written=Chương 99 Chiến tranh bắt đầu 2.txt
+[100/388] download chapter_id=16019670 file=Chương 100 Phát triển giữ chiến tranh.txt
+  OK decrypted=True written=Chương 100 Phát triển giữ chiến tranh.txt
+[101/388] download chapter_id=16020276 file=Chương 101 Thế cục.txt
+  OK decrypted=True written=Chương 101 Thế cục.txt
+[102/388] download chapter_id=16020573 file=Chương 102 Thế cục 2.txt
+  OK decrypted=True written=Chương 102 Thế cục 2.txt
+[103/388] download chapter_id=16022279 file=Chương 103 Trận chiến thành cẩm Phả.txt
+  OK decrypted=True written=Chương 103 Trận chiến thành cẩm Phả.txt
+[104/388] download chapter_id=16022349 file=Chương 104 Cuộc chiến thành cẩm Phả 2.txt
+  OK decrypted=True written=Chương 104 Cuộc chiến thành cẩm Phả 2.txt
+[105/388] download chapter_id=16023111 file=Chương 105 Trận chiến thành Cẩm Phả 3.txt
+  OK decrypted=True written=Chương 105 Trận chiến thành Cẩm Phả 3.txt
+[106/388] download chapter_id=16023524 file=Chương 106 Trận Chiến Thành Cẩm Phả 4.txt
+  OK decrypted=True written=Chương 106 Trận Chiến Thành Cẩm Phả 4.txt
+[107/388] download chapter_id=16023859 file=Chương 107 Rắc rối.txt
+  OK decrypted=True written=Chương 107 Rắc rối.txt
+[108/388] download chapter_id=16024352 file=Chương 108 Rắc rối 2.txt
+  OK decrypted=True written=Chương 108 Rắc rối 2.txt
+[109/388] download chapter_id=16024511 file=Chương 109 Triều đường phong ba.txt
+  OK decrypted=True written=Chương 109 Triều đường phong ba.txt
+[110/388] download chapter_id=16024512 file=Chương 110 Triều đường phong ba 2.txt
+  OK decrypted=True written=Chương 110 Triều đường phong ba 2.txt
+[111/388] download chapter_id=16026199 file=Chương 111 Bình yên trước trận chiến.txt
+  OK decrypted=True written=Chương 111 Bình yên trước trận chiến.txt
+[112/388] download chapter_id=16026242 file=Chương 112 Bình yên trước trận chiến 2.txt
+  OK decrypted=True written=Chương 112 Bình yên trước trận chiến 2.txt
+[113/388] download chapter_id=16026592 file=Chương 113 Du kích chiến.txt
+  OK decrypted=True written=Chương 113 Du kích chiến.txt
+[114/388] download chapter_id=16027236 file=Chương 114 Âm mưu.txt
+  OK decrypted=True written=Chương 114 Âm mưu.txt
+[115/388] download chapter_id=16027381 file=Chương 115 Âm mưu 2.txt
+  OK decrypted=True written=Chương 115 Âm mưu 2.txt
+[116/388] download chapter_id=16027909 file=Chương 116 Âm mưu 3.txt
+  OK decrypted=True written=Chương 116 Âm mưu 3.txt
+[117/388] download chapter_id=16031530 file=Chương 117 Chưởng 117 Cướp ngựa.txt
+  OK decrypted=True written=Chương 117 Chưởng 117 Cướp ngựa.txt
+[118/388] download chapter_id=16031630 file=Chương 118 Cướp ngựa 2.txt
+  OK decrypted=True written=Chương 118 Cướp ngựa 2.txt
+[119/388] download chapter_id=16031768 file=Chương 119 Cướp ngựa 3.txt
+  OK decrypted=True written=Chương 119 Cướp ngựa 3.txt
+[120/388] download chapter_id=16031809 file=Chương 120 Cướp ngựa 4.txt
+  OK decrypted=True written=Chương 120 Cướp ngựa 4.txt
+[121/388] download chapter_id=16031884 file=Chương 121 Phản ứng các nhà.txt
+  OK decrypted=True written=Chương 121 Phản ứng các nhà.txt
+[122/388] download chapter_id=16031895 file=Chương 122 Phản ứng các nhà 2.txt
+  OK decrypted=True written=Chương 122 Phản ứng các nhà 2.txt
+[123/388] download chapter_id=16031906 file=Chương 123 Phản ứng của các nhà 3.txt
+  OK decrypted=True written=Chương 123 Phản ứng của các nhà 3.txt
+[124/388] download chapter_id=16034516 file=Chương 124 Chưởng 124 bình yên trước trận Chiến.txt
+  OK decrypted=True written=Chương 124 Chưởng 124 bình yên trước trận Chiến.txt
+[125/388] download chapter_id=16034717 file=Chương 125 Chưởng 125 bình yên trước trận Chiến 2.txt
+  OK decrypted=True written=Chương 125 Chưởng 125 bình yên trước trận Chiến 2.txt
+[126/388] download chapter_id=16034975 file=Chương 126 bình yên trước cuộc chiến 3.txt
+  OK decrypted=True written=Chương 126 bình yên trước cuộc chiến 3.txt
+[127/388] download chapter_id=16035338 file=Chương 127 chiến tranh đến gần.txt
+  OK decrypted=True written=Chương 127 chiến tranh đến gần.txt
+[128/388] download chapter_id=16035388 file=Chương 128 trống trận nổi lên.txt
+  OK decrypted=True written=Chương 128 trống trận nổi lên.txt
+[129/388] download chapter_id=16035411 file=Chương 129 rắc rối.txt
+  OK decrypted=True written=Chương 129 rắc rối.txt
+[130/388] download chapter_id=16038861 file=Chương 130 trận chiến cánh đồng hoa.txt
+  OK decrypted=True written=Chương 130 trận chiến cánh đồng hoa.txt
+[131/388] download chapter_id=16038886 file=Chương 131 trận chiến cánh đồng hoa 2.txt
+  OK decrypted=True written=Chương 131 trận chiến cánh đồng hoa 2.txt
+[132/388] download chapter_id=16038948 file=Chương 132 cuộc chiến cánh đồng hoa 3.txt
+  OK decrypted=True written=Chương 132 cuộc chiến cánh đồng hoa 3.txt
+[133/388] download chapter_id=16038977 file=Chương 133 cuộc chiến trên cánh đồng hoa 4.txt
+  OK decrypted=True written=Chương 133 cuộc chiến trên cánh đồng hoa 4.txt
+[134/388] download chapter_id=16038979 file=Chương 134 cuộc chiến trên cánh đồng hoa 5.txt
+  OK decrypted=True written=Chương 134 cuộc chiến trên cánh đồng hoa 5.txt
+[135/388] download chapter_id=16038998 file=Chương 135 phòng thủ và tấn công.txt
+  OK decrypted=True written=Chương 135 phòng thủ và tấn công.txt
+[136/388] download chapter_id=16045142 file=Chương 136 phòng thủ và tấn công. 2.txt
+  OK decrypted=True written=Chương 136 phòng thủ và tấn công. 2.txt
+[137/388] download chapter_id=16045143 file=Chương 137 phòng thủ và tấn công 3.txt
+  OK decrypted=True written=Chương 137 phòng thủ và tấn công 3.txt
+[138/388] download chapter_id=16045144 file=Chương 138 phòng thủ và tấn công 4.txt
+  OK decrypted=True written=Chương 138 phòng thủ và tấn công 4.txt
+[139/388] download chapter_id=16045214 file=Chương 139 quân Nguyên khủng hoảng.txt
+  OK decrypted=True written=Chương 139 quân Nguyên khủng hoảng.txt
+[140/388] download chapter_id=16045236 file=Chương 140 thế cục.txt
+  OK decrypted=True written=Chương 140 thế cục.txt
+[141/388] download chapter_id=16045375 file=Chương 141 thế cục 2.txt
+  OK decrypted=True written=Chương 141 thế cục 2.txt
+[142/388] download chapter_id=16045543 file=Chương 142 thế cục 3.txt
+  OK decrypted=True written=Chương 142 thế cục 3.txt
+[143/388] download chapter_id=16045633 file=Chương 143 thế cục 4.txt
+  OK decrypted=True written=Chương 143 thế cục 4.txt
+[144/388] download chapter_id=16046059 file=Chương 144 thế cục 5.txt
+  OK decrypted=True written=Chương 144 thế cục 5.txt
+[145/388] download chapter_id=16046271 file=Chương 145 đàm phán.txt
+  OK decrypted=True written=Chương 145 đàm phán.txt
+[146/388] download chapter_id=16047620 file=Chương 146 đàm phán 2.txt
+  OK decrypted=True written=Chương 146 đàm phán 2.txt
+[147/388] download chapter_id=16047847 file=Chương 147 đàm phán 3.txt
+  OK decrypted=True written=Chương 147 đàm phán 3.txt
+[148/388] download chapter_id=16047886 file=Chương 148 kế hoạch mới.txt
+  OK decrypted=True written=Chương 148 kế hoạch mới.txt
+[149/388] download chapter_id=16048065 file=Chương 149 kế hoạch mới 2.txt
+  OK decrypted=True written=Chương 149 kế hoạch mới 2.txt
+[150/388] download chapter_id=16048166 file=Chương 150 kế hoạch mới 3.txt
+  OK decrypted=True written=Chương 150 kế hoạch mới 3.txt
+[151/388] download chapter_id=16048308 file=Chương 151 chiến tranh bùng nổ.txt
+  OK decrypted=True written=Chương 151 chiến tranh bùng nổ.txt
+[152/388] download chapter_id=16049064 file=Chương 152 chiến tranh bùng nổ 2.txt
+  OK decrypted=True written=Chương 152 chiến tranh bùng nổ 2.txt
+[153/388] download chapter_id=16049065 file=Chương 153 Chiến tranh bùng nổ 3.txt
+  OK decrypted=True written=Chương 153 Chiến tranh bùng nổ 3.txt
+[154/388] download chapter_id=16051154 file=Chương 154 Chiến tranh bùng nổ 4.txt
+  OK decrypted=True written=Chương 154 Chiến tranh bùng nổ 4.txt
+[155/388] download chapter_id=16051159 file=Chương 155 tập kích trong đêm.txt
+  OK decrypted=True written=Chương 155 tập kích trong đêm.txt
+[156/388] download chapter_id=16051160 file=Chương 156 Tập Kích trong đêm 2.txt
+  OK decrypted=True written=Chương 156 Tập Kích trong đêm 2.txt
+[157/388] download chapter_id=16054400 file=Chương 157 nguy hiểm.txt
+  OK decrypted=True written=Chương 157 nguy hiểm.txt
+[158/388] download chapter_id=16054401 file=Chương 158 nguy hiểm 2.txt
+  OK decrypted=True written=Chương 158 nguy hiểm 2.txt
+[159/388] download chapter_id=16055147 file=Chương 159 Nguy Hiểm 3.txt
+  OK decrypted=True written=Chương 159 Nguy Hiểm 3.txt
+[160/388] download chapter_id=16055372 file=Chương 160 giải quyết chiến hậu.txt
+  OK decrypted=True written=Chương 160 giải quyết chiến hậu.txt
+[161/388] download chapter_id=16055470 file=Chương 161 thanh trừng.txt
+  OK decrypted=True written=Chương 161 thanh trừng.txt
+[162/388] download chapter_id=16058464 file=Chương 162 Thanh Trừng 2.txt
+  OK decrypted=True written=Chương 162 Thanh Trừng 2.txt
+[163/388] download chapter_id=16058503 file=Chương 163 thế cục mới.txt
+  OK decrypted=True written=Chương 163 thế cục mới.txt
+[164/388] download chapter_id=16059714 file=Chương 164 thế cục mới 2.txt
+  OK decrypted=True written=Chương 164 thế cục mới 2.txt
+[165/388] download chapter_id=16059830 file=Chương 165 thế cục mới 3.txt
+  OK decrypted=True written=Chương 165 thế cục mới 3.txt
+[166/388] download chapter_id=16059949 file=Chương 166 thế cục mới 4.txt
+  OK decrypted=True written=Chương 166 thế cục mới 4.txt
+[167/388] download chapter_id=16060008 file=Chương 167 thế cục mới 5.txt
+  OK decrypted=True written=Chương 167 thế cục mới 5.txt
+[168/388] download chapter_id=16060065 file=Chương 168 kinh thành ta lại về rồi.txt
+  OK decrypted=True written=Chương 168 kinh thành ta lại về rồi.txt
+[169/388] download chapter_id=16061212 file=Chương 169 kinh thành ta trở về rồi 2.txt
+  OK decrypted=True written=Chương 169 kinh thành ta trở về rồi 2.txt
+[170/388] download chapter_id=16061308 file=Chương 170 kinh thành ta trở về rồi 3.txt
+  OK decrypted=True written=Chương 170 kinh thành ta trở về rồi 3.txt
+[171/388] download chapter_id=16061536 file=Chương 171 Sóng Ngầm kinh thành.txt
+  OK decrypted=True written=Chương 171 Sóng Ngầm kinh thành.txt
+[172/388] download chapter_id=16061611 file=Chương 172 Sóng Ngầm kinh thành 2.txt
+  OK decrypted=True written=Chương 172 Sóng Ngầm kinh thành 2.txt
+[173/388] download chapter_id=16061634 file=Chương 173 Sóng Ngầm kinh thành 3.txt
+  OK decrypted=True written=Chương 173 Sóng Ngầm kinh thành 3.txt
+[174/388] download chapter_id=16061735 file=Chương 174 Sóng Ngầm kinh thành 4.txt
+  OK decrypted=True written=Chương 174 Sóng Ngầm kinh thành 4.txt
+[175/388] download chapter_id=16062327 file=Chương 175 rời đi kinh thành.txt
+  OK decrypted=True written=Chương 175 rời đi kinh thành.txt
+[176/388] download chapter_id=16062519 file=Chương 176 thế gia âm mưu.txt
+  OK decrypted=True written=Chương 176 thế gia âm mưu.txt
+[177/388] download chapter_id=16062864 file=Chương 177 thế gia âm mưu 2.txt
+  OK decrypted=True written=Chương 177 thế gia âm mưu 2.txt
+[178/388] download chapter_id=16062868 file=Chương 178 đàm phán bốn Nước.txt
+  OK decrypted=True written=Chương 178 đàm phán bốn Nước.txt
+[179/388] download chapter_id=16065228 file=Chương 179 đàm phán bốn nước 2.txt
+  OK decrypted=True written=Chương 179 đàm phán bốn nước 2.txt
+[180/388] download chapter_id=16065316 file=Chương 180 đàm phán giữa các nước 3.txt
+  OK decrypted=True written=Chương 180 đàm phán giữa các nước 3.txt
+[181/388] download chapter_id=16065364 file=Chương 181 đàm phán bốn nước 4.txt
+  OK decrypted=True written=Chương 181 đàm phán bốn nước 4.txt
+[182/388] download chapter_id=16065548 file=Chương 182 đàm phán 5.txt
+  OK decrypted=True written=Chương 182 đàm phán 5.txt
+[183/388] download chapter_id=16066405 file=Chương 183 kết minh.txt
+  OK decrypted=True written=Chương 183 kết minh.txt
+[184/388] download chapter_id=16066463 file=Chương 184 kết minh 2.txt
+  OK decrypted=True written=Chương 184 kết minh 2.txt
+[185/388] download chapter_id=16067888 file=Chương 185 thi đấu quân sự bốn nước.txt
+  OK decrypted=True written=Chương 185 thi đấu quân sự bốn nước.txt
+[186/388] download chapter_id=16069387 file=Chương 186 thi đấu quân sự 2.txt
+  OK decrypted=True written=Chương 186 thi đấu quân sự 2.txt
+[187/388] download chapter_id=16069685 file=Chương 187 thi đấu quân sự 3.txt
+  OK decrypted=True written=Chương 187 thi đấu quân sự 3.txt
+[188/388] download chapter_id=16069778 file=Chương 188 thi đấu quân sự 4.txt
+  OK decrypted=True written=Chương 188 thi đấu quân sự 4.txt
+[189/388] download chapter_id=16070109 file=Chương 189 thi đấu quân sự 5.txt
+  OK decrypted=True written=Chương 189 thi đấu quân sự 5.txt
+[190/388] download chapter_id=16074589 file=Chương 190 Trở Về.txt
+  OK decrypted=True written=Chương 190 Trở Về.txt
+[191/388] download chapter_id=16075031 file=Chương 191 phát triển.txt
+  OK decrypted=True written=Chương 191 phát triển.txt
+[192/388] download chapter_id=16075192 file=Chương 192 phát triển 2.txt
+  OK decrypted=True written=Chương 192 phát triển 2.txt
+[193/388] download chapter_id=16075254 file=Chương 193 thế cục.txt
+  OK decrypted=True written=Chương 193 thế cục.txt
+[194/388] download chapter_id=16077554 file=Chương 194 tình hình tại Đại Nguyên.txt
+  OK decrypted=True written=Chương 194 tình hình tại Đại Nguyên.txt
+[195/388] download chapter_id=16077764 file=Chương 195 tình hình của Đại Nguyên 2.txt
+  OK decrypted=True written=Chương 195 tình hình của Đại Nguyên 2.txt
+[196/388] download chapter_id=16078000 file=Chương 196 phát triển toàn diện.txt
+  OK decrypted=True written=Chương 196 phát triển toàn diện.txt
+[197/388] download chapter_id=16078149 file=Chương 197 tình hình Đại Việt.txt
+  OK decrypted=True written=Chương 197 tình hình Đại Việt.txt
+[198/388] download chapter_id=16081317 file=Chương 198 tình hình Đại Việt 2.txt
+  OK decrypted=True written=Chương 198 tình hình Đại Việt 2.txt
+[199/388] download chapter_id=16081513 file=Chương 199 tình hình Đại Việt 3.txt
+  OK decrypted=True written=Chương 199 tình hình Đại Việt 3.txt
+[200/388] download chapter_id=16081582 file=Chương 200 khởi hành.txt
+  OK decrypted=True written=Chương 200 khởi hành.txt
+[201/388] download chapter_id=16085656 file=Chương 201 khởi hành 2.txt
+  OK decrypted=True written=Chương 201 khởi hành 2.txt
+[202/388] download chapter_id=16085657 file=Chương 202 đặt chân thảo nguyên.txt
+  OK decrypted=True written=Chương 202 đặt chân thảo nguyên.txt
+[203/388] download chapter_id=16085658 file=Chương 203 đặt chân Thảo Nguyên 2.txt
+  OK decrypted=True written=Chương 203 đặt chân Thảo Nguyên 2.txt
+[204/388] download chapter_id=16085660 file=Chương 204 hợp tác.txt
+  OK decrypted=True written=Chương 204 hợp tác.txt
+[205/388] download chapter_id=16090953 file=Chương 205 đàm phán 2.txt
+  OK decrypted=True written=Chương 205 đàm phán 2.txt
+[206/388] download chapter_id=16091114 file=Chương 206 cảnh tỉnh.txt
+  OK decrypted=True written=Chương 206 cảnh tỉnh.txt
+[207/388] download chapter_id=16091222 file=Chương 207 kinh thành Thăng Long biến động.txt
+  OK decrypted=True written=Chương 207 kinh thành Thăng Long biến động.txt
+[208/388] download chapter_id=16091259 file=Chương 208 Kinh thành Thăng Long biến động 2.txt
+  OK decrypted=True written=Chương 208 Kinh thành Thăng Long biến động 2.txt
+[209/388] download chapter_id=16091316 file=Chương 209 kinh thành Thăng Long biến động 3.txt
+  OK decrypted=True written=Chương 209 kinh thành Thăng Long biến động 3.txt
+[210/388] download chapter_id=16096100 file=Chương 210 Kinh Thương.txt
+  OK decrypted=True written=Chương 210 Kinh Thương.txt
+[211/388] download chapter_id=16099625 file=Chương 211 Kinh Thương 2.txt
+  OK decrypted=True written=Chương 211 Kinh Thương 2.txt
+[212/388] download chapter_id=16099709 file=Chương 212 Kinh Thương 3.txt
+  OK decrypted=True written=Chương 212 Kinh Thương 3.txt
+[213/388] download chapter_id=16099849 file=Chương 213 phản ứng.txt
+  OK decrypted=True written=Chương 213 phản ứng.txt
+[214/388] download chapter_id=16103641 file=Chương 214 phản ứng 2.txt
+  OK decrypted=True written=Chương 214 phản ứng 2.txt
+[215/388] download chapter_id=16103985 file=Chương 215 thế cục.txt
+  OK decrypted=True written=Chương 215 thế cục.txt
+[216/388] download chapter_id=16104024 file=Chương 216 thế cục 2.txt
+  OK decrypted=True written=Chương 216 thế cục 2.txt
+[217/388] download chapter_id=16104113 file=Chương 217 thế cục 3.txt
+  OK decrypted=True written=Chương 217 thế cục 3.txt
+[218/388] download chapter_id=16109247 file=Chương 218 mùa đông tại Thảo Nguyên.txt
+  OK decrypted=True written=Chương 218 mùa đông tại Thảo Nguyên.txt
+[219/388] download chapter_id=16109545 file=Chương 219 Mùa Đông của Thảo Nguyên 2.txt
+  OK decrypted=True written=Chương 219 Mùa Đông của Thảo Nguyên 2.txt
+[220/388] download chapter_id=16113101 file=Chương 220 kết Minh.txt
+  OK decrypted=True written=Chương 220 kết Minh.txt
+[221/388] download chapter_id=16113278 file=Chương 221 kết minh 2.txt
+  OK decrypted=True written=Chương 221 kết minh 2.txt
+[222/388] download chapter_id=16113391 file=Chương 222 kết minh 3.txt
+  OK decrypted=True written=Chương 222 kết minh 3.txt
+[223/388] download chapter_id=16113593 file=Chương 223 kế hoạch phát triển Thảo Nguyên.txt
+  OK decrypted=True written=Chương 223 kế hoạch phát triển Thảo Nguyên.txt
+[224/388] download chapter_id=16119615 file=Chương 224 bình yên và bão tố.txt
+  OK decrypted=True written=Chương 224 bình yên và bão tố.txt
+[225/388] download chapter_id=16119642 file=Chương 225 bình yên và bão tố 2.txt
+  OK decrypted=True written=Chương 225 bình yên và bão tố 2.txt
+[226/388] download chapter_id=16119709 file=Chương 226 tình hình đại Việt.txt
+  OK decrypted=True written=Chương 226 tình hình đại Việt.txt
+[227/388] download chapter_id=16119710 file=Chương 227 tình hình Đại Việt 2.txt
+  OK decrypted=True written=Chương 227 tình hình Đại Việt 2.txt
+[228/388] download chapter_id=16124887 file=Chương 228 Thành Thái Bình.txt
+  OK decrypted=True written=Chương 228 Thành Thái Bình.txt
+[229/388] download chapter_id=16124911 file=Chương 229 vị khách bất ngờ.txt
+  OK decrypted=True written=Chương 229 vị khách bất ngờ.txt
+[230/388] download chapter_id=16124935 file=Chương 230 vị khách bất ngờ 2.txt
+  OK decrypted=True written=Chương 230 vị khách bất ngờ 2.txt
+[231/388] download chapter_id=16127274 file=Chương 231 Âm Mưu Mới.txt
+  OK decrypted=True written=Chương 231 Âm Mưu Mới.txt
+[232/388] download chapter_id=16127536 file=Chương 232 âm mưu mới 2.txt
+  OK decrypted=True written=Chương 232 âm mưu mới 2.txt
+[233/388] download chapter_id=16127768 file=Chương 233 Âm mưu mới 3.txt
+  OK decrypted=True written=Chương 233 Âm mưu mới 3.txt
+[234/388] download chapter_id=16131665 file=Chương 234 thế cục Đại Tống.txt
+  OK decrypted=True written=Chương 234 thế cục Đại Tống.txt
+[235/388] download chapter_id=16131698 file=Chương 235 thế cục đại Tống 2.txt
+  OK decrypted=True written=Chương 235 thế cục đại Tống 2.txt
+[236/388] download chapter_id=16131849 file=Chương 236 Thế cục đại Tống 3.txt
+  OK decrypted=True written=Chương 236 Thế cục đại Tống 3.txt
+[237/388] download chapter_id=16136943 file=Chương 237 thế cục tại Tống 4.txt
+  OK decrypted=True written=Chương 237 thế cục tại Tống 4.txt
+[238/388] download chapter_id=16136944 file=Chương 238 thế cục đại tống 5.txt
+  OK decrypted=True written=Chương 238 thế cục đại tống 5.txt
+[239/388] download chapter_id=16136945 file=Chương 239 Thành Hoan Châu.txt
+  OK decrypted=True written=Chương 239 Thành Hoan Châu.txt
+[240/388] download chapter_id=16136946 file=Chương 240 thành Hoàn Châu 2.txt
+  OK decrypted=True written=Chương 240 thành Hoàn Châu 2.txt
+[241/388] download chapter_id=16136970 file=Chương 241 chuẩn bị chiến tranh.txt
+  OK decrypted=True written=Chương 241 chuẩn bị chiến tranh.txt
+[242/388] download chapter_id=16136971 file=Chương 242 chuẩn bị chiến tranh 2.txt
+  OK decrypted=True written=Chương 242 chuẩn bị chiến tranh 2.txt
+[243/388] download chapter_id=16136972 file=Chương 243 rút binh.txt
+  OK decrypted=True written=Chương 243 rút binh.txt
+[244/388] download chapter_id=16140686 file=Chương 244 Vương Chiêu Quân.txt
+  OK decrypted=True written=Chương 244 Vương Chiêu Quân.txt
+[245/388] download chapter_id=16140687 file=Chương 245 Vương Chiêu Quân 2.txt
+  OK decrypted=True written=Chương 245 Vương Chiêu Quân 2.txt
+[246/388] download chapter_id=16140688 file=Chương 246 Vương Chiêu Quân 3.txt
+  OK decrypted=True written=Chương 246 Vương Chiêu Quân 3.txt
+[247/388] download chapter_id=16140719 file=Chương 247 kế hoạch.txt
+  OK decrypted=True written=Chương 247 kế hoạch.txt
+[248/388] download chapter_id=16144046 file=Chương 248 biến cố.txt
+  OK decrypted=True written=Chương 248 biến cố.txt
+[249/388] download chapter_id=16144137 file=Chương 249 biến cố 2.txt
+  OK decrypted=True written=Chương 249 biến cố 2.txt
+[250/388] download chapter_id=16144299 file=Chương 250 biến cố 3.txt
+  OK decrypted=True written=Chương 250 biến cố 3.txt
+[251/388] download chapter_id=16147124 file=Chương 251 chiến tranh.txt
+  OK decrypted=True written=Chương 251 chiến tranh.txt
+[252/388] download chapter_id=16147163 file=Chương 252 chiến tranh 2.txt
+  OK decrypted=True written=Chương 252 chiến tranh 2.txt
+[253/388] download chapter_id=16148761 file=Chương 253 thế cục Thảo Nguyên.txt
+  OK decrypted=True written=Chương 253 thế cục Thảo Nguyên.txt
+[254/388] download chapter_id=16148901 file=Chương 254 thế cục thảo nguyên 2.txt
+  OK decrypted=True written=Chương 254 thế cục thảo nguyên 2.txt
+[255/388] download chapter_id=16149005 file=Chương 255 Tập Kích 2.txt
+  OK decrypted=True written=Chương 255 Tập Kích 2.txt
+[256/388] download chapter_id=16151396 file=Chương 256 tập kích 3.txt
+  OK decrypted=True written=Chương 256 tập kích 3.txt
+[257/388] download chapter_id=16152882 file=Chương 257 tập kích 4.txt
+  OK decrypted=True written=Chương 257 tập kích 4.txt
+[258/388] download chapter_id=16152991 file=Chương 258 Chiến Hậu.txt
+  OK decrypted=True written=Chương 258 Chiến Hậu.txt
+[259/388] download chapter_id=16153071 file=Chương 259 quân Tống xuất binh.txt
+  OK decrypted=True written=Chương 259 quân Tống xuất binh.txt
+[260/388] download chapter_id=16155224 file=Chương 260 Phục Kích.txt
+  OK decrypted=True written=Chương 260 Phục Kích.txt
+[261/388] download chapter_id=16155893 file=Chương 261 Phục Kích 2.txt
+  OK decrypted=True written=Chương 261 Phục Kích 2.txt
+[262/388] download chapter_id=16155986 file=Chương 262 kẻ lang thang.txt
+  OK decrypted=True written=Chương 262 kẻ lang thang.txt
+[263/388] download chapter_id=16156953 file=Chương 263 thế cục mới.txt
+  OK decrypted=True written=Chương 263 thế cục mới.txt
+[264/388] download chapter_id=16157206 file=Chương 264 thế cục mới 2.txt
+  OK decrypted=True written=Chương 264 thế cục mới 2.txt
+[265/388] download chapter_id=16157288 file=Chương 265 thế cục mới 3.txt
+  OK decrypted=True written=Chương 265 thế cục mới 3.txt
+[266/388] download chapter_id=16157318 file=Chương 266 thế cục mới 4.txt
+  OK decrypted=True written=Chương 266 thế cục mới 4.txt
+[267/388] download chapter_id=16157375 file=Chương 267 thế cục mới 5.txt
+  OK decrypted=True written=Chương 267 thế cục mới 5.txt
+[268/388] download chapter_id=16157601 file=Chương 268 trận chiến phòng tuyến sông hoàng hà.txt
+  OK decrypted=True written=Chương 268 trận chiến phòng tuyến sông hoàng hà.txt
+[269/388] download chapter_id=16159665 file=Chương 269 trận chiến phòng tuyến sông hoàng hà 2.txt
+  OK decrypted=True written=Chương 269 trận chiến phòng tuyến sông hoàng hà 2.txt
+[270/388] download chapter_id=16160412 file=Chương 270 trận chiến phòng tuyến sông hoàng hà 3.txt
+  OK decrypted=True written=Chương 270 trận chiến phòng tuyến sông hoàng hà 3.txt
+[271/388] download chapter_id=16160978 file=Chương 271 khói lửa phía bắc nổi lên.txt
+  OK decrypted=True written=Chương 271 khói lửa phía bắc nổi lên.txt
+[272/388] download chapter_id=16161247 file=Chương 272 khói lửa phía bắc nổi lên 2.txt
+  OK decrypted=True written=Chương 272 khói lửa phía bắc nổi lên 2.txt
+[273/388] download chapter_id=16161492 file=Chương 273 tiến công.txt
+  OK decrypted=True written=Chương 273 tiến công.txt
+[274/388] download chapter_id=16161735 file=Chương 274 tiến công 2.txt
+  OK decrypted=True written=Chương 274 tiến công 2.txt
+[275/388] download chapter_id=16165995 file=Chương 275 cuộc chiến phía bắc mở màn.txt
+  OK decrypted=True written=Chương 275 cuộc chiến phía bắc mở màn.txt
+[276/388] download chapter_id=16165996 file=Chương 276 cuộc chiến phía bắc mở màn 2.txt
+  OK decrypted=True written=Chương 276 cuộc chiến phía bắc mở màn 2.txt
+[277/388] download chapter_id=16165997 file=Chương 277 thỏa thuận ngầm.txt
+  OK decrypted=True written=Chương 277 thỏa thuận ngầm.txt
+[278/388] download chapter_id=16165998 file=Chương 278 vây Thành.txt
+  OK decrypted=True written=Chương 278 vây Thành.txt
+[279/388] download chapter_id=16166004 file=Chương 279 vây thành 2.txt
+  OK decrypted=True written=Chương 279 vây thành 2.txt
+[280/388] download chapter_id=16168640 file=Chương 280 vây thành 3.txt
+  OK decrypted=True written=Chương 280 vây thành 3.txt
+[281/388] download chapter_id=16168663 file=Chương 281 vây thành 4.txt
+  OK decrypted=True written=Chương 281 vây thành 4.txt
+[282/388] download chapter_id=16168723 file=Chương 282 quân Tống tập kích.txt
+  OK decrypted=True written=Chương 282 quân Tống tập kích.txt
+[283/388] download chapter_id=16168855 file=Chương 283 quân Tống Tập Kích 2.txt
+  OK decrypted=True written=Chương 283 quân Tống Tập Kích 2.txt
+[284/388] download chapter_id=16169169 file=Chương 284 tập kích 3.txt
+  OK decrypted=True written=Chương 284 tập kích 3.txt
+[285/388] download chapter_id=16169290 file=Chương 285 tập kích 4.txt
+  OK decrypted=True written=Chương 285 tập kích 4.txt
+[286/388] download chapter_id=16173638 file=Chương 286 Chiến Hậu.txt
+  OK decrypted=True written=Chương 286 Chiến Hậu.txt
+[287/388] download chapter_id=16173830 file=Chương 287 chiến hậu 2.txt
+  OK decrypted=True written=Chương 287 chiến hậu 2.txt
+[288/388] download chapter_id=16174174 file=Chương 288 tình hình Đại Việt.txt
+  OK decrypted=True written=Chương 288 tình hình Đại Việt.txt
+[289/388] download chapter_id=16174350 file=Chương 289 Đinh Thị Trang đến Thảo Nguyên.txt
+  OK decrypted=True written=Chương 289 Đinh Thị Trang đến Thảo Nguyên.txt
+[290/388] download chapter_id=16174674 file=Chương 290 Cuộc Chiến Thành Nam Lăng.txt
+  RETRYABLE_FAIL attempt=1 chapter_id=16174674: unable to decode iv
+  OK decrypted=True retry=2 written=Chương 290 Cuộc Chiến Thành Nam Lăng.txt
+[291/388] download chapter_id=16178287 file=Chương 291 thế cục đại Tống.txt
+  OK decrypted=True written=Chương 291 thế cục đại Tống.txt
+[292/388] download chapter_id=16178479 file=Chương 292 Thế cục đại Tống 2.txt
+  OK decrypted=True written=Chương 292 Thế cục đại Tống 2.txt
+[293/388] download chapter_id=16178609 file=Chương 293 đại đường và Đại Nguyên xuất Quân.txt
+  OK decrypted=True written=Chương 293 đại đường và Đại Nguyên xuất Quân.txt
+[294/388] download chapter_id=16178687 file=Chương 294 Đinh Thị Trang đặt chân thảo nguyên.txt
+  OK decrypted=True written=Chương 294 Đinh Thị Trang đặt chân thảo nguyên.txt
+[295/388] download chapter_id=16178807 file=Chương 295 giải quyết việc nhà.txt
+  OK decrypted=True written=Chương 295 giải quyết việc nhà.txt
+[296/388] download chapter_id=16178870 file=Chương 296 Bình Yên.txt
+  OK decrypted=True written=Chương 296 Bình Yên.txt
+[297/388] download chapter_id=16179020 file=Chương 297 âm mưu.txt
+  OK decrypted=True written=Chương 297 âm mưu.txt
+[298/388] download chapter_id=16186906 file=Chương 298 âm mưu 2.txt
+  OK decrypted=True written=Chương 298 âm mưu 2.txt
+[299/388] download chapter_id=16182461 file=Chương 299 âm mưu 3.txt
+  OK decrypted=True written=Chương 299 âm mưu 3.txt
+[300/388] download chapter_id=16182802 file=Chương 300 Đại Việt xuất quân.txt
+  OK decrypted=True written=Chương 300 Đại Việt xuất quân.txt
+[301/388] download chapter_id=16182845 file=Chương 301 đại việt xuất quân 2.txt
+  OK decrypted=True written=Chương 301 đại việt xuất quân 2.txt
+[302/388] download chapter_id=16183088 file=Chương 302 tin vui của chiến trường.txt
+  OK decrypted=True written=Chương 302 tin vui của chiến trường.txt
+[303/388] download chapter_id=16183207 file=Chương 303 thế cục.txt
+  OK decrypted=True written=Chương 303 thế cục.txt
+[304/388] download chapter_id=16186716 file=Chương 304 thế cục.txt
+  OK decrypted=True written=Chương 304 thế cục.txt
+[305/388] download chapter_id=16187175 file=Chương 305 chuẩn bị trước chiến tranh.txt
+  OK decrypted=True written=Chương 305 chuẩn bị trước chiến tranh.txt
+[306/388] download chapter_id=16187259 file=Chương 306 tiến quân.txt
+  OK decrypted=True written=Chương 306 tiến quân.txt
+[307/388] download chapter_id=16187414 file=Chương 307 thế cục chiến trường.txt
+  OK decrypted=True written=Chương 307 thế cục chiến trường.txt
+[308/388] download chapter_id=16187555 file=Chương 308 thế cục chiến trường 2.txt
+  OK decrypted=True written=Chương 308 thế cục chiến trường 2.txt
+[309/388] download chapter_id=16190889 file=Chương 309 thế cục chiến trường 3.txt
+  OK decrypted=True written=Chương 309 thế cục chiến trường 3.txt
+[310/388] download chapter_id=16190966 file=Chương 310 thế cục chiến trường 4.txt
+  OK decrypted=True written=Chương 310 thế cục chiến trường 4.txt
+[311/388] download chapter_id=16191016 file=Chương 311 ước chiến.txt
+  OK decrypted=True written=Chương 311 ước chiến.txt
+[312/388] download chapter_id=16195587 file=Chương 312 ước Chiến 2.txt
+  OK decrypted=True written=Chương 312 ước Chiến 2.txt
+[313/388] download chapter_id=16195644 file=Chương 313 chuẩn bị.txt
+  OK decrypted=True written=Chương 313 chuẩn bị.txt
+[314/388] download chapter_id=16195775 file=Chương 314 chuẩn bị 2.txt
+  OK decrypted=True written=Chương 314 chuẩn bị 2.txt
+[315/388] download chapter_id=16195843 file=Chương 315 chiến tranh bắt đầu.txt
+  OK decrypted=True written=Chương 315 chiến tranh bắt đầu.txt
+[316/388] download chapter_id=16195876 file=Chương 316 chiến tranh bắt đầu 2.txt
+  OK decrypted=True written=Chương 316 chiến tranh bắt đầu 2.txt
+[317/388] download chapter_id=16195945 file=Chương 317 kỵ binh Đột Kích.txt
+  OK decrypted=True written=Chương 317 kỵ binh Đột Kích.txt
+[318/388] download chapter_id=16204329 file=Chương 318 sứ đoàn Đại Tần.txt
+  OK decrypted=True written=Chương 318 sứ đoàn Đại Tần.txt
+[319/388] download chapter_id=16204395 file=Chương 319 sứ đoàn Đại Tần 2.txt
+  OK decrypted=True written=Chương 319 sứ đoàn Đại Tần 2.txt
+[320/388] download chapter_id=16205015 file=Chương 320 tình hình Đại Nguyên.txt
+  OK decrypted=True written=Chương 320 tình hình Đại Nguyên.txt
+[321/388] download chapter_id=16207657 file=Chương 321 kế hoạch và âm mưu.txt
+  OK decrypted=True written=Chương 321 kế hoạch và âm mưu.txt
+[322/388] download chapter_id=16207700 file=Chương 322 kế hoạch và âm mưu 2.txt
+  OK decrypted=True written=Chương 322 kế hoạch và âm mưu 2.txt
+[323/388] download chapter_id=16207796 file=Chương 323 bình yên trước bão tố.txt
+  OK decrypted=True written=Chương 323 bình yên trước bão tố.txt
+[324/388] download chapter_id=16212049 file=Chương 324 bình yên trước Bão Tố 2.txt
+  OK decrypted=True written=Chương 324 bình yên trước Bão Tố 2.txt
+[325/388] download chapter_id=16212092 file=Chương 325 bình yên trước bão tố 3.txt
+  OK decrypted=True written=Chương 325 bình yên trước bão tố 3.txt
+[326/388] download chapter_id=16212182 file=Chương 326 chuẩn bị trước chiến tranh.txt
+  OK decrypted=True written=Chương 326 chuẩn bị trước chiến tranh.txt
+[327/388] download chapter_id=16212344 file=Chương 327 chiến tranh.txt
+  OK decrypted=True written=Chương 327 chiến tranh.txt
+[328/388] download chapter_id=16212389 file=Chương 328 Trận Chiến Khốc Liệt.txt
+  OK decrypted=True written=Chương 328 Trận Chiến Khốc Liệt.txt
+[329/388] download chapter_id=16214759 file=Chương 329 Chiến Hậu.txt
+  OK decrypted=True written=Chương 329 Chiến Hậu.txt
+[330/388] download chapter_id=16214825 file=Chương 330 phân chia lợi ích.txt
+  OK decrypted=True written=Chương 330 phân chia lợi ích.txt
+[331/388] download chapter_id=16214996 file=Chương 331 phân chia lợi ích 2.txt
+  OK decrypted=True written=Chương 331 phân chia lợi ích 2.txt
+[332/388] download chapter_id=16218974 file=Chương 332 Thành Biện Kinh.txt
+  OK decrypted=True written=Chương 332 Thành Biện Kinh.txt
+[333/388] download chapter_id=16219146 file=Chương 333 thành biện kinh 2.txt
+  OK decrypted=True written=Chương 333 thành biện kinh 2.txt
+[334/388] download chapter_id=16219238 file=Chương 334 phân chia lợi ích.txt
+  OK decrypted=True written=Chương 334 phân chia lợi ích.txt
+[335/388] download chapter_id=16223242 file=Chương 335 phân chia lợi ích 2.txt
+  OK decrypted=True written=Chương 335 phân chia lợi ích 2.txt
+[336/388] download chapter_id=16223358 file=Chương 336 phân chia lợi ích 3.txt
+  OK decrypted=True written=Chương 336 phân chia lợi ích 3.txt
+[337/388] download chapter_id=16223492 file=Chương 337 Đại Tống diệt vong.txt
+  OK decrypted=True written=Chương 337 Đại Tống diệt vong.txt
+[338/388] download chapter_id=16227377 file=Chương 338 đại Tống diệt vong 2.txt
+  OK decrypted=True written=Chương 338 đại Tống diệt vong 2.txt
+[339/388] download chapter_id=16227435 file=Chương 339 đại Tống diệt vong 3.txt
+  OK decrypted=True written=Chương 339 đại Tống diệt vong 3.txt
+[340/388] download chapter_id=16227619 file=Chương 340 Rắc Rối.txt
+  OK decrypted=True written=Chương 340 Rắc Rối.txt
+[341/388] download chapter_id=16231625 file=Chương 341 Rắc Rối 2.txt
+  OK decrypted=True written=Chương 341 Rắc Rối 2.txt
+[342/388] download chapter_id=16231690 file=Chương 342 kế hoạch mới.txt
+  OK decrypted=True written=Chương 342 kế hoạch mới.txt
+[343/388] download chapter_id=16231781 file=Chương 343 kế hoạch mới 2.txt
+  OK decrypted=True written=Chương 343 kế hoạch mới 2.txt
+[344/388] download chapter_id=16236408 file=Chương 344 kế hoạch mới 3.txt
+  OK decrypted=True written=Chương 344 kế hoạch mới 3.txt
+[345/388] download chapter_id=16236482 file=Chương 345 thi đấu thể thao.txt
+  OK decrypted=True written=Chương 345 thi đấu thể thao.txt
+[346/388] download chapter_id=16236528 file=Chương 346 thi đấu thể thao 2.txt
+  OK decrypted=True written=Chương 346 thi đấu thể thao 2.txt
+[347/388] download chapter_id=16241296 file=Chương 347 phát triển.txt
+  OK decrypted=True written=Chương 347 phát triển.txt
+[348/388] download chapter_id=16241427 file=Chương 348 phát triển 2.txt
+  OK decrypted=True written=Chương 348 phát triển 2.txt
+[349/388] download chapter_id=16241602 file=Chương 349 phát triển 3.txt
+  OK decrypted=True written=Chương 349 phát triển 3.txt
+[350/388] download chapter_id=16245791 file=Chương 350 phương hướng phát triển Đại Việt.txt
+  OK decrypted=True written=Chương 350 phương hướng phát triển Đại Việt.txt
+[351/388] download chapter_id=16245872 file=Chương 351 Trần Thiên Ân Làm Cha.txt
+  OK decrypted=True written=Chương 351 Trần Thiên Ân Làm Cha.txt
+[352/388] download chapter_id=16245882 file=Chương 352 tiền tệ Cửu Châu xuất hiện.txt
+  OK decrypted=True written=Chương 352 tiền tệ Cửu Châu xuất hiện.txt
+[353/388] download chapter_id=16250176 file=Chương 353 tiền tệ Cửu Châu xuất hiện 2.txt
+  OK decrypted=True written=Chương 353 tiền tệ Cửu Châu xuất hiện 2.txt
+[354/388] download chapter_id=16250251 file=Chương 354 tiền tệ mới xuất hiện 3.txt
+  OK decrypted=True written=Chương 354 tiền tệ mới xuất hiện 3.txt
+[355/388] download chapter_id=16250332 file=Chương 355 tiền tệ mới Xuất hiện 4.txt
+  OK decrypted=True written=Chương 355 tiền tệ mới Xuất hiện 4.txt
+[356/388] download chapter_id=16254906 file=Chương 356 kế hoạch phát triển Đại Việt.txt
+  OK decrypted=True written=Chương 356 kế hoạch phát triển Đại Việt.txt
+[357/388] download chapter_id=16254975 file=Chương 357 kế hoạch phát triển Đại Việt 2.txt
+  OK decrypted=True written=Chương 357 kế hoạch phát triển Đại Việt 2.txt
+[358/388] download chapter_id=16255246 file=Chương 358 kế hoạch Thảo Nguyên.txt
+  OK decrypted=True written=Chương 358 kế hoạch Thảo Nguyên.txt
+[359/388] download chapter_id=16259077 file=Chương 359 kế hoạch Thảo Nguyên 2.txt
+  OK decrypted=True written=Chương 359 kế hoạch Thảo Nguyên 2.txt
+[360/388] download chapter_id=16259099 file=Chương 360 kế hoạch Thảo Nguyên 3.txt
+  OK decrypted=True written=Chương 360 kế hoạch Thảo Nguyên 3.txt
+[361/388] download chapter_id=16259116 file=Chương 361 thế cục Cửu Châu.txt
+  OK decrypted=True written=Chương 361 thế cục Cửu Châu.txt
+[362/388] download chapter_id=16262911 file=Chương 362 thế cục Cửu Châu 2.txt
+  OK decrypted=True written=Chương 362 thế cục Cửu Châu 2.txt
+[363/388] download chapter_id=16262934 file=Chương 363 thế cục Cửu Châu 3.txt
+  OK decrypted=True written=Chương 363 thế cục Cửu Châu 3.txt
+[364/388] download chapter_id=16262948 file=Chương 364 hôn lễ.txt
+  OK decrypted=True written=Chương 364 hôn lễ.txt
+[365/388] download chapter_id=16266869 file=Chương 365 đàm phán.txt
+  OK decrypted=True written=Chương 365 đàm phán.txt
+[366/388] download chapter_id=16267110 file=Chương 366 đại nguyên nội chiến bùng nổ.txt
+  OK decrypted=True written=Chương 366 đại nguyên nội chiến bùng nổ.txt
+[367/388] download chapter_id=16267190 file=Chương 367 thế cục Đại Đường.txt
+  OK decrypted=True written=Chương 367 thế cục Đại Đường.txt
+[368/388] download chapter_id=16271051 file=Chương 368 Lý An Lan.txt
+  OK decrypted=True written=Chương 368 Lý An Lan.txt
+[369/388] download chapter_id=16271222 file=Chương 369 tình hình Đại Việt.txt
+  OK decrypted=True written=Chương 369 tình hình Đại Việt.txt
+[370/388] download chapter_id=16271319 file=Chương 370 Rắc Rối lại xuất hiện.txt
+  OK decrypted=True written=Chương 370 Rắc Rối lại xuất hiện.txt
+[371/388] download chapter_id=16274729 file=Chương 371 đại hôn.txt
+  OK decrypted=True written=Chương 371 đại hôn.txt
+[372/388] download chapter_id=16274852 file=Chương 372 tỉnh ngộ.txt
+  OK decrypted=True written=Chương 372 tỉnh ngộ.txt
+[373/388] download chapter_id=16274980 file=Chương 373 Hiếu Kính.txt
+  OK decrypted=True written=Chương 373 Hiếu Kính.txt
+[374/388] download chapter_id=16279515 file=Chương 374 kế hoạch mới lại bắt đầu.txt
+  OK decrypted=True written=Chương 374 kế hoạch mới lại bắt đầu.txt
+[375/388] download chapter_id=16279719 file=Chương 375 kế hoạch mới lại bắt đầu 2.txt
+  OK decrypted=True written=Chương 375 kế hoạch mới lại bắt đầu 2.txt
+[376/388] download chapter_id=16282070 file=Chương 376 trường quân sự mới của Đại Đường.txt
+  OK decrypted=True written=Chương 376 trường quân sự mới của Đại Đường.txt
+[377/388] download chapter_id=16282981 file=Chương 377 trường quân sự mới của Đại Đường 2.txt
+  OK decrypted=True written=Chương 377 trường quân sự mới của Đại Đường 2.txt
+[378/388] download chapter_id=16282990 file=Chương 378 du học sinh.txt
+  OK decrypted=True written=Chương 378 du học sinh.txt
+[379/388] download chapter_id=16283003 file=Chương 379 hạnh phúc gia đình.txt
+  OK decrypted=True written=Chương 379 hạnh phúc gia đình.txt
+[380/388] download chapter_id=16283469 file=Chương 380 biến cố.txt
+  OK decrypted=True written=Chương 380 biến cố.txt
+[381/388] download chapter_id=16286126 file=Chương 381 Đại Việt Đổi Ngôi.txt
+  OK decrypted=True written=Chương 381 Đại Việt Đổi Ngôi.txt
+[382/388] download chapter_id=16286135 file=Chương 382 Đại Việt đổi ngôi 2.txt
+  OK decrypted=True written=Chương 382 Đại Việt đổi ngôi 2.txt
+[383/388] download chapter_id=16286140 file=Chương 383 Đại Việt đổi ngôi 3.txt
+  OK decrypted=True written=Chương 383 Đại Việt đổi ngôi 3.txt
+[384/388] download chapter_id=16286227 file=Chương 384 Đại Việt đổi ngôi 4.txt
+  OK decrypted=True written=Chương 384 Đại Việt đổi ngôi 4.txt
+[385/388] download chapter_id=16286314 file=Chương 385 Đại Việt đổi ngôi 5.txt
+  OK decrypted=True written=Chương 385 Đại Việt đổi ngôi 5.txt
+[386/388] download chapter_id=16286420 file=Chương 386 đón Tết.txt
+  OK decrypted=True written=Chương 386 đón Tết.txt
+[387/388] download chapter_id=16286724 file=Chương 387 Ngô Ánh Tuyết.txt
+  OK decrypted=True written=Chương 387 Ngô Ánh Tuyết.txt
+[388/388] download chapter_id=16286835 file=Chương 389 duyệt binh.txt
+  OK decrypted=True written=Chương 389 duyệt binh.txt
+final_ok=388
+final_fail=0
+out=C:\Dev\MTC\Chiến Kỳ Phương Nam Dũng Khởi
+
+[stderr]

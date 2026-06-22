@@ -1,0 +1,59 @@
+book=Comic Ác Ma Pháp Sư
+book_id=106815
+out=C:\Dev\MTC\Comic Ác Ma Pháp Sư
+chapters_total=25 expected=25
+[1/25] download chapter_id=13451708 file=Chương 1 Mới xuyên qua.txt
+  OK decrypted=True written=Chương 1 Mới xuyên qua.txt
+[2/25] download chapter_id=13451725 file=Chương 2 Đại Vũ Trụ và Tiểu Vũ Trụ.txt
+  OK decrypted=True written=Chương 2 Đại Vũ Trụ và Tiểu Vũ Trụ.txt
+[3/25] download chapter_id=13451726 file=Chương 3 Chính nghĩa của Mordo.txt
+  OK decrypted=True written=Chương 3 Chính nghĩa của Mordo.txt
+[4/25] download chapter_id=13451727 file=Chương 4 Themyscira.txt
+  OK decrypted=True written=Chương 4 Themyscira.txt
+[5/25] download chapter_id=13451728 file=Chương 5 Mười sáu tuổi.txt
+  OK decrypted=True written=Chương 5 Mười sáu tuổi.txt
+[6/25] download chapter_id=13451729 file=Chương 6 Bắt đầu thám hiểm.txt
+  OK decrypted=True written=Chương 6 Bắt đầu thám hiểm.txt
+[7/25] download chapter_id=13451730 file=Chương 7 Sir Crocodile.txt
+  OK decrypted=True written=Chương 7 Sir Crocodile.txt
+[8/25] download chapter_id=13451731 file=Chương 8 Hải quân Lục thức.txt
+  OK decrypted=True written=Chương 8 Hải quân Lục thức.txt
+[9/25] download chapter_id=13451732 file=Chương 9 Gặp gỡ Howard.txt
+  OK decrypted=True written=Chương 9 Gặp gỡ Howard.txt
+[10/25] download chapter_id=13451733 file=Chương 10 Tìm kiếm Steve Rogers.txt
+  OK decrypted=True written=Chương 10 Tìm kiếm Steve Rogers.txt
+[11/25] download chapter_id=13451734 file=Chương 11 Brotherhood of the Shield.txt
+  OK decrypted=True written=Chương 11 Brotherhood of the Shield.txt
+[12/25] download chapter_id=13454370 file=Chương 12 Steve.txt
+  OK decrypted=True written=Chương 12 Steve.txt
+[13/25] download chapter_id=13457073 file=Chương 13 Ares.txt
+  OK decrypted=True written=Chương 13 Ares.txt
+[14/25] download chapter_id=13457074 file=Chương 14 Logan.txt
+  OK decrypted=True written=Chương 14 Logan.txt
+[15/25] download chapter_id=13459794 file=Chương 15 Tyrant.txt
+  OK decrypted=True written=Chương 15 Tyrant.txt
+[16/25] download chapter_id=13462610 file=Chương 16 Tiến sĩ Erskine.txt
+  OK decrypted=True written=Chương 16 Tiến sĩ Erskine.txt
+[17/25] download chapter_id=13465240 file=Chương 17 Quay trở lại căn cứ.txt
+  OK decrypted=True written=Chương 17 Quay trở lại căn cứ.txt
+[18/25] download chapter_id=13468710 file=Chương 18 Đến Rome.txt
+  OK decrypted=True written=Chương 18 Đến Rome.txt
+[19/25] download chapter_id=13471058 file=Chương 19 Nathaniel Richards.txt
+  OK decrypted=True written=Chương 19 Nathaniel Richards.txt
+[20/25] download chapter_id=13473605 file=Chương 20 Ta vậy mà bị giết.txt
+  OK decrypted=True written=Chương 20 Ta vậy mà bị giết.txt
+[21/25] download chapter_id=13476743 file=Chương 21 Căn cứ Hydra.txt
+  OK decrypted=True written=Chương 21 Căn cứ Hydra.txt
+[22/25] download chapter_id=13479529 file=Chương 22 Vương tử.txt
+  OK decrypted=True written=Chương 22 Vương tử.txt
+[23/25] download chapter_id=13481574 file=Chương 23 Chém giết Vương tử.txt
+  OK decrypted=True written=Chương 23 Chém giết Vương tử.txt
+[24/25] download chapter_id=13484249 file=Chương 24 Anna Valerious.txt
+  OK decrypted=True written=Chương 24 Anna Valerious.txt
+[25/25] download chapter_id=17515937 file=Chương 25 Lời cuối sách.txt
+  OK decrypted=True written=Chương 25 Lời cuối sách.txt
+final_ok=25
+final_fail=0
+out=C:\Dev\MTC\Comic Ác Ma Pháp Sư
+
+[stderr]

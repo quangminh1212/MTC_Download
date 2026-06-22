@@ -1,0 +1,71 @@
+book=Hạnh Phúc Đơn Độc
+book_id=109958
+out=C:\Dev\MTC\Hạnh Phúc Đơn Độc
+chapters_total=59 expected=59
+[1/59] skip existing file=Chương 1 Untitled.txt
+[2/59] skip existing file=Chương 2 Untitled.txt
+[3/59] skip existing file=Chương 3 Untitled.txt
+[4/59] skip existing file=Chương 4 Untitled.txt
+[5/59] skip existing file=Chương 5 Untitled.txt
+[6/59] skip existing file=Chương 6 Untitled.txt
+[7/59] skip existing file=Chương 7 Untitled.txt
+[8/59] skip existing file=Chương 8 Untitled.txt
+[9/59] skip existing file=Chương 9 Untitled.txt
+[10/59] skip existing file=Chương 10 Untitled.txt
+[11/59] skip existing file=Chương 11 Untitled.txt
+[12/59] skip existing file=Chương 12 Untitled.txt
+[13/59] skip existing file=Chương 13 Untitled.txt
+[14/59] skip existing file=Chương 14 Untitled.txt
+[15/59] skip existing file=Chương 15 Untitled.txt
+[16/59] skip existing file=Chương 16 Untitled.txt
+[17/59] skip existing file=Chương 17 Untitled.txt
+[18/59] skip existing file=Chương 18 Untitled.txt
+[19/59] skip existing file=Chương 19 Untitled.txt
+[20/59] skip existing file=Chương 20 Untitled.txt
+[21/59] skip existing file=Chương 21 Khái quát gia tộc họ Ijuin.txt
+[22/59] skip existing file=Chương 22 Untitled.txt
+[23/59] skip existing file=Chương 23 Untitled.txt
+[24/59] skip existing file=Chương 24 Untitled.txt
+[25/59] skip existing file=Chương 25 Untitled.txt
+[26/59] skip existing file=Chương 26 Untitled.txt
+[27/59] skip existing file=Chương 27 Untitled.txt
+[28/59] skip existing file=Chương 28 Untitled.txt
+[29/59] skip existing file=Chương 29 Hậu duệ gia tộc Ijuin đời thứ 6.txt
+[30/59] skip existing file=Chương 30 Untitled.txt
+[31/59] skip existing file=Chương 31 Untitled.txt
+[32/59] skip existing file=Chương 32 Untitled.txt
+[33/59] skip existing file=Chương 33 Untitled.txt
+[34/59] skip existing file=Chương 34 Untitled.txt
+[35/59] skip existing file=Chương 35 Untitled.txt
+[36/59] download chapter_id=14253709 file=Chương 36 Khái quát về trường liên cấp St. Lucifer.txt
+  OK decrypted=True written=Chương 36 Khái quát về trường liên cấp St. Lucifer.txt
+[37/59] skip existing file=Chương 37 Untitled.txt
+[38/59] skip existing file=Chương 38 Untitled.txt
+[39/59] skip existing file=Chương 39 Untitled.txt
+[40/59] skip existing file=Chương 40 Untitled.txt
+[41/59] download chapter_id=14280269 file=Chương 41 Một số điều bạn chưa biết.txt
+  OK decrypted=True written=Chương 41 Một số điều bạn chưa biết.txt
+[42/59] skip existing file=Chương 42 Untitled.txt
+[43/59] skip existing file=Chương 43 Untitled.txt
+[44/59] skip existing file=Chương 44 Untitled.txt
+[45/59] skip existing file=Chương 45 Untitled.txt
+[46/59] skip existing file=Chương 46 Untitled.txt
+[47/59] skip existing file=Chương 47 Untitled.txt
+[48/59] skip existing file=Chương 48 Untitled.txt
+[49/59] download chapter_id=14424256 file=Chương 49 Thông tin các lãnh đạo của trường.txt
+  OK decrypted=True written=Chương 49 Thông tin các lãnh đạo của trường.txt
+[50/59] skip existing file=Chương 50 Untitled.txt
+[51/59] skip existing file=Chương 51 Untitled.txt
+[52/59] skip existing file=Chương 52 Untitled.txt
+[53/59] skip existing file=Chương 53 Untitled.txt
+[54/59] skip existing file=Chương 54 Untitled.txt
+[55/59] skip existing file=Chương 55 Untitled.txt
+[56/59] skip existing file=Chương 56 Phiên ngoại 1 Ijuin Akali Otori Daisuke.txt
+[57/59] skip existing file=Chương 57 Phiên ngoại 2 Soma Tony Luna Clamonves.txt
+[58/59] skip existing file=Chương 58 Phiên ngoại 3 Matsuda Rui Kagano Shiori.txt
+[59/59] skip existing file=Chương 59 Phiên ngoại 4 Kaido Juuzen Albert Jung.txt
+final_ok=59
+final_fail=0
+out=C:\Dev\MTC\Hạnh Phúc Đơn Độc
+
+[stderr]

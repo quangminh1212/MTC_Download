@@ -1,0 +1,549 @@
+[
+  {
+    "id": 104758,
+    "name": "Khúc Độc Hành Trong Đêm Trường Tận Thế",
+    "downloaded": 2415,
+    "missing_after": 2419,
+    "errors": [
+      {
+        "idx": 308,
+        "chapter_id": 14147657,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 663,
+        "chapter_id": 14707196,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1499,
+        "chapter_id": 16169364,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1852,
+        "chapter_id": 17070738,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 107764,
+    "name": "Đế Cuồng",
+    "downloaded": 1759,
+    "missing_after": 1764,
+    "errors": [
+      {
+        "idx": 1043,
+        "chapter_id": 16640149,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1449,
+        "chapter_id": 17524021,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1531,
+        "chapter_id": 17921051,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1817,
+        "chapter_id": 19751695,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1873,
+        "chapter_id": 20157284,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 111422,
+    "name": "Thịnh Thế Diên Ninh",
+    "downloaded": 1394,
+    "missing_after": 1397,
+    "errors": [
+      {
+        "idx": 379,
+        "chapter_id": 15182314,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 996,
+        "chapter_id": 17944462,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1043,
+        "chapter_id": 18375575,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 109099,
+    "name": "Nhất Kiếp Tiên Phàm",
+    "downloaded": 1377,
+    "missing_after": 1378,
+    "errors": [
+      {
+        "idx": 455,
+        "chapter_id": 14609544,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 122993,
+    "name": "Ma Chủng",
+    "downloaded": 1311,
+    "missing_after": 1313,
+    "errors": [
+      {
+        "idx": 234,
+        "chapter_id": 17748452,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 289,
+        "chapter_id": 17899905,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 120001,
+    "name": "Mộng Tiên",
+    "downloaded": 1122,
+    "missing_after": 1127,
+    "errors": [
+      {
+        "idx": 690,
+        "chapter_id": 18008646,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 915,
+        "chapter_id": 19639350,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 982,
+        "chapter_id": 19901063,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1012,
+        "chapter_id": 20019334,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1056,
+        "chapter_id": 20200503,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 136693,
+    "name": "Trở Về 1996 Bắt Đầu Từ Chợ Lớn Bán Thịt Heo",
+    "downloaded": 1113,
+    "missing_after": 1120,
+    "errors": [
+      {
+        "idx": 147,
+        "chapter_id": 21482078,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 477,
+        "chapter_id": 23118506,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 751,
+        "chapter_id": 24587659,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 839,
+        "chapter_id": 25039228,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 894,
+        "chapter_id": 25354231,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 993,
+        "chapter_id": 25835006,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1072,
+        "chapter_id": 26314033,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 110825,
+    "name": "Tổng Mạn: The Gamer",
+    "downloaded": 1106,
+    "missing_after": 1111,
+    "errors": [
+      {
+        "idx": 240,
+        "chapter_id": 14761309,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 692,
+        "chapter_id": 15777489,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1125,
+        "chapter_id": 17248752,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1258,
+        "chapter_id": 19353730,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 1304,
+        "chapter_id": 23858841,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 115313,
+    "name": "Ngôi Sao Hi Vọng",
+    "downloaded": 997,
+    "missing_after": 997,
+    "errors": []
+  },
+  {
+    "id": 126924,
+    "name": "Trở Lại 2009 Ta Làm Lại Cuộc Đời",
+    "downloaded": 786,
+    "missing_after": 977,
+    "errors": [
+      {
+        "idx": 119,
+        "chapter_id": 18593222,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Trở Lại 2009 Ta Làm Lại Cuộc Đời\\\\Chương 119 Tôi hy vọng sẽ có một ngày cậu sẽ khiến tôi nhớ đến tên của cậu.txt'"
+      },
+      {
+        "idx": 122,
+        "chapter_id": 18604124,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Trở Lại 2009 Ta Làm Lại Cuộc Đời\\\\Chương 122 Cha Con Ti Bỉ Như Nhau.txt'"
+      },
+      {
+        "idx": 124,
+        "chapter_id": 18612341,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Trở Lại 2009 Ta Làm Lại Cuộc Đời\\\\Chương 124 Tặng Một Cây Bút Cũng Gây Ra Chuyện.txt'"
+      },
+      {
+        "idx": 131,
+        "chapter_id": 18639826,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Trở Lại 2009 Ta Làm Lại Cuộc Đời\\\\Chương 131 Sau Mọi Sự Tổn Thương Đều Phải Có Cái Giá Của Nó.txt'"
+      },
+      {
+        "idx": 136,
+        "chapter_id": 18656959,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Trở Lại 2009 Ta Làm Lại Cuộc Đời\\\\Chương 136 Đào Trung Kiên Cũng Không Dễ Chơi.txt'"
+      },
+      {
+        "idx": 138,
+        "chapter_id": 18662698,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Trở Lại 2009 Ta Làm Lại Cuộc Đời\\\\Chương 138 Bác Sẽ Gả Minh Phương Cho Cháu Nhé.txt'"
+      },
+      {
+        "idx": 147,
+        "chapter_id": 18704376,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Trở Lại 2009 Ta Làm Lại Cuộc Đời\\\\Chương 147 Nữ Thần Bị Vấy Bẩn.txt'"
+      },
+      {
+        "idx": 155,
+        "chapter_id": 18751194,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Trở Lại 2009 Ta Làm Lại Cuộc Đời\\\\Chương 155 Trò Vui Bắt Đầu.txt'"
+      },
+      {
+        "idx": 156,
+        "chapter_id": 18758822,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Trở Lại 2009 Ta Làm Lại Cuộc Đời\\\\Chương 156 Gia Phong Gia Giáo.txt'"
+      },
+      {
+        "idx": 172,
+        "chapter_id": 18821235,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Trở Lại 2009 Ta Làm Lại Cuộc Đời\\\\Chương 172 Deep Web.txt'"
+      }
+    ]
+  },
+  {
+    "id": 125841,
+    "name": "Game Thực Tế Ảo: Người Chơi Trọng Sinh",
+    "downloaded": 965,
+    "missing_after": 965,
+    "errors": []
+  },
+  {
+    "id": 119569,
+    "name": "Xuyên Về Thời Lê Làm Quân Phiệt",
+    "downloaded": 943,
+    "missing_after": 946,
+    "errors": [
+      {
+        "idx": 196,
+        "chapter_id": 18071616,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 744,
+        "chapter_id": 24791827,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 902,
+        "chapter_id": 25838177,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 120329,
+    "name": "Nam Thiên Chiến Hỏa",
+    "downloaded": 900,
+    "missing_after": 904,
+    "errors": [
+      {
+        "idx": 533,
+        "chapter_id": 19130578,
+        "err": "encrypted marker remains after decrypt/clean"
+      },
+      {
+        "idx": 540,
+        "chapter_id": 19149048,
+        "err": "encrypted marker remains after decrypt/clean"
+      },
+      {
+        "idx": 590,
+        "chapter_id": 19440849,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 629,
+        "chapter_id": 19645150,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 149581,
+    "name": "1854",
+    "downloaded": 845,
+    "missing_after": 850,
+    "errors": [
+      {
+        "idx": 349,
+        "chapter_id": 26081246,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 492,
+        "chapter_id": 26452748,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 558,
+        "chapter_id": 26604080,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 649,
+        "chapter_id": 26723028,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 868,
+        "chapter_id": 26940857,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 122222,
+    "name": "Thượng Thương Chi Hạ: Tuyên Cổ Đệ Nhất Tiên",
+    "downloaded": 824,
+    "missing_after": 850,
+    "errors": [
+      {
+        "idx": 94,
+        "chapter_id": 18203989,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên\\\\Chương 94 Cơn Thịnh Nộ Của Xích Hoả Thần Tộc.txt'"
+      },
+      {
+        "idx": 96,
+        "chapter_id": 18209042,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên\\\\Chương 96 Có Giỏi Thì Tới Giết Lão Phu.txt'"
+      },
+      {
+        "idx": 117,
+        "chapter_id": 18288883,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên\\\\Chương 117 Vũ Dương Chi Chiến 7.txt'"
+      },
+      {
+        "idx": 148,
+        "chapter_id": 18398380,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên\\\\Chương 148 Con Lừa Trọc Ngươi Còn Muốn Thăng Chức Tăng Lương Nữa Hay Không.txt'"
+      },
+      {
+        "idx": 149,
+        "chapter_id": 18402903,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên\\\\Chương 149 Ngươi Quá Dông Dài.txt'"
+      },
+      {
+        "idx": 179,
+        "chapter_id": 18499827,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên\\\\Chương 179 Đốt Huyết.txt'"
+      },
+      {
+        "idx": 196,
+        "chapter_id": 18568535,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên\\\\Chương 196 Vị Chấp Sự Thứ Hai Của Chư Thiên Thành.txt'"
+      },
+      {
+        "idx": 199,
+        "chapter_id": 18577771,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên\\\\Chương 199 Huynh Đệ À Cho Ta Quỳ Xuống Dập Đầu Một Cái Giảng Hoà Đi.txt'"
+      },
+      {
+        "idx": 200,
+        "chapter_id": 18579638,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên\\\\Chương 200 Niệm Cấm.txt'"
+      },
+      {
+        "idx": 685,
+        "chapter_id": 20792495,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên\\\\Chương 685 Sinh Mệnh Của Con Người Giống Như Một Ngọn Đèn Dầu.txt'"
+      }
+    ]
+  },
+  {
+    "id": 110298,
+    "name": "Luân Hồi Thương Đế",
+    "downloaded": 760,
+    "missing_after": 760,
+    "errors": []
+  },
+  {
+    "id": 110493,
+    "name": "Ta Bán Hủ Tiếu Tại Dị Giới",
+    "downloaded": 722,
+    "missing_after": 722,
+    "errors": []
+  },
+  {
+    "id": 140643,
+    "name": "Lãng Nhân: Mỹ Nữ, Mời Tư Vấn",
+    "downloaded": 718,
+    "missing_after": 722,
+    "errors": [
+      {
+        "idx": 382,
+        "chapter_id": 24352672,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 477,
+        "chapter_id": 25071020,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 538,
+        "chapter_id": 25493011,
+        "err": "unable to decode iv"
+      },
+      {
+        "idx": 545,
+        "chapter_id": 25554291,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 120335,
+    "name": "Tây Sơn Hành Trình Vượt Thời Gian",
+    "downloaded": 452,
+    "missing_after": 453,
+    "errors": [
+      {
+        "idx": 293,
+        "chapter_id": 17808892,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 110283,
+    "name": "Tiến Hóa Tại Vô Hạn Thế Giới",
+    "downloaded": 381,
+    "missing_after": 382,
+    "errors": [
+      {
+        "idx": 545,
+        "chapter_id": 17076249,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 121026,
+    "name": "Lol: Thời Đại Quang Vinh",
+    "downloaded": 361,
+    "missing_after": 361,
+    "errors": []
+  },
+  {
+    "id": 109633,
+    "name": "Mộng Đạo Trường Sinh",
+    "downloaded": 304,
+    "missing_after": 304,
+    "errors": []
+  },
+  {
+    "id": 131897,
+    "name": "Đại Yêu Quái",
+    "downloaded": 268,
+    "missing_after": 268,
+    "errors": []
+  },
+  {
+    "id": 119844,
+    "name": "Long Cơ Chiến Hồn",
+    "downloaded": 257,
+    "missing_after": 257,
+    "errors": []
+  },
+  {
+    "id": 147066,
+    "name": "Thực Tế Ảo: Thống Lĩnh Quân Đoàn Hắc Ám",
+    "downloaded": 229,
+    "missing_after": 230,
+    "errors": [
+      {
+        "idx": 172,
+        "chapter_id": 25622542,
+        "err": "unable to decode iv"
+      }
+    ]
+  }
+]

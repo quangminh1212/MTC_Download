@@ -1,0 +1,66 @@
+book=Bắt Đầu Từ Lập Trình Viên
+book_id=128191
+out=C:\Dev\MTC\Bắt Đầu Từ Lập Trình Viên
+chapters_total=51 expected=51
+[1/51] skip existing file=Chương 1 Chia tay edited.txt
+[2/51] skip existing file=Chương 2 Thế giới này không bình thường.txt
+[3/51] skip existing file=Chương 3 Bạn gái cũ mắc bệnh rồi.txt
+[4/51] skip existing file=Chương 4 Có vấn đề.txt
+[5/51] skip existing file=Chương 5 Vậy ra thế giới này đúng là không bình thường sao.txt
+[6/51] skip existing file=Chương 6 Người tình trong mộng của thằng bạn.txt
+[7/51] download chapter_id=18414266 file=Chương 7 ‘Chất’ cùng ‘Chức nghiệp giả’.txt
+  OK decrypted=True written=Chương 7 ‘Chất’ cùng ‘Chức nghiệp giả’.txt
+[8/51] skip existing file=Chương 8 Vũ khí của ta.txt
+[9/51] skip existing file=Chương 9 Ủy thác.txt
+[10/51] skip existing file=Chương 10 Biến thái.txt
+[11/51] skip existing file=Chương 11 Truy bắt Cười.txt
+[12/51] skip existing file=Chương 12 Truy bắt Hang ổ.txt
+[13/51] download chapter_id=18445077 file=Chương 13 Truy bắt ‘Cướp của giết người’ hay ‘Giết người cướp của’.txt
+  OK decrypted=True written=Chương 13 Truy bắt ‘Cướp của giết người’ hay ‘Giết người cướp của’.txt
+[14/51] skip existing file=Chương 14 Bài.txt
+[15/51] skip existing file=Chương 15 Thỉnh pháp.txt
+[16/51] skip existing file=Chương 16 Hiểu sơ mật chất.txt
+[17/51] skip existing file=Chương 17 Nguy hiểm tiến đến.txt
+[18/51] skip existing file=Chương 18 Truy đuổi.txt
+[19/51] skip existing file=Chương 19 Đáng nhớ cái quỷ.txt
+[20/51] skip existing file=Chương 20 Lối vào Đôi lời gửi gắm.txt
+[21/51] skip existing file=Chương 21 Vai diễn.txt
+[22/51] skip existing file=Chương 22 Không tin lại được.txt
+[23/51] skip existing file=Chương 23 Nguy cơ ở trên biển.txt
+[24/51] skip existing file=Chương 24 Chuẩn bị.txt
+[25/51] skip existing file=Chương 25 Giao chiến.txt
+[26/51] skip existing file=Chương 26 Đánh bại.txt
+[27/51] skip existing file=Chương 27 Biển lặng.txt
+[28/51] skip existing file=Chương 28 Tán gái chỉ cần ba bước là đủ.txt
+[29/51] download chapter_id=18859448 file=Chương 29 【Người vớt xác】.txt
+  OK decrypted=True written=Chương 29 【Người vớt xác】.txt
+[30/51] skip existing file=Chương 30 Xác chết không mặt.txt
+[31/51] skip existing file=Chương 31 Cửa này mở thế nào.txt
+[32/51] skip existing file=Chương 32 Kìm nén.txt
+[33/51] skip existing file=Chương 33 Không thể dập tắt.txt
+[34/51] skip existing file=Chương 34 Du kích.txt
+[35/51] skip existing file=Chương 35 Mong muốn.txt
+[36/51] skip existing file=Chương 36 Mặt nạ da người.txt
+[37/51] skip existing file=Chương 37 Xé da mặt.txt
+[38/51] skip existing file=Chương 38 Stalker cùng Plug in.txt
+[39/51] download chapter_id=19575500 file=Chương 39 【Lập trình viên】cùng lịch sử.txt
+  OK decrypted=True written=Chương 39 【Lập trình viên】cùng lịch sử.txt
+[40/51] skip existing file=Chương 40 Hỗn loạn bắt đầu.txt
+[41/51] skip existing file=Chương 41 Phương hướng.txt
+[42/51] skip existing file=Chương 42 Hiến tế.txt
+[43/51] skip existing file=Chương 43 Kết giới.txt
+[44/51] skip existing file=Chương 44 Nóng chảy.txt
+[45/51] skip existing file=Chương 45 Rời núi.txt
+[46/51] skip existing file=Chương 46 Dừng lại.txt
+[47/51] skip existing file=Chương 47 Đi săn.txt
+[48/51] skip existing file=Chương 48 Thắng mạnh lên.txt
+[49/51] skip existing file=Chương 49 Chào mày Vàng.txt
+[50/51] download chapter_id=19846639 file=Chương 50 Nổ Tiền truyện 1.txt
+  OK decrypted=True written=Chương 50 Nổ Tiền truyện 1.txt
+[51/51] download chapter_id=19848208 file=Chương 51 Ký Hậu truyện 1.txt
+  OK decrypted=True written=Chương 51 Ký Hậu truyện 1.txt
+final_ok=51
+final_fail=0
+out=C:\Dev\MTC\Bắt Đầu Từ Lập Trình Viên
+
+[stderr]

@@ -1,0 +1,82 @@
+{
+  "targets": 302,
+  "issues": [
+    {
+      "id": 146629,
+      "kind": "count_mismatch",
+      "folder": "May Mắn Xuyên Vào Vũ Trụ Creepypasta",
+      "local": 107,
+      "expected": 108
+    },
+    {
+      "id": 110466,
+      "kind": "count_mismatch",
+      "folder": "Đế Quốc Nhật Bản",
+      "local": 404,
+      "expected": 405
+    },
+    {
+      "id": 147066,
+      "kind": "count_mismatch",
+      "folder": "Thực Tế Ảo Thống Lĩnh Quân Đoàn Hắc Ám",
+      "local": 358,
+      "expected": 296
+    },
+    {
+      "id": 113504,
+      "kind": "count_mismatch",
+      "folder": "Bánh Xe Vận Mệnh Tại Hogwarts",
+      "local": 939,
+      "expected": 747
+    },
+    {
+      "id": 152566,
+      "kind": "count_mismatch",
+      "folder": "Tam Nguyên Chấn Thế",
+      "local": 217,
+      "expected": 204
+    },
+    {
+      "id": 151031,
+      "kind": "count_mismatch",
+      "folder": "Quả Cấm",
+      "local": 62,
+      "expected": 33
+    },
+    {
+      "id": 111111,
+      "kind": "count_mismatch",
+      "folder": "Từ Arknights Bắt Đầu Xây Dựng Thế Lực",
+      "local": 218,
+      "expected": 219
+    },
+    {
+      "id": 127250,
+      "kind": "count_mismatch",
+      "folder": "Bất Diệt Kinh",
+      "local": 207,
+      "expected": 208
+    },
+    {
+      "id": 119844,
+      "kind": "count_mismatch",
+      "folder": "Long Cơ Chiến Hồn",
+      "local": 749,
+      "expected": 750
+    },
+    {
+      "id": 132877,
+      "kind": "count_mismatch",
+      "folder": "Đông A Tái Khởi",
+      "local": 1,
+      "expected": 0
+    },
+    {
+      "id": 153615,
+      "kind": "no_folder",
+      "folder": "Phía Sau Ngòi Bút",
+      "local": 0,
+      "expected": 0
+    }
+  ]
+}

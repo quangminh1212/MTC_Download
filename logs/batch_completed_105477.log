@@ -1,0 +1,19 @@
+book=Thu Nhập Và Thanh Toán
+book_id=105477
+out=C:\Dev\MTC\Thu Nhập Và Thanh Toán
+chapters_total=5 expected=5
+[1/5] download chapter_id=14189171 file=Chương 1 Đăng truyện ở đây có được tiền không.txt
+  OK decrypted=True written=Chương 1 Đăng truyện ở đây có được tiền không.txt
+[2/5] download chapter_id=14189209 file=Chương 2 Điều kiện xét duyệt Truyện thu phí Truyện Vip.txt
+  OK decrypted=True written=Chương 2 Điều kiện xét duyệt Truyện thu phí Truyện Vip.txt
+[3/5] download chapter_id=14189222 file=Chương 3 Phương thức thanh toán.txt
+  OK decrypted=True written=Chương 3 Phương thức thanh toán.txt
+[4/5] download chapter_id=14193708 file=Chương 4 Quy trình thanh toán.txt
+  OK decrypted=True written=Chương 4 Quy trình thanh toán.txt
+[5/5] download chapter_id=14196384 file=Chương 5 Tại sao hoá đơn của tôi vẫn chưa được thanh toán.txt
+  OK decrypted=True written=Chương 5 Tại sao hoá đơn của tôi vẫn chưa được thanh toán.txt
+final_ok=5
+final_fail=0
+out=C:\Dev\MTC\Thu Nhập Và Thanh Toán
+
+[stderr]

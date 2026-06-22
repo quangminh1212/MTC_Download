@@ -1,0 +1,19 @@
+ID=100775 RC=0
+STDOUT:
+[1/1] SKIP (already done) Cực Phẩm Tiên Đế Tại Đô Thị
+
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json
+STDERR:
+
+---
+ID=100931 RC=0
+STDOUT:
+[1/1] 100931 Đô Thị Vô Thượng Y Thần chapters=2980 status=Hoàn thành
+  => status=ok ok=0 skip=2980 fail=0
+
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json
+STDERR:
+
+---

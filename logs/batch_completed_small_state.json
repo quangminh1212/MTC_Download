@@ -1,0 +1,74 @@
+[
+  {
+    "id": 105477,
+    "folder": "Thu Nhập Và Thanh Toán",
+    "expected": 5,
+    "returncode": 0,
+    "elapsed": 2.6,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_105477.log"
+  },
+  {
+    "id": 105233,
+    "folder": "Sử Dụng Bookhub",
+    "expected": 13,
+    "returncode": 0,
+    "elapsed": 5.0,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_105233.log"
+  },
+  {
+    "id": 126573,
+    "folder": "Hướng Dẫn Cơ Bản",
+    "expected": 13,
+    "returncode": 0,
+    "elapsed": 5.1,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_126573.log"
+  },
+  {
+    "id": 106815,
+    "folder": "Comic Ác Ma Pháp Sư",
+    "expected": 25,
+    "returncode": 0,
+    "elapsed": 13.2,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_106815.log"
+  },
+  {
+    "id": 114701,
+    "folder": "Dị Giới Trọng Sinh Lục",
+    "expected": 34,
+    "returncode": 0,
+    "elapsed": 18.4,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_114701.log"
+  },
+  {
+    "id": 109958,
+    "folder": "Hạnh Phúc Đơn Độc",
+    "expected": 59,
+    "returncode": 0,
+    "elapsed": 28.5,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_109958.log"
+  },
+  {
+    "id": 106124,
+    "folder": "Định Mệnh",
+    "expected": 65,
+    "returncode": 0,
+    "elapsed": 35.2,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_106124.log"
+  },
+  {
+    "id": 140878,
+    "folder": "Marvel Ta Là Tiểu Chiến Sỹ Họ Stark",
+    "expected": 122,
+    "returncode": 0,
+    "elapsed": 54.3,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_140878.log"
+  },
+  {
+    "id": 106431,
+    "folder": "Đế Vương Tiền Truyện",
+    "expected": 178,
+    "returncode": 4,
+    "elapsed": 46.0,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_106431.log"
+  }
+]

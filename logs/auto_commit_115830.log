@@ -1,0 +1,42 @@
+book=Ta Xuyên Qua Tới Ma Thổi Đèn Thế Giới
+book_id=115830
+out=C:\Dev\MTC\Ta Xuyên Qua Tới Ma Thổi Đèn Thế Giới
+chapters_total=28 expected=28
+[1/28] skip existing file=Chương 1 Giấc mộng ba người bí ẩn.txt
+[2/28] skip existing file=Chương 2 Thức tỉnh đây là Ma thổi Đèn thế giới sao.txt
+[3/28] skip existing file=Chương 3 Mặt khác của Anh Tử làm quen.txt
+[4/28] skip existing file=Chương 4 Căn cứ của quân Quan Đông.txt
+[5/28] skip existing file=Chương 5 Hậu quả của cuộc cách mạng văn hóa.txt
+[6/28] skip existing file=Chương 6 Thiên Bảo Long Hỏa Lưu Ly Đỉnh.txt
+[7/28] skip existing file=Chương 7 Lối vào cổ mộ thám hiểm bắt đầu.txt
+[8/28] download chapter_id=16454250 file=Chương 8 Mộ của Tướng quốc nước kim 1.txt
+  OK decrypted=True written=Chương 8 Mộ của Tướng quốc nước kim 1.txt
+[9/28] download chapter_id=16455803 file=Chương 9 Mộ của Tướng quốc nước kim 2.txt
+  OK decrypted=True written=Chương 9 Mộ của Tướng quốc nước kim 2.txt
+[10/28] download chapter_id=16456057 file=Chương 10 Mặt nạ bằng đồng đôi ngọc cực phẩm 1.txt
+  OK decrypted=True written=Chương 10 Mặt nạ bằng đồng đôi ngọc cực phẩm 1.txt
+[11/28] download chapter_id=16456533 file=Chương 11 Mặt nạ bằng đồng đôi ngọc cực phẩm 2.txt
+  OK decrypted=True written=Chương 11 Mặt nạ bằng đồng đôi ngọc cực phẩm 2.txt
+[12/28] skip existing file=Chương 12 Thi biến giao thủ với Xích Hống.txt
+[13/28] skip existing file=Chương 13 Chạy trốn.txt
+[14/28] skip existing file=Chương 14 Căn cư bí mật kho đạn dược.txt
+[15/28] skip existing file=Chương 15 Tìm kiếm lối ra bóng ma.txt
+[16/28] download chapter_id=16465546 file=Chương 16 Chạm trán với lũ dơi “ Covid ”.txt
+  OK decrypted=True written=Chương 16 Chạm trán với lũ dơi “ Covid ”.txt
+[17/28] skip existing file=Chương 17 Chiến đấu với Covid.txt
+[18/28] skip existing file=Chương 18 Dẫn dụ cửa sắt.txt
+[19/28] skip existing file=Chương 19 Thi hài đồng nam đồng nữ.txt
+[20/28] skip existing file=Chương 20 Mặt tối của phong kiến vạn ác phong kiến.txt
+[21/28] skip existing file=Chương 21 Tay không đập chết Xích Hống gặp lại Anh Tử.txt
+[22/28] skip existing file=Chương 22 Thành quả dị biến xảy ra.txt
+[23/28] skip existing file=Chương 23 Lũ chó ngao Anh Tử đỏ mặt.txt
+[24/28] skip existing file=Chương 24 Lai lịch của Văn Vũ trở về Trại Cương Cương.txt
+[25/28] skip existing file=Chương 25 Lập trường Anh Tứ muốn đi cùng tới Bắc Kinh.txt
+[26/28] skip existing file=Chương 26 Kể cho Anh Tử bí mật bằng hữu sao.txt
+[27/28] skip existing file=Chương 27 Thôn dân có điện Sắp xếp trở về Bắc Kinh.txt
+[28/28] skip existing file=Chương 28 Đi ăn lẩu Răng Vàng.txt
+final_ok=28
+final_fail=0
+out=C:\Dev\MTC\Ta Xuyên Qua Tới Ma Thổi Đèn Thế Giới
+
+[stderr]

@@ -1,0 +1,22 @@
+queue=1556 done=6422 chapter_workers=20 shard=5/5
+[1139/1556] start id=150642 chapters=670 name=Ta Tại Vĩnh Dạ Chế Tạo Nơi Ẩn Núp
+? L?i khi l?y danh s?ch ch??ng: 404 Client Error: Not Found for url: https://android.lonoapp.net/api/chapters?filter%5Bbook_id%5D=150642&page=1&limit=500
+[1139/1556] no_chapters id=150642 remote=None downloaded=None missing_after=None failed=None
+[1214/1556] start id=147434 chapters=771 name=Dân Tục: Từ Nhà Tang Lễ Bắt Đầu Trở Thành Thế Tục Thần
+[1214/1556] ok id=147434 remote=800 downloaded=5 missing_after=0 failed=0
+[1215/1556] start id=136495 chapters=774 name=Ta Đều Nhanh Thành Tiên Đế, Ngươi Để Ta Đi Thi Đại Học?
+? L?i khi t?i ch??ng 23849123: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 24487016: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 25193311: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[1215/1556] ok id=136495 remote=774 downloaded=774 missing_after=0 failed=0
+[1216/1556] start id=149079 chapters=774 name=Tây Du: Đừng Muốn Trêu Chọc Yêu Nghiệt Kia
+? L?i khi t?i ch??ng 25475514: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 25475512: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 26269675: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 26269752: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+? L?i khi t?i ch??ng 26269780: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+[1216/1556] ok id=149079 remote=774 downloaded=774 missing_after=0 failed=0
+processed_this_run=4
+done_total=6425
+failed_total=2350
+report=C:\Dev\MTC_Download\logs\download_unfinished_id_queue_report.json

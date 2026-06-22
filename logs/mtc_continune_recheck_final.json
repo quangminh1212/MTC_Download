@@ -1,0 +1,32 @@
+{
+  "folders": 1137,
+  "missing_issue_count": 0,
+  "remote_unavailable_count": 3,
+  "missing_issues": [],
+  "remote_unavailable": [
+    {
+      "folder": "Game Point Cú Đánh Cuối Cùng",
+      "book_id": 153514,
+      "error": "remote chapters empty/book detail unavailable",
+      "local_count": 10,
+      "info_chapter_count": 10,
+      "status": "local_matches_info"
+    },
+    {
+      "folder": "Phía Sau Ngòi Bút",
+      "book_id": 153615,
+      "error": "remote chapters empty/book detail unavailable",
+      "local_count": 0,
+      "info_chapter_count": 0,
+      "status": "remote_empty"
+    },
+    {
+      "folder": "Thế Kỷ Của Máu",
+      "book_id": 153588,
+      "error": "remote chapters empty/book detail unavailable",
+      "local_count": 0,
+      "info_chapter_count": 0,
+      "status": "remote_empty"
+    }
+  ]
+}

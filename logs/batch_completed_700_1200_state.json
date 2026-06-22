@@ -1,0 +1,50 @@
+[
+  {
+    "id": 111117,
+    "folder": "Kẻ Thủ Hộ Vũ Trụ",
+    "expected": 718,
+    "returncode": 0,
+    "elapsed": 172.5,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_111117.log"
+  },
+  {
+    "id": 104911,
+    "folder": "Dòng Máu Lạc Hồng",
+    "expected": 805,
+    "returncode": 0,
+    "elapsed": 285.7,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_104911.log"
+  },
+  {
+    "id": 109357,
+    "folder": "Nhất Thống Thiên Hạ",
+    "expected": 920,
+    "returncode": 0,
+    "elapsed": 272.0,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_109357.log"
+  },
+  {
+    "id": 101515,
+    "folder": "Thế Giới Duy Nhất Pháp Sư",
+    "expected": 1010,
+    "returncode": 0,
+    "elapsed": 363.8,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_101515.log"
+  },
+  {
+    "id": 100739,
+    "folder": "Gamer Xưng Bá Dị Giới",
+    "expected": 1056,
+    "returncode": 0,
+    "elapsed": 295.1,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_100739.log"
+  },
+  {
+    "id": 106194,
+    "folder": "Bát Long Quy Nguyên Truyện",
+    "expected": 1131,
+    "returncode": 0,
+    "elapsed": 275.4,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_106194.log"
+  }
+]

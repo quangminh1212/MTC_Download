@@ -1,0 +1,75 @@
+{
+  "summary": {
+    "total": 13,
+    "committed": 13,
+    "nothing_staged": 0,
+    "errors": []
+  },
+  "results": [
+    {
+      "folder": "Người Tại Huyền Huyễn Viết Nhật Ký Ta Thật Không Phải Tào Tặc A",
+      "status": "committed",
+      "commit": "df2928b25a5"
+    },
+    {
+      "folder": "Thần Linh Kỷ Nguyên",
+      "status": "committed",
+      "commit": "e7c103b5312"
+    },
+    {
+      "folder": "Dị Vực Thiên Cảnh",
+      "status": "committed",
+      "commit": "1796df0ffe7"
+    },
+    {
+      "folder": "Người Khác Nghe Khuyên Đóng Vai Minh Tinh Ngươi Bắt Đầu Đóng Vai Thần Minh",
+      "status": "committed",
+      "commit": "6dfb9faa5e3"
+    },
+    {
+      "folder": "Nạn Đói Năm Trong Làng Thời Gian Thật Khoái Hoạt",
+      "status": "committed",
+      "commit": "534cef4faba"
+    },
+    {
+      "folder": "Phát Sóng Trực Tiếp Phổ Cập Đóng Băng Trái Cây Toàn Võng Điên Cuồng Đánh Bảng",
+      "status": "committed",
+      "commit": "bd001db372e"
+    },
+    {
+      "folder": "Ta Bật Hack Về Sau Thanh Mai Thánh Nữ Cuồng Hối Hận",
+      "status": "committed",
+      "commit": "9ba9cffd3b7"
+    },
+    {
+      "folder": "Tiểu Sư Đệ Lại Đem Mình Chôn",
+      "status": "committed",
+      "commit": "bb7b43695d2"
+    },
+    {
+      "folder": "Tru Tiên Thu Được Gấp Mười Thiên Phú Kiếm Khai Thiên Môn",
+      "status": "committed",
+      "commit": "c02e8292ebc"
+    },
+    {
+      "folder": "Tại Fairy Tail Lại Bắt Đầu Lại Từ Đầu Sinh Hoạt",
+      "status": "committed",
+      "commit": "2e28c0f3ef1"
+    },
+    {
+      "folder": "Từ Đạo Đồng Chân Chính Hóa Thành Vạn Pháp Thiên Sư",
+      "status": "committed",
+      "commit": "bcb9017add5"
+    },
+    {
+      "folder": "Điểm Thú Thành Yêu Ngự Thú Tiên Tộc Theo Thợ Săn Bắt Đầu",
+      "status": "committed",
+      "commit": "30a82faf4fe"
+    },
+    {
+      "folder": "Đại Tần Trấn Thiên Ti",
+      "status": "committed",
+      "commit": "17ba9bbe1de"
+    }
+  ]
+}

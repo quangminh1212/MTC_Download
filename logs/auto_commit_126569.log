@@ -1,0 +1,521 @@
+book=Biến Thiên 2 Đế Quốc Nhà Trần Chinh Phục Thế Giới
+book_id=126569
+out=C:\Dev\MTC\Biến Thiên 2 Đế Quốc Nhà Trần Chinh Phục Thế Giới
+chapters_total=403 expected=403
+[1/403] skip existing file=Chương 1 Chiến trường loạn lạc.txt
+[2/403] skip existing file=Chương 2 Nguyễn Vương.txt
+[3/403] skip existing file=Chương 3 Rồng Thần Giáng Thế.txt
+[4/403] skip existing file=Chương 4 Thiên mệnh.txt
+[5/403] skip existing file=Chương 5 Huyền An Hoàng Hậu.txt
+[6/403] skip existing file=Chương 6 Trợ lý Hồng.txt
+[7/403] skip existing file=Chương 7 Đứng trên vạn người.txt
+[8/403] skip existing file=Chương 8 Thiên mệnh sở quy.txt
+[9/403] skip existing file=Chương 9 Đắc dân tâm.txt
+[10/403] skip existing file=Chương 10 Bàn bạc việc quân.txt
+[11/403] skip existing file=Chương 11 Tâm sự đêm khuya.txt
+[12/403] skip existing file=Chương 12 Mật Viện.txt
+[13/403] skip existing file=Chương 13 Số liệu hóa thông tin chiến tranh.txt
+[14/403] skip existing file=Chương 14 Ngự giá thân chinh.txt
+[15/403] skip existing file=Chương 15 Nghệ thuật lãnh đạo.txt
+[16/403] skip existing file=Chương 16 Nguyễn Tử Bình và thành Đồ Bàn.txt
+[17/403] skip existing file=Chương 17 Tình hình Hồ tặc.txt
+[18/403] skip existing file=Chương 18 Đặt chân Phú Yên.txt
+[19/403] skip existing file=Chương 19 Quân tử và tiểu nhân.txt
+[20/403] skip existing file=Chương 20 Đến tiền tuyến.txt
+[21/403] skip existing file=Chương 21 Hội nghị quân sự.txt
+[22/403] skip existing file=Chương 22 Chiến tranh du kích và chiến tranh nhân dân.txt
+[23/403] skip existing file=Chương 23 Đột nhập hậu phương.txt
+[24/403] skip existing file=Chương 24 Cải trang vào lòng địch tôi bị phát hiện lúc nào không hay.txt
+[25/403] skip existing file=Chương 25 Cướp đêm là giặc cướp ngày là quan.txt
+[26/403] download chapter_id=18114844 file=Chương 26 Cướp đêm là giặc cướp ngày là quan 2.txt
+  OK decrypted=True written=Chương 26 Cướp đêm là giặc cướp ngày là quan 2.txt
+[27/403] skip existing file=Chương 27 Cướp đêm là giặc cướp ngày là quan 3.txt
+[28/403] skip existing file=Chương 28 Tức nước vỡ bờ nổi dậy khởi nghĩa.txt
+[29/403] skip existing file=Chương 29 Quyết tâm ở lại.txt
+[30/403] skip existing file=Chương 30 Giết người diệt khẩu.txt
+[31/403] skip existing file=Chương 31 Náo đông đánh tây.txt
+[32/403] skip existing file=Chương 32 Nguyễn Vương và khởi nghĩa Trường Sơn.txt
+[33/403] skip existing file=Chương 33 Bán nước buôn dân.txt
+[34/403] download chapter_id=18162222 file=Chương 34 ; Ngược dòng lịch sử tìm kiếm đáp án.txt
+  OK decrypted=True written=Chương 34 ; Ngược dòng lịch sử tìm kiếm đáp án.txt
+[35/403] skip existing file=Chương 35 Trương Ái Lan.txt
+[36/403] skip existing file=Chương 36 Trước giờ giao chiến.txt
+[37/403] skip existing file=Chương 37 Hồ tặc vào làng.txt
+[38/403] skip existing file=Chương 38 Phục kích.txt
+[39/403] skip existing file=Chương 39 Đại thắng.txt
+[40/403] skip existing file=Chương 40 Phản ứng dây chuyền.txt
+[41/403] skip existing file=Chương 41 Tổng lực chuẩn bị.txt
+[42/403] skip existing file=Chương 42 Hồ Hán Tam.txt
+[43/403] skip existing file=Chương 43 Chiếm đóng Cổ Mã.txt
+[44/403] download chapter_id=18210758 file=Chương 44 Người xuyên không vs quân nhà Trần 1.txt
+  OK decrypted=True written=Chương 44 Người xuyên không vs quân nhà Trần 1.txt
+[45/403] download chapter_id=18217148 file=Chương 45 Người xuyên không vs quân nhà Trần 2.txt
+  OK decrypted=True written=Chương 45 Người xuyên không vs quân nhà Trần 2.txt
+[46/403] skip existing file=Chương 46 Người xuyên không vs quân nhà Trần 3.txt
+[47/403] skip existing file=Chương 47 Bế Quan Tỏa Cảng.txt
+[48/403] download chapter_id=18233875 file=Chương 48 Biển gầm 1.txt
+  OK decrypted=True written=Chương 48 Biển gầm 1.txt
+[49/403] download chapter_id=18240692 file=Chương 49 Biển gầm 2.txt
+  OK decrypted=True written=Chương 49 Biển gầm 2.txt
+[50/403] skip existing file=Chương 50 Biển gầm 3.txt
+[51/403] skip existing file=Chương 51 Biển gầm 4.txt
+[52/403] skip existing file=Chương 52 Biển Gầm xong.txt
+[53/403] skip existing file=Chương 53 Quý tộc cũng biết bán nước.txt
+[54/403] skip existing file=Chương 54 Nguyễn Vương lại gây chuyện.txt
+[55/403] skip existing file=Chương 55 Lưu chí Tân và Long Mạch.txt
+[56/403] skip existing file=Chương 56 Nguyễn Vương trảm Long Mạch.txt
+[57/403] skip existing file=Chương 57 Hi sinh và tiên đoán.txt
+[58/403] skip existing file=Chương 58 Sắp xếp dân làng.txt
+[59/403] skip existing file=Chương 59 Lý Thông và Thạch Sanh.txt
+[60/403] download chapter_id=18332649 file=Chương 60 Xe tăng phiên bản “cổ đại”.txt
+  OK decrypted=True written=Chương 60 Xe tăng phiên bản “cổ đại”.txt
+[61/403] skip existing file=Chương 61 Lý thông quy hàng Đại Lãnh thất thủ.txt
+[62/403] skip existing file=Chương 62 Diễn Thuyết.txt
+[63/403] skip existing file=Chương 63 Vạn quân thần phục quỳ xin chuộc tội.txt
+[64/403] skip existing file=Chương 64 Hồ Thanh Trừng tuyệt vọng.txt
+[65/403] skip existing file=Chương 65 Tiến quân thần tốc thần tốc thần tốc hơn nữa.txt
+[66/403] skip existing file=Chương 66 Cháy nhà mới ra mặt chuột.txt
+[67/403] skip existing file=Chương 67 Trần quân bất mãn vạn mãn vạn không thể địch.txt
+[68/403] skip existing file=Chương 68 Có người mật báo.txt
+[69/403] skip existing file=Chương 69 Cù Lao Phố và bang hội Long Kiều.txt
+[70/403] skip existing file=Chương 70 Tiến về Sài Gòn.txt
+[71/403] skip existing file=Chương 71 Tri thức và tài liệu.txt
+[72/403] skip existing file=Chương 72 Trước giờ giông bão.txt
+[73/403] skip existing file=Chương 73 Sự thật tàn ác của bang hội.txt
+[74/403] skip existing file=Chương 74 Bao công tái thế cũng phải đầu hàng.txt
+[75/403] skip existing file=Chương 75 Công lý ở đâu.txt
+[76/403] skip existing file=Chương 76 Thiết Quyền Nhân Dân chiêu thứ nhất giới nghiêm toàn thành.txt
+[77/403] skip existing file=Chương 77 Thiết quyền nhân dân chiêu thứ hai tiêu diệt phản động.txt
+[78/403] skip existing file=Chương 78 Thiết Quyền Nhân Dân chiêu thứ ba cứu giúp nạn dân.txt
+[79/403] skip existing file=Chương 79 Thiết Quyền Nhân Dân chiêu cuối quốc hữu hóa.txt
+[80/403] skip existing file=Chương 80 Kê biên tài sản tịch thu ruộng đất.txt
+[81/403] skip existing file=Chương 81 Đấu tố và cải cách ruộng đất.txt
+[82/403] skip existing file=Chương 82 Quyền quý chống đối.txt
+[83/403] skip existing file=Chương 83 Bắt cóc đạo đức tiêu chuẩn kép sĩ phu lộng quyền.txt
+[84/403] skip existing file=Chương 84 Bí mật dưới ánh trăng.txt
+[85/403] skip existing file=Chương 85 Thảm Sát Cù Lao Phố và vu oan giá họa.txt
+[86/403] skip existing file=Chương 86 Trở mặt.txt
+[87/403] skip existing file=Chương 87 Trần Tí nổi giận.txt
+[88/403] download chapter_id=18465121 file=Chương 88 Lấy máu rửa Sài Thành 1.txt
+  OK decrypted=True written=Chương 88 Lấy máu rửa Sài Thành 1.txt
+[89/403] download chapter_id=18466289 file=Chương 89 Lấy máu rửa Sài Thành 2.txt
+  OK decrypted=True written=Chương 89 Lấy máu rửa Sài Thành 2.txt
+[90/403] skip existing file=Chương 90 Lấy máu rửa Sài Thành 3.txt
+[91/403] skip existing file=Chương 91 Phản Việt liên minh.txt
+[92/403] skip existing file=Chương 92 Nguyễn Vương trở lại.txt
+[93/403] skip existing file=Chương 93 Hiệp ước bán nước.txt
+[94/403] skip existing file=Chương 94 Lịch sử là do người thắng viết.txt
+[95/403] skip existing file=Chương 95 Hồ Mị Ly đầu hàng.txt
+[96/403] skip existing file=Chương 96 Lê Mị Ly lên voi xuống chó.txt
+[97/403] skip existing file=Chương 97 Đi trước thời đại hay chó ngáp phải ruồi.txt
+[98/403] skip existing file=Chương 98 Diệt chủng phản nhân loại.txt
+[99/403] skip existing file=Chương 99 Kế hoạch phản công.txt
+[100/403] skip existing file=Chương 100 Snuol.txt
+[101/403] skip existing file=Chương 101 Tập kích Snuol.txt
+[102/403] skip existing file=Chương 102 Súng trường tiên tiến.txt
+[103/403] skip existing file=Chương 103 Hỏa hổ ra oai.txt
+[104/403] skip existing file=Chương 104 Không phải nô lệ nào cũng muốn tự do.txt
+[105/403] skip existing file=Chương 105 Nửa đêm ra mộ.txt
+[106/403] skip existing file=Chương 106 Chó cắn chó.txt
+[107/403] skip existing file=Chương 107 Hoàng thân Kharus.txt
+[108/403] skip existing file=Chương 108 Bài toán phòng thủ.txt
+[109/403] skip existing file=Chương 109 Trước giờ công thành.txt
+[110/403] skip existing file=Chương 110 Diễn kịch ngoài chiến trường.txt
+[111/403] skip existing file=Chương 111 Make color.txt
+[112/403] skip existing file=Chương 112 Chính thức tấn công.txt
+[113/403] download chapter_id=18710294 file=Chương 113 Ác chiến 1.txt
+  OK decrypted=True written=Chương 113 Ác chiến 1.txt
+[114/403] download chapter_id=18719703 file=Chương 114 Ác Chiến 2.txt
+  OK decrypted=True written=Chương 114 Ác Chiến 2.txt
+[115/403] skip existing file=Chương 115 Ác chiến 3.txt
+[116/403] skip existing file=Chương 116 Ác chiến 4.txt
+[117/403] skip existing file=Chương 117 Ác chiến 5.txt
+[118/403] skip existing file=Chương 118 Ác chiến 6.txt
+[119/403] skip existing file=Chương 119 Bình minh ló dạng.txt
+[120/403] skip existing file=Chương 120 Ta muốn Kharus làm vua.txt
+[121/403] skip existing file=Chương 121 Thời khắc phản công.txt
+[122/403] skip existing file=Chương 122 Chúng ta nên biết ơn họ.txt
+[123/403] skip existing file=Chương 123 Chính nghĩa và vô ơn.txt
+[124/403] skip existing file=Chương 124 Khải hoàn về nước.txt
+[125/403] skip existing file=Chương 125 Gặp riêng Hồ Mị ly.txt
+[126/403] skip existing file=Chương 126 Vua và tử tù.txt
+[127/403] skip existing file=Chương 127 Lừa gạt.txt
+[128/403] skip existing file=Chương 128 Thạch Sanh bị bắt.txt
+[129/403] skip existing file=Chương 129 Cổ tích.txt
+[130/403] skip existing file=Chương 130 Ngự trạng và biện luận.txt
+[131/403] skip existing file=Chương 131 Khua môi múa mép.txt
+[132/403] skip existing file=Chương 132 Lý Thông rớt đài.txt
+[133/403] skip existing file=Chương 133 Kết thúc nội loạn bước sang trang mới.txt
+[134/403] skip existing file=Chương 134 Tình hình nam á.txt
+[135/403] skip existing file=Chương 135 Ảnh hưởng của cấm vận.txt
+[136/403] skip existing file=Chương 136 Quân tử lục nghệ.txt
+[137/403] skip existing file=Chương 137 Hồi kinh.txt
+[138/403] skip existing file=Chương 138 Quần ma loạn vũ rối loạn và việt gian.txt
+[139/403] skip existing file=Chương 139 Lời Đồn.txt
+[140/403] skip existing file=Chương 140 Ba bức mật thư và game show tình ái.txt
+[141/403] skip existing file=Chương 141 Mưu tính sâu xa đường lùi đủ cả.txt
+[142/403] skip existing file=Chương 142 Phụ nữ yêu bằng tai.txt
+[143/403] download chapter_id=19088033 file=Chương 143 Game show hẹn hò X lễ hội trà xanh V 1.txt
+  OK decrypted=True written=Chương 143 Game show hẹn hò X lễ hội trà xanh V 1.txt
+[144/403] download chapter_id=19088271 file=Chương 144 Game show hẹn hò X lễ hội trà xanh V 2.txt
+  OK decrypted=True written=Chương 144 Game show hẹn hò X lễ hội trà xanh V 2.txt
+[145/403] skip existing file=Chương 145 Binh biến Thịnh Kinh huynh đệ tương tàn.txt
+[146/403] skip existing file=Chương 146 Người chuyển sinh cũng phải nuốt hận.txt
+[147/403] skip existing file=Chương 147 Đàn bà là những niềm đau.txt
+[148/403] skip existing file=Chương 148 Nỗi oan thế kỷ.txt
+[149/403] skip existing file=Chương 149 Mưu đồ bán nước.txt
+[150/403] skip existing file=Chương 150 Một mẻ hốt gọn.txt
+[151/403] skip existing file=Chương 151 Tạm thời đẩy lui.txt
+[152/403] skip existing file=Chương 152 Oa Khoát Đài.txt
+[153/403] skip existing file=Chương 153 Bắt đầu công thành.txt
+[154/403] skip existing file=Chương 154 Quy tắc ngầm.txt
+[155/403] skip existing file=Chương 155 Lố bịch và cơ hội.txt
+[156/403] skip existing file=Chương 156 Thế trận nghịch chuyển.txt
+[157/403] skip existing file=Chương 157 Sét đánh ngang tai.txt
+[158/403] skip existing file=Chương 158 Quang Trung và Trần Tí.txt
+[159/403] skip existing file=Chương 159 Tổ chức triều hội.txt
+[160/403] skip existing file=Chương 160 Định Long không yên bình.txt
+[161/403] skip existing file=Chương 161 Dẫn binh tạo phản.txt
+[162/403] skip existing file=Chương 162 Sự biến cung đình.txt
+[163/403] skip existing file=Chương 163 Con đường tương lai xã hội chủ nghĩa.txt
+[164/403] skip existing file=Chương 164 Trấn áp phản loạn.txt
+[165/403] skip existing file=Chương 165 Thanh trừng thái úy từ quan.txt
+[166/403] skip existing file=Chương 166 Phí bồi thường trên trời.txt
+[167/403] skip existing file=Chương 167 Lý Tự Thành và khởi nghĩa nông dân.txt
+[168/403] skip existing file=Chương 168 Quang Trung băng hà.txt
+[169/403] skip existing file=Chương 169 Ác quỷ đội lốt người xuyên tạc lịch sử.txt
+[170/403] skip existing file=Chương 170 Thường phục vi hành.txt
+[171/403] download chapter_id=19332977 file=Chương 171 Tuy mạnh yếu từng lúc khác nhau xong “Báo con” đời nào cũng có.txt
+  OK decrypted=True written=Chương 171 Tuy mạnh yếu từng lúc khác nhau xong “Báo con” đời nào cũng có.txt
+[172/403] skip existing file=Chương 172 Tái thiết trật tự và bộ máy chính trị.txt
+[173/403] skip existing file=Chương 173 Chiến loạn khắp nơi.txt
+[174/403] skip existing file=Chương 174 Tội ác đế quốc và âm mưu xâm lược.txt
+[175/403] skip existing file=Chương 175 Cực hình voi giẫm và nữ tướng trung liệt.txt
+[176/403] skip existing file=Chương 176 Lê Thị Hân chạy trốn.txt
+[177/403] skip existing file=Chương 177 Năm năm trôi qua.txt
+[178/403] skip existing file=Chương 178 Tăng cường quốc phòng.txt
+[179/403] skip existing file=Chương 179 Nguyễn Vương tự hủy.txt
+[180/403] skip existing file=Chương 180 Sự va chạm của hai người phụ nữ khác thời đại.txt
+[181/403] skip existing file=Chương 181 Kế hoạch tuyên truyền.txt
+[182/403] download chapter_id=19396503 file=Chương 182 Hải Chiến Sơn Trà 1.txt
+  OK decrypted=True written=Chương 182 Hải Chiến Sơn Trà 1.txt
+[183/403] download chapter_id=19401217 file=Chương 183 Hải chiến Sơn Trà 2.txt
+  OK decrypted=True written=Chương 183 Hải chiến Sơn Trà 2.txt
+[184/403] skip existing file=Chương 184 Hải Chiến Sơn Trà 3.txt
+[185/403] skip existing file=Chương 185 Hải Chiến Sơn Trà 4.txt
+[186/403] skip existing file=Chương 186 Hải Chiến Sơn Trà 5.txt
+[187/403] download chapter_id=19419980 file=Chương 187 Trận Mỹ An 1.txt
+  OK decrypted=True written=Chương 187 Trận Mỹ An 1.txt
+[188/403] download chapter_id=19425797 file=Chương 188 Trận Mỹ An 2.txt
+  OK decrypted=True written=Chương 188 Trận Mỹ An 2.txt
+[189/403] skip existing file=Chương 189 Trận Mỹ An 3.txt
+[190/403] skip existing file=Chương 190 Trận Mỹ An 4.txt
+[191/403] skip existing file=Chương 191 Trận Mỹ An 5.txt
+[192/403] skip existing file=Chương 192 Trận Mỹ An 6.txt
+[193/403] skip existing file=Chương 193 Trận Mỹ An 7.txt
+[194/403] skip existing file=Chương 194 Trận Mỹ An 8.txt
+[195/403] skip existing file=Chương 195 Trận Mỹ An 9.txt
+[196/403] skip existing file=Chương 196 Chấn động trời âu.txt
+[197/403] skip existing file=Chương 197 Dư luận nổi sóng.txt
+[198/403] skip existing file=Chương 198 Cạm bẫy.txt
+[199/403] skip existing file=Chương 199 Chăm việc nước.txt
+[200/403] skip existing file=Chương 200 Quản việc nhà.txt
+[201/403] skip existing file=Chương 201 Độc nhất phụ nhân tâm.txt
+[202/403] download chapter_id=19505563 file=Chương 202 Chiến Tranh Thuốc Phiện 1.txt
+  OK decrypted=True written=Chương 202 Chiến Tranh Thuốc Phiện 1.txt
+[203/403] download chapter_id=19510660 file=Chương 203 Chiến Tranh Thuốc Phiện 2.txt
+  OK decrypted=True written=Chương 203 Chiến Tranh Thuốc Phiện 2.txt
+[204/403] skip existing file=Chương 204 Chiến Tranh Thuốc Phiện 3.txt
+[205/403] skip existing file=Chương 205 Chiến tranh thuốc phiện 4.txt
+[206/403] download chapter_id=19530765 file=Chương 206 Thu hồi Trấn Ninh 1.txt
+  OK decrypted=True written=Chương 206 Thu hồi Trấn Ninh 1.txt
+[207/403] download chapter_id=19537653 file=Chương 207 Thu hồi Trấn Ninh 2.txt
+  OK decrypted=True written=Chương 207 Thu hồi Trấn Ninh 2.txt
+[208/403] skip existing file=Chương 208 Thu Hồi Trấn Ninh 3.txt
+[209/403] skip existing file=Chương 209 Thu hồi Trấn Ninh 4.txt
+[210/403] skip existing file=Chương 210 Thu hồi Trấn Ninh 5.txt
+[211/403] skip existing file=Chương 211 Thu hồi Trấn Ninh 6.txt
+[212/403] download chapter_id=19571058 file=Chương 212 Quảng Châu đình chiến 1.txt
+  OK decrypted=True written=Chương 212 Quảng Châu đình chiến 1.txt
+[213/403] download chapter_id=19575958 file=Chương 213 Quảng Châu đình chiến 2.txt
+  OK decrypted=True written=Chương 213 Quảng Châu đình chiến 2.txt
+[214/403] skip existing file=Chương 214 Quảng Châu đình chiến 3.txt
+[215/403] skip existing file=Chương 215 Quảng Châu đình chiến 4.txt
+[216/403] skip existing file=Chương 216 Quảng Châu đình chiến 5.txt
+[217/403] download chapter_id=19600452 file=Chương 217 Phản Việt Liên Minh phiên bản đông tây kết hợp 1.txt
+  OK decrypted=True written=Chương 217 Phản Việt Liên Minh phiên bản đông tây kết hợp 1.txt
+[218/403] download chapter_id=19606475 file=Chương 218 Phản Việt Liên Minh phiên bản đông tây kết hợp 2.txt
+  OK decrypted=True written=Chương 218 Phản Việt Liên Minh phiên bản đông tây kết hợp 2.txt
+[219/403] download chapter_id=19610517 file=Chương 219 Chiến tranh Thanh Việt 1.txt
+  OK decrypted=True written=Chương 219 Chiến tranh Thanh Việt 1.txt
+[220/403] download chapter_id=19623104 file=Chương 220 Chiến tranh Thanh Việt 2.txt
+  OK decrypted=True written=Chương 220 Chiến tranh Thanh Việt 2.txt
+[221/403] skip existing file=Chương 221 Chiến tranh Thanh Việt 3.txt
+[222/403] skip existing file=Chương 222 Chiến tranh Thanh Việt 4.txt
+[223/403] skip existing file=Chương 223 Chiến tranh Thanh Việt 5.txt
+[224/403] skip existing file=Chương 224 Chiến Tranh Thanh Việt 6.txt
+[225/403] skip existing file=Chương 225 Chiến Tranh Thanh Việt 7.txt
+[226/403] skip existing file=Chương 226 Chiến tranh Thanh Việt 8.txt
+[227/403] skip existing file=Chương 227 Chiến tranh Thanh Việt 9.txt
+[228/403] download chapter_id=19671562 file=Chương 228 Trận Nam Ninh 1.txt
+  OK decrypted=True written=Chương 228 Trận Nam Ninh 1.txt
+[229/403] download chapter_id=19677768 file=Chương 229 Trận Nam Ninh 2.txt
+  OK decrypted=True written=Chương 229 Trận Nam Ninh 2.txt
+[230/403] skip existing file=Chương 230 Trận Nam Ninh 3.txt
+[231/403] skip existing file=Chương 231 Trận Nam Ninh 4.txt
+[232/403] skip existing file=Chương 232 Trận Nam Ninh 5.txt
+[233/403] skip existing file=Chương 233 Trận Nam Ninh 6.txt
+[234/403] skip existing file=Chương 234 Trận Nam Ninh 7.txt
+[235/403] skip existing file=Chương 235 Trận Nam Ninh 8.txt
+[236/403] download chapter_id=19725648 file=Chương 236 Phục Kích cầu Liễu Kình 1.txt
+  OK decrypted=True written=Chương 236 Phục Kích cầu Liễu Kình 1.txt
+[237/403] download chapter_id=19732065 file=Chương 237 Phục kích cầu Liễu Kình 2.txt
+  OK decrypted=True written=Chương 237 Phục kích cầu Liễu Kình 2.txt
+[238/403] skip existing file=Chương 238 Phục kích cầu Liễu Kình 3.txt
+[239/403] skip existing file=Chương 239 Đại Việt lục quân mạnh nhất thế giới.txt
+[240/403] download chapter_id=19751055 file=Chương 240 Lý thuyết quyền chi tiêu và chủ nghĩa độc hại 1.txt
+  OK decrypted=True written=Chương 240 Lý thuyết quyền chi tiêu và chủ nghĩa độc hại 1.txt
+[241/403] download chapter_id=19754522 file=Chương 241 Lý thuyết quyền chi tiêu và chủ nghĩa độc hại 2.txt
+  OK decrypted=True written=Chương 241 Lý thuyết quyền chi tiêu và chủ nghĩa độc hại 2.txt
+[242/403] skip existing file=Chương 242 Lý thuyết quyền chi tiêu và nữ quyền độc hại 3.txt
+[243/403] skip existing file=Chương 243 Phố xá Định Long.txt
+[244/403] skip existing file=Chương 244 Gặp Trịnh Uyên.txt
+[245/403] skip existing file=Chương 245 Hoạch định toàn cầu.txt
+[246/403] download chapter_id=19783022 file=Chương 246 Chiến trường Đại Nam 1.txt
+  OK decrypted=True written=Chương 246 Chiến trường Đại Nam 1.txt
+[247/403] download chapter_id=19786884 file=Chương 247 Chiến trường Đại Nam 2.txt
+  OK decrypted=True written=Chương 247 Chiến trường Đại Nam 2.txt
+[248/403] skip existing file=Chương 248 Chiến trường Đại Nam 3.txt
+[249/403] skip existing file=Chương 249 Chiến trường Đại Nam 4.txt
+[250/403] skip existing file=Chương 250 Chiến trường Đại Nam 5.txt
+[251/403] skip existing file=Chương 251 Chiến trường Đại Nam 6.txt
+[252/403] skip existing file=Chương 252 Chiến trường Đại Nam 7.txt
+[253/403] skip existing file=Chương 253 Chiến trường Đại Nam 8.txt
+[254/403] download chapter_id=19843675 file=Chương 254 Tập đoàn Murkoff 1.txt
+  OK decrypted=True written=Chương 254 Tập đoàn Murkoff 1.txt
+[255/403] download chapter_id=19846473 file=Chương 255 Tập đoàn Murkoff 2.txt
+  OK decrypted=True written=Chương 255 Tập đoàn Murkoff 2.txt
+[256/403] skip existing file=Chương 256 Tập đoàn Murkoff 3.txt
+[257/403] download chapter_id=19853948 file=Chương 257 Burning Room 1.txt
+  OK decrypted=True written=Chương 257 Burning Room 1.txt
+[258/403] download chapter_id=19859199 file=Chương 258 Burning Room 2.txt
+  OK decrypted=True written=Chương 258 Burning Room 2.txt
+[259/403] download chapter_id=19862987 file=Chương 259 Dự luật Đổi Mới 1.txt
+  OK decrypted=True written=Chương 259 Dự luật Đổi Mới 1.txt
+[260/403] download chapter_id=19870196 file=Chương 260 Dự luật đổi mới 2.txt
+  OK decrypted=True written=Chương 260 Dự luật đổi mới 2.txt
+[261/403] skip existing file=Chương 261 Dự luật Đổi Mới 3.txt
+[262/403] download chapter_id=19879110 file=Chương 262 Trịnh Uyên và dự án Brain Wash 1.txt
+  OK decrypted=True written=Chương 262 Trịnh Uyên và dự án Brain Wash 1.txt
+[263/403] download chapter_id=19882066 file=Chương 263 Trịnh Uyên và Dự Án Brain Wash 2.txt
+  OK decrypted=True written=Chương 263 Trịnh Uyên và Dự Án Brain Wash 2.txt
+[264/403] skip existing file=Chương 264 Trịnh Uyên và dự án Brain Wash 3.txt
+[265/403] skip existing file=Chương 265 Trịnh Uyên và dự án Brain Wash 4.txt
+[266/403] skip existing file=Chương 266 Trịnh Uyên và dự án Brain Wash 5.txt
+[267/403] download chapter_id=19902339 file=Chương 267 Thần binh thiên giáng và quái thú sắt thép 1.txt
+  OK decrypted=True written=Chương 267 Thần binh thiên giáng và quái thú sắt thép 1.txt
+[268/403] download chapter_id=19908754 file=Chương 268 Thần binh thiên giáng và quái thú sắt thép 2.txt
+  OK decrypted=True written=Chương 268 Thần binh thiên giáng và quái thú sắt thép 2.txt
+[269/403] download chapter_id=19914576 file=Chương 269 Lưỡng Quảng đổi chủ chấn động thế giới 1.txt
+  OK decrypted=True written=Chương 269 Lưỡng Quảng đổi chủ chấn động thế giới 1.txt
+[270/403] download chapter_id=19917106 file=Chương 270 Lưỡng Quảng đổi chủ chấn động thế giới 2.txt
+  OK decrypted=True written=Chương 270 Lưỡng Quảng đổi chủ chấn động thế giới 2.txt
+[271/403] skip existing file=Chương 271 Phong vân biến ảo chiến hỏa đầy trời.txt
+[272/403] download chapter_id=19926880 file=Chương 272 Phong vân biến ảo chiến hỏa đầy trời 2.txt
+  OK decrypted=True written=Chương 272 Phong vân biến ảo chiến hỏa đầy trời 2.txt
+[273/403] download chapter_id=19929645 file=Chương 273 Cái kết kẻ phản quốc 1.txt
+  OK decrypted=True written=Chương 273 Cái kết kẻ phản quốc 1.txt
+[274/403] download chapter_id=19941835 file=Chương 274 Cái kết kẻ phản quốc 2.txt
+  OK decrypted=True written=Chương 274 Cái kết kẻ phản quốc 2.txt
+[275/403] download chapter_id=19945241 file=Chương 275 Thời khắc lịch sử 1.txt
+  OK decrypted=True written=Chương 275 Thời khắc lịch sử 1.txt
+[276/403] download chapter_id=19951746 file=Chương 276 Thời khắc lịch sử 2.txt
+  OK decrypted=True written=Chương 276 Thời khắc lịch sử 2.txt
+[277/403] skip existing file=Chương 277 Thời khắc lịch sử 3.txt
+[278/403] skip existing file=Chương 278 Thời khắc lịch sử 4.txt
+[279/403] download chapter_id=19966414 file=Chương 279 Đại thiên tai 1.txt
+  OK decrypted=True written=Chương 279 Đại thiên tai 1.txt
+[280/403] download chapter_id=19977855 file=Chương 280 Đại thiên tai 2.txt
+  OK decrypted=True written=Chương 280 Đại thiên tai 2.txt
+[281/403] download chapter_id=19984882 file=Chương 281 Ba năm sau 1.txt
+  OK decrypted=True written=Chương 281 Ba năm sau 1.txt
+[282/403] download chapter_id=19991857 file=Chương 282 Ba năm sau 2.txt
+  OK decrypted=True written=Chương 282 Ba năm sau 2.txt
+[283/403] skip existing file=Chương 283 Ba năm sau 3.txt
+[284/403] skip existing file=Chương 284 Ba năm sau 4.txt
+[285/403] download chapter_id=20006517 file=Chương 285 Đại Việt siêu cường 1.txt
+  OK decrypted=True written=Chương 285 Đại Việt siêu cường 1.txt
+[286/403] download chapter_id=20013387 file=Chương 286 Đại Việt siêu cường 2.txt
+  OK decrypted=True written=Chương 286 Đại Việt siêu cường 2.txt
+[287/403] skip existing file=Chương 287 Đại Việt siêu cường 3.txt
+[288/403] skip existing file=Chương 288 Đại Việt siêu cường 4.txt
+[289/403] skip existing file=Chương 289 Đại Việt siêu cường 5.txt
+[290/403] skip existing file=Chương 290 Đại Việt siêu cường 6.txt
+[291/403] skip existing file=Chương 291 Đại Việt siêu cường 7.txt
+[292/403] skip existing file=Chương 292 Đại Việt siêu cường 8.txt
+[293/403] download chapter_id=20066492 file=Chương 293 Giấc mơ mỹ và cách mạng màu 1.txt
+  OK decrypted=True written=Chương 293 Giấc mơ mỹ và cách mạng màu 1.txt
+[294/403] download chapter_id=20078921 file=Chương 294 Giấc mơ Mỹ và cách mạng màu 2.txt
+  OK decrypted=True written=Chương 294 Giấc mơ Mỹ và cách mạng màu 2.txt
+[295/403] skip existing file=Chương 295 Giấc mơ Mỹ và cách mạng màu 3.txt
+[296/403] skip existing file=Chương 296 Giấc mơ Mỹ và cách mạng màu 4.txt
+[297/403] skip existing file=Chương 297 Giấc mơ Mỹ và cách mạng màu 5.txt
+[298/403] skip existing file=Chương 298 Giấc mơ Mỹ và Cách Mạng Màu 6.txt
+[299/403] skip existing file=Chương 299 Nhà khoa học.txt
+[300/403] skip existing file=Chương 300 Nghĩa Hòa Đoàn.txt
+[301/403] download chapter_id=20144096 file=Chương 301 Phản bội 1.txt
+  OK decrypted=True written=Chương 301 Phản bội 1.txt
+[302/403] download chapter_id=20165854 file=Chương 302 Phản bội 2.txt
+  OK decrypted=True written=Chương 302 Phản bội 2.txt
+[303/403] skip existing file=Chương 303 Đại Hạ Dân Quốc quân phiệt cát cứ.txt
+[304/403] skip existing file=Chương 304 Họa sĩ người Áo và giáo sư người Đức.txt
+[305/403] download chapter_id=20218812 file=Chương 305 Đại Âu Chiến 1.txt
+  OK decrypted=True written=Chương 305 Đại Âu Chiến 1.txt
+[306/403] download chapter_id=20242618 file=Chương 306 Đại Âu Chiến 2.txt
+  OK decrypted=True written=Chương 306 Đại Âu Chiến 2.txt
+[307/403] skip existing file=Chương 307 Đại Âu Chiến 3.txt
+[308/403] skip existing file=Chương 308 Đại Âu Chiến 4.txt
+[309/403] skip existing file=Chương 309 Đại âu chiến 5.txt
+[310/403] skip existing file=Chương 310 Đại âu chiến 6.txt
+[311/403] download chapter_id=20428164 file=Chương 311 Truyền thông tẩy não nước Nga xuất binh 1.txt
+  OK decrypted=True written=Chương 311 Truyền thông tẩy não nước Nga xuất binh 1.txt
+[312/403] download chapter_id=20448916 file=Chương 312 Truyền thông tẩy não nước Nga xuất binh 2.txt
+  OK decrypted=True written=Chương 312 Truyền thông tẩy não nước Nga xuất binh 2.txt
+[313/403] skip existing file=Chương 313 Truyền thông tẩy não nước Nga xuất binh 3.txt
+[314/403] skip existing file=Chương 314 Truyền thông tẩy não nước Nga xuất binh 4.txt
+[315/403] skip existing file=Chương 315 Bố cục châu á.txt
+[316/403] download chapter_id=20878122 file=Chương 316 Bố cục châu á 2.txt
+  OK decrypted=True written=Chương 316 Bố cục châu á 2.txt
+[317/403] skip existing file=Chương 317 Bố cục châu á 3.txt
+[318/403] download chapter_id=21036789 file=Chương 318 Bố cục châu á 4.txt
+  OK decrypted=True written=Chương 318 Bố cục châu á 4.txt
+[319/403] skip existing file=Chương 319 Bố cục châu á 5.txt
+[320/403] skip existing file=Chương 320 Bố cục châu á 6.txt
+[321/403] download chapter_id=21117211 file=Chương 321 Đảo Quốc sư tử 1.txt
+  OK decrypted=True written=Chương 321 Đảo Quốc sư tử 1.txt
+[322/403] download chapter_id=21124328 file=Chương 322 Đảo quốc sư tử 2.txt
+  OK decrypted=True written=Chương 322 Đảo quốc sư tử 2.txt
+[323/403] download chapter_id=21168759 file=Chương 323 Rực lửa bến tàu. 1.txt
+  RETRYABLE_FAIL attempt=1 chapter_id=21168759: unable to decode iv
+  OK decrypted=True retry=2 written=Chương 323 Rực lửa bến tàu. 1.txt
+[324/403] download chapter_id=21203958 file=Chương 324 Rực lửa bến tàu. 2.txt
+  OK decrypted=True written=Chương 324 Rực lửa bến tàu. 2.txt
+[325/403] skip existing file=Chương 325 Rực lửa bến tàu 3.txt
+[326/403] skip existing file=Chương 326 Rực lửa bến tàu 4.txt
+[327/403] skip existing file=Chương 327 Rực lửa bến tàu 5.txt
+[328/403] skip existing file=Chương 328 Người Cáo Chỉ là công cụ bán cái.txt
+[329/403] download chapter_id=21768766 file=Chương 329 Đặc vụ Đại Việt 1.txt
+  OK decrypted=True written=Chương 329 Đặc vụ Đại Việt 1.txt
+[330/403] download chapter_id=21776580 file=Chương 330 Đặc vụ Đại Việt 2.txt
+  OK decrypted=True written=Chương 330 Đặc vụ Đại Việt 2.txt
+[331/403] skip existing file=Chương 331 Đặc vụ Phạm Ẩn 3.txt
+[332/403] skip existing file=Chương 332 Đặc Vụ Phạm Ẩn 4.txt
+[333/403] download chapter_id=21920378 file=Chương 333 Mặt trận phía tây chiến tranh tâm lý 1.txt
+  OK decrypted=True written=Chương 333 Mặt trận phía tây chiến tranh tâm lý 1.txt
+[334/403] download chapter_id=21935863 file=Chương 334 Mặt trận phía tây chiến tranh tâm lý 2.txt
+  OK decrypted=True written=Chương 334 Mặt trận phía tây chiến tranh tâm lý 2.txt
+[335/403] download chapter_id=22079206 file=Chương 335 Mặt trận phía tây chiến tranh tâm lý. 3.txt
+  OK decrypted=True written=Chương 335 Mặt trận phía tây chiến tranh tâm lý. 3.txt
+[336/403] download chapter_id=22212765 file=Chương 336 Mặt trận phía tây chiến tranh tâm lý. 4.txt
+  OK decrypted=True written=Chương 336 Mặt trận phía tây chiến tranh tâm lý. 4.txt
+[337/403] download chapter_id=22229264 file=Chương 337 Mặt trận phía tây chiến tranh tâm lý. 5.txt
+  OK decrypted=True written=Chương 337 Mặt trận phía tây chiến tranh tâm lý. 5.txt
+[338/403] download chapter_id=22237012 file=Chương 338 Mặt trận phía tây chiến tranh tâm lý. 6.txt
+  OK decrypted=True written=Chương 338 Mặt trận phía tây chiến tranh tâm lý. 6.txt
+[339/403] skip existing file=Chương 339 Tiên Tri và Ma Sói.txt
+[340/403] skip existing file=Chương 340 Tử vong lời nguyền và thời cơ cách mạng.txt
+[341/403] download chapter_id=22253410 file=Chương 341 Bê bối Brain Wash 1.txt
+  OK decrypted=True written=Chương 341 Bê bối Brain Wash 1.txt
+[342/403] download chapter_id=22264306 file=Chương 342 Bê bối Brain Wash 2.txt
+  OK decrypted=True written=Chương 342 Bê bối Brain Wash 2.txt
+[343/403] download chapter_id=22265968 file=Chương 343 Ám sát lãnh tụ 1.txt
+  OK decrypted=True written=Chương 343 Ám sát lãnh tụ 1.txt
+[344/403] download chapter_id=22272883 file=Chương 344 Ám sát lãnh tụ 2.txt
+  OK decrypted=True written=Chương 344 Ám sát lãnh tụ 2.txt
+[345/403] skip existing file=Chương 345 Ám sát lãnh tụ 3.txt
+[346/403] skip existing file=Chương 346 Ám sát lãnh tụ 4.txt
+[347/403] skip existing file=Chương 347 Ám sát lãnh tụ 5.txt
+[348/403] skip existing file=Chương 348 Ám sát lãnh tụ xong.txt
+[349/403] skip existing file=Chương 349 Tử vong và phục sinh.txt
+[350/403] skip existing file=Chương 350 Điểm yếu của tập thể.txt
+[351/403] download chapter_id=22513067 file=Chương 351 Nữ đế đăng cơ 1.txt
+  OK decrypted=True written=Chương 351 Nữ đế đăng cơ 1.txt
+[352/403] download chapter_id=22558182 file=Chương 352 Nữ đế đăng cơ 2.txt
+  OK decrypted=True written=Chương 352 Nữ đế đăng cơ 2.txt
+[353/403] skip existing file=Chương 353 Nữ đế đăng cơ 3.txt
+[354/403] skip existing file=Chương 354 Nữ đế đăng cơ 4.txt
+[355/403] skip existing file=Chương 355 Nữ đế đăng cơ 5.txt
+[356/403] skip existing file=Chương 356 Nữ đế đăng cơ 6.txt
+[357/403] skip existing file=Chương 357 Năm năm trôi qua lãnh tụ thức tỉnh.txt
+[358/403] skip existing file=Chương 358 Thế giới xôn xao.txt
+[359/403] download chapter_id=22795785 file=Chương 359 Ngày tàn của Hiền Giả 1.txt
+  RETRYABLE_FAIL attempt=1 chapter_id=22795785: unable to decode iv
+  OK decrypted=True retry=2 written=Chương 359 Ngày tàn của Hiền Giả 1.txt
+[360/403] download chapter_id=22803297 file=Chương 360 Ngày tàn của Hiền Giả 2.txt
+  OK decrypted=True written=Chương 360 Ngày tàn của Hiền Giả 2.txt
+[361/403] download chapter_id=22808577 file=Chương 361 Nhật Bản xâm Hạ 1.txt
+  OK decrypted=True written=Chương 361 Nhật Bản xâm Hạ 1.txt
+[362/403] download chapter_id=22813439 file=Chương 362 Nhật Bản xâm Hạ 2.txt
+  OK decrypted=True written=Chương 362 Nhật Bản xâm Hạ 2.txt
+[363/403] skip existing file=Chương 363 Nhật Bản xâm Hạ 3.txt
+[364/403] skip existing file=Chương 364 Nhật Bản xâm Hạ 4.txt
+[365/403] skip existing file=Chương 365 Nhật Bản xâm Hạ 5.txt
+[366/403] skip existing file=Chương 366 Nhật Bản xâm Hạ 6.txt
+[367/403] skip existing file=Chương 367 Nhật Bản xâm Hạ 7.txt
+[368/403] skip existing file=Chương 368 Nhật Bản xâm Hạ 8.txt
+[369/403] download chapter_id=22870008 file=Chương 369 Quốc Trưởng Heidler và Đại Đức đế quốc 1.txt
+  OK decrypted=True written=Chương 369 Quốc Trưởng Heidler và Đại Đức đế quốc 1.txt
+[370/403] download chapter_id=22880482 file=Chương 370 Quốc trưởng Heidler Đại Đức đế quốc 2.txt
+  OK decrypted=True written=Chương 370 Quốc trưởng Heidler Đại Đức đế quốc 2.txt
+[371/403] download chapter_id=22881173 file=Chương 371 Trước thềm thế chiến 1.txt
+  OK decrypted=True written=Chương 371 Trước thềm thế chiến 1.txt
+[372/403] download chapter_id=22892498 file=Chương 372 Trước thềm thế chiến 2.txt
+  OK decrypted=True written=Chương 372 Trước thềm thế chiến 2.txt
+[373/403] download chapter_id=22903896 file=Chương 373 Trận Thượng Hải 1.txt
+  OK decrypted=True written=Chương 373 Trận Thượng Hải 1.txt
+[374/403] download chapter_id=22911654 file=Chương 374 Trận Thượng Hải 2.txt
+  OK decrypted=True written=Chương 374 Trận Thượng Hải 2.txt
+[375/403] skip existing file=Chương 375 Trận Thượng Hải 3.txt
+[376/403] skip existing file=Chương 376 Trận Thượng Hải 4.txt
+[377/403] skip existing file=Chương 377 Trận Thượng Hải 5.txt
+[378/403] skip existing file=Chương 378 Trận Thượng Hải 6.txt
+[379/403] download chapter_id=22944882 file=Chương 379 Thảm sát Nam Kinh Việt Nhật tuyên chiến 1.txt
+  OK decrypted=True written=Chương 379 Thảm sát Nam Kinh Việt Nhật tuyên chiến 1.txt
+[380/403] download chapter_id=22950798 file=Chương 380 Thảm sát Nam Kinh Việt Nhật tuyên chiến 2.txt
+  OK decrypted=True written=Chương 380 Thảm sát Nam Kinh Việt Nhật tuyên chiến 2.txt
+[381/403] skip existing file=Chương 381 Thảm sát Nam Kinh Việt Nhật tuyên chiến 3.txt
+[382/403] skip existing file=Chương 382 Thảm sát Nam Kinh Việt Nhật tuyên chiến 4.txt
+[383/403] download chapter_id=22968393 file=Chương 383 Liên quân phạt Nhật 1.txt
+  OK decrypted=True written=Chương 383 Liên quân phạt Nhật 1.txt
+[384/403] download chapter_id=22986244 file=Chương 384 Liên quân phạt Nhật 2.txt
+  OK decrypted=True written=Chương 384 Liên quân phạt Nhật 2.txt
+[385/403] download chapter_id=22996182 file=Chương 385 Đòn phủ đầu 1.txt
+  OK decrypted=True written=Chương 385 Đòn phủ đầu 1.txt
+[386/403] download chapter_id=23008329 file=Chương 386 Đòn phủ đầu 2.txt
+  OK decrypted=True written=Chương 386 Đòn phủ đầu 2.txt
+[387/403] download chapter_id=23015795 file=Chương 387 Chiến tranh chớp nhoáng 1.txt
+  OK decrypted=True written=Chương 387 Chiến tranh chớp nhoáng 1.txt
+[388/403] download chapter_id=23024107 file=Chương 388 Chiến tranh chớp nhoáng 2.txt
+  OK decrypted=True written=Chương 388 Chiến tranh chớp nhoáng 2.txt
+[389/403] skip existing file=Chương 389 Tô cháo hành.txt
+[390/403] skip existing file=Chương 390 Anh tới để chơi em sao.txt
+[391/403] download chapter_id=23072379 file=Chương 391 Đại quyết chiến 1.txt
+  OK decrypted=True written=Chương 391 Đại quyết chiến 1.txt
+[392/403] download chapter_id=23080039 file=Chương 392 Đại Quyết Chiến 2.txt
+  OK decrypted=True written=Chương 392 Đại Quyết Chiến 2.txt
+[393/403] skip existing file=Chương 393 Đại quyết chiến 3.txt
+[394/403] skip existing file=Chương 394 Đại quyết chiến 4.txt
+[395/403] skip existing file=Chương 395 Đại quyết chiến 5.txt
+[396/403] skip existing file=Chương 396 Đại quyết chiến 6.txt
+[397/403] skip existing file=Chương 397 Đại quyết chiến 7.txt
+[398/403] skip existing file=Chương 398 Đại quyết chiến 8.txt
+[399/403] skip existing file=Chương 399 Đại quyết chiến 9.txt
+[400/403] skip existing file=Chương 400 Đại quyết chiến 10.txt
+[401/403] skip existing file=Chương 401 Hòa bình hạt nhân.txt
+[402/403] skip existing file=Chương 402 Hội nghị Ianta.txt
+[403/403] skip existing file=Chương 403 Nước Việt siêu cường end.txt
+final_ok=403
+final_fail=0
+out=C:\Dev\MTC\Biến Thiên 2 Đế Quốc Nhà Trần Chinh Phục Thế Giới
+
+[stderr]

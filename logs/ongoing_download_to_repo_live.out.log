@@ -1,0 +1,750 @@
+books_page=1 rows=100 total=100
+books_page=2 rows=100 total=196
+books_page=3 rows=100 total=292
+books_page=4 rows=100 total=385
+books_page=5 rows=1 total=302
+built_queue=301 path=C:\Dev\MTC_Download\logs\ongoing_download_to_repo_queue.json
+
+[1/301] book_id=153637 status=Còn tiếp name=Tận Thế Ta Cầu Sinh Tại Sinh Mệnh Cấm Khu
+❌ Lỗi khi lấy thông tin truyện 153637: 403 Client Error: Forbidden for url: https://android.lonoapp.net/api/books/153637
+  => remote=1 downloaded=1 skipped=0 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[2/301] book_id=153557 status=Còn tiếp name=Tại Marvel Lập Hội Ngân Sách
+❌ Lỗi khi lấy thông tin truyện 153557: 403 Client Error: Forbidden for url: https://android.lonoapp.net/api/books/153557
+  => remote=2 downloaded=0 skipped=2 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[3/301] book_id=133297 status=Còn tiếp name=Ta Dùng Lôi Pháp Chứng Đạo Thành Tiên
+  => remote=3 downloaded=0 skipped=3 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[4/301] book_id=143196 status=Còn tiếp name=Klyntar Thôn Phệ
+  => remote=3 downloaded=0 skipped=3 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[5/301] book_id=153622 status=Còn tiếp name=Quỷ Bí Chi Chủ
+❌ Lỗi khi lấy thông tin truyện 153622: 403 Client Error: Forbidden for url: https://android.lonoapp.net/api/books/153622
+  => remote=3 downloaded=3 skipped=0 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[6/301] book_id=124035 status=Còn tiếp name=Đánh Dấu Thành Đế, Ta Chỉ Muốn Diệt Thế
+  => remote=5 downloaded=0 skipped=5 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[7/301] book_id=153619 status=Còn tiếp name=Bắt Đầu Đánh Dấu Chí Tôn Thể, Ta Đồ Nhi Đều Là Phản Phái
+❌ Lỗi khi lấy thông tin truyện 153619: 403 Client Error: Forbidden for url: https://android.lonoapp.net/api/books/153619
+  => remote=5 downloaded=0 skipped=5 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[8/301] book_id=139195 status=Còn tiếp name=Lê Triều Huyền Sử
+  => remote=10 downloaded=0 skipped=10 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[9/301] book_id=140454 status=Còn tiếp name=Hắc Bạch Chi Đạo
+  => remote=10 downloaded=0 skipped=10 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[10/301] book_id=141348 status=Còn tiếp name=Ta Muôn Vạn Kiếp Đều Không Thể Yêu Người
+  => remote=10 downloaded=0 skipped=10 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[11/301] book_id=142638 status=Còn tiếp name=Mộng Tiêu Dao
+  => remote=10 downloaded=0 skipped=10 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[12/301] book_id=143258 status=Tạm dừng name=Tiên Lộ Ngự Ảnh
+  => remote=10 downloaded=0 skipped=10 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[13/301] book_id=146343 status=Còn tiếp name=Hội Thánh: Lần Đầu Triệu Hoán Tôn Ngộ Không
+  => remote=10 downloaded=0 skipped=10 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[14/301] book_id=150834 status=Còn tiếp name=Tung Hoành Thiên Hạ
+  => remote=10 downloaded=0 skipped=10 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[15/301] book_id=152897 status=Còn tiếp name=Thợ Săn Tam Giới
+  => remote=10 downloaded=0 skipped=10 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[16/301] book_id=152996 status=Còn tiếp name=Tổng Mạn: Từ Onepiece Sở Hữu Exodia
+  => remote=10 downloaded=0 skipped=10 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[17/301] book_id=125914 status=Còn tiếp name=Tu Tiên: Ta Có Sharingan
+  => remote=11 downloaded=0 skipped=11 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[18/301] book_id=140251 status=Còn tiếp name=Quỷ Thực Nhân: Biệt Đội Báo Thủ Bắt Đầu
+  => remote=11 downloaded=0 skipped=11 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[19/301] book_id=141108 status=Tạm dừng name=Giáo Sư Vĩnh Hằng
+  => remote=11 downloaded=0 skipped=11 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[20/301] book_id=145480 status=Còn tiếp name=Nguyệt Chiếu Vô Tâm
+  => remote=11 downloaded=0 skipped=11 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[21/301] book_id=148958 status=Còn tiếp name=Thân Du Vạn Giới
+  => remote=11 downloaded=0 skipped=11 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[22/301] book_id=149108 status=Còn tiếp name=Chấp Niệm Sinh Linh
+  => remote=11 downloaded=0 skipped=11 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[23/301] book_id=149319 status=Còn tiếp name=Mạt Thế: Ta Là Số Mười
+  => remote=11 downloaded=0 skipped=11 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[24/301] book_id=151695 status=Còn tiếp name=Quỷ Dị Tai Ương
+  => remote=11 downloaded=0 skipped=11 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[25/301] book_id=145227 status=Còn tiếp name=Cổ Đạo Nghịch Thiên
+  => remote=12 downloaded=0 skipped=12 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[26/301] book_id=146774 status=Còn tiếp name=Shi Ryougi - Echo Of Nihility
+  => remote=12 downloaded=0 skipped=12 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[27/301] book_id=150773 status=Còn tiếp name=Vô Giải
+  => remote=12 downloaded=0 skipped=12 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[28/301] book_id=151003 status=Còn tiếp name=Chép Nhạc: Lại Một Thế Ta Gặp Người
+  => remote=12 downloaded=0 skipped=12 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[29/301] book_id=127746 status=Còn tiếp name=Thực Mộng
+  => remote=13 downloaded=0 skipped=13 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[30/301] book_id=140512 status=Tạm dừng name=Tiêu Dao Tiên Truyện
+  => remote=13 downloaded=0 skipped=13 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[31/301] book_id=141473 status=Còn tiếp name=Kẻ Si Tình
+  => remote=13 downloaded=0 skipped=13 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[32/301] book_id=143846 status=Còn tiếp name=Hội Phát Triển Di Sản Cuối Cùng
+  => remote=13 downloaded=0 skipped=13 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[33/301] book_id=145330 status=Tạm dừng name=Dược Linh Sư
+  => remote=13 downloaded=0 skipped=13 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[34/301] book_id=148673 status=Còn tiếp name=Hành Trình Định Mệnh
+  => remote=13 downloaded=0 skipped=13 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[35/301] book_id=148973 status=Còn tiếp name=Đấu La: Tửu Lâu Của Những Kẻ Bị Bỏ Rơi
+  => remote=13 downloaded=0 skipped=13 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[36/301] book_id=149630 status=Còn tiếp name=Mạc Hoàng Ký
+  => remote=13 downloaded=0 skipped=13 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[37/301] book_id=130795 status=Còn tiếp name=Tu Tiên Chi Thượng
+  => remote=14 downloaded=0 skipped=14 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[38/301] book_id=139247 status=Còn tiếp name=Ta Tại Di Giới Henshin
+  => remote=14 downloaded=0 skipped=14 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[39/301] book_id=145258 status=Còn tiếp name=Nhất Đạo Chí Tôn
+  => remote=14 downloaded=0 skipped=14 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[40/301] book_id=146336 status=Còn tiếp name=Ngược Về Hồng Hoang Hỏi Sao Ta Sinh!
+  => remote=14 downloaded=0 skipped=14 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[41/301] book_id=150583 status=Còn tiếp name=Nghịch Mệnh
+  => remote=14 downloaded=0 skipped=14 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[42/301] book_id=123127 status=Còn tiếp name=Vĩnh Hằng Vị Lai
+  => remote=15 downloaded=0 skipped=15 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[43/301] book_id=134248 status=Còn tiếp name=Thám Tử Ngọt
+  => remote=15 downloaded=0 skipped=15 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[44/301] book_id=140892 status=Còn tiếp name=Kẻ Dạo Bước Không Gian: Từ Nô Lệ Thành Bá Chủ
+  => remote=15 downloaded=0 skipped=15 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[45/301] book_id=142679 status=Còn tiếp name=Ma Chủng Truyền Thừa
+  => remote=15 downloaded=0 skipped=15 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[46/301] book_id=144672 status=Còn tiếp name=Cứu Vớt Toàn Nhân Loại, Bắt Đầu Từ Cày Cấp Trong Thế Giới Giả Lập
+  => remote=15 downloaded=0 skipped=15 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[47/301] book_id=147396 status=Còn tiếp name=Anh Hùng Diệt Thế
+  => remote=15 downloaded=0 skipped=15 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[48/301] book_id=124023 status=Tạm dừng name=Hệ Thống Khoa Kỹ: Từ Ngày Đó Ta Thay Đổi Thế Giới Này
+  => remote=16 downloaded=0 skipped=16 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[49/301] book_id=147983 status=Còn tiếp name=Nguyên Tiên
+  => remote=16 downloaded=0 skipped=16 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[50/301] book_id=148682 status=Còn tiếp name=Ma Pháp Thần Vương
+  => remote=16 downloaded=0 skipped=16 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[51/301] book_id=148988 status=Còn tiếp name=Ma Kiếm Sư
+  => remote=16 downloaded=0 skipped=16 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[52/301] book_id=152353 status=Còn tiếp name=Trong Tuyết Mẫu Đơn, Phượng Minh Tam Quốc
+  => remote=16 downloaded=0 skipped=16 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[53/301] book_id=128372 status=Còn tiếp name=Sở Thiên Ta Làm Trùm Ngày Tận Thế
+  => remote=17 downloaded=0 skipped=17 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[54/301] book_id=140020 status=Còn tiếp name=Tồn Tại Bất Diệt
+  => remote=17 downloaded=0 skipped=17 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[55/301] book_id=140240 status=Tạm dừng name=Đại Sư Huynh
+  => remote=17 downloaded=0 skipped=17 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[56/301] book_id=140514 status=Còn tiếp name=Võ Động: Bắt Đầu Một Quyển Hư Không Kinh
+  => remote=17 downloaded=0 skipped=17 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[57/301] book_id=141380 status=Còn tiếp name=Tôi Có Gunny Hệ Thống
+  => remote=17 downloaded=0 skipped=17 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[58/301] book_id=138873 status=Còn tiếp name=Hắc Hoạ
+  => remote=18 downloaded=0 skipped=18 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[59/301] book_id=139787 status=Còn tiếp name=Hỗn Loạn Chi Lưu
+  => remote=18 downloaded=0 skipped=18 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[60/301] book_id=140115 status=Tạm dừng name=Nam Thiên Trấn Hồn Ký
+  => remote=18 downloaded=0 skipped=18 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[61/301] book_id=141211 status=Còn tiếp name=Ngũ Phúc Chi Vạn Lý Thiên
+  => remote=18 downloaded=0 skipped=18 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[62/301] book_id=143509 status=Còn tiếp name=Hắc Ảnh Thần Hành
+  => remote=18 downloaded=0 skipped=18 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[63/301] book_id=145845 status=Còn tiếp name=Ký Ức Thần Vương
+  => remote=18 downloaded=0 skipped=18 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[64/301] book_id=149029 status=Tạm dừng name=Dota 2: Làm Lại Cuộc Đời
+  => remote=18 downloaded=0 skipped=18 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[65/301] book_id=150707 status=Còn tiếp name=Mesatravia
+  => remote=18 downloaded=0 skipped=18 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[66/301] book_id=151238 status=Còn tiếp name=Tiếng Vọng Nơi Vực Sâu
+  => remote=18 downloaded=0 skipped=18 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[67/301] book_id=129205 status=Còn tiếp name=Từ Sóng Gió Gia Tộc Trở Thành Youtuber
+  => remote=19 downloaded=0 skipped=19 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[68/301] book_id=130903 status=Còn tiếp name=Dị Giới Rubik Cube
+  => remote=19 downloaded=0 skipped=19 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[69/301] book_id=140896 status=Còn tiếp name=Hệ Thống Khởi Nghiệp Tông Môn
+  => remote=19 downloaded=0 skipped=19 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[70/301] book_id=141132 status=Còn tiếp name=Sanctuary
+  => remote=19 downloaded=0 skipped=19 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[71/301] book_id=144555 status=Còn tiếp name=Thiên Tôn Đế Mạch
+  => remote=19 downloaded=0 skipped=19 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[72/301] book_id=152567 status=Còn tiếp name=Xuất Thẻ Hư Vô
+  => remote=19 downloaded=0 skipped=19 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[73/301] book_id=147861 status=Còn tiếp name=Vì Sợ Chết Ta Gia Nhập Ma Đạo Lại Không Ngờ Thành Vạn Cổ Ma Đế!
+  => remote=20 downloaded=0 skipped=20 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[74/301] book_id=138006 status=Tạm dừng name=Người Kể Chuyện
+  => remote=21 downloaded=0 skipped=21 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[75/301] book_id=148793 status=Còn tiếp name=Có Chút Viên Mãn
+  => remote=21 downloaded=0 skipped=21 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[76/301] book_id=151962 status=Còn tiếp name=Võng Du Giáng Lâm: Từ Kế Hoạch Tạo Thần Bắt Đầu
+  => remote=21 downloaded=0 skipped=21 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[77/301] book_id=153579 status=Còn tiếp name=Trước Kia Có Một Toà Linh Kiếm Sơn Trang
+  => remote=21 downloaded=0 skipped=21 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[78/301] book_id=144228 status=Còn tiếp name=114: Cuộc Gọi Khẩn Cấp
+  => remote=22 downloaded=0 skipped=22 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[79/301] book_id=145137 status=Tạm dừng name=Dị Lực Vĩnh Cấm
+  => remote=22 downloaded=0 skipped=22 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[80/301] book_id=147288 status=Tạm dừng name=Nghịch Càn Khôn
+  => remote=22 downloaded=0 skipped=22 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[81/301] book_id=152371 status=Còn tiếp name=Tận Thế: Dung Hồn Dị Biến
+  => remote=22 downloaded=0 skipped=22 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[82/301] book_id=133435 status=Còn tiếp name=Dị Giới Là Quá Dễ
+  => remote=23 downloaded=0 skipped=23 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[83/301] book_id=137355 status=Còn tiếp name=Trở Lại 1986 Ta Làm Lại Cuộc Đời Từ Bán Cá Khô
+  => remote=23 downloaded=0 skipped=23 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[84/301] book_id=138363 status=Còn tiếp name=Dị Trùng Chủng
+  => remote=23 downloaded=0 skipped=23 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[85/301] book_id=141438 status=Còn tiếp name=Xuyên Thư Tiên Võ Đế Tôn, Ta Làm Thần Thoại Đế
+  => remote=23 downloaded=0 skipped=23 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[86/301] book_id=150123 status=Còn tiếp name=Tam Giới
+  => remote=23 downloaded=0 skipped=23 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[87/301] book_id=147561 status=Còn tiếp name=Vô Vọng Tiên Đồ
+  => remote=24 downloaded=0 skipped=24 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[88/301] book_id=149578 status=Tạm dừng name=Toàn Dân Lãnh Chúa: Quang Hoàn Gia Thân
+  => remote=24 downloaded=0 skipped=24 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[89/301] book_id=152548 status=Còn tiếp name=Thống Soái, Uống Nhầm Thuốc Hay Ăn Nhầm Canh?
+  => remote=24 downloaded=0 skipped=24 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[90/301] book_id=111503 status=Còn tiếp name=Đồng Nhân Sword Art Online : Tân Thế Giới.
+  => remote=25 downloaded=0 skipped=25 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[91/301] book_id=139592 status=Còn tiếp name=Ta Có Đánh Dấu Hệ Thống, Nhưng Đây Là Vua Trò Chơi Thế Giới!
+  => remote=25 downloaded=0 skipped=25 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[92/301] book_id=150191 status=Còn tiếp name=Vạn Giới Chiến Ca
+  => remote=25 downloaded=0 skipped=25 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[93/301] book_id=135859 status=Còn tiếp name=Súc Sinh Ký I - Huyết Đàm
+  => remote=26 downloaded=0 skipped=26 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[94/301] book_id=144520 status=Còn tiếp name=Nhân Gian
+  => remote=26 downloaded=1 skipped=25 failed=0 missing_after=1 extra_after=0 status=issue commit=committed
+
+[95/301] book_id=152019 status=Còn tiếp name=Nấp Sau Lv 0
+  => remote=26 downloaded=0 skipped=26 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=commit_failed
+
+[96/301] book_id=152585 status=Còn tiếp name=Ma Lộ Độc Tôn
+  => remote=26 downloaded=0 skipped=26 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[97/301] book_id=138446 status=Tạm dừng name=Tận Thế : Kí Ức Lãng Quên
+  => remote=28 downloaded=0 skipped=28 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[98/301] book_id=144433 status=Tạm dừng name=Cố Mộng
+  => remote=29 downloaded=0 skipped=29 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[99/301] book_id=147778 status=Còn tiếp name=Gấp! Toàn Tộc Ta Đều Là Bệnh Đau Mắt Đỏ
+  => remote=29 downloaded=0 skipped=29 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[100/301] book_id=106705 status=Còn tiếp name=Vệ Thần - Mạt Thế Xác Sống
+  => remote=30 downloaded=0 skipped=30 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[101/301] book_id=141444 status=Tạm dừng name=Bạch Nguyệt Vân Thiên
+  => remote=30 downloaded=0 skipped=30 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[102/301] book_id=143112 status=Còn tiếp name=Hệ Thống Bản Ngã Thức Tỉnh
+  => remote=30 downloaded=0 skipped=30 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[103/301] book_id=132003 status=Còn tiếp name=Cơn Lốc Đường Biên
+  => remote=31 downloaded=0 skipped=31 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[104/301] book_id=151710 status=Còn tiếp name=Tận Thế Sinh Tồn, Theo Đội Xe Một Đường Cầu Sinh
+  => remote=31 downloaded=0 skipped=31 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[105/301] book_id=152701 status=Còn tiếp name=Liên Minh Huyền Thoại: Con Đường Hoàng Kim
+  => remote=31 downloaded=0 skipped=31 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[106/301] book_id=124471 status=Còn tiếp name=Khuấy Động Đa Nguyên Campione
+  => remote=32 downloaded=0 skipped=32 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[107/301] book_id=143446 status=Còn tiếp name=Sen Tàn Khi Thu Đến
+  => remote=32 downloaded=0 skipped=32 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[108/301] book_id=145168 status=Còn tiếp name=Kiếm Tuyết Cuồng Tiên
+  => remote=32 downloaded=0 skipped=32 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[109/301] book_id=152568 status=Còn tiếp name=Đệ Nhất Ngân Hà
+  => remote=32 downloaded=0 skipped=32 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[110/301] book_id=111567 status=Còn tiếp name=Sức Mạnh Đế Vương
+  => remote=33 downloaded=0 skipped=33 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[111/301] book_id=148605 status=Còn tiếp name=Lol: Đường Đến Vinh Quang
+  => remote=33 downloaded=0 skipped=33 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[112/301] book_id=148959 status=Còn tiếp name=Đưa Đại Việt Trở Thành Siêu Cường
+  => remote=33 downloaded=0 skipped=33 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[113/301] book_id=151031 status=Còn tiếp name=Quả Cấm
+  => remote=63 downloaded=0 skipped=63 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[114/301] book_id=151104 status=Còn tiếp name=Võ Hành Chi Nhân
+  => remote=33 downloaded=0 skipped=33 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[115/301] book_id=114029 status=Còn tiếp name=Nhất Nhân Chấn Thiên
+  => remote=34 downloaded=0 skipped=34 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[116/301] book_id=139601 status=Còn tiếp name=Từ Hạ Nhẫn Bắt Đầu
+  => remote=34 downloaded=0 skipped=34 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[117/301] book_id=142281 status=Tạm dừng name=Từ Vùng Biên Đến Chiến Trường Liên Sao
+  => remote=34 downloaded=0 skipped=34 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[118/301] book_id=152023 status=Còn tiếp name=Superman Của Mcu
+  => remote=34 downloaded=0 skipped=34 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[119/301] book_id=140678 status=Còn tiếp name=Bài Trừ Thuộc Tính Xấu Ta Thành Thần
+  => remote=35 downloaded=0 skipped=35 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[120/301] book_id=141464 status=Còn tiếp name=Livestream Tu Tiên: Donate Là Tăng Lực
+  => remote=35 downloaded=0 skipped=35 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[121/301] book_id=150040 status=Còn tiếp name=Pandora Gaia
+  => remote=35 downloaded=0 skipped=35 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[122/301] book_id=142699 status=Tạm dừng name=Thiên Hành
+  => remote=36 downloaded=0 skipped=36 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[123/301] book_id=143347 status=Còn tiếp name=Vu Sư Ký Sự
+  => remote=36 downloaded=0 skipped=36 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[124/301] book_id=146741 status=Còn tiếp name=Huyễn Kỳ Thư: Trò Chơi Của Thần
+  => remote=36 downloaded=0 skipped=36 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[125/301] book_id=149160 status=Còn tiếp name=One Piece: Dị Giới Đội Tầm Bảo
+  => remote=36 downloaded=0 skipped=36 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[126/301] book_id=136756 status=Còn tiếp name=One Piece: Ngai Vàng Sụp Đổ
+  => remote=38 downloaded=0 skipped=38 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[127/301] book_id=143569 status=Còn tiếp name=Mộng Tận Hư Không
+  => remote=38 downloaded=0 skipped=38 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[128/301] book_id=144479 status=Còn tiếp name=Tổng Mạn: Từ Kimetsu No Yaiba Bắt Đầu.
+  => remote=38 downloaded=0 skipped=38 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=commit_failed
+
+[129/301] book_id=140577 status=Còn tiếp name=Nhân Gian Thiếu Niên Hành
+  => remote=39 downloaded=0 skipped=39 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[130/301] book_id=140712 status=Còn tiếp name=Khí Vận
+  => remote=39 downloaded=0 skipped=39 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[131/301] book_id=144090 status=Còn tiếp name=Tu Tiên Từ Kế Thừa Gia Sản Bắt Đầu
+  => remote=39 downloaded=1 skipped=38 failed=0 missing_after=1 extra_after=0 status=issue commit=nothing_staged
+
+[132/301] book_id=151665 status=Còn tiếp name=Pokemon: Khởi Đầu Mười Năm
+  => remote=40 downloaded=0 skipped=40 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[133/301] book_id=123498 status=Còn tiếp name=Linh Dị Người Ghi Chép
+  => remote=41 downloaded=0 skipped=41 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[134/301] book_id=139802 status=Còn tiếp name=Bắt Đầu Xuất Sinh, Ta Cố Gắng Đến Vô Địch
+  => remote=41 downloaded=0 skipped=41 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[135/301] book_id=129003 status=Còn tiếp name=Tự Tại Tiêu Dao
+  => remote=42 downloaded=0 skipped=42 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[136/301] book_id=139983 status=Còn tiếp name=Khi Dòng Sông Ngừng Chảy
+  => remote=42 downloaded=0 skipped=42 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[137/301] book_id=143853 status=Còn tiếp name=Trục Đạo Nghịch Thiên
+  => remote=42 downloaded=0 skipped=42 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[138/301] book_id=131130 status=Còn tiếp name=Mộng Đế
+  => remote=43 downloaded=0 skipped=43 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[139/301] book_id=146225 status=Còn tiếp name=Lạc Hồng Trùng Sinh Truyện
+  => remote=44 downloaded=0 skipped=44 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[140/301] book_id=148554 status=Còn tiếp name=Ta Đúng Là Nhân Loại
+  => remote=44 downloaded=0 skipped=44 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[141/301] book_id=149725 status=Còn tiếp name=Đấu La: Huyết Nhân Cuồng Đồ
+  => remote=44 downloaded=0 skipped=44 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[142/301] book_id=122515 status=Còn tiếp name=Nhật Ký Pokemon: Hoenn Ta Đến Đây
+  => remote=45 downloaded=1 skipped=44 failed=0 missing_after=1 extra_after=0 status=issue commit=committed
+
+[143/301] book_id=140464 status=Còn tiếp name=Ta Hối Hận Rồi, Trùng Sinh Sửa Sai Được Không?
+  => remote=45 downloaded=0 skipped=45 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[144/301] book_id=141177 status=Còn tiếp name=Mạt Thế: Hệ Thống Tới Sớm 3 Năm, Đây Là Cơ Hội Của Ta
+  => remote=45 downloaded=0 skipped=45 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[145/301] book_id=148760 status=Còn tiếp name=Thám Hiểm Ký
+  => remote=45 downloaded=0 skipped=45 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[146/301] book_id=133538 status=Còn tiếp name=Honkai Star Rail: Hành Tẩu Giữa Những Vì Sao
+  => remote=46 downloaded=0 skipped=46 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[147/301] book_id=137123 status=Còn tiếp name=Học Đường: Vũ Trụ Mô Phỏng
+  => remote=46 downloaded=0 skipped=46 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[148/301] book_id=150712 status=Còn tiếp name=Ngự Thần Lục
+  => remote=46 downloaded=0 skipped=46 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[149/301] book_id=138675 status=Còn tiếp name=Nhật Ký Sát Nhân
+  => remote=47 downloaded=0 skipped=47 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[150/301] book_id=140369 status=Còn tiếp name=Ánh Sáng Cuối Trên Bầu Trời Máu
+  => remote=48 downloaded=0 skipped=48 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[151/301] book_id=140829 status=Còn tiếp name=Lũng Tây Trần Thị
+  => remote=48 downloaded=0 skipped=48 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[152/301] book_id=152760 status=Còn tiếp name=Vovinam Tông Sư Tại Akame Ga Kill Bán Mỳ Quảng
+  => remote=51 downloaded=0 skipped=51 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[153/301] book_id=144974 status=Còn tiếp name=Cửu Đế
+  => remote=52 downloaded=0 skipped=52 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[154/301] book_id=148886 status=Còn tiếp name=Gen Z Tại Tu Tiên Giới
+  => remote=52 downloaded=0 skipped=52 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[155/301] book_id=143054 status=Còn tiếp name=Vô Tận Đại Hải, Chiến Hạm Thăng Cấp
+  => remote=53 downloaded=0 skipped=53 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[156/301] book_id=147314 status=Còn tiếp name=Cuồng Đồ
+  => remote=53 downloaded=0 skipped=53 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[157/301] book_id=151097 status=Còn tiếp name=Người Viết Lại Khế Ước
+  => remote=54 downloaded=0 skipped=54 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[158/301] book_id=144337 status=Còn tiếp name=Kẻ Viết Lại Lịch Sử Esport
+  => remote=55 downloaded=0 skipped=55 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[159/301] book_id=125122 status=Còn tiếp name=Diễn Sinh Du Hí: Vì Sao Năng Lực Của Tôi Là Minecraft?
+  => remote=56 downloaded=0 skipped=56 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[160/301] book_id=138123 status=Còn tiếp name=Năm 2000 : Từ Chạy Án Bắt Đầu.
+  => remote=56 downloaded=1 skipped=55 failed=0 missing_after=1 extra_after=0 status=issue commit=nothing_to_commit
+
+[161/301] book_id=148071 status=Còn tiếp name=Sáng Tạo Sinh Mệnh Chơi Hỏng Nhân Loại
+  => remote=58 downloaded=0 skipped=58 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[162/301] book_id=135087 status=Còn tiếp name=Tiên Vực : Ngự Linh Chí Tôn
+  => remote=59 downloaded=0 skipped=59 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[163/301] book_id=144601 status=Tạm dừng name=Đi Bộ Vuốt Râu Ở Blue Lock
+  => remote=59 downloaded=0 skipped=59 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[164/301] book_id=147931 status=Còn tiếp name=Tòa Tháp Thần Tọa.
+  => remote=59 downloaded=0 skipped=59 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[165/301] book_id=131253 status=Còn tiếp name=Trở Thành Hấp Huyết Chân Tổ Tại Dị Giới
+  => remote=60 downloaded=0 skipped=60 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[166/301] book_id=138115 status=Tạm dừng name=Tôi Chỉ Muốn Sống Yên Ổn!
+  => remote=60 downloaded=0 skipped=60 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[167/301] book_id=143368 status=Còn tiếp name=Loại Thẻ Bài Phế Phẩm Này Thực Sự Có Người Mua Sao?
+  => remote=60 downloaded=0 skipped=60 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[168/301] book_id=147696 status=Tạm dừng name=Thế Giới Tiến Hóa
+  => remote=60 downloaded=0 skipped=60 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[169/301] book_id=147292 status=Còn tiếp name=Ngũ Lôi Hoành Đỉnh
+  => remote=62 downloaded=0 skipped=62 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[170/301] book_id=142369 status=Còn tiếp name=Sinh Tồn: Ta Mang Theo Không Gian Vô Hạn Xe Cắm Trại
+  => remote=64 downloaded=0 skipped=64 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[171/301] book_id=144110 status=Còn tiếp name=Sở Hữu Thần Thụ Quả Tại Dị Giới
+  => remote=65 downloaded=0 skipped=65 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[172/301] book_id=135214 status=Còn tiếp name=Biên Niên Sử Zamecia
+  => remote=67 downloaded=0 skipped=67 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[173/301] book_id=115229 status=Còn tiếp name=Nghiệp Duyên
+  => remote=68 downloaded=0 skipped=68 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[174/301] book_id=134351 status=Tạm dừng name=Hệ Thống Chuyển Sinh
+  => remote=68 downloaded=0 skipped=68 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[175/301] book_id=107636 status=Còn tiếp name=Khí Vận Chi Tử, Phản Diện Chi Lộ
+  => remote=69 downloaded=0 skipped=69 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[176/301] book_id=129407 status=Còn tiếp name=Vạn Đại Việt Song Song
+  => remote=72 downloaded=0 skipped=72 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[177/301] book_id=152403 status=Còn tiếp name=Thiên Ngoại Lai: Cấm Khu
+  => remote=72 downloaded=0 skipped=72 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[178/301] book_id=131865 status=Còn tiếp name=Tung Hoành Dị Giới
+  => remote=73 downloaded=0 skipped=73 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[179/301] book_id=141880 status=Tạm dừng name=Đạo Ma Trường Đồ
+  => remote=75 downloaded=0 skipped=75 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[180/301] book_id=108844 status=Tạm dừng name=Hồi Kí Hadidu
+  => remote=77 downloaded=0 skipped=77 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[181/301] book_id=143908 status=Còn tiếp name=Vĩnh Sinh – Người Không Tên
+  => remote=78 downloaded=0 skipped=78 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[182/301] book_id=151700 status=Còn tiếp name=Zombie : Bắt Đầu Đánh Dấu T1000
+  => remote=78 downloaded=0 skipped=78 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[183/301] book_id=136576 status=Còn tiếp name=Đấu La, Ta Thay Hoắc Vũ Hạo, Làm Thần Vương Trùng Sinh
+  => remote=79 downloaded=0 skipped=79 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[184/301] book_id=137149 status=Còn tiếp name=Ta Đế Vương : Đem Quốc Gia Thành Thiên Cổ Đệ Nhất
+  => remote=80 downloaded=0 skipped=80 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[185/301] book_id=129143 status=Tạm dừng name=Kẻ Ngoại Lai Gian Lận Để Trở Thành Kamenrider
+  => remote=85 downloaded=0 skipped=85 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[186/301] book_id=133328 status=Còn tiếp name=Đoạ Ma
+  => remote=87 downloaded=0 skipped=87 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[187/301] book_id=144841 status=Tạm dừng name=Kh'Alzhei In The Night - Loạn Ức Trong Đêm Tối
+  => remote=87 downloaded=0 skipped=87 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[188/301] book_id=138696 status=Còn tiếp name=Khắc Nhập Khắc Nhập - Khắc Xuất Khắc Xuất
+  => remote=88 downloaded=0 skipped=88 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[189/301] book_id=138991 status=Còn tiếp name=Tiến Hóa Kỷ Nguyên
+  => remote=88 downloaded=0 skipped=88 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[190/301] book_id=151616 status=Còn tiếp name=Trở Về 2013, Bắt Đầu Từ Chứng Khoán Đến Đỉnh Hollywood.
+  => remote=88 downloaded=0 skipped=88 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[191/301] book_id=113509 status=Còn tiếp name=Hắc Ám Trở Lại
+  => remote=91 downloaded=0 skipped=91 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[192/301] book_id=132721 status=Còn tiếp name=Cản Bước Thiên Mệnh Chi Tử Tại Pháp Trị Thế Giới
+  => remote=91 downloaded=0 skipped=91 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[193/301] book_id=149797 status=Còn tiếp name=Dạ Trung Vi Quang
+  => remote=91 downloaded=0 skipped=91 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[194/301] book_id=141743 status=Còn tiếp name=The Vampire’s Bloodbound
+  => remote=93 downloaded=0 skipped=93 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[195/301] book_id=138229 status=Còn tiếp name=Tru Tiên Nhất Mộng
+  => remote=98 downloaded=0 skipped=98 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[196/301] book_id=131162 status=Còn tiếp name=Warhammer 40k: Sứ Giả Của Những Vì Sao
+  => remote=99 downloaded=0 skipped=99 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[197/301] book_id=133257 status=Còn tiếp name=Dị Giới Thương Nhân
+  => remote=100 downloaded=0 skipped=100 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[198/301] book_id=138186 status=Tạm dừng name=Nguyên Thủy Thế Giới
+  => remote=100 downloaded=0 skipped=100 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[199/301] book_id=128805 status=Còn tiếp name=Tận Thế Xuyên
+  => remote=101 downloaded=0 skipped=101 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[200/301] book_id=146565 status=Tạm dừng name=Tôi Gặp Phiên Bản Khác Giới Của Chính Mình
+  => remote=101 downloaded=0 skipped=101 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[201/301] book_id=115550 status=Còn tiếp name=Việt Linh
+  => remote=103 downloaded=0 skipped=103 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[202/301] book_id=125974 status=Còn tiếp name=Honkai Star Rail: Các Vì Sao Nơi Vũ Trụ
+  => remote=103 downloaded=0 skipped=103 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[203/301] book_id=139838 status=Còn tiếp name=Bói Toán Lấy Mạng Đổi Mệnh Dối Trời Gạt Đất
+  => remote=103 downloaded=0 skipped=103 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=commit_failed
+
+[204/301] book_id=152173 status=Còn tiếp name=Mạt Thế Độc Tiên
+  => remote=105 downloaded=0 skipped=105 failed=0 missing_after=0 extra_after=0 status=ok commit=committed
+
+[205/301] book_id=144266 status=Còn tiếp name=Hồng Hoang Biên Niên Sử
+  => remote=107 downloaded=0 skipped=107 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[206/301] book_id=146629 status=Còn tiếp name=May Mắn Xuyên Vào Vũ Trụ Creepypasta
+❌ Lỗi khi lấy thông tin truyện 146629: 403 Client Error: Forbidden for url: https://android.lonoapp.net/api/books/146629
+  => remote=108 downloaded=0 skipped=108 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[207/301] book_id=151448 status=Còn tiếp name=Dạng Thức Tâm Trí
+  => remote=111 downloaded=0 skipped=111 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[208/301] book_id=121958 status=Tạm dừng name=Học Đường Rực Cháy
+  => remote=112 downloaded=0 skipped=112 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[209/301] book_id=117946 status=Còn tiếp name=One Piece: The Gamer Tại South Blue
+  => remote=113 downloaded=0 skipped=113 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[210/301] book_id=129298 status=Còn tiếp name=Tình Họa Sơn Hà
+  => remote=115 downloaded=0 skipped=115 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[211/301] book_id=119734 status=Tạm dừng name=Siêu Năng Lập Phương
+  => remote=116 downloaded=0 skipped=116 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[212/301] book_id=136247 status=Còn tiếp name=Ta Tại Tu Tiên Giới Làm Du Thương
+  => remote=122 downloaded=1 skipped=121 failed=0 missing_after=1 extra_after=0 status=issue commit=nothing_to_commit
+
+[213/301] book_id=130677 status=Còn tiếp name=Khải Hoàng Ma Thần
+  => remote=124 downloaded=0 skipped=124 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[214/301] book_id=135013 status=Còn tiếp name=Vừa Làm Ra App Du Lịch, Ngươi Liền Mang Ta Xuyên Qua Nhị Thứ Nguyên?
+  => remote=129 downloaded=0 skipped=129 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[215/301] book_id=139888 status=Tạm dừng name=Chư Thiên : Bắt Đầu Hành Trình Trở Thành Kẻ Thu Thập
+  => remote=130 downloaded=0 skipped=130 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[216/301] book_id=139269 status=Còn tiếp name=Lan : Khuấy Đảo Cổ Sử
+  => remote=131 downloaded=0 skipped=131 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[217/301] book_id=105966 status=Còn tiếp name=Thiên Ly Vũ
+  => remote=132 downloaded=0 skipped=132 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[218/301] book_id=149126 status=Còn tiếp name=Hắc Ám Ẩn Giả.
+  => remote=145 downloaded=0 skipped=145 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[219/301] book_id=130845 status=Còn tiếp name=Ta Muốn Tu Tiên, Ta Không Muốn Làm Ông Trùm Truyền Thông Giải Trí
+  => remote=151 downloaded=0 skipped=151 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[220/301] book_id=133134 status=Còn tiếp name=Tây Du: 81 Kiếp Nạn Bị Chơi Hỏng Rồi
+  => remote=158 downloaded=0 skipped=158 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[221/301] book_id=123401 status=Còn tiếp name=Hào Khí Anh Hùng
+  => remote=160 downloaded=0 skipped=160 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[222/301] book_id=131514 status=Còn tiếp name=Loạn Thế Cường Sinh
+  => remote=165 downloaded=0 skipped=165 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[223/301] book_id=134867 status=Còn tiếp name=Bản Tọa Trần Đại Tiên, Thích Thu Nghĩa Nữ!
+  progress downloaded=25 skipped=101 failed=0
+  progress downloaded=50 skipped=101 failed=0
+  => remote=173 downloaded=72 skipped=101 failed=0 missing_after=72 extra_after=0 status=issue commit=committed
+
+[224/301] book_id=129792 status=Còn tiếp name=Xuyên Việt Bắt Đầu Thành Luyện Kim Thuật Sư
+  => remote=181 downloaded=0 skipped=181 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[225/301] book_id=142750 status=Tạm dừng name=Tiên Lộ
+  => remote=182 downloaded=0 skipped=182 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[226/301] book_id=143601 status=Còn tiếp name=Xuyên Thành Liếm Cẩu Nam Phụ, Ta Một Cước Đạp Vỡ Thiên Mệnh!
+  => remote=183 downloaded=0 skipped=183 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[227/301] book_id=113673 status=Còn tiếp name=Đấu La Chi Thiên Cơ Phượng Hoàng
+  => remote=186 downloaded=0 skipped=186 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[228/301] book_id=125072 status=Còn tiếp name=Địa Ngục Lĩnh Chủ
+  => remote=188 downloaded=0 skipped=188 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[229/301] book_id=146593 status=Còn tiếp name=Trọng Sinh Làm Nông Dân
+  => remote=189 downloaded=0 skipped=189 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[230/301] book_id=133630 status=Còn tiếp name=Nguyên Tổ
+  => remote=195 downloaded=0 skipped=195 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[231/301] book_id=116282 status=Còn tiếp name=Ta Đông Hoàng Thái Nhất Không Ứng Kiếp
+  => remote=197 downloaded=1 skipped=196 failed=0 missing_after=1 extra_after=0 status=issue commit=committed
+
+[232/301] book_id=109768 status=Còn tiếp name=Ta Mạnh Lên Nhờ Group Chat • Vô Hạn Kĩ Năng 
+  => remote=200 downloaded=0 skipped=200 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[233/301] book_id=140101 status=Còn tiếp name=Thiên Địa Lưu Tiên
+  => remote=200 downloaded=0 skipped=200 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[234/301] book_id=152566 status=Còn tiếp name=Tam Nguyên Chấn Thế
+  => remote=217 downloaded=0 skipped=217 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_staged
+
+[235/301] book_id=135892 status=Còn tiếp name=Mạt Thế: Ta Kiến Thiết Tối Cường Căn Cứ Ngầm
+  => remote=205 downloaded=1 skipped=204 failed=0 missing_after=1 extra_after=0 status=issue commit=committed
+
+[236/301] book_id=127250 status=Còn tiếp name=Bất Diệt Kinh
+  => remote=207 downloaded=0 skipped=207 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[237/301] book_id=143709 status=Còn tiếp name=Biến Thiên 3 - Từ 1972 Bắt Đầu Làm Trùm Thương Nghiệp
+  => remote=213 downloaded=0 skipped=213 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[238/301] book_id=153347 status=Còn tiếp name=Chiến Lược Gia Thiên Tài
+  => remote=214 downloaded=12 skipped=202 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=commit_failed
+
+[239/301] book_id=136610 status=Tạm dừng name=Vũ Trụ Chi Khuyết
+  => remote=217 downloaded=0 skipped=217 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[240/301] book_id=111111 status=Còn tiếp name=Từ Arknights Bắt  Đầu Xây Dựng Thế Lực
+  => remote=218 downloaded=6 skipped=212 failed=0 missing_after=6 extra_after=0 status=issue commit=add_failed
+
+[241/301] book_id=134683 status=Tạm dừng name=Đồng Thời Xuyên Qua: Bắt Đầu Từ Doraemon.
+  => remote=228 downloaded=0 skipped=228 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[242/301] book_id=141518 status=Còn tiếp name=Thanh Thu Linh Nguyệt
+  => remote=231 downloaded=0 skipped=231 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[243/301] book_id=149202 status=Còn tiếp name=Xuyên Nhanh: Từ Blade Bắt Đầu
+  => remote=231 downloaded=0 skipped=231 failed=0 missing_after=0 extra_after=0 status=ok commit=nothing_to_commit
+
+[244/301] book_id=135181 status=Còn tiếp name=Trở Về Thế Kỉ 14
+  => remote=241 downloaded=2 skipped=239 failed=0 missing_after=2 extra_after=0 status=issue commit=add_failed
+
+[245/301] book_id=123508 status=Còn tiếp name=Yêu Võ Thần
+  => remote=250 downloaded=0 skipped=250 failed=0 missing_after=0 extra_after=0 status=commit_failed commit=add_failed
+
+[246/301] book_id=148006 status=Còn tiếp name=Đệ Nhất Thương Gia Từ Trò Chơi Bắt Đầu

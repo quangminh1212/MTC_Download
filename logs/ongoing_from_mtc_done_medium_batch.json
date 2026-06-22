@@ -1,0 +1,145 @@
+[
+  {
+    "id": 110466,
+    "name": "Đế Quốc Nhật Bản",
+    "downloaded": 178,
+    "remaining": 178,
+    "errors": []
+  },
+  {
+    "id": 138424,
+    "name": "Bị Bán Sang Cao Miên, Ta Triệu Hồi Tổ Chức Áo Đen!",
+    "downloaded": 149,
+    "remaining": 180,
+    "errors": [
+      {
+        "idx": 96,
+        "chapter_id": 23381947,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen\\\\Chương 96 Thảo luận về hoa lan máu.txt'"
+      },
+      {
+        "idx": 101,
+        "chapter_id": 23396954,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen\\\\Chương 101 Chiêu mộ tinh anh Snake cùng Rose.txt'"
+      },
+      {
+        "idx": 102,
+        "chapter_id": 23399007,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen\\\\Chương 102 Từ mẫu Elena Miyano.txt'"
+      },
+      {
+        "idx": 104,
+        "chapter_id": 23418130,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen\\\\Chương 104 Có kẻ bị lãng quên con út nhà Khlang.txt'"
+      },
+      {
+        "idx": 107,
+        "chapter_id": 23426237,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen\\\\Chương 107 Kiểm kê đủ mua căn hộ cao cấp ở Shibuya.txt'"
+      },
+      {
+        "idx": 110,
+        "chapter_id": 23436197,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen\\\\Chương 110 Sherry đề xuất cấp mẫu vật cử người đi Borneo.txt'"
+      },
+      {
+        "idx": 119,
+        "chapter_id": 23443801,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen\\\\Chương 119 Chấp nhận yêu sách Tướng Yang được thả.txt'"
+      },
+      {
+        "idx": 122,
+        "chapter_id": 23458742,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen\\\\Chương 122 Ngăn chặn thất bại phóng tên lửa.txt'"
+      },
+      {
+        "idx": 125,
+        "chapter_id": 23476496,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen\\\\Chương 125 Con bé quái dị bị câm ư.txt'"
+      },
+      {
+        "idx": 127,
+        "chapter_id": 23482152,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen\\\\Chương 127 Kịch bản thứ ba hệ thống kiểm soát khí hậu toàn cầu.txt'"
+      }
+    ]
+  },
+  {
+    "id": 147066,
+    "name": "Thực Tế Ảo: Thống Lĩnh Quân Đoàn Hắc Ám",
+    "downloaded": 229,
+    "remaining": 230,
+    "errors": [
+      {
+        "idx": 269,
+        "chapter_id": 26332757,
+        "err": "unable to decode iv"
+      }
+    ]
+  },
+  {
+    "id": 119844,
+    "name": "Long Cơ Chiến Hồn",
+    "downloaded": 257,
+    "remaining": 257,
+    "errors": []
+  },
+  {
+    "id": 131897,
+    "name": "Đại Yêu Quái",
+    "downloaded": 244,
+    "remaining": 268,
+    "errors": [
+      {
+        "idx": 198,
+        "chapter_id": 20507741,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Đại Yêu Quái\\\\Chương 198 Cự Hình Thanh Liên Khôi.txt'"
+      },
+      {
+        "idx": 200,
+        "chapter_id": 20525856,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Đại Yêu Quái\\\\Chương 200 Tử Linh Phục Ma.txt'"
+      },
+      {
+        "idx": 202,
+        "chapter_id": 20552392,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Đại Yêu Quái\\\\Chương 202 Thu hoạch bất ngờ.txt'"
+      },
+      {
+        "idx": 214,
+        "chapter_id": 20647161,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Đại Yêu Quái\\\\Chương 214 Bước đầu chuẩn bị.txt'"
+      },
+      {
+        "idx": 216,
+        "chapter_id": 20676313,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Đại Yêu Quái\\\\Chương 216 Ta là Kinh Dương Vương.txt'"
+      },
+      {
+        "idx": 218,
+        "chapter_id": 20696350,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Đại Yêu Quái\\\\Chương 218 Thông Huyền Con Đường Của Diệp Phong.txt'"
+      },
+      {
+        "idx": 274,
+        "chapter_id": 21409473,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Đại Yêu Quái\\\\Chương 274 Tứ Thiên Cửu Giới Nhà Gỗ Giữa Rừng.txt'"
+      },
+      {
+        "idx": 281,
+        "chapter_id": 21520597,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Đại Yêu Quái\\\\Chương 281 Tham Lang bá đạo.txt'"
+      },
+      {
+        "idx": 304,
+        "chapter_id": 22022868,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Đại Yêu Quái\\\\Chương 304 Trở Mặt.txt'"
+      },
+      {
+        "idx": 313,
+        "chapter_id": 22161350,
+        "err": "[Errno 22] Invalid argument: 'C:\\\\Dev\\\\MTC_Continune\\\\Đại Yêu Quái\\\\Chương 313 Yêu Thánh Tịnh Uyên.txt'"
+      }
+    ]
+  }
+]

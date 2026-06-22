@@ -1,0 +1,35 @@
+book=Hướng Dẫn Cơ Bản
+book_id=126573
+out=C:\Dev\MTC\Hướng Dẫn Cơ Bản
+chapters_total=13 expected=13
+[1/13] download chapter_id=18042525 file=Chương 1 Cài đặt giao diện sáng tối.txt
+  OK decrypted=True written=Chương 1 Cài đặt giao diện sáng tối.txt
+[2/13] download chapter_id=18042526 file=Chương 2 Thay đổi màu nền cỡ chữ font chữ khi đọc truyện.txt
+  OK decrypted=True written=Chương 2 Thay đổi màu nền cỡ chữ font chữ khi đọc truyện.txt
+[3/13] download chapter_id=18042527 file=Chương 3 Kẹo là gì Sao không còn dùng được.txt
+  OK decrypted=True written=Chương 3 Kẹo là gì Sao không còn dùng được.txt
+[4/13] download chapter_id=18042528 file=Chương 4 Khoai là gì Làm sao để có.txt
+  OK decrypted=True written=Chương 4 Khoai là gì Làm sao để có.txt
+[5/13] download chapter_id=18042529 file=Chương 5 Chìa Khoá dùng làm gì Làm sao để có.txt
+  OK decrypted=True written=Chương 5 Chìa Khoá dùng làm gì Làm sao để có.txt
+[6/13] download chapter_id=18042530 file=Chương 6 Lọc truyện trên web mất đi đâu rồi.txt
+  OK decrypted=True written=Chương 6 Lọc truyện trên web mất đi đâu rồi.txt
+[7/13] download chapter_id=18042531 file=Chương 7 Mấy bảng xếp hạng theo tuần đâu rồi.txt
+  OK decrypted=True written=Chương 7 Mấy bảng xếp hạng theo tuần đâu rồi.txt
+[8/13] download chapter_id=18042532 file=Chương 8 Làm sao để có phiếu đề cử.txt
+  OK decrypted=True written=Chương 8 Làm sao để có phiếu đề cử.txt
+[9/13] download chapter_id=18042534 file=Chương 10 Làm sao để Đề cử hay Tặng quà.txt
+  OK decrypted=True written=Chương 10 Làm sao để Đề cử hay Tặng quà.txt
+[10/13] download chapter_id=18042538 file=Chương 11 Vì sao bình luận đánh giá của tôi bị xoá.txt
+  OK decrypted=True written=Chương 11 Vì sao bình luận đánh giá của tôi bị xoá.txt
+[11/13] download chapter_id=18042539 file=Chương 12 Vì sao tôi bị khoá tài khoản.txt
+  OK decrypted=True written=Chương 12 Vì sao tôi bị khoá tài khoản.txt
+[12/13] download chapter_id=18042540 file=Chương 13 Vì sao cùng người khác chửi lộn mà có mỗi tôi bị khoá phạt.txt
+  OK decrypted=True written=Chương 13 Vì sao cùng người khác chửi lộn mà có mỗi tôi bị khoá phạt.txt
+[13/13] download chapter_id=18042541 file=Chương 14 Tôi vẫn còn thắc mắc.txt
+  OK decrypted=True written=Chương 14 Tôi vẫn còn thắc mắc.txt
+final_ok=13
+final_fail=0
+out=C:\Dev\MTC\Hướng Dẫn Cơ Bản
+
+[stderr]

@@ -1,0 +1,134 @@
+[
+  {
+    "folder": "Bất Diệt Kinh",
+    "status": "ok",
+    "stdout": "[main 6ddd3b0dbfe] update: Bất Diệt Kinh\n 2 files changed, 148 deletions(-)\n delete mode 100644 Bất Diệt Kinh/Chương 19 Ngũ Hành Trúc Cơ.txt\n delete mode 100644 Bất Diệt Kinh/Chương 20 Thấy Được Mị Cơ.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Bắt Đầu Xuất Sinh Ta Cố Gắng Đến Vô Địch",
+    "status": "ok",
+    "stdout": "[main 2d9fae79368] update: Bắt Đầu Xuất Sinh Ta Cố Gắng Đến Vô Địch\n 1 file changed, 2 insertions(+), 10 deletions(-)\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Dạo Chơi Chư Thiên Đạo Sĩ",
+    "status": "ok",
+    "stdout": "[main 27f29634c12] update: Dạo Chơi Chư Thiên Đạo Sĩ\n 2 files changed, 238 deletions(-)\n delete mode 100644 Dạo Chơi Chư Thiên Đạo Sĩ/Chương 23 Thánh vương kiếm pháp thương lãng chi thủy.txt\n delete mode 100644 Dạo Chơi Chư Thiên Đạo Sĩ/Chương 42 Hai vấn đề Lục Tổ lột xác.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Frieren Bắt Đầu Bái Sư Serie",
+    "status": "ok",
+    "stdout": "[main c21c4e5572f] update: Frieren Bắt Đầu Bái Sư Serie\n 1 file changed, 149 deletions(-)\n delete mode 100644 Frieren Bắt Đầu Bái Sư Serie/Chương 54 Mut Thuốc bổ nha đừng đánh đoạn chân của ta à T T.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Game Mới Cập Nhật Ta Đem Sư Phụ Đi Gặp Người Yêu Cũ",
+    "status": "ok",
+    "stdout": "[main dc31acbda3e] update: Game Mới Cập Nhật Ta Đem Sư Phụ Đi Gặp Người Yêu Cũ\n 1 file changed, 4 insertions(+), 84 deletions(-)\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Game Point Cú Đánh Cuối Cùng",
+    "status": "ok",
+    "stdout": "[main 81f7d817981] update: Game Point Cú Đánh Cuối Cùng\n 10 files changed, 1057 deletions(-)\n delete mode 100644 Game Point Cú Đánh Cuối Cùng/Chương 1 HÀNH TRÌNH MỚI.txt\n delete mode 100644 Game Point Cú Đánh Cuối Cùng/Chương 10 SỰ CỐ CHẤP LẶNG LẼ.txt\n delete mode 100644 Game Point Cú Đánh Cuối Cùng/Chương 2 Ở NGOÀI SÂN.txt\n delete mode 100644 Game Point Cú Đánh Cuối Cùng/Chương 3 CHỈ ĐÁNH MỘT MÌNH.txt\n delete mode 100644 Game Point Cú Đánh Cuối Cùng/Chương 4 BUỔI TUYỂN CHỌN.txt\n delete mode 100644 Game Point Cú Đánh Cuối Cùng/Chương 5 BẢN NĂNG CŨ.txt\n delete mode 100644 Game Point Cú Đánh Cuối Cùng/Chương 6 KHÔNG KHỚP NHỊP.txt\n delete mode 100644 Game Point Cú Đánh Cuối Cùng/Chương 7 DANH SÁCH VÀ KỊCH BẢN ĐƠN ĐỘC.txt\n delete mode 100644 Game Point Cú Đánh Cuối Cùng/Chương 8 NHỊP KHỞI ĐẦU.txt\n delete mode 100644 Game Point Cú Đánh Cuối Cùng/Chương 9 NHỮNG ĐƯỜNG CẦU ĐỐI LẬP.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Game Thực Tế Ảo Người Chơi Trọng Sinh",
+    "status": "ok",
+    "stdout": "[main f177fd25672] update: Game Thực Tế Ảo Người Chơi Trọng Sinh\n 1 file changed, 9 insertions(+), 13 deletions(-)\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Hải Tặc Hệ Thống Sớm Đến Cướp Mất Linlin",
+    "status": "ok",
+    "stdout": "[main d6e74a72b3c] update: Hải Tặc Hệ Thống Sớm Đến Cướp Mất Linlin\n 1 file changed, 367 deletions(-)\n delete mode 100644 Hải Tặc Hệ Thống Sớm Đến Cướp Mất Linlin/Chương 15 Apollo thiết lôi meo meo chùy tất trúng thương.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Hắc Ám Ẩn Giả",
+    "status": "ok",
+    "stdout": "[main e858727c08c] update: Hắc Ám Ẩn Giả\n 1 file changed, 1 insertion(+), 37 deletions(-)\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Khoa Học Kiểu Conan Sōsōnin",
+    "status": "ok",
+    "stdout": "[main 684c06f5a61] update: Khoa Học Kiểu Conan Sōsōnin\n 1 file changed, 101 deletions(-)\n delete mode 100644 Khoa Học Kiểu Conan Sōsōnin/Chương 30 Amuro Tooru Đừng đùa ta.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Khúc Độc Hành Trong Đêm Trường Tận Thế",
+    "status": "ok",
+    "stdout": "[main 654fe1bed74] update: Khúc Độc Hành Trong Đêm Trường Tận Thế\n 1 file changed, 4 insertions(+), 12 deletions(-)\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Kiếm Cốt Của Ta Hàng Năm Gia Tăng Một Tấc",
+    "status": "ok",
+    "stdout": "[main 7a9cc8113ac] update: Kiếm Cốt Của Ta Hàng Năm Gia Tăng Một Tấc\n 1 file changed, 153 deletions(-)\n delete mode 100644 Kiếm Cốt Của Ta Hàng Năm Gia Tăng Một Tấc/Chương 120 Vân Hải Thành.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Long Cơ Chiến Hồn",
+    "status": "ok",
+    "stdout": "[main fdc768987e6] update: Long Cơ Chiến Hồn\n 1 file changed, 71 deletions(-)\n delete mode 100644 Long Cơ Chiến Hồn/Chương 551 Nham Mạch.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Mc Cẩm Nang Giao Dịch Honkai Của Wandering Trader",
+    "status": "ok",
+    "stdout": "[main 624984ddaa5] update: Mc Cẩm Nang Giao Dịch Honkai Của Wandering Trader\n 1 file changed, 157 deletions(-)\n delete mode 100644 Mc Cẩm Nang Giao Dịch Honkai Của Wandering Trader/Chương 16 Vượng Tài Bella.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Quán Net Âm Dương",
+    "status": "ok",
+    "stdout": "[main 9192ceb1fe2] update: Quán Net Âm Dương\n 1 file changed, 139 deletions(-)\n delete mode 100644 Quán Net Âm Dương/Chương 16 Cho nữ quỷ hứa hẹn.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Sắt Thép Ma Pháp",
+    "status": "ok",
+    "stdout": "[main fe7597500a1] update: Sắt Thép Ma Pháp\n 1 file changed, 131 insertions(+), 139 deletions(-)\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Từ Arknights Bắt Đầu Xây Dựng Thế Lực",
+    "status": "ok",
+    "stdout": "[main a028dd871cc] update: Từ Arknights Bắt Đầu Xây Dựng Thế Lực\n 1 file changed, 165 deletions(-)\n delete mode 100644 Từ Arknights Bắt Đầu Xây Dựng Thế Lực/Chương 17 Biến số.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Không Thể Trường Sinh Ta Không Thể Làm Gì Khác Ngoài Vô Hạn Chuyển Thế",
+    "status": "ok",
+    "stdout": "ương 953 Ngươi câu chuyện truyền kỳ sẽ ở Tam Thiên Thế Giới truyền lưu.txt\n create mode 100644 Không Thể Trường Sinh Ta Không Thể Làm Gì Khác Ngoài Vô Hạn Chuyển Thế/Chương 954 Đại kết cục Ngàn dặm chuyến đi bắt đầu tại dưới chân 1.txt\n create mode 100644 Không Thể Trường Sinh Ta Không Thể Làm Gì Khác Ngoài Vô Hạn Chuyển Thế/Chương 955 Đại kết cục Ngàn dặm chuyến đi bắt đầu tại dưới chân 2.txt\n create mode 100644 Không Thể Trường Sinh Ta Không Thể Làm Gì Khác Ngoài Vô Hạn Chuyển Thế/Chương 956 Đại kết cục Ngàn dặm chuyến đi bắt đầu tại dưới chân 3.txt\n create mode 100644 Không Thể Trường Sinh Ta Không Thể Làm Gì Khác Ngoài Vô Hạn Chuyển Thế/Chương 957 Đại kết cục Ngàn dặm chuyến đi bắt đầu tại dưới chân 4.txt\n create mode 100644 Không Thể Trường Sinh Ta Không Thể Làm Gì Khác Ngoài Vô Hạn Chuyển Thế/Chương 958 Phiên ngoại Thái Bạch cùng Thanh Liên hai ba chuyện bên trên.txt\n create mode 100644 Không Thể Trường Sinh Ta Không Thể Làm Gì Khác Ngoài Vô Hạn Chuyển Thế/Chương 959 Phiên ngoại Thái Bạch cùng Thanh Liên hai ba chuyện Hạ.txt\n create mode 100644 Không Thể Trường Sinh Ta Không Thể Làm Gì Khác Ngoài Vô Hạn Chuyển Thế/Chương 960 Phiên ngoại Cái kia đại náo Thiên Đình con khỉ.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Khắc Mệnh Tu Hành Từ Cẩm Y Vệ Bắt Đầu Trường Sinh",
+    "status": "ok",
+    "stdout": "h Từ Cẩm Y Vệ Bắt Đầu Trường Sinh/Chương 911 Vượt qua Tiên Đế lực lượng tổ tiên cảnh.txt\n create mode 100644 Khắc Mệnh Tu Hành Từ Cẩm Y Vệ Bắt Đầu Trường Sinh/Chương 912 Vĩnh hằng Tiên vực đại kết cục.txt\n create mode 100644 Khắc Mệnh Tu Hành Từ Cẩm Y Vệ Bắt Đầu Trường Sinh/Chương 92 Xưa nay chưa từng có yêu ma triều dâng.txt\n create mode 100644 Khắc Mệnh Tu Hành Từ Cẩm Y Vệ Bắt Đầu Trường Sinh/Chương 93 Thần khiếu chi cảnh ta vì thiên hạ chi quan.txt\n create mode 100644 Khắc Mệnh Tu Hành Từ Cẩm Y Vệ Bắt Đầu Trường Sinh/Chương 94 Vô cực sinh thái cực Thái Cực sinh âm dương.txt\n create mode 100644 Khắc Mệnh Tu Hành Từ Cẩm Y Vệ Bắt Đầu Trường Sinh/Chương 95 Kịch chiến Thần Biến cảnh bước thứ ba đại yêu.txt\n create mode 100644 Khắc Mệnh Tu Hành Từ Cẩm Y Vệ Bắt Đầu Trường Sinh/Chương 96 Thần Biến cảnh luyện thể võ giả.txt\n create mode 100644 Khắc Mệnh Tu Hành Từ Cẩm Y Vệ Bắt Đầu Trường Sinh/Chương 97 Nghịch hành âm dương diễn hóa hỗn độn.txt\n create mode 100644 Khắc Mệnh Tu Hành Từ Cẩm Y Vệ Bắt Đầu Trường Sinh/Chương 98 Chém giết tiểu yêu càng có tính so sánh giá cả.txt\n create mode 100644 Khắc Mệnh Tu Hành Từ Cẩm Y Vệ Bắt Đầu Trường Sinh/Chương 99 Thượng Cổ dị chủng Cửu Đầu Ma Xà.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Kim Bảng Hiện Thế Trẫm Hoàng Hậu Dĩ Nhiên Là Võ Tắc Thiên",
+    "status": "ok",
+    "stdout": "n Thế Trẫm Hoàng Hậu Dĩ Nhiên Là Võ Tắc Thiên/Chương 991 _2 kiêng kỵ đến mức tận cùng cầu hoa tươi.txt\n create mode 100644 Kim Bảng Hiện Thế Trẫm Hoàng Hậu Dĩ Nhiên Là Võ Tắc Thiên/Chương 992 _1 Ba bảng hạng năm bao vây tiễu trừ nguy cơ cùng kỳ ngộ.txt\n create mode 100644 Kim Bảng Hiện Thế Trẫm Hoàng Hậu Dĩ Nhiên Là Võ Tắc Thiên/Chương 993 _2 nội bộ cạnh tranh kịch liệt cầu hoa tươi.txt\n create mode 100644 Kim Bảng Hiện Thế Trẫm Hoàng Hậu Dĩ Nhiên Là Võ Tắc Thiên/Chương 994 _1 Nhiệm vụ Giang Ngọc Yến tự tin.txt\n create mode 100644 Kim Bảng Hiện Thế Trẫm Hoàng Hậu Dĩ Nhiên Là Võ Tắc Thiên/Chương 995 _2 lưỡng lự Doanh Chính ẩn dấu cầu hoa tươi.txt\n create mode 100644 Kim Bảng Hiện Thế Trẫm Hoàng Hậu Dĩ Nhiên Là Võ Tắc Thiên/Chương 996 _1 Ba bảng tên thứ tư đều bị bao lãm.txt\n create mode 100644 Kim Bảng Hiện Thế Trẫm Hoàng Hậu Dĩ Nhiên Là Võ Tắc Thiên/Chương 997 _2 Thủ đoạn của chính mình ẩn dấu sâu vô cùng cầu hoa tươi.txt\n create mode 100644 Kim Bảng Hiện Thế Trẫm Hoàng Hậu Dĩ Nhiên Là Võ Tắc Thiên/Chương 998 _1 Mục đích thực sự là cái gì Sớm có dự liệu.txt\n create mode 100644 Kim Bảng Hiện Thế Trẫm Hoàng Hậu Dĩ Nhiên Là Võ Tắc Thiên/Chương 999 _2 Ý đồ tâm thiên Vu Hoàng hướng.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo",
+    "status": "ok",
+    "stdout": "te mode 100644 Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo/Chương 9 Hảo huynh đệ Mạnh Hải.txt\n create mode 100644 Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo/Chương 90 Thần Diễm Phù uy lực.txt\n create mode 100644 Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo/Chương 91 Thông tin cùng hưởng.txt\n create mode 100644 Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo/Chương 92 Vô lương Vân lão.txt\n create mode 100644 Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo/Chương 93 Bên trong cấm khu tiểu nữ hài.txt\n create mode 100644 Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo/Chương 94 Trên thần nộ cảnh giới.txt\n create mode 100644 Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo/Chương 95 Cái thứ Hai đồ đệ.txt\n create mode 100644 Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo/Chương 96 Dở hơi tổ hợp.txt\n create mode 100644 Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo/Chương 97 Kinh sợ Thượng Quan Hồng.txt\n create mode 100644 Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo/Chương 98 Cửu Diệu Tinh Thần Biến.txt\n create mode 100644 Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo/Chương 99 Diệt sát U Hồn Lão Quỷ.txt\n",
+    "stderr": ""
+  },
+  {
+    "folder": "Ký Túc Xá Cầu Sinh Ta Bị Mặc Định Của Hệ Thống Toàn Tuyển D",
+    "status": "ok",
+    "stdout": "[main 70e57c0f6ac] update: Ký Túc Xá Cầu Sinh Ta Bị Mặc Định Của Hệ Thống Toàn Tuyển D\n 1 file changed, 331 insertions(+)\n create mode 100644 Ký Túc Xá Cầu Sinh Ta Bị Mặc Định Của Hệ Thống Toàn Tuyển D/Chương 1 Ký túc xá cầu sinh trò chơi.txt\n",
+    "stderr": ""
+  }
+]

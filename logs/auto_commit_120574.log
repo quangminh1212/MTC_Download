@@ -1,0 +1,174 @@
+book=Biến Thiên
+book_id=120574
+out=C:\Dev\MTC\Biến Thiên
+chapters_total=152 expected=152
+[1/152] skip existing file=Chương 1 Bắt đầu.txt
+[2/152] skip existing file=Chương 2 Cố đô Sài Gòn.txt
+[3/152] skip existing file=Chương 3 Lục Địa Hoàng Đế và môi giới bất động sản.txt
+[4/152] skip existing file=Chương 4 Nhan sắc vạn người mê.txt
+[5/152] skip existing file=Chương 5 Thần Chết.txt
+[6/152] skip existing file=Chương 6 Thần Chết là trai ế.txt
+[7/152] download chapter_id=16784289 file=Chương 7 Chủ tịch ... và cái kết.txt
+  OK decrypted=True written=Chương 7 Chủ tịch ... và cái kết.txt
+[8/152] skip existing file=Chương 8 Chỉ cần xây lầu thật cao đâu cần để ý tới ngập úng khắp đường.txt
+[9/152] skip existing file=Chương 9 Sự chuẩn bị của Xuân Đào.txt
+[10/152] skip existing file=Chương 10 Tiệc tối.txt
+[11/152] skip existing file=Chương 11 Lý Viễn Sử gia tài ba.txt
+[12/152] skip existing file=Chương 12 Buồn của An.txt
+[13/152] skip existing file=Chương 13 Không ngờ gặp phải thằng liều.txt
+[14/152] skip existing file=Chương 14 Trần Thị Thu Huyền.txt
+[15/152] skip existing file=Chương 15 Mưa đúng lúc.txt
+[16/152] skip existing file=Chương 16 Đi Nhà Nghỉ.txt
+[17/152] skip existing file=Chương 17 Sự chu đáo của Lý Viễn.txt
+[18/152] skip existing file=Chương 18 Bán rẻ dự án Hòa Phước.txt
+[19/152] skip existing file=Chương 19 Ái Lan mê tiền.txt
+[20/152] skip existing file=Chương 20 Bị chuốc say.txt
+[21/152] download chapter_id=16830296 file=Chương 21 Chiếm lấy công ty 1.txt
+  OK decrypted=True written=Chương 21 Chiếm lấy công ty 1.txt
+[22/152] download chapter_id=16837793 file=Chương 22 Chiếm lấy công ty 2.txt
+  OK decrypted=True written=Chương 22 Chiếm lấy công ty 2.txt
+[23/152] skip existing file=Chương 23 Chiếm lấy công ty 3.txt
+[24/152] skip existing file=Chương 24 Chiếm lấy công ty xong.txt
+[25/152] skip existing file=Chương 25 Cậu lấy gì nuôi con tui.txt
+[26/152] skip existing file=Chương 26 Cuộc sống khó khăn của Lý Viễn.txt
+[27/152] skip existing file=Chương 27 Bị gài thế.txt
+[28/152] skip existing file=Chương 28 Vu khống.txt
+[29/152] skip existing file=Chương 29 Cục điều tra đặc biệt.txt
+[30/152] skip existing file=Chương 30 Lời mời của Xuân Đào.txt
+[31/152] skip existing file=Chương 31 Tiết lộ về siêu năng lực.txt
+[32/152] skip existing file=Chương 32 Xuân Đào thức tỉnh.txt
+[33/152] skip existing file=Chương 33 Đội hình bá đạo.txt
+[34/152] skip existing file=Chương 34 Năng lượng mạch máu của quốc gia.txt
+[35/152] skip existing file=Chương 35 Vũ khí chiến lược.txt
+[36/152] skip existing file=Chương 36 Ái Lan sa lầy.txt
+[37/152] skip existing file=Chương 37 Siêu nhân của Trung Quốc.txt
+[38/152] skip existing file=Chương 38 Mũi tiêm siêu nhân.txt
+[39/152] skip existing file=Chương 39 Chấn động thế giới.txt
+[40/152] skip existing file=Chương 40 Giải cứu Văn Nguyên.txt
+[41/152] skip existing file=Chương 41 Những người bị bỏ rơi.txt
+[42/152] download chapter_id=16892244 file=Chương 42 Khu Vui chơi “Thiên Thượng Nhân Gian”.txt
+  OK decrypted=True written=Chương 42 Khu Vui chơi “Thiên Thượng Nhân Gian”.txt
+[43/152] skip existing file=Chương 43 Sức mạnh tuyệt đối.txt
+[44/152] skip existing file=Chương 44 Tây Môn Thiến.txt
+[45/152] skip existing file=Chương 45 Truyền nhân của Tào Tháo.txt
+[46/152] skip existing file=Chương 46 Lưu Thế Hùng.txt
+[47/152] download chapter_id=16900699 file=Chương 47 Ngày báo thù 1.txt
+  OK decrypted=True written=Chương 47 Ngày báo thù 1.txt
+[48/152] download chapter_id=16901741 file=Chương 48 Ngày báo thù 2.txt
+  OK decrypted=True written=Chương 48 Ngày báo thù 2.txt
+[49/152] skip existing file=Chương 49 Ngày báo thù 3.txt
+[50/152] skip existing file=Chương 50 Giấc mơ của Nguyễn Tuân.txt
+[51/152] skip existing file=Chương 51 Nước Mỹ lên án.txt
+[52/152] skip existing file=Chương 52 Lật bài.txt
+[53/152] skip existing file=Chương 53 Rồng châu á.txt
+[54/152] download chapter_id=16918457 file=Chương 54 UAV “cơ hội”.txt
+  OK decrypted=True written=Chương 54 UAV “cơ hội”.txt
+[55/152] skip existing file=Chương 55 Mở rộng quan hệ.txt
+[56/152] skip existing file=Chương 56 Nguyên nhân chiến tranh.txt
+[57/152] skip existing file=Chương 57 Nguyên thăng chức.txt
+[58/152] skip existing file=Chương 58 Số phận Ái Lan.txt
+[59/152] skip existing file=Chương 59 Ai rồi cũng sẽ hạnh phúc thôi.txt
+[60/152] skip existing file=Chương 60 Bàn tay ngầm.txt
+[61/152] skip existing file=Chương 61 Sóng ngầm trỗi dậy.txt
+[62/152] skip existing file=Chương 62 Lễ cưới.txt
+[63/152] skip existing file=Chương 63 Kim Linh bị bắt.txt
+[64/152] skip existing file=Chương 64 Lý Viễn số hưởng.txt
+[65/152] download chapter_id=16941507 file=Chương 65 Đại Án “Thiên Đường”.txt
+  OK decrypted=True written=Chương 65 Đại Án “Thiên Đường”.txt
+[66/152] skip existing file=Chương 66 Truy vết đại án.txt
+[67/152] skip existing file=Chương 67 Đả dị diệt siêu.txt
+[68/152] skip existing file=Chương 68 Quanh co chối tội.txt
+[69/152] skip existing file=Chương 69 Lý Viễn vs Thổ Nhĩ Kỳ.txt
+[70/152] skip existing file=Chương 70 Anh hùng cũng phải sợ vợ thôi.txt
+[71/152] skip existing file=Chương 71 Siêu nhân tị nạn.txt
+[72/152] skip existing file=Chương 72 Thùy mất tích.txt
+[73/152] skip existing file=Chương 73 Soloni thiên đường tội ác.txt
+[74/152] skip existing file=Chương 74 Hazar cựu thủ lĩnh quân kháng chiến.txt
+[75/152] skip existing file=Chương 75 Sức mạnh của bóng đêm.txt
+[76/152] skip existing file=Chương 76 Hội Phục Hưng Phụ Nữ.txt
+[77/152] skip existing file=Chương 77 Những bàn tay nhuốm máu.txt
+[78/152] skip existing file=Chương 78 Phụ nữ ở Soloni.txt
+[79/152] skip existing file=Chương 79 Cổng truyền tống.txt
+[80/152] skip existing file=Chương 80 Kháng chiến bắt đầu.txt
+[81/152] skip existing file=Chương 81 Trận mở màn.txt
+[82/152] skip existing file=Chương 82 Thảm họa tại dải Gaza.txt
+[83/152] skip existing file=Chương 83 Chuẩn bị trước đại chiến.txt
+[84/152] download chapter_id=16987966 file=Chương 84 Đại chiến đồi Sirent 1.txt
+  OK decrypted=True written=Chương 84 Đại chiến đồi Sirent 1.txt
+[85/152] download chapter_id=16989110 file=Chương 85 Đại chiến đồi Sirent 2.txt
+  OK decrypted=True written=Chương 85 Đại chiến đồi Sirent 2.txt
+[86/152] skip existing file=Chương 86 Đại chiến đồi Sirent 3.txt
+[87/152] skip existing file=Chương 87 Đại chiến đồi Siren 4.txt
+[88/152] skip existing file=Chương 88 Hán Siêu trở lại.txt
+[89/152] skip existing file=Chương 89 Hán Siêu và Lý Viễn.txt
+[90/152] skip existing file=Chương 90 Cung đấu.txt
+[91/152] skip existing file=Chương 91 Thần Chết nổi giận.txt
+[92/152] skip existing file=Chương 92 Nữ Thần thức tỉnh.txt
+[93/152] skip existing file=Chương 93 Ba năm sau.txt
+[94/152] skip existing file=Chương 94 Kinh Biến.txt
+[95/152] skip existing file=Chương 95 Triều Đại Hoàng Kim tập kích.txt
+[96/152] skip existing file=Chương 96 Nghịch chuyển.txt
+[97/152] skip existing file=Chương 97 Kháng chiến bắt đầu.txt
+[98/152] skip existing file=Chương 98 Hội nghị.txt
+[99/152] skip existing file=Chương 99 Chuẩn bị quân lực.txt
+[100/152] skip existing file=Chương 100 Succubus.txt
+[101/152] skip existing file=Chương 101 Căn cứ Mặt Trăng.txt
+[102/152] skip existing file=Chương 102 Hạm đội xâm lấn.txt
+[103/152] download chapter_id=17035128 file=Chương 103 ST. Mia Jane.txt
+  OK decrypted=True written=Chương 103 ST. Mia Jane.txt
+[104/152] skip existing file=Chương 104 Phục kích ở sao Hỏa.txt
+[105/152] skip existing file=Chương 105 Hoàng Đế trở về.txt
+[106/152] skip existing file=Chương 106 Tình thế sau đại chiến.txt
+[107/152] skip existing file=Chương 107 Giải phóng và đô hộ.txt
+[108/152] skip existing file=Chương 108 Hoàng Đế Giá Lâm.txt
+[109/152] skip existing file=Chương 109 Lựa chọn.txt
+[110/152] skip existing file=Chương 110 Cách mạng.txt
+[111/152] skip existing file=Chương 111 Archimonde.txt
+[112/152] skip existing file=Chương 112 Hội nghị chúa quỷ.txt
+[113/152] skip existing file=Chương 113 Người thủ hộ thế giới.txt
+[114/152] skip existing file=Chương 114 Hành tinh Hỏa Sàng.txt
+[115/152] skip existing file=Chương 115 Pháo Đài Vệ Tinh.txt
+[116/152] skip existing file=Chương 116 Thế giới rộng lớn.txt
+[117/152] skip existing file=Chương 117 Cái chết của Archimonde.txt
+[118/152] skip existing file=Chương 118 Người chơi thành công cụ.txt
+[119/152] skip existing file=Chương 119 Chúa quỷ đột kích.txt
+[120/152] skip existing file=Chương 120 Hắc Ám Chân Thân.txt
+[121/152] download chapter_id=17078417 file=Chương 121 Ngày tàn của đế quốc 1.txt
+  OK decrypted=True written=Chương 121 Ngày tàn của đế quốc 1.txt
+[122/152] download chapter_id=17079319 file=Chương 122 Ngày tàn của đế quốc 2.txt
+  OK decrypted=True written=Chương 122 Ngày tàn của đế quốc 2.txt
+[123/152] skip existing file=Chương 123 Ngày tàn của đế quốc 3.txt
+[124/152] skip existing file=Chương 124 Ngày tàn của đế quốc 4.txt
+[125/152] skip existing file=Chương 125 Luôn có kẻ tìm đường chết.txt
+[126/152] skip existing file=Chương 126 Haga và các chúa quỷ.txt
+[127/152] skip existing file=Chương 127 Lời mời của Haga.txt
+[128/152] skip existing file=Chương 128 Tham lam.txt
+[129/152] skip existing file=Chương 129 Lý Viễn với Satan.txt
+[130/152] skip existing file=Chương 130 Satan nổi giận lại không được chết.txt
+[131/152] skip existing file=Chương 131 Satan và công chúa.txt
+[132/152] skip existing file=Chương 132 Kỵ sĩ và Satan.txt
+[133/152] skip existing file=Chương 133 Bàn tay vàng nhân tạo.txt
+[134/152] skip existing file=Chương 134 Thuật pháp vs Tà Thần.txt
+[135/152] skip existing file=Chương 135 Nữ chúa xuất hiện.txt
+[136/152] skip existing file=Chương 136 Bí mật của Raimiri.txt
+[137/152] skip existing file=Chương 137 Tà thần hàng lâm.txt
+[138/152] skip existing file=Chương 138 Tà thần sập bẫy.txt
+[139/152] skip existing file=Chương 139 Vũ Tiến Duy.txt
+[140/152] skip existing file=Chương 140 Cuốn tiểu thuyết lạ kỳ.txt
+[141/152] skip existing file=Chương 141 Trại chăn nuôi tà thần.txt
+[142/152] skip existing file=Chương 142 Chư thiên vạn giới.txt
+[143/152] skip existing file=Chương 143 Học viện hệ thống.txt
+[144/152] skip existing file=Chương 144 Thủ hộ thế giới.txt
+[145/152] skip existing file=Chương 145 Gondur kẻ phản diện ẩn mình.txt
+[146/152] skip existing file=Chương 146 Sức mạnh từ thiên giới.txt
+[147/152] skip existing file=Chương 147 Đông Phương Minh.txt
+[148/152] skip existing file=Chương 148 Tin tức của Văn An.txt
+[149/152] skip existing file=Chương 149 Đông Phương Tú.txt
+[150/152] skip existing file=Chương 150 Truy tìm Xuân Đào.txt
+[151/152] skip existing file=Chương 151 Thông minh và ngu ngốc.txt
+[152/152] skip existing file=Chương 152 Vạn giới thái bình End.txt
+final_ok=152
+final_fail=0
+out=C:\Dev\MTC\Biến Thiên
+
+[stderr]

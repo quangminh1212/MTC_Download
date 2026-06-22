@@ -1,0 +1,815 @@
+{
+  "candidates": [
+    {
+      "folder": "Bắt Đầu Bị Đày Đi Sung Quân Ta Từ Max Cấp Tiễn Thuật Bắt Đầu",
+      "expected": 559,
+      "actual": 570,
+      "extra_count": 11,
+      "extra_nums": [
+        560,
+        561,
+        562,
+        563,
+        564,
+        565,
+        566,
+        567,
+        568,
+        569,
+        570
+      ]
+    },
+    {
+      "folder": "Cao Võ Vô Hạn Phân Thân Bắt Đầu Cho Ăn Bể Bụng S Dị Thú",
+      "expected": 1220,
+      "actual": 1221,
+      "extra_count": 1,
+      "extra_nums": [
+        1221
+      ]
+    },
+    {
+      "folder": "Chiêu Hắc Thể Chất Bắt Đầu Tu Hành Tại Phế Thổ",
+      "expected": 2981,
+      "actual": 2986,
+      "extra_count": 5,
+      "extra_nums": [
+        2982,
+        2983,
+        2984,
+        2985,
+        2986
+      ]
+    },
+    {
+      "folder": "Chó Giữ Nhà Đều Là Đế Cảnh Ngươi Quản Cái Này Gọi Nghèo Túng Tông Môn",
+      "expected": 481,
+      "actual": 482,
+      "extra_count": 1,
+      "extra_nums": [
+        482
+      ]
+    },
+    {
+      "folder": "Cái Này Giang Hồ Bởi Vì Ta Mà Trở Nên Kỳ Quái",
+      "expected": 615,
+      "actual": 616,
+      "extra_count": 1,
+      "extra_nums": [
+        616
+      ]
+    },
+    {
+      "folder": "Cẩu Tại Tạp Dịch Lặng Lẽ Tu Hành",
+      "expected": 478,
+      "actual": 479,
+      "extra_count": 1,
+      "extra_nums": [
+        479
+      ]
+    },
+    {
+      "folder": "Cực Phẩm Tiên Nông",
+      "expected": 863,
+      "actual": 864,
+      "extra_count": 1,
+      "extra_nums": [
+        864
+      ]
+    },
+    {
+      "folder": "Ghế Số 12 Ta Tu Luyện Thành Một Cái Cây Ngươi Nói Ta Nguy Hiểm",
+      "expected": 630,
+      "actual": 631,
+      "extra_count": 1,
+      "extra_nums": [
+        631
+      ]
+    },
+    {
+      "folder": "Gia Tộc Quật Khởi Từ Làm Gia Gia Bắt Đầu",
+      "expected": 1677,
+      "actual": 1689,
+      "extra_count": 12,
+      "extra_nums": [
+        1678,
+        1679,
+        1680,
+        1681,
+        1682,
+        1683,
+        1684,
+        1685,
+        1686,
+        1687,
+        1688,
+        1689
+      ]
+    },
+    {
+      "folder": "Gọi Ngươi Đi Chịu Chết Không Có Để Ngươi Vô Địch",
+      "expected": 1751,
+      "actual": 1754,
+      "extra_count": 3,
+      "extra_nums": [
+        1752,
+        1753,
+        1754
+      ]
+    },
+    {
+      "folder": "Huyền Huyễn Nguyên Lai Ta Là Tuyệt Thế Võ Thần",
+      "expected": 1563,
+      "actual": 1566,
+      "extra_count": 3,
+      "extra_nums": [
+        1564,
+        1565,
+        1566
+      ]
+    },
+    {
+      "folder": "Hồng Lâu Xuân",
+      "expected": 1107,
+      "actual": 1108,
+      "extra_count": 1,
+      "extra_nums": [
+        1108
+      ]
+    },
+    {
+      "folder": "Kỹ Năng Của Ta Lại Biến Dị",
+      "expected": 744,
+      "actual": 747,
+      "extra_count": 3,
+      "extra_nums": [
+        745,
+        746,
+        747
+      ]
+    },
+    {
+      "folder": "Kỹ Năng Đổi Một Chữ Bọn Hắn Bị Ta Chơi Hỏng",
+      "expected": 480,
+      "actual": 481,
+      "extra_count": 1,
+      "extra_nums": [
+        481
+      ]
+    },
+    {
+      "folder": "Lý Trị Ngươi Chớ Kinh Sợ",
+      "expected": 1434,
+      "actual": 1441,
+      "extra_count": 7,
+      "extra_nums": [
+        1435,
+        1436,
+        1437,
+        1438,
+        1439,
+        1440,
+        1441
+      ]
+    },
+    {
+      "folder": "Lừa Dối 600 Năm Từ Xuyên Qua Bắt Đầu",
+      "expected": 215,
+      "actual": 216,
+      "extra_count": 1,
+      "extra_nums": [
+        216
+      ]
+    },
+    {
+      "folder": "Mạt Thế Ta Có Một Tòa Phù Không Đảo",
+      "expected": 675,
+      "actual": 680,
+      "extra_count": 5,
+      "extra_nums": [
+        676,
+        677,
+        678,
+        679,
+        680
+      ]
+    },
+    {
+      "folder": "Người Nguyên Thủy Đều Sợ Ngây Người",
+      "expected": 780,
+      "actual": 790,
+      "extra_count": 10,
+      "extra_nums": [
+        781,
+        782,
+        783,
+        784,
+        785,
+        786,
+        787,
+        788,
+        789,
+        790
+      ]
+    },
+    {
+      "folder": "Người Tại Võ Đang Một Điểm Cày Cấy Gấp Trăm Lần Thu Hoạch",
+      "expected": 670,
+      "actual": 672,
+      "extra_count": 2,
+      "extra_nums": [
+        671,
+        672
+      ]
+    },
+    {
+      "folder": "Người Tại Đại Đường Bị Buộc Thôi Học",
+      "expected": 1237,
+      "actual": 1238,
+      "extra_count": 1,
+      "extra_nums": [
+        1238
+      ]
+    },
+    {
+      "folder": "Nông Gia Tử Xông Khoa Cử",
+      "expected": 635,
+      "actual": 636,
+      "extra_count": 1,
+      "extra_nums": [
+        636
+      ]
+    },
+    {
+      "folder": "Phía Sau Màn Quét Ngang Hết Thảy",
+      "expected": 850,
+      "actual": 851,
+      "extra_count": 1,
+      "extra_nums": [
+        851
+      ]
+    },
+    {
+      "folder": "Ta Chỉ Muốn An Tĩnh Làm Cẩu Đạo Bên Trong Người",
+      "expected": 2068,
+      "actual": 2073,
+      "extra_count": 5,
+      "extra_nums": [
+        2069,
+        2070,
+        2071,
+        2072,
+        2073
+      ]
+    },
+    {
+      "folder": "Ta Có Một Tòa Thành Phố Ngày Tận Thế",
+      "expected": 1749,
+      "actual": 1751,
+      "extra_count": 2,
+      "extra_nums": [
+        1750,
+        1751
+      ]
+    },
+    {
+      "folder": "Ta Dùng Nhàn Thư Thành Thánh Nhân",
+      "expected": 1366,
+      "actual": 1486,
+      "extra_count": 120,
+      "extra_nums": [
+        1367,
+        1368,
+        1369,
+        1370,
+        1371,
+        1372,
+        1373,
+        1374,
+        1375,
+        1376,
+        1377,
+        1378,
+        1379,
+        1380,
+        1381,
+        1382,
+        1383,
+        1384,
+        1385,
+        1386
+      ]
+    },
+    {
+      "folder": "Ta Là Tham Quan Các Nàng Lại Nói Ta Là Trung Thần",
+      "expected": 467,
+      "actual": 485,
+      "extra_count": 18,
+      "extra_nums": [
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479,
+        480,
+        481,
+        482,
+        483,
+        484,
+        485
+      ]
+    },
+    {
+      "folder": "Ta Mở Thật Sự Là Cô Nhi Viện Không Phải Sát Thủ Đường",
+      "expected": 1433,
+      "actual": 1435,
+      "extra_count": 2,
+      "extra_nums": [
+        1434,
+        1435
+      ]
+    },
+    {
+      "folder": "Ta Thần Cấp Phụ Trợ Kỹ Năng Thăng Cấp Không Hạn Chế",
+      "expected": 535,
+      "actual": 536,
+      "extra_count": 1,
+      "extra_nums": [
+        536
+      ]
+    },
+    {
+      "folder": "Ta Thật Không Muốn Làm Gian Thần",
+      "expected": 717,
+      "actual": 718,
+      "extra_count": 1,
+      "extra_nums": [
+        718
+      ]
+    },
+    {
+      "folder": "Ta Tại Phàm Nhân Khoa Học Tu Tiên",
+      "expected": 2595,
+      "actual": 2602,
+      "extra_count": 7,
+      "extra_nums": [
+        2596,
+        2597,
+        2598,
+        2599,
+        2600,
+        2601,
+        2602
+      ]
+    },
+    {
+      "folder": "Ta Tại Trấn Yêu Ti Bên Trong Ăn Yêu Quái",
+      "expected": 1586,
+      "actual": 1593,
+      "extra_count": 7,
+      "extra_nums": [
+        1587,
+        1588,
+        1589,
+        1590,
+        1591,
+        1592,
+        1593
+      ]
+    },
+    {
+      "folder": "Ta Tận Thế Chỗ Tránh Nạn Hệ Thống",
+      "expected": 850,
+      "actual": 851,
+      "extra_count": 1,
+      "extra_nums": [
+        851
+      ]
+    },
+    {
+      "folder": "Ta Đều Vô Địch Thiên Hạ Mới Bắt Đầu Đoạt Đích",
+      "expected": 480,
+      "actual": 481,
+      "extra_count": 1,
+      "extra_nums": [
+        481
+      ]
+    },
+    {
+      "folder": "Ta Ở Chư Thiên Rất Điệu Thấp",
+      "expected": 1622,
+      "actual": 1644,
+      "extra_count": 22,
+      "extra_nums": [
+        1623,
+        1624,
+        1625,
+        1626,
+        1627,
+        1628,
+        1629,
+        1630,
+        1631,
+        1632,
+        1633,
+        1634,
+        1635,
+        1636,
+        1637,
+        1638,
+        1639,
+        1640,
+        1641,
+        1642
+      ]
+    },
+    {
+      "folder": "Ta Ở Đại Đường Mở Siêu Thị",
+      "expected": 529,
+      "actual": 532,
+      "extra_count": 3,
+      "extra_nums": [
+        530,
+        531,
+        532
+      ]
+    },
+    {
+      "folder": "Theo Một Con Gà Bắt Đầu Chế Tạo Tiên Thôn",
+      "expected": 934,
+      "actual": 935,
+      "extra_count": 1,
+      "extra_nums": [
+        935
+      ]
+    },
+    {
+      "folder": "Thọ Nguyên Có Thể Đổi Bảo Vô Hạn Thọ Nguyên Ta Vô Địch",
+      "expected": 807,
+      "actual": 809,
+      "extra_count": 2,
+      "extra_nums": [
+        808,
+        809
+      ]
+    },
+    {
+      "folder": "Tiên Thiên Dị Năng Giả Ta Đây Cư Nhiên Có Thể Tự Động Tu Luyện",
+      "expected": 858,
+      "actual": 860,
+      "extra_count": 2,
+      "extra_nums": [
+        859,
+        860
+      ]
+    },
+    {
+      "folder": "Tiêu Dao Tiểu Thư Sinh",
+      "expected": 1192,
+      "actual": 1202,
+      "extra_count": 10,
+      "extra_nums": [
+        1193,
+        1194,
+        1195,
+        1196,
+        1197,
+        1198,
+        1199,
+        1200,
+        1201,
+        1202
+      ]
+    },
+    {
+      "folder": "Toàn Cầu Phế Thổ Ta Khai Rương Ra Đỉnh Cấp Chỗ Tránh Nạn",
+      "expected": 785,
+      "actual": 792,
+      "extra_count": 7,
+      "extra_nums": [
+        786,
+        787,
+        788,
+        789,
+        790,
+        791,
+        792
+      ]
+    },
+    {
+      "folder": "Toàn Dân Chuyển Chức Ta Bị Động Mạnh Vô Địch",
+      "expected": 1403,
+      "actual": 1404,
+      "extra_count": 1,
+      "extra_nums": [
+        1404
+      ]
+    },
+    {
+      "folder": "Toàn Dân Cầu Sinh Ta Có Thể Tăng Thêm Vật Phẩm Số Lượng",
+      "expected": 1212,
+      "actual": 1215,
+      "extra_count": 3,
+      "extra_nums": [
+        1213,
+        1214,
+        1215
+      ]
+    },
+    {
+      "folder": "Trong Rương Đại Minh",
+      "expected": 1453,
+      "actual": 1454,
+      "extra_count": 1,
+      "extra_nums": [
+        1454
+      ]
+    },
+    {
+      "folder": "Trù Thần Một Bát Cơm Chiên Dẫn Tới Chư Thiên Đại Loạn",
+      "expected": 266,
+      "actual": 267,
+      "extra_count": 1,
+      "extra_nums": [
+        267
+      ]
+    },
+    {
+      "folder": "Trường Sinh Bắt Đầu Cùng Tẩu Tẩu Sống Nương Tựa Lẫn Nhau",
+      "expected": 496,
+      "actual": 500,
+      "extra_count": 4,
+      "extra_nums": [
+        497,
+        498,
+        499,
+        500
+      ]
+    },
+    {
+      "folder": "Trường Sinh Từ Đọc Sách Bắt Đầu",
+      "expected": 552,
+      "actual": 553,
+      "extra_count": 1,
+      "extra_nums": [
+        553
+      ]
+    },
+    {
+      "folder": "Tu Chân Chi Thiên Mạng Lớn Phế Vật",
+      "expected": 665,
+      "actual": 669,
+      "extra_count": 4,
+      "extra_nums": [
+        666,
+        667,
+        668,
+        669
+      ]
+    },
+    {
+      "folder": "Tận Thế Cô Nương Đừng Hoảng Sợ Ta Vật Tư Đủ Trăm Năm",
+      "expected": 1193,
+      "actual": 1195,
+      "extra_count": 2,
+      "extra_nums": [
+        1194,
+        1195
+      ]
+    },
+    {
+      "folder": "Tận Thế Ta Chế Tạo Vô Hạn Đoàn Tàu",
+      "expected": 1084,
+      "actual": 1086,
+      "extra_count": 2,
+      "extra_nums": [
+        1085,
+        1086
+      ]
+    },
+    {
+      "folder": "Tận Thế Ta Có Một Cái Thanh Trang Bị",
+      "expected": 583,
+      "actual": 584,
+      "extra_count": 1,
+      "extra_nums": [
+        584
+      ]
+    },
+    {
+      "folder": "Tận Thế Ta Thức Tỉnh Vô Hạn Nhặt Dị Năng",
+      "expected": 198,
+      "actual": 199,
+      "extra_count": 1,
+      "extra_nums": [
+        199
+      ]
+    },
+    {
+      "folder": "Tận Thế Ta Từ Mấu Chốt So Người Khác Thêm Một Cái",
+      "expected": 702,
+      "actual": 703,
+      "extra_count": 1,
+      "extra_nums": [
+        703
+      ]
+    },
+    {
+      "folder": "Tận Thế Từ Thêm Điểm Bắt Đầu Vô Hạn Tiến Hóa",
+      "expected": 2082,
+      "actual": 2083,
+      "extra_count": 1,
+      "extra_nums": [
+        2083
+      ]
+    },
+    {
+      "folder": "Tọa Khán Tiên Khuynh",
+      "expected": 831,
+      "actual": 835,
+      "extra_count": 4,
+      "extra_nums": [
+        832,
+        833,
+        834,
+        835
+      ]
+    },
+    {
+      "folder": "Vô Hạn Lượng Cháo Trắng Cải Muối Ta Lại Khoác Hoàng Bào",
+      "expected": 655,
+      "actual": 674,
+      "extra_count": 19,
+      "extra_nums": [
+        656,
+        657,
+        658,
+        659,
+        660,
+        661,
+        662,
+        663,
+        664,
+        665,
+        666,
+        667,
+        668,
+        669,
+        670,
+        671,
+        672,
+        673,
+        674
+      ]
+    },
+    {
+      "folder": "Vũ Trụ Vô Hạn Thực Đường",
+      "expected": 805,
+      "actual": 807,
+      "extra_count": 2,
+      "extra_nums": [
+        806,
+        807
+      ]
+    },
+    {
+      "folder": "Xuyên Nhanh Ta Tại Công Đức Hiệu Cầm Đồ Đương Chưởng Quỹ",
+      "expected": 1557,
+      "actual": 1558,
+      "extra_count": 1,
+      "extra_nums": [
+        1558
+      ]
+    },
+    {
+      "folder": "Zombie Vương Bắt Đầu Nhặt Cái Hài Nhi Là Nữ Đế Trọng Sinh",
+      "expected": 552,
+      "actual": 553,
+      "extra_count": 1,
+      "extra_nums": [
+        553
+      ]
+    },
+    {
+      "folder": "Đại Càn Trường Sinh",
+      "expected": 1872,
+      "actual": 1876,
+      "extra_count": 4,
+      "extra_nums": [
+        1873,
+        1874,
+        1875,
+        1876
+      ]
+    },
+    {
+      "folder": "Đại Minh Như Thế Tham Phò Mã Trẫm Giết Không Được",
+      "expected": 1072,
+      "actual": 1073,
+      "extra_count": 1,
+      "extra_nums": [
+        1073
+      ]
+    },
+    {
+      "folder": "Đại Minh Yểu Thọ Vừa Thành Tiên Liền Bị Phơi Sáng",
+      "expected": 1812,
+      "actual": 1830,
+      "extra_count": 18,
+      "extra_nums": [
+        1813,
+        1814,
+        1815,
+        1816,
+        1817,
+        1818,
+        1819,
+        1820,
+        1821,
+        1822,
+        1823,
+        1824,
+        1825,
+        1826,
+        1827,
+        1828,
+        1829,
+        1830
+      ]
+    },
+    {
+      "folder": "Đại Tần Chính Xác Cha Ngươi Chính Là Tần Thủy Hoàng",
+      "expected": 1331,
+      "actual": 1332,
+      "extra_count": 1,
+      "extra_nums": [
+        1332
+      ]
+    },
+    {
+      "folder": "Đại Đường Bắt Đầu Hối Hôn Ta Thành Thi Tiên Ngươi Khóc Cái Gì",
+      "expected": 641,
+      "actual": 642,
+      "extra_count": 1,
+      "extra_nums": [
+        642
+      ]
+    },
+    {
+      "folder": "Đại Đường Bắt Đầu Hối Hôn, Ta Thành Thi Tiên Ngươi Khóc Cái Gì",
+      "expected": 641,
+      "actual": 642,
+      "extra_count": 1,
+      "extra_nums": [
+        642
+      ]
+    },
+    {
+      "folder": "Đại Đường Bắt Đầu Từ Làm Lý Thế Dân Khiếp Sợ",
+      "expected": 787,
+      "actual": 788,
+      "extra_count": 1,
+      "extra_nums": [
+        788
+      ]
+    },
+    {
+      "folder": "Đại Đường Phong Lưu Tiểu Địa Chủ",
+      "expected": 1061,
+      "actual": 1063,
+      "extra_count": 2,
+      "extra_nums": [
+        1062,
+        1063
+      ]
+    },
+    {
+      "folder": "Đế Quốc Đệ Nhất Phò Mã",
+      "expected": 2213,
+      "actual": 2225,
+      "extra_count": 12,
+      "extra_nums": [
+        2214,
+        2215,
+        2216,
+        2217,
+        2218,
+        2219,
+        2220,
+        2221,
+        2222,
+        2223,
+        2224,
+        2225
+      ]
+    }
+  ],
+  "unsafe": []
+}

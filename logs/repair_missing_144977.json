@@ -1,0 +1,46 @@
+[
+  {
+    "idx": 437,
+    "status": "no_manifest_chapter"
+  },
+  {
+    "idx": 555,
+    "id": 23887988,
+    "status": "written",
+    "file": "Chương 555 Chuyển hướng phương bắc.txt",
+    "size": 20715,
+    "decrypted": true
+  },
+  {
+    "idx": 664,
+    "id": 23922148,
+    "status": "written",
+    "file": "Chương 664 Mới hiệp nghị.txt",
+    "size": 20901,
+    "decrypted": true
+  },
+  {
+    "idx": 750,
+    "id": 23936677,
+    "status": "written",
+    "file": "Chương 750 Trạm không gian.txt",
+    "size": 21043,
+    "decrypted": true
+  },
+  {
+    "idx": 847,
+    "id": 24013577,
+    "status": "written",
+    "file": "Chương 847 Kỳ Điểm.txt",
+    "size": 20307,
+    "decrypted": true
+  },
+  {
+    "idx": 848,
+    "id": 24013578,
+    "status": "written",
+    "file": "Chương 848 Sụp đổ hành tinh.txt",
+    "size": 24223,
+    "decrypted": true
+  }
+]

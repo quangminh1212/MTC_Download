@@ -1,0 +1,343 @@
+[
+  {
+    "folder": "Từ Arknights Bắt Đầu Xây Dựng Thế Lực",
+    "book_id": 111111,
+    "missing": [
+      16,
+      17,
+      27,
+      35,
+      37,
+      38,
+      83,
+      117,
+      138,
+      157,
+      179,
+      197,
+      198
+    ],
+    "expected": 231
+  },
+  {
+    "folder": "Học Đường Rực Cháy",
+    "book_id": 121958,
+    "missing": [
+      40,
+      64,
+      65,
+      66,
+      67,
+      73,
+      74,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86
+    ],
+    "expected": 125
+  },
+  {
+    "folder": "Tam Quốc Từ Giao Châu Bắt Đầu",
+    "book_id": 129139,
+    "missing": [
+      239,
+      249,
+      250,
+      255,
+      270,
+      272
+    ],
+    "expected": 289
+  },
+  {
+    "folder": "Thiên Hành",
+    "book_id": 142699,
+    "missing": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "expected": 42
+  },
+  {
+    "folder": "Cửu Đế",
+    "book_id": 144974,
+    "missing": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "expected": 57
+  },
+  {
+    "folder": "Bất Diệt Kinh",
+    "book_id": 127250,
+    "missing": [
+      4,
+      21,
+      160,
+      161
+    ],
+    "expected": 211
+  },
+  {
+    "folder": "Hồi Kí Hadidu",
+    "book_id": 108844,
+    "missing": [
+      19,
+      20,
+      59,
+      76
+    ],
+    "expected": 81
+  },
+  {
+    "folder": "Đại Việt Quỷ Vương",
+    "book_id": 118545,
+    "missing": [
+      276,
+      334,
+      346
+    ],
+    "expected": 357
+  },
+  {
+    "folder": "Ta Phát Hiện Thế Giới Bug",
+    "book_id": 153591,
+    "missing": [
+      39,
+      40,
+      41
+    ],
+    "expected": 69
+  },
+  {
+    "folder": "Long Cơ Chiến Hồn",
+    "book_id": 119844,
+    "missing": [
+      327,
+      623
+    ],
+    "expected": 751
+  },
+  {
+    "folder": "Muốn Trường Sinh Trước Hết Phải Đồng Vợ Đồng Chồng",
+    "book_id": 117300,
+    "missing": [
+      232,
+      233
+    ],
+    "expected": 346
+  },
+  {
+    "folder": "Lan Khuấy Đảo Cổ Sử",
+    "book_id": 139269,
+    "missing": [
+      19,
+      20
+    ],
+    "expected": 133
+  },
+  {
+    "folder": "Hắn Chỉ Là Chơi Đùa Không Phải Viết Lên Thần Thoại",
+    "book_id": 149724,
+    "missing": [
+      35,
+      36
+    ],
+    "expected": 69
+  },
+  {
+    "folder": "Tả Đạo Tiên Chủ",
+    "book_id": 151054,
+    "missing": [
+      13,
+      14
+    ],
+    "expected": 48
+  },
+  {
+    "folder": "Quang Minh Bất Diệt Tín Ngưỡng Vĩnh Hằng",
+    "book_id": 101516,
+    "missing": [
+      372
+    ],
+    "expected": 915
+  },
+  {
+    "folder": "Tây Sơn Hành Trình Vượt Thời Gian",
+    "book_id": 120335,
+    "missing": [
+      441
+    ],
+    "expected": 597
+  },
+  {
+    "folder": "Đế Quốc Nhật Bản",
+    "book_id": 110466,
+    "missing": [
+      147
+    ],
+    "expected": 405
+  },
+  {
+    "folder": "Lê Dung",
+    "book_id": 120219,
+    "missing": [
+      82
+    ],
+    "expected": 271
+  },
+  {
+    "folder": "Xuyên Mộng Giả",
+    "book_id": 121873,
+    "missing": [
+      66
+    ],
+    "expected": 258
+  },
+  {
+    "folder": "Xuyên Thành Liếm Cẩu Nam Phụ Ta Một Cước Đạp Vỡ Thiên Mệnh",
+    "book_id": 143601,
+    "missing": [
+      115
+    ],
+    "expected": 184
+  },
+  {
+    "folder": "Đấu La Võ Hồn La Tam Pháo Hextech Năm Tuyển Ba",
+    "book_id": 153510,
+    "missing": [
+      34
+    ],
+    "expected": 93
+  },
+  {
+    "folder": "Bắt Đầu Triệu Hoán Ba Ngàn Đại Đế Dọa Mộng Cửu Thiên Thập Địa",
+    "book_id": 139388,
+    "missing": [
+      16
+    ],
+    "expected": 91
+  },
+  {
+    "folder": "Từ Hoàn Mỹ Bắt Đầu Bảo Hồ Lô Thông Thiên",
+    "book_id": 142086,
+    "missing": [
+      77
+    ],
+    "expected": 90
+  },
+  {
+    "folder": "Khoa Học Kiểu Conan Sōsōnin",
+    "book_id": 147555,
+    "missing": [
+      29
+    ],
+    "expected": 89
+  },
+  {
+    "folder": "Hướng Quỷ Hứa Hẹn",
+    "book_id": 148683,
+    "missing": [
+      73
+    ],
+    "expected": 89
+  },
+  {
+    "folder": "Sáng Thế Phá Kiếp",
+    "book_id": 137546,
+    "missing": [
+      66
+    ],
+    "expected": 81
+  },
+  {
+    "folder": "Siêu Nhân Diệt Tuyệt Chỉ Nam",
+    "book_id": 153284,
+    "missing": [
+      46
+    ],
+    "expected": 76
+  },
+  {
+    "folder": "Tu Tiên Ta Không Phải Quyển Chỉ Là Chăm Chỉ Một Chút Xíu",
+    "book_id": 144450,
+    "missing": [
+      49
+    ],
+    "expected": 75
+  },
+  {
+    "folder": "Ta Siêu Thị Máy Tính Gian Thương Khách Hàng Quỳ Cầu Đừng Đóng Cửa",
+    "book_id": 142799,
+    "missing": [
+      1
+    ],
+    "expected": 71
+  },
+  {
+    "folder": "Cầm Kiếm Độc Hành Chém Quỷ Thần",
+    "book_id": 134366,
+    "missing": [
+      70
+    ],
+    "expected": 71
+  },
+  {
+    "folder": "Thân Là Dũng Giả Ta Bị Lừa Thảm",
+    "book_id": 141364,
+    "missing": [
+      32
+    ],
+    "expected": 58
+  },
+  {
+    "folder": "Ngự Thần Lục",
+    "book_id": 150712,
+    "missing": [
+      44
+    ],
+    "expected": 47
+  },
+  {
+    "folder": "Tara Tiểu Thế Giới Chư Thiên Kỳ Diệu Mạo Hiểm",
+    "book_id": 128089,
+    "missing": [
+      17
+    ],
+    "expected": 35
+  },
+  {
+    "folder": "Bạch Nguyệt Vân Thiên",
+    "book_id": 141444,
+    "missing": [
+      19
+    ],
+    "expected": 31
+  },
+  {
+    "folder": "Quán Net Âm Dương",
+    "book_id": 141683,
+    "missing": [
+      8
+    ],
+    "expected": 30
+  },
+  {
+    "folder": "Trò Chơi Này Không Thích Hợp Ta Đào Quáng Thành Thần",
+    "book_id": 153215,
+    "missing": [
+      14
+    ],
+    "expected": 26
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 102222,
+    "folder": "Phong Thần Ký",
+    "expected": 1522,
+    "returncode": 0,
+    "elapsed": 291.3,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_102222.log"
+  },
+  {
+    "id": 110423,
+    "folder": "Diệt Nhân",
+    "expected": 1663,
+    "returncode": 0,
+    "elapsed": 359.6,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_110423.log"
+  },
+  {
+    "id": 102460,
+    "folder": "Đỉnh Luyện Thần Ma",
+    "expected": 1870,
+    "returncode": 0,
+    "elapsed": 606.1,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_102460.log"
+  },
+  {
+    "id": 101012,
+    "folder": "Phong Lưu Chân Tiên",
+    "expected": 2049,
+    "returncode": 0,
+    "elapsed": 641.4,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_101012.log"
+  },
+  {
+    "id": 104260,
+    "folder": "Huyền Lục",
+    "expected": 2078,
+    "returncode": 4,
+    "elapsed": 68.8,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_104260.log"
+  }
+]

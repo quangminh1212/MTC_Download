@@ -1,0 +1,47 @@
+retry_failed_count=24\nID=100231 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100234 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100336 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100368 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100471 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100507 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100525 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100557 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100558 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100771 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100775 RC=2\nSTDOUT:\n❌ Lỗi khi lấy thông tin truyện 100775: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+ERROR: book 100775 not found\nSTDERR:\n\n---\nID=100816 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100918 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=100931 RC=2\nSTDOUT:\n❌ Lỗi khi lấy thông tin truyện 100931: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+ERROR: book 100931 not found\nSTDERR:\n\n---\nID=101033 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=101037 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=101050 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=101119 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=101140 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=101409 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=101628 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=101739 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=101812 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nID=101863 RC=0\nSTDOUT:\n
+DONE: processed=1 errors=0
+STATE=C:\Dev\MTC_DOWNLOAD\logs\download_all_missing_state.json\nSTDERR:\n\n---\nRETRY_FAILED_DONE\n

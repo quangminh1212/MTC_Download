@@ -1,0 +1,3328 @@
+{
+  "total_candidates": 4940,
+  "missing_named": [
+    {
+      "id": 153588,
+      "name": "Thế Kỷ Của Máu",
+      "clean": "Thế Kỷ Của Máu",
+      "local_match": null,
+      "source_count": 4,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\explore_missing_books.json",
+        "C:\\Dev\\MTC_Download\\logs\\full_library_chapter_audit.json",
+        "C:\\Dev\\MTC_Download\\logs\\full_library_chapter_audit_v2.json",
+        "C:\\Dev\\MTC_Download\\logs\\live_all_books_missing_local.json"
+      ],
+      "extra": [
+        {
+          "chapter_count": 0,
+          "status_name": "Còn tiếp"
+        },
+        {
+          "chapter_count": 0,
+          "status_name": "Còn tiếp"
+        },
+        {
+          "status_name": "Còn tiếp"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Chiêu Hắc Thể Chất Bắt Đầu Tu Hành Tại Phế Thổ",
+      "clean": "C Dev MTC Chiêu Hắc Thể Chất Bắt Đầu Tu Hành Tại Phế Thổ",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Kỹ Năng Đổi Một Chữ Bọn Hắn Bị Ta Chơi Hỏng",
+      "clean": "C Dev MTC Kỹ Năng Đổi Một Chữ Bọn Hắn Bị Ta Chơi Hỏng",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Ta Có Thể Thăng Cấp Chỗ Tránh Nạn",
+      "clean": "C Dev MTC Ta Có Thể Thăng Cấp Chỗ Tránh Nạn",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Ta Thật Không Muốn Làm Gian Thần",
+      "clean": "C Dev MTC Ta Thật Không Muốn Làm Gian Thần",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Ta Tận Thế Chỗ Tránh Nạn Hệ Thống",
+      "clean": "C Dev MTC Ta Tận Thế Chỗ Tránh Nạn Hệ Thống",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Ta Từ Tận Thế Bắt Đầu Vô Địch",
+      "clean": "C Dev MTC Ta Từ Tận Thế Bắt Đầu Vô Địch",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Ta Ở Đại Đường Làm Phò Mã",
+      "clean": "C Dev MTC Ta Ở Đại Đường Làm Phò Mã",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Thọ Nguyên Có Thể Đổi Bảo Vô Hạn Thọ Nguyên Ta Vô Địch",
+      "clean": "C Dev MTC Thọ Nguyên Có Thể Đổi Bảo Vô Hạn Thọ Nguyên Ta Vô Địch",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Toàn Cầu Phế Thổ Chỗ Tránh Nạn Vô Hạn Thăng Cấp",
+      "clean": "C Dev MTC Toàn Cầu Phế Thổ Chỗ Tránh Nạn Vô Hạn Thăng Cấp",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Toàn Cầu Phế Thổ Ta Khai Rương Ra Đỉnh Cấp Chỗ Tránh Nạn",
+      "clean": "C Dev MTC Toàn Cầu Phế Thổ Ta Khai Rương Ra Đỉnh Cấp Chỗ Tránh Nạn",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Từ Đội Sản Xuất Đuổi Đại Xa Bắt Đầu",
+      "clean": "C Dev MTC Từ Đội Sản Xuất Đuổi Đại Xa Bắt Đầu",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Xuyên Nhanh Ta Tại Công Đức Hiệu Cầm Đồ Đương Chưởng Quỹ",
+      "clean": "C Dev MTC Xuyên Nhanh Ta Tại Công Đức Hiệu Cầm Đồ Đương Chưởng Quỹ",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Xuyên Qua Từ Khai Hoang Bắt Đầu",
+      "clean": "C Dev MTC Xuyên Qua Từ Khai Hoang Bắt Đầu",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Đại Minh Như Thế Tham Phò Mã Trẫm Giết Không Được",
+      "clean": "C Dev MTC Đại Minh Như Thế Tham Phò Mã Trẫm Giết Không Được",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Hối Hôn, Ta Thành Thi Tiên Ngươi Khóc Cái Gì",
+      "clean": "C Dev MTC Đại Đường Bắt Đầu Hối Hôn Ta Thành Thi Tiên Ngươi Khóc Cái Gì",
+      "local_match": null,
+      "source_count": 2,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json",
+        "C:\\Dev\\MTC_Download\\logs\\mtc_remove_non_manifest_chapter_files.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": ".githooks",
+      "clean": "githooks",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": [
+        {
+          "expected": null
+        }
+      ]
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Bên Trong Mộng Ta Có Đại Lão",
+      "clean": "C Dev MTC Bên Trong Mộng Ta Có Đại Lão",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Bắt Đầu Phát Tức Phụ, Ta Biết Có Hơi Nhiều",
+      "clean": "C Dev MTC Bắt Đầu Phát Tức Phụ Ta Biết Có Hơi Nhiều",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Hàn Môn Kiêu Sĩ",
+      "clean": "C Dev MTC Hàn Môn Kiêu Sĩ",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Hải Dương Tai Biến Bắt Đầu Thức Tỉnh Sss Cấp Thiên Phú",
+      "clean": "C Dev MTC Hải Dương Tai Biến Bắt Đầu Thức Tỉnh Sss Cấp Thiên Phú",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo",
+      "clean": "C Dev MTC Kinh Ngạc Của Ta Hoa Quả Toàn Bộ Là Thiên Tài Địa Bảo",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Lý Thế Dân Giả Chết Cái Kia Trẫm Liền Uy Phục Tứ Hải",
+      "clean": "C Dev MTC Lý Thế Dân Giả Chết Cái Kia Trẫm Liền Uy Phục Tứ Hải",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Mạt Thế Bắt Đầu Một Quyển Sách, Dị Năng Toàn Dựa Vào Đọc",
+      "clean": "C Dev MTC Mạt Thế Bắt Đầu Một Quyển Sách Dị Năng Toàn Dựa Vào Đọc",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Người Tu Tiên Hiểu Được Tiếng Muông Thú",
+      "clean": "C Dev MTC Người Tu Tiên Hiểu Được Tiếng Muông Thú",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Người Tại Lớp Mười Hai Hệ Thống Nói Ta Cùng Thanh Mai Ra Mắt",
+      "clean": "C Dev MTC Người Tại Lớp Mười Hai Hệ Thống Nói Ta Cùng Thanh Mai Ra Mắt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Nhất Phẩm Huyện Lệnh Bắt Đầu Từ Vô Địch Bắt Đầu",
+      "clean": "C Dev MTC Nhất Phẩm Huyện Lệnh Bắt Đầu Từ Vô Địch Bắt Đầu",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Năm Mất Mùa Toàn Thôn Gặm Vỏ Cây Ta Có Không Gian Cuồng Huyễn Thịt",
+      "clean": "C Dev MTC Năm Mất Mùa Toàn Thôn Gặm Vỏ Cây Ta Có Không Gian Cuồng Huyễn Thịt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Nạn Đói Lớn Ta Nhà Kho Nuôi Cổ Đại Nữ Đế",
+      "clean": "C Dev MTC Nạn Đói Lớn Ta Nhà Kho Nuôi Cổ Đại Nữ Đế",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Nạn Đói Ta Cuốc Chim Có Thể Thăng Cấp",
+      "clean": "C Dev MTC Nạn Đói Ta Cuốc Chim Có Thể Thăng Cấp",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Nạn Đói Vật Phẩm Của Ta Có Thể Thăng Cấp",
+      "clean": "C Dev MTC Nạn Đói Vật Phẩm Của Ta Có Thể Thăng Cấp",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Phiên Bản Cổ Đại Nạn Dân Sinh Tồn Chỉ Nam",
+      "clean": "C Dev MTC Phiên Bản Cổ Đại Nạn Dân Sinh Tồn Chỉ Nam",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Phế Phẩm Trao Đổi Chỗ Tránh Nạn, Ta Tận Thế Đắc Ý",
+      "clean": "C Dev MTC Phế Phẩm Trao Đổi Chỗ Tránh Nạn Ta Tận Thế Đắc Ý",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Sau Khi Bị Vứt Bỏ Ta Vào Hàn Môn Khoa Cử Thành Trạng Nguyên",
+      "clean": "C Dev MTC Sau Khi Bị Vứt Bỏ Ta Vào Hàn Môn Khoa Cử Thành Trạng Nguyên",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Ta Mỗi Ngày Thức Tỉnh Một Cái Thiên Tai Cấp Dị Năng",
+      "clean": "C Dev MTC Ta Mỗi Ngày Thức Tỉnh Một Cái Thiên Tai Cấp Dị Năng",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Ta Tại Đại Minh Buôn Bán Canh Gà",
+      "clean": "C Dev MTC Ta Tại Đại Minh Buôn Bán Canh Gà",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Thi Pháp Vĩnh Cửu Thêm Sinh Mệnh Ngươi Quản Cái Này Gọi Pháp Sư",
+      "clean": "C Dev MTC Thi Pháp Vĩnh Cửu Thêm Sinh Mệnh Ngươi Quản Cái Này Gọi Pháp Sư",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Toàn Cầu Chạy Nạn Vật Phẩm Của Ta Có Thể Tự Động Thăng Cấp",
+      "clean": "C Dev MTC Toàn Cầu Chạy Nạn Vật Phẩm Của Ta Có Thể Tự Động Thăng Cấp",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Toàn Dân Chạy Nạn, Vật Phẩm Của Ta Có Thể Thăng Cấp",
+      "clean": "C Dev MTC Toàn Dân Chạy Nạn Vật Phẩm Của Ta Có Thể Thăng Cấp",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Toàn Tộc Cung Cấp Ta Khoa Cử",
+      "clean": "C Dev MTC Toàn Tộc Cung Cấp Ta Khoa Cử",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Trùng Sinh 1978 Thâm Sơn Đi Săn Trở Thành Vạn Nguyên Hộ",
+      "clean": "C Dev MTC Trùng Sinh 1978 Thâm Sơn Đi Săn Trở Thành Vạn Nguyên Hộ",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Trùng Sinh Sáu Số Không Ta Mang Đệ Đệ Muội Muội Chạy Thường Thường Bậc Trung",
+      "clean": "C Dev MTC Trùng Sinh Sáu Số Không Ta Mang Đệ Đệ Muội Muội Chạy Thường Thường Bậc Trung",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Tận Thế Toàn Thế Giới Chỉ Có Ta Có Được Dị Năng",
+      "clean": "C Dev MTC Tận Thế Toàn Thế Giới Chỉ Có Ta Có Được Dị Năng",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Vô Song Con Thứ",
+      "clean": "C Dev MTC Vô Song Con Thứ",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Đại Phụng Bại Gia Tử",
+      "clean": "C Dev MTC Đại Phụng Bại Gia Tử",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Đại Thanh Đệ Nhất Thái Tử",
+      "clean": "C Dev MTC Đại Thanh Đệ Nhất Thái Tử",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Bắt Trưởng Tôn Hoàng Hậu",
+      "clean": "C Dev MTC Đại Đường Bắt Đầu Bắt Trưởng Tôn Hoàng Hậu",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Đại Đường Bắt Đầu Từ Làm Cá Mặn",
+      "clean": "C Dev MTC Đại Đường Bắt Đầu Từ Làm Cá Mặn",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Đại Đường Thần Cấp Phò Mã Gia Cá Ướp Muối Liền Mạnh Lên",
+      "clean": "C Dev MTC Đại Đường Thần Cấp Phò Mã Gia Cá Ướp Muối Liền Mạnh Lên",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "C:\\Dev\\MTC\\Đại Đường Đều Xuyên Qua Rồi, Ai Còn Biết Điều A",
+      "clean": "C Dev MTC Đại Đường Đều Xuyên Qua Rồi Ai Còn Biết Điều A",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_reconcile_existing_chapters_report.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": 153488,
+      "name": "Chân Trời",
+      "clean": "Chân Trời",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\live_unmatched_scan.json"
+      ],
+      "extra": [
+        {
+          "chapter_count": 5,
+          "latest_index": 5,
+          "status_name": "Còn tiếp"
+        },
+        {
+          "chapter_count": 5,
+          "latest_index": 5,
+          "status_name": "Còn tiếp"
+        },
+        {
+          "chapter_count": 5,
+          "latest_index": 5,
+          "status_name": "Còn tiếp"
+        }
+      ]
+    },
+    {
+      "id": null,
+      "name": "Chương 1 Đời học sinh.txt",
+      "clean": "Chương 1 Đời học sinh txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 10 Ta tính cả rồi.txt",
+      "clean": "Chương 10 Ta tính cả rồi txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1001 Hết bản cảm nghĩ.txt",
+      "clean": "Chương 1001 Hết bản cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1019 Dẹp đường hồi phủ.txt",
+      "clean": "Chương 1019 Dẹp đường hồi phủ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 102 Lên khung cảm nghĩ.txt",
+      "clean": "Chương 102 Lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 102 Quân đặt trước phá vạn cảm ơn mọi người.txt",
+      "clean": "Chương 102 Quân đặt trước phá vạn cảm ơn mọi người txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 107 Tam giang cảm nghĩ.txt",
+      "clean": "Chương 107 Tam giang cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 11 Gặp lại Linh.txt",
+      "clean": "Chương 11 Gặp lại Linh txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1106 Đôi lời của tác giả.txt",
+      "clean": "Chương 1106 Đôi lời của tác giả txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1126 Sách mới tuyên bố.txt",
+      "clean": "Chương 1126 Sách mới tuyên bố txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 119 6.txt",
+      "clean": "Chương 119 6 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 12 Huấn luyện.txt",
+      "clean": "Chương 12 Huấn luyện txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 120 Kỵ sĩ xung phong cùng kỵ sĩ cường hóa.txt",
+      "clean": "Chương 120 Kỵ sĩ xung phong cùng kỵ sĩ cường hóa txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 121 Quỷ dị.txt",
+      "clean": "Chương 121 Quỷ dị txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 122 Miquel cái chết.txt",
+      "clean": "Chương 122 Miquel cái chết txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 124 Chia binh hai đường.txt",
+      "clean": "Chương 124 Chia binh hai đường txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1252 Khẩn cấp.txt",
+      "clean": "Chương 1252 Khẩn cấp txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1255 Tìm hiểu hư thực.txt",
+      "clean": "Chương 1255 Tìm hiểu hư thực txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 126 Quyết định.txt",
+      "clean": "Chương 126 Quyết định txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1260 Lịch sử lại một lần nữa tương tự Bắc Ngụy Chu Kiến Thâm.txt",
+      "clean": "Chương 1260 Lịch sử lại một lần nữa tương tự Bắc Ngụy Chu Kiến Thâm txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1262 Bị thôn phệ.txt",
+      "clean": "Chương 1262 Bị thôn phệ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1263 Không thể vượt qua.txt",
+      "clean": "Chương 1263 Không thể vượt qua txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1265 Trúng kế.txt",
+      "clean": "Chương 1265 Trúng kế txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 127 Phát hiện.txt",
+      "clean": "Chương 127 Phát hiện txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1284 Ẩn thân thuật.txt",
+      "clean": "Chương 1284 Ẩn thân thuật txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1291 Không rõ ràng cho lắm.txt",
+      "clean": "Chương 1291 Không rõ ràng cho lắm txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1292 Ta tự có sắp đặt.txt",
+      "clean": "Chương 1292 Ta tự có sắp đặt txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1296 Biết người biết ta.txt",
+      "clean": "Chương 1296 Biết người biết ta txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1298 Định.txt",
+      "clean": "Chương 1298 Định txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1300 Theo kế hoạch làm việc.txt",
+      "clean": "Chương 1300 Theo kế hoạch làm việc txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1303 Huyền Võ chân thân.txt",
+      "clean": "Chương 1303 Huyền Võ chân thân txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1309 Tình huống làm sao.txt",
+      "clean": "Chương 1309 Tình huống làm sao txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1310 Long trời lở đất.txt",
+      "clean": "Chương 1310 Long trời lở đất txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1312 Đại công cáo thành.txt",
+      "clean": "Chương 1312 Đại công cáo thành txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1314 Bạch Mi Chân Nhân.txt",
+      "clean": "Chương 1314 Bạch Mi Chân Nhân txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1319 Thiên Cương Địa Sát.txt",
+      "clean": "Chương 1319 Thiên Cương Địa Sát txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 134 Đi săn.txt",
+      "clean": "Chương 134 Đi săn txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 135 Lên giá cảm nghĩ.txt",
+      "clean": "Chương 135 Lên giá cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 14 dậm chân tại chỗ.txt",
+      "clean": "Chương 14 dậm chân tại chỗ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 140 Bạch Tô Tô “Đang thử áo thời gian...Tuyệt đối không” ` 2.txt",
+      "clean": "Chương 140 Bạch Tô Tô Đang thử áo thời gian Tuyệt đối không 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1419 hết trọn bộ.txt",
+      "clean": "Chương 1419 hết trọn bộ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1423 Nhận thua.txt",
+      "clean": "Chương 1423 Nhận thua txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1436 Giấy nghỉ phép.txt",
+      "clean": "Chương 1436 Giấy nghỉ phép txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1453 Hoàn thành cảm nghĩ.txt",
+      "clean": "Chương 1453 Hoàn thành cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 147 Nhanh thông phó bản Hứa Nặc giết điên rồi 1.txt",
+      "clean": "Chương 147 Nhanh thông phó bản Hứa Nặc giết điên rồi 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 148 Nhanh thông phó bản Hứa Nặc giết điên rồi 2.txt",
+      "clean": "Chương 148 Nhanh thông phó bản Hứa Nặc giết điên rồi 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 169 Đóng cửa.txt",
+      "clean": "Chương 169 Đóng cửa txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 178 Rất hố cha.txt",
+      "clean": "Chương 178 Rất hố cha txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 1813 Để tin tức trước tiên bay một hồi 2.txt",
+      "clean": "Chương 1813 Để tin tức trước tiên bay một hồi 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 185 Lấy mạng hỏi ác quỷ đại giới.txt",
+      "clean": "Chương 185 Lấy mạng hỏi ác quỷ đại giới txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 190 U ảnh chiến giáp quy vị Một quyền sụp đổ cưa điện đồ tể 2.txt",
+      "clean": "Chương 190 U ảnh chiến giáp quy vị Một quyền sụp đổ cưa điện đồ tể 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 194 Lấy thơ làm rõ ý chí.txt",
+      "clean": "Chương 194 Lấy thơ làm rõ ý chí txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 2 Q1 Chương 2 Đứa trẻ bất hạnh.txt",
+      "clean": "Chương 2 Q1 Chương 2 Đứa trẻ bất hạnh txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 204 Thiên Chúa giáo bản thân ý dâm thì này Đại Minh chỉ có thể có một cái quy tắc 1 3 2.txt",
+      "clean": "Chương 204 Thiên Chúa giáo bản thân ý dâm thì này Đại Minh chỉ có thể có một cái quy tắc 1 3 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 207 Đi học.txt",
+      "clean": "Chương 207 Đi học txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 21 Chán sống.txt",
+      "clean": "Chương 21 Chán sống txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 224 Cực dương chi 1.txt",
+      "clean": "Chương 224 Cực dương chi 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 2473 Không có hứng thú 2.txt",
+      "clean": "Chương 2473 Không có hứng thú 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 250 Hốt hoảng chạy trốn 2.txt",
+      "clean": "Chương 250 Hốt hoảng chạy trốn 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 251 Tra hỏi 1.txt",
+      "clean": "Chương 251 Tra hỏi 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 252 Tra hỏi 2.txt",
+      "clean": "Chương 252 Tra hỏi 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 253 Nhập mộng 1.txt",
+      "clean": "Chương 253 Nhập mộng 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 254 Nhập mộng 2.txt",
+      "clean": "Chương 254 Nhập mộng 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 255 Nhập mộng 3.txt",
+      "clean": "Chương 255 Nhập mộng 3 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 256 Ẩn núp 1.txt",
+      "clean": "Chương 256 Ẩn núp 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 257 Ẩn núp 2.txt",
+      "clean": "Chương 257 Ẩn núp 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 258 Hỗn độn chi phệ 1.txt",
+      "clean": "Chương 258 Hỗn độn chi phệ 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 259 Hỗn độn chi phệ 2.txt",
+      "clean": "Chương 259 Hỗn độn chi phệ 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 2595 Hoàn tất cảm nghĩ.txt",
+      "clean": "Chương 2595 Hoàn tất cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 260 Không gian hỗn độn 1.txt",
+      "clean": "Chương 260 Không gian hỗn độn 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 261 Không gian hỗn độn 2.txt",
+      "clean": "Chương 261 Không gian hỗn độn 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 262 Manh mối 1.txt",
+      "clean": "Chương 262 Manh mối 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 263 Manh mối 2.txt",
+      "clean": "Chương 263 Manh mối 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 264 Manh mối 3.txt",
+      "clean": "Chương 264 Manh mối 3 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 265 Con mắt 1.txt",
+      "clean": "Chương 265 Con mắt 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 266 Con mắt 2.txt",
+      "clean": "Chương 266 Con mắt 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 267 Khóa chặt vị trí 1.txt",
+      "clean": "Chương 267 Khóa chặt vị trí 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 268 Khóa chặt vị trí 2.txt",
+      "clean": "Chương 268 Khóa chặt vị trí 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 269 Truy sát Thanh Long 1.txt",
+      "clean": "Chương 269 Truy sát Thanh Long 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 274 Khiếp sợ Đích Lô thực.txt",
+      "clean": "Chương 274 Khiếp sợ Đích Lô thực txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 275 Vị thứ nhất không gian chi linh.txt",
+      "clean": "Chương 275 Vị thứ nhất không gian chi linh txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 278 1 vs 2 3.txt",
+      "clean": "Chương 278 1 vs 2 3 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 3 skills.txt",
+      "clean": "Chương 3 skills txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 30 Tần Vương quấn trụ chi thuật ngươi luyện qua.txt",
+      "clean": "Chương 30 Tần Vương quấn trụ chi thuật ngươi luyện qua txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 308 Loạn tượng.txt",
+      "clean": "Chương 308 Loạn tượng txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 309 Bạch Sắc Địa Phủ.txt",
+      "clean": "Chương 309 Bạch Sắc Địa Phủ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 310 Dưới chân Tiên Sơn.txt",
+      "clean": "Chương 310 Dưới chân Tiên Sơn txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 311 Linh chất đồng hóa.txt",
+      "clean": "Chương 311 Linh chất đồng hóa txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 312 Cực Quang Tiên Đế.txt",
+      "clean": "Chương 312 Cực Quang Tiên Đế txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 313 Muốn chạy sao.txt",
+      "clean": "Chương 313 Muốn chạy sao txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 314 Vây hãm.txt",
+      "clean": "Chương 314 Vây hãm txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 315 Mới quy tắc.txt",
+      "clean": "Chương 315 Mới quy tắc txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 315 Vây đánh.txt",
+      "clean": "Chương 315 Vây đánh txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 316 Tạo Hóa Quy Nguyên.txt",
+      "clean": "Chương 316 Tạo Hóa Quy Nguyên txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 317 Chạy tới Côn Lôn sơn leo núi.txt",
+      "clean": "Chương 317 Chạy tới Côn Lôn sơn leo núi txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 317 Tiến công Cự Kình giới.txt",
+      "clean": "Chương 317 Tiến công Cự Kình giới txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 318 Dọn dẹp.txt",
+      "clean": "Chương 318 Dọn dẹp txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 319 Một pháo này xuống không còn kẻ địch chỉ có người mình.txt",
+      "clean": "Chương 319 Một pháo này xuống không còn kẻ địch chỉ có người mình txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 320 Vì Bạch Hồn tôn chủ.txt",
+      "clean": "Chương 320 Vì Bạch Hồn tôn chủ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 321 Thiên mệnh gia thân.txt",
+      "clean": "Chương 321 Thiên mệnh gia thân txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 322 Cự Kình giới phản công.txt",
+      "clean": "Chương 322 Cự Kình giới phản công txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 322 Lời cảm ơn độc giả.txt",
+      "clean": "Chương 322 Lời cảm ơn độc giả txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 323 Nửa bước siêu thoát nhúng tay.txt",
+      "clean": "Chương 323 Nửa bước siêu thoát nhúng tay txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 324 Không đàm phán.txt",
+      "clean": "Chương 324 Không đàm phán txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 325 Cho ngươi cái hệ thống.txt",
+      "clean": "Chương 325 Cho ngươi cái hệ thống txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 326 Hệ thống made in Tiên Vực.txt",
+      "clean": "Chương 326 Hệ thống made in Tiên Vực txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 327 Vô hạn thượng giới.txt",
+      "clean": "Chương 327 Vô hạn thượng giới txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 337 Thanh Loan 2.txt",
+      "clean": "Chương 337 Thanh Loan 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 344 Thông báo sách mới.txt",
+      "clean": "Chương 344 Thông báo sách mới txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 347 Vạn Thú sơn trang 4.txt",
+      "clean": "Chương 347 Vạn Thú sơn trang 4 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 35 Cầu đuổi theo đọc.txt",
+      "clean": "Chương 35 Cầu đuổi theo đọc txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 350 Mượn A Xương.txt",
+      "clean": "Chương 350 Mượn A Xương txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 350 Sơn trang khách tới.txt",
+      "clean": "Chương 350 Sơn trang khách tới txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 351 Tang Hồng dê 1.txt",
+      "clean": "Chương 351 Tang Hồng dê 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 353 Kêu cát Kim Đà 1.txt",
+      "clean": "Chương 353 Kêu cát Kim Đà 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 353 dạy cái triệt triệt để để 1.txt",
+      "clean": "Chương 353 dạy cái triệt triệt để để 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 354 Nhân cách tỉnh lại Liên quan phản ứng 3.txt",
+      "clean": "Chương 354 Nhân cách tỉnh lại Liên quan phản ứng 3 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 356 Kêu cát Kim Đà 4.txt",
+      "clean": "Chương 356 Kêu cát Kim Đà 4 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 356 ta bài diện này cũng là đi lên 2.txt",
+      "clean": "Chương 356 ta bài diện này cũng là đi lên 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 357 Hạ Lâm sáo lộ nhiều 3.txt",
+      "clean": "Chương 357 Hạ Lâm sáo lộ nhiều 3 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 357 Tử Nha.txt",
+      "clean": "Chương 357 Tử Nha txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 357 mặt mũi tràn đầy mộng bức 1.txt",
+      "clean": "Chương 357 mặt mũi tràn đầy mộng bức 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 359 Trăm năm sau độ thiên kiếp phi thăng đại kết cục.txt",
+      "clean": "Chương 359 Trăm năm sau độ thiên kiếp phi thăng đại kết cục txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 360 Lập tức thành tiên.txt",
+      "clean": "Chương 360 Lập tức thành tiên txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 360 Tặng đỉnh.txt",
+      "clean": "Chương 360 Tặng đỉnh txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 381 Vợ chồng song song trông nom việc nhà còn.txt",
+      "clean": "Chương 381 Vợ chồng song song trông nom việc nhà còn txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 387 giao cho ta 1.txt",
+      "clean": "Chương 387 giao cho ta 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 39 Cầu một lớp đuổi theo đọc cùng đề cử.txt",
+      "clean": "Chương 39 Cầu một lớp đuổi theo đọc cùng đề cử txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 391 thỏa thỏa pháo hôi 1.txt",
+      "clean": "Chương 391 thỏa thỏa pháo hôi 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 396 Hạ Lâm luôn có biện pháp 3.txt",
+      "clean": "Chương 396 Hạ Lâm luôn có biện pháp 3 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 399 Ta đoạt nữ nhân của ngươi 3.txt",
+      "clean": "Chương 399 Ta đoạt nữ nhân của ngươi 3 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 4 Lên Lv.txt",
+      "clean": "Chương 4 Lên Lv txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 40 39. Không vui sao 2.txt",
+      "clean": "Chương 40 39 Không vui sao 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 40 Cẩm Y... Về quê.txt",
+      "clean": "Chương 40 Cẩm Y Về quê txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 403 Hồi thôn 2.txt",
+      "clean": "Chương 403 Hồi thôn 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 406 Cả thế gian đều là kẻ địch.txt",
+      "clean": "Chương 406 Cả thế gian đều là kẻ địch txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 412 411. Tạ trưởng lão 3.txt",
+      "clean": "Chương 412 411 Tạ trưởng lão 3 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 412 Đi đến thu thập lão nhân kia a.txt",
+      "clean": "Chương 412 Đi đến thu thập lão nhân kia a txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 415 414. Tạ trưởng lão 6.txt",
+      "clean": "Chương 415 414 Tạ trưởng lão 6 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 422 421. Yêu thú thung lũng.txt",
+      "clean": "Chương 422 421 Yêu thú thung lũng txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 427 dư âm sáng tạo 2 2.txt",
+      "clean": "Chương 427 dư âm sáng tạo 2 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 434 433. Hận không phải khỉ.txt",
+      "clean": "Chương 434 433 Hận không phải khỉ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 434 Chồn chúc tết gà 1.txt",
+      "clean": "Chương 434 Chồn chúc tết gà 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 437 Tô Đường sáo lộ Nghê Sương bị vẽ vòng tròn trớ chú.txt",
+      "clean": "Chương 437 Tô Đường sáo lộ Nghê Sương bị vẽ vòng tròn trớ chú txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 439 Xin lỗi.txt",
+      "clean": "Chương 439 Xin lỗi txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 441 Kiếm ẩn giang hồ.txt",
+      "clean": "Chương 441 Kiếm ẩn giang hồ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 442 Trường bạch tàn cục.txt",
+      "clean": "Chương 442 Trường bạch tàn cục txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 445 Lâm Thiên mong muốn thành Thiên đạo.txt",
+      "clean": "Chương 445 Lâm Thiên mong muốn thành Thiên đạo txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 449 448. Hổ tộc chi loạn 3.txt",
+      "clean": "Chương 449 448 Hổ tộc chi loạn 3 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 450 449. Hổ tộc chi loạn 4.txt",
+      "clean": "Chương 450 449 Hổ tộc chi loạn 4 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 453 Thần bí băng tuyết sinh vật.txt",
+      "clean": "Chương 453 Thần bí băng tuyết sinh vật txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 455 Động thủ.txt",
+      "clean": "Chương 455 Động thủ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 459 Cho trẻ tuổi Dao Quang học một khóa.txt",
+      "clean": "Chương 459 Cho trẻ tuổi Dao Quang học một khóa txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 46 Tối nay khó có thể quên trằn trọc.txt",
+      "clean": "Chương 46 Tối nay khó có thể quên trằn trọc txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 466 Có tiền.txt",
+      "clean": "Chương 466 Có tiền txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 480 Lời cuối sách.txt",
+      "clean": "Chương 480 Lời cuối sách txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 492 486. Tây Lộc quần tu 3.txt",
+      "clean": "Chương 492 486 Tây Lộc quần tu 3 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 496 490. Tây Lộc quần tu 7.txt",
+      "clean": "Chương 496 490 Tây Lộc quần tu 7 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 497 Củ Thác đem Ngụy Vương tội trạng cải thành Ngụy Vương Báo thuận tiện tâm sự Tiểu Bạch Liên.txt",
+      "clean": "Chương 497 Củ Thác đem Ngụy Vương tội trạng cải thành Ngụy Vương Báo thuận tiện tâm sự Tiểu Bạch Liên txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 498 Thiết lập băng chuyền.txt",
+      "clean": "Chương 498 Thiết lập băng chuyền txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 499 493. Tây Lộc quần tu 10.txt",
+      "clean": "Chương 499 493 Tây Lộc quần tu 10 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 5 Hôm nay là thứ mấy Chắc chắn là thứ.txt",
+      "clean": "Chương 5 Hôm nay là thứ mấy Chắc chắn là thứ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 502 496. Tây Lộc quần tu 13.txt",
+      "clean": "Chương 502 496 Tây Lộc quần tu 13 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 503 497. Tây Lộc quần tu 14.txt",
+      "clean": "Chương 503 497 Tây Lộc quần tu 14 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 503 Bàn Cổ cũng phải nạp phi.txt",
+      "clean": "Chương 503 Bàn Cổ cũng phải nạp phi txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 504 498. Tây Lộc quần tu 15.txt",
+      "clean": "Chương 504 498 Tây Lộc quần tu 15 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 504 Bị Đế Tân nghe trộm tiếng lòng.txt",
+      "clean": "Chương 504 Bị Đế Tân nghe trộm tiếng lòng txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 505 Lần này có thể có náo nhiệt nhìn.txt",
+      "clean": "Chương 505 Lần này có thể có náo nhiệt nhìn txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 507 Các vị đạo hữu đã lâu không gặp.txt",
+      "clean": "Chương 507 Các vị đạo hữu đã lâu không gặp txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 508 Tất cả đều lấy về nhà.txt",
+      "clean": "Chương 508 Tất cả đều lấy về nhà txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 51 Đóng sách.txt",
+      "clean": "Chương 51 Đóng sách txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 514 Đoàn tụ.txt",
+      "clean": "Chương 514 Đoàn tụ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 519 Những người ngoài hành tinh này cùng Chu có quan hệ.txt",
+      "clean": "Chương 519 Những người ngoài hành tinh này cùng Chu có quan hệ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 523 Triệt để hợp nhất.txt",
+      "clean": "Chương 523 Triệt để hợp nhất txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 528 Đại La thần tiên.txt",
+      "clean": "Chương 528 Đại La thần tiên txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 532 Tiếp Dẫn chúng thần trở về.txt",
+      "clean": "Chương 532 Tiếp Dẫn chúng thần trở về txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 539 Khói báo động dậy.txt",
+      "clean": "Chương 539 Khói báo động dậy txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 54 Ta rất khỏe cảm tạ.txt",
+      "clean": "Chương 54 Ta rất khỏe cảm tạ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 547 Cái này liền kêu đứng đem tiền kiếm 1.txt",
+      "clean": "Chương 547 Cái này liền kêu đứng đem tiền kiếm 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 555 1 Đôi lời của Tác giả.txt",
+      "clean": "Chương 555 1 Đôi lời của Tác giả txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 558 Hoàng kim mẫu đơn.txt",
+      "clean": "Chương 558 Hoàng kim mẫu đơn txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 568 Tương lai có hi vọng a.txt",
+      "clean": "Chương 568 Tương lai có hi vọng a txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 57 Thanh Đồng Sáo Trang Uy Lực Khủng Bố.txt",
+      "clean": "Chương 57 Thanh Đồng Sáo Trang Uy Lực Khủng Bố txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 57 Đột phát Lão Lư cảm nghĩ.txt",
+      "clean": "Chương 57 Đột phát Lão Lư cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 571 M78 tinh vân quái thú cũng có lương tri.txt",
+      "clean": "Chương 571 M78 tinh vân quái thú cũng có lương tri txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 574 Giúp đỡ đến rồi.txt",
+      "clean": "Chương 574 Giúp đỡ đến rồi txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 580 Hơi chậm một chút.txt",
+      "clean": "Chương 580 Hơi chậm một chút txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 583 Thế giới lớn như vậy ta muốn đi nhìn.txt",
+      "clean": "Chương 583 Thế giới lớn như vậy ta muốn đi nhìn txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 589 Tiến vào chân chính cự Long thành.txt",
+      "clean": "Chương 589 Tiến vào chân chính cự Long thành txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 59 Lên khung cảm nghĩ.txt",
+      "clean": "Chương 59 Lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 590 Cự long quốc gia.txt",
+      "clean": "Chương 590 Cự long quốc gia txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 591 Mặt đỏ tía tai 1.txt",
+      "clean": "Chương 591 Mặt đỏ tía tai 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 592 Mặt đỏ tía tai 2.txt",
+      "clean": "Chương 592 Mặt đỏ tía tai 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 593 Lực lượng kỳ lạ 1.txt",
+      "clean": "Chương 593 Lực lượng kỳ lạ 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 593 Tai nạn.txt",
+      "clean": "Chương 593 Tai nạn txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 594 Lực lượng kỳ lạ 2.txt",
+      "clean": "Chương 594 Lực lượng kỳ lạ 2 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 6 Q1 Chương 6 Cuồng long chiến Thần vương.txt",
+      "clean": "Chương 6 Q1 Chương 6 Cuồng long chiến Thần vương txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 627 Khéo léo chu tỷ thập giai Hapy ưng.txt",
+      "clean": "Chương 627 Khéo léo chu tỷ thập giai Hapy ưng txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 63 1 Vào VIP cảm nghĩ.txt",
+      "clean": "Chương 63 1 Vào VIP cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 63 Lên khung cảm nghĩ.txt",
+      "clean": "Chương 63 Lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 630 Chương cuối Sách mới và một vài lời của tác giả.txt",
+      "clean": "Chương 630 Chương cuối Sách mới và một vài lời của tác giả txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 633 Hoàn tất cảm nghĩ.txt",
+      "clean": "Chương 633 Hoàn tất cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 649 Trên thế giới khó khăn nhất lựa chọn 1.txt",
+      "clean": "Chương 649 Trên thế giới khó khăn nhất lựa chọn 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 655 Không sao đắng một đắng tỉnh Giang Nam thương nhân buôn muối bêu danh ta tới gánh 1.txt",
+      "clean": "Chương 655 Không sao đắng một đắng tỉnh Giang Nam thương nhân buôn muối bêu danh ta tới gánh 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 657 Lên thuyền kiểm tra 1.txt",
+      "clean": "Chương 657 Lên thuyền kiểm tra 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 67 6.txt",
+      "clean": "Chương 67 6 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 68 Lên khung cảm nghĩ.txt",
+      "clean": "Chương 68 Lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 681 Luyện hồng trần.txt",
+      "clean": "Chương 681 Luyện hồng trần txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 688 Đại nghịch bất đạo Cầu đặt mua.txt",
+      "clean": "Chương 688 Đại nghịch bất đạo Cầu đặt mua txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 69 Ngươi có biết tội của ngươi không.txt",
+      "clean": "Chương 69 Ngươi có biết tội của ngươi không txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 698 Tiêu diệt.txt",
+      "clean": "Chương 698 Tiêu diệt txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 7 Không có tiền yêu cầu cất giữ yêu cầu truy đọc.txt",
+      "clean": "Chương 7 Không có tiền yêu cầu cất giữ yêu cầu truy đọc txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 7 Nữ Huỳnh Đạo.txt",
+      "clean": "Chương 7 Nữ Huỳnh Đạo txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 71 Lên khung cảm nghĩ.txt",
+      "clean": "Chương 71 Lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 719 Tên phá của này chẳng thể trách tại người kinh sư ngại cẩu tăng 1.txt",
+      "clean": "Chương 719 Tên phá của này chẳng thể trách tại người kinh sư ngại cẩu tăng 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 73 Lên khung cảm nghĩ.txt",
+      "clean": "Chương 73 Lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 74 Lên khung cảm nghĩ.txt",
+      "clean": "Chương 74 Lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 75 Lên khung cảm nghĩ.txt",
+      "clean": "Chương 75 Lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 760 tướng quân ta xem vẫn là ngài tự thân xuất mã đi.txt",
+      "clean": "Chương 760 tướng quân ta xem vẫn là ngài tự thân xuất mã đi txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 761 tướng quân sức chiến đấu đó là rất khủng bố nó nhưng là giao hoàng thủ hạ lợi hại nhất chiến tướng.txt",
+      "clean": "Chương 761 tướng quân sức chiến đấu đó là rất khủng bố nó nhưng là giao hoàng thủ hạ lợi hại nhất chiến tướng txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 77 Chưng bày thông báo.txt",
+      "clean": "Chương 77 Chưng bày thông báo txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 77 Lên khung cảm nghĩ.txt",
+      "clean": "Chương 77 Lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 770 Hoàn thành cảm nghĩ.txt",
+      "clean": "Chương 770 Hoàn thành cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 776 Trọng sinh.txt",
+      "clean": "Chương 776 Trọng sinh txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 779 Ta có một cái mơ ước cầu đặt mua 2 1.txt",
+      "clean": "Chương 779 Ta có một cái mơ ước cầu đặt mua 2 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 78 Chưng bày cảm nghĩ.txt",
+      "clean": "Chương 78 Chưng bày cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 781 Lam Ngọc đại bại cầu đặt mua 1 1.txt",
+      "clean": "Chương 781 Lam Ngọc đại bại cầu đặt mua 1 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 785 Hoàn tất cảm nghĩ.txt",
+      "clean": "Chương 785 Hoàn tất cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 79 Lên khung cảm nghĩ.txt",
+      "clean": "Chương 79 Lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 795 Chỉ bằng ngươi.txt",
+      "clean": "Chương 795 Chỉ bằng ngươi txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 80 Lên giá cảm nghĩ.txt",
+      "clean": "Chương 80 Lên giá cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 802 tướng quân tới rồi phỏng chừng còn cần mấy ngày chúng ta không thể vẫn đợi ở chỗ này chờ chết a.txt",
+      "clean": "Chương 802 tướng quân tới rồi phỏng chừng còn cần mấy ngày chúng ta không thể vẫn đợi ở chỗ này chờ chết a txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 809 Một tháng không quản sự Cầu đặt mua 1 1.txt",
+      "clean": "Chương 809 Một tháng không quản sự Cầu đặt mua 1 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 81 Lên giá cảm nghĩ.txt",
+      "clean": "Chương 81 Lên giá cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 83 Chưng bày cảm nghĩ.txt",
+      "clean": "Chương 83 Chưng bày cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 84 Né tránh cùng rèn luyện.txt",
+      "clean": "Chương 84 Né tránh cùng rèn luyện txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 858 Hoàn tất cảm nghĩ.txt",
+      "clean": "Chương 858 Hoàn tất cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 86 Cần một điểm trợ giúp.txt",
+      "clean": "Chương 86 Cần một điểm trợ giúp txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 88 6.txt",
+      "clean": "Chương 88 6 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 884 Tập kích.txt",
+      "clean": "Chương 884 Tập kích txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 90 Chu Đệ muốn thổ huyết Cái gì Vĩnh Lạc đại đế Chẳng qua là trẫm trưng thu Bắc đại tướng quân 3 3 1.txt",
+      "clean": "Chương 90 Chu Đệ muốn thổ huyết Cái gì Vĩnh Lạc đại đế Chẳng qua là trẫm trưng thu Bắc đại tướng quân 3 3 1 txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 906 Hoàn tất cảm nghĩ tân thư tuyên bố.txt",
+      "clean": "Chương 906 Hoàn tất cảm nghĩ tân thư tuyên bố txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 91 Lên khung cảm nghĩ.txt",
+      "clean": "Chương 91 Lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 91 Đột nhiên xuất hiện lên khung cảm nghĩ.txt",
+      "clean": "Chương 91 Đột nhiên xuất hiện lên khung cảm nghĩ txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": null,
+      "name": "Chương 935 Trần Đại Ngưu làm cha.txt",
+      "clean": "Chương 935 Trần Đại Ngưu làm cha txt",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\logs\\mtc_careful_check.json"
+      ],
+      "extra": []
+    },
+    {
+      "id": 153384,
+      "name": "Vô Hạn Rèn Luyện",
+      "clean": "Vô Hạn Rèn Luyện",
+      "local_match": null,
+      "source_count": 1,
+      "sources": [
+        "C:\\Dev\\MTC_Download\\books_sample.json"
+      ],
+      "extra": [
+        {
+          "chapter_count": 13,
+          "latest_index": 13,
+          "status_name": "Còn tiếp"
+        }
+      ]
+    }
+  ]
+}

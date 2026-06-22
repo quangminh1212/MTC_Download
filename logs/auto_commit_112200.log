@@ -1,0 +1,109 @@
+book=Tận Thế Xuyên Việt Giả
+book_id=112200
+out=C:\Dev\MTC\Tận Thế Xuyên Việt Giả
+chapters_total=89 expected=89
+[1/89] skip existing file=Chương 1 Trương Thành Công.txt
+[2/89] skip existing file=Chương 2 Vạn Giới Chi Châu.txt
+[3/89] download chapter_id=17273877 file=Chương 3 Nhiệm Vụ Kết Thúc 1.txt
+  OK decrypted=True written=Chương 3 Nhiệm Vụ Kết Thúc 1.txt
+[4/89] download chapter_id=17273878 file=Chương 4 Nhiệm Vụ Kết Thúc 2.txt
+  OK decrypted=True written=Chương 4 Nhiệm Vụ Kết Thúc 2.txt
+[5/89] skip existing file=Chương 5 Trở Về.txt
+[6/89] skip existing file=Chương 6 Ăn Trực.txt
+[7/89] download chapter_id=17273881 file=Chương 7 Cải Tạo Nhà 1.txt
+  OK decrypted=True written=Chương 7 Cải Tạo Nhà 1.txt
+[8/89] download chapter_id=17273882 file=Chương 8 Cải Tạo Nhà 2.txt
+  OK decrypted=True written=Chương 8 Cải Tạo Nhà 2.txt
+[9/89] skip existing file=Chương 9 Đưa Thư.txt
+[10/89] skip existing file=Chương 10 Double Kill.txt
+[11/89] skip existing file=Chương 11 Nhiệm Vụ Kết Thúc.txt
+[12/89] skip existing file=Chương 12 Nhân Loại Cực Hạn.txt
+[13/89] skip existing file=Chương 13 Resident Evil.txt
+[14/89] download chapter_id=17273888 file=Chương 14 Tiến Vào Tổ Ong 1.txt
+  OK decrypted=True written=Chương 14 Tiến Vào Tổ Ong 1.txt
+[15/89] download chapter_id=17273889 file=Chương 15 Tiến Vào Tổ Ong 2.txt
+  OK decrypted=True written=Chương 15 Tiến Vào Tổ Ong 2.txt
+[16/89] skip existing file=Chương 16 Tiến Vào Tổ Ong 3.txt
+[17/89] skip existing file=Chương 17 Hành Lang Laze.txt
+[18/89] skip existing file=Chương 18 Thoát Chết.txt
+[19/89] skip existing file=Chương 19 Tắt Nguồn.txt
+[20/89] skip existing file=Chương 20 Trở Về.txt
+[21/89] skip existing file=Chương 21 Thu Hoạch.txt
+[22/89] skip existing file=Chương 22 Cổng Dịch Chuyển Phụ.txt
+[23/89] skip existing file=Chương 23 Xưởng Đúc.txt
+[24/89] skip existing file=Chương 24 Đúc Rìu.txt
+[25/89] skip existing file=Chương 25 Thế Giới Nhiệm Vụ Mới.txt
+[26/89] skip existing file=Chương 26 Từ Công Nhân Bắt Đầu.txt
+[27/89] skip existing file=Chương 27 Dạo Đêm.txt
+[28/89] skip existing file=Chương 28 Chuyện Lạ.txt
+[29/89] skip existing file=Chương 29 Cô Gái Áo Trắng.txt
+[30/89] skip existing file=Chương 30 Chùa Trấn Quốc.txt
+[31/89] skip existing file=Chương 31 Chuyện Lạ Nhà Anh Thắng.txt
+[32/89] skip existing file=Chương 32 Bách Việt Kim Chung Tráo.txt
+[33/89] skip existing file=Chương 33 Gặp Lại Ma Nữ.txt
+[34/89] skip existing file=Chương 34 Thần Hộ Mệnh.txt
+[35/89] skip existing file=Chương 35 Sinh Vật Cõi Âm.txt
+[36/89] skip existing file=Chương 36 Lão Vũ Tới Thăm.txt
+[37/89] skip existing file=Chương 37 Bái Sư.txt
+[38/89] skip existing file=Chương 38 Âm Dương Nhãn.txt
+[39/89] skip existing file=Chương 39 Kỹ Năng Cấp A.txt
+[40/89] skip existing file=Chương 40 Rời Làng.txt
+[41/89] skip existing file=Chương 41 Đi Tìm Ma Nữ.txt
+[42/89] skip existing file=Chương 42 Ma Nữ Măng Cụt.txt
+[43/89] skip existing file=Chương 43 Đem Măng Cụt Về.txt
+[44/89] skip existing file=Chương 44 Vào Trung Tâm Thành Phố.txt
+[45/89] skip existing file=Chương 45 Thay Trời Hành Đạo.txt
+[46/89] skip existing file=Chương 46 Măng Cụt Biến Mất.txt
+[47/89] download chapter_id=17273922 file=Chương 47 Báo Thù 1.txt
+  OK decrypted=True written=Chương 47 Báo Thù 1.txt
+[48/89] download chapter_id=17273923 file=Chương 48 Báo Thù 2.txt
+  OK decrypted=True written=Chương 48 Báo Thù 2.txt
+[49/89] skip existing file=Chương 49 Báo Thù 3.txt
+[50/89] skip existing file=Chương 50 Bị Bắt.txt
+[51/89] skip existing file=Chương 51 Vẽ Linh Phù.txt
+[52/89] skip existing file=Chương 52 Cục Siêu Linh.txt
+[53/89] skip existing file=Chương 53 Quá Khứ Thật Sự.txt
+[54/89] skip existing file=Chương 54 Ký Khế Ước.txt
+[55/89] skip existing file=Chương 55 Nhiều Năm Sau.txt
+[56/89] skip existing file=Chương 56 Từ Chức.txt
+[57/89] skip existing file=Chương 57 Trở Về.txt
+[58/89] skip existing file=Chương 58 Kỹ Năng Dung Hợp.txt
+[59/89] skip existing file=Chương 59 Cảnh Báo.txt
+[60/89] skip existing file=Chương 60 Nhiệm Vụ Mới.txt
+[61/89] skip existing file=Chương 61 Thoát Chết.txt
+[62/89] skip existing file=Chương 62 Tinh Thể Năng Lượng.txt
+[63/89] skip existing file=Chương 63 Măng Cụt Ngủ Say.txt
+[64/89] skip existing file=Chương 64 Cứu Người.txt
+[65/89] skip existing file=Chương 65 Ha Ji Won.txt
+[66/89] skip existing file=Chương 66 Tận Thế Ngày Thứ 10.txt
+[67/89] skip existing file=Chương 67 Bí Mật Tận Thế.txt
+[68/89] skip existing file=Chương 68 Phương Pháp Tăng Sức Mạnh.txt
+[69/89] skip existing file=Chương 69 Lên Sân Thượng.txt
+[70/89] download chapter_id=17335579 file=Chương 70 Nhiệm Vụ Thăng Cấp 1.txt
+  OK decrypted=True written=Chương 70 Nhiệm Vụ Thăng Cấp 1.txt
+[71/89] download chapter_id=17343729 file=Chương 71 Nhiệm Vụ Thăng Cấp 2.txt
+  OK decrypted=True written=Chương 71 Nhiệm Vụ Thăng Cấp 2.txt
+[72/89] skip existing file=Chương 72 Chạy Trốn Zombies.txt
+[73/89] skip existing file=Chương 73 Tới Ga Daejeon.txt
+[74/89] skip existing file=Chương 74 Lên Tàu.txt
+[75/89] skip existing file=Chương 75 Kết Thúc.txt
+[76/89] skip existing file=Chương 76 Nguy Hiểm Đến.txt
+[77/89] skip existing file=Chương 77 Vô Vọng Phản Kháng.txt
+[78/89] skip existing file=Chương 78 Du Lịch Vịnh Lan Hạ.txt
+[79/89] skip existing file=Chương 79 Sương Mù Đỏ.txt
+[80/89] skip existing file=Chương 80 Chạy Trốn.txt
+[81/89] skip existing file=Chương 81 Cơn Bão.txt
+[82/89] skip existing file=Chương 82 Xác Chết.txt
+[83/89] skip existing file=Chương 83 Điện Thoại Biến Dị.txt
+[84/89] skip existing file=Chương 84 Măng Cụt.txt
+[85/89] skip existing file=Chương 85 Xác Sống.txt
+[86/89] skip existing file=Chương 86 Thanh Lý Xác Sống.txt
+[87/89] skip existing file=Chương 87 Ngày Hôm Sau.txt
+[88/89] skip existing file=Chương 88 Máy In Lượng Tử.txt
+[89/89] download chapter_id=19175601 file=Chương 89 Cổng Dịch Chuyển 1.txt
+  OK decrypted=True written=Chương 89 Cổng Dịch Chuyển 1.txt
+final_ok=89
+final_fail=0
+out=C:\Dev\MTC\Tận Thế Xuyên Việt Giả
+
+[stderr]

@@ -1,0 +1,88 @@
+book=Khống Thiên Ma Công
+book_id=127614
+out=C:\Dev\MTC\Khống Thiên Ma Công
+chapters_total=76 expected=76
+[1/76] skip existing file=Chương 1 Chân Ma Giáng Thế.txt
+[2/76] skip existing file=Chương 2 Nhất Tiếu Khuynh Tâm Nhất Tiếu Khuynh Thành.txt
+[3/76] skip existing file=Chương 3 Giang Hồ Long Hổ Bảng.txt
+[4/76] skip existing file=Chương 4 Hô Phong Hoán Vũ Chưởng Khống Thiên Địa.txt
+[5/76] skip existing file=Chương 5 Võ Lâm Chí Tôn Không Phải Thiên Hạ Vô Địch.txt
+[6/76] skip existing file=Chương 6 Cái Vương Và Nam Đế.txt
+[7/76] skip existing file=Chương 7 U Linh Lâm.txt
+[8/76] skip existing file=Chương 8 Độc Vương Độc Hậu.txt
+[9/76] skip existing file=Chương 9 Chân Long Phương Bắc.txt
+[10/76] skip existing file=Chương 10 Bá Tuyệt Nhân Gian.txt
+[11/76] skip existing file=Chương 11 Vũ Huyết Quỷ Dạ Khốc.txt
+[12/76] skip existing file=Chương 12 Tự Đoạn Lục Căn Lục Căn Thanh Tịnh Bán Bộ Phật Đà.txt
+[13/76] skip existing file=Chương 13 Nhất Tôn Đấu Nhị Tuyệt.txt
+[14/76] skip existing file=Chương 14 Hư Không Ngự Thiên Kiếm.txt
+[15/76] skip existing file=Chương 15 Hóa giải.txt
+[16/76] skip existing file=Chương 16 Tam Đại Ma Thần.txt
+[17/76] download chapter_id=19858045 file=Chương 17 Thập Ma Kinh Sợ 1.txt
+  OK decrypted=True written=Chương 17 Thập Ma Kinh Sợ 1.txt
+[18/76] download chapter_id=19871084 file=Chương 18 Thập Ma Kinh Sợ 2.txt
+  OK decrypted=True written=Chương 18 Thập Ma Kinh Sợ 2.txt
+[19/76] skip existing file=Chương 19 Huyết Phủ Trời Không.txt
+[20/76] skip existing file=Chương 20 Triều Dương Phái và Huyết Ảnh Môn.txt
+[21/76] skip existing file=Chương 21 Dương Quang Phổ Chiếu.txt
+[22/76] skip existing file=Chương 22 Huyết Mãn Nhân Gian.txt
+[23/76] skip existing file=Chương 23 Thiên Địa Chi Chiến.txt
+[24/76] skip existing file=Chương 24 Thiên Kiếm Trảm Ma.txt
+[25/76] skip existing file=Chương 25 Thiên Cơ Sứ Giả.txt
+[26/76] skip existing file=Chương 26 Vạn Kiếm Triều Bái.txt
+[27/76] skip existing file=Chương 27 U Minh Thiên Tử Kiếm.txt
+[28/76] skip existing file=Chương 28 Thiên Mệnh Khó Đoán.txt
+[29/76] skip existing file=Chương 29 Tam Long Hội.txt
+[30/76] skip existing file=Chương 30 Ma Thánh Nhập Ma.txt
+[31/76] skip existing file=Chương 31 Nhất Phật Nhị Tôn Công.txt
+[32/76] download chapter_id=20466014 file=Chương 32 Nhất Phật Nhị Tôn Công 2.txt
+  OK decrypted=True written=Chương 32 Nhất Phật Nhị Tôn Công 2.txt
+[33/76] skip existing file=Chương 33 Hiệp Khách Liễu Nguyên.txt
+[34/76] skip existing file=Chương 34 Nước Mắt Thiếu Nữ.txt
+[35/76] skip existing file=Chương 35 Phật Ma Sơ Đấu.txt
+[36/76] skip existing file=Chương 36 Thiên Hạ Đại Loạn.txt
+[37/76] skip existing file=Chương 37 Tận Diệt Huyết Ảnh Môn.txt
+[38/76] skip existing file=Chương 38 Bởi Vì Nàng Xinh Đẹp.txt
+[39/76] skip existing file=Chương 39 Hôn Lễ.txt
+[40/76] skip existing file=Chương 40 Độc Bá Giang Hồ.txt
+[41/76] skip existing file=Chương 41 Gió Theo Chớp.txt
+[42/76] skip existing file=Chương 42 Mỹ Nhân Bảng.txt
+[43/76] skip existing file=Chương 43 Ma và Độc.txt
+[44/76] skip existing file=Chương 44 Không Ra Tay.txt
+[45/76] skip existing file=Chương 45 Ma Thánh Tà Môn.txt
+[46/76] skip existing file=Chương 46 Tiểu Thanh.txt
+[47/76] skip existing file=Chương 47 Có Thể Cản Được Ta Không.txt
+[48/76] skip existing file=Chương 48 Bằng Hữu Tốt Nhất Đối Thủ Mạnh Nhất.txt
+[49/76] skip existing file=Chương 49 Ta Nhất Định Sẽ Đưa Nàng Đi.txt
+[50/76] skip existing file=Chương 50 Điên Đảo Hoàng Cung.txt
+[51/76] skip existing file=Chương 51 Nạn Kiếp Của Ma Giáo.txt
+[52/76] skip existing file=Chương 52 Kế Hoạch Phản Công Của Ma Vương.txt
+[53/76] skip existing file=Chương 53 Ác Ma Hoa Phi Vũ.txt
+[54/76] skip existing file=Chương 54 Chí Tôn Tiêu Dao.txt
+[55/76] skip existing file=Chương 55 Phổ Đức Thần Tăng.txt
+[56/76] skip existing file=Chương 56 Phật Ma Tái Đấu.txt
+[57/76] skip existing file=Chương 57 Độc Cô Tuyết.txt
+[58/76] skip existing file=Chương 58 Ước Định Trong Chiến Tranh.txt
+[59/76] skip existing file=Chương 59 Bàn Cờ Thiên Hạ.txt
+[60/76] skip existing file=Chương 60 Nửa Thần Nửa Ma.txt
+[61/76] skip existing file=Chương 61 Hồng Giang Vương.txt
+[62/76] skip existing file=Chương 62 Đoạt Tây Dương.txt
+[63/76] skip existing file=Chương 63 Binh Thư.txt
+[64/76] skip existing file=Chương 64 Động thủ.txt
+[65/76] skip existing file=Chương 65 Long Hổ Bảng Loạn Chiến.txt
+[66/76] skip existing file=Chương 66 Tuyệt Thế Bảng Loạn Chiến.txt
+[67/76] skip existing file=Chương 67 Kiếm Thánh Quy Thiên Binh Thư Hiện Thế.txt
+[68/76] skip existing file=Chương 68 Kiếm Ngâm.txt
+[69/76] skip existing file=Chương 69 Hai Phía Giáp Công.txt
+[70/76] skip existing file=Chương 70 Quân Vương Quyết Đấu.txt
+[71/76] skip existing file=Chương 71 Thiên Thu Đế Quốc.txt
+[72/76] skip existing file=Chương 72 Ma Thánh Cuồng Nộ.txt
+[73/76] skip existing file=Chương 73 Hiệp Khách Chân Kinh.txt
+[74/76] skip existing file=Chương 74 Mộng Ảo Miên Man.txt
+[75/76] skip existing file=Chương 75 Hiệp Khách Cùng Tà Ma.txt
+[76/76] skip existing file=Chương 76 Hiệp Khách Cùng Tà Ma 2 chương cuối.txt
+final_ok=76
+final_fail=0
+out=C:\Dev\MTC\Khống Thiên Ma Công
+
+[stderr]

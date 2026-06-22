@@ -1,0 +1,10 @@
+queue=7783 done=4922 chapter_workers=32
+[3301/7783] start id=127392 chapters=296 name=Tinh Võ Kỷ Nguyên
+[3301/7783] issue id=127392 remote=289 downloaded=0 missing_after=0 failed=0
+[3934/7783] start id=153127 chapters=363 name=Thần Linh Kỷ Nguyên
+[3934/7783] issue id=153127 remote=387 downloaded=0 missing_after=0 failed=0
+[4804/7783] start id=140666 chapters=487 name=Thiên Tai Group Chat Ta Thật Không Phải Đệ Tứ Thiên Tai
+[4804/7783] ok id=140666 remote=485 downloaded=1 missing_after=0 failed=0
+[4805/7783] start id=145481 chapters=487 name=1984: Từ Phá Sản Món Cay Tứ Xuyên Quán Bắt Đầu
+[4805/7783] ok id=145481 remote=473 downloaded=20 missing_after=0 failed=0
+[4806/7783] start id=147087 chapters=487 name=Mô Phỏng Nhân Sinh Sau Khi Kết Thúc, Các Nàng Thu Ta Tới

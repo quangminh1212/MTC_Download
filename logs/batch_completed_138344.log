@@ -1,0 +1,552 @@
+book=Đường Đến Vinh Quang
+book_id=138344
+out=C:\Dev\MTC\Đường Đến Vinh Quang
+chapters_total=488 expected=488
+workers=6 batch_size=12
+BATCH 1-12 / 488
+❌ Lỗi khi tải chương 21317763: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 1/488 decrypted=True file=Chương 1 Kiên trì không bỏ.txt
+  OK 2/488 decrypted=True file=Chương 2 Sân vận động Giải Phóng.txt
+  OK 3/488 decrypted=True file=Chương 3 Chuẩn bị chết với tao nhe con trai.txt
+  OK 4/488 decrypted=True file=Chương 4 Thế trận đảo chiều.txt
+  OK 5/488 decrypted=True file=Chương 5 Nathan dứt nó không cho nó sút.txt
+  OK 6/488 decrypted=True file=Chương 6 Kỹ Năng Sút Bóng Cấp Độ 1.txt
+  OK 7/488 decrypted=True file=Chương 7 Danh sách trúng tuyển.txt
+  OK 8/488 decrypted=True retry=2 file=Chương 8 Jane Souvenir.txt
+  OK 9/488 decrypted=True file=Chương 9 Máu đỏ da vàng thiêng liêng vô giá.txt
+  OK 10/488 decrypted=True file=Chương 10 Bãi biển gặp gỡ.txt
+  OK 11/488 decrypted=True file=Chương 11 Ngày đầu tiên.txt
+  OK 12/488 decrypted=True file=Chương 12 Tha cho tao đi.txt
+BATCH 13-24 / 488
+  OK 13/488 decrypted=True file=Chương 13 Chuẩn bị cho trận đầu tiên.txt
+  OK 14/488 decrypted=True file=Chương 14 Nhìn quen vậy ta.txt
+  OK 15/488 decrypted=True file=Chương 15 Giao hữu với FC Conti bắt đầu.txt
+  OK 16/488 decrypted=True file=Chương 16 Tình thế bất lợi.txt
+  OK 17/488 decrypted=True file=Chương 17 Đối mặt tình huống quyết định.txt
+  OK 18/488 decrypted=True file=Chương 18 Đồng đội oan gia.txt
+  OK 19/488 decrypted=True file=Chương 19 Đường dài mới biết ngựa hay.txt
+  OK 20/488 decrypted=True file=Chương 20 Nói gì cũng được đừng nói câu nói này.txt
+  OK 21/488 decrypted=True file=Chương 21 Thử thách thực sự.txt
+  OK 22/488 decrypted=True file=Chương 22 Trận đấu bắt đầu.txt
+  OK 23/488 decrypted=True file=Chương 23 Tình thế gay go.txt
+  OK 24/488 decrypted=True file=Chương 24 Đối mặt.txt
+BATCH 25-36 / 488
+  OK 25/488 decrypted=True file=Chương 25 Dấu chấm tròn huấn luyện kết thúc.txt
+  OK 26/488 decrypted=True file=Chương 26 Chưa có tin tức.txt
+  OK 27/488 decrypted=True file=Chương 27 Đột nhiên đến.txt
+  OK 28/488 decrypted=True file=Chương 28 Hợp đồng chuyên nghiệp đầu tiên.txt
+  OK 29/488 decrypted=True file=Chương 29 Chỉ lưu hành nội bộ.txt
+  OK 30/488 decrypted=True file=Chương 30 Ban huấn luyện U17 mùa giải mới.txt
+  OK 31/488 decrypted=True file=Chương 31 Bước vào tập luyện.txt
+  OK 32/488 decrypted=True file=Chương 32 Luồng gió mới.txt
+  OK 33/488 decrypted=True file=Chương 33 Đấu tập đối kháng.txt
+  OK 34/488 decrypted=True file=Chương 34 Bốc thăm chia bảng giải U17 Bắc Pháp.txt
+  OK 35/488 decrypted=True file=Chương 35 Oan gia ngõ hẹp.txt
+  OK 36/488 decrypted=True file=Chương 36 Cho mày biết lý do vì sao biển lại mặn.txt
+BATCH 37-48 / 488
+  OK 37/488 decrypted=True file=Chương 37 Mọi việc sẵn sàng chỉ chờ giông bão tới.txt
+  OK 38/488 decrypted=True file=Chương 38 Tiến về Valenciennes.txt
+  OK 39/488 decrypted=True file=Chương 39 Tôi nhắc em.txt
+  OK 40/488 decrypted=True file=Chương 40 Thay đổi chiến thuật.txt
+  OK 41/488 decrypted=True file=Chương 41 Phong khởi động.txt
+  OK 42/488 decrypted=True file=Chương 42 Mũi tên vàng.txt
+  OK 43/488 decrypted=True file=Chương 43 Quái vật Hai Néo.txt
+  OK 44/488 decrypted=True file=Chương 44 Tuyệt phẩm.txt
+  OK 45/488 decrypted=True file=Chương 45 Tiếng Nói Boulogne.txt
+  OK 46/488 decrypted=True file=Chương 46 Hai điểm yếu.txt
+  OK 47/488 decrypted=True file=Chương 47 Bọn hắn đi rồi.txt
+  OK 48/488 decrypted=True file=Chương 48 Cân bằng.txt
+BATCH 49-60 / 488
+  OK 49/488 decrypted=True file=Chương 49 Điểm yếu bộc lộ.txt
+  OK 50/488 decrypted=True file=Chương 50 Trước giờ thi đấu.txt
+  OK 51/488 decrypted=True file=Chương 51 Đội hình ra sân.txt
+  OK 52/488 decrypted=True file=Chương 52 Không so thì thôi đã so liền tức muốn nổ phổi.txt
+  OK 53/488 decrypted=True file=Chương 53 Thứ mà người khác không có.txt
+  OK 54/488 decrypted=True file=Chương 54 Thời tiết thì nắng bàn thắng thì mưa.txt
+  OK 55/488 decrypted=True file=Chương 55 Trận đấu kết thúc.txt
+  OK 56/488 decrypted=True file=Chương 56 Mục tiêu nâng cấp.txt
+  OK 57/488 decrypted=True file=Chương 57 Dự khán.txt
+  OK 58/488 decrypted=True file=Chương 58 Một chút thu hoạch.txt
+  OK 59/488 decrypted=True file=Chương 59 Chúc mừng tập luyện có kết quả.txt
+  OK 60/488 decrypted=True file=Chương 60 Cơ hội cho các tân binh.txt
+BATCH 61-72 / 488
+❌ Lỗi khi tải chương 21670146: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 61/488 decrypted=True file=Chương 61 Uy lực của Đóng Nghe Cái Đùng.txt
+  OK 62/488 decrypted=True file=Chương 62 Canh bạc tất tay.txt
+  OK 63/488 decrypted=True file=Chương 63 Xảy ra biến cố.txt
+  OK 64/488 decrypted=True file=Chương 64 Đến Paris.txt
+  OK 65/488 decrypted=True file=Chương 65 Thân thế của thím ba.txt
+  OK 66/488 decrypted=True file=Chương 66 Ông thầy gia sư bí ẩn.txt
+  OK 67/488 decrypted=True file=Chương 67 Chờ đợi có tin tức.txt
+  OK 68/488 decrypted=True file=Chương 68 Tham quan câu lạc bộ hàng đầu.txt
+  OK 69/488 decrypted=True retry=2 file=Chương 69 Cái chân ngứa hết chịu nổi rồi.txt
+  OK 70/488 decrypted=True file=Chương 70 Tin xấu dồn dập.txt
+  OK 71/488 decrypted=True file=Chương 71 Ngựa chứng Matos.txt
+  OK 72/488 decrypted=True file=Chương 72 Khó khăn chồng chất.txt
+BATCH 73-84 / 488
+❌ Lỗi khi tải chương 21764770: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 73/488 decrypted=True file=Chương 73 Không thầy đố mày làm nên.txt
+  OK 74/488 decrypted=True file=Chương 74 Sơ ngộ kiến thức cốt lõi.txt
+  OK 75/488 decrypted=True file=Chương 75 Khi đôi chân tháo tạ.txt
+  OK 76/488 decrypted=True file=Chương 76 Lévan liều mạng.txt
+  OK 77/488 decrypted=True file=Chương 77 Ba quyển sổ tay.txt
+  OK 78/488 decrypted=True file=Chương 78 Chuyện tương lai ai nói trước được.txt
+  OK 79/488 decrypted=True file=Chương 79 Cùng chung bí kíp nhưng hai cách luyện.txt
+  OK 80/488 decrypted=True file=Chương 80 Vượt lên dẫn trước.txt
+  OK 81/488 decrypted=True retry=2 file=Chương 81 Tình thế nguy ngập.txt
+  OK 82/488 decrypted=True file=Chương 82 Không còn lựa chọn khác.txt
+  OK 83/488 decrypted=True file=Chương 83 Tranh vé vào tứ kết bắt đầu.txt
+  OK 84/488 decrypted=True file=Chương 84 Đây...đây là.txt
+BATCH 85-96 / 488
+  OK 85/488 decrypted=True file=Chương 85 Phương án thi đấu.txt
+  OK 86/488 decrypted=True file=Chương 86 Triệt hạ.txt
+  OK 87/488 decrypted=True file=Chương 87 Đùng.txt
+  OK 88/488 decrypted=True file=Chương 88 Tấm vé tứ kết thuộc về.txt
+  OK 89/488 decrypted=True file=Chương 89 Kiểm tra chấn thương mời dự tiệc.txt
+  OK 90/488 decrypted=True file=Chương 90 Quà Giáng sinh.txt
+  OK 91/488 decrypted=True file=Chương 91 Bị kèm chặt.txt
+  OK 92/488 decrypted=True file=Chương 92 Hòn ngọc quý.txt
+  OK 93/488 decrypted=True file=Chương 93 Củ khoai lang nóng bỏng tay.txt
+  OK 94/488 decrypted=True file=Chương 94 Thằng này quá thần bí nhìn không thấu.txt
+  OK 95/488 decrypted=True file=Chương 95 Phân tích hồ sơ tình báo.txt
+  OK 96/488 decrypted=True file=Chương 96 Ván cờ lật ngửa đối đầu với Gậy ông đập lưng ông.txt
+BATCH 97-108 / 488
+  OK 97/488 decrypted=True file=Chương 97 Sao tôi số khổ dữ vầy nè trời.txt
+  OK 98/488 decrypted=True file=Chương 98 Pha kiến tạo tuyệt đỉnh của Kalulu.txt
+  OK 99/488 decrypted=True file=Chương 99 Thi triển độc chiêu.txt
+  OK 100/488 decrypted=True file=Chương 100 Cảm ơn cậu để đó tớ lo.txt
+  OK 101/488 decrypted=True file=Chương 101 Đổi người khó hiểu.txt
+  OK 102/488 decrypted=True file=Chương 102 Loạt sút quyết định.txt
+  OK 103/488 decrypted=True file=Chương 103 Phong cậu điên rồi.txt
+  OK 104/488 decrypted=True file=Chương 104 Anh em nhà Hédoire.txt
+  OK 105/488 decrypted=True file=Chương 105 Tìm cách khắc chế.txt
+  OK 106/488 decrypted=True file=Chương 106 Bán kết bắt đầu.txt
+  OK 107/488 decrypted=True file=Chương 107 Xúc tụi nó lẹ lẹ rồi về.txt
+  OK 108/488 decrypted=True file=Chương 108 Cá chết lưới rách.txt
+BATCH 109-120 / 488
+  OK 109/488 decrypted=True file=Chương 109 Ác quỷ Sambo.txt
+  OK 110/488 decrypted=True file=Chương 110 Phút 90 4.txt
+  OK 111/488 decrypted=True file=Chương 111 Thất bại cay đắng.txt
+  OK 112/488 decrypted=True file=Chương 112 Di dời chấn thương.txt
+  OK 113/488 decrypted=True file=Chương 113 Tin tức chẳng lành.txt
+  OK 114/488 decrypted=True file=Chương 114 Lo lắng.txt
+  OK 115/488 decrypted=True file=Chương 115 Đãi ngộ khác biệt.txt
+  OK 116/488 decrypted=True file=Chương 116 Phỏng vấn trước trận.txt
+  OK 117/488 decrypted=True file=Chương 117 Vung quyền đấm vào không khí.txt
+  OK 118/488 decrypted=True file=Chương 118 Chung kết U17 Bắc Pháp chính thức bắt đầu.txt
+  OK 119/488 decrypted=True file=Chương 119 Mở tỉ số.txt
+  OK 120/488 decrypted=True file=Chương 120 U17 Boulogne đã bị giải mã rồi sao.txt
+BATCH 121-132 / 488
+  OK 121/488 decrypted=True file=Chương 121 Tam giác quái quỷ.txt
+  OK 122/488 decrypted=True file=Chương 122 Hú hồn hú vía.txt
+  OK 123/488 decrypted=True file=Chương 123 Xứng đáng được tôn trọng.txt
+  OK 124/488 decrypted=True file=Chương 124 Trời ơi.txt
+  OK 125/488 decrypted=True file=Chương 125 Đúng là cậu ấy rồi.txt
+  OK 126/488 decrypted=True file=Chương 126 MVP Nguyễn Trung Phong.txt
+  OK 127/488 decrypted=True file=Chương 127 Tăng trưởng.txt
+  OK 128/488 decrypted=True file=Chương 128 Giỏi có giá của giỏi anh bạn à.txt
+  OK 129/488 decrypted=True file=Chương 129 Bong bóng.txt
+  OK 130/488 decrypted=True file=Chương 130 Lựa chọn.txt
+  OK 131/488 decrypted=True file=Chương 131 Mạnh như súng cối.txt
+  OK 132/488 decrypted=True file=Chương 132 Nhóm phản đồ.txt
+BATCH 133-144 / 488
+  OK 133/488 decrypted=True file=Chương 133 Học viện Clairefontaine.txt
+  OK 134/488 decrypted=True file=Chương 134 Bạn cùng phòng.txt
+  OK 135/488 decrypted=True file=Chương 135 Nhập trại.txt
+  OK 136/488 decrypted=True file=Chương 136 Cảm giác ấy lại đến.txt
+  OK 137/488 decrypted=True file=Chương 137 Quyết định.txt
+  OK 138/488 decrypted=True file=Chương 138 Không thể giỏi nhất nhưng sẽ giỏi hơn.txt
+  OK 139/488 decrypted=True file=Chương 139 Rất ối giồi ôi.txt
+  OK 140/488 decrypted=True file=Chương 140 Đến thăm.txt
+  OK 141/488 decrypted=True file=Chương 141 Trận đấu nội bộ cuối cùng.txt
+  OK 142/488 decrypted=True file=Chương 142 Gió nổi mây phun.txt
+  OK 143/488 decrypted=True file=Chương 143 Nội trú vs Trại hè.txt
+  OK 144/488 decrypted=True file=Chương 144 Vươn lên dẫn trước.txt
+BATCH 145-156 / 488
+  OK 145/488 decrypted=True file=Chương 145 Phải để tao.txt
+  OK 146/488 decrypted=True file=Chương 146 Tiếc nuối buồn bực.txt
+  OK 147/488 decrypted=True file=Chương 147 Có duyên không phận.txt
+  OK 148/488 decrypted=True file=Chương 148 Chốt kèo.txt
+  OK 149/488 decrypted=True file=Chương 149 Tin đồn.txt
+  OK 150/488 decrypted=True file=Chương 150 Ngựa hay thường là ngựa chứng.txt
+  OK 151/488 decrypted=True file=Chương 151 Zlatan không thử việc.txt
+  OK 152/488 decrypted=True file=Chương 152 Cơ hội liên tục.txt
+  OK 153/488 decrypted=True file=Chương 153 Zlatan không cần dặn dò.txt
+  OK 154/488 decrypted=True file=Chương 154 Ngạo mạn.txt
+  OK 155/488 decrypted=True file=Chương 155 Cú Đúp.txt
+  OK 156/488 decrypted=True file=Chương 156 Khó hiểu.txt
+BATCH 157-168 / 488
+  OK 157/488 decrypted=True file=Chương 157 Trở về.txt
+  OK 158/488 decrypted=True file=Chương 158 Chỉ một năm thôi.txt
+  OK 159/488 decrypted=True file=Chương 159 Tân huấn luyện viên trưởng.txt
+  OK 160/488 decrypted=True file=Chương 160 Hai món quà.txt
+  OK 161/488 decrypted=True file=Chương 161 Bình cũ rượu mới.txt
+  OK 162/488 decrypted=True file=Chương 162 Bổ sung nhân sự.txt
+  OK 163/488 decrypted=True file=Chương 163 Các bên đều rục rịch.txt
+  OK 164/488 decrypted=True file=Chương 164 Không giấu nghề.txt
+  OK 165/488 decrypted=True file=Chương 165 Trận đấu mở màn mùa giải.txt
+  OK 166/488 decrypted=True file=Chương 166 Mảnh ghép hoàn hảo.txt
+  OK 167/488 decrypted=True file=Chương 167 Giằng co.txt
+  OK 168/488 decrypted=True file=Chương 168 Uyển chuyển hơn ngay cả khi bị phạm lỗi.txt
+BATCH 169-180 / 488
+  OK 169/488 decrypted=True file=Chương 169 Ai sợ ai.txt
+  OK 170/488 decrypted=True file=Chương 170 Anh hùng khó thoát ải euro.txt
+  OK 171/488 decrypted=True file=Chương 171 Muốn nuốt chúng tôi phải để lại một cái đùi.txt
+  OK 172/488 decrypted=True file=Chương 172 Quyết tâm cao độ.txt
+  OK 173/488 decrypted=True file=Chương 173 Phòng ngự số đông.txt
+  OK 174/488 decrypted=True file=Chương 174 Một chút may mắn.txt
+  OK 175/488 decrypted=True file=Chương 175 Cơ hội vươn lên.txt
+  OK 176/488 decrypted=True file=Chương 176 Hỗn loạn ngẩng cao đầu đối diện.txt
+  OK 177/488 decrypted=True file=Chương 177 Cơ hội sửa sai.txt
+  OK 178/488 decrypted=True file=Chương 178 Lập công chuộc tội.txt
+  OK 179/488 decrypted=True file=Chương 179 Cảnh còn người mất.txt
+  OK 180/488 decrypted=True file=Chương 180 Lại như vậy nữa rồi.txt
+BATCH 181-192 / 488
+❌ Lỗi khi tải chương 22123040: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 181/488 decrypted=True file=Chương 181 Đòn chí mạng.txt
+  OK 182/488 decrypted=True file=Chương 182 Hưng phấn kỹ năng mới xuất hiện.txt
+  OK 183/488 decrypted=True file=Chương 183 Buộc phải thắng.txt
+  OK 184/488 decrypted=True file=Chương 184 Bị dồn đến chân tường.txt
+  OK 185/488 decrypted=True file=Chương 185 Chiến U17 PSG.txt
+  OK 186/488 decrypted=True file=Chương 186 Cú đúp.txt
+  OK 187/488 decrypted=True file=Chương 187 Phần thưởng bất ngờ.txt
+  OK 188/488 decrypted=True file=Chương 188 Tình trạng bắt bài.txt
+  OK 189/488 decrypted=True file=Chương 189 Tin vui đột xuất.txt
+  OK 190/488 decrypted=True retry=2 file=Chương 190 Thăm lại chốn xưa.txt
+  OK 191/488 decrypted=True file=Chương 191 Lên đường.txt
+  OK 192/488 decrypted=True file=Chương 192 Người Việt đầu tiên gặp khi về quê.txt
+BATCH 193-204 / 488
+❌ Lỗi khi tải chương 22162997: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 193/488 decrypted=True file=Chương 193 Về quê ăn Tết.txt
+  OK 194/488 decrypted=True file=Chương 194 Chính thức công nhận địa vị của anh hai Tèo.txt
+  OK 195/488 decrypted=True file=Chương 195 Gài độ Tết.txt
+  OK 196/488 decrypted=True retry=2 file=Chương 196 Chuẩn bị cho đại chiến cấp xóm.txt
+  OK 197/488 decrypted=True file=Chương 197 Anh hai Tèo idol giới trẻ.txt
+  OK 198/488 decrypted=True file=Chương 198 Hai cái đùi gà.txt
+  OK 199/488 decrypted=True file=Chương 199 Thay đổi đột ngột biết đâu bất ngờ.txt
+  OK 200/488 decrypted=True file=Chương 200 Bơi ra sông lớn.txt
+  OK 201/488 decrypted=True file=Chương 201 Kẻ thù gặp nhau mài răng kèn kẹt.txt
+  OK 202/488 decrypted=True file=Chương 202 Bổ sung nhân lực áp lực cạnh tranh vị trí.txt
+  OK 203/488 decrypted=True file=Chương 203 Di chuyển chuẩn bị.txt
+  OK 204/488 decrypted=True file=Chương 204 Tung hết sức mình.txt
+BATCH 205-216 / 488
+❌ Lỗi khi tải chương 22252089: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 205/488 decrypted=True file=Chương 205 4 4 2 VS 4 2 3 1.txt
+  OK 206/488 decrypted=True file=Chương 206 Hai cái tát đau điếng.txt
+  OK 207/488 decrypted=True file=Chương 207 Khó khăn.txt
+  OK 208/488 decrypted=True file=Chương 208 Không khuất phục.txt
+  OK 209/488 decrypted=True file=Chương 209 Liều mạng giữ điểm.txt
+  OK 210/488 decrypted=True file=Chương 210 Giăng bẫy né đòn.txt
+  OK 211/488 decrypted=True retry=2 file=Chương 211 Bầm dập tăng lên.txt
+  OK 212/488 decrypted=True file=Chương 212 Hai lòng.txt
+  OK 213/488 decrypted=True file=Chương 213 Đá bóng thôi mà phạm lỗi ác như vậy.txt
+  OK 214/488 decrypted=True file=Chương 214 Phát hiện động trời ngập tràn lửa giận.txt
+  OK 215/488 decrypted=True file=Chương 215 Có biến.txt
+  OK 216/488 decrypted=True file=Chương 216 Bị nghiên cứu kỹ.txt
+BATCH 217-228 / 488
+❌ Lỗi khi tải chương 22252100: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 217/488 decrypted=True file=Chương 217 Nhóm lửa.txt
+  OK 218/488 decrypted=True retry=2 file=Chương 218 Thanh lọc và gắn kết.txt
+  OK 219/488 decrypted=True file=Chương 219 Chuồn trước tính sau.txt
+  OK 220/488 decrypted=True file=Chương 220 Em không muốn nói chuyện này.txt
+  OK 221/488 decrypted=True file=Chương 221 Tiếp cận trái phép lời nhắn đến chú Ba Nguyên.txt
+  OK 222/488 decrypted=True file=Chương 222 Vẫn chưa từ bỏ.txt
+  OK 223/488 decrypted=True file=Chương 223 Đẳng cấp vượt trội thi đấu kiên cường.txt
+  OK 224/488 decrypted=True file=Chương 224 Một chân bên bờ vực thẳm.txt
+  OK 225/488 decrypted=True file=Chương 225 Cụ thể hóa chỉ số xác định rõ phương hướng.txt
+  OK 226/488 decrypted=True file=Chương 226 Jacky đối đầu Jacky.txt
+  OK 227/488 decrypted=True file=Chương 227 Động tâm.txt
+  OK 228/488 decrypted=True file=Chương 228 Tất tay.txt
+BATCH 229-240 / 488
+❌ Lỗi khi tải chương 22368615: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 229/488 decrypted=True file=Chương 229 Cảm giác lạc lõng.txt
+  OK 230/488 decrypted=True file=Chương 230 Âm thầm tiếp xúc.txt
+  OK 231/488 decrypted=True file=Chương 231 Pau FC.txt
+  OK 232/488 decrypted=True file=Chương 232 Nhiệm vụ bất khả thi.txt
+  OK 233/488 decrypted=True file=Chương 233 Bàn thắng kết liễu.txt
+  OK 234/488 decrypted=True file=Chương 234 Người của Boulogne ra ngoài lăn lộn không thể bị ức hiếp.txt
+  OK 235/488 decrypted=True file=Chương 235 Người quen cũ người đại diện.txt
+  OK 236/488 decrypted=True file=Chương 236 Đạt thành thỏa thuận.txt
+  OK 237/488 decrypted=True retry=2 file=Chương 237 Lựa chọn của Phong.txt
+  OK 238/488 decrypted=True file=Chương 238 Đặt kỳ vọng lên vai Phong.txt
+  OK 239/488 decrypted=True file=Chương 239 Cuối cùng cũng chờ được mày.txt
+  OK 240/488 decrypted=True file=Chương 240 Gặp lại bạn cũ.txt
+BATCH 241-252 / 488
+  OK 241/488 decrypted=True file=Chương 241 Giao hữu với AS Beauvais.txt
+  OK 242/488 decrypted=True file=Chương 242 Thay đổi.txt
+  OK 243/488 decrypted=True file=Chương 243 Mày khá lắm nhóc.txt
+  OK 244/488 decrypted=True file=Chương 244 Siêu phẩm.txt
+  OK 245/488 decrypted=True file=Chương 245 Mùa giải mới.txt
+  OK 246/488 decrypted=True file=Chương 246 Cạnh tranh lành mạnh.txt
+  OK 247/488 decrypted=True file=Chương 247 Mở màn mùa giải tiếp đón Reims.txt
+  OK 248/488 decrypted=True file=Chương 248 Khách đến thăm.txt
+  OK 249/488 decrypted=True file=Chương 249 Ngây ngất.txt
+  OK 250/488 decrypted=True file=Chương 250 Đến tìm.txt
+  OK 251/488 decrypted=True file=Chương 251 Công làm thủ phá.txt
+  OK 252/488 decrypted=True file=Chương 252 Xử lý đẳng cấp.txt
+BATCH 253-264 / 488
+❌ Lỗi khi tải chương 22433481: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 253/488 decrypted=True file=Chương 253 90 3.txt
+  OK 254/488 decrypted=True file=Chương 254 Vào phom.txt
+  OK 255/488 decrypted=True retry=2 file=Chương 255 Hai mặt trận.txt
+  OK 256/488 decrypted=True file=Chương 256 Trở lại thử nghiệm mới.txt
+  OK 257/488 decrypted=True file=Chương 257 Thử thách nặng ký.txt
+  OK 258/488 decrypted=True file=Chương 258 Người nhện Weber.txt
+  OK 259/488 decrypted=True file=Chương 259 Vòng đấu 14 AS Nancy vs Metz.txt
+  OK 260/488 decrypted=True file=Chương 260 Nức lòng người hâm mộ.txt
+  OK 261/488 decrypted=True file=Chương 261 Lai rai giao hữu.txt
+  OK 262/488 decrypted=True file=Chương 262 Tạm xa.txt
+  OK 263/488 decrypted=True retry=2 file=Chương 263 Lịch thi đấu dày đặc.txt
+  OK 264/488 decrypted=True file=Chương 264 Lời nguyền áp lực.txt
+BATCH 265-276 / 488
+❌ Lỗi khi tải chương 22510348: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+❌ Lỗi khi tải chương 22510369: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 265/488 decrypted=True file=Chương 265 Trận đấu cuối cùng lượt đi.txt
+  OK 266/488 decrypted=True file=Chương 266 Sạc lại năng lượng.txt
+  OK 267/488 decrypted=True file=Chương 267 Chú Fred.txt
+  OK 268/488 decrypted=True file=Chương 268 Cúp quốc gia đối đầu Nice.txt
+  OK 269/488 decrypted=True file=Chương 269 Siêu phẩm hụt. Nhịp độ thi đấu bùng nổ.txt
+  OK 270/488 decrypted=True file=Chương 270 Vào hay chưa.txt
+  OK 271/488 decrypted=True file=Chương 271 Điên cuồng.txt
+  OK 272/488 decrypted=True retry=2 file=Chương 272 Long tranh hổ đấu.txt
+  OK 273/488 decrypted=True file=Chương 273 Chia sẻ áp lực.txt
+  OK 274/488 decrypted=True file=Chương 274 Thiên thời địa lợi nhân hòa.txt
+  OK 275/488 decrypted=True retry=2 file=Chương 275 Đua tranh khốc liệt.txt
+  OK 276/488 decrypted=True file=Chương 276 Tiếp xúc thỏa thuận.txt
+BATCH 277-288 / 488
+❌ Lỗi khi tải chương 22590643: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 277/488 decrypted=True file=Chương 277 Tỏa sáng kỹ năng mới Sút Mạnh Cấp 3.txt
+  OK 278/488 decrypted=True file=Chương 278 Tự làm khó mình.txt
+  OK 279/488 decrypted=True file=Chương 279 Nhất định phải thắng.txt
+  OK 280/488 decrypted=True file=Chương 280 Tất tay.txt
+  OK 281/488 decrypted=True file=Chương 281 Sao Vàng Nguyễn Trung Phong.txt
+  OK 282/488 decrypted=True retry=2 file=Chương 282 Là Thầy Fred.txt
+  OK 283/488 decrypted=True file=Chương 283 Triệu tập tương lai.txt
+  OK 284/488 decrypted=True file=Chương 284 Sắp xếp sẵn sàng.txt
+  OK 285/488 decrypted=True file=Chương 285 Ngôi sao sáng nhất.txt
+  OK 286/488 decrypted=True file=Chương 286 U23 Việt Nam.txt
+  OK 287/488 decrypted=True file=Chương 287 Quyến Văn thay đổi 1.txt
+  OK 288/488 decrypted=True file=Chương 288 Quyến Văn thay đổi 2.txt
+BATCH 289-300 / 488
+  OK 289/488 decrypted=True file=Chương 289 Quyến Văn thay đổi 3.txt
+  OK 290/488 decrypted=True file=Chương 290 Quyến Văn thay đổi 4.txt
+  OK 291/488 decrypted=True file=Chương 291 U23 Việt Nam vs ASV Neufeld.txt
+  OK 292/488 decrypted=True file=Chương 292 Ligue 1 vòng 2 Lyon vs Metz.txt
+  OK 293/488 decrypted=True file=Chương 293 Chiến Lyon.txt
+  OK 294/488 decrypted=True file=Chương 294 Bóng ma Essen.txt
+  OK 295/488 decrypted=True file=Chương 295 Bùng nổ kỹ năng mới toanh xuất hiện.txt
+  OK 296/488 decrypted=True file=Chương 296 So đấu chiến thuật.txt
+  OK 297/488 decrypted=True file=Chương 297 Người Thái xem thường.txt
+  OK 298/488 decrypted=True file=Chương 298 U23 Việt Nam vs Seoul FC.txt
+  OK 299/488 decrypted=True file=Chương 299 Điểm yếu khó sửa.txt
+  OK 300/488 decrypted=True file=Chương 300 Panenka.txt
+BATCH 301-312 / 488
+  OK 301/488 decrypted=True file=Chương 301 Anh Hưng.txt
+  OK 302/488 decrypted=True file=Chương 302 Bán Kết 1.txt
+  OK 303/488 decrypted=True file=Chương 303 Bán Kết 2.txt
+  OK 304/488 decrypted=True file=Chương 304 1 Lý do phục thù.txt
+  OK 305/488 decrypted=True file=Chương 305 Những cơn gió vấn vương ở Hà Nội.txt
+  OK 306/488 decrypted=True file=Chương 306 Định hình lối chơi.txt
+  OK 307/488 decrypted=True file=Chương 307 Dồn hết tâm sức.txt
+  OK 308/488 decrypted=True file=Chương 308 Cập nhật tình hình.txt
+  OK 309/488 decrypted=True file=Chương 309 Vòng 6 Ligue 1 Metz vs Montpellier.txt
+  OK 310/488 decrypted=True file=Chương 310 Thiếu fair play.txt
+  OK 311/488 decrypted=True file=Chương 311 Giữ vững phong độ.txt
+  OK 312/488 decrypted=True file=Chương 312 Sơ loại Asian Cup 2004 mở màn.txt
+BATCH 313-324 / 488
+  OK 313/488 decrypted=True file=Chương 313 Sự tươi mới.txt
+  OK 314/488 decrypted=True file=Chương 314 Xuyên thủng.txt
+  OK 315/488 decrypted=True file=Chương 315 Thót tim.txt
+  OK 316/488 decrypted=True file=Chương 316 Tinh quái.txt
+  OK 317/488 decrypted=True file=Chương 317 Nhen nhóm ước mơ vĩ đại.txt
+  OK 318/488 decrypted=True file=Chương 318 Trở lại Ligue 1.txt
+  OK 319/488 decrypted=True file=Chương 319 Trận chiến danh dự.txt
+  OK 320/488 decrypted=True file=Chương 320 Người từ thế giới khác đến.txt
+  OK 321/488 decrypted=True file=Chương 321 Khác lạ.txt
+  OK 322/488 decrypted=True file=Chương 322 Tái chiến Hàn Quốc ở lượt về.txt
+  OK 323/488 decrypted=True file=Chương 323 Thay đổi chiến thuật.txt
+  OK 324/488 decrypted=True file=Chương 324 Phá lối chơi của Việt Nam.txt
+BATCH 325-336 / 488
+  OK 325/488 decrypted=True file=Chương 325 Điều chỉnh.txt
+  OK 326/488 decrypted=True file=Chương 326 Khó khăn chồng chất.txt
+  OK 327/488 decrypted=True file=Chương 327 Chung một nhịp đập.txt
+  OK 328/488 decrypted=True file=Chương 328 Mồ hôi máu nước mắt.txt
+  OK 329/488 decrypted=True file=Chương 329 Tính toán cẩn thận.txt
+  OK 330/488 decrypted=True file=Chương 330 Thế cục xoay chuyển.txt
+  OK 331/488 decrypted=True file=Chương 331 Trận đấu quyết định với Oman.txt
+  OK 332/488 decrypted=True file=Chương 332 Lối đá hiện đại.txt
+  OK 333/488 decrypted=True file=Chương 333 Đòn đánh bất ngờ.txt
+  OK 334/488 decrypted=True file=Chương 334 Giằng co. Chiến thuật mới.txt
+  OK 335/488 decrypted=True file=Chương 335 Cân não.txt
+  OK 336/488 decrypted=True file=Chương 336 Gieo gió gặt bão.txt
+BATCH 337-348 / 488
+  OK 337/488 decrypted=True file=Chương 337 Phát hiện mới về thăng cấp kỹ năng.txt
+  OK 338/488 decrypted=True file=Chương 338 Kế hoạch Đôi cánh thiên thần.txt
+  OK 339/488 decrypted=True file=Chương 339 Vấn đề nội bộ.txt
+  OK 340/488 decrypted=True file=Chương 340 Tính toán.txt
+  OK 341/488 decrypted=True file=Chương 341 Những chiến binh sao vàng đấu Hổ Mã Lai.txt
+  OK 342/488 decrypted=True file=Chương 342 Căng thẳng.txt
+  OK 343/488 decrypted=True file=Chương 343 Một Việt Nam rất khác.txt
+  OK 344/488 decrypted=True file=Chương 344 Bài tẩy.txt
+  OK 345/488 decrypted=True file=Chương 345 Sao vàng đả hổ.txt
+  OK 346/488 decrypted=True file=Chương 346 Căng thẳng.txt
+  OK 347/488 decrypted=True file=Chương 347 Thăm dò.txt
+  OK 348/488 decrypted=True file=Chương 348 Đêm kinh hoàng.txt
+BATCH 349-360 / 488
+  OK 349/488 decrypted=True file=Chương 349 Bán kết.txt
+  OK 350/488 decrypted=True file=Chương 350 Voi tranh hổ đấu.txt
+  OK 351/488 decrypted=True file=Chương 351 Tin tức không ngờ.txt
+  OK 352/488 decrypted=True file=Chương 352 Đấu trí.txt
+  OK 353/488 decrypted=True file=Chương 353 Chung Kết SEA Games 22 Việt Nam vs Thái Lan.txt
+  OK 354/488 decrypted=True file=Chương 354 Biết mình phải nghiêm túc.txt
+  OK 355/488 decrypted=True file=Chương 355 Ý nghĩa phi phàm.txt
+  OK 356/488 decrypted=True file=Chương 356 Như hình với bóng.txt
+  OK 357/488 decrypted=True file=Chương 357 Hành động phản cảm.txt
+  OK 358/488 decrypted=True file=Chương 358 Đến thì đón sợ gì chứ.txt
+  OK 359/488 decrypted=True file=Chương 359 Nghe ngóng tình hình.txt
+  OK 360/488 decrypted=True file=Chương 360 Bạn cũ.txt
+BATCH 361-372 / 488
+  OK 361/488 decrypted=True file=Chương 361 Tiến cử ai chăng.txt
+  OK 362/488 decrypted=True file=Chương 362 Thi đấu chặt chẽ.txt
+  OK 363/488 decrypted=True file=Chương 363 Thương vụ thay đổi.txt
+  OK 364/488 decrypted=True file=Chương 364 Quyết định của Phong.txt
+  OK 365/488 decrypted=True file=Chương 365 Thử thách cực đại.txt
+  OK 366/488 decrypted=True file=Chương 366 Đối đầu Đương kim vô địch.txt
+  OK 367/488 decrypted=True file=Chương 367 Cực kỳ quyết tâm.txt
+  OK 368/488 decrypted=True file=Chương 368 Bản sắc Việt Nam.txt
+  OK 369/488 decrypted=True file=Chương 369 Lật ngược thế cờ.txt
+  OK 370/488 decrypted=True file=Chương 370 Đổ lỗi xả giận.txt
+  OK 371/488 decrypted=True file=Chương 371 Gặp lại Thái Lan.txt
+  OK 372/488 decrypted=True file=Chương 372 Lấy công chuộc tội.txt
+BATCH 373-384 / 488
+  OK 373/488 decrypted=True file=Chương 373 Bóng đã vào lưới.txt
+  OK 374/488 decrypted=True file=Chương 374 Đúng là rắp tâm hại người mà.txt
+  OK 375/488 decrypted=True file=Chương 375 Tiến lên cùng tiến lên.txt
+  OK 376/488 decrypted=True file=Chương 376 Khác biệt.txt
+  OK 377/488 decrypted=True file=Chương 377 Thảo luận chiến thuật.txt
+  OK 378/488 decrypted=True file=Chương 378 Quật cường.txt
+  OK 379/488 decrypted=True file=Chương 379 Cho cả phần chúng tôi.txt
+  OK 380/488 decrypted=True file=Chương 380 Đọ nhãn quan.txt
+  OK 381/488 decrypted=True file=Chương 381 Nhịp điệu.txt
+  OK 382/488 decrypted=True file=Chương 382 Thói quen cơ bản.txt
+  OK 383/488 decrypted=True file=Chương 383 Vô chiêu thắng hữu chiêu.txt
+  OK 384/488 decrypted=True file=Chương 384 Có biến.txt
+BATCH 385-396 / 488
+  OK 385/488 decrypted=True file=Chương 385 90 3.txt
+  OK 386/488 decrypted=True file=Chương 386 Anh làm gì đây.txt
+  OK 387/488 decrypted=True file=Chương 387 Chuyển giao.txt
+  OK 388/488 decrypted=True file=Chương 388 Màu cờ sắc áo tình yêu cá nhân.txt
+  OK 389/488 decrypted=True file=Chương 389 Liều thuốc mạnh.txt
+  OK 390/488 decrypted=True file=Chương 390 Ánh mắt thăm thẳm.txt
+  OK 391/488 decrypted=True file=Chương 391 Về nơi đó thích hợp bàn chính sự hơn.txt
+  OK 392/488 decrypted=True file=Chương 392 Truyền lại tín hiệu đau đớn.txt
+  OK 393/488 decrypted=True file=Chương 393 Đáng thất vọng.txt
+  OK 394/488 decrypted=True file=Chương 394 Đắc ý.txt
+  OK 395/488 decrypted=True file=Chương 395 Quyết định.txt
+  OK 396/488 decrypted=True file=Chương 396 Xuống tay quyết đoán.txt
+BATCH 397-408 / 488
+  OK 397/488 decrypted=True file=Chương 397 Hùm xám xứ Bavaria.txt
+  OK 398/488 decrypted=True file=Chương 398 Chuyển tiếp.txt
+  OK 399/488 decrypted=True file=Chương 399 Khởi đầu mới.txt
+  OK 400/488 decrypted=True file=Chương 400 Có cá cắn câu.txt
+  OK 401/488 decrypted=True file=Chương 401 Tâm tư riêng.txt
+  OK 402/488 decrypted=True file=Chương 402 Triết lý mới.txt
+  OK 403/488 decrypted=True file=Chương 403 Vs Hertha Berlin.txt
+  OK 404/488 decrypted=True file=Chương 404 Muốn phát điên lên.txt
+  OK 405/488 decrypted=True file=Chương 405 Có điểm.txt
+  OK 406/488 decrypted=True file=Chương 406 Sự tự do.txt
+  OK 407/488 decrypted=True file=Chương 407 Vai trò số 10.txt
+  OK 408/488 decrypted=True file=Chương 408 Quyết định.txt
+BATCH 409-420 / 488
+  OK 409/488 decrypted=True file=Chương 409 Tự tin bản lĩnh.txt
+  OK 410/488 decrypted=True file=Chương 410 Cực kỳ quan trọng.txt
+  OK 411/488 decrypted=True file=Chương 411 Vì màu cờ sắc áo dân tộc.txt
+  OK 412/488 decrypted=True file=Chương 412 Tin tức bất ngờ.txt
+  OK 413/488 decrypted=True file=Chương 413 Lộ ra nanh vuốt.txt
+  OK 414/488 decrypted=True file=Chương 414 Niềm hi vọng mới của bóng đá Đức.txt
+  OK 415/488 decrypted=True file=Chương 415 Tự tin.txt
+  OK 416/488 decrypted=True file=Chương 416 Chào sân tròn vai.txt
+  OK 417/488 decrypted=True file=Chương 417 Đối thủ khủng hoảng.txt
+  OK 418/488 decrypted=True file=Chương 418 Cảm giác cạnh tranh này thật tốt.txt
+  OK 419/488 decrypted=True file=Chương 419 Phân tích bản thân.txt
+  OK 420/488 decrypted=True file=Chương 420 Thắng nhưng thất vọng.txt
+BATCH 421-432 / 488
+  OK 421/488 decrypted=True file=Chương 421 Đừng làm bố thất vọng.txt
+  OK 422/488 decrypted=True file=Chương 422 Thời gian qua thật mau lại đối đầu Ajax.txt
+  OK 423/488 decrypted=True file=Chương 423 Bày binh bố trận.txt
+  OK 424/488 decrypted=True file=Chương 424 Sụp đổ.txt
+  OK 425/488 decrypted=True file=Chương 425 Chứng minh giá trị bản thân.txt
+  OK 426/488 decrypted=True file=Chương 426 Vào form.txt
+  OK 427/488 decrypted=True file=Chương 427 Tấm Vé Vòng loại cuối.txt
+  OK 428/488 decrypted=True file=Chương 428 Bức xúc.txt
+  OK 429/488 decrypted=True file=Chương 429 Tổng cộng 60k.txt
+  OK 430/488 decrypted=True file=Chương 430 Kết quả.txt
+  OK 431/488 decrypted=True file=Chương 431 Áp lực.txt
+  OK 432/488 decrypted=True file=Chương 432 Tính chuyên môn rất cao.txt
+BATCH 433-444 / 488
+  OK 433/488 decrypted=True file=Chương 433 Giành giật từng chút.txt
+  OK 434/488 decrypted=True file=Chương 434 Đôi chân quý giá.txt
+  OK 435/488 decrypted=True file=Chương 435 Hứa hẹn khó khăn.txt
+  OK 436/488 decrypted=True file=Chương 436 Không lơ là.txt
+  OK 437/488 decrypted=True file=Chương 437 Giằng co kết thúc.txt
+  OK 438/488 decrypted=True file=Chương 438 Gia đình.txt
+  OK 439/488 decrypted=True file=Chương 439 Mọi chuyện sẽ khác.txt
+  OK 440/488 decrypted=True file=Chương 440 Đòi lại cả vốn lẫn lãi.txt
+  OK 441/488 decrypted=True file=Chương 441 Vòng 19 Bundesliga.txt
+  OK 442/488 decrypted=True file=Chương 442 Ấn định.txt
+  OK 443/488 decrypted=True file=Chương 443 Những thay đổi.txt
+  OK 444/488 decrypted=True file=Chương 444 Như nước với lửa.txt
+BATCH 445-456 / 488
+❌ Lỗi khi tải chương 24772321: HTTPSConnectionPool(host='android.lonoapp.net', port=443): Read timed out. (read timeout=10)
+  OK 445/488 decrypted=True file=Chương 445 Vòng loại 3 trận đầu Hàn Quốc vs Việt Nam giải quyết ân oán.txt
+  OK 446/488 decrypted=True file=Chương 446 Tranh cãi dữ dội.txt
+  OK 447/488 decrypted=True file=Chương 447 Thay đổi lối chơi.txt
+  OK 448/488 decrypted=True file=Chương 448 Rượt đuổi vượt qua.txt
+  OK 449/488 decrypted=True file=Chương 449 Kinh hoàng hốt hoảng phẫn nộ.txt
+  OK 450/488 decrypted=True file=Chương 450 Cục diện.txt
+  OK 451/488 decrypted=True file=Chương 451 Thời gian vùn vụt trôi qua.txt
+  OK 452/488 decrypted=True file=Chương 452 Thế cục hỗn loạn.txt
+  OK 453/488 decrypted=True file=Chương 453 Dậy sóng.txt
+  OK 454/488 decrypted=True retry=2 file=Chương 454 Ý chí Việt Nam ta vững bền.txt
+  OK 455/488 decrypted=True file=Chương 455 Tương lai mông lung.txt
+  OK 456/488 decrypted=True file=Chương 456 Trở lại.txt
+BATCH 457-468 / 488
+  OK 457/488 decrypted=True file=Chương 457 Trắc trở.txt
+  OK 458/488 decrypted=True file=Chương 458 Hồ nghi.txt
+  OK 459/488 decrypted=True file=Chương 459 Trong họa có phúc.txt
+  OK 460/488 decrypted=True file=Chương 460 Mây đen chậm tới.txt
+  OK 461/488 decrypted=True file=Chương 461 Allianz Arena.txt
+  OK 462/488 decrypted=True file=Chương 462 Đẳng cấp.txt
+  OK 463/488 decrypted=True file=Chương 463 Bóng ma lại đến.txt
+  OK 464/488 decrypted=True file=Chương 464 Khởi động siêu dự án.txt
+  OK 465/488 decrypted=True file=Chương 465 Kỷ nguyên vươn mình.txt
+  OK 466/488 decrypted=True file=Chương 466 Kẻ đi săn ông kẹ.txt
+  OK 467/488 decrypted=True file=Chương 467 Thị uy sức mạnh.txt
+  OK 468/488 decrypted=True file=Chương 468 Mở tỉ số.txt
+BATCH 469-480 / 488
+  OK 469/488 decrypted=True file=Chương 469 Vụng về khó hiểu.txt
+  OK 470/488 decrypted=True file=Chương 470 Dầu sôi lửa bỏng.txt
+  OK 471/488 decrypted=True file=Chương 471 Gặp riêng.txt
+  OK 472/488 decrypted=True file=Chương 472 Sức mạnh của U23 Campuchia.txt
+  OK 473/488 decrypted=True file=Chương 473 Giông tố Bacolod.txt
+  OK 474/488 decrypted=True file=Chương 474 Hỗn loạn nụ cười bí ẩn.txt
+  OK 475/488 decrypted=True file=Chương 475 Tôn trọng dè chừng.txt
+  OK 476/488 decrypted=True file=Chương 476 U23 Việt Nam vs U23 Thái Lan.txt
+  OK 477/488 decrypted=True file=Chương 477 Rượt đuổi sít sao.txt
+  OK 478/488 decrypted=True file=Chương 478 Dặn dò thực sự gặp khó.txt
+  OK 479/488 decrypted=True file=Chương 479 Tình thế biến đổi căng.txt
+  OK 480/488 decrypted=True file=Chương 480 Gồng mình chống đỡ.txt
+BATCH 481-488 / 488
+  OK 481/488 decrypted=True file=Chương 481 Sụp đổ Không Không thể đầu hàng.txt
+  OK 482/488 decrypted=True file=Chương 482 Không thể thở nổi.txt
+  OK 483/488 decrypted=True file=Chương 483 Dấu chấm hết.txt
+  OK 484/488 decrypted=True file=Chương 484 Ba lần cơ hội.txt
+  OK 485/488 decrypted=True file=Chương 485 Mây đen kéo đến.txt
+  OK 486/488 decrypted=True file=Chương 486 Chấn động.txt
+  OK 487/488 decrypted=True file=Chương 487 Tin xấu dồn dập.txt
+  OK 488/488 decrypted=True file=Chương 488 Vinh Quang Trọn Bộ.txt
+final_ok=488
+final_fail=0
+out=C:\Dev\MTC\Đường Đến Vinh Quang
+
+[stderr]

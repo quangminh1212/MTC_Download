@@ -1,0 +1,25 @@
+[
+  {
+    "folder": "Người Nguyên Thủy Đều Sợ Ngây Người",
+    "local_count": 780,
+    "top_score": 0.5928,
+    "top_ratio": 0.5128,
+    "contain": true,
+    "countdiff": 520,
+    "book_id": 129186,
+    "book_name": "Nguyên Thủy",
+    "book_count": 260,
+    "src": "api",
+    "alts": [
+      {
+        "score": 0.5928,
+        "ratio": 0.5128,
+        "countdiff": 520,
+        "id": 129186,
+        "name": "Nguyên Thủy",
+        "count": 260,
+        "src": "api"
+      }
+    ]
+  }
+]

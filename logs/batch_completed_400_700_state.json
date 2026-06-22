@@ -1,0 +1,50 @@
+[
+  {
+    "id": 138344,
+    "folder": "Đường Đến Vinh Quang",
+    "expected": 488,
+    "returncode": 0,
+    "elapsed": 162.6,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_138344.log"
+  },
+  {
+    "id": 106266,
+    "folder": "Tại Đấu Phá Triệu Hoán Nữ Thần",
+    "expected": 496,
+    "returncode": 0,
+    "elapsed": 177.9,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_106266.log"
+  },
+  {
+    "id": 110572,
+    "folder": "Giả Vương Bình Thiên Hạ",
+    "expected": 516,
+    "returncode": 0,
+    "elapsed": 135.3,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_110572.log"
+  },
+  {
+    "id": 104298,
+    "folder": "Vô Địch Gian Thương",
+    "expected": 562,
+    "returncode": 0,
+    "elapsed": 150.8,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_104298.log"
+  },
+  {
+    "id": 127016,
+    "folder": "Mỹ Thực Gia Tại Tu Tiên Giới",
+    "expected": 662,
+    "returncode": 0,
+    "elapsed": 205.3,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_127016.log"
+  },
+  {
+    "id": 110675,
+    "folder": "Dị Nhân Đại Náo Tu Tiên Giới",
+    "expected": 669,
+    "returncode": 0,
+    "elapsed": 176.9,
+    "log": "C:\\Dev\\MTC_DOWNLOAD\\logs\\batch_completed_110675.log"
+  }
+]
