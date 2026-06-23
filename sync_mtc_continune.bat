@@ -18,9 +18,10 @@ echo.
 
 "%RCLONE%" sync "%SOURCE%" "%DEST%" ^
   --s3-provider=Wasabi ^
-  --s3-endpoint=s3.us-east-1.wasabisys.com ^
+  --s3-endpoint=s3.ap-southeast-1.wasabisys.com ^
   --s3-access-key-id=DSELNA7UIKBXHLWTBUIG ^
   --s3-secret-access-key=Y7J5ycVjzJKtoOClLSUwfPoI1JqP9XHr4KeoB3g7 ^
+  --s3-force-path-style ^
   --transfers=32 ^
   --checkers=64 ^
   --buffer-size=512M ^
