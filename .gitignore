@@ -90,3 +90,7 @@ archives/
 # Downloaded story folders
 bookmarked_downloads/Thọ Nguyên Có Thể Đổi Bảo_ Vô Hạn Thọ Nguyên Ta Vô Địch__132696/
 bookmarked_downloads/Từ Đội Sản Xuất Đuổi Đại Xa Bắt Đầu__143452/
+
+# Rclone binaries and archives (too large)
+rclone-extracted/
+rclone.zip
