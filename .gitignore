@@ -49,6 +49,7 @@ extract/
 *.apk
 backup.ab
 mtc_apk_extracted/
+/rclone
 
 # Ignore mitmproxy traffic files
 *.flow
