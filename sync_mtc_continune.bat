@@ -29,10 +29,13 @@ echo.
   --multi-thread-streams=8 ^
   --fast-list ^
   --update ^
-  --stats=30s ^
-  --stats-one-line ^
+  --stats=5s ^
+  --stats-one-line-date ^
+  --stats-file-name-length=0 ^
+  --progress ^
   --log-level=INFO ^
-  --log-file="sync_mtc_continune.log" 2>&1
+  --log-format=date,time ^
+  --log-file="C:\Dev\MTC_Download\sync_mtc_continune.log" 2>&1
 
 if %ERRORLEVEL% EQU 0 (
     echo [SUCCESS] Sync completed
