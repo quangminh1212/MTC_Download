@@ -1,0 +1,328 @@
+commit 37e4117f48bdef0fa1ba27f6467d7a891b0b55ba
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Fri Jun 5 16:20:23 2026 +0100
+
+    Version v1.74.3
+
+commit 9222ed2c5a7678de7fa620214b0858311c707a29
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Wed May 27 10:28:06 2026 +0100
+
+    rc: stop global.* connection string options changing config CVE-2026-49980
+    
+    A connection string can carry global.* options which change rclone's
+    process-wide configuration (e.g. global.http_proxy). This is
+    undesirable for the rc interface which was designed to have multiple
+    users or connections at once. The rc interface has the `_config`
+    mechanism for setting request scoped global config.
+    
+    This blocks global.* options on all rc paths by marking the context as
+    a remote control request at the rc boundaries. fs.NewFs then skips
+    applying global.* to the process-wide config for a marked context.
+    
+    The marker is reapplied in fs.CopyConfig, which is the call rclone
+    uses to detach context but keep config.
+    
+    global.* options still apply to the individual backend they are set
+    on, exactly like override.* options; they just no longer leak into the
+    rest of the process. Remotes created directly on the command line are
+    unaffected as are remotes defined in the config file.
+    
+    See: GHSA-qw24-gh76-8rvv
+    (cherry picked from commit 53f972830c1747cb9636a6342c5308e55672c375)
+
+commit 48da1774f4999d1d46543308b9a7fe75585dbfc4
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Wed May 27 10:04:10 2026 +0100
+
+    rc: fix unauthenticated command execution via --rc-serve inline remotes CVE-2026-49980
+    
+    The --rc-serve GET/HEAD file serving path accepted bracketed inline
+    remotes from the URL and instantiated them, so a single
+    unauthenticated request could run a command as the rclone user via
+    backend options such as webdav bearer_token_command or sftp ssh, read
+    arbitrary local files, or change process-wide config via global.*
+    options.
+    
+    This was the GET/HEAD equivalent of the POST hole fixed for
+    CVE-2026-41179, which only guarded the rc call dispatch path.
+    
+    Now, unless the rc server has authentication configured or
+    --rc-no-auth is set, the serve path only allows remotes already
+    present in the config file: inline remotes, connection string
+    parameters and bare local paths are rejected. Connection string
+    global.* options are never honoured on the serve path, even when
+    authenticated.
+    
+    See: GHSA-qw24-gh76-8rvv
+    (cherry picked from commit 2326ea79f7dd93de1f7ba15f02353d40995f06a8)
+
+commit 2a7b0d0d3b6decabdc8a5e4d4d977ae36b619dcc
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Wed Jun 3 12:40:28 2026 +0100
+
+    build: fix multiple CVEs by upgrading to go1.26.4
+    
+    - CVE-2026-42504: mime: quadratic complexity in WordDecoder.DecodeHeader
+    - CVE-2026-42507: net/textproto: arbitrary input are included in errors without any escaping
+    - CVE-2026-27145: crypto/x509: split candidate hostname only once
+
+commit fc4349dc16c0240cad0a311388c416db9b03c39c
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Sun May 31 09:39:59 2026 +0100
+
+    iclouddrive: fix "Index has invalid data" error listing iCloud Photos
+    
+    Accounts with shared-album zones (named CMM-*) returned these zones in
+    the photos changes/database listing alongside the real photo
+    libraries. rclone treated them as libraries and queried their albums,
+    but these zones have no CPLAlbumByPositionLive index so the query
+    failed with BAD_REQUEST / "Index has invalid data", aborting the whole
+    listing.
+    
+    Only PrimarySync and SharedSync-* zones are photo libraries, so skip
+    any other zone during discovery.
+    
+    See: https://forum.rclone.org/t/sync-to-icloud-gives-index-has-invalid-data-errors/53852
+
+commit dff3a0731ea03e51031cebc0d2269f1352dd66dc
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Sun May 31 10:30:24 2026 +0100
+
+    build: cache Go build and module dirs to speed up CI
+    
+    The build matrix relied on setup-go's built-in cache, which keys only on
+    go.sum with no job differentiation. All matrix jobs computed the same
+    cache key and raced to save it; since cache keys are immutable, only the
+    first job to finish saved its cache. That winner was usually a fast job
+    whose build cache contained none of the cross-compiled architectures, so
+    the compile_all and ci_beta steps started from a cold cache on every run.
+    
+    Disable setup-go's cache and add two explicit actions/cache steps to the
+    build matrix, the android job and the lint job:
+    
+      - the module cache (~/go/pkg/mod) depends only on go.sum, so it is
+        shared across all jobs under a single key; it used to be duplicated in
+        every job's cache. The downloaded module .zip archives are pruned
+        before saving as they are not needed to build from the extracted
+        module cache, roughly halving it to ~260 MiB per OS;
+      - the build cache (compiled artifacts) is specific to OS, arch and Go
+        version, so it is kept per job, keyed on the job name.
+    
+    This lets the cross-compile steps reuse per-architecture build artifacts
+    and keeps the total cache within the repository limit.
+    
+    Measured on CI, comparing a cold-cache run against the following
+    warm-cache run:
+    
+        other_os    23m12s -> 3m35s    (compile_all 14m -> 21s)
+        linux       23m13s -> 12m14s   (deploy 11m -> 1m37s,
+                                         race test 8m -> 4m45s)
+    
+    Both jobs now finish well under 15 minutes once the cache is warm.
+
+commit 5f5e2ef9cfc62e96fded5c514e45ec4725ab6c84
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Mon Jun 1 15:48:48 2026 +0100
+
+    log: fix wrong source file:line in JSON logs from release builds
+    
+    JSON logs reported "source":"slog/logger.go:256" instead of the real
+    caller. getCaller skips logging-machinery frames by file path, but
+    release builds use -trimpath which rewrites the standard library slog
+    frame's path to "log/slog/logger.go" - matching neither the "/log/" nor
+    the "log.go" check, so it was reported as the source. Also skip frames
+    whose function belongs to the log/slog package, which is immune to
+    -trimpath.
+
+commit d4397faa94cdebb74c9911cc29798c1bd58ff7f6
+Author: Janne Beate Bakeng <436265+jbbakeng@users.noreply.github.com>
+Date:   Mon Jun 1 13:06:03 2026 +0200
+
+    mount2: fix empty directory listings on re-read
+    
+    With cmd/mount2, reading a directory more than once returned the correct
+    entries on the first read but nothing on subsequent reads. Plain `ls`
+    triggers this: it does lseek(fd, 0, SEEK_SET) to rewind the directory
+    before a second getdents.
+    
+    go-fuse v2.9.0 rewinds a directory stream by calling Seekdir on the
+    FileSeekdirer interface. dirStream did not implement it, so go-fuse
+    returned ENOTSUP and produced an empty listing on every read after the
+    first.
+    
+    This implements Seekdir on dirStream: a rewind to offset 0 resets the
+    stream to the start, restoring correct listings on re-read. Non-zero
+    offsets are uncommon for in-memory listings and still return ENOTSUP,
+    matching go-fuse's own default. A compile-time interface assertion is
+    added so signature drift on future go-fuse updates is caught at build
+    time.
+    
+    Before: second and subsequent reads of a directory returned no entries.
+    After: directories list correctly on every read.
+    
+    See: https://github.com/hanwen/go-fuse/issues/549
+    Co-authored-by: Nick Craig-Wood <nick@craig-wood.com>
+
+commit 7324ee850a2e736e1022596d136e474cabfb03b5
+Author: Yakov Till <yakov.till@gmail.com>
+Date:   Thu May 21 21:48:47 2026 +0200
+
+    iclouddrive: fix ADP/PCS cookie acquisition for iCloud Drive
+
+commit 3c54a37488a5a35a8d5f9adddfd6af4afd8357fc
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Fri May 29 17:13:39 2026 +0100
+
+    drive: fix server-side move failing on shared drives with duplicate dirs - fixes #9472
+    
+    When moving a file rclone removed the file from its old parent by
+    looking the parent ID up from the path using the directory cache. When
+    the source contained two directories with the same name and path, the
+    cache could resolve to the wrong duplicate, so the removeParents
+    request didn't match the file's real parent.
+    
+    This left the file with both its old and new parent, which fails on
+    shared drives with:
+    
+        A shared drive item must have exactly one parent., teamDrivesParentLimit
+    
+    This uses the source object's actual parent ID instead when it is
+    known, falling back to the path lookup only when the object has zero
+    or multiple parents.
+
+commit a2f8b493ed9fc97ec7d202d11f26f53a31d45d99
+Author: Leon Brocard <acme@astray.com>
+Date:   Fri Mar 20 17:12:55 2026 +0000
+
+    local: fix getXattr returning empty map instead of nil
+    
+    At least on my macOS Sequoia 15.7.4, the system automatically adds a
+    com.apple.provenance xattr to files created by processes. This xattr
+    lacks the "user." prefix so getXattr filters it out, but the metadata
+    map was already allocated, resulting in an empty non-nil map being
+    returned instead of nil.
+    
+    This caused TestMetadata/Symlink/Xattr and TestMetadata/File/Xattr
+    to fail because they assert the return value is nil when no user
+    xattrs are present.
+    
+    The fix checks if the metadata map is empty after filtering and
+    returns nil if so.
+
+commit 641702fc7fd3a853ded4228e2f5f657867eaa938
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Thu May 28 00:28:21 2026 +0100
+
+    serve s3: fix multipart ListParts pagination returning wrong part numbers - fixes #9460
+    
+    Listing the parts of a multipart upload with a MaxParts smaller than
+    the number of parts returned wrong PartNumber values and duplicate
+    parts on pages after the first, and the part number marker regressed
+    instead of advancing, causing clients to loop forever.
+    
+    This bumps github.com/rclone/gofakes3 to v0.0.6 pick up the fix.
+
+commit f25d9e2bf30d75de5820afade026f236adc6061a
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Thu May 28 15:45:40 2026 +0100
+
+    drime: fix directory rename leaving the renamed folder empty in VFS
+    
+    Drime's folder rename returns success immediately but the children
+    listing of the renamed folder briefly returns empty before settling,
+    which made VFS see an empty directory right after a successful rename
+    and broke subsequent operations on its contents.
+    
+    After a successful DirMove, poll the renamed folder's listing until it
+    shows the pre-rename child count, with a 30s timeout and exponential
+    backoff. The backend integration test already tolerated this via its
+    own list-consistency retries; this brings VFS into line.
+    
+    Fixes #9450
+
+commit ec28206d8a584d20693b4aee73ef515d6f7eb261
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Tue May 26 11:02:40 2026 +0100
+
+    drime: remove duplicate upload_cutoff config option
+    
+    The upload_cutoff option was registered twice with identical content.
+    Remove the second copy.
+
+commit ddbc886395ea52386bb6aef7dfbe6262346ecde4
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Tue May 26 10:26:24 2026 +0100
+
+    drime: fix files being uploaded to the wrong directory
+    
+    Large files (sent as multipart uploads) were placed in the wrong folder
+    for two reasons:
+    
+    - the parent folder was sent as "parent_id", but the API ignores that
+      and expects "parentId", so the parent was never honoured
+    - relativePath was sent as the full path from the drive root, which made
+      the server build folders from it and silently drop any "0" path
+      segment (e.g. ".../data/0/file" lost the "0")
+    
+    Send the parent as "parentId" and use just the leaf as relativePath,
+    matching the working single-part upload. This also lets us remove the
+    now-unneeded absolute-path resolution code.
+    
+    Fixes #9392
+    Co-authored-by: Brian King <BrianDKing@gmail.com>
+
+commit c8ceb209fccf917ceaea44e846bfe7870067a1ed
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Tue May 26 09:46:22 2026 +0100
+
+    drime: fix server-side copy and move failing with Cloudflare 520 error
+    
+    The drime origin returns a malformed response (reported by Cloudflare as
+    a 520 error) for a literal PUT request to the file-entries update
+    endpoint, which broke renaming, and so server-side copy and move.
+    
+    Use a POST with the X-HTTP-Method-Override: PUT header instead - the API
+    routes this to the same handler and it works reliably.
+    
+    Also retry Cloudflare 520-524 errors which may occur transiently.
+
+commit 5b4eb0eefb0573b65d5ee8f7afb397c4b6c5f8d8
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Sun May 24 14:34:59 2026 +0100
+
+    serve sftp: fix truncate request being silently ignored
+    
+    The SFTP serve handler ignored the size attribute of SETSTAT/FSETSTAT
+    requests, only acting on the modification time. This meant a client
+    asking to truncate a file (eg setting the final size of an upload, or
+    an explicit truncate) had no effect at all.
+    
+    This respects the size attribute (if present) by truncating the file
+    to the requested size.
+
+commit 223e473e6efd47bc6868dfa3c0335fad80ed250b
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Sun May 24 13:33:21 2026 +0100
+
+    serve sftp: fix file corruption when a client resumes an upload
+    
+    The SFTP serve write handler always opened files with O_TRUNC,
+    ignoring the flags requested in the SFTP OPEN packet. Some clients
+    (notably WinSCP's "Process in Background", which resumes an upload on
+    a second connection) re-open the partially written file without the
+    truncate flag and continue writing from the offset they had reached,
+    relying on the existing data being preserved. Forcing O_TRUNC zeroed
+    that prefix, so the start of the uploaded file ended up as a block of
+    zero bytes.
+    
+    This fix respects the requested open flags instead so a resume open
+    without truncate keeps the already written data intact.
+    
+    See: https://forum.rclone.org/t/rclone-serve-sftp-winscp-background-mode-uploading-causes-file-corruption/53841
+
+commit bac27547d5b48d8acd2028018adba51444facd62
+Author: Nick Craig-Wood <nick@craig-wood.com>
+Date:   Sat May 23 11:32:11 2026 +0100
+
+    Start v1.74.3-DEV development
