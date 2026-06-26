@@ -310,11 +310,6 @@ def main():
             state["failed"] = list(failed_set)
             save_state(state)
             save_report(report)
-            
-            # Commit changes
-            if COMMIT_LOCK.exists():
-                COMMIT_LOCK.unlink()
-            commit_changes()
     
     # Final save
     state["done"] = list(done_set)
