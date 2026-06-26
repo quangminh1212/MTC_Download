@@ -7,7 +7,7 @@ import sys
 import time
 from pathlib import Path
 
-BASE = Path(r'C:\Dev\MTC_DOWNLOAD')
+BASE = Path(r'C:\\Dev\\MTC_Download')
 PYTHON = sys.executable
 ENV_PYTHONPATH = r'C:\Dev\MTC_DOWNLOAD\scripts\download;C:\Dev\MTC_DOWNLOAD\scripts'
 LOG_DIR = BASE / 'logs'

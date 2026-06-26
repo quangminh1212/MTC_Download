@@ -1,9 +1,9 @@
 {
   "started_at": "2026-05-27 02:19:30",
   "root": "C:\\Dev\\MTC_Continune",
-  "done_books": 249,
+  "done_books": 305,
   "ok_books": 179,
-  "issue_books": 70,
+  "issue_books": 126,
   "skipped_books": 0,
   "books": [
     {
@@ -4593,6 +4593,1070 @@
       "status": "ok",
       "commit": {
         "status": "nothing_to_commit"
+      }
+    },
+    {
+      "id": 154011,
+      "name": "Pokémon: Thiếu Niên Và Ngọn Lửa",
+      "status_name": "Còn tiếp",
+      "folder": "Pokémon Thiếu Niên Và Ngọn Lửa",
+      "remote_count": 2,
+      "missing_before": 2,
+      "downloaded": 2,
+      "skipped": 0,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 154021,
+      "name": "Lâm Thần Ký",
+      "status_name": "Còn tiếp",
+      "folder": "Lâm Thần Ký",
+      "remote_count": 2,
+      "missing_before": 2,
+      "downloaded": 2,
+      "skipped": 0,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 154252,
+      "name": "Nguyên Thủy Hồng Hoang",
+      "status_name": "Còn tiếp",
+      "folder": "Nguyên Thủy Hồng Hoang",
+      "remote_count": 5,
+      "missing_before": 5,
+      "downloaded": 5,
+      "skipped": 0,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 153842,
+      "name": "Đại Nam Biên Niên Sử: Khúc Vĩ Cầm Của Đế Quốc",
+      "status_name": "Còn tiếp",
+      "folder": "Đại Nam Biên Niên Sử Khúc Vĩ Cầm Của Đế Quốc",
+      "remote_count": 7,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 7,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 154005,
+      "name": "Đường Biên Rực Lửa: Tân Kỷ Nguyên Tài Phiệt",
+      "status_name": "Còn tiếp",
+      "folder": "Đường Biên Rực Lửa Tân Kỷ Nguyên Tài Phiệt",
+      "remote_count": 9,
+      "missing_before": 7,
+      "downloaded": 7,
+      "skipped": 2,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 153848,
+      "name": "Xuyên Nhanh: Ác Độc Nữ Xứng Lại Bị Nam Chủ Mơ Ước",
+      "status_name": "Còn tiếp",
+      "folder": "Xuyên Nhanh Ác Độc Nữ Xứng Lại Bị Nam Chủ Mơ Ước",
+      "remote_count": 33,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 33,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 138424,
+      "name": "Bị Bán Sang Cao Miên, Ta Triệu Hồi Tổ Chức Áo Đen!",
+      "status_name": "Còn tiếp",
+      "folder": "Bị Bán Sang Cao Miên Ta Triệu Hồi Tổ Chức Áo Đen",
+      "remote_count": 272,
+      "missing_before": 180,
+      "downloaded": 180,
+      "skipped": 92,
+      "failed": 0,
+      "missing_after": 180,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 115995,
+      "name": "Cô Thôn Trường Đạo",
+      "status_name": "Còn tiếp",
+      "folder": "Cô Thôn Trường Đạo",
+      "remote_count": 273,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 273,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 129096,
+      "name": "Yu-Gi-Oh: Trở Thành Hack Là Loại Trải Nghiệm Gì",
+      "status_name": "Tạm dừng",
+      "folder": "Yu Gi Oh Trở Thành Hack Là Loại Trải Nghiệm Gì",
+      "remote_count": 280,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 280,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 129139,
+      "name": "Tam Quốc : Từ Giao Châu Bắt Đầu",
+      "status_name": "Còn tiếp",
+      "folder": "Tam Quốc Từ Giao Châu Bắt Đầu",
+      "remote_count": 283,
+      "missing_before": 22,
+      "downloaded": 22,
+      "skipped": 261,
+      "failed": 0,
+      "missing_after": 22,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 144909,
+      "name": "Sủng Thú Sư",
+      "status_name": "Còn tiếp",
+      "folder": "Sủng Thú Sư",
+      "remote_count": 285,
+      "missing_before": 120,
+      "downloaded": 120,
+      "skipped": 165,
+      "failed": 0,
+      "missing_after": 120,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 132226,
+      "name": "Môn Thần",
+      "status_name": "Còn tiếp",
+      "folder": "Môn Thần",
+      "remote_count": 293,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 293,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 145739,
+      "name": "Thiên La",
+      "status_name": "Còn tiếp",
+      "folder": "Thiên La",
+      "remote_count": 296,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 296,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 147066,
+      "name": "Thực Tế Ảo: Thống Lĩnh Quân Đoàn Hắc Ám",
+      "status_name": "Còn tiếp",
+      "folder": "Thực Tế Ảo Thống Lĩnh Quân Đoàn Hắc Ám",
+      "remote_count": 358,
+      "missing_before": 230,
+      "downloaded": 230,
+      "skipped": 128,
+      "failed": 0,
+      "missing_after": 230,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 141170,
+      "name": "Marvel: Lão Cha Ta Là Tony Stark",
+      "status_name": "Tạm dừng",
+      "folder": "Marvel Lão Cha Ta Là Tony Stark",
+      "remote_count": 298,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 298,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 128383,
+      "name": "Ảnh Giới",
+      "status_name": "Còn tiếp",
+      "folder": "Ảnh Giới",
+      "remote_count": 311,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 311,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 140641,
+      "name": "Sao Nỡ Làm Muggle Giữa Thế Giới Phép Thuật",
+      "status_name": "Còn tiếp",
+      "folder": "Sao Nỡ Làm Muggle Giữa Thế Giới Phép Thuật",
+      "remote_count": 328,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 328,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 117300,
+      "name": "Muốn Trường Sinh Trước Hết Phải Đồng Vợ Đồng Chồng ",
+      "status_name": "Còn tiếp",
+      "folder": "Muốn Trường Sinh Trước Hết Phải Đồng Vợ Đồng Chồng",
+      "remote_count": 344,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 344,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 128315,
+      "name": "Số Phận : Thời Đại Nguyên Thủy",
+      "status_name": "Còn tiếp",
+      "folder": "Số Phận Thời Đại Nguyên Thủy",
+      "remote_count": 350,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 350,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 118545,
+      "name": "Đại Việt Quỷ Vương",
+      "status_name": "Tạm dừng",
+      "folder": "Đại Việt Quỷ Vương",
+      "remote_count": 354,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 354,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 141466,
+      "name": "Đưa Nước Việt Vươn Tầm Thế Giới (phần 2): Vạn Biến Hư Ảo",
+      "status_name": "Còn tiếp",
+      "folder": "Đưa Nước Việt Vươn Tầm Thế Giới phần 2 Vạn Biến Hư Ảo",
+      "remote_count": 381,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 381,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 105732,
+      "name": "Ta Là Hàn Vũ Thiên",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Là Hàn Vũ Thiên",
+      "remote_count": 386,
+      "missing_before": 1,
+      "downloaded": 1,
+      "skipped": 385,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 138408,
+      "name": "Sword Art Online: Kiếm Sĩ Ánh Trăng.",
+      "status_name": "Còn tiếp",
+      "folder": "Sword Art Online Kiếm Sĩ Ánh Trăng",
+      "remote_count": 404,
+      "missing_before": 0,
+      "downloaded": 1,
+      "skipped": 403,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 110466,
+      "name": "Đế Quốc Nhật Bản",
+      "status_name": "Tạm dừng",
+      "folder": "Đế Quốc Nhật Bản",
+      "remote_count": 404,
+      "missing_before": 178,
+      "downloaded": 178,
+      "skipped": 226,
+      "failed": 0,
+      "missing_after": 178,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 121026,
+      "name": "Lol: Thời Đại Quang Vinh",
+      "status_name": "Còn tiếp",
+      "folder": "Lol Thời Đại Quang Vinh",
+      "remote_count": 411,
+      "missing_before": 361,
+      "downloaded": 362,
+      "skipped": 49,
+      "failed": 0,
+      "missing_after": 361,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 109633,
+      "name": "Mộng Đạo Trường Sinh",
+      "status_name": "Còn tiếp",
+      "folder": "Mộng Đạo Trường Sinh",
+      "remote_count": 420,
+      "missing_before": 304,
+      "downloaded": 304,
+      "skipped": 116,
+      "failed": 0,
+      "missing_after": 304,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 140331,
+      "name": "Ghế Số 1: Cùng Nhau Chơi Sập Cái Mạt Thế Này.",
+      "status_name": "Còn tiếp",
+      "folder": "Ghế Số 1 Cùng Nhau Chơi Sập Cái Mạt Thế Này",
+      "remote_count": 450,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 450,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 131897,
+      "name": "Đại Yêu Quái",
+      "status_name": "Còn tiếp",
+      "folder": "Đại Yêu Quái",
+      "remote_count": 465,
+      "missing_before": 268,
+      "downloaded": 269,
+      "skipped": 196,
+      "failed": 0,
+      "missing_after": 268,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 119345,
+      "name": "Game Mới Cập Nhật, Ta Đem Sư Phụ Đi Gặp Người Yêu Cũ !?",
+      "status_name": "Còn tiếp",
+      "folder": "Game Mới Cập Nhật Ta Đem Sư Phụ Đi Gặp Người Yêu Cũ",
+      "remote_count": 490,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 490,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 140493,
+      "name": "Tiên Lộ Kỳ Duyên",
+      "status_name": "Còn tiếp",
+      "folder": "Tiên Lộ Kỳ Duyên",
+      "remote_count": 557,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 557,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 109176,
+      "name": "Hệ Thống Thiên Ngoại Chi Ma",
+      "status_name": "Còn tiếp",
+      "folder": "Hệ Thống Thiên Ngoại Chi Ma",
+      "remote_count": 582,
+      "missing_before": 1,
+      "downloaded": 1,
+      "skipped": 581,
+      "failed": 0,
+      "missing_after": 1,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 120335,
+      "name": "Tây Sơn Hành Trình Vượt Thời Gian",
+      "status_name": "Còn tiếp",
+      "folder": "Tây Sơn Hành Trình Vượt Thời Gian",
+      "remote_count": 596,
+      "missing_before": 453,
+      "downloaded": 453,
+      "skipped": 143,
+      "failed": 0,
+      "missing_after": 453,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 112249,
+      "name": "Xuyên Toa",
+      "status_name": "Còn tiếp",
+      "folder": "Xuyên Toa",
+      "remote_count": 621,
+      "missing_before": 0,
+      "downloaded": 1,
+      "skipped": 620,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 110283,
+      "name": "Tiến Hóa Tại Vô Hạn Thế Giới",
+      "status_name": "Còn tiếp",
+      "folder": "Tiến Hóa Tại Vô Hạn Thế Giới",
+      "remote_count": 684,
+      "missing_before": 382,
+      "downloaded": 382,
+      "skipped": 302,
+      "failed": 0,
+      "missing_after": 382,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 122255,
+      "name": "Vạn Xuân Đế Quốc",
+      "status_name": "Còn tiếp",
+      "folder": "Vạn Xuân Đế Quốc",
+      "remote_count": 733,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 733,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 139039,
+      "name": "Đấu La: Khí Vận Chi Nữ? Cơ Duyên? Tất Cả Là Của Ta!",
+      "status_name": "Còn tiếp",
+      "folder": "Đấu La Khí Vận Chi Nữ Cơ Duyên Tất Cả Là Của Ta",
+      "remote_count": 744,
+      "missing_before": 7,
+      "downloaded": 7,
+      "skipped": 737,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 113504,
+      "name": "Bánh Xe Vận Mệnh Tại Hogwarts",
+      "status_name": "Còn tiếp",
+      "folder": "Bánh Xe Vận Mệnh Tại Hogwarts",
+      "remote_count": 961,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 961,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 119844,
+      "name": "Long Cơ Chiến Hồn",
+      "status_name": "Tạm dừng",
+      "folder": "Long Cơ Chiến Hồn",
+      "remote_count": 749,
+      "missing_before": 257,
+      "downloaded": 257,
+      "skipped": 492,
+      "failed": 0,
+      "missing_after": 257,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 140643,
+      "name": "Lãng Nhân: Mỹ Nữ, Mời Tư Vấn",
+      "status_name": "Còn tiếp",
+      "folder": "Lãng Nhân Mỹ Nữ Mời Tư Vấn",
+      "remote_count": 882,
+      "missing_before": 762,
+      "downloaded": 762,
+      "skipped": 120,
+      "failed": 0,
+      "missing_after": 762,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 101516,
+      "name": "Quang Minh Bất Diệt, Tín Ngưỡng Vĩnh Hằng",
+      "status_name": "Còn tiếp",
+      "folder": "Quang Minh Bất Diệt Tín Ngưỡng Vĩnh Hằng",
+      "remote_count": 914,
+      "missing_before": 0,
+      "downloaded": 0,
+      "skipped": 914,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 122222,
+      "name": "Thượng Thương Chi Hạ: Tuyên Cổ Đệ Nhất Tiên",
+      "status_name": "Còn tiếp",
+      "folder": "Thượng Thương Chi Hạ Tuyên Cổ Đệ Nhất Tiên",
+      "remote_count": 929,
+      "missing_before": 850,
+      "downloaded": 850,
+      "skipped": 79,
+      "failed": 0,
+      "missing_after": 850,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 108742,
+      "name": "Sắt Thép Ma Pháp",
+      "status_name": "Còn tiếp",
+      "folder": "Sắt Thép Ma Pháp",
+      "remote_count": 972,
+      "missing_before": 0,
+      "downloaded": 151,
+      "skipped": 821,
+      "failed": 0,
+      "missing_after": 0,
+      "extra_after": 0,
+      "errors": [],
+      "status": "commit_failed",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 110298,
+      "name": "Luân Hồi Thương Đế",
+      "status_name": "Còn tiếp",
+      "folder": "Luân Hồi Thương Đế",
+      "remote_count": 1040,
+      "missing_before": 760,
+      "downloaded": 760,
+      "skipped": 280,
+      "failed": 0,
+      "missing_after": 760,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 110493,
+      "name": "Ta Bán Hủ Tiếu Tại Dị Giới",
+      "status_name": "Còn tiếp",
+      "folder": "Ta Bán Hủ Tiếu Tại Dị Giới",
+      "remote_count": 1051,
+      "missing_before": 723,
+      "downloaded": 723,
+      "skipped": 328,
+      "failed": 0,
+      "missing_after": 723,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "status_failed",
+        "error": "fatal: not a git repository (or any of the parent directories): .git"
+      }
+    },
+    {
+      "id": 126924,
+      "name": "Trở Lại 2009 Ta Làm Lại Cuộc Đời",
+      "status_name": "Còn tiếp",
+      "folder": "Trở Lại 2009 Ta Làm Lại Cuộc Đời",
+      "remote_count": 1062,
+      "missing_before": 977,
+      "downloaded": 977,
+      "skipped": 85,
+      "failed": 0,
+      "missing_after": 977,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 120329,
+      "name": "Nam Thiên Chiến Hỏa",
+      "status_name": "Còn tiếp",
+      "folder": "Nam Thiên Chiến Hỏa",
+      "remote_count": 1068,
+      "missing_before": 904,
+      "downloaded": 904,
+      "skipped": 164,
+      "failed": 0,
+      "missing_after": 904,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 125841,
+      "name": "Game Thực Tế Ảo: Người Chơi Trọng Sinh",
+      "status_name": "Tạm dừng",
+      "folder": "Game Thực Tế Ảo Người Chơi Trọng Sinh",
+      "remote_count": 1164,
+      "missing_before": 965,
+      "downloaded": 965,
+      "skipped": 199,
+      "failed": 0,
+      "missing_after": 965,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 115313,
+      "name": "Ngôi Sao Hi Vọng",
+      "status_name": "Còn tiếp",
+      "folder": "Ngôi Sao Hi Vọng",
+      "remote_count": 1202,
+      "missing_before": 997,
+      "downloaded": 997,
+      "skipped": 205,
+      "failed": 0,
+      "missing_after": 997,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 136693,
+      "name": "Trở Về 1996 Bắt Đầu Từ Chợ Lớn Bán Thịt Heo",
+      "status_name": "Còn tiếp",
+      "folder": "Trở Về 1996 Bắt Đầu Từ Chợ Lớn Bán Thịt Heo",
+      "remote_count": 1203,
+      "missing_before": 1120,
+      "downloaded": 1120,
+      "skipped": 83,
+      "failed": 0,
+      "missing_after": 1120,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 110825,
+      "name": "Tổng Mạn: The Gamer",
+      "status_name": "Còn tiếp",
+      "folder": "Tổng Mạn The Gamer",
+      "remote_count": 1331,
+      "missing_before": 1111,
+      "downloaded": 1111,
+      "skipped": 220,
+      "failed": 0,
+      "missing_after": 1111,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 122993,
+      "name": "Ma Chủng",
+      "status_name": "Còn tiếp",
+      "folder": "Ma Chủng",
+      "remote_count": 1457,
+      "missing_before": 1313,
+      "downloaded": 1313,
+      "skipped": 144,
+      "failed": 0,
+      "missing_after": 1313,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 111422,
+      "name": "Thịnh Thế Diên Ninh",
+      "status_name": "Còn tiếp",
+      "folder": "Thịnh Thế Diên Ninh",
+      "remote_count": 1516,
+      "missing_before": 1397,
+      "downloaded": 1397,
+      "skipped": 119,
+      "failed": 0,
+      "missing_after": 1397,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 109099,
+      "name": "Nhất Kiếp Tiên Phàm",
+      "status_name": "Còn tiếp",
+      "folder": "Nhất Kiếp Tiên Phàm",
+      "remote_count": 1698,
+      "missing_before": 1378,
+      "downloaded": 1378,
+      "skipped": 320,
+      "failed": 0,
+      "missing_after": 1378,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 107764,
+      "name": "Đế Cuồng",
+      "status_name": "Còn tiếp",
+      "folder": "Đế Cuồng",
+      "remote_count": 2066,
+      "missing_before": 1764,
+      "downloaded": 1764,
+      "skipped": 302,
+      "failed": 0,
+      "missing_after": 1764,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 120001,
+      "name": "Mộng Tiên",
+      "status_name": "Còn tiếp",
+      "folder": "Mộng Tiên",
+      "remote_count": 2097,
+      "missing_before": 1127,
+      "downloaded": 1127,
+      "skipped": 970,
+      "failed": 0,
+      "missing_after": 1127,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
+      }
+    },
+    {
+      "id": 104758,
+      "name": "Khúc Độc Hành Trong Đêm Trường Tận Thế",
+      "status_name": "Còn tiếp",
+      "folder": "Khúc Độc Hành Trong Đêm Trường Tận Thế",
+      "remote_count": 2606,
+      "missing_before": 2420,
+      "downloaded": 2420,
+      "skipped": 186,
+      "failed": 0,
+      "missing_after": 2420,
+      "extra_after": 0,
+      "errors": [],
+      "status": "issue",
+      "commit": {
+        "status": "add_failed",
+        "error": "fatal: Unable to create 'D:/Dev/MTC_Continune/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue."
       }
     }
   ]

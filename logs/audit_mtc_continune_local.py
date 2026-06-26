@@ -1,8 +1,8 @@
-import json, re
+﻿import json, re
 from pathlib import Path
 
-root = Path(r"C:\dev\mtc_continune")
-chap_re = re.compile(r"(?i)^Chương\s+(\d+)\b.*\.txt$")
+root = Path(r"D:\\Dev\\MTC_Continune")
+chap_re = re.compile(r"(?i)^ChÆ°Æ¡ng\s+(\d+)\b.*\.txt$")
 ignore = {".git", ".claude", ".vscode", "_bad_quarantine"}
 known_short_by_id = {(142817, 55), (142817, 56), (137995, 580)}
 rows = []
@@ -76,3 +76,4 @@ for r in rows[:80]:
         print(f"{r['folder']} status={r['status']}")
     else:
         print("{folder} id={book_id} local={local_count} expected={expected} missing={missing_count} small={small_count} empty={empty_count} dup={duplicates}".format(**r))
+

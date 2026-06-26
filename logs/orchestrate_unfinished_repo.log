@@ -186,3 +186,119 @@ CMD: C:\Program Files\Python310\python.exe C:\Dev\MTC_DOWNLOAD\scripts\audit\aud
 === 2026-05-27 03:27:32 pass_1_repair START ===
 CMD: C:\Program Files\Python310\python.exe C:\Dev\MTC_DOWNLOAD\scripts\repair\repair_unfinished_repo_issues.py --delay 0.03
 === pass_1_repair END rc=1073807364 ===
+Traceback (most recent call last):
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 171, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 135, in main
+    folders = [p for p in ROOT.iterdir() if p.is_dir() and not p.name.startswith('.') and p.name != 'mtc_done' and (p / 'info.json').is_file()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 135, in <listcomp>
+    folders = [p for p in ROOT.iterdir() if p.is_dir() and not p.name.startswith('.') and p.name != 'mtc_done' and (p / 'info.json').is_file()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GHC\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 931, in iterdir
+    for name in os.listdir(self):
+                ^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Dev\\MTC_Continune'
+
+=== 2026-06-24 22:15:41 pass_1_audit_before START ===
+CMD: C:\Users\GHC\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py
+=== pass_1_audit_before END rc=1 ===
+Traceback (most recent call last):
+  File "C:\Dev\MTC_DOWNLOAD\scripts\repair\repair_unfinished_repo_issues.py", line 16, in <module>
+    from download_all_missing_books import strict_chapter_filename, strict_component
+  File "C:\Dev\MTC_DOWNLOAD\scripts\download\download_all_missing_books.py", line 25, in <module>
+    from download_one_completed_live_decrypt import (
+  File "C:\Dev\MTC_DOWNLOAD\scripts\download\download_one_completed_live_decrypt.py", line 15, in <module>
+    from Crypto.Cipher import AES
+ModuleNotFoundError: No module named 'Crypto'
+
+=== 2026-06-24 22:15:42 pass_1_repair START ===
+CMD: C:\Users\GHC\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe C:\Dev\MTC_DOWNLOAD\scripts\repair\repair_unfinished_repo_issues.py --delay 0.03 --limit 50
+=== pass_1_repair END rc=1 ===
+Traceback (most recent call last):
+  File "C:\Dev\MTC_DOWNLOAD\scripts\download\download_ongoing_to_repo.py", line 14, in <module>
+    from download_one_completed_live_decrypt import (
+  File "C:\Dev\MTC_DOWNLOAD\scripts\download\download_one_completed_live_decrypt.py", line 15, in <module>
+    from Crypto.Cipher import AES
+ModuleNotFoundError: No module named 'Crypto'
+
+=== 2026-06-24 22:15:42 pass_1_download START ===
+CMD: C:\Users\GHC\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe C:\Dev\MTC_DOWNLOAD\scripts\download\download_ongoing_to_repo.py --rebuild-queue --include-paused --limit 30
+=== pass_1_download END rc=1 ===
+Traceback (most recent call last):
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 171, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 135, in main
+    folders = [p for p in ROOT.iterdir() if p.is_dir() and not p.name.startswith('.') and p.name != 'mtc_done' and (p / 'info.json').is_file()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 135, in <listcomp>
+    folders = [p for p in ROOT.iterdir() if p.is_dir() and not p.name.startswith('.') and p.name != 'mtc_done' and (p / 'info.json').is_file()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GHC\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 931, in iterdir
+    for name in os.listdir(self):
+                ^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Dev\\MTC_Continune'
+
+=== 2026-06-24 22:15:43 pass_1_audit_after START ===
+CMD: C:\Users\GHC\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py
+=== pass_1_audit_after END rc=1 ===
+Traceback (most recent call last):
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 171, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 135, in main
+    folders = [p for p in ROOT.iterdir() if p.is_dir() and not p.name.startswith('.') and p.name != 'mtc_done' and (p / 'info.json').is_file()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 135, in <listcomp>
+    folders = [p for p in ROOT.iterdir() if p.is_dir() and not p.name.startswith('.') and p.name != 'mtc_done' and (p / 'info.json').is_file()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GHC\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 931, in iterdir
+    for name in os.listdir(self):
+                ^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Dev\\MTC_Continune'
+
+=== 2026-06-24 22:15:43 pass_2_audit_before START ===
+CMD: C:\Users\GHC\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py
+=== pass_2_audit_before END rc=1 ===
+Traceback (most recent call last):
+  File "C:\Dev\MTC_DOWNLOAD\scripts\repair\repair_unfinished_repo_issues.py", line 16, in <module>
+    from download_all_missing_books import strict_chapter_filename, strict_component
+  File "C:\Dev\MTC_DOWNLOAD\scripts\download\download_all_missing_books.py", line 25, in <module>
+    from download_one_completed_live_decrypt import (
+  File "C:\Dev\MTC_DOWNLOAD\scripts\download\download_one_completed_live_decrypt.py", line 15, in <module>
+    from Crypto.Cipher import AES
+ModuleNotFoundError: No module named 'Crypto'
+
+=== 2026-06-24 22:15:43 pass_2_repair START ===
+CMD: C:\Users\GHC\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe C:\Dev\MTC_DOWNLOAD\scripts\repair\repair_unfinished_repo_issues.py --delay 0.03 --limit 50
+=== pass_2_repair END rc=1 ===
+Traceback (most recent call last):
+  File "C:\Dev\MTC_DOWNLOAD\scripts\download\download_ongoing_to_repo.py", line 14, in <module>
+    from download_one_completed_live_decrypt import (
+  File "C:\Dev\MTC_DOWNLOAD\scripts\download\download_one_completed_live_decrypt.py", line 15, in <module>
+    from Crypto.Cipher import AES
+ModuleNotFoundError: No module named 'Crypto'
+
+=== 2026-06-24 22:15:43 pass_2_download START ===
+CMD: C:\Users\GHC\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe C:\Dev\MTC_DOWNLOAD\scripts\download\download_ongoing_to_repo.py --rebuild-queue --include-paused --limit 30
+=== pass_2_download END rc=1 ===
+Traceback (most recent call last):
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 171, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 135, in main
+    folders = [p for p in ROOT.iterdir() if p.is_dir() and not p.name.startswith('.') and p.name != 'mtc_done' and (p / 'info.json').is_file()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py", line 135, in <listcomp>
+    folders = [p for p in ROOT.iterdir() if p.is_dir() and not p.name.startswith('.') and p.name != 'mtc_done' and (p / 'info.json').is_file()]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GHC\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\pathlib.py", line 931, in iterdir
+    for name in os.listdir(self):
+                ^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Dev\\MTC_Continune'
+
+=== 2026-06-24 22:15:44 pass_2_audit_after START ===
+CMD: C:\Users\GHC\AppData\Local\hermes\hermes-agent\venv\Scripts\python.exe C:\Dev\MTC_DOWNLOAD\scripts\audit\audit_unfinished_repo_content.py
+=== pass_2_audit_after END rc=1 ===

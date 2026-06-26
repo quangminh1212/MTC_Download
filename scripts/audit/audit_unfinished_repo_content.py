@@ -13,7 +13,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 if hasattr(sys.stderr, 'reconfigure'):
     sys.stderr.reconfigure(encoding='utf-8', errors='replace')
 
-ROOT = Path(r'C:\Dev\MTC_Continune')
+ROOT = Path(r'D:\\Dev\\MTC_Continune')
 LOG_DIR = Path(r'C:\Dev\MTC_Download\logs')
 REPORT = LOG_DIR / 'unfinished_repo_content_audit.json'
 CHAPTER_RE = re.compile(r'(?i)(?:chương|chuong)\s*(\d+)')

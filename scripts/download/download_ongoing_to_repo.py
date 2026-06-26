@@ -26,7 +26,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 if hasattr(sys.stderr, 'reconfigure'):
     sys.stderr.reconfigure(encoding='utf-8', errors='replace')
 
-ROOT = Path(r'C:\Dev\MTC_Continune')
+ROOT = Path(r'D:\\Dev\\MTC_Continune')
 LOG_DIR = Path(r'C:\Dev\MTC_Download\logs')
 LOG = LOG_DIR / 'ongoing_download_to_repo_report.json'
 STATE = LOG_DIR / 'ongoing_download_to_repo_state.json'
