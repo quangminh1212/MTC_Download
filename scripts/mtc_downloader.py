@@ -24,8 +24,17 @@ DEFAULT_RETRIES = int(os.environ.get("MTC_HTTP_RETRIES", "4"))
 DEFAULT_BACKOFF = float(os.environ.get("MTC_HTTP_BACKOFF", "0.75"))
 DEFAULT_POOL = int(os.environ.get("MTC_HTTP_POOL", "128"))
 
+_GLOBAL_TOKEN: str | None = None
+
+
+def set_global_token(token: str | None) -> None:
+    """Set a Bearer token used by all future MTCDownloader instances."""
+    global _GLOBAL_TOKEN
+    _GLOBAL_TOKEN = token
+
+
 class MTCDownloader:
-    def __init__(self):
+    def __init__(self, token: str | None = None):
         self.base_url = "https://android.lonoapp.net/api"
         self.headers = {
             "User-Agent": "MTC/Android",
@@ -34,6 +43,9 @@ class MTCDownloader:
         }
         self.session = requests.Session()
         self.session.headers.update(self.headers)
+        effective_token = token or _GLOBAL_TOKEN
+        if effective_token:
+            self.session.headers.update({"Authorization": f"Bearer {effective_token}"})
         adapter = HTTPAdapter(pool_connections=DEFAULT_POOL, pool_maxsize=DEFAULT_POOL, max_retries=0)
         self.session.mount("https://", adapter)
         self.session.mount("http://", adapter)

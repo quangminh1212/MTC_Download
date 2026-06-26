@@ -1,16 +1,446 @@
 {
-  "count_bookmarks": 371,
-  "count_books": 370,
+  "count_bookmarks": 387,
+  "count_books": 386,
   "books": [
+    {
+      "id": 128155,
+      "name": "Trùng Sinh 80: Nữ Tri Thanh Mang Thai Nữ Nhi Của Ta Được Một Năm",
+      "slug": "trung-sinh-80-nu-tri-thanh-mang-thai-nu-nhi-cua-ta-duoc-mot-nam",
+      "latest_index": 818,
+      "link": "https://metruyencv.com/truyen/trung-sinh-80-nu-tri-thanh-mang-thai-nu-nhi-cua-ta-duoc-mot-nam",
+      "bookmark_id": 16092490,
+      "chapter_id": null,
+      "created_at": "2026-06-25T17:42:47.000000Z"
+    },
+    {
+      "id": 111999,
+      "name": "Tận Thế Cầu Sinh: Mỗi Ngày Một Loại Vô Hạn Vật Tư",
+      "slug": "tan-the-cau-sinh-moi-ngay-mot-loai-vo-han-vat-tu",
+      "latest_index": 700,
+      "link": "https://metruyencv.com/truyen/tan-the-cau-sinh-moi-ngay-mot-loai-vo-han-vat-tu",
+      "bookmark_id": 15990210,
+      "chapter_id": null,
+      "created_at": "2026-06-02T17:08:27.000000Z"
+    },
+    {
+      "id": 114176,
+      "name": "Bắt Đầu Trường Sinh Bất Tử, Vô Hạn Thôi Diễn Võ Học",
+      "slug": "bat-dau-truong-sinh-bat-tu-vo-han-thoi-dien-vo-hoc",
+      "latest_index": 333,
+      "link": "https://metruyencv.com/truyen/bat-dau-truong-sinh-bat-tu-vo-han-thoi-dien-vo-hoc",
+      "bookmark_id": 15990209,
+      "chapter_id": null,
+      "created_at": "2026-06-02T17:07:34.000000Z"
+    },
+    {
+      "id": 123459,
+      "name": "Vô Hạn Lượng Cháo Trắng Cải Muối, Ta Lại Khoác Hoàng Bào",
+      "slug": "vo-han-luong-chao-trang-cai-muoi-ta-lai-khoac-hoang-bao",
+      "latest_index": 674,
+      "link": "https://metruyencv.com/truyen/vo-han-luong-chao-trang-cai-muoi-ta-lai-khoac-hoang-bao",
+      "bookmark_id": 15990207,
+      "chapter_id": null,
+      "created_at": "2026-06-02T17:07:10.000000Z"
+    },
+    {
+      "id": 131375,
+      "name": "Vô Hạn Mạt Nhật: Chỉ Có Ta Có Thể Làm Rơi Đồ",
+      "slug": "vo-han-mat-nhat-chi-co-ta-co-the-lam-roi-do",
+      "latest_index": 129,
+      "link": "https://metruyencv.com/truyen/vo-han-mat-nhat-chi-co-ta-co-the-lam-roi-do",
+      "bookmark_id": 15990204,
+      "chapter_id": null,
+      "created_at": "2026-06-02T17:06:37.000000Z"
+    },
+    {
+      "id": 133055,
+      "name": "Vô Hạn Thêm Điểm, Hai Mươi Tuổi Ta Thành Tuyệt Thế Võ Thần",
+      "slug": "vo-han-them-diem-hai-muoi-tuoi-ta-thanh-tuyet-te-vo-than",
+      "latest_index": 398,
+      "link": "https://metruyencv.com/truyen/vo-han-them-diem-hai-muoi-tuoi-ta-thanh-tuyet-te-vo-than",
+      "bookmark_id": 15990200,
+      "chapter_id": null,
+      "created_at": "2026-06-02T17:05:32.000000Z"
+    },
+    {
+      "id": 141496,
+      "name": "Toàn Dân Tái Cụ Sinh Tồn, Ta Có Thể Vô Hạn Hợp Thành Đồ Vật",
+      "slug": "toan-dan-tai-cu-sinh-ton-ta-co-the-vo-han-hop-thanh-do-vat",
+      "latest_index": 284,
+      "link": "https://metruyencv.com/truyen/toan-dan-tai-cu-sinh-ton-ta-co-the-vo-han-hop-thanh-do-vat",
+      "bookmark_id": 15990199,
+      "chapter_id": null,
+      "created_at": "2026-06-02T17:04:41.000000Z"
+    },
+    {
+      "id": 144103,
+      "name": "Vô Hạn Tận Thế: Bắt Đầu Một Toà Hầm Ngầm Nhà An Toàn",
+      "slug": "vo-han-tan-the-bat-dau-mot-toa-ham-ngam-nha-an-toan",
+      "latest_index": 235,
+      "link": "https://metruyencv.com/truyen/vo-han-tan-the-bat-dau-mot-toa-ham-ngam-nha-an-toan",
+      "bookmark_id": 15990198,
+      "chapter_id": null,
+      "created_at": "2026-06-02T17:04:19.000000Z"
+    },
+    {
+      "id": 120135,
+      "name": "Tận Thế: Từ Thêm Điểm Bắt Đầu Vô Hạn Tiến Hóa",
+      "slug": "tan-the-tu-them-diem-bat-dau-vo-han-tien-hoa",
+      "latest_index": 2083,
+      "link": "https://metruyencv.com/truyen/tan-the-tu-them-diem-bat-dau-vo-han-tien-hoa",
+      "bookmark_id": 15990195,
+      "chapter_id": null,
+      "created_at": "2026-06-02T17:04:05.000000Z"
+    },
+    {
+      "id": 149602,
+      "name": "Bắt Đầu Lựa Chọn Ma Công, Ta Có Thể Vô Hạn Chuyển Thế",
+      "slug": "bat-dau-lua-chon-ma-cong-ta-co-the-vo-han-chuyen-the",
+      "latest_index": 196,
+      "link": "https://metruyencv.com/truyen/bat-dau-lua-chon-ma-cong-ta-co-the-vo-han-chuyen-the",
+      "bookmark_id": 15990188,
+      "chapter_id": null,
+      "created_at": "2026-06-02T17:02:46.000000Z"
+    },
+    {
+      "id": 151645,
+      "name": "Tận Thế Cầu Sinh: Bắt Đầu Vô Hạn Hỏa Lực",
+      "slug": "tan-the-cau-sinh-bat-dau-vo-han-hoa-luc",
+      "latest_index": 189,
+      "link": "https://metruyencv.com/truyen/tan-the-cau-sinh-bat-dau-vo-han-hoa-luc",
+      "bookmark_id": 15990186,
+      "chapter_id": null,
+      "created_at": "2026-06-02T17:01:45.000000Z"
+    },
+    {
+      "id": 151136,
+      "name": "Ta Có Một Toà Siêu Cấp Binh Công Xưởng",
+      "slug": "ta-co-mot-toa-sieu-cap-binh-cong-xuong",
+      "latest_index": 990,
+      "link": "https://metruyencv.com/truyen/ta-co-mot-toa-sieu-cap-binh-cong-xuong",
+      "bookmark_id": 15990184,
+      "chapter_id": null,
+      "created_at": "2026-06-02T16:59:56.000000Z"
+    },
+    {
+      "id": 132969,
+      "name": "Tận Thế: Bắt Đầu Chơi Miễn Phí Một Tỷ Súng Ống Đạn Được",
+      "slug": "tan-the-bat-dau-choi-mien-phi-mot-ty-sung-ong-dan-duoc",
+      "latest_index": 336,
+      "link": "https://metruyencv.com/truyen/tan-the-bat-dau-choi-mien-phi-mot-ty-sung-ong-dan-duoc",
+      "bookmark_id": 15990129,
+      "chapter_id": null,
+      "created_at": "2026-06-02T16:45:31.000000Z"
+    },
+    {
+      "id": 146962,
+      "name": "Ta Thật Không Phải Chó Săn Của Tà Thần",
+      "slug": "ta-that-khong-phai-cho-san-cua-ta",
+      "latest_index": 458,
+      "link": "https://metruyencv.com/truyen/ta-that-khong-phai-cho-san-cua-ta",
+      "bookmark_id": 15990123,
+      "chapter_id": null,
+      "created_at": "2026-06-02T16:44:49.000000Z"
+    },
+    {
+      "id": 147475,
+      "name": "Tà Ma Thế Giới Cầu Sinh",
+      "slug": "ta-ma-the-gioi-cau-sinh",
+      "latest_index": 891,
+      "link": "https://metruyencv.com/truyen/ta-ma-the-gioi-cau-sinh",
+      "bookmark_id": 15990121,
+      "chapter_id": null,
+      "created_at": "2026-06-02T16:43:53.000000Z"
+    },
     {
       "id": 106104,
       "name": "Ta Từ Tận Thế Bắt Đầu Vô Địch",
       "slug": "ta-tu-tan-the-bat-dau-vo-dich",
       "latest_index": 1449,
       "link": "https://metruyencv.com/truyen/ta-tu-tan-the-bat-dau-vo-dich",
-      "bookmark_id": 15910364,
+      "bookmark_id": 15990117,
       "chapter_id": null,
-      "created_at": "2026-05-13T09:36:45.000000Z"
+      "created_at": "2026-06-02T16:42:23.000000Z"
+    },
+    {
+      "id": 151918,
+      "name": "Mạt Thế: Ta Phương Tiện Tránh Nạn Vô Hạn Thăng Cấp",
+      "slug": "mat-the-ta-phuong-tien-tranh-nan-vo-han-thang-cap",
+      "latest_index": 380,
+      "link": "https://metruyencv.com/truyen/mat-the-ta-phuong-tien-tranh-nan-vo-han-thang-cap",
+      "bookmark_id": 15990114,
+      "chapter_id": null,
+      "created_at": "2026-06-02T16:41:38.000000Z"
+    },
+    {
+      "id": 149531,
+      "name": "Tứ Hợp Viện: Mò Cá Sinh Hoạt Chi Ta Có Tụ Bảo Bồn",
+      "slug": "tu-hop-vien-mo-ca-sinh-hoat-chi-ta-co-tu-bao-bon",
+      "latest_index": 795,
+      "link": "https://metruyencv.com/truyen/tu-hop-vien-mo-ca-sinh-hoat-chi-ta-co-tu-bao-bon",
+      "bookmark_id": 15990113,
+      "chapter_id": null,
+      "created_at": "2026-06-02T16:41:30.000000Z"
+    },
+    {
+      "id": 142677,
+      "name": "Thập Niên 60: Mỗi Ngày Mù Hộp, Nhàn Nhã Sinh Hoạt",
+      "slug": "thap-nien-60-moi-ngay-mu-hop-nhan-nha-sinh-hoat",
+      "latest_index": 1267,
+      "link": "https://metruyencv.com/truyen/thap-nien-60-moi-ngay-mu-hop-nhan-nha-sinh-hoat",
+      "bookmark_id": 15990109,
+      "chapter_id": null,
+      "created_at": "2026-06-02T16:41:16.000000Z"
+    },
+    {
+      "id": 130371,
+      "name": "Đóng Quân Một Triệu, Nữ Đế Mang Em Bé Tìm Tới Cửa",
+      "slug": "dong-quan-mot-trieu-nu-de-mang-em-be-tim-toi-cua",
+      "latest_index": 1007,
+      "link": "https://metruyencv.com/truyen/dong-quan-mot-trieu-nu-de-mang-em-be-tim-toi-cua",
+      "bookmark_id": 15989098,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:31:36.000000Z"
+    },
+    {
+      "id": 146014,
+      "name": "Ta Hồng Trần Tiên Tu Vi Bị Thánh Nữ Lộ Ra Ánh Sáng",
+      "slug": "ta-hong-tran-tien-tu-vi-bi-thanh-nu-lo-ra-anh-sang",
+      "latest_index": 409,
+      "link": "https://metruyencv.com/truyen/ta-hong-tran-tien-tu-vi-bi-thanh-nu-lo-ra-anh-sang",
+      "bookmark_id": 15989091,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:30:54.000000Z"
+    },
+    {
+      "id": 121363,
+      "name": "Tam Quốc: Bắt Đầu Một Cái Bát",
+      "slug": "tam-quoc-bat-dau-mot-cai-bat",
+      "latest_index": 689,
+      "link": "https://metruyencv.com/truyen/tam-quoc-bat-dau-mot-cai-bat",
+      "bookmark_id": 15989004,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:17:13.000000Z"
+    },
+    {
+      "id": 148301,
+      "name": "Trường Sinh: Từ Cưới Đại Tẩu Muội Muội Bắt Đầu",
+      "slug": "truong-sinh-tu-cuoi-dai-tau-muoi-muoi-bat-dau-1",
+      "latest_index": 1065,
+      "link": "https://metruyencv.com/truyen/truong-sinh-tu-cuoi-dai-tau-muoi-muoi-bat-dau-1",
+      "bookmark_id": 15989002,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:16:55.000000Z"
+    },
+    {
+      "id": 146527,
+      "name": "Thế Giới Huyền Huyễn Mỹ Thực Vô Địch",
+      "slug": "the-gioi-huyen-huyen-my-thuc-vo-dich",
+      "latest_index": 512,
+      "link": "https://metruyencv.com/truyen/the-gioi-huyen-huyen-my-thuc-vo-dich",
+      "bookmark_id": 15989001,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:16:39.000000Z"
+    },
+    {
+      "id": 149193,
+      "name": "Trọng Sinh 1983 Ta Lên Núi Săn Bắn Đi Săn Phát Tài",
+      "slug": "trong-sinh-1983-ta-len-nui-san-ban-di-san-phat-tai",
+      "latest_index": 1419,
+      "link": "https://metruyencv.com/truyen/trong-sinh-1983-ta-len-nui-san-ban-di-san-phat-tai",
+      "bookmark_id": 15988999,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:16:22.000000Z"
+    },
+    {
+      "id": 128925,
+      "name": "Phía Sau Màn, Quét Ngang Hết Thảy",
+      "slug": "phia-sau-man-quet-ngang-het-thay",
+      "latest_index": 851,
+      "link": "https://metruyencv.com/truyen/phia-sau-man-quet-ngang-het-thay",
+      "bookmark_id": 15988997,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:16:08.000000Z"
+    },
+    {
+      "id": 143997,
+      "name": "Đại Đường: Từ Luyện Võ Đến Tu Tiên",
+      "slug": "dai-duong-tu-luyen-vo-den-tu-tien",
+      "latest_index": 491,
+      "link": "https://metruyencv.com/truyen/dai-duong-tu-luyen-vo-den-tu-tien",
+      "bookmark_id": 15988996,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:15:55.000000Z"
+    },
+    {
+      "id": 150031,
+      "name": "Tu Sĩ Trưởng Thành Không Cần Tu Luyện",
+      "slug": "tu-si-truong-thanh-khong-can-tu-luyen",
+      "latest_index": 484,
+      "link": "https://metruyencv.com/truyen/tu-si-truong-thanh-khong-can-tu-luyen",
+      "bookmark_id": 15988995,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:15:45.000000Z"
+    },
+    {
+      "id": 151302,
+      "name": "Đi Săn: Ta Bắn Tên Bách Phát Bách Trúng, Ken Két Huyễn Thịt",
+      "slug": "di-san-ta-ban-ten-bach-phat-bach-trung-ken-ket-huyen-thit",
+      "latest_index": 1166,
+      "link": "https://metruyencv.com/truyen/di-san-ta-ban-ten-bach-phat-bach-trung-ken-ket-huyen-thit",
+      "bookmark_id": 15988994,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:15:31.000000Z"
+    },
+    {
+      "id": 139509,
+      "name": "Trùng Sinh 1976: Đi Săn Vô Số Dã Vật",
+      "slug": "trung-sinh-1976-di-san-vo-so-da-vat",
+      "latest_index": 1254,
+      "link": "https://metruyencv.com/truyen/trung-sinh-1976-di-san-vo-so-da-vat",
+      "bookmark_id": 15988993,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:15:17.000000Z"
+    },
+    {
+      "id": 150887,
+      "name": "Mở Đầu Chỉ Với Một Hạt Giống, Còn May Ta Có Kính Mắt Nghịch Thiên!",
+      "slug": "mo-dau-chi-voi-mot-hat-giong-con-may-ta-co-kinh-mat-nghich-thien",
+      "latest_index": 663,
+      "link": "https://metruyencv.com/truyen/mo-dau-chi-voi-mot-hat-giong-con-may-ta-co-kinh-mat-nghich-thien",
+      "bookmark_id": 15988988,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:14:39.000000Z"
+    },
+    {
+      "id": 151221,
+      "name": "Tận Thế Di Chuyển: Đây Mới Là Pháp Tắc Sinh Tồn!!!",
+      "slug": "tan-the-di-chuyen-day-moi-la-phap-tac-sinh-ton",
+      "latest_index": 452,
+      "link": "https://metruyencv.com/truyen/tan-the-di-chuyen-day-moi-la-phap-tac-sinh-ton",
+      "bookmark_id": 15988986,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:14:18.000000Z"
+    },
+    {
+      "id": 145025,
+      "name": "Hàn Đông Tận Thế: Một Cỗ Xe Buýt Lưu Lãng Toàn Cầu",
+      "slug": "han-dong-tan-the-mot-co-xe-buyt-luu-lang-toan-cau",
+      "latest_index": 430,
+      "link": "https://metruyencv.com/truyen/han-dong-tan-the-mot-co-xe-buyt-luu-lang-toan-cau",
+      "bookmark_id": 15988984,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:13:55.000000Z"
+    },
+    {
+      "id": 151436,
+      "name": "Người Tại Quỷ Dị, Hoàn Mỹ Sinh Hoạt Hệ Thống Cái Quỷ Gì?",
+      "slug": "nguoi-tai-quy-di-hoan-my-sinh-hoat-he-thong-cai-quy-gi",
+      "latest_index": 315,
+      "link": "https://metruyencv.com/truyen/nguoi-tai-quy-di-hoan-my-sinh-hoat-he-thong-cai-quy-gi",
+      "bookmark_id": 15988982,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:13:44.000000Z"
+    },
+    {
+      "id": 149418,
+      "name": "Bắt Đầu Thức Tỉnh Hệ Thống Chụp Ảnh, Ta Sao Chép 98 Triệu Quả Dưa Hấu",
+      "slug": "tan-the-bat-dau-thuc-tinh-mot-trieu-lan-chup-anh-he-thong",
+      "latest_index": 232,
+      "link": "https://metruyencv.com/truyen/tan-the-bat-dau-thuc-tinh-mot-trieu-lan-chup-anh-he-thong",
+      "bookmark_id": 15988976,
+      "chapter_id": null,
+      "created_at": "2026-06-02T13:13:26.000000Z"
+    },
+    {
+      "id": 100500,
+      "name": "Trọng Phản Mạt Thế Thi Địa",
+      "slug": "trong-phan-mat-the-thi-dia",
+      "latest_index": 598,
+      "link": "https://metruyencv.com/truyen/trong-phan-mat-the-thi-dia",
+      "bookmark_id": 15926773,
+      "chapter_id": null,
+      "created_at": "2026-05-17T15:09:38.000000Z"
+    },
+    {
+      "id": 100895,
+      "name": "Nhà Ta Cửa Sau Thông Mạt Thế",
+      "slug": "nha-ta-cua-sau-thong-mat-the",
+      "latest_index": 793,
+      "link": "https://metruyencv.com/truyen/nha-ta-cua-sau-thong-mat-the",
+      "bookmark_id": 15926772,
+      "chapter_id": null,
+      "created_at": "2026-05-17T15:09:29.000000Z"
+    },
+    {
+      "id": 102888,
+      "name": "Vong Linh Pháp Sư Mạt Thế Hành",
+      "slug": "vong-linh-phap-su-mat-the-hanh",
+      "latest_index": 2062,
+      "link": "https://metruyencv.com/truyen/vong-linh-phap-su-mat-the-hanh",
+      "bookmark_id": 15926771,
+      "chapter_id": null,
+      "created_at": "2026-05-17T15:09:23.000000Z"
+    },
+    {
+      "id": 113270,
+      "name": "Mạt Thế: Bắt Đầu Trước Độn 10 Ức Vật Tư",
+      "slug": "mat-the-bat-dau-truoc-don-10-uc-vat-tu",
+      "latest_index": 645,
+      "link": "https://metruyencv.com/truyen/mat-the-bat-dau-truoc-don-10-uc-vat-tu",
+      "bookmark_id": 15926770,
+      "chapter_id": null,
+      "created_at": "2026-05-17T15:09:08.000000Z"
+    },
+    {
+      "id": 110099,
+      "name": "Mạt Thế: Ta Linh Thực Không Gian Thực Vật Biến Dị Rồi",
+      "slug": "mat-the-ta-linh-thuc-khong-gian-thuc-vat-bien-di-roi",
+      "latest_index": 437,
+      "link": "https://metruyencv.com/truyen/mat-the-ta-linh-thuc-khong-gian-thuc-vat-bien-di-roi",
+      "bookmark_id": 15926764,
+      "chapter_id": null,
+      "created_at": "2026-05-17T15:08:59.000000Z"
+    },
+    {
+      "id": 121995,
+      "name": "Mạt Thế Buông Xuống, Trước Tiên Giết Thánh Mẫu",
+      "slug": "mat-the-buong-xuong-truoc-tien-giet-thanh-mau",
+      "latest_index": 577,
+      "link": "https://metruyencv.com/truyen/mat-the-buong-xuong-truoc-tien-giet-thanh-mau",
+      "bookmark_id": 15926763,
+      "chapter_id": null,
+      "created_at": "2026-05-17T15:08:55.000000Z"
+    },
+    {
+      "id": 127837,
+      "name": "Cực Nhiệt Mạt Thế: Ta Dọn Sạch Lưỡng Cực Băng Sơn",
+      "slug": "cuc-nhiet-mat-the-ta-don-sach-luong-cuc-bang-son",
+      "latest_index": 499,
+      "link": "https://metruyencv.com/truyen/cuc-nhiet-mat-the-ta-don-sach-luong-cuc-bang-son",
+      "bookmark_id": 15926759,
+      "chapter_id": null,
+      "created_at": "2026-05-17T15:08:46.000000Z"
+    },
+    {
+      "id": 100554,
+      "name": "Mạt Thế Chi Cô Thành",
+      "slug": "mat-the-chi-co-thanh",
+      "latest_index": 668,
+      "link": "https://metruyencv.com/truyen/mat-the-chi-co-thanh",
+      "bookmark_id": 15926719,
+      "chapter_id": null,
+      "created_at": "2026-05-17T15:02:22.000000Z"
+    },
+    {
+      "id": 100917,
+      "name": "Mạt Thế Chi Vô Tận Thương Điếm",
+      "slug": "mat-the-chi-vo-tan-thuong-diem",
+      "latest_index": 834,
+      "link": "https://metruyencv.com/truyen/mat-the-chi-vo-tan-thuong-diem",
+      "bookmark_id": 15926717,
+      "chapter_id": null,
+      "created_at": "2026-05-17T15:02:14.000000Z"
     },
     {
       "id": 143452,
@@ -456,7 +886,7 @@
       "id": 150500,
       "name": "Thi Pháp Vĩnh Cửu Thêm Sinh Mệnh, Ngươi Quản Cái Này Gọi Pháp Sư?",
       "slug": "thi-phap-vinh-cuu-them-sinh-menh-cac-ha-ung-doi-ra-sao",
-      "latest_index": 653,
+      "latest_index": 667,
       "link": "https://metruyencv.com/truyen/thi-phap-vinh-cuu-them-sinh-menh-cac-ha-ung-doi-ra-sao",
       "bookmark_id": 15866390,
       "chapter_id": null,
@@ -833,26 +1263,6 @@
       "created_at": "2026-04-14T19:05:15.000000Z"
     },
     {
-      "id": 151436,
-      "name": "Người Tại Quỷ Dị, Hoàn Mỹ Sinh Hoạt Hệ Thống Cái Quỷ Gì?",
-      "slug": "nguoi-tai-quy-di-hoan-my-sinh-hoat-he-thong-cai-quy-gi",
-      "latest_index": 315,
-      "link": "https://metruyencv.com/truyen/nguoi-tai-quy-di-hoan-my-sinh-hoat-he-thong-cai-quy-gi",
-      "bookmark_id": 15778143,
-      "chapter_id": null,
-      "created_at": "2026-04-11T17:41:59.000000Z"
-    },
-    {
-      "id": 145025,
-      "name": "Hàn Đông Tận Thế: Một Cỗ Xe Buýt Lưu Lãng Toàn Cầu",
-      "slug": "han-dong-tan-the-mot-co-xe-buyt-luu-lang-toan-cau",
-      "latest_index": 430,
-      "link": "https://metruyencv.com/truyen/han-dong-tan-the-mot-co-xe-buyt-luu-lang-toan-cau",
-      "bookmark_id": 15778142,
-      "chapter_id": null,
-      "created_at": "2026-04-11T17:41:47.000000Z"
-    },
-    {
       "id": 123477,
       "name": "Tận Thế Trò Chơi: Tê! Bắt Đầu Giáo Hoa Quỳ Trước Người?",
       "slug": "tan-the-tro-choi-te-bat-dau-giao-hoa-quy-truoc-nguoi",
@@ -861,36 +1271,6 @@
       "bookmark_id": 15778140,
       "chapter_id": null,
       "created_at": "2026-04-11T17:41:36.000000Z"
-    },
-    {
-      "id": 149418,
-      "name": "Bắt Đầu Thức Tỉnh Hệ Thống Chụp Ảnh, Ta Sao Chép 98 Triệu Quả Dưa Hấu",
-      "slug": "tan-the-bat-dau-thuc-tinh-mot-trieu-lan-chup-anh-he-thong",
-      "latest_index": 232,
-      "link": "https://metruyencv.com/truyen/tan-the-bat-dau-thuc-tinh-mot-trieu-lan-chup-anh-he-thong",
-      "bookmark_id": 15778136,
-      "chapter_id": null,
-      "created_at": "2026-04-11T17:41:02.000000Z"
-    },
-    {
-      "id": 151221,
-      "name": "Tận Thế Di Chuyển: Đây Mới Là Pháp Tắc Sinh Tồn!!!",
-      "slug": "tan-the-di-chuyen-day-moi-la-phap-tac-sinh-ton",
-      "latest_index": 452,
-      "link": "https://metruyencv.com/truyen/tan-the-di-chuyen-day-moi-la-phap-tac-sinh-ton",
-      "bookmark_id": 15778116,
-      "chapter_id": null,
-      "created_at": "2026-04-11T17:37:21.000000Z"
-    },
-    {
-      "id": 150887,
-      "name": "Mở Đầu Chỉ Với Một Hạt Giống, Còn May Ta Có Kính Mắt Nghịch Thiên!",
-      "slug": "mo-dau-chi-voi-mot-hat-giong-con-may-ta-co-kinh-mat-nghich-thien",
-      "latest_index": 663,
-      "link": "https://metruyencv.com/truyen/mo-dau-chi-voi-mot-hat-giong-con-may-ta-co-kinh-mat-nghich-thien",
-      "bookmark_id": 15778115,
-      "chapter_id": null,
-      "created_at": "2026-04-11T17:36:59.000000Z"
     },
     {
       "id": 128247,
@@ -933,16 +1313,6 @@
       "created_at": "2026-03-26T20:50:57.000000Z"
     },
     {
-      "id": 139509,
-      "name": "Trùng Sinh 1976: Đi Săn Vô Số Dã Vật",
-      "slug": "trung-sinh-1976-di-san-vo-so-da-vat",
-      "latest_index": 1254,
-      "link": "https://metruyencv.com/truyen/trung-sinh-1976-di-san-vo-so-da-vat",
-      "bookmark_id": 15711529,
-      "chapter_id": null,
-      "created_at": "2026-03-26T20:43:02.000000Z"
-    },
-    {
       "id": 143487,
       "name": "Ta Đều Vô Địch Thiên Hạ, Mới Bắt Đầu Đoạt Đích?",
       "slug": "ta-deu-vo-dich-thien-ha-moi-bat-dau-doat-dich",
@@ -953,26 +1323,6 @@
       "created_at": "2026-03-26T20:42:42.000000Z"
     },
     {
-      "id": 151302,
-      "name": "Đi Săn: Ta Bắn Tên Bách Phát Bách Trúng, Ken Két Huyễn Thịt",
-      "slug": "di-san-ta-ban-ten-bach-phat-bach-trung-ken-ket-huyen-thit",
-      "latest_index": 1166,
-      "link": "https://metruyencv.com/truyen/di-san-ta-ban-ten-bach-phat-bach-trung-ken-ket-huyen-thit",
-      "bookmark_id": 15711524,
-      "chapter_id": null,
-      "created_at": "2026-03-26T20:42:06.000000Z"
-    },
-    {
-      "id": 150031,
-      "name": "Tu Sĩ Trưởng Thành Không Cần Tu Luyện",
-      "slug": "tu-si-truong-thanh-khong-can-tu-luyen",
-      "latest_index": 484,
-      "link": "https://metruyencv.com/truyen/tu-si-truong-thanh-khong-can-tu-luyen",
-      "bookmark_id": 15711522,
-      "chapter_id": null,
-      "created_at": "2026-03-26T20:40:55.000000Z"
-    },
-    {
       "id": 124237,
       "name": "Luyện Khí Từ Chữa Trị Bảng Bắt Đầu",
       "slug": "luyen-khi-tu-chua-tri-bang-bat-dau",
@@ -981,16 +1331,6 @@
       "bookmark_id": 15711513,
       "chapter_id": null,
       "created_at": "2026-03-26T20:37:57.000000Z"
-    },
-    {
-      "id": 143997,
-      "name": "Đại Đường: Từ Luyện Võ Đến Tu Tiên",
-      "slug": "dai-duong-tu-luyen-vo-den-tu-tien",
-      "latest_index": 491,
-      "link": "https://metruyencv.com/truyen/dai-duong-tu-luyen-vo-den-tu-tien",
-      "bookmark_id": 15711508,
-      "chapter_id": null,
-      "created_at": "2026-03-26T20:36:18.000000Z"
     },
     {
       "id": 131052,
@@ -1053,16 +1393,6 @@
       "created_at": "2026-03-26T20:23:50.000000Z"
     },
     {
-      "id": 128925,
-      "name": "Phía Sau Màn, Quét Ngang Hết Thảy",
-      "slug": "phia-sau-man-quet-ngang-het-thay",
-      "latest_index": 851,
-      "link": "https://metruyencv.com/truyen/phia-sau-man-quet-ngang-het-thay",
-      "bookmark_id": 15711415,
-      "chapter_id": null,
-      "created_at": "2026-03-26T20:10:36.000000Z"
-    },
-    {
       "id": 149893,
       "name": "Thần Thoại: Ta Ở Thương Triều Làm Bạo Quân",
       "slug": "than-thoai-ta-o-thuong-trieu-lam-bao-quan",
@@ -1083,16 +1413,6 @@
       "created_at": "2026-03-26T20:06:21.000000Z"
     },
     {
-      "id": 149193,
-      "name": "Trọng Sinh 1983 Ta Lên Núi Săn Bắn Đi Săn Phát Tài",
-      "slug": "trong-sinh-1983-ta-len-nui-san-ban-di-san-phat-tai",
-      "latest_index": 1419,
-      "link": "https://metruyencv.com/truyen/trong-sinh-1983-ta-len-nui-san-ban-di-san-phat-tai",
-      "bookmark_id": 15711403,
-      "chapter_id": null,
-      "created_at": "2026-03-26T20:06:04.000000Z"
-    },
-    {
       "id": 122996,
       "name": "Vốn Là Vô Địch, Không Cần Tu Luyện",
       "slug": "von-la-vo-dich-khong-can-tu-luyen",
@@ -1101,16 +1421,6 @@
       "bookmark_id": 15711398,
       "chapter_id": null,
       "created_at": "2026-03-26T20:03:33.000000Z"
-    },
-    {
-      "id": 146527,
-      "name": "Thế Giới Huyền Huyễn Mỹ Thực Vô Địch",
-      "slug": "the-gioi-huyen-huyen-my-thuc-vo-dich",
-      "latest_index": 512,
-      "link": "https://metruyencv.com/truyen/the-gioi-huyen-huyen-my-thuc-vo-dich",
-      "bookmark_id": 15711396,
-      "chapter_id": null,
-      "created_at": "2026-03-26T20:02:58.000000Z"
     },
     {
       "id": 134812,
@@ -1131,16 +1441,6 @@
       "bookmark_id": 15711389,
       "chapter_id": null,
       "created_at": "2026-03-26T20:00:54.000000Z"
-    },
-    {
-      "id": 148301,
-      "name": "Trường Sinh: Từ Cưới Đại Tẩu Muội Muội Bắt Đầu",
-      "slug": "truong-sinh-tu-cuoi-dai-tau-muoi-muoi-bat-dau-1",
-      "latest_index": 1065,
-      "link": "https://metruyencv.com/truyen/truong-sinh-tu-cuoi-dai-tau-muoi-muoi-bat-dau-1",
-      "bookmark_id": 15711387,
-      "chapter_id": null,
-      "created_at": "2026-03-26T20:00:23.000000Z"
     },
     {
       "id": 141832,
@@ -1233,16 +1533,6 @@
       "created_at": "2026-02-10T11:13:50.000000Z"
     },
     {
-      "id": 121363,
-      "name": "Tam Quốc: Bắt Đầu Một Cái Bát",
-      "slug": "tam-quoc-bat-dau-mot-cai-bat",
-      "latest_index": 689,
-      "link": "https://metruyencv.com/truyen/tam-quoc-bat-dau-mot-cai-bat",
-      "bookmark_id": 15490968,
-      "chapter_id": null,
-      "created_at": "2026-02-10T11:13:23.000000Z"
-    },
-    {
       "id": 116264,
       "name": "Đại Tần: Từ 100 Vạn Độ Thuần Thục Bắt Đầu Vô Địch",
       "slug": "dai-tan-tu-100-van-do-thuan-thuc-bat-dau-vo-dich",
@@ -1313,16 +1603,6 @@
       "created_at": "2026-02-10T11:08:18.000000Z"
     },
     {
-      "id": 130371,
-      "name": "Đóng Quân Một Triệu, Nữ Đế Mang Em Bé Tìm Tới Cửa",
-      "slug": "dong-quan-mot-trieu-nu-de-mang-em-be-tim-toi-cua",
-      "latest_index": 1007,
-      "link": "https://metruyencv.com/truyen/dong-quan-mot-trieu-nu-de-mang-em-be-tim-toi-cua",
-      "bookmark_id": 15490866,
-      "chapter_id": null,
-      "created_at": "2026-02-10T11:04:34.000000Z"
-    },
-    {
       "id": 107243,
       "name": "Đại Đường Bắt Đầu Từ Làm Lý Thế Dân Khiếp Sợ",
       "slug": "dai-duong-bat-dau-tu-lam-ly-the-dan-khiep-so",
@@ -1351,36 +1631,6 @@
       "bookmark_id": 15490825,
       "chapter_id": null,
       "created_at": "2026-02-10T10:58:52.000000Z"
-    },
-    {
-      "id": 146140,
-      "name": "Nạn Đói Năm: Trong Làng  Thời Gian Thật Khoái Hoạt",
-      "slug": "nan-doi-nam-trong-lang-thoi-gian-that-khoai-hoat",
-      "latest_index": 736,
-      "link": "https://metruyencv.com/truyen/nan-doi-nam-trong-lang-thoi-gian-that-khoai-hoat",
-      "bookmark_id": 15490815,
-      "chapter_id": null,
-      "created_at": "2026-02-10T10:56:39.000000Z"
-    },
-    {
-      "id": 151743,
-      "name": "Nạn Đói Năm, Ta Dùng Mỗi Ngày Tình Báo, Nạp Thiếp Ăn Thịt",
-      "slug": "nan-doi-nam-ta-dung-moi-ngay-tinh-bao-nap-thiep-an-thit",
-      "latest_index": 587,
-      "link": "https://metruyencv.com/truyen/nan-doi-nam-ta-dung-moi-ngay-tinh-bao-nap-thiep-an-thit",
-      "bookmark_id": 15490812,
-      "chapter_id": null,
-      "created_at": "2026-02-10T10:56:25.000000Z"
-    },
-    {
-      "id": 146014,
-      "name": "Ta Hồng Trần Tiên Tu Vi Bị Thánh Nữ Lộ Ra Ánh Sáng",
-      "slug": "ta-hong-tran-tien-tu-vi-bi-thanh-nu-lo-ra-anh-sang",
-      "latest_index": 409,
-      "link": "https://metruyencv.com/truyen/ta-hong-tran-tien-tu-vi-bi-thanh-nu-lo-ra-anh-sang",
-      "bookmark_id": 15490782,
-      "chapter_id": null,
-      "created_at": "2026-02-10T10:51:05.000000Z"
     },
     {
       "id": 151736,
@@ -2553,16 +2803,6 @@
       "created_at": "2025-11-02T22:29:25.000000Z"
     },
     {
-      "id": 132969,
-      "name": "Tận Thế: Bắt Đầu Chơi Miễn Phí Một Tỷ Súng Ống Đạn Được",
-      "slug": "tan-the-bat-dau-choi-mien-phi-mot-ty-sung-ong-dan-duoc",
-      "latest_index": 336,
-      "link": "https://metruyencv.com/truyen/tan-the-bat-dau-choi-mien-phi-mot-ty-sung-ong-dan-duoc",
-      "bookmark_id": 14434540,
-      "chapter_id": null,
-      "created_at": "2025-11-02T22:28:59.000000Z"
-    },
-    {
       "id": 134553,
       "name": "Ta Đều Thành Cương Thi Vương, Zombie Mạt Nhật Mới Bộc Phát",
       "slug": "ta-deu-thanh-cuong-thi-vuong-zombie-mat-nhat-moi-boc-phat",
@@ -2633,16 +2873,6 @@
       "created_at": "2025-10-21T17:28:26.000000Z"
     },
     {
-      "id": 114176,
-      "name": "Bắt Đầu Trường Sinh Bất Tử, Vô Hạn Thôi Diễn Võ Học",
-      "slug": "bat-dau-truong-sinh-bat-tu-vo-han-thoi-dien-vo-hoc",
-      "latest_index": 333,
-      "link": "https://metruyencv.com/truyen/bat-dau-truong-sinh-bat-tu-vo-han-thoi-dien-vo-hoc",
-      "bookmark_id": 14287749,
-      "chapter_id": null,
-      "created_at": "2025-10-20T23:43:20.000000Z"
-    },
-    {
       "id": 121990,
       "name": "Toàn Dân: Vô Hạn Liên Phát, Một Giây Ức Vạn Kỹ Năng!",
       "slug": "toan-dan-vo-han-lien-phat-mot-giay-uc-van-ky-nang",
@@ -2651,16 +2881,6 @@
       "bookmark_id": 14287744,
       "chapter_id": null,
       "created_at": "2025-10-20T23:42:54.000000Z"
-    },
-    {
-      "id": 131375,
-      "name": "Vô Hạn Mạt Nhật: Chỉ Có Ta Có Thể Làm Rơi Đồ",
-      "slug": "vo-han-mat-nhat-chi-co-ta-co-the-lam-roi-do",
-      "latest_index": 129,
-      "link": "https://metruyencv.com/truyen/vo-han-mat-nhat-chi-co-ta-co-the-lam-roi-do",
-      "bookmark_id": 14287737,
-      "chapter_id": null,
-      "created_at": "2025-10-20T23:42:31.000000Z"
     },
     {
       "id": 132531,
@@ -2681,16 +2901,6 @@
       "bookmark_id": 14287727,
       "chapter_id": null,
       "created_at": "2025-10-20T23:42:01.000000Z"
-    },
-    {
-      "id": 121193,
-      "name": "Vô Hạn Tận Thế: Mỗi Lần Đánh Dấu Siêu Cấp Hack!",
-      "slug": "vo-han-tan-the-moi-lan-danh-dau-sieu-cap-hack",
-      "latest_index": 579,
-      "link": "https://metruyencv.com/truyen/vo-han-tan-the-moi-lan-danh-dau-sieu-cap-hack",
-      "bookmark_id": 14287724,
-      "chapter_id": null,
-      "created_at": "2025-10-20T23:41:47.000000Z"
     },
     {
       "id": 137609,
@@ -2753,16 +2963,6 @@
       "created_at": "2025-10-20T23:40:35.000000Z"
     },
     {
-      "id": 141496,
-      "name": "Toàn Dân Tái Cụ Sinh Tồn, Ta Có Thể Vô Hạn Hợp Thành Đồ Vật",
-      "slug": "toan-dan-tai-cu-sinh-ton-ta-co-the-vo-han-hop-thanh-do-vat",
-      "latest_index": 284,
-      "link": "https://metruyencv.com/truyen/toan-dan-tai-cu-sinh-ton-ta-co-the-vo-han-hop-thanh-do-vat",
-      "bookmark_id": 14287698,
-      "chapter_id": null,
-      "created_at": "2025-10-20T23:40:26.000000Z"
-    },
-    {
       "id": 142008,
       "name": "Tam Quốc: Vô Hạn Thanh Máu, Tào Tháo Nói Ta Quá Trâu",
       "slug": "tam-quoc-vo-han-thanh-mau-tao-thao-noi-ta-qua-trau",
@@ -2783,16 +2983,6 @@
       "created_at": "2025-10-20T23:40:08.000000Z"
     },
     {
-      "id": 144103,
-      "name": "Vô Hạn Tận Thế: Bắt Đầu Một Toà Hầm Ngầm Nhà An Toàn",
-      "slug": "vo-han-tan-the-bat-dau-mot-toa-ham-ngam-nha-an-toan",
-      "latest_index": 235,
-      "link": "https://metruyencv.com/truyen/vo-han-tan-the-bat-dau-mot-toa-ham-ngam-nha-an-toan",
-      "bookmark_id": 14287683,
-      "chapter_id": null,
-      "created_at": "2025-10-20T23:39:39.000000Z"
-    },
-    {
       "id": 129632,
       "name": "Tu Tiên Từ Vô Hạn Phục Chế Bắt Đầu",
       "slug": "tu-tien-tu-vo-han-phuc-che-bat-dau",
@@ -2801,16 +2991,6 @@
       "bookmark_id": 14287681,
       "chapter_id": null,
       "created_at": "2025-10-20T23:39:30.000000Z"
-    },
-    {
-      "id": 120135,
-      "name": "Tận Thế: Từ Thêm Điểm Bắt Đầu Vô Hạn Tiến Hóa",
-      "slug": "tan-the-tu-them-diem-bat-dau-vo-han-tien-hoa",
-      "latest_index": 2083,
-      "link": "https://metruyencv.com/truyen/tan-the-tu-them-diem-bat-dau-vo-han-tien-hoa",
-      "bookmark_id": 14287673,
-      "chapter_id": null,
-      "created_at": "2025-10-20T23:39:01.000000Z"
     },
     {
       "id": 137995,
@@ -2871,16 +3051,6 @@
       "bookmark_id": 14276606,
       "chapter_id": null,
       "created_at": "2025-10-20T00:11:16.000000Z"
-    },
-    {
-      "id": 123459,
-      "name": "Vô Hạn Lượng Cháo Trắng Cải Muối, Ta Lại Khoác Hoàng Bào",
-      "slug": "vo-han-luong-chao-trang-cai-muoi-ta-lai-khoac-hoang-bao",
-      "latest_index": 674,
-      "link": "https://metruyencv.com/truyen/vo-han-luong-chao-trang-cai-muoi-ta-lai-khoac-hoang-bao",
-      "bookmark_id": 13647556,
-      "chapter_id": null,
-      "created_at": "2025-08-28T12:58:02.000000Z"
     },
     {
       "id": 121168,
@@ -3483,16 +3653,6 @@
       "created_at": "2025-08-07T09:34:11.000000Z"
     },
     {
-      "id": 144322,
-      "name": "Vô Hạn Tiến Hóa",
-      "slug": "vo-han-tien-hoa",
-      "latest_index": 3289,
-      "link": "https://metruyencv.com/truyen/vo-han-tien-hoa",
-      "bookmark_id": 13379518,
-      "chapter_id": null,
-      "created_at": "2025-08-07T09:33:47.000000Z"
-    },
-    {
       "id": 145475,
       "name": "Cho Ta Một Trang Giấy, Ta Có Thể Giết Xuyên Toàn Bộ Tận Thế",
       "slug": "cho-ta-mot-trang-giay-ta-co-the-giet-xuyen-toan-bo-tan-the",
@@ -3596,7 +3756,7 @@
       "id": 119026,
       "name": "Trọng Sinh Ma Tu, Bắt Đầu Nhặt Được Một Khỏa Zombie Tinh Cầu",
       "slug": "trong-sinh-ma-tu-bat-dau-nhat-duoc-mot-khoa-zombie-tinh-cau",
-      "latest_index": 2229,
+      "latest_index": 2269,
       "link": "https://metruyencv.com/truyen/trong-sinh-ma-tu-bat-dau-nhat-duoc-mot-khoa-zombie-tinh-cau",
       "bookmark_id": 12328654,
       "chapter_id": null,

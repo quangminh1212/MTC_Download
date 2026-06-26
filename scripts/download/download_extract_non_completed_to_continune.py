@@ -19,8 +19,10 @@ SCRIPT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(SCRIPT_ROOT))
 sys.path.insert(0, str(SCRIPT_ROOT / "download"))
 
+import requests
+
 import download_all_missing_books as dam
-from mtc_downloader import MTCDownloader
+from mtc_downloader import MTCDownloader, set_global_token
 from mtc_status_utils import is_completed_status
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -37,6 +39,35 @@ STATE_LOCK = LOG_DIR / "download_extract_non_completed_to_continune_state.lock"
 
 # Re-target every helper inside download_all_missing_books to MTC_Continune.
 dam.ROOT = TARGET_ROOT
+
+
+def login(email: str, password: str, retries: int = 3) -> str:
+    """Login to MTC and return a Bearer token."""
+    session = requests.Session()
+    session.headers.update({
+        "User-Agent": "MTC/Android",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+    })
+    for attempt in range(1, retries + 1):
+        try:
+            response = session.post(
+                "https://android.lonoapp.net/api/auth/login",
+                json={"email": email, "password": password, "device_name": "OpenClaw Windows"},
+                timeout=30,
+            )
+            response.encoding = "utf-8"
+            print(f"login status={response.status_code}", flush=True)
+            response.raise_for_status()
+            data = response.json()
+            if not data.get("success"):
+                raise SystemExit(f"login failed: {data}")
+            return data["data"]["token"]
+        except Exception as exc:
+            if attempt == retries:
+                raise SystemExit(f"login failed after {retries} attempts: {exc}")
+            time.sleep(2 + attempt)
+    raise SystemExit("login unreachable")
 
 
 def load_state() -> dict:
@@ -145,9 +176,19 @@ def main() -> int:
                         help="number of parallel shards")
     parser.add_argument("--dry-run", action="store_true",
                         help="only list what would be downloaded")
+    parser.add_argument("--email", type=str, default=None,
+                        help="MTC account email (for locked chapters)")
+    parser.add_argument("--password", type=str, default=None,
+                        help="MTC account password")
+    parser.add_argument("--accessibility-check", type=str, default=None,
+                        help="JSON file from check_mtc_extract_accessibility.py to skip not_found books")
     args = parser.parse_args()
 
     TARGET_ROOT.mkdir(parents=True, exist_ok=True)
+    if args.email and args.password:
+        token = login(args.email, args.password)
+        set_global_token(token)
+        print(f"authenticated as {args.email}", flush=True)
     downloader = MTCDownloader()
 
     if args.book_id:
@@ -177,6 +218,18 @@ def main() -> int:
         }]
     else:
         queue = build_queue()
+
+    if args.accessibility_check:
+        check_path = Path(args.accessibility_check)
+        if check_path.exists():
+            check_data = json.loads(check_path.read_text(encoding="utf-8"))
+            reachable = {
+                int(b["id"]) for b in check_data.get("books", [])
+                if b.get("status") in ("ok", "chapters_only")
+            }
+            before = len(queue)
+            queue = [b for b in queue if int(b["id"]) in reachable]
+            print(f"accessibility filtered: {before} -> {len(queue)} reachable", flush=True)
 
     if args.shard_count and args.shard_count > 1:
         queue = [b for b in queue if (int(b["id"]) % args.shard_count) == args.shard]
