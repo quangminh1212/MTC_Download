@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Count completed MTC books in a given ID range."""
 from __future__ import annotations
 
 import argparse
 import concurrent.futures as cf
-import html
 import json
-import re
 import sys
 import threading
 import time
-import unicodedata
 from pathlib import Path
 
 import requests
@@ -20,11 +19,9 @@ if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 BASE = "https://android.lonoapp.net/api"
-REPO = Path(r"D:\Dev\MTC_Continune")
 LOG_DIR = Path(r"C:\Dev\MTC_Download\logs")
-STATE = LOG_DIR / "unfinished_id_scan_state.json"
-OUT = LOG_DIR / "all_id_unfinished_scan.json"
-MISSING = LOG_DIR / "all_id_unfinished_missing_repo.json"
+OUT = LOG_DIR / "completed_books_count.json"
+STATE = LOG_DIR / "completed_books_count_state.json"
 
 _thread_local = threading.local()
 
@@ -38,23 +35,7 @@ def session() -> requests.Session:
     return current
 
 
-def norm(value: object) -> str:
-    text = unicodedata.normalize("NFC", html.unescape(str(value or ""))).casefold()
-    return "".join(ch for ch in text if ch.isalnum())
-
-
-def clean(value: object, default: str = "Untitled") -> str:
-    text = unicodedata.normalize("NFC", html.unescape(str(value or "")))
-    text = "".join(ch if (ch.isalnum() or ch.isspace()) else " " for ch in text)
-    text = re.sub(r"\s+", " ", text).strip(" .")
-    return text or default
-
-
-def local_norms() -> set[str]:
-    return {norm(path.name) for path in REPO.iterdir() if path.is_dir() and path.name != ".git"}
-
-
-def scan_one(book_id: int) -> dict | None:
+def check_one(book_id: int) -> dict | None:
     try:
         response = session().get(
             BASE + "/chapters",
@@ -62,72 +43,75 @@ def scan_one(book_id: int) -> dict | None:
             timeout=8,
         )
         if response.status_code != 200:
-            return None
+            return {"id": book_id, "status": "empty"}
         payload = response.json()
         book = (payload.get("extra") or {}).get("book") or {}
         if not book:
-            return None
+            return {"id": book_id, "status": "empty"}
         status = int(book.get("status") or 0)
         latest = int(book.get("latest_index") or book.get("chapter_count") or 0)
-        if status == 2 or latest <= 0:
-            return None
         name = book.get("name") or f"book {book_id}"
-        return {
-            "id": int(book.get("id") or book_id),
-            "name": name,
-            "status": status,
-            "status_name": book.get("status_name"),
-            "chapter_count": latest,
-            "folder": clean(name),
-        }
+        status_name = book.get("status_name", "")
+        if status == 2:
+            return {
+                "id": int(book.get("id") or book_id),
+                "name": name,
+                "status": status,
+                "status_name": status_name,
+                "chapter_count": latest,
+            }
+        return {"id": book_id, "status": "not_completed"}
     except Exception as exc:
-        return {"id": book_id, "error": str(exc)[:160]}
+        return {"id": book_id, "status": "error", "error": str(exc)[:160]}
 
 
 def load_state() -> dict:
     if STATE.exists():
         return json.loads(STATE.read_text(encoding="utf-8"))
-    return {"scanned_blocks": [], "items": [], "errors": []}
+    return {"scanned_blocks": [], "completed": [], "errors": [], "stats": {}}
 
 
 def save_outputs(state: dict) -> None:
     LOG_DIR.mkdir(parents=True, exist_ok=True)
-    seen: dict[int, dict] = {}
-    for item in state.get("items", []):
-        seen[int(item["id"])] = item
-    items = [seen[key] for key in sorted(seen)]
-    norms = local_norms()
-    for item in items:
-        item["has_local"] = norm(item.get("folder")) in norms
-    missing = [item for item in items if not item.get("has_local")]
-    state["items"] = items
+    completed = [item for item in state.get("completed", []) if item.get("status") == 2]
+    completed.sort(key=lambda x: x["id"])
+    errors = [item for item in state.get("errors", [])]
+    stats = {
+        "range_start": state.get("range_start"),
+        "range_end": state.get("range_end"),
+        "completed": len(completed),
+        "errors": len(errors),
+        "not_completed_or_empty": state.get("not_completed_or_empty", 0),
+    }
+    state["stats"] = stats
     STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
     OUT.write_text(
         json.dumps(
-            {
-                "found": len(items),
-                "errors": len(state.get("errors", [])),
-                "items": items,
-            },
+            {"stats": stats, "completed": completed, "errors": errors},
             ensure_ascii=False,
             indent=2,
         ),
         encoding="utf-8",
     )
-    MISSING.write_text(json.dumps(missing, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--start", type=int, default=100000)
-    parser.add_argument("--end", type=int, default=154000)
+    parser.add_argument("--start", type=int, default=100009)
+    parser.add_argument("--end", type=int, default=153616)
     parser.add_argument("--block-size", type=int, default=2000)
     parser.add_argument("--workers", type=int, default=32)
     args = parser.parse_args()
 
     state = load_state()
+    state["range_start"] = args.start
+    state["range_end"] = args.end
     done = {tuple(block) for block in state.get("scanned_blocks", [])}
+    completed_count = len(state.get("completed", []))
+    not_completed_count = state.get("not_completed_or_empty", 0)
+    error_count = len(state.get("errors", []))
     started = time.time()
+
     for block_start in range(args.start, args.end + 1, args.block_size):
         block_end = min(args.end, block_start + args.block_size - 1)
         block_key = (block_start, block_end)
@@ -137,30 +121,34 @@ def main() -> int:
         ids = list(range(block_start, block_end + 1))
         found = []
         errors = []
+        not_completed = 0
         with cf.ThreadPoolExecutor(max_workers=max(1, args.workers)) as pool:
-            for row in pool.map(scan_one, ids):
-                if not row:
-                    continue
-                if row.get("error"):
+            for row in pool.map(check_one, ids):
+                if row.get("status") == 2:
+                    found.append(row)
+                elif row.get("status") in {"error"}:
                     errors.append(row)
                 else:
-                    found.append(row)
-        state.setdefault("items", []).extend(found)
+                    not_completed += 1
+        state.setdefault("completed", []).extend(found)
         state.setdefault("errors", []).extend(errors)
+        state["not_completed_or_empty"] = state.get("not_completed_or_empty", 0) + not_completed
         state.setdefault("scanned_blocks", []).append([block_start, block_end])
-        save_outputs(state)
+        completed_count += len(found)
+        error_count += len(errors)
+        not_completed_count += not_completed
+        elapsed = time.time() - started
         print(
-            f"block={block_start}-{block_end} found={len(found)} "
-            f"errors={len(errors)} total_found={len(state['items'])} "
-            f"elapsed={round(time.time() - started, 1)}s",
+            f"block={block_start}-{block_end} completed={len(found)} "
+            f"total_completed={completed_count} not_completed={not_completed_count} "
+            f"errors={error_count} elapsed={elapsed:.1f}s",
             flush=True,
         )
+        save_outputs(state)
+
     save_outputs(state)
-    missing = json.loads(MISSING.read_text(encoding="utf-8"))
-    print(f"found_unfinished={len(state.get('items', []))}")
-    print(f"missing_repo={len(missing)}")
-    print(f"missing_chapters={sum(int(item.get('chapter_count') or 0) for item in missing)}")
-    print(f"missing_report={MISSING}")
+    print(f"DONE: completed={completed_count} not_completed_or_empty={not_completed_count} errors={error_count}")
+    print(f"OUT={OUT}")
     return 0
 
 
