@@ -6,12 +6,13 @@ import concurrent.futures as cf
 import json
 import os
 import re
+import requests
 import subprocess
 import sys
 import time
 from pathlib import Path
 
-from mtc_downloader import MTCDownloader
+from mtc_downloader import MTCDownloader, set_global_token
 from download_all_missing_books import strict_book_name, strict_chapter_filename, strict_component
 from download_one_completed_live_decrypt import (
     clean_text,
@@ -27,12 +28,12 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
-ROOT = Path(r"C:\Dev\MTC_Continune")
+ROOT = Path(r"D:\Dev\MTC_Continune")
 COMMIT_LOCK = ROOT / ".codex_commit.lock"
 LOG_DIR = Path(r"C:\Dev\MTC_Download\logs")
-QUEUE = LOG_DIR / "all_id_unfinished_missing_repo.json"
-STATE = LOG_DIR / "download_unfinished_id_queue_state.json"
-REPORT = LOG_DIR / "download_unfinished_id_queue_report.json"
+QUEUE = LOG_DIR / "all_unfinished_missing_repo.json"
+STATE = LOG_DIR / "download_all_unfinished_missing_repo_state.json"
+REPORT = LOG_DIR / "download_all_unfinished_missing_repo_report.json"
 CHAPTER_RE = re.compile(r"(\d+)")
 MARKER_RE = re.compile(r'eyJpdiI6|"iv":"|"value":"')
 INNER_PAYLOAD_RE = re.compile(r"eyJpdiI6[A-Za-z0-9+/=]+")
@@ -48,6 +49,35 @@ def save_state(state: dict) -> None:
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
     REPORT.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def login(email: str, password: str, retries: int = 3) -> str:
+    """Login to MTC and return a Bearer token."""
+    session = requests.Session()
+    session.headers.update({
+        "User-Agent": "MTC/Android",
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+    })
+    for attempt in range(1, retries + 1):
+        try:
+            response = session.post(
+                "https://android.lonoapp.net/api/auth/login",
+                json={"email": email, "password": password, "device_name": "OpenClaw Windows"},
+                timeout=30,
+            )
+            response.encoding = "utf-8"
+            print(f"login status={response.status_code}", flush=True)
+            response.raise_for_status()
+            data = response.json()
+            if not data.get("success"):
+                raise SystemExit(f"login failed: {data}")
+            return data["data"]["token"]
+        except Exception as exc:
+            if attempt == retries:
+                raise SystemExit(f"login failed after {retries} attempts: {exc}")
+            time.sleep(2 + attempt)
+    raise SystemExit("login unreachable")
 
 
 def parse_index(path: Path) -> int | None:
@@ -288,7 +318,14 @@ def main() -> int:
     parser.add_argument("--max-chapters", type=int, default=None)
     parser.add_argument("--shard-index", type=int, default=0)
     parser.add_argument("--shard-count", type=int, default=1)
+    parser.add_argument("--email", type=str, default=None)
+    parser.add_argument("--password", type=str, default=None)
     args = parser.parse_args()
+
+    if args.email and args.password:
+        token = login(args.email, args.password)
+        set_global_token(token)
+        print(f"authenticated as {args.email}", flush=True)
 
     queue = json.loads(QUEUE.read_text(encoding="utf-8"))
     queue = [item for item in queue if int(item.get("chapter_count") or 0) >= args.min_chapters]
